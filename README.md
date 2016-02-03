@@ -27,9 +27,18 @@ sizes given as well:
 |IFSC-list.json|1.8M|
 |IFSC-list.marshal|2.3M|
 |IFSC-list.yml|1.8M|
+|IFSC-list.bloom|246k|
 
 The files with the `-list` suffix only contain the list of IFSC codes.
-This can be used for validation purposes.
+This can be used for validation purposes. The `.bloom` file is a binary
+bloom filter dump generated and readable using the [bloom-filter][bf-gem]
+ruby gem. It uses the bloom filter implementation from [here][bf-c].
+
+Note that the bloom filter is always probabilistic, and will return
+false positives for at max 0.1% of the cases.
+
 
 [rbi]: https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2009
 [combined]: https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xls
+[bf-gem]: https://github.com/deepfryed/bloom-filter
+[bf-c]: https://github.com/fragglet/c-algorithms/blob/master/src/bloom-filter.c

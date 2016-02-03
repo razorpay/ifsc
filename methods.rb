@@ -3,8 +3,7 @@ require 'csv'
 require 'yaml'
 require 'json'
 require 'set'
-
-
+require 'bloom-filter'
 
 def parse_sheets
   data = []
@@ -83,6 +82,15 @@ def find_bank_branches(bank, list)
   end
 end
 
+def export_bloom_filter(list)
+  # 128_000 is the approx size of our current list
+  filter = BloomFilter.new size: 150_000, error_rate: 0.001
+  list.each do |code|
+    filter.insert code
+  end
+
+  filter.dump "data/IFSC-list.bloom"
+end
 
 def log(msg)
   puts msg
