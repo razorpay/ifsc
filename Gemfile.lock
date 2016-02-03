@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bloom-filter (0.2.2)
+    mini_portile2 (2.0.0)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+    ruby-ole (1.2.12)
+    spreadsheet (1.1.1)
+      ruby-ole (>= 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bloom-filter
+  nokogiri
+  spreadsheet
+
+BUNDLED WITH
+   1.10.5
