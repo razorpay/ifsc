@@ -6,7 +6,6 @@ wget "https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2009" -O list.html -
 ruby parse_list.rb > excel_list.txt
 mkdir -p sheets
 wget -i excel_list.txt -P sheets/
-mkdir -p data
-
+mkdir -p data/by-bank
 # This is the script that does all the data generation
 ruby generate.rb

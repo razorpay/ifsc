@@ -92,6 +92,17 @@ def export_bloom_filter(list)
   filter.dump "data/IFSC-list.bloom"
 end
 
+def export_json_by_banks(list, ifsc_hash)
+  banks = find_bank_codes list
+  banks.each do |bank|
+    hash = Hash.new
+    branches = find_bank_branches(bank, list)
+
+    branches.each { |code| hash[code] = ifsc_hash[code] }
+    File.open("data/by-bank/#{bank}.json", 'w') { |f| JSON.dump(hash, f) }
+  end
+end
+
 def log(msg)
   puts msg
 end
