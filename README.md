@@ -38,6 +38,9 @@ Note that the bloom filter is always probabilistic, and will return
 false positives for at max 0.1% of the cases.
 
 
+The `data/by-bank` directory holds multiple JSON files corresponding
+to each bank, for faster lookups.
+
 [rbi]: https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2009
 [combined]: https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xls
 [bf-gem]: https://github.com/deepfryed/bloom-filter
