@@ -97,9 +97,11 @@ def export_json_by_banks(list, ifsc_hash)
   banks.each do |bank|
     hash = Hash.new
     branches = find_bank_branches(bank, list)
+    branches.sort.each do |code|
+      hash[code] = ifsc_hash[code]
+    end
 
-    branches.each { |code| hash[code] = ifsc_hash[code] }
-    File.open("data/by-bank/#{bank}.json", 'w') { |f| JSON.dump(hash, f) }
+    File.open("data/by-bank/#{bank}.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
   end
 end
 
