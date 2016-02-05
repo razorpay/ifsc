@@ -1,4 +1,4 @@
-# ifsc-downloader
+# ifsc
 
 This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
@@ -44,8 +44,14 @@ false positives for at max 0.1% of the cases.
 The `data/by-bank` directory holds multiple JSON files corresponding
 to each bank, for faster lookups.
 
+## License
+
+The code in this repository is licensed under the MIT License. License
+text is available in the `LICENSE.txt` file. The dataset itself
+should be under public domain.
+
 [rbi]: https://goo.gl/T9188H "goo.gl link because RBI doesn't allow you to link to their website"
-[combined]: https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xls
+[combined]: https://goo.gl/UryY8j "goo.gl link because RBI doesn't allow you to link to their website"
 [bf-gem]: https://github.com/deepfryed/bloom-filter
 [bf-c]: https://github.com/fragglet/c-algorithms/blob/master/src/bloom-filter.c
 [releases]: https://github.com/razorpay/ifsc-downloader/releases
