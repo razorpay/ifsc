@@ -5,28 +5,48 @@ require 'json'
 require 'set'
 require 'bloom-filter'
 
+HEADINGS_INSERT = [
+  "BANK",
+  "IFSC",
+  "BRANCH",
+  "ADDRESS",
+  "CONTACT",
+  "CITY",
+  "DISTRICT",
+  "STATE"
+]
+
 def parse_sheets
   data = []
-  headings = [
-    "BANK",
-    "IFSC",
-    "MICR",
-    "BRANCH",
-    "ADDRESS",
-    "CONTACT",
-    "CITY",
-    "DISTRICT",
-    "STATE"
-  ]
 
   Dir.glob('sheets/*') do |file|
     log "Parsing #{file}"
     sheet = Spreadsheet.open(file).worksheet 0
+    headings = sheet.row(0)[0,9]
+
     sheet.each 1 do |row|
       row = row[0,9]
-      data.push [headings, row].transpose.to_h
+      data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+      begin
+        data.push data_to_insert.transpose.to_h
+      rescue Exception => e
+        puts data_to_insert
+        exit
+      end
     end
   end
+  data
+end
+
+def map_data(row, headings)
+  data = []
+
+  # Find the heading in HEADINGS_INSERT
+  headings.each_with_index do |header, heading_index|
+    index = HEADINGS_INSERT.find_index header
+    data[index] = row[heading_index] if index
+  end
+
   data
 end
 
