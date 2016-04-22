@@ -4,6 +4,7 @@ require 'yaml'
 require 'json'
 require 'set'
 require 'bloom-filter'
+require 'erb'
 
 HEADINGS_INSERT = [
   "BANK",
@@ -122,6 +123,32 @@ def export_json_by_banks(list, ifsc_hash)
     end
 
     File.open("data/by-bank/#{bank}.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
+  end
+end
+
+def export_to_php(list, ifsc_hash)
+  banks = find_bank_codes list
+  banks_hash = Hash.new
+
+  banks.each do |bank|
+    banks_hash[bank] = find_bank_branches(bank, list).map do |code|
+      # this is to drop lots of zeroes
+      branch_code = code[-6,6]
+      if branch_code.match(/^(\d)+$/)
+        branch_code.to_i.to_s
+      else
+        branch_code
+      end
+    end
+  end
+
+  template = File.read('IFSC.php.erb')
+  renderer = ERB.new(template)
+  b = binding
+
+  File.open('IFSC.php', "w") do |file|
+    output = (renderer.result(b))
+    file.puts(output)
   end
 end
 

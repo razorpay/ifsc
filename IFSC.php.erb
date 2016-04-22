@@ -1,0 +1,27 @@
+<?php
+
+class ISFC
+{
+	<% banks_hash.each_pair do |bank_code, data| %>
+    <%= "const #{bank_code} = #{data.to_json};" %>
+  	<% end %>
+	function validate($code)
+	{
+		if (strlen($code) !== 11)
+		{
+			return false;
+		}
+
+		if ($code[4] !== '0')
+		{
+			return false;
+		}
+
+		$bankCode   = strtoupper(substr($code, 0, 4));
+		$branchCode = strtoupper(substr($code, 5));
+
+		return (defined($branchCode) and 
+			in_array($branchCode, constant($bankCode))
+		);
+	}
+}
