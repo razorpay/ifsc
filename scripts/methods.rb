@@ -127,28 +127,6 @@ def export_json_by_banks(list, ifsc_hash)
   end
 end
 
-=begin
-  
-$tab = array_values($tab);
-$tab_contiguous = array();
-$i=0;
-foreach ($tab as $key => $val) {
-    if (empty($tab_contiguous[$i])) {
-        $tab_contiguous[$i][] = $tab[$key];
-    }
-    
-    if (isset($tab[$key+1])) {
-        if ($tab[$key] + 1 != $tab[$key+1]) {
-            if (count($tab_contiguous) > 1) {
-                $tab_contiguous[$i][] = $tab[$key];
-            }
-            
-            $i++;
-        }
-    }
-}
-  
-=end
 def make_ranges(list)
   ranges = []
   range_index = index = 0
@@ -196,14 +174,13 @@ def export_to_php(list, ifsc_hash)
       end
     end
     banks_hash[bank] = make_ranges banks_hash[bank]
-    pp banks_hash[bank] if bank == 'JJSB'
   end
 
-  template = File.read('IFSC.php.erb')
+  template = File.read('templates/IFSC.php.erb')
   renderer = ERB.new(template)
   b = binding
 
-  File.open('src/php/IFSC.php', "w") do |file|
+  File.open('../src/php/IFSC.php', "w") do |file|
     output = (renderer.result(b))
     file.puts(output)
   end
