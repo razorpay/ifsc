@@ -1,0 +1,17 @@
+{
+    "name": "razorpay/ifsc",
+    "description": "Razorpay IFSC Codes Library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abhay Rana",
+            "email": "nemo@razorpay.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Razorpay\\IFSC\\": "src/php"
+        }
+    }
+}
