@@ -33,4 +33,7 @@ export_bloom_filter(ifsc_codes_list)
 log "Exporting JSON by Banks"
 export_json_by_banks(ifsc_codes_list, hash)
 
+log "Updating the PHP class"
+export_to_php(ifsc_codes_list, hash)
+
 log "Export done"
