@@ -15,7 +15,7 @@ files can be found [here][rbi]. There is also a
 but that file doesn't seem to be updated.
 
 You will need ruby and wget to run the script, which
-is just `sh bootstrap.sh`. This will scrape the list page,
+is just `cd scripts && sh bootstrap.sh`. This will scrape the list page,
 download all the excel files in the `sheets/` directory,
 parse them and generate datasets in the `data/` directory.
 
