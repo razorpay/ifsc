@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    ifsc (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.8.4)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ifsc!
+  minitest (~> 5.8)
+  rake (~> 10.5)
+
+BUNDLED WITH
+   1.11.2

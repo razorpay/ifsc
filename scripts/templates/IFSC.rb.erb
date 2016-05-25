@@ -1,0 +1,53 @@
+module Razorpay
+  class IFSC
+    <% banks_hash.each_pair do |bank_code, data| %>
+    <%= "#{bank_code} = #{data.to_json}" %><% end %>
+
+    def self.validate(code)
+      puts "#{code}"
+      return false if code.size != 11
+      return false if code[4] != '0'
+
+      bank_code = code[0..3].upcase
+      branch_code = code[4..-1].upcase
+
+      unless IFSC.const_defined?(bank_code)
+        puts "Constant not defined #{bank_code}"
+        return false
+      end
+
+      list = IFSC.const_get(bank_code.to_s)
+
+      # puts "#{code} - " + (code =~ /[0-9]/)
+
+      if (code =~ /[0-9]/)
+        self.lookup_numeric(list, branch_code)
+      else
+        self.lookup_string(list, branch_code)
+      end
+    end
+
+    def self.lookup_numeric(list, branch_code)
+      branch_code = branch_code.to_i
+
+      return true if list.include? branch_code
+
+      lookup_ranges list, branch_code
+    end
+
+    def self.lookup_ranges(list, branch_code)
+      list.each do |item|
+        return false unless item.is_a? Array
+
+        assert item.size == 2
+
+        (branch_code >= item[0] and branch_code <= item[1])
+      end
+    end
+
+    def self.lookup_string(list, branch_code)
+      puts "Looking #{branch_code}"
+      list.include? branch_code
+    end
+  end
+end
