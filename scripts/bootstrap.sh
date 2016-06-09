@@ -10,3 +10,8 @@ wget -i excel_list.txt -P sheets/
 mkdir -p data/by-bank
 # This is the script that does all the data generation
 ruby generate.rb
+
+cd ..
+npm install
+cd scripts
+node build-regex.js

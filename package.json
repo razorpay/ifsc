@@ -1,0 +1,27 @@
+{
+  "name": "ifsc-codes",
+  "version": "1.0.0",
+  "description": "IFSC Code Scraper Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razorpay/ifsc-downloader.git"
+  },
+  "keywords": [
+    "ifsc",
+    "scraper"
+  ],
+  "author": "Razorpay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/razorpay/ifsc-downloader/issues"
+  },
+  "homepage": "https://github.com/razorpay/ifsc-downloader#readme",
+  "dependencies": {
+    "frakjs": "^1.0.0",
+    "js-yaml": "^3.6.1"
+  }
+}

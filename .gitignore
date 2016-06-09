@@ -4,4 +4,5 @@ excel_list.txt
 data/
 
 /vendor/
+node_modules/
 composer.lock
