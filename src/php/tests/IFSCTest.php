@@ -33,4 +33,15 @@ class IFSCTest extends PHPUnit_Framework_TestCase
         $this->assertFalse(IFSC::validate('BOTM0000500'));
         $this->assertFalse(IFSC::validate('DLXB0000500'));
     }
+
+    /**
+     * Himachal Pradesh State Cooperative Bank is not
+     * on the RBI list yet
+     * which is why we test it separately
+     */
+    public function testHPSC()
+    {
+        $this->assertTrue(IFSC::validate('HPSC0000406'));
+        $this->assertFalse(IFSC::validate('HPSC0000339'));
+    }
 }
