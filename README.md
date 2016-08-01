@@ -17,7 +17,7 @@ but that file doesn't seem to be updated.
 You will need ruby and wget to run the script, which
 is just `cd scripts && sh bootstrap.sh`. This will scrape the list page,
 download all the excel files in the `sheets/` directory,
-parse them and generate datasets in the `data/` directory.
+parse them and generate datasets in the `scripts/data/` directory.
 
 The following files will be generated, with approx file
 sizes given as well:
@@ -25,13 +25,13 @@ sizes given as well:
 |File|Size|
 |----|----|
 |IFSC.csv|19M|
-|IFSC.json|40M|
-|IFSC.marshal|40M|
-|IFSC.yml|31M|
+|IFSC.json|38M|
+|IFSC-list.bloom|264K|
 |IFSC-list.json|1.8M|
-|IFSC-list.marshal|2.3M|
+|IFSC-list.marshal |2.3M|
 |IFSC-list.yml|1.8M|
-|IFSC-list.bloom|246k|
+|IFSC.marshal|38M|
+|IFSC.yml|30M|
 
 The files with the `-list` suffix only contain the list of IFSC codes.
 This can be used for validation purposes. The `.bloom` file is a binary
