@@ -49,7 +49,7 @@ def map_data(row, headings)
     case header
     when 'CONTACT'
       scan = row[heading_index].to_s.scan(/^(\d+)\D?/).last
-      data[index] = scan.nil? or scan==0 ? nil : scan.first
+      data[index] = (scan.nil? or scan==0 or scan=="0" or (scan.is_a? Array and scan==["0"])) ? nil : scan.first
     else
       data[index] = row[heading_index] if index
     end
