@@ -46,7 +46,14 @@ def map_data(row, headings)
   # Find the heading in HEADINGS_INSERT
   headings.each_with_index do |header, heading_index|
     index = HEADINGS_INSERT.find_index header
-    data[index] = row[heading_index] if index
+    case header
+    when 'CONTACT'
+      scan = row[heading_index].to_s.scan(/^(\d+)\D?/).last
+      data[index] = scan.nil? or scan==0 ? nil : scan.first
+    else
+      data[index] = row[heading_index] if index
+    end
+    
   end
 
   data
