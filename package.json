@@ -9,7 +9,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "node tests/node/index.js"
+    "test": "node tests/validator_test.js"
   },
   "repository": {
     "type": "git",

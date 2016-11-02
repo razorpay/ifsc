@@ -66,6 +66,11 @@ var lookupString = function(list, code) {
 	return (list.indexOf(code) !== -1);
 };
 
+var _fetchDetails = function(code) {
+	throw Error("Not implemented yet");
+}
+
 module.exports = {
-	validate: _validate
+	validate: _validate,
+	fetchDetails: _fetchDetails
 };

@@ -1,0 +1,26 @@
+{
+	"testBasicValidator": {
+		"KKBK0000261": true,
+		"HDFC0002854": true,
+		"KARB0000001": true
+	},
+	"testValidateInsideRange": {
+		"DLXB0000097": true
+	},
+	"testValidateStringLookup": {
+		"BOTM0NEEMRA": true,
+		"BARB0ZOOTIN": true
+	},
+	"testValidateInvalidCode": {
+		"BOTM0XEEMRA": false,
+		"BOTX0XEEMRA": false,
+		"BOTX0000000": false,
+		"BOTX0000500": false,
+		"BOTM0000500": false,
+		"DLXB0000500": false
+	},
+	"testHPSC": {
+		"HPSC0000406": true,
+		"HPSC0000300": false
+	}
+}
