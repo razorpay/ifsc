@@ -68,7 +68,7 @@ var lookupString = function(list, code) {
 
 var _fetchDetails = function(code) {
 	throw Error("Not implemented yet");
-}
+};
 
 module.exports = {
 	validate: _validate,
