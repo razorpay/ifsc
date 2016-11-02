@@ -42,6 +42,6 @@ class IFSCTest extends PHPUnit_Framework_TestCase
     public function testHPSC()
     {
         $this->assertTrue(IFSC::validate('HPSC0000406'));
-        $this->assertFalse(IFSC::validate('HPSC0000339'));
+        $this->assertFalse(IFSC::validate('HPSC0000300'));
     }
 }

@@ -1,5 +1,5 @@
 var fs = require('fs');
-var data = require('./../php/codes.json');
+var data = require('./../IFSC.json');
 
 var _validate = function(code) {
 	if (code.length !== 11) {
