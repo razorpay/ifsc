@@ -1,8 +1,5 @@
 var fs = require('fs');
-var data = {};
-fs.readFileSync('./codes.json', function(contents) {
-	data = JSON.parse(contents);
-});
+var data = require('./../php/codes.json');
 
 var _validate = function(code) {
 	if (code.length !== 11) {
@@ -13,8 +10,8 @@ var _validate = function(code) {
 		return false;
 	}
 
-	var bankCode   = code.slice(0,4).toUpper();
-    var branchCode = code.slice(5).toUpper();
+	var bankCode   = code.slice(0,4).toUpperCase();
+    var branchCode = code.slice(5).toUpperCase();
 
     if (!data.hasOwnProperty(bankCode)) {
     	return false;
@@ -22,16 +19,16 @@ var _validate = function(code) {
 
     var list = data[bankCode];
 
-    if (isInteger(code)) {
-    	return lookupNumeric(list, code);
+    if (isInteger(branchCode)) {
+    	return lookupNumeric(list, branchCode);
     }
     else {
-    	return lookupString(list, code);
+    	return lookupString(list, branchCode);
     }
 };
 
 var isInteger = function(code) {
-	if (isNan(parseInt(code, 10))) {
+	if (isNaN(parseInt(code, 10))) {
 		return false;
 	}
 
@@ -39,11 +36,13 @@ var isInteger = function(code) {
 };
 
 var lookupNumeric = function(list, code) {
-	code = parseInt(code);
+	code = parseInt(code, 10);
 
 	if (list.indexOf(code) > -1) {
 		return true;
 	}
+
+	return lookupRanges(list, code);
 };
 
 var lookupRanges = function(list, code) {
