@@ -2,6 +2,6 @@ sheets/
 list.html
 excel_list.txt
 data/
-
 /vendor/
 composer.lock
+node_modules

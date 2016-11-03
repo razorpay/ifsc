@@ -4,6 +4,8 @@ This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
 [ifsc.razorpay.com](https://ifsc.razorpay.com).
 
+## Dataset
+
 If you are just looking for the dataset, go to
 the [releases][releases] section and download
 the latest release.
@@ -23,15 +25,16 @@ The following files will be generated, with approx file
 sizes given as well:
 
 |File|Size|
-|----|----|
-|IFSC.csv|19M|
-|IFSC.json|38M|
-|IFSC-list.bloom|264K|
-|IFSC-list.json|1.8M|
-|IFSC-list.marshal |2.3M|
-|IFSC-list.yml|1.8M|
-|IFSC.marshal|38M|
-|IFSC.yml|30M|
+|----|----------|
+| IFSC.csv| 19M |
+| IFSC.yml| 30M |
+| IFSC.json| 38M |
+| IFSC.marshal| 40M |
+| IFSC-list.json| 1.8M |
+| IFSC-list.yml| 1.8M |
+| IFSC-list.marshal| 2.3M |
+| IFSC-list.bloom| 264K |
+| by-bank.zip| 6.3M |
 
 The files with the `-list` suffix only contain the list of IFSC codes.
 This can be used for validation purposes. The `.bloom` file is a binary
@@ -43,6 +46,40 @@ false positives for at max 0.1% of the cases.
 
 The `data/by-bank` directory holds multiple JSON files corresponding
 to each bank, for faster lookups.
+
+## API Documentation
+
+This repository also hosts the source code for 2 modules: PHP/Node.js as of now.
+The only API they provide is validation, as of now. Both are available as a
+package in their respective language repos (packagist.org and npmjs.com).
+
+The API is documented below:
+
+### PHP
+
+```php
+<?php
+
+use Razorpay\IFSC\IFSC;
+
+IFSC::validate('KKBK0000261'); // Returns true
+IFSC::validate('BOTM0XEEMRA'); // Returns false
+```
+
+### Node.js
+
+```js
+var ifsc = require('ifsc');
+
+ifsc.validate('KKBK0000261'); // returns true
+ifsc.validate('BOTM0XEEMRA'); // returns false
+```
+
+### Code Notes
+
+Both the packages ship with a 300kb JSON file, that
+includes the entire list of IFSC codes, in a compressed,
+but human-readable format.
 
 ## License
 

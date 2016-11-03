@@ -1,0 +1,35 @@
+{
+  "name": "ifsc",
+  "version": "0.1.7",
+  "description": "This is part of the IFSC toolset released by Razorpay. You can find more details about the entire release at [ifsc.razorpay.com](https://ifsc.razorpay.com). Includes only a validation library as of now.",
+  "main": "src/node/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node tests/validator_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razorpay/ifsc.git"
+  },
+  "keywords": [
+    "ifsc",
+    "IFSC codes",
+    "validator",
+    "razorpay",
+    "Indian Financial System Code"
+  ],
+  "author": {
+    "name" : "Nemo",
+    "email" : "nemo@razorpay.com",
+    "url" : "https://captnemo.in/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/razorpay/ifsc/issues"
+  },
+  "homepage": "https://github.com/razorpay/ifsc#readme"
+}

@@ -166,7 +166,7 @@ def make_ranges(list)
   ranges.map { |x| x.size==1 ? x[0] : x }
 end
 
-def export_to_php(list, ifsc_hash)
+def export_to_code_json(list, ifsc_hash)
   banks = find_bank_codes list
   banks_hash = Hash.new
 
@@ -183,13 +183,8 @@ def export_to_php(list, ifsc_hash)
     banks_hash[bank] = make_ranges banks_hash[bank]
   end
 
-  template = File.read('templates/IFSC.php.erb')
-  renderer = ERB.new(template)
-  b = binding
-
-  File.open('../src/php/IFSC.php', "w") do |file|
-    output = (renderer.result(b))
-    file.puts(output)
+  File.open('../src/IFSC.json', 'w') do |file|
+    file.puts banks_hash.to_json
   end
 end
 

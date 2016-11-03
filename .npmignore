@@ -1,0 +1,14 @@
+sheets/
+list.html
+excel_list.txt
+data/
+/vendor/
+composer.lock
+composer.json
+phpunit.xml
+.gitignore
+tests/
+node_modules/
+src/php/
+scripts/
+Gemfile*
