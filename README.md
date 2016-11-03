@@ -25,16 +25,16 @@ The following files will be generated, with approx file
 sizes given as well:
 
 |File|Size|
-|----|----|
-|  19M | IFSC.csv|
-|  30M | IFSC.yml|
-|  38M | IFSC.json|
-|  40M | IFSC.marshal|
-| 1.8M | IFSC-list.json|
-| 1.8M | IFSC-list.yml|
-| 2.3M | IFSC-list.marshal|
-| 264K | IFSC-list.bloom|
-| 6.3M | by-bank.zip|
+|----|----------|
+| IFSC.csv| 19M |
+| IFSC.yml| 30M |
+| IFSC.json| 38M |
+| IFSC.marshal| 40M |
+| IFSC-list.json| 1.8M |
+| IFSC-list.yml| 1.8M |
+| IFSC-list.marshal| 2.3M |
+| IFSC-list.bloom| 264K |
+| by-bank.zip| 6.3M |
 
 The files with the `-list` suffix only contain the list of IFSC codes.
 This can be used for validation purposes. The `.bloom` file is a binary
