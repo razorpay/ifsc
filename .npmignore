@@ -10,3 +10,5 @@ phpunit.xml
 tests/
 node_modules/
 src/php/
+scripts/
+Gemfile*
