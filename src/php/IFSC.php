@@ -5,6 +5,7 @@ namespace Razorpay\IFSC;
 class IFSC
 {
     protected static $data = null;
+    protected static $bankNames = null;
 
     public static function init()
     {
@@ -12,6 +13,11 @@ class IFSC
         {
             $contents = file_get_contents(__DIR__ . '/../IFSC.json');
             self::$data = json_decode($contents, true);
+        }
+
+        if (!self::$bankNames)
+        {
+            self::$bankNames = json_decode(file_get_contents(__DIR__ . '/../banknames.json'), true);
         }
     }
 
@@ -40,6 +46,29 @@ class IFSC
             return static::lookupNumeric($list, $branchCode);
         } else {
             return static::lookupString($list, $branchCode);
+        }
+    }
+
+    /**
+     * Validates a given bank code
+     * @param  string $bankCode 4 character bank code
+     * @return boolean
+     */
+    public static function validateBankCode($bankCode)
+    {
+        return array_key_exists($bankCode, self::$data);
+    }
+
+    /**
+     * Returns a valid display-friendly bank name
+     * @param  string $bankCode valid 4 character bank code
+     * @return string or null
+     */
+    public static function getBankName($bankCode)
+    {
+        if (self::validateBankCode($bankCode))
+        {
+            return self::$bankNames[$bankCode];
         }
     }
 

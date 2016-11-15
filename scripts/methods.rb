@@ -21,23 +21,31 @@ HEADINGS_INSERT = [
 def parse_sheets
   data = []
 
+  file_ifsc_mappings = Hash.new
+
   Dir.glob('sheets/*') do |file|
     log "Parsing #{file}"
+    basename = File.basename file
     sheet = Spreadsheet.open(file).worksheet 0
     headings = sheet.row(0)[0,9]
 
     sheet.each 1 do |row|
       row = row[0,9]
+      next if row.compact.empty?
       data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
       begin
-        data.push data_to_insert.transpose.to_h
+        x = data_to_insert.transpose.to_h
+        data.push x
+        file_ifsc_mappings[basename] = x['IFSC'][0..3]
       rescue Exception => e
-        puts data_to_insert
+        puts "Faced an Exception"
+        puts data_to_insert.to_json
+        puts e
         exit
       end
     end
   end
-  data
+  [data, file_ifsc_mappings]
 end
 
 def map_data(row, headings)
@@ -45,18 +53,43 @@ def map_data(row, headings)
 
   # Find the heading in HEADINGS_INSERT
   headings.each_with_index do |header, heading_index|
+    header = header.strip
     index = HEADINGS_INSERT.find_index header
     case header
     when 'CONTACT'
       scan = row[heading_index].to_s.scan(/^(\d+)\D?/).last
       data[index] = (scan.nil? or scan==0 or scan=="0" or (scan.is_a? Array and scan==["0"])) ? nil : scan.first
+    when 'IFSC CODE'
+      index = HEADINGS_INSERT.find_index 'IFSC'
+      data[index] = row[heading_index]
+      
     else
       data[index] = row[heading_index] if index
     end
-    
+  end
+  data
+end
+
+def export_bank_names(file_ifsc_mappings)
+  # This is all the files that we have downloaded with names
+  contents = File.read('data/names.json')
+  data_hash = JSON.parse(contents)
+
+  res = Hash.new
+
+  data_hash.each do |filename, name|
+    if file_ifsc_mappings.key? filename
+      res[file_ifsc_mappings[filename]] = name
+    else
+      puts "No IFSC code found for #{filename}"
+    end
   end
 
-  data
+  File.open("../src/banknames.json", "w") do |file|
+    file.write JSON.pretty_generate res
+  end
+
+  File.delete "data/names.json"
 end
 
 def export_csv(data)

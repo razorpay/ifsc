@@ -23,6 +23,18 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
         }
     }
 
+    public function testBankCodeValidator()
+    {
+        $this->assertTrue(IFSC::validateBankCode('PUNB'));
+        $this->assertFalse(IFSC::validateBankCode('ABCD'));
+    }
+
+    public function testBankNames()
+    {
+        $this->assertEquals('Punjab National Bank', IFSC::getBankName('PUNB'));
+        $this->assertEquals('Shri Chhatrapati Rajashri Shahu Urban Co-Op Bank Ltd', IFSC::getBankName('CRUB'));
+    }
+
     protected function singleTest($message, $tests)
     {
         foreach ($tests as $code => $expectedValue)

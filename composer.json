@@ -13,5 +13,16 @@
         "psr-4": {
             "Razorpay\\IFSC\\": "src/php"
         }
+    },
+    "archive": {
+        "exclude": [
+            "/scripts/",
+            "/node_modules/",
+            "/src/node/",
+            "/tests/*.js",
+            "/.npmignore",
+            "/Gemfile*",
+            "/package.json"
+        ]
     }
 }

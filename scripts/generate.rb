@@ -1,10 +1,13 @@
 require './methods'
 
-data = parse_sheets()
+data, file_ifsc_mappings = parse_sheets()
 
 hash = Hash.new
 data.each { |row| hash[row['IFSC']] = row }
 ifsc_codes_list = hash.keys
+
+log "Exporting Bank Names"
+export_bank_names(file_ifsc_mappings)
 
 log "Exporting CSV"
 export_csv(data)
