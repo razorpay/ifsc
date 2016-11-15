@@ -64,6 +64,12 @@ use Razorpay\IFSC\IFSC;
 
 IFSC::validate('KKBK0000261'); // Returns true
 IFSC::validate('BOTM0XEEMRA'); // Returns false
+
+IFSC::validateBankCode('PUNB'); // Returns true
+IFSC::validateBankCode('ABCD'); // Returns false
+
+IFSC::getBankName('PUNB'); // Returns 'Punjab National Bank'
+IFSC::getBankName('ABCD'); // Returns null
 ```
 
 ### Node.js

@@ -33,6 +33,7 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals('Punjab National Bank', IFSC::getBankName('PUNB'));
         $this->assertEquals('Shri Chhatrapati Rajashri Shahu Urban Co-Op Bank Ltd', IFSC::getBankName('CRUB'));
+        $this->assertEquals(null, IFSC::getBankName('ABCD'));
     }
 
     protected function singleTest($message, $tests)
