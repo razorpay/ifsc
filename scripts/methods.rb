@@ -89,7 +89,19 @@ def export_bank_names(file_ifsc_mappings)
     file.write JSON.pretty_generate res
   end
 
-  File.delete "data/names.json"
+  export_bank_name_php(res)
+end
+
+def export_bank_name_php(banks_hash)
+  pp banks_hash
+  template = File.read('templates/Bank.erb')
+  renderer = ERB.new(template)
+  b = binding
+
+  File.open('../src/php/Bank.php', "w") do |file|
+    output = (renderer.result(b))
+    file.puts(output)
+  end
 end
 
 def export_csv(data)
