@@ -61,6 +61,7 @@ The API is documented below:
 <?php
 
 use Razorpay\IFSC\IFSC;
+use Razorpay\IFSC\Bank;
 
 IFSC::validate('KKBK0000261'); // Returns true
 IFSC::validate('BOTM0XEEMRA'); // Returns false
@@ -70,6 +71,9 @@ IFSC::validateBankCode('ABCD'); // Returns false
 
 IFSC::getBankName('PUNB'); // Returns 'Punjab National Bank'
 IFSC::getBankName('ABCD'); // Returns null
+
+IFSC::getBankName(Bank::PUNB); //Returns Punjab National Bank
+
 ```
 
 ### Node.js
