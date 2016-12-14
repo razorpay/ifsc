@@ -101,6 +101,7 @@ class Bank
     const KVBL = 'KVBL';
     const KVGB = 'KVGB';
     const LAVB = 'LAVB';
+    const LKBL = 'LKBL';
     const MAHB = 'MAHB';
     const MAHG = 'MAHG';
     const MCBL = 'MCBL';
@@ -178,6 +179,7 @@ class Bank
     const VIJB = 'VIJB';
     const VSBL = 'VSBL';
     const VVSB = 'VVSB';
+    const VYSA = 'VYSA';
     const WBSC = 'WBSC';
     const WPAC = 'WPAC';
     const YESB = 'YESB';
