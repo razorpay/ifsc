@@ -5,6 +5,7 @@ namespace Razorpay\IFSC;
 class Bank
 {   
     const ABHY = 'ABHY';
+    const ABHY = 'ABHY';
     const ABNA = 'ABNA';
     const ADCB = 'ADCB';
     const ADCC = 'ADCC';
