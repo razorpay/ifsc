@@ -3,8 +3,6 @@ require 'csv'
 require 'yaml'
 require 'json'
 require 'set'
-require 'bloom-filter'
-require 'erb'
 require 'pp'
 
 HEADINGS_INSERT = [
@@ -70,40 +68,6 @@ def map_data(row, headings)
   data
 end
 
-def export_bank_names(file_ifsc_mappings)
-  # This is all the files that we have downloaded with names
-  contents = File.read('data/names.json')
-  data_hash = JSON.parse(contents)
-
-  res = Hash.new
-
-  data_hash.each do |filename, name|
-    if file_ifsc_mappings.key? filename
-      res[file_ifsc_mappings[filename]] = name
-    else
-      puts "No IFSC code found for #{filename}"
-    end
-  end
-
-  File.open("../src/banknames.json", "w") do |file|
-    file.write JSON.pretty_generate res
-  end
-
-  export_bank_name_php(res)
-end
-
-def export_bank_name_php(banks_hash)
-  pp banks_hash
-  template = File.read('templates/Bank.erb')
-  renderer = ERB.new(template)
-  b = binding
-
-  File.open('../src/php/Bank.php', "w") do |file|
-    output = (renderer.result(b))
-    file.puts(output)
-  end
-end
-
 def export_csv(data)
   CSV.open("data/IFSC.csv", "wb") do |csv|
     csv << data[0].keys
@@ -123,10 +87,6 @@ end
 
 def export_json(hash)
   File.open("data/IFSC.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
-end
-
-def export_lookup_table_marshal(list)  
-  File.open("data/IFSC-list.marshal", 'w') { |f| Marshal.dump(list, f) }
 end
 
 def export_yml_list(list)
@@ -154,16 +114,6 @@ def find_bank_branches(bank, list)
       false
     end
   end
-end
-
-def export_bloom_filter(list)
-  # 128_000 is the approx size of our current list
-  filter = BloomFilter.new size: 150_000, error_rate: 0.001
-  list.each do |code|
-    filter.insert code
-  end
-
-  filter.dump "data/IFSC-list.bloom"
 end
 
 def export_json_by_banks(list, ifsc_hash)

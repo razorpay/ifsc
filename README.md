@@ -29,20 +29,12 @@ sizes given as well:
 | IFSC.csv| 19M |
 | IFSC.yml| 30M |
 | IFSC.json| 38M |
-| IFSC.marshal| 40M |
 | IFSC-list.json| 1.8M |
 | IFSC-list.yml| 1.8M |
-| IFSC-list.marshal| 2.3M |
-| IFSC-list.bloom| 264K |
 | by-bank.zip| 6.3M |
 
 The files with the `-list` suffix only contain the list of IFSC codes.
-This can be used for validation purposes. The `.bloom` file is a binary
-bloom filter dump generated and readable using the [bloom-filter][bf-gem]
-ruby gem. It uses the bloom filter implementation from [here][bf-c].
-
-Note that the bloom filter is always probabilistic, and will return
-false positives for at max 0.1% of the cases.
+This can be used for validation purposes.
 
 The `data/by-bank` directory holds multiple JSON files corresponding
 to each bank, for faster lookups.
@@ -90,6 +82,11 @@ ifsc.validate('BOTM0XEEMRA'); // returns false
 Both the packages ship with a 300kb JSON file, that
 includes the entire list of IFSC codes, in a compressed,
 but human-readable format.
+
+The Bank Code and Names list is mantained manually, but verified
+with tests to be accurate as per the latest RBI publications. This
+lets us add older Bank codes to the name list, without worrying
+about them getting deleted in newer builds.
 
 ## License
 
