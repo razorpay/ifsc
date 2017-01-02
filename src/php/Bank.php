@@ -76,6 +76,7 @@ class Bank
     const ICIC = 'ICIC';
     const IDFB = 'IDFB';
     const IDIB = 'IDIB';
+    const IDUK = 'IDUK';
     const INDB = 'INDB';
     const IOBA = 'IOBA';
     const JAKA = 'JAKA';
