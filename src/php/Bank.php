@@ -123,6 +123,7 @@ class Bank
     const NOSC = 'NOSC';
     const NTBL = 'NTBL';
     const NUCB = 'NUCB';
+    const NVNM = 'NVNM';
     const OIBA = 'OIBA';
     const ORBC = 'ORBC';
     const PJSB = 'PJSB';
@@ -171,6 +172,7 @@ class Bank
     const TJSB = 'TJSB';
     const TMBL = 'TMBL';
     const TNSC = 'TNSC';
+    const TSAB = 'TSAB';
     const UBIN = 'UBIN';
     const UCBA = 'UCBA';
     const UOVB = 'UOVB';
