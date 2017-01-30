@@ -33,6 +33,12 @@ def parse_sheets
       data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
       begin
         x = data_to_insert.transpose.to_h
+        x.each do |key, value|
+          if value.is_a? Spreadsheet::Excel::Error
+            puts "ERROR: #{file} #{x['IFSC']}"
+            x[key] = nil
+          end
+        end
         data.push x
         file_ifsc_mappings[basename] = x['IFSC'][0..3]
       rescue Exception => e
@@ -60,7 +66,7 @@ def map_data(row, headings)
     when 'IFSC CODE'
       index = HEADINGS_INSERT.find_index 'IFSC'
       data[index] = row[heading_index]
-      
+
     else
       data[index] = row[heading_index] if index
     end
