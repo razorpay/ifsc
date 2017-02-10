@@ -1,0 +1,35 @@
+box: ruby
+build:
+  box: ruby
+  steps:
+    - bundle-install
+    - script:
+      name: Run bootstrap
+      code: |
+        cd scripts && bash bootstrap.sh
+php:
+  box: php
+  steps:
+  - install-packages:
+    packages: git
+  - script:
+    name: install phpunit
+    code: |-
+      curl -L https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit
+      chmod +x /usr/local/bin/phpunit
+  - script:
+    name: install composer
+    code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+  - script:
+    name: install dependencies
+    code: composer install --no-interaction
+  -script:
+    name: Run PHP tests
+    code: phpunit
+node:
+  box: node
+  steps:
+    - npm-install
+    - script:
+      name: run tests
+      code: npm test
