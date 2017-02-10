@@ -175,6 +175,7 @@ class Bank
     const TSAB = 'TSAB';
     const UBIN = 'UBIN';
     const UCBA = 'UCBA';
+    const UJVN = 'UJVN';
     const UOVB = 'UOVB';
     const UTBI = 'UTBI';
     const UTIB = 'UTIB';
