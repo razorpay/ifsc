@@ -5,6 +5,7 @@ namespace Razorpay\IFSC;
 use Http\Client\HttpClient;
 use Http\Message\RequestFactory;
 use Http\Discovery\HttpClientDiscovery;
+use Psr\Http\Message\ResponseInterface;
 use Http\Discovery\MessageFactoryDiscovery;
 
 class Client
@@ -25,12 +26,12 @@ class Client
         $this->requestFactory = $requestFactory ?: MessageFactoryDiscovery::find();
     }
 
-    public function getHttpClient()
+    public function getHttpClient(): HttpClient
     {
         return $this->httpClient;
     }
 
-    public function lookupIFSC(string $ifsc)
+    public function lookupIFSC(string $ifsc): Entity
     {
         if (IFSC::validate($ifsc))
         {
@@ -42,15 +43,50 @@ class Client
 
             $response = $this->httpClient->sendRequest($request);
 
-            return $response;
+            return $this->parseResponse($response, $ifsc);
         }
         else
         {
-            return false;
+            $this->throwInvalidCode($ifsc);
         }
     }
 
-    protected function makeUrl($path)
+    /**
+     * Parses a response into a IFSC\Entity instance
+     * @param  ResponseInterface $response Response from the API
+     * @param  string            $ifsc
+     * @throws Exception\ServerError
+     * @throws Exception\InvalidCode
+     * @return Entity
+     */
+    protected function parseResponse(ResponseInterface $response, string $ifsc): Entity
+    {
+        switch ($response->getStatusCode())
+        {
+            case 200:
+                return new Entity($response);
+                break;
+
+            case 404:
+                $this->throwInvalidCode($ifsc);
+                break;
+
+            default:
+                throw new Exception\ServerError('IFSC API returned invalid response: ' .  $ifsc);
+                break;
+        }
+    }
+
+    /**
+     * @throws Exception\InvalidCode
+     * @param  string $ifsc IFSC Code
+     */
+    protected function throwInvalidCode(string $ifsc)
+    {
+        throw new Exception\InvalidCode('Invalid IFSC: ' . $ifsc);
+    }
+
+    protected function makeUrl(string $path): string
     {
         return self::API_BASE . $path;
     }
