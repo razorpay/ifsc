@@ -13,6 +13,8 @@ class Client
 
     const GET = 'GET';
 
+    protected $httpClient = null;
+
     /**
      * Creates a IFSC Client instance
      * @param Http\Client\HttpClient $httpClient A valid HTTPClient
@@ -23,16 +25,22 @@ class Client
         $this->requestFactory = $requestFactory ?: MessageFactoryDiscovery::find();
     }
 
+    public function getHttpClient()
+    {
+        return $this->httpClient;
+    }
+
     public function lookupIFSC(string $ifsc)
     {
         if (IFSC::validate($ifsc))
         {
+            $url = $this->makeUrl("/$ifsc");
             $request  = $this->requestFactory->createRequest(
                 self::GET,
-                "/$ifsc"
+                $url
             );
 
-            $response = $this->httpClient->makeRequest($request);
+            $response = $this->httpClient->sendRequest($request);
 
             return $response;
         }

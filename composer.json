@@ -38,5 +38,8 @@
         "php-http/message"      : "^1.0",
         "php-http/mock-client"  : "^0.3",
         "phpunit/phpunit"       : "^6.0"
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
