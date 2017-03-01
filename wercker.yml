@@ -23,7 +23,7 @@ php:
   - script:
     name: install dependencies
     code: composer install --no-interaction
-  -script:
+  - script:
     name: Run PHP tests
     code: phpunit
 node:
