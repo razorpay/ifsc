@@ -16,5 +16,5 @@ doc.css('.tablebg a').each do |link|
 end
 
 File.open("data/names.json", "w") do |file|
-	file.write JSON.pretty_generate h
+  file.write JSON.pretty_generate h
 end

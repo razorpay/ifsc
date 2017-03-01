@@ -2,6 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+mkdir data
 wget "https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2009" -O list.html -o /dev/null
 bundle exec ruby parse_list.rb > excel_list.txt
 rm -rf sheets
