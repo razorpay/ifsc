@@ -24,6 +24,11 @@ php:
     name: install dependencies
     code: composer install --no-interaction
   - script:
+    name: fetch latest complete IFSC list
+    code: |-
+      mkdir -p scripts/data
+      curl --silent "https://github.com/razorpay/ifsc/releases/download/0.2.9/IFSC-list.json" --output scripts/data/IFSC-list.json --location
+  - script:
     name: Run PHP tests
     code: phpunit
 node:
