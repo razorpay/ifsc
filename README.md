@@ -4,6 +4,8 @@ This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
 [ifsc.razorpay.com](https://ifsc.razorpay.com).
 
+[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master "wercker status")](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504)
+
 ## Dataset
 
 If you are just looking for the dataset, go to

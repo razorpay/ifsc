@@ -11,3 +11,16 @@ wget -i excel_list.txt -P sheets/
 mkdir -p data/by-bank
 # This is the script that does all the data generation
 bundle exec ruby generate.rb
+cd data
+
+# Zip the bank files
+zip -r by-bank.zip by-bank
+rm -rf by-bank/
+
+# Delete all the sheets for a much smaller
+# container store if we are in a build
+if [ "$CI" = "true" ]; then
+  rm -rf sheets/
+fi
+
+cd ..
