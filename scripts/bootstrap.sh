@@ -13,8 +13,8 @@ mkdir -p data/by-bank
 bundle exec ruby generate.rb
 cd data
 
-# Zip the bank files
-zip -r by-bank.zip by-bank
+# Compress the $BANK.json files
+tar -zcvf by-bank.tar.gz by-bank
 rm -rf by-bank/
 
 # Delete all the sheets for a much smaller

@@ -1,12 +1,12 @@
 box: ruby
 build:
-  box: ruby
+  box: ruby:alpine
   steps:
     - bundle-install
     - script:
       name: Run bootstrap
-      code: |
-        cd scripts && bash bootstrap.sh
+      code: bash bootstrap.sh
+      cwd: scripts
 php:
   box: php
   steps:
