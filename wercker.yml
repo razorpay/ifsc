@@ -1,6 +1,6 @@
 box: ruby
 build:
-  box: ruby:alpine
+  box: ruby
   steps:
     - bundle-install
     - script:

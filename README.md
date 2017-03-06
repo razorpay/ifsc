@@ -100,4 +100,4 @@ should be under public domain.
 [combined]: https://goo.gl/UryY8j "goo.gl link because RBI doesn't allow you to link to their website"
 [bf-gem]: https://github.com/deepfryed/bloom-filter
 [bf-c]: https://github.com/fragglet/c-algorithms/blob/master/src/bloom-filter.c
-[releases]: https://github.com/razorpay/ifsc-downloader/releases
+[releases]: https://github.com/razorpay/ifsc/releases
