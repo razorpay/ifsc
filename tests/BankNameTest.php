@@ -2,9 +2,9 @@
 namespace Razorpay\IFSC\Tests;
 
 use Razorpay\IFSC\Bank;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class Name extends PHPUnit_Framework_TestCase
+class Name extends TestCase
 {
     public function testDefined()
     {

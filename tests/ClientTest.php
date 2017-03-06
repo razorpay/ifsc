@@ -3,13 +3,13 @@
 namespace Razorpay\IFSC\Tests;
 
 use Razorpay\IFSC;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Http\Mock\Client as MockClient;
 use Psr\Http\Message\RequestInterface;
 use Http\Discovery\HttpClientDiscovery;
 use Http\Discovery\Strategy\MockClientStrategy;
 
-class ClientTest extends PHPUnit_Framework_TestCase
+class ClientTest extends TestCase
 {
     const FAKE_IFSC = 'RAZR0000001';
     const REAL_IFSC = 'AIRP0000001';

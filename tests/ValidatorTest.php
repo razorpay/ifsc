@@ -2,9 +2,9 @@
 namespace Razorpay\IFSC\Tests;
 
 use Razorpay\IFSC\IFSC;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class ValidatorTest extends PHPUnit_Framework_TestCase
+class ValidatorTest extends TestCase
 {
     protected static $allTests = [];
 

@@ -4,6 +4,8 @@ This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
 [ifsc.razorpay.com](https://ifsc.razorpay.com).
 
+[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master "wercker status")](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504)
+
 ## Dataset
 
 If you are just looking for the dataset, go to
@@ -98,4 +100,4 @@ should be under public domain.
 [combined]: https://goo.gl/UryY8j "goo.gl link because RBI doesn't allow you to link to their website"
 [bf-gem]: https://github.com/deepfryed/bloom-filter
 [bf-c]: https://github.com/fragglet/c-algorithms/blob/master/src/bloom-filter.c
-[releases]: https://github.com/razorpay/ifsc-downloader/releases
+[releases]: https://github.com/razorpay/ifsc/releases

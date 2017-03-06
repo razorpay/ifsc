@@ -3,12 +3,12 @@ namespace Razorpay\IFSC\Tests;
 
 use Razorpay\IFSC\IFSC;
 use Razorpay\IFSC\Bank;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Checks coverage of all Bank Codes and Names
  */
-class CoverageTest extends PHPUnit_Framework_TestCase
+class CoverageTest extends TestCase
 {
     public function setUp()
     {
