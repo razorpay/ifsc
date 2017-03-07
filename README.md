@@ -23,6 +23,9 @@ is just `cd scripts && sh bootstrap.sh`. This will scrape the list page,
 download all the excel files in the `sheets/` directory,
 parse them and generate datasets in the `scripts/data/` directory.
 
+The latest [`build` pipeline][buildlist] on Wercker should result in a container
+with the complete dataset as well.
+
 The following files will be generated, with approx file
 sizes given as well:
 
@@ -33,7 +36,7 @@ sizes given as well:
 | IFSC.json| 38M |
 | IFSC-list.json| 1.8M |
 | IFSC-list.yml| 1.8M |
-| by-bank.zip| 6.3M |
+| by-bank.tar.gz| 6.3M |
 
 The files with the `-list` suffix only contain the list of IFSC codes.
 This can be used for validation purposes.
@@ -54,8 +57,9 @@ The API is documented below:
 ```php
 <?php
 
-use Razorpay\IFSC\IFSC;
 use Razorpay\IFSC\Bank;
+use Razorpay\IFSC\IFSC;
+use Razorpay\IFSC\Client;
 
 IFSC::validate('KKBK0000261'); // Returns true
 IFSC::validate('BOTM0XEEMRA'); // Returns false
@@ -68,6 +72,23 @@ IFSC::getBankName('ABCD'); // Returns null
 
 IFSC::getBankName(Bank::PUNB); //Returns Punjab National Bank
 
+$client = new Client();
+$res = $client->lookupIFSC('KKBK0000261');
+
+echo $res->bank; // 'KOTAK MAHINDRA BANK LIMITED'
+echo $res->branch; // 'GURGAON'
+echo $res->address; // 'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,'
+echo $res->contact; // '4131000'
+echo $res->city; // 'GURGAON'
+echo $res->district; // 'GURGAON'
+echo $res->state; // 'HARYANA'
+echo $res->getBankCode(); // KKBK
+echo $res->getBankName(); // 'Kotak Mahindra Bank'
+
+// lookupIFSC may throw `Razorpay\IFSC\Exception\ServerError`
+// in case of server not responding in time
+// or Razorpay\IFSC\Exception\InvalidCode in case
+// the IFSC code is invalid
 ```
 
 ### Node.js
@@ -101,3 +122,4 @@ should be under public domain.
 [bf-gem]: https://github.com/deepfryed/bloom-filter
 [bf-c]: https://github.com/fragglet/c-algorithms/blob/master/src/bloom-filter.c
 [releases]: https://github.com/razorpay/ifsc/releases
+[buildlist]: https://app.wercker.com/captn3m0/ifsc/runs?view=runs&q=pipeline%3Abuild
