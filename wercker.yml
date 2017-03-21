@@ -9,7 +9,7 @@ build:
       cwd: scripts
     - script:
       name: Save generated data
-      code: cp * $WERCKER_REPORT_ARTIFACTS_DIR/
+      code: cp * $WERCKER_REPORT_ARTIFACTS_DIR/ && cp '../../src/IFSC.json' $WERCKER_REPORT_ARTIFACTS_DIR/ifsc-src.json
       cwd: scripts/data
 php:
   box: php
