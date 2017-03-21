@@ -35,6 +35,11 @@ class ValidatorTest extends TestCase
         $this->assertEquals(null, IFSC::getBankName('ABCD'));
     }
 
+    public function testSubletBankName()
+    {
+        $this->assertEquals('Vaish Co-operative New Bank', IFSC::getBankName('YESB0VNB001'));
+    }
+
     protected function singleTest($message, $tests)
     {
         foreach ($tests as $code => $expectedValue)
