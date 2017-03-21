@@ -16,6 +16,8 @@ class CoverageTest extends TestCase
         $this->bankCodes = array_values(array_unique(array_map(function($ifsc) {
             return substr($ifsc, 0, 4);
         }, json_decode($contents, true))));
+
+        $this->bankNamesList = json_decode(file_get_contents(__DIR__ . '/../src/banknames.json'), true);
     }
 
     public function testNames()
@@ -33,4 +35,25 @@ class CoverageTest extends TestCase
             $this->assertEquals($code, constant("Razorpay\IFSC\Bank::$code"));
         }
     }
+
+    public function testCoverageAgainstBankNames()
+    {
+        foreach ($this->bankNamesList as $code => $name)
+        {
+            $this->assertEquals($code, constant("Razorpay\IFSC\Bank::$code"));
+        }
+    }
+
+    public function testConstantsAgainstNames()
+    {
+        $constants = (new \ReflectionClass(Bank::class))->getConstants();
+
+        foreach ($constants as $code => $code2)
+        {
+            $this->assertEquals($code2, $code, "Costant $code should equal its value: $code2");
+
+            $this->assertNotNull(IFSC::getBankName($code), "Name missing for $code");
+        }
+    }
+
 }
