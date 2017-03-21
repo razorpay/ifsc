@@ -3,7 +3,7 @@
 namespace Razorpay\IFSC;
 
 class Bank
-{   
+{
     const ABHY = 'ABHY';
     const ABNA = 'ABNA';
     const ADCB = 'ADCB';
@@ -20,6 +20,7 @@ class Bank
     const ASBL = 'ASBL';
     const AUCB = 'AUCB';
     const BACB = 'BACB';
+    const BARA = 'BARA';
     const BARB = 'BARB';
     const BARC = 'BARC';
     const BBKM = 'BBKM';
