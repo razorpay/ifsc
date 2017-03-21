@@ -56,8 +56,7 @@ class IFSC
      */
     public static function validateBankCode($bankCode)
     {
-        self::init();
-        return array_key_exists($bankCode, self::$data);
+        return defined("Razorpay\IFSC\Bank::$bankCode");
     }
 
     /**
