@@ -7,6 +7,10 @@ build:
       name: Run bootstrap
       code: bash bootstrap.sh
       cwd: scripts
+    - script:
+      name: Save generated data
+      code: cp * $WERCKER_REPORT_ARTIFACTS_DIR/
+      cwd: scripts/data
 php:
   box: php
   steps:
