@@ -59,6 +59,7 @@ class Bank
     const DOHB = 'DOHB';
     const EIBI = 'EIBI';
     const ESFB = 'ESFB';
+    const ESMF = 'ESMF';
     const FDRL = 'FDRL';
     const FIRN = 'FIRN';
     const GBCB = 'GBCB';
@@ -163,6 +164,7 @@ class Bank
     const STBP = 'STBP';
     const STCB = 'STCB';
     const SUNB = 'SUNB';
+    const SURY = 'SURY';
     const SUTB = 'SUTB';
     const SVBL = 'SVBL';
     const SVCB = 'SVCB';
