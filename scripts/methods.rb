@@ -3,6 +3,7 @@ require 'csv'
 require 'yaml'
 require 'json'
 require 'set'
+require 'fileutils'
 require 'pp'
 
 HEADINGS_INSERT = [
@@ -15,6 +16,40 @@ HEADINGS_INSERT = [
   "DISTRICT",
   "STATE"
 ]
+
+# These are invalid sublets
+# given out by RBI
+# because they result in 1 bank
+# having 2 different codes
+IGNORED_SUBLETS = [
+  # Typo? in this one (AKJB|AJKB)
+  'AKJB0000001',
+  # DLSC and DSCB are the same
+  'DLSC0000001',
+  # FIRN and FIRX are the same
+  'FIRN0000001',
+  # KANG and KCOB are the same
+  'KANG0000001',
+  # SJSB and SJSX are the same
+  'SJSB0000001',
+  # SKSB and SHKX are the same
+  'SKSB0000001'
+]
+
+def parse_sublet_sheet()
+  sublet_mappings = Hash.new
+  file = 'sheets/SUBLET.csv'
+  sheet = CSV.read(file, headers:true)
+  sheet.each do |row|
+    bank_code = row[1].strip
+    ifsc_code = row[4].strip
+    if ifsc_code.size == 11 and ifsc_code[0..3] != bank_code and not IGNORED_SUBLETS.include?(ifsc_code)
+      sublet_mappings[ifsc_code] = bank_code
+    end
+  end
+
+  return Hash[sublet_mappings.sort]
+end
 
 def parse_sheets
   data = []
@@ -93,6 +128,11 @@ end
 
 def export_json(hash)
   File.open("data/IFSC.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
+end
+
+def export_sublet_json(hash)
+  File.open("../src/sublet.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
+  FileUtils.cp('../src/sublet.json', 'data/sublet.json')
 end
 
 def export_yml_list(list)

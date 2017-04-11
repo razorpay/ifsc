@@ -31,8 +31,13 @@ class ValidatorTest extends TestCase
     public function testBankNames()
     {
         $this->assertEquals('Punjab National Bank', IFSC::getBankName('PUNB'));
-        $this->assertEquals('Shri Chhatrapati Rajashri Shahu Urban Co-Op Bank Ltd', IFSC::getBankName('CRUB'));
+        $this->assertEquals('Shri Chhatrapati Rajashri Shahu Urban Co-operative Bank', IFSC::getBankName('CRUB'));
         $this->assertEquals(null, IFSC::getBankName('ABCD'));
+    }
+
+    public function testSubletBankName()
+    {
+        $this->assertEquals('Vaish Co-operative New Bank', IFSC::getBankName('YESB0VNB001'));
     }
 
     protected function singleTest($message, $tests)

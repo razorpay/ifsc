@@ -6,6 +6,7 @@ class IFSC
 {
     protected static $data = null;
     protected static $bankNames = null;
+    protected static $sublet = null;
 
     public static function init()
     {
@@ -18,6 +19,11 @@ class IFSC
         if (!self::$bankNames)
         {
             self::$bankNames = json_decode(file_get_contents(__DIR__ . '/../banknames.json'), true);
+        }
+
+        if (!self::$sublet)
+        {
+            self::$sublet = json_decode(file_get_contents(__DIR__ . '/../sublet.json'), true);
         }
     }
 
@@ -56,19 +62,27 @@ class IFSC
      */
     public static function validateBankCode($bankCode)
     {
-        self::init();
-        return array_key_exists($bankCode, self::$data);
+        return defined("Razorpay\IFSC\Bank::$bankCode");
     }
 
     /**
      * Returns a valid display-friendly bank name
-     * @param  string $bankCode valid 4 character bank code
+     * @param  string $code
      * @return string or null
      */
-    public static function getBankName($bankCode)
+    public static function getBankName(string $code)
     {
-        if (self::validateBankCode($bankCode))
+        self::init();
+
+        if (self::validateBankCode($code))
         {
+            return self::$bankNames[$code];
+        }
+        else if (self::validate($code))
+        {
+            // Check if the IFSC is sublet, if not use first 4
+            $bankCode = self::$sublet[$code] ?? substr($code, 0, 4);
+
             return self::$bankNames[$bankCode];
         }
     }
