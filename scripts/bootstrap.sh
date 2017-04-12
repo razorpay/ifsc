@@ -7,7 +7,7 @@ wget --no-verbose "https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2009" -
 bundle exec ruby parse_list.rb > excel_list.txt
 rm --recursive --force sheets
 mkdir --parents sheets
-wget --no-verbose --input-file=excel_list.txt --directory-prefix=sheets/
+wget --no-verbose --input-file=excel_list.txt --directory-prefix=sheets/ || true
 mkdir --parents data/by-bank
 # This is the script that does all the data generation
 bundle exec ruby generate.rb
