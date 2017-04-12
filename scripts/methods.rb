@@ -1,4 +1,5 @@
 require 'spreadsheet'
+require 'rubyXL'
 require 'csv'
 require 'yaml'
 require 'json'
@@ -38,16 +39,19 @@ IGNORED_SUBLETS = [
 
 def parse_sublet_sheet()
   sublet_mappings = Hash.new
-  file = 'sheets/SUBLET.csv'
-  sheet = CSV.read(file, headers:true)
+  file = 'sheets/SUBLET.xlsx'
+  sheet = RubyXL::Parser.parse(file).worksheets[0]
+  row_index = 0
   sheet.each do |row|
+    row_index += 1
+    next if row_index == 1
+    row = (0..4).map { |e| row[e] ? row[e].value : nil}
     bank_code = row[1].strip
     ifsc_code = row[4].strip
     if ifsc_code.size == 11 and ifsc_code[0..3] != bank_code and not IGNORED_SUBLETS.include?(ifsc_code)
       sublet_mappings[ifsc_code] = bank_code
     end
   end
-
   return Hash[sublet_mappings.sort]
 end
 
@@ -56,31 +60,57 @@ def parse_sheets
 
   file_ifsc_mappings = Hash.new
 
-  Dir.glob('sheets/*') do |file|
+  Dir.glob('sheets/IFCB*') do |file|
     log "Parsing #{file}"
     basename = File.basename file
-    sheet = Spreadsheet.open(file).worksheet 0
-    headings = sheet.row(0)[0,9]
+    extension = File.extname file
+    case extension
+    when '.xls'
+      sheet = Spreadsheet.open(file).worksheet 0
+      headings = sheet.row(0)[0,9]
 
-    sheet.each 1 do |row|
-      row = row[0,9]
-      next if row.compact.empty?
-      data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
-      begin
-        x = data_to_insert.transpose.to_h
-        x.each do |key, value|
-          if value.is_a? Spreadsheet::Excel::Error
-            puts "ERROR: #{file} #{x['IFSC']}"
-            x[key] = nil
+      sheet.each 1 do |row|
+        row = row[0,9]
+        next if row.compact.empty?
+        data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+        begin
+          x = data_to_insert.transpose.to_h
+          x.each do |key, value|
+            if value.is_a? Spreadsheet::Excel::Error
+              puts "ERROR: #{file} #{x['IFSC']}"
+              x[key] = nil
+            end
           end
+          data.push x
+          file_ifsc_mappings[basename] = x['IFSC'][0..3]
+        rescue Exception => e
+          puts "Faced an Exception"
+          puts data_to_insert.to_json
+          puts e
+          exit
         end
-        data.push x
-        file_ifsc_mappings[basename] = x['IFSC'][0..3]
-      rescue Exception => e
-        puts "Faced an Exception"
-        puts data_to_insert.to_json
-        puts e
-        exit
+      end
+    when '.xlsx'
+      sheet = RubyXL::Parser.parse(file).worksheets[0]
+      headings = sheet.sheet_data[0]
+      headings = (0..8).map {|e| headings[e].value}
+      row_index = 0
+      sheet.each do |row|
+        row_index += 1
+        row = (0..8).map { |e| row[e] ? row[e].value : nil}
+        next if row_index == 1
+        next if row.compact.empty?
+        data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+        begin
+          x = data_to_insert.transpose.to_h
+          data.push x
+          file_ifsc_mappings[basename] = x['IFSC'][0..3]
+        rescue Exception => e
+          puts "Faced an Exception"
+          puts data_to_insert.to_json
+          puts e
+          exit
+        end
       end
     end
   end

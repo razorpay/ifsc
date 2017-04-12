@@ -1,6 +1,6 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem "nokogiri"
+gem 'nokogiri'
 gem 'spreadsheet'
-gem 'bloom-filter'
+gem 'rubyXL'
