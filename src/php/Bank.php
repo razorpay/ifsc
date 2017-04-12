@@ -1250,6 +1250,7 @@ class Bank
     const UTCX = 'UTCX';
     const UTGX = 'UTGX';
     const UTIB = 'UTIB';
+    const UTKS = 'UTKS';
     const UTKX = 'UTKX';
     const UTZX = 'UTZX';
     const UUCX = 'UUCX';
