@@ -1,21 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    bloom-filter (0.2.2)
-    mini_portile2 (2.0.0)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
-    ruby-ole (1.2.12)
-    spreadsheet (1.1.1)
+    mini_portile2 (2.1.0)
+    nokogiri (1.7.1)
+      mini_portile2 (~> 2.1.0)
+    ruby-ole (1.2.12.1)
+    rubyXL (3.3.23)
+      nokogiri (>= 1.4.4)
+      rubyzip (>= 1.1.6)
+    rubyzip (1.2.1)
+    spreadsheet (1.1.4)
       ruby-ole (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bloom-filter
   nokogiri
+  rubyXL
   spreadsheet
 
 BUNDLED WITH
-   1.10.5
+   1.13.6

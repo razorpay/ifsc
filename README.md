@@ -119,7 +119,5 @@ should be under public domain.
 
 [rbi]: https://goo.gl/T9188H "goo.gl link because RBI doesn't allow you to link to their website"
 [combined]: https://goo.gl/UryY8j "goo.gl link because RBI doesn't allow you to link to their website"
-[bf-gem]: https://github.com/deepfryed/bloom-filter
-[bf-c]: https://github.com/fragglet/c-algorithms/blob/master/src/bloom-filter.c
 [releases]: https://github.com/razorpay/ifsc/releases
 [buildlist]: https://app.wercker.com/captn3m0/ifsc/runs?view=runs&q=pipeline%3Abuild

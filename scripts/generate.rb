@@ -6,7 +6,7 @@ hash = Hash.new
 data.each { |row| hash[row['IFSC']] = row }
 ifsc_codes_list = hash.keys
 
-if File.exists? 'sheets/SUBLET.csv'
+if File.exists? 'sheets/SUBLET.xlsx'
 	sublet_data = parse_sublet_sheet()
 	log "Exporting Sublet JSON"
 	export_sublet_json(sublet_data)
