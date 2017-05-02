@@ -1200,6 +1200,7 @@ class Bank
     const TSPX = 'TSPX';
     const TSUX = 'TSUX';
     const TTBX = 'TTBX';
+    const TTCB = 'TTCB';
     const TTCX = 'TTCX';
     const TTGX = 'TTGX';
     const TTLX = 'TTLX';
