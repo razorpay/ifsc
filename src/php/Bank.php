@@ -81,6 +81,7 @@ class Bank
     const ASKX = 'ASKX';
     const ASOX = 'ASOX';
     const ASSX = 'ASSX';
+    const AUBL = 'AUBL';
     const AUBX = 'AUBX';
     const AUCB = 'AUCB';
     const AUCX = 'AUCX';
@@ -887,6 +888,7 @@ class Bank
     const PVVX = 'PVVX';
     const PWUX = 'PWUX';
     const PYCX = 'PYCX';
+    const PYTM = 'PYTM';
     const QUCX = 'QUCX';
     const RABO = 'RABO';
     const RACX = 'RACX';
@@ -1013,6 +1015,7 @@ class Bank
     const SIBL = 'SIBL';
     const SIBX = 'SIBX';
     const SICX = 'SICX';
+    const SIDC = 'SIDC';
     const SIDX = 'SIDX';
     const SIGX = 'SIGX';
     const SIHX = 'SIHX';
