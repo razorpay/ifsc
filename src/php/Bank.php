@@ -321,6 +321,7 @@ class Bank
     const EDCX = 'EDCX';
     const EDSX = 'EDSX';
     const EIBI = 'EIBI';
+    const ESAF = 'ESAF';
     const ESFB = 'ESFB';
     const ESMF = 'ESMF';
     const ETCX = 'ETCX';
@@ -421,6 +422,8 @@ class Bank
     const INDX = 'INDX';
     const IOBA = 'IOBA';
     const IPCX = 'IPCX';
+    const IPOS = 'IPOS';
+    const IPPB = 'IPPB';
     const IPSX = 'IPSX';
     const ISBX = 'ISBX';
     const ISMX = 'ISMX';
@@ -620,6 +623,7 @@ class Bank
     const KVBL = 'KVBL';
     const KVCX = 'KVCX';
     const KVGB = 'KVGB';
+    const KYDX = 'KYDX';
     const LACX = 'LACX';
     const LATX = 'LATX';
     const LAVB = 'LAVB';
@@ -1038,6 +1042,7 @@ class Bank
     const SMBC = 'SMBC';
     const SMBX = 'SMBX';
     const SMCB = 'SMCB';
+    const SMCX = 'SMCX';
     const SMEX = 'SMEX';
     const SMMX = 'SMMX';
     const SMNX = 'SMNX';
@@ -1248,6 +1253,7 @@ class Bank
     const URDX = 'URDX';
     const URMX = 'URMX';
     const UROX = 'UROX';
+    const USFB = 'USFB';
     const USNX = 'USNX';
     const UTBI = 'UTBI';
     const UTBX = 'UTBX';

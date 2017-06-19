@@ -11,6 +11,10 @@ build:
       name: Save generated data
       code: cp * $WERCKER_REPORT_ARTIFACTS_DIR/ && cp '../../src/IFSC.json' $WERCKER_REPORT_ARTIFACTS_DIR/ifsc-src.json
       cwd: scripts/data
+    - script:
+      name: Save sublet json
+      code: cp ../../src/sublet.json $WERCKER_REPORT_ARTIFACTS_DIR/sublet.json
+      cwd: scripts/data
 php:
   box: php
   steps:
