@@ -128,7 +128,8 @@ def map_data(row, headings)
     'BANKNAME' => 'BANK',
     'CENTRE'   => 'CITY',
     'CONTACT1'  => 'CONTACT',
-    'IFSC CODE' => 'IFSC'
+    'IFSC CODE' => 'IFSC',
+    'BRANCH NAME' => 'BRANCH'
   }
   # Find the heading in HEADINGS_INSERT
   headings.each_with_index do |header, heading_index|
