@@ -72,7 +72,10 @@ def parse_sheets
       sheet.each 1 do |row|
         row = row[0,9]
         next if row.compact.empty?
-        data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+
+        data_mapped = map_data(row, headings)
+        data_to_insert = [HEADINGS_INSERT, data_mapped]
+
         begin
           x = data_to_insert.transpose.to_h
           x.each do |key, value|
@@ -120,18 +123,28 @@ end
 def map_data(row, headings)
   data = []
 
+  # Renames
+  mappings = {
+    'BANKNAME' => 'BANK',
+    'CENTRE'   => 'CITY',
+    'CONTACT1'  => 'CONTACT',
+    'IFSC CODE' => 'IFSC',
+    'BRANCH NAME' => 'BRANCH'
+  }
   # Find the heading in HEADINGS_INSERT
   headings.each_with_index do |header, heading_index|
     header = header.strip
-    index = HEADINGS_INSERT.find_index header
+    index = HEADINGS_INSERT.find_index(header).nil? ?
+      HEADINGS_INSERT.find_index(mappings[header]) : HEADINGS_INSERT.find_index(header)
+
     case header
-    when 'CONTACT'
-      scan = row[heading_index].to_s.scan(/^(\d+)\D?/).last
+    when 'BANKNAME', 'CENTRE'
+      data[index] = row[heading_index]
+    when 'CONTACT', 'CONTACT1'
+      scan = row[heading_index].to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
       data[index] = (scan.nil? or scan==0 or scan=="0" or (scan.is_a? Array and scan==["0"])) ? nil : scan.first
     when 'IFSC CODE'
-      index = HEADINGS_INSERT.find_index 'IFSC'
       data[index] = row[heading_index]
-
     else
       data[index] = row[heading_index] if index
     end
