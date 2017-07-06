@@ -334,6 +334,7 @@ class Bank
     const FDRL = 'FDRL';
     const FEKX = 'FEKX';
     const FGCB = 'FGCB';
+    const FINO = 'FINO';
     const FINX = 'FINX';
     const FIRN = 'FIRN';
     const FIRX = 'FIRX';
