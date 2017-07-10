@@ -1,4 +1,5 @@
 box: ruby
+no-response-timeout: 15
 build:
   box: ruby
   steps:
