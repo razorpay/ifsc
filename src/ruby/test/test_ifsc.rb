@@ -5,26 +5,26 @@ module Razorpay
   # Tests for IFSC
   class IFSCTest < Minitest::Test
     def test_true_validator
-      assert IFSC::validate 'KKBK0000261'
-      assert IFSC::validate 'HDFC0002854'
-      assert IFSC::validate 'KARB0000001'
+      assert IFSC::Code.valid? 'KKBK0000261'
+      assert IFSC::Code.valid? 'HDFC0002854'
+      assert IFSC::Code.valid? 'KARB0000001'
     end
 
     def test_validate_range
-      assert IFSC::validate 'DLXB0000097'
+      assert IFSC::Code.valid? 'DLXB0000097'
     end
 
     def test_validate_string_lookup
-      assert IFSC::validate 'BOTM0NEEMRA'
-      assert IFSC::validate 'BARB0ZOOTIN'
+      assert IFSC::Code.valid? 'BOTM0NEEMRA'
+      assert IFSC::Code.valid? 'BARB0ZOOTIN'
     end
 
     def test_validate_invalid_code
-      refute IFSC::validate 'BOTM0XEEMRA'
-      refute IFSC::validate 'BOTX0000000'
-      refute IFSC::validate 'BOTX0000500'
-      refute IFSC::validate 'BOTM0000500'
-      refute IFSC::validate 'DLXB0000500'
+      refute IFSC::Code.valid? 'BOTM0XEEMRA'
+      refute IFSC::Code.valid? 'BOTX0000000'
+      refute IFSC::Code.valid? 'BOTX0000500'
+      refute IFSC::Code.valid? 'BOTM0000500'
+      refute IFSC::Code.valid? 'DLXB0000500'
     end
   end
 end
