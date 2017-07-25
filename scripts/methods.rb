@@ -272,33 +272,6 @@ def export_to_code_json(list, ifsc_hash)
   end
 end
 
-def export_to_ruby(list, ifsc_hash)
-  banks = find_bank_codes list
-  banks_hash = Hash.new
-
-  banks.each do |bank|
-    banks_hash[bank] = find_bank_branches(bank, list).map do |code|
-      # this is to drop lots of zeroes
-      branch_code = code[-6,6]
-      if branch_code.match(/^(\d)+$/)
-        branch_code.to_i
-      else
-        branch_code
-      end
-    end
-    banks_hash[bank] = make_ranges banks_hash[bank]
-  end
-
-  template = File.read('templates/IFSC.rb.erb')
-  renderer = ERB.new(template)
-  b = binding
-
-  File.open('../src/ruby/lib/ifsc.rb', "w") do |file|
-    output = (renderer.result(b))
-    file.puts(output)
-  end
-end
-
 def log(msg)
   puts msg
 end

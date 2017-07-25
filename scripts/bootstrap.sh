@@ -26,9 +26,6 @@ echo "Sheet Download complete, starting export"
 mkdir --parents data/by-bank
 
 # This is the script that does all the data generation
-<<<<<<< HEAD
-ruby generate.rb
-=======
 bundle exec ruby generate.rb
 
 cd data
@@ -42,4 +39,3 @@ rm --recursive --force by-bank/
 if [ "$CI" = "true" ]; then
   rm --recursive --force sheets/
 fi
->>>>>>> master
