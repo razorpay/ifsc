@@ -1,10 +1,10 @@
 require 'spreadsheet'
+require 'rubyXL'
 require 'csv'
 require 'yaml'
 require 'json'
 require 'set'
-require 'bloom-filter'
-require 'erb'
+require 'fileutils'
 require 'pp'
 
 HEADINGS_INSERT = [
@@ -18,37 +18,137 @@ HEADINGS_INSERT = [
   "STATE"
 ]
 
+# These are invalid sublets
+# given out by RBI
+# because they result in 1 bank
+# having 2 different codes
+IGNORED_SUBLETS = [
+  # Typo? in this one (AKJB|AJKB)
+  'AKJB0000001',
+  # DLSC and DSCB are the same
+  'DLSC0000001',
+  # FIRN and FIRX are the same
+  'FIRN0000001',
+  # KANG and KCOB are the same
+  'KANG0000001',
+  # SJSB and SJSX are the same
+  'SJSB0000001',
+  # SKSB and SHKX are the same
+  'SKSB0000001'
+]
+
+def parse_sublet_sheet()
+  sublet_mappings = Hash.new
+  file = 'sheets/SUBLET.xlsx'
+  sheet = RubyXL::Parser.parse(file).worksheets[0]
+  row_index = 0
+  sheet.each do |row|
+    row_index += 1
+    next if row_index == 1
+    row = (0..4).map { |e| row[e] ? row[e].value : nil}
+    bank_code = row[1].strip
+    ifsc_code = row[4].strip
+    if ifsc_code.size == 11 and ifsc_code[0..3] != bank_code and not IGNORED_SUBLETS.include?(ifsc_code)
+      sublet_mappings[ifsc_code] = bank_code
+    end
+  end
+  return Hash[sublet_mappings.sort]
+end
+
 def parse_sheets
   data = []
 
-  Dir.glob('sheets/*') do |file|
-    log "Parsing #{file}"
-    sheet = Spreadsheet.open(file).worksheet 0
-    headings = sheet.row(0)[0,9]
+  file_ifsc_mappings = Hash.new
 
-    sheet.each 1 do |row|
-      row = row[0,9]
-      data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
-      begin
-        data.push data_to_insert.transpose.to_h
-      rescue Exception => e
-        puts data_to_insert
-        exit
+  Dir.glob('sheets/IFCB*') do |file|
+    log "Parsing #{file}"
+    basename = File.basename file
+    extension = File.extname file
+    case extension
+    when '.xls'
+      sheet = Spreadsheet.open(file).worksheet 0
+      headings = sheet.row(0)[0,9]
+
+      sheet.each 1 do |row|
+        row = row[0,9]
+        next if row.compact.empty?
+
+        data_mapped = map_data(row, headings)
+        data_to_insert = [HEADINGS_INSERT, data_mapped]
+
+        begin
+          x = data_to_insert.transpose.to_h
+          x.each do |key, value|
+            if value.is_a? Spreadsheet::Excel::Error
+              puts "ERROR: #{file} #{x['IFSC']}"
+              x[key] = nil
+            end
+          end
+          data.push x
+          file_ifsc_mappings[basename] = x['IFSC'][0..3]
+        rescue Exception => e
+          puts "Faced an Exception"
+          puts data_to_insert.to_json
+          puts e
+          exit
+        end
+      end
+    when '.xlsx'
+      sheet = RubyXL::Parser.parse(file).worksheets[0]
+      headings = sheet.sheet_data[0]
+      headings = (0..8).map {|e| headings[e].value}
+      row_index = 0
+      sheet.each do |row|
+        row_index += 1
+        row = (0..8).map { |e| row[e] ? row[e].value : nil}
+        next if row_index == 1
+        next if row.compact.empty?
+        data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+        begin
+          x = data_to_insert.transpose.to_h
+          data.push x
+          file_ifsc_mappings[basename] = x['IFSC'][0..3]
+        rescue Exception => e
+          puts "Faced an Exception"
+          puts data_to_insert.to_json
+          puts e
+          exit
+        end
       end
     end
   end
-  data
+  [data, file_ifsc_mappings]
 end
 
 def map_data(row, headings)
   data = []
 
+  # Renames
+  mappings = {
+    'BANKNAME' => 'BANK',
+    'CENTRE'   => 'CITY',
+    'CONTACT1'  => 'CONTACT',
+    'IFSC CODE' => 'IFSC',
+    'BRANCH NAME' => 'BRANCH'
+  }
   # Find the heading in HEADINGS_INSERT
   headings.each_with_index do |header, heading_index|
-    index = HEADINGS_INSERT.find_index header
-    data[index] = row[heading_index] if index
-  end
+    header = header.strip
+    index = HEADINGS_INSERT.find_index(header).nil? ?
+      HEADINGS_INSERT.find_index(mappings[header]) : HEADINGS_INSERT.find_index(header)
 
+    case header
+    when 'BANKNAME', 'CENTRE'
+      data[index] = row[heading_index]
+    when 'CONTACT', 'CONTACT1'
+      scan = row[heading_index].to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
+      data[index] = (scan.nil? or scan==0 or scan=="0" or (scan.is_a? Array and scan==["0"])) ? nil : scan.first
+    when 'IFSC CODE'
+      data[index] = row[heading_index]
+    else
+      data[index] = row[heading_index] if index
+    end
+  end
   data
 end
 
@@ -73,8 +173,9 @@ def export_json(hash)
   File.open("data/IFSC.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
 end
 
-def export_lookup_table_marshal(list)  
-  File.open("data/IFSC-list.marshal", 'w') { |f| Marshal.dump(list, f) }
+def export_sublet_json(hash)
+  File.open("../src/sublet.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
+  FileUtils.cp('../src/sublet.json', 'data/sublet.json')
 end
 
 def export_yml_list(list)
@@ -102,16 +203,6 @@ def find_bank_branches(bank, list)
       false
     end
   end
-end
-
-def export_bloom_filter(list)
-  # 128_000 is the approx size of our current list
-  filter = BloomFilter.new size: 150_000, error_rate: 0.001
-  list.each do |code|
-    filter.insert code
-  end
-
-  filter.dump "data/IFSC-list.bloom"
 end
 
 def export_json_by_banks(list, ifsc_hash)
@@ -159,7 +250,7 @@ def make_ranges(list)
   ranges.map { |x| x.size==1 ? x[0] : x }
 end
 
-def export_to_php(list, ifsc_hash)
+def export_to_code_json(list, ifsc_hash)
   banks = find_bank_codes list
   banks_hash = Hash.new
 
@@ -176,13 +267,8 @@ def export_to_php(list, ifsc_hash)
     banks_hash[bank] = make_ranges banks_hash[bank]
   end
 
-  template = File.read('templates/IFSC.php.erb')
-  renderer = ERB.new(template)
-  b = binding
-
-  File.open('../src/php/IFSC.php', "w") do |file|
-    output = (renderer.result(b))
-    file.puts(output)
+  File.open('../src/IFSC.json', 'w') do |file|
+    file.puts banks_hash.to_json
   end
 end
 

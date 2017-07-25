@@ -1,0 +1,49 @@
+box: ruby
+no-response-timeout: 15
+build:
+  box: ruby
+  steps:
+    - bundle-install
+    - script:
+      name: Run bootstrap
+      code: bash bootstrap.sh
+      cwd: scripts
+    - script:
+      name: Save generated data
+      code: cp * $WERCKER_REPORT_ARTIFACTS_DIR/ && cp '../../src/IFSC.json' $WERCKER_REPORT_ARTIFACTS_DIR/ifsc-src.json
+      cwd: scripts/data
+    - script:
+      name: Save sublet json
+      code: cp ../../src/sublet.json $WERCKER_REPORT_ARTIFACTS_DIR/sublet.json
+      cwd: scripts/data
+php:
+  box: php
+  steps:
+  - install-packages:
+    packages: git
+  - script:
+    name: install phpunit
+    code: |-
+      curl -L https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit
+      chmod +x /usr/local/bin/phpunit
+  - script:
+    name: install composer
+    code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+  - script:
+    name: install dependencies
+    code: composer install --no-interaction
+  - script:
+    name: fetch latest complete IFSC list
+    code: |-
+      mkdir -p scripts/data
+      curl --silent "https://github.com/razorpay/ifsc/releases/download/1.0.1/IFSC-list.json" --output scripts/data/IFSC-list.json --location
+  - script:
+    name: Run PHP tests
+    code: phpunit
+node:
+  box: node
+  steps:
+    - npm-install
+    - script:
+      name: run tests
+      code: npm test
