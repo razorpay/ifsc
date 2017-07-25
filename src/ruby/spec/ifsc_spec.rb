@@ -20,14 +20,14 @@ describe Razorpay::IFSC::Code do
       allow(code).to receive(:api_data).and_return(mocked_response)
       fetched_code = code.get
 
-      expect(fetched_code.bank).to eq 'Kotak Mahindra Bank'
-      expect(fetched_code.ifsc).to eq 'KKBK0000261'
-      expect(fetched_code.branch).to eq 'GURGAON'
-      expect(fetched_code.address).to eq 'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,'
-      expect(fetched_code.contact).to eq '4131000'
-      expect(fetched_code.city).to eq 'GURGAON'
-      expect(fetched_code.district).to eq 'GURGAON'
-      expect(fetched_code.state).to eq 'HARYAN'
+      expect(fetched_code.bank).to eq mocked_response['BANK']
+      expect(fetched_code.ifsc).to eq mocked_response['IFSC']
+      expect(fetched_code.branch).to eq mocked_response['BRANCH']
+      expect(fetched_code.address).to eq mocked_response['ADDRESS']
+      expect(fetched_code.contact).to eq mocked_response['CONTACT']
+      expect(fetched_code.city).to eq mocked_response['CITY']
+      expect(fetched_code.district).to eq mocked_response['DISTRICT']
+      expect(fetched_code.state).to eq mocked_response['STATE']
     end
   end
 
