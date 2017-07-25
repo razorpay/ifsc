@@ -1,0 +1,79 @@
+require 'ifsc'
+
+describe Razorpay::IFSC::Code do
+  let(:mocked_response) {{
+    'BANK' => 'Kotak Mahindra Bank',
+    'IFSC' => 'KKBK0000261',
+    'BRANCH' => 'GURGAON',
+    'ADDRESS' => 'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,',
+    'CONTACT' => '4131000',
+    'CITY' => 'GURGAON',
+    'DISTRICT' => 'GURGAON',
+    'STATE' => 'HARYAN',
+  }}
+  let(:dummy_code) { 'foo' }
+  let(:code_double) { double('code double') }
+
+  describe '.get' do
+    let(:code) { described_class.new(mocked_response['IFSC']) }
+    it 'parsers the IFSC details correctly from the server' do
+      allow(code).to receive(:api_data).and_return(mocked_response)
+      fetched_code = code.get
+
+      expect(fetched_code.bank).to eq 'Kotak Mahindra Bank'
+      expect(fetched_code.ifsc).to eq 'KKBK0000261'
+      expect(fetched_code.branch).to eq 'GURGAON'
+      expect(fetched_code.address).to eq 'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,'
+      expect(fetched_code.contact).to eq '4131000'
+      expect(fetched_code.city).to eq 'GURGAON'
+      expect(fetched_code.district).to eq 'GURGAON'
+      expect(fetched_code.state).to eq 'HARYAN'
+    end
+  end
+
+  describe '.class' do
+    describe '.find' do
+      it 'should validate and return the fetched object' do
+        expect(described_class).to receive(:new).with(dummy_code).and_return(code_double)
+        expect(code_double).to receive(:get)
+        described_class.find(dummy_code)
+      end
+    end
+    describe '#valid?' do
+      it 'should validate regular numeric branch codes' do
+        expect(described_class.valid?('KKBK0000261')).to eq true
+        expect(described_class.valid?('HDFC0002854')).to eq true
+        expect(described_class.valid?('KARB0000001')).to eq true
+      end
+
+      it 'should validate range branch codes' do
+        expect(described_class.valid? 'DLXB0000097').to eq true
+      end
+
+      it 'should validate string branch codes' do
+        expect(described_class.valid?('BOTM0NEEMRA')).to eq true
+        expect(described_class.valid?('BARB0ZOOTIN')).to eq true
+      end
+
+      it 'should not validate invalid codes' do
+        expect(described_class.valid?('BOTM0XEEMRA')).to eq false
+        expect(described_class.valid?('BOTX0000000')).to eq false
+        expect(described_class.valid?('BOTX0000500')).to eq false
+        expect(described_class.valid?('BOTM0000500')).to eq false
+        expect(described_class.valid?('DLXB0000500')).to eq false
+      end
+    end
+
+    describe '#validate!' do
+      context 'when valid? returns false' do
+        before do
+          allow(described_class).to receive(:valid?).with(dummy_code).and_return(false)
+        end
+        it 'should raise an error when validations fail' do
+          expect{described_class.validate!(dummy_code)}.to raise_error(Razorpay::IFSC::InvalidCodeError)
+        end
+      end
+    end
+  end
+
+end
