@@ -11,15 +11,13 @@ module Razorpay
       return false unless code[4] == '0'
 
       bank_code = code[0..3].upcase
-      branch_code = code[4..-1].upcase
+      branch_code = code[5..-1].upcase
 
       return false unless data.has_key? bank_code
 
       list = data[bank_code]
 
-      # puts "#{code} - " + (code =~ /[0-9]/)
-
-      if (code =~ /[0-9]/)
+      if (branch_code.match(/^(\d)+$/))
         self.lookup_numeric(list, branch_code)
       else
         self.lookup_string(list, branch_code)
