@@ -69,12 +69,10 @@ module Razorpay
 
           return false unless data.has_key? bank_code
 
-          list = data[bank_code]
-
-          if (branch_code.match(/^(\d)+$/))
-            lookup_numeric(list, branch_code)
+          if branch_code.match(/^(\d)+$/)
+            data[bank_code].include? branch_code.to_i
           else
-            lookup_string(list, branch_code)
+            data[bank_code].include? branch_code
           end
         end
 
@@ -98,25 +96,6 @@ module Razorpay
           @sublet_data ||= JSON.load(File.read(File.join(__dir__, '../../sublet.json')))
         end
 
-        def lookup_numeric(list, branch_code)
-          branch_code = branch_code.to_i
-
-          return true if list.include? branch_code
-
-          lookup_ranges list, branch_code
-        end
-
-        def lookup_ranges(list, branch_code)
-          list.each do |item|
-            return false unless item.is_a?(Array) && item.size == 2
-
-            (item[0]...item[1]) === branch_code
-          end
-        end
-
-        def lookup_string(list, branch_code)
-          list.include? branch_code
-        end
       end
     end
   end
