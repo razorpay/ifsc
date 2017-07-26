@@ -75,7 +75,9 @@ module Razorpay
         end
 
         def bank_name_for(code)
-          bank_name_data[code[0..3].upcase]
+          sublet_code = sublet_data[code]
+          regular_code = code[0..3].upcase
+          bank_name_data[sublet_code || regular_code]
         end
 
         private
@@ -86,6 +88,10 @@ module Razorpay
 
         def bank_name_data
           @bank_name_data ||= JSON.load(File.read(File.join(__dir__, '../../banknames.json')))
+        end
+
+        def sublet_data
+          @sublet_data ||= JSON.load(File.read(File.join(__dir__, '../../sublet.json')))
         end
 
         def lookup_numeric(list, branch_code)

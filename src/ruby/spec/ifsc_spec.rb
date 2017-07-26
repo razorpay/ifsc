@@ -52,6 +52,10 @@ describe Razorpay::IFSC::IFSC do
       it 'should return the correct bank name' do
         expect(described_class.bank_name_for(mocked_response['IFSC'])).to eq mocked_response['BANK']
       end
+
+      it 'should return the correct sublet bank name' do
+        expect(described_class.bank_name_for('ALLA0AU1002')).to eq 'Allahabad Up Gramin Bank'
+      end
     end
 
     describe '#valid?' do
