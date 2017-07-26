@@ -31,6 +31,10 @@ module Razorpay
         self
       end
 
+      def get_bank_name
+        @bank = self.class.bank_name_for @ifsc
+      end
+
       private
 
       def api_data
@@ -70,10 +74,18 @@ module Razorpay
           end
         end
 
+        def bank_name_for(code)
+          bank_name_data[code[0..3].upcase]
+        end
+
         private
 
         def data
           @data ||= JSON.load(File.read(File.join(__dir__, '../../IFSC.json')))
+        end
+
+        def bank_name_data
+          @bank_name_data ||= JSON.load(File.read(File.join(__dir__, '../../banknames.json')))
         end
 
         def lookup_numeric(list, branch_code)

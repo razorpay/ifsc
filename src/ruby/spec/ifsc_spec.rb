@@ -13,10 +13,10 @@ describe Razorpay::IFSC::IFSC do
   }}
   let(:dummy_code) { 'foo' }
   let(:code_double) { double('code double') }
+  let(:code) { described_class.new(mocked_response['IFSC']) }
 
   describe '.get' do
-    let(:code) { described_class.new(mocked_response['IFSC']) }
-    it 'parsers the IFSC details correctly from the server' do
+    it 'should parse the IFSC details correctly from the server' do
       allow(code).to receive(:api_data).and_return(mocked_response)
       fetched_code = code.get
 
@@ -31,6 +31,14 @@ describe Razorpay::IFSC::IFSC do
     end
   end
 
+  describe '.get_bank_name' do
+    it 'should load the bank name into the object' do
+      expect(code.bank).to be_nil
+      code.get
+      expect(code.bank).to eq mocked_response['BANK']
+    end
+  end
+
   describe '.class' do
     describe '.find' do
       it 'should validate and return the fetched object' do
@@ -39,6 +47,13 @@ describe Razorpay::IFSC::IFSC do
         described_class.find(dummy_code)
       end
     end
+
+    describe '#bank_name_for(code)' do
+      it 'should return the correct bank name' do
+        expect(described_class.bank_name_for(mocked_response['IFSC'])).to eq mocked_response['BANK']
+      end
+    end
+
     describe '#valid?' do
       it 'should validate regular numeric branch codes' do
         expect(described_class.valid?('KKBK0000261')).to eq true
