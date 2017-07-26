@@ -1,5 +1,5 @@
 require 'json'
-require 'open-uri'
+require 'httparty'
 
 module Razorpay
   module IFSC
@@ -20,7 +20,6 @@ module Razorpay
       end
 
       def get
-        raise InvalidCodeError unless valid?
         @bank = api_data['BANK']
         @branch = api_data['BRANCH']
         @address = api_data['ADDRESS']
@@ -28,6 +27,7 @@ module Razorpay
         @city = api_data['CITY']
         @district = api_data['DISTRICT']
         @state = api_data['STATE']
+        @valid = true
         self
       end
 
@@ -38,8 +38,12 @@ module Razorpay
       private
 
       def api_data
-        @api_data ||= JSON.parse(URI.join(API, ifsc).read)
-      rescue OpenURI::HTTPError, SocketError => e
+        @api_data ||= begin
+          response = HTTParty.get(URI.join(API, ifsc))
+          raise InvalidCodeError, 'IFSC API returned 404' if response.code == 404
+          JSON.parse(response.body)
+        end
+      rescue HTTParty::Error, SocketError => e
         raise ServerError, e.message
       end
 

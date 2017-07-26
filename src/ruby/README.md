@@ -8,7 +8,7 @@ gem install ifsc
 
 ### Usage
 
-Validating a code
+Validating a code offline. (Remember to keep the gem up to date!)
 
 ```rb
 # valid?
@@ -22,17 +22,21 @@ Razorpay::IFSC::IFSC.validate! 'KKBK0000261'# => true
 Razorpay::IFSC::IFSC.validate! 'BOTM0XEEMRA' # => Razorpay::IFSC::InvalidCodeError
 ```
 
-Retrieving details from the server
+Validate online and retrieve details from the server
+
+If you call `code.valid?` before calling `code.get`, the validation will be performed offline.
 
 ```rb
 # 1. using find
 code = Razorpay::IFSC::IFSC.find 'KKBK0000261'
 
 # 2. using new(...).get
-code = Razorpay::IFSC::IFSC.new('KKBK0000261')
+code = Razorpay::IFSC::IFSC.new 'KKBK0000261'
 code.get
 
 # result
+code.valid?
+# => true
 code.bank
 # => "Kotak Mahindra Bank"
 code.branch
@@ -47,6 +51,7 @@ code.district
 # => "GURGAON"
 code.state
 # => "HARYANA"
+
 ```
 
 ### Error handling

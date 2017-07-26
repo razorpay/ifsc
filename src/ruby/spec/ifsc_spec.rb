@@ -16,8 +16,11 @@ describe Razorpay::IFSC::IFSC do
   let(:code) { described_class.new(mocked_response['IFSC']) }
 
   describe '.get' do
-    it 'should parse the IFSC details correctly from the server' do
+    before do
       allow(code).to receive(:api_data).and_return(mocked_response)
+    end
+
+    it 'should parse the IFSC details correctly from the server' do
       fetched_code = code.get
 
       expect(fetched_code.bank).to eq mocked_response['BANK']
@@ -29,9 +32,20 @@ describe Razorpay::IFSC::IFSC do
       expect(fetched_code.district).to eq mocked_response['DISTRICT']
       expect(fetched_code.state).to eq mocked_response['STATE']
     end
+
+    it 'should set @valid to true and skip local validation' do
+      fetched_code = code.get
+
+      expect(fetched_code.instance_variable_get(:@valid)).to eq true
+      expect(fetched_code.valid?).to eq true
+    end
   end
 
   describe '.get_bank_name' do
+    before do
+      allow(code).to receive(:api_data).and_return(mocked_response)
+    end
+
     it 'should load the bank name into the object' do
       expect(code.bank).to be_nil
       code.get
