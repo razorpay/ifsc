@@ -6,7 +6,7 @@ module Razorpay
     class InvalidCodeError < StandardError; end
     class ServerError < StandardError; end
 
-    class Code
+    class IFSC
       API = 'https://ifsc.razorpay.com/'
 
       attr_reader :bank, :ifsc, :branch, :address, :contact, :city, :district, :state
@@ -22,7 +22,6 @@ module Razorpay
       def get
         raise InvalidCodeError unless valid?
         @bank = api_data['BANK']
-        # @ifsc = data['ifsc']
         @branch = api_data['BRANCH']
         @address = api_data['ADDRESS']
         @contact = api_data['CONTACT']

@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = "A simple gem by @razorpay to help you validate your IFSC codes. IFSC codes are bank codes within India"
   s.authors     = ['Abhay Rana']
   s.email       = ['nemo@razorpay.com']
-  s.files       = ['lib/IFSC.rb', 'spec/ifsc_spec.rb', 'Rakefile', 'Gemfile', 'ifsc.gemspec']
+  s.files       = ['lib/ifsc.rb', 'spec/ifsc_spec.rb', 'Rakefile', 'Gemfile', 'ifsc.gemspec']
 
   s.test_files    = s.files.grep(/^(test|spec|features)/)
   s.require_paths = ['lib']

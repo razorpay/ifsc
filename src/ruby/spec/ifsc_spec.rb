@@ -1,6 +1,6 @@
 require 'ifsc'
 
-describe Razorpay::IFSC::Code do
+describe Razorpay::IFSC::IFSC do
   let(:mocked_response) {{
     'BANK' => 'Kotak Mahindra Bank',
     'IFSC' => 'KKBK0000261',
