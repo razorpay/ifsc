@@ -64,6 +64,6 @@ code = Razorpay::IFSC::IFSC.new '...'; code.get
 
 # these raise `Razorpay::IFSC::ServerError` if there is an error
 # communicating with the server
-Razorpay::IFSC::Code.find '...'
+Razorpay::IFSC::IFSC.find '...'
 code = Razorpay::IFSC::IFSC.new '...'; code.get
 ```
