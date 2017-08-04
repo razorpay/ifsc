@@ -13,12 +13,12 @@ Validating a code offline. (Remember to keep the gem up to date!)
 ```rb
 # valid?
 
-Razorpay::IFSC::IFSC.valid? 'KKBK0000261'# => true
+Razorpay::IFSC::IFSC.valid? 'KKBK0000261' # => true
 Razorpay::IFSC::IFSC.valid? 'BOTM0XEEMRA' # => false
 
 # validate!
 
-Razorpay::IFSC::IFSC.validate! 'KKBK0000261'# => true
+Razorpay::IFSC::IFSC.validate! 'KKBK0000261' # => true
 Razorpay::IFSC::IFSC.validate! 'BOTM0XEEMRA' # => Razorpay::IFSC::InvalidCodeError
 ```
 
@@ -51,8 +51,19 @@ code.district
 # => "GURGAON"
 code.state
 # => "HARYANA"
-
 ```
+
+### Sublet Branches
+
+You can use the `code.bank_name` method to get the bank name considering sublet branches.
+
+```rb
+code = Razorpay::IFSC::IFSC.new 'HDFC0CKUB01'
+code.bank_name "Khamgaon Urban Co-operative Bank"
+```
+
+This works offline, and doesn't need a network call.
+
 
 ### Error handling
 

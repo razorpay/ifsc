@@ -1,13 +1,15 @@
 require 'json'
 require 'httparty'
 
+# Main Razorpay module
 module Razorpay
+  # IFSC Module
   module IFSC
     class InvalidCodeError < StandardError; end
     class ServerError < StandardError; end
-
+    # Primary class for handling IFSC Codes
     class IFSC
-      API = 'https://ifsc.razorpay.com/'
+      API = 'https://ifsc.razorpay.com/'.freeze
 
       attr_reader :bank, :ifsc, :branch, :address, :contact, :city, :district, :state
 
@@ -31,7 +33,10 @@ module Razorpay
         self
       end
 
-      def get_bank_name
+      # Returns the bank name taking sublet branches
+      # into consideration. Returns the normal branch
+      # name otherwise
+      def bank_name
         @bank = self.class.bank_name_for @ifsc
       end
 
@@ -49,15 +54,12 @@ module Razorpay
 
       class << self
         def find(ifsc)
-          self.new(ifsc).get
+          new(ifsc).get
         end
 
         def validate!(code)
-          if valid? code
-            true
-          else
-            raise InvalidCodeError
-          end
+          raise InvalidCodeError unless valid? code
+          true
         end
 
         def valid?(code)
@@ -67,9 +69,9 @@ module Razorpay
           bank_code = code[0..3].upcase
           branch_code = code[5..-1].upcase
 
-          return false unless data.has_key? bank_code
+          return false unless data.key? bank_code
 
-          if branch_code.match(/^(\d)+$/)
+          if branch_code =~ /^(\d)+$/
             data[bank_code].include? branch_code.to_i
           else
             data[bank_code].include? branch_code
@@ -84,18 +86,22 @@ module Razorpay
 
         private
 
+        def parse_json_file(file)
+          file = "../../#{file}.json"
+          JSON.parse(File.read(File.join(__dir__, file)))
+        end
+
         def data
-          @data ||= JSON.load(File.read(File.join(__dir__, '../../IFSC.json')))
+          @data ||= parse_json_file 'IFSC'
         end
 
         def bank_name_data
-          @bank_name_data ||= JSON.load(File.read(File.join(__dir__, '../../banknames.json')))
+          @bank_name_data ||= parse_json_file 'banknames'
         end
 
         def sublet_data
-          @sublet_data ||= JSON.load(File.read(File.join(__dir__, '../../sublet.json')))
+          @sublet_data ||= parse_json_file 'sublet'
         end
-
       end
     end
   end

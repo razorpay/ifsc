@@ -1,16 +1,18 @@
 require 'ifsc'
 
 describe Razorpay::IFSC::IFSC do
-  let(:mocked_response) {{
-    'BANK' => 'Kotak Mahindra Bank',
-    'IFSC' => 'KKBK0000261',
-    'BRANCH' => 'GURGAON',
-    'ADDRESS' => 'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,',
-    'CONTACT' => '4131000',
-    'CITY' => 'GURGAON',
-    'DISTRICT' => 'GURGAON',
-    'STATE' => 'HARYAN',
-  }}
+  let(:mocked_response) do
+    {
+      'BANK' => 'Kotak Mahindra Bank',
+      'IFSC' => 'KKBK0000261',
+      'BRANCH' => 'GURGAON',
+      'ADDRESS' => 'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,',
+      'CONTACT' => '4131000',
+      'CITY' => 'GURGAON',
+      'DISTRICT' => 'GURGAON',
+      'STATE' => 'HARYAN'
+    }
+  end
   let(:dummy_code) { 'foo' }
   let(:code_double) { double('code double') }
   let(:code) { described_class.new(mocked_response['IFSC']) }
@@ -80,7 +82,7 @@ describe Razorpay::IFSC::IFSC do
       end
 
       it 'should validate range branch codes' do
-        expect(described_class.valid? 'DLXB0000097').to eq true
+        expect(described_class.valid?('DLXB0000097')).to eq true
       end
 
       it 'should validate string branch codes' do
@@ -103,10 +105,9 @@ describe Razorpay::IFSC::IFSC do
           allow(described_class).to receive(:valid?).with(dummy_code).and_return(false)
         end
         it 'should raise an error when validations fail' do
-          expect{described_class.validate!(dummy_code)}.to raise_error(Razorpay::IFSC::InvalidCodeError)
+          expect { described_class.validate!(dummy_code) }.to raise_error(Razorpay::IFSC::InvalidCodeError)
         end
       end
     end
   end
-
 end
