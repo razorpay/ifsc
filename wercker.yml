@@ -16,6 +16,17 @@ build:
       name: Save sublet json
       code: cp ../../src/sublet.json $WERCKER_REPORT_ARTIFACTS_DIR/sublet.json
       cwd: scripts/data
+rubygem:
+  box: ruby
+  steps:
+    - script:
+      name: Run bundle install
+      code: bundle install
+      cwd: src/ruby
+    - script:
+      name: Run tests
+      cwd: src/ruby
+      code: rake
 php:
   box: php
   steps:
