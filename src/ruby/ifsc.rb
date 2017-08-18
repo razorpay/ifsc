@@ -87,7 +87,7 @@ module Razorpay
         private
 
         def parse_json_file(file)
-          file = "../../#{file}.json"
+          file = "../#{file}.json"
           JSON.parse(File.read(File.join(__dir__, file)))
         end
 
