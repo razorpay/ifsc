@@ -12,9 +12,8 @@ build:
       code: bash bootstrap.sh
       cwd: scraper/scripts
     - script:
-      name: Copy the artifacts for next pipelines
-      code: cp scraper/scripts/data/ifsc-src.json src/IFSC.json && cp scraper/scripts/data/ifsc
-      cwd:
+      name: Copy artifacts
+      code: cp scraper/scripts/data/* $WERCKER_REPORT_ARTIFACTS_DIR/ && cp src/*.json $WERCKER_REPORT_ARTIFACTS_DIR/
 # This is the ruby gem that we have
 rubygem:
   box: ruby
