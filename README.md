@@ -105,6 +105,7 @@ ifsc.validate('BOTM0XEEMRA'); // returns false
 
 ### Ruby
 
+Make sure you have `require 'ifsc'` in your code.
 Validating a code offline. (Remember to keep the gem up to date!)
 
 ```rb
@@ -155,7 +156,7 @@ code.state
 You can use the `code.bank_name` method to get the bank name considering sublet branches.
 
 ```rb
-code = Razorpay::IFSC::IFSC.new 'HDFC0CKUB01'
+code = Razorpay::IFSC::IFSC.find 'HDFC0CKUB01'
 code.bank_name "Khamgaon Urban Co-operative Bank"
 ```
 
