@@ -1,7 +1,8 @@
-sheets/
-list.html
-excel_list.txt
-data/
+scraper/scripts/sheets/
+scraper/scripts/*.html
+scraper/scripts/excel_list.txt
+scraper/scripts/data/
 /vendor/
 composer.lock
 node_modules
+Gemfile.lock

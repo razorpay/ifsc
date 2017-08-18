@@ -18,8 +18,18 @@ wget --verbose "$RBI_LIST_URL" --output-document=list.html
 bundle exec ruby parse_list.rb > excel_list.txt
 rm --recursive --force sheets
 
-# A few files return a 404, so we force true here
-wget --no-verbose --input-file=excel_list.txt --directory-prefix=sheets/ || true
+# Cache the downloaded files
+if [ -z "$WERCKER_CACHE_DIR" ]; then
+    # A few files return a 404, so we force true here
+    wget --timestamping --no-verbose --input-file=excel_list.txt --directory-prefix=sheets/ || true
+else
+    # Make sure we have a cache
+    mkdir -p "$WERCKER_CACHE_DIR/sheets"
+    wget --timestamping --no-verbose --input-file=excel_list.txt --directory-prefix="$WERCKER_CACHE_DIR/sheets/" || true
+    # Copy back to the cache if the download worked
+    cp --recursive --preserve=timestamps "$WERCKER_CACHE_DIR/sheets" .
+fi
+
 
 echo "Sheet Download complete, starting export"
 

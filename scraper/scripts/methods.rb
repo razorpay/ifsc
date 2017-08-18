@@ -267,7 +267,7 @@ def export_to_code_json(list, ifsc_hash)
     banks_hash[bank] = make_ranges banks_hash[bank]
   end
 
-  File.open('../src/IFSC.json', 'w') do |file|
+  File.open('../../src/IFSC.json', 'w') do |file|
     file.puts banks_hash.to_json
   end
 end

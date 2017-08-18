@@ -8,8 +8,7 @@
 
 AllCops:
   Exclude:
-    - spec/*
-
+    - src/ruby/spec/*
 
 Metrics/AbcSize:
   Max: 20

@@ -3,7 +3,6 @@ namespace Razorpay\IFSC\Tests;
 
 use Razorpay\IFSC\IFSC;
 use Razorpay\IFSC\Bank;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Checks coverage of all Bank Codes and Names and other lists
@@ -16,14 +15,15 @@ class CoverageTest extends TestCase
 {
     public function setUp()
     {
-        $contents = file_get_contents(__DIR__ . '/../scripts/data/IFSC-list.json');
+        parent::setUp();
+        $contents = file_get_contents($this->root . '/scraper/scripts/data/IFSC-list.json');
         $this->bankCodes = array_values(array_unique(array_map(function($ifsc) {
             return substr($ifsc, 0, 4);
         }, json_decode($contents, true))));
 
-        $this->bankNamesList = json_decode(file_get_contents(__DIR__ . '/../src/banknames.json'), true);
+        $this->bankNamesList = json_decode(file_get_contents($this->root . '/src/banknames.json'), true);
 
-        $this->sublets = json_decode(file_get_contents(__DIR__ . '/../src/sublet.json'), true);
+        $this->sublets = json_decode(file_get_contents($this->root . '/src/sublet.json'), true);
     }
 
     public function testNames()
