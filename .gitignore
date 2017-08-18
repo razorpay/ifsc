@@ -5,3 +5,4 @@ scraper/scripts/data/
 /vendor/
 composer.lock
 node_modules
+Gemfile.lock

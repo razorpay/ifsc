@@ -14,12 +14,17 @@
             "Razorpay\\IFSC\\": "src/php"
         }
     },
+    "autoload-dev": {
+        "psr-4": { "Razorpay\\IFSC\\Tests\\": "tests/php/" }
+    },
     "archive": {
         "exclude": [
-            "/scripts/",
+            "/scraper/",
             "/node_modules/",
             "/src/node/",
-            "/tests/*.js",
+            "/src/ruby/",
+            "/tests/ruby/",
+            "/tests/node/",
             "/.npmignore",
             "/Gemfile*",
             "/package.json"
