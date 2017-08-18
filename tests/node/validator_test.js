@@ -1,5 +1,5 @@
-var ifsc = require('./../src/node/index');
-var assertions = require('./validator_asserts.json');
+var ifsc = require('./../../src/node/index');
+var assertions = require('../validator_asserts.json');
 
 var assert = require('assert');
 
