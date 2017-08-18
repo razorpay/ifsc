@@ -6,3 +6,9 @@ scraper/scripts/data/
 composer.lock
 node_modules
 Gemfile.lock
+*.gem
+.bundle
+.config
+.yardoc
+Gemfile.lock
+InstalledFiles
