@@ -3,14 +3,18 @@ no-response-timeout: 15
 build:
   box: ruby
   steps:
+    - bundle-install:
+        cwd: scraper
     - script:
-      code: bundle install
-      name: bundle-install
-      cwd: scraper
+      name: List cache
+      code: ls --recursive $WERCKER_CACHE_DIR/sheets -l || true
     - script:
       name: Run bootstrap
       code: bash bootstrap.sh
       cwd: scraper/scripts
+    - script:
+      name: List cache
+      code: ls --recursive $WERCKER_CACHE_DIR/sheets -l || true
     - script:
       name: Copy artifacts
       code: cp scraper/scripts/data/* $WERCKER_REPORT_ARTIFACTS_DIR/ && cp src/*.json $WERCKER_REPORT_ARTIFACTS_DIR/
