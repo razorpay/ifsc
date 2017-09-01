@@ -22,5 +22,8 @@
 	"testHPSC": {
 		"HPSC0000406": true,
 		"HPSC0000300": false
+	},
+	"testEdgeCases": {
+		"SBMY0040704": false
 	}
 }
