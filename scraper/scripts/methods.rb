@@ -69,6 +69,7 @@ def parse_sheets
       sheet = Spreadsheet.open(file).worksheet 0
       headings = sheet.row(0)[0,9]
 
+      row_count = 0
       sheet.each 1 do |row|
         row = row[0,9]
         next if row.compact.empty?
@@ -92,7 +93,9 @@ def parse_sheets
           puts e
           exit
         end
+        row_count += 1
       end
+      puts "[+] #{row_count} rows processed"
     when '.xlsx'
       sheet = RubyXL::Parser.parse(file).worksheets[0]
       headings = sheet.sheet_data[0]
@@ -115,6 +118,7 @@ def parse_sheets
           exit
         end
       end
+      puts "[+] #{row_index} rows processed"
     end
   end
   [data, file_ifsc_mappings]
