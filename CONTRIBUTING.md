@@ -21,3 +21,7 @@ file, here are a few guidelines:
 7. Try not to leave any unexpanded abbreviations in the name
 8. Also ensure that the 4 character code is committed to `Bank.php`
 9. No period after `Co-operative`
+
+## Code Guidelines
+
+We use `prettier` for the javascript and `rubocop` for the Ruby code for style fixes

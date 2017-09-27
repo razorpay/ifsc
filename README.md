@@ -33,7 +33,6 @@ sizes given as well:
 |----|----------|
 | IFSC.csv| 19M |
 | IFSC.yml| 30M |
-| IFSC.json| 38M |
 | IFSC-list.json| 1.8M |
 | IFSC-list.yml| 1.8M |
 | by-bank.tar.gz| 6.3M |
