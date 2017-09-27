@@ -55,3 +55,15 @@ node:
     - script:
       name: run tests
       code: npm test
+release:
+  box: php
+  steps:
+    - install-packages:
+      packages: git original-awk
+    - script:
+      name: Generate Release Notice
+      code: bash release.sh
+      cwd: scraper/scripts
+    - script:
+      name: Copy Release.md
+      code: cp scraper/scripts/release.md $WERCKER_REPORT_ARTIFACTS_DIR/

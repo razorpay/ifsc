@@ -2,6 +2,8 @@ scraper/scripts/sheets/
 scraper/scripts/*.html
 scraper/scripts/excel_list.txt
 scraper/scripts/data/
+scraper/scripts/ifsc-api/
+scraper/scripts/release.md
 /vendor/
 composer.lock
 node_modules

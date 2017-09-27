@@ -298,7 +298,8 @@
   "DNSX": "Deendayal Nagari Sahakari Bank",
   "DOBX": "Dapoli Urban Co-operative Bank Dapoli",
   "DOHB": "Doha Bank QSC",
-  "DRGX": "Durg Rajnandgaon Gramin Bank (merged With Chhattisgarh Rajya Gramin Bank-cgbx)",
+  "DRGX":
+    "Durg Rajnandgaon Gramin Bank (merged With Chhattisgarh Rajya Gramin Bank-cgbx)",
   "DSBX": "Daivadnya Sahakara Bank Niyamit",
   "DSCB": "Delhi State Co-operative Bank",
   "DSHX": "District Co-operative Bank Saharanpur",
@@ -554,6 +555,7 @@
   "KCUB": "Khattri Co-operative Urban Bank",
   "KCUX": "Kannur Co-operative Urban Bank",
   "KDBX": "Karimnagar District Co-operative Central Bank",
+  "KDCB": "Kozhikode District Co-operatiave Bank",
   "KDCX": "Kozhikode District Co-operative Bank",
   "KDIX": "Shree Kadi Nagarik Sahakari Bank",
   "KDNX": "Kodinar Nagrik Sahakari Bank Limited,kodinar",
@@ -645,7 +647,8 @@
   "MABL": "Malleshwaram Co-operative Bank",
   "MACX": "Mahabhairab Co-operative Urban Bank",
   "MADX": "Madhyanchal Gramin Bank",
-  "MAGX": "Mewar Aanchalik Gramin Bank (merged With Rajasthan Marudhara Gramin Bank-mdgx)",
+  "MAGX":
+    "Mewar Aanchalik Gramin Bank (merged With Rajasthan Marudhara Gramin Bank-mdgx)",
   "MAHB": "Bank of Maharashtra",
   "MAHG": "Maharashtra Gramin Bank",
   "MAHX": "Shree Mahalaxmi Urban Co-operative Credit Bank",
