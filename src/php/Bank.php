@@ -558,6 +558,7 @@ class Bank
     const KCUB = 'KCUB';
     const KCUX = 'KCUX';
     const KDBX = 'KDBX';
+    const KDCB = 'KDCB';
     const KDCX = 'KDCX';
     const KDIX = 'KDIX';
     const KDNX = 'KDNX';
