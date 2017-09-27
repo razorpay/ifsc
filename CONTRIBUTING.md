@@ -25,3 +25,18 @@ file, here are a few guidelines:
 ## Code Guidelines
 
 We use `prettier` for the javascript and `rubocop` for the Ruby code for style fixes
+
+
+## Releases
+
+Releases are partially automated. To draft a new release, follow these steps:
+
+1. Create a new release/{version} branch
+2. Copy the artifacts from the build pipeline and commit it (`IFSC.json` and `sublet.json`)
+3. Make sure that the tests are passing
+4. Download the `release.md` file from the release pipeline
+5. Bump the versions in the following places: `package.json`, `ifsc.gemspec` and commit it
+6. Merge the PR
+7. Tag the merge commit (don't use a prefix, just `X.Y.Z`)
+8. Push the tag to GitHub.
+9. Create a release on GitHub for the tag. Use `release.md` from Step 4 as the template. Replace `TODO` as applicable for the release.

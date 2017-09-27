@@ -59,7 +59,7 @@ release:
   box: php
   steps:
     - install-packages:
-      packages: git, awk
+      packages: git original-awk
     - script:
       name: Generate Release Notice
       code: bash release.sh

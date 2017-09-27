@@ -2,7 +2,7 @@
 
 # Generate a Release Changelog
 # 1. Clone the latest ifsc-api repo
-# git clone git@github.com:razorpay/ifsc-api.git --depth 1
+git clone https://github.com/razorpay/ifsc-api.git --depth 1
 # 2. Extract the latest files
 (cd data && tar -xzvf by-bank.tar.gz)
 # 3. Copy the data files to the repo
