@@ -37,22 +37,8 @@ IGNORED_SUBLETS = [
   'SKSB0000001'
 ]
 
-def parse_sublet_sheet()
-  sublet_mappings = Hash.new
-  file = 'sheets/SUBLET.xlsx'
-  sheet = RubyXL::Parser.parse(file).worksheets[0]
-  row_index = 0
-  sheet.each do |row|
-    row_index += 1
-    next if row_index == 1
-    row = (0..4).map { |e| row[e] ? row[e].value : nil}
-    bank_code = row[1].strip
-    ifsc_code = row[4].strip
-    if ifsc_code.size == 11 and ifsc_code[0..3] != bank_code and not IGNORED_SUBLETS.include?(ifsc_code)
-      sublet_mappings[ifsc_code] = bank_code
-    end
-  end
-  return Hash[sublet_mappings.sort]
+def parse_sublet_json()
+  return JSON.parse File.read('nach.json')
 end
 
 def parse_sheets
@@ -178,7 +164,6 @@ def export_json(hash)
 end
 
 def export_sublet_json(hash)
-  File.open("../src/sublet.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
   FileUtils.cp('../src/sublet.json', 'data/sublet.json')
 end
 
