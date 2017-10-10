@@ -18,27 +18,6 @@ HEADINGS_INSERT = [
   "STATE"
 ]
 
-# These are invalid sublets
-# given out by RBI
-# because they result in 1 bank
-# having 2 different codes
-IGNORED_SUBLETS = [
-  # Typo? in this one (AKJB|AJKB)
-  'AKJB0000001',
-  # DLSC and DSCB are the same
-  'DLSC0000001',
-  # FIRN and FIRX are the same
-  'FIRN0000001',
-  # KANG and KCOB are the same
-  'KANG0000001',
-  # SJSB and SJSX are the same
-  'SJSB0000001',
-  # SKSB and SHKX are the same
-  'SKSB0000001',
-  # ABHY0065001 leads to ABHY
-  'ABHY0065001',
-]
-
 def parse_sublet_json()
   return JSON.parse File.read('nach.json')
 end
