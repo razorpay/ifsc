@@ -341,6 +341,7 @@ class Bank
     const FMCX = 'FMCX';
     const FRIX = 'FRIX';
     const FSCX = 'FSCX';
+    const FSFB = 'FSFB';
     const FZCX = 'FZCX';
     const FZSX = 'FZSX';
     const GACX = 'GACX';
@@ -654,6 +655,7 @@ class Bank
     const MAHB = 'MAHB';
     const MAHG = 'MAHG';
     const MAHX = 'MAHX';
+    const MAJX = 'MAJX';
     const MAKX = 'MAKX';
     const MALX = 'MALX';
     const MAMX = 'MAMX';
@@ -912,6 +914,7 @@ class Bank
     const RCCX = 'RCCX';
     const RCDX = 'RCDX';
     const RCMX = 'RCMX';
+    const RCUX = 'RCUX';
     const RDCX = 'RDCX';
     const RDNX = 'RDNX';
     const REBX = 'REBX';
@@ -986,6 +989,7 @@ class Bank
     const SCDX = 'SCDX';
     const SCIX = 'SCIX';
     const SCNX = 'SCNX';
+    const SCOX = 'SCOX';
     const SCPX = 'SCPX';
     const SCSX = 'SCSX';
     const SCUX = 'SCUX';
@@ -1063,6 +1067,7 @@ class Bank
     const SNLX = 'SNLX';
     const SNPX = 'SNPX';
     const SNSX = 'SNSX';
+    const SOBX = 'SOBX';
     const SOGE = 'SOGE';
     const SOLX = 'SOLX';
     const SONX = 'SONX';
