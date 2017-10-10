@@ -6,9 +6,8 @@ mkdir --parents data
 mkdir --parents sheets
 
 # # Sublet listing comes from NPCI
-wget "http://www.npci.org.in/" --output-document=nach.html
-NACH_URL=$(bundle exec ruby parse_nach.rb)
-wget "$NACH_URL" --output-document='sheets/SUBLET.xlsx'
+wget "https://www.npci.org.in/national-automated-clearing-live-members-1" --output-document=nach.html --user-agent="Firefox"
+bundle exec ruby parse_nach.rb
 
 # Primary IFSC listings
 RBI_LIST_URL="https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2009"
