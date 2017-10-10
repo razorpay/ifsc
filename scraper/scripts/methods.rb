@@ -34,7 +34,9 @@ IGNORED_SUBLETS = [
   # SJSB and SJSX are the same
   'SJSB0000001',
   # SKSB and SHKX are the same
-  'SKSB0000001'
+  'SKSB0000001',
+  # ABHY0065001 leads to ABHY
+  'ABHY0065001',
 ]
 
 def parse_sublet_json()
