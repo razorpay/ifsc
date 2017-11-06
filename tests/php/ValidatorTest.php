@@ -42,9 +42,15 @@ class ValidatorTest extends TestCase
 
     protected function singleTest($message, $tests)
     {
+        $failures = [];
         foreach ($tests as $code => $expectedValue)
         {
-            $this->assertEquals($expectedValue, IFSC::validate($code), $message);
+            if (IFSC::validate($code) !== $expectedValue)
+            {
+                $failures[] = $code;
+            }
         }
+
+        $this->assertEquals([], $failures, $message);
     }
 }
