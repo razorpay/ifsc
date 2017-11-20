@@ -3,8 +3,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'ifsc'
-  s.version     = '1.0.10'
-  s.date        = '2017-10-09'
+  s.version     = '1.0.11'
+  s.date        = '2017-11-20'
   s.summary     = 'IFSC code database to help you validate IFSC codes'
   s.description = 'A simple gem by @razorpay to help you validate your IFSC codes. IFSC codes are bank codes within India'
   s.authors     = ['Abhay Rana', 'Nihal Gonsalves']
