@@ -12,3 +12,8 @@ src/ruby/
 Gemfile*
 *.gem
 *.gemspec
+.editorconfig
+.rubocop.yml
+Rakefile
+*.php
+wercker.yml
