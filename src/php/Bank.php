@@ -316,6 +316,7 @@ class Bank
     const DUNX = 'DUNX';
     const DVDX = 'DVDX';
     const DYPX = 'DYPX';
+    const EBIL = 'EBIL';
     const ECBL = 'ECBL';
     const EDBX = 'EDBX';
     const EDCX = 'EDCX';
