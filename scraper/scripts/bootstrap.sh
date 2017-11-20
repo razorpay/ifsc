@@ -24,7 +24,7 @@ if [ -z "$WERCKER_CACHE_DIR" ]; then
 else
     # Make sure we have a cache
     mkdir -p "$WERCKER_CACHE_DIR/sheets"
-    wget --timestamping --no-verbose --input-file=excel_list.txt --directory-prefix="$WERCKER_CACHE_DIR/sheets/" || true
+    wget --timeout=5 --timestamping --verbose --input-file=excel_list.txt --directory-prefix="$WERCKER_CACHE_DIR/sheets/" || true
     # Copy back to the cache if the download worked
     cp --recursive --preserve=timestamps "$WERCKER_CACHE_DIR/sheets" .
 fi
