@@ -98,7 +98,7 @@ def parse_rtgs
   sheet.each do |row|
     row_index += 1
     # sanitize row
-    row = (0..9).map { |e| row[e] ? row[e].value : nil}
+    row = (0..9).map { |e| row[e] ? row[e].value.upcase  : nil}
     next if row_index == 1
     next if row.compact.empty?
 
@@ -252,6 +252,7 @@ end
 def parse_ifsc_rtgs(data_ifsc, data_rtgs)
   ifsc = Hash.new
   rtgs = Hash.new
+  hash = Hash.new
 
   data_ifsc.each { |row| ifsc[row['IFSC']] = row }
   ifsc_keys = ifsc.keys
