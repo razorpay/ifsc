@@ -25,8 +25,6 @@ end
 def parse_sheets
   data = []
 
-  file_ifsc_mappings = Hash.new
-
   Dir.glob('sheets/IFCB*') do |file|
     log "Parsing #{file}"
     basename = File.basename file
@@ -53,7 +51,6 @@ def parse_sheets
             end
           end
           data.push x
-          file_ifsc_mappings[basename] = x['IFSC'][0..3]
         rescue Exception => e
           puts "Faced an Exception"
           puts data_to_insert.to_json
@@ -77,7 +74,6 @@ def parse_sheets
         begin
           x = data_to_insert.transpose.to_h
           data.push x
-          file_ifsc_mappings[basename] = x['IFSC'][0..3]
         rescue Exception => e
           puts "Faced an Exception"
           puts data_to_insert.to_json
@@ -88,7 +84,39 @@ def parse_sheets
       puts "[+] #{row_index} rows processed"
     end
   end
-  [data, file_ifsc_mappings]
+  data
+end
+
+def parse_rtgs
+  data = []
+
+  log "Parsing #RTGS.xlsx"
+  sheet = RubyXL::Parser.parse("sheets/RTGS.xlsx").worksheets['RTGS_BRANCHES_SORT_STATE_A_L']
+  headings = sheet.sheet_data[0]
+  headings = (0..9).map {|e| headings[e].value}
+  row_index = 0
+  sheet.each do |row|
+    row_index += 1
+    # sanitize row
+    row = (0..9).map { |e| row[e] ? row[e].value : nil}
+    next if row_index == 1
+    next if row.compact.empty?
+
+    data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+    begin
+      x = data_to_insert.transpose.to_h
+      # RTGS Flag
+      x["RTGS"] = true
+      data.push x
+    rescue Exception => e
+      puts "Faced an Exception"
+      puts data_to_insert.to_json
+      puts e
+      exit
+    end
+  end
+  puts "[+] #{row_index} rows processed"
+  data
 end
 
 def map_data(row, headings)
@@ -100,7 +128,8 @@ def map_data(row, headings)
     'CENTRE'   => 'CITY',
     'CONTACT1'  => 'CONTACT',
     'IFSC CODE' => 'IFSC',
-    'BRANCH NAME' => 'BRANCH'
+    'BRANCH NAME' => 'BRANCH',
+    'BANK NAME'   => 'BANK',
   }
   # Find the heading in HEADINGS_INSERT
   headings.each_with_index do |header, heading_index|

@@ -1,6 +1,7 @@
 require './methods'
 
-data, file_ifsc_mappings = parse_sheets()
+data = parse_rtgs()
+data += parse_sheets()
 
 hash = Hash.new
 data.each { |row| hash[row['IFSC']] = row }
