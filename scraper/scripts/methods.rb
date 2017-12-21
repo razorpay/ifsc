@@ -249,6 +249,38 @@ def make_ranges(list)
   ranges.map { |x| x.size==1 ? x[0] : x }
 end
 
+def parse_ifsc_rtgs(data_ifsc, data_rtgs)
+  ifsc = Hash.new
+  rtgs = Hash.new
+
+  data_ifsc.each { |row| ifsc[row['IFSC']] = row }
+  ifsc_keys = ifsc.keys
+
+  data_rtgs.each { |row| rtgs[row['IFSC']] = row }
+  rtgs_keys = rtgs.keys
+
+  data = []
+
+  rtgs.each do |key, value|
+    if not ifsc_keys.include? key
+      # already RTGS = true will be there in value
+      data.push(value)
+    end
+  end
+
+  ifsc.each do |key, value|
+    ifsc = value
+    if rtgs_keys.include? key
+      value['RTGS'] = true
+    end
+    data.push(value)
+  end
+
+  data.each { |row| hash[row['IFSC']] = row }
+
+  [data, hash]
+end
+
 def export_to_code_json(list, ifsc_hash)
   banks = find_bank_codes list
   banks_hash = Hash.new
