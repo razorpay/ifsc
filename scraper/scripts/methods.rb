@@ -91,7 +91,7 @@ def parse_rtgs
   data = []
 
   log "Parsing #RTGS.xlsx"
-  sheet = RubyXL::Parser.parse("sheets/RTGS.xlsx").worksheets['RTGS_BRANCHES_SORT_STATE_A_L']
+  sheet = RubyXL::Parser.parse("sheets/RTGS.xlsx").worksheets[1]
   headings = sheet.sheet_data[0]
   headings = (0..9).map {|e| headings[e].value}
   row_index = 0
