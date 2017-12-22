@@ -767,6 +767,7 @@ class Bank
     const NDDX = 'NDDX';
     const NDGX = 'NDGX';
     const NDIX = 'NDIX';
+    const NESF = 'NESF';
     const NEYX = 'NEYX';
     const NGBX = 'NGBX';
     const NGKX = 'NGKX';
