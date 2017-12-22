@@ -382,6 +382,7 @@ class Bank
     const GUOX = 'GUOX';
     const HAMX = 'HAMX';
     const HANX = 'HANX';
+    const HARC = 'HARC';
     const HCBL = 'HCBL';
     const HCBX = 'HCBX';
     const HCCX = 'HCCX';
@@ -899,6 +900,7 @@ class Bank
     const PWUX = 'PWUX';
     const PYCX = 'PYCX';
     const PYTM = 'PYTM';
+    const QNBA = 'QNBA';
     const QUCX = 'QUCX';
     const RABO = 'RABO';
     const RACX = 'RACX';
