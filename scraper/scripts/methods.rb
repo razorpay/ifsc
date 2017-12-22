@@ -98,13 +98,15 @@ def parse_rtgs
   sheet.each do |row|
     row_index += 1
     # sanitize row
-    row = (0..9).map { |e| row[e] ? row[e].value.upcase  : nil}
+    row = (0..9).map { |e| row[e] ? row[e].value  : nil}
     next if row_index == 1
     next if row.compact.empty?
 
     data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
     begin
       x = data_to_insert.transpose.to_h
+      # IFSC values are in smaller case
+      x["IFSC"] = x["IFSC"].upcase
       # RTGS Flag
       x["RTGS"] = true
       data.push x
