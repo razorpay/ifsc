@@ -25,8 +25,6 @@ end
 def parse_sheets
   data = []
 
-  file_ifsc_mappings = Hash.new
-
   Dir.glob('sheets/IFCB*') do |file|
     log "Parsing #{file}"
     basename = File.basename file
@@ -53,7 +51,6 @@ def parse_sheets
             end
           end
           data.push x
-          file_ifsc_mappings[basename] = x['IFSC'][0..3]
         rescue Exception => e
           puts "Faced an Exception"
           puts data_to_insert.to_json
@@ -77,7 +74,6 @@ def parse_sheets
         begin
           x = data_to_insert.transpose.to_h
           data.push x
-          file_ifsc_mappings[basename] = x['IFSC'][0..3]
         rescue Exception => e
           puts "Faced an Exception"
           puts data_to_insert.to_json
@@ -88,7 +84,41 @@ def parse_sheets
       puts "[+] #{row_index} rows processed"
     end
   end
-  [data, file_ifsc_mappings]
+  data
+end
+
+def parse_rtgs
+  data = []
+
+  log "Parsing #RTGS.xlsx"
+  sheet = RubyXL::Parser.parse("sheets/RTGS.xlsx").worksheets[1]
+  headings = sheet.sheet_data[0]
+  headings = (0..9).map {|e| headings[e].value}
+  row_index = 0
+  sheet.each do |row|
+    row_index += 1
+    # sanitize row
+    row = (0..9).map { |e| row[e] ? row[e].value  : nil}
+    next if row_index == 1
+    next if row.compact.empty?
+
+    data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+    begin
+      x = data_to_insert.transpose.to_h
+      # IFSC values are in smaller case
+      x["IFSC"] = x["IFSC"].upcase
+      # RTGS Flag
+      x["RTGS"] = true
+      data.push x
+    rescue Exception => e
+      puts "Faced an Exception"
+      puts data_to_insert.to_json
+      puts e
+      exit
+    end
+  end
+  puts "[+] #{row_index} rows processed"
+  data
 end
 
 def map_data(row, headings)
@@ -100,7 +130,8 @@ def map_data(row, headings)
     'CENTRE'   => 'CITY',
     'CONTACT1'  => 'CONTACT',
     'IFSC CODE' => 'IFSC',
-    'BRANCH NAME' => 'BRANCH'
+    'BRANCH NAME' => 'BRANCH',
+    'BANK NAME'   => 'BANK',
   }
   # Find the heading in HEADINGS_INSERT
   headings.each_with_index do |header, heading_index|
@@ -218,6 +249,39 @@ def make_ranges(list)
   end
   #return ranges
   ranges.map { |x| x.size==1 ? x[0] : x }
+end
+
+def parse_ifsc_rtgs(data_ifsc, data_rtgs)
+  ifsc = Hash.new
+  rtgs = Hash.new
+  hash = Hash.new
+
+  data_ifsc.each { |row| ifsc[row['IFSC']] = row }
+  ifsc_keys = ifsc.keys
+
+  data_rtgs.each { |row| rtgs[row['IFSC']] = row }
+  rtgs_keys = rtgs.keys
+
+  data = []
+
+  rtgs.each do |key, value|
+    if not ifsc_keys.include? key
+      # already RTGS = true will be there in value
+      data.push(value)
+    end
+  end
+
+  ifsc.each do |key, value|
+    ifsc = value
+    if rtgs_keys.include? key
+      value['RTGS'] = true
+    end
+    data.push(value)
+  end
+
+  data.each { |row| hash[row['IFSC']] = row }
+
+  [data, hash]
 end
 
 def export_to_code_json(list, ifsc_hash)
