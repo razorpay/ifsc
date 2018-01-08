@@ -299,6 +299,7 @@ class Bank
     const DMCB = 'DMCB';
     const DMCX = 'DMCX';
     const DMKB = 'DMKB';
+    const DMKJ = 'DMKJ';
     const DNSB = 'DNSB';
     const DNSX = 'DNSX';
     const DOBX = 'DOBX';
