@@ -18,47 +18,12 @@ HEADINGS_INSERT = [
   "STATE"
 ]
 
-# These are invalid sublets
-# given out by RBI
-# because they result in 1 bank
-# having 2 different codes
-IGNORED_SUBLETS = [
-  # Typo? in this one (AKJB|AJKB)
-  'AKJB0000001',
-  # DLSC and DSCB are the same
-  'DLSC0000001',
-  # FIRN and FIRX are the same
-  'FIRN0000001',
-  # KANG and KCOB are the same
-  'KANG0000001',
-  # SJSB and SJSX are the same
-  'SJSB0000001',
-  # SKSB and SHKX are the same
-  'SKSB0000001'
-]
-
-def parse_sublet_sheet()
-  sublet_mappings = Hash.new
-  file = 'sheets/SUBLET.xlsx'
-  sheet = RubyXL::Parser.parse(file).worksheets[0]
-  row_index = 0
-  sheet.each do |row|
-    row_index += 1
-    next if row_index == 1
-    row = (0..4).map { |e| row[e] ? row[e].value : nil}
-    bank_code = row[1].strip
-    ifsc_code = row[4].strip
-    if ifsc_code.size == 11 and ifsc_code[0..3] != bank_code and not IGNORED_SUBLETS.include?(ifsc_code)
-      sublet_mappings[ifsc_code] = bank_code
-    end
-  end
-  return Hash[sublet_mappings.sort]
+def parse_sublet_json()
+  return JSON.parse File.read('nach.json')
 end
 
 def parse_sheets
   data = []
-
-  file_ifsc_mappings = Hash.new
 
   Dir.glob('sheets/IFCB*') do |file|
     log "Parsing #{file}"
@@ -69,6 +34,7 @@ def parse_sheets
       sheet = Spreadsheet.open(file).worksheet 0
       headings = sheet.row(0)[0,9]
 
+      row_count = 0
       sheet.each 1 do |row|
         row = row[0,9]
         next if row.compact.empty?
@@ -85,14 +51,15 @@ def parse_sheets
             end
           end
           data.push x
-          file_ifsc_mappings[basename] = x['IFSC'][0..3]
         rescue Exception => e
           puts "Faced an Exception"
           puts data_to_insert.to_json
           puts e
           exit
         end
+        row_count += 1
       end
+      puts "[+] #{row_count} rows processed"
     when '.xlsx'
       sheet = RubyXL::Parser.parse(file).worksheets[0]
       headings = sheet.sheet_data[0]
@@ -107,7 +74,6 @@ def parse_sheets
         begin
           x = data_to_insert.transpose.to_h
           data.push x
-          file_ifsc_mappings[basename] = x['IFSC'][0..3]
         rescue Exception => e
           puts "Faced an Exception"
           puts data_to_insert.to_json
@@ -115,9 +81,44 @@ def parse_sheets
           exit
         end
       end
+      puts "[+] #{row_index} rows processed"
     end
   end
-  [data, file_ifsc_mappings]
+  data
+end
+
+def parse_rtgs
+  data = []
+
+  log "Parsing #RTGS.xlsx"
+  sheet = RubyXL::Parser.parse("sheets/RTGS.xlsx").worksheets[1]
+  headings = sheet.sheet_data[0]
+  headings = (0..9).map {|e| headings[e].value}
+  row_index = 0
+  sheet.each do |row|
+    row_index += 1
+    # sanitize row
+    row = (0..9).map { |e| row[e] ? row[e].value  : nil}
+    next if row_index == 1
+    next if row.compact.empty?
+
+    data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+    begin
+      x = data_to_insert.transpose.to_h
+      # IFSC values are in smaller case
+      x["IFSC"] = x["IFSC"].upcase
+      # RTGS Flag
+      x["RTGS"] = true
+      data.push x
+    rescue Exception => e
+      puts "Faced an Exception"
+      puts data_to_insert.to_json
+      puts e
+      exit
+    end
+  end
+  puts "[+] #{row_index} rows processed"
+  data
 end
 
 def map_data(row, headings)
@@ -129,7 +130,8 @@ def map_data(row, headings)
     'CENTRE'   => 'CITY',
     'CONTACT1'  => 'CONTACT',
     'IFSC CODE' => 'IFSC',
-    'BRANCH NAME' => 'BRANCH'
+    'BRANCH NAME' => 'BRANCH',
+    'BANK NAME'   => 'BANK',
   }
   # Find the heading in HEADINGS_INSERT
   headings.each_with_index do |header, heading_index|
@@ -174,7 +176,6 @@ def export_json(hash)
 end
 
 def export_sublet_json(hash)
-  File.open("../src/sublet.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
   FileUtils.cp('../src/sublet.json', 'data/sublet.json')
 end
 
@@ -250,6 +251,39 @@ def make_ranges(list)
   ranges.map { |x| x.size==1 ? x[0] : x }
 end
 
+def parse_ifsc_rtgs(data_ifsc, data_rtgs)
+  ifsc = Hash.new
+  rtgs = Hash.new
+  hash = Hash.new
+
+  data_ifsc.each { |row| ifsc[row['IFSC']] = row }
+  ifsc_keys = ifsc.keys
+
+  data_rtgs.each { |row| rtgs[row['IFSC']] = row }
+  rtgs_keys = rtgs.keys
+
+  data = []
+
+  rtgs.each do |key, value|
+    if not ifsc_keys.include? key
+      # already RTGS = true will be there in value
+      data.push(value)
+    end
+  end
+
+  ifsc.each do |key, value|
+    ifsc = value
+    if rtgs_keys.include? key
+      value['RTGS'] = true
+    end
+    data.push(value)
+  end
+
+  data.each { |row| hash[row['IFSC']] = row }
+
+  [data, hash]
+end
+
 def export_to_code_json(list, ifsc_hash)
   banks = find_bank_codes list
   banks_hash = Hash.new
@@ -267,7 +301,7 @@ def export_to_code_json(list, ifsc_hash)
     banks_hash[bank] = make_ranges banks_hash[bank]
   end
 
-  File.open('../src/IFSC.json', 'w') do |file|
+  File.open('../../src/IFSC.json', 'w') do |file|
     file.puts banks_hash.to_json
   end
 end

@@ -299,6 +299,7 @@ class Bank
     const DMCB = 'DMCB';
     const DMCX = 'DMCX';
     const DMKB = 'DMKB';
+    const DMKJ = 'DMKJ';
     const DNSB = 'DNSB';
     const DNSX = 'DNSX';
     const DOBX = 'DOBX';
@@ -316,6 +317,7 @@ class Bank
     const DUNX = 'DUNX';
     const DVDX = 'DVDX';
     const DYPX = 'DYPX';
+    const EBIL = 'EBIL';
     const ECBL = 'ECBL';
     const EDBX = 'EDBX';
     const EDCX = 'EDCX';
@@ -341,6 +343,7 @@ class Bank
     const FMCX = 'FMCX';
     const FRIX = 'FRIX';
     const FSCX = 'FSCX';
+    const FSFB = 'FSFB';
     const FZCX = 'FZCX';
     const FZSX = 'FZSX';
     const GACX = 'GACX';
@@ -380,6 +383,7 @@ class Bank
     const GUOX = 'GUOX';
     const HAMX = 'HAMX';
     const HANX = 'HANX';
+    const HARC = 'HARC';
     const HCBL = 'HCBL';
     const HCBX = 'HCBX';
     const HCCX = 'HCCX';
@@ -558,6 +562,7 @@ class Bank
     const KCUB = 'KCUB';
     const KCUX = 'KCUX';
     const KDBX = 'KDBX';
+    const KDCB = 'KDCB';
     const KDCX = 'KDCX';
     const KDIX = 'KDIX';
     const KDNX = 'KDNX';
@@ -653,6 +658,7 @@ class Bank
     const MAHB = 'MAHB';
     const MAHG = 'MAHG';
     const MAHX = 'MAHX';
+    const MAJX = 'MAJX';
     const MAKX = 'MAKX';
     const MALX = 'MALX';
     const MAMX = 'MAMX';
@@ -763,6 +769,7 @@ class Bank
     const NDDX = 'NDDX';
     const NDGX = 'NDGX';
     const NDIX = 'NDIX';
+    const NESF = 'NESF';
     const NEYX = 'NEYX';
     const NGBX = 'NGBX';
     const NGKX = 'NGKX';
@@ -894,6 +901,7 @@ class Bank
     const PWUX = 'PWUX';
     const PYCX = 'PYCX';
     const PYTM = 'PYTM';
+    const QNBA = 'QNBA';
     const QUCX = 'QUCX';
     const RABO = 'RABO';
     const RACX = 'RACX';
@@ -911,6 +919,7 @@ class Bank
     const RCCX = 'RCCX';
     const RCDX = 'RCDX';
     const RCMX = 'RCMX';
+    const RCUX = 'RCUX';
     const RDCX = 'RDCX';
     const RDNX = 'RDNX';
     const REBX = 'REBX';
@@ -985,6 +994,7 @@ class Bank
     const SCDX = 'SCDX';
     const SCIX = 'SCIX';
     const SCNX = 'SCNX';
+    const SCOX = 'SCOX';
     const SCPX = 'SCPX';
     const SCSX = 'SCSX';
     const SCUX = 'SCUX';
@@ -1062,6 +1072,7 @@ class Bank
     const SNLX = 'SNLX';
     const SNPX = 'SNPX';
     const SNSX = 'SNSX';
+    const SOBX = 'SOBX';
     const SOGE = 'SOGE';
     const SOLX = 'SOLX';
     const SONX = 'SONX';

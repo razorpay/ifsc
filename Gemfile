@@ -1,6 +1,4 @@
-# A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'nokogiri'
-gem 'spreadsheet'
-gem 'rubyXL'
+# Specify your gem's dependencies in razorpay-ruby.gemspec
+gemspec

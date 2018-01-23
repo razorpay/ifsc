@@ -1,7 +1,8 @@
 {
   "name": "ifsc",
-  "version": "1.0.5",
-  "description": "This is part of the IFSC toolset released by Razorpay. You can find more details about the entire release at [ifsc.razorpay.com](https://ifsc.razorpay.com). Includes only a validation library as of now.",
+  "version": "1.0.14",
+  "description":
+    "This is part of the IFSC toolset released by Razorpay. You can find more details about the entire release at [ifsc.razorpay.com](https://ifsc.razorpay.com). Includes only a validation library as of now.",
   "main": "src/node/index.js",
   "directories": {
     "test": "tests"
@@ -9,7 +10,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "node tests/validator_test.js"
+    "test": "node tests/node/validator_test.js"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,9 @@
     "Indian Financial System Code"
   ],
   "author": {
-    "name" : "Nemo",
-    "email" : "nemo@razorpay.com",
-    "url" : "https://captnemo.in/"
+    "name": "Nemo",
+    "email": "nemo@razorpay.com",
+    "url": "https://captnemo.in/"
   },
   "license": "MIT",
   "bugs": {

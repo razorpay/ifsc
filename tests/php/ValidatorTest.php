@@ -2,7 +2,6 @@
 namespace Razorpay\IFSC\Tests;
 
 use Razorpay\IFSC\IFSC;
-use PHPUnit\Framework\TestCase;
 
 class ValidatorTest extends TestCase
 {
@@ -10,7 +9,8 @@ class ValidatorTest extends TestCase
 
     public function setUp()
     {
-        $contents = file_get_contents(__DIR__ . '/validator_asserts.json');
+        parent::setUp();
+        $contents = file_get_contents($this->root . '/tests/validator_asserts.json');
         $this->groups = json_decode($contents, true);
     }
 
@@ -42,9 +42,15 @@ class ValidatorTest extends TestCase
 
     protected function singleTest($message, $tests)
     {
+        $failures = [];
         foreach ($tests as $code => $expectedValue)
         {
-            $this->assertEquals($expectedValue, IFSC::validate($code), $message);
+            if (IFSC::validate($code) !== $expectedValue)
+            {
+                $failures[] = $code;
+            }
         }
+
+        $this->assertEquals([], $failures, $message);
     }
 }

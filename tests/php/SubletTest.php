@@ -3,7 +3,6 @@ namespace Razorpay\IFSC\Tests;
 
 use Razorpay\IFSC\IFSC;
 use Razorpay\IFSC\Bank;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Checks Bank names for sublet branches
@@ -12,7 +11,8 @@ class SubletTest extends TestCase
 {
     public function setUp()
     {
-        $this->sublets = json_decode(file_get_contents(__DIR__ . '/../src/sublet.json'), true);
+        parent::setUp();
+        $this->sublets = json_decode(file_get_contents($this->root . '/src/sublet.json'), true);
     }
 
     public function testBasicNames()
