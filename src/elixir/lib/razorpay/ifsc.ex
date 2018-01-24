@@ -1,6 +1,55 @@
 defmodule Razorpay.IFSC do
   @moduledoc """
   Razorpay IFSC Validation Module
+
+  Online validation (fetches details from ifsc.razorpay.com)
+
+      iex> IFSC.get("KKBK0000261")
+      {:ok,
+       %Razorpay.IFSC{
+         address: "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,",
+         bank: "Kotak Mahindra Bank",
+         bank_code: "KKBK",
+         branch: "GURGAON",
+         city: "GURGAON",
+         contact: "4131000",
+         district: "GURGAON",
+         ifsc: "KKBK0000261",
+         rtgs: true,
+         state: "HARYANA"
+       }}
+
+      iex> IFSC.get("foobar")
+      {:error, :invalid_ifsc}
+
+  Offline validation using the dataset in the package - please keep `ifsc` up to date if using this
+
+  (Note that only the :bank, :bank_code and :ifsc fields are populated if using offline validation)
+
+      iex> IFSC.validate("KKBK0000261")
+      {:ok,
+       %Razorpay.IFSC{
+         address: nil,
+         bank: "Kotak Mahindra Bank",
+         bank_code: "KKBK",
+         branch: nil,
+         city: nil,
+         contact: nil,
+         district: nil,
+         ifsc: "KKBK0000261",
+         rtgs: nil,
+         state: nil
+       }}
+
+       iex> IFSC.validate("foobar")
+       {:error, :invalid_format}
+
+       iex> IFSC.validate("AAAA0000000")
+       {:error, :invalid_bank_code}
+
+       iex(> IFSC.validate("HDFC0000000")
+       {:error, :invalid_branch_code}
+
   """
 
   alias __MODULE__.Data
