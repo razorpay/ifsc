@@ -25,7 +25,7 @@ defmodule Razorpay.IFSC do
   @doc """
   Fetch details about an IFSC code from the Razorpay IFSC API
   """
-  @spec get(ifsc :: String.t) :: {:ok, ifsc :: __MODULE__.t} | {:error | reason :: atom}
+  @spec get(ifsc :: String.t) :: {:ok, ifsc :: __MODULE__.t} | {:error, reason :: :invalid_ifsc | any}
   def get(ifsc) do
     with {:ok, %HTTPoison.Response{status_code: 200, body: body}} <- Data.api(ifsc),
          {:ok, json} <- Poison.decode(body)
@@ -53,7 +53,8 @@ defmodule Razorpay.IFSC do
   @doc """
   Perform offline validation and return the bank and bank codes
   """
-  @spec validate(ifsc :: String.t) :: {:ok, ifsc :: __MODULE__.t} | {:error | reason :: atom}
+  @spec validate(ifsc :: String.t) :: {:ok, ifsc :: __MODULE__.t} |
+                                      {:error, reason :: :invalid_format | :invalid_bank_code | :invalid_branch_code | any}
   def validate(ifsc) do
     ifsc = String.upcase(ifsc)
 

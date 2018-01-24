@@ -8,6 +8,7 @@ defmodule Razorpay.IFSC.Data do
   defmemo bank, do: json("banknames")
   defmemo sublet, do: json("sublet")
 
+  @spec api(ifsc :: String.t) :: {:ok, data :: map} | {:error, reason :: any}
   def api(ifsc) do
     case api_memoized(ifsc) do
       {:ok, response} ->
