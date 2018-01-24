@@ -8,6 +8,7 @@ tests/php/
 tests/ruby/
 tests/elixir/
 tests/fixture/exvcr/
+priv/ifsc-data/
 node_modules/
 src/php/
 src/ruby/

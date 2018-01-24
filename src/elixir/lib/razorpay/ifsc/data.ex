@@ -5,7 +5,6 @@ defmodule Razorpay.IFSC.Data do
 
   use Memoize
 
-  @path "./src/"
   @api "https://ifsc.razorpay.com/"
 
   @doc """
@@ -47,11 +46,17 @@ defmodule Razorpay.IFSC.Data do
   end
 
   defp json(filename) do
-    with {:ok, body} <- File.read(@path <> filename <> ".json"),
+    with {:ok, body} <- File.read(data_path(filename <> ".json")),
          {:ok, json} <- Poison.decode(body)
     do
       {:ok, json}
     end
+  end
+
+  defp data_path(filename) do
+    :code.priv_dir(:ifsc)
+    |> Path.join("./ifsc-data/")
+    |> Path.join(filename)
   end
 
   defp api_uri(ifsc), do: URI.merge(@api, ifsc)

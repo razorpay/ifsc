@@ -25,3 +25,4 @@ InstalledFiles
 /.fetch
 erl_crash.dump
 *.ez
+/priv/ifsc-data/

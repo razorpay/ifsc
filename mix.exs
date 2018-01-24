@@ -10,6 +10,7 @@ defmodule IFSC.Mixfile do
       description: description(),
       package: package(),
       deps: deps(),
+      aliases: aliases(),
       source_url: "https://github.com/razorpay/ifsc",
       homepage_url: "https://ifsc.razorpay.com/",
       elixirc_paths: ["src/elixir"],
@@ -50,6 +51,7 @@ defmodule IFSC.Mixfile do
       "src/elixir/*.md",
       "tests/elixir/**",
       "tests/*.json",
+      "priv/*",
       "src/*.json",
       "*.md",
       "mix.exs",
@@ -64,6 +66,12 @@ defmodule IFSC.Mixfile do
       {:memoize, "~> 1.2"},
       {:exvcr, "~> 0.8", only: :test},
       {:ex_doc, ">= 0.0.0", only: :dev},
+    ]
+  end
+
+  defp aliases do
+    [
+      "hex.publish": ["ifsc.copy_json", "hex.publish"],
     ]
   end
 end

@@ -31,8 +31,9 @@
             "/.npmignore",
             "/Gemfile*",
             "/package.json",
-            "mix.exs",
-            "mix.lock"
+            "/mix.exs",
+            "/mix.lock",
+            "/priv/ifsc-data/"
         ]
     },
     "require": {
