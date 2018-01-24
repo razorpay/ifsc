@@ -13,6 +13,7 @@ defmodule IFSC.Mixfile do
       source_url: "https://github.com/razorpay/ifsc/tree/master/src/elixir",
       homepage_url: "https://ifsc.razorpay.com/",
       elixirc_paths: ["src/elixir"],
+      test_paths: ["tests/elixir"],
     ]
   end
 
@@ -46,7 +47,7 @@ defmodule IFSC.Mixfile do
     [
       "src/elixir/config/**",
       "src/elixir/lib/**",
-      "src/elixir/test/**",
+      "tests/elixir/**",
       "src/*.json",
       "*.md",
     ]
