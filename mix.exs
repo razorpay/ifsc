@@ -56,7 +56,7 @@ defmodule IFSC.Mixfile do
   defp deps do
     [
       {:poison, "~> 3.1"},
-      {:httpoison, "~> 1.0", override: true},
+      {:httpoison, "~> 0.13"},
       {:memoize, "~> 1.2"},
       {:exvcr, "~> 0.8", only: :test},
     ]
