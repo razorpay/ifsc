@@ -3,6 +3,8 @@ defmodule Razorpay.IFSC do
   Razorpay IFSC Validation Module
   """
 
+  use Memoize
+
   @type t :: %__MODULE__{
     ifsc:      String.t,
     bank:      String.t | nil,
@@ -51,6 +53,16 @@ defmodule Razorpay.IFSC do
   end
 
   defp api_data(ifsc) do
+    case memoized_api_data(ifsc) do
+      {:ok, response} ->
+        {:ok, response}
+      {:error, reason} ->
+        Memoize.invalidate(__MODULE__, :memoized_api_data, [ifsc])
+        {:error, reason}
+    end
+  end
+
+  defmemo memoized_api_data(ifsc) do
     ifsc
     |> api_uri
     |> HTTPoison.get
