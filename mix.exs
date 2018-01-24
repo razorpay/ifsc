@@ -12,6 +12,7 @@ defmodule IFSC.Mixfile do
       deps: deps(),
       source_url: "https://github.com/razorpay/ifsc/tree/master/src/elixir",
       homepage_url: "https://ifsc.razorpay.com/",
+      elixirc_paths: ["src/elixir"],
     ]
   end
 
@@ -37,6 +38,17 @@ defmodule IFSC.Mixfile do
         "GitHub" => "https://github.com/razorpay/ifsc",
         "Website" => "https://ifsc.razorpay.com/",
       },
+      files: files(),
+    ]
+  end
+
+  defp files do
+    [
+      "src/elixir/config/**",
+      "src/elixir/lib/**",
+      "src/elixir/test/**",
+      "src/*.json",
+      "*.md",
     ]
   end
 
