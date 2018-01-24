@@ -22,3 +22,15 @@ def deps do
   ]
 end
 ```
+
+## Development and Publishing
+
+Remember to run `mix ifsc.copy_json` to populate the `priv/ifsc-data` directory,
+or the `Razorpay.IFSC.validate` function will not run.
+
+This is because the root repository generates the IFSC data in `src/`, and to
+access these files when the `ifsc` package is included in another project,
+they must be inside `priv/`.
+
+Thus `priv/ifsc-data` is gitignore'd but populated and included when publishing to Hex.
+For local development, the task must be run manually.
