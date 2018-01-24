@@ -52,6 +52,8 @@ defmodule IFSC.Mixfile do
       "tests/*.json",
       "src/*.json",
       "*.md",
+      "mix.exs",
+      "mix.lock",
     ]
   end
 
