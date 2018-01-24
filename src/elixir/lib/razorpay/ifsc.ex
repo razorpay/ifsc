@@ -3,7 +3,7 @@ defmodule Razorpay.IFSC do
   Razorpay IFSC Validation Module
   """
 
-  use Memoize
+  alias __MODULE__.Data
 
   @type t :: %__MODULE__{
     ifsc:      String.t,
@@ -22,14 +22,12 @@ defmodule Razorpay.IFSC do
 
   defstruct ~w(ifsc bank bank_code branch address contact city district state rtgs)a
 
-  @api "https://ifsc.razorpay.com/"
-
   @doc """
   Fetch details about an IFSC code from the Razorpay IFSC API
   """
   @spec get(ifsc :: String.t) :: {:ok, ifsc :: __MODULE__.t} | {:error | reason :: atom}
   def get(ifsc) do
-    with {:ok, %HTTPoison.Response{status_code: 200, body: body}} <- api_data(ifsc),
+    with {:ok, %HTTPoison.Response{status_code: 200, body: body}} <- Data.api(ifsc),
          {:ok, json} <- Poison.decode(body)
     do
       {:ok, %__MODULE__{
@@ -52,21 +50,80 @@ defmodule Razorpay.IFSC do
     end
   end
 
-  defp api_data(ifsc) do
-    case memoized_api_data(ifsc) do
-      {:ok, response} ->
-        {:ok, response}
-      {:error, reason} ->
-        Memoize.invalidate(__MODULE__, :memoized_api_data, [ifsc])
-        {:error, reason}
+  @doc """
+  Perform offline validation and return the bank and bank codes
+  """
+  @spec validate(ifsc :: String.t) :: {:ok, ifsc :: __MODULE__.t} | {:error | reason :: atom}
+  def validate(ifsc) do
+    ifsc = String.upcase(ifsc)
+
+    with :ok <- validate_format(ifsc),
+         :ok <- validate_bank(ifsc),
+         :ok <- validate_branch(ifsc)
+    do
+      {:ok, %__MODULE__{
+        ifsc: ifsc,
+        bank: bank_name(ifsc),
+        bank_code: bank_code(ifsc, :sublet),
+      }}
     end
   end
 
-  defmemo memoized_api_data(ifsc) do
-    ifsc
-    |> api_uri
-    |> HTTPoison.get
+  defp validate_format(ifsc) do
+    if String.length(ifsc) == 11 and String.at(ifsc, 4) == "0" do
+      :ok
+    else
+      {:error, :invalid_format}
+    end
   end
 
-  defp api_uri(ifsc), do: URI.merge(@api, ifsc)
+  defp validate_bank(ifsc) do
+    with {:ok, bank_data} <- Data.bank() do
+      if Map.has_key?(bank_data, bank_code(ifsc, :regular)) do
+        :ok
+      else
+        {:error, :invalid_bank_code}
+      end
+    end
+  end
+
+  defp validate_branch(ifsc) do
+    with {:ok, ifsc_data} <- Data.ifsc() do
+      branches = ifsc_data[bank_code(ifsc, :regular)]
+      if branches && Enum.member?(branches, branch_code(ifsc)) do
+        :ok
+      else
+        {:error, :invalid_branch_code}
+      end
+    end
+  end
+
+  defp bank_code(ifsc, :sublet) do
+    code = bank_code(ifsc, :regular)
+
+    with {:ok, sublet_data} <- Data.sublet() do
+      sublet_data[ifsc] || code
+    else
+      _ -> code
+    end
+  end
+  defp bank_code(ifsc, :regular), do: String.slice(ifsc, 0..3)
+
+  defp branch_code(ifsc) do
+    code = String.slice(ifsc, 5..-1)
+
+    if code =~ ~r/^(\d)+$/ do
+      String.to_integer(code)
+    else
+      String.upcase(code)
+    end
+  end
+
+  defp bank_name(ifsc) do
+    with {:ok, bank_data} <- Data.bank() do
+      bank_data[bank_code(ifsc, :sublet)]
+    else
+      _ -> nil
+    end
+  end
 end
