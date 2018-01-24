@@ -10,7 +10,7 @@ defmodule IFSC.Mixfile do
       description: description(),
       package: package(),
       deps: deps(),
-      source_url: "https://github.com/razorpay/ifsc/tree/master/src/elixir",
+      source_url: "https://github.com/razorpay/ifsc",
       homepage_url: "https://ifsc.razorpay.com/",
       elixirc_paths: ["src/elixir"],
       test_paths: ["tests/elixir"],
