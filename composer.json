@@ -23,11 +23,16 @@
             "/node_modules/",
             "/src/node/",
             "/src/ruby/",
+            "/src/elixir/",
             "/tests/ruby/",
             "/tests/node/",
+            "/tests/elixir/",
+            "/tests/fixture/exvcr/",
             "/.npmignore",
             "/Gemfile*",
-            "/package.json"
+            "/package.json",
+            "mix.exs",
+            "mix.lock"
         ]
     },
     "require": {

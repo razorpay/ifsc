@@ -6,12 +6,17 @@ phpunit.xml
 .gitignore
 tests/php/
 tests/ruby/
+tests/elixir/
+tests/fixture/exvcr/
 node_modules/
 src/php/
 src/ruby/
+src/elixir/
 Gemfile*
 *.gem
 *.gemspec
+mix.exs
+mix.lock
 .editorconfig
 .rubocop.yml
 Rakefile
