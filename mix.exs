@@ -47,6 +47,7 @@ defmodule IFSC.Mixfile do
     [
       "src/elixir/config/**",
       "src/elixir/lib/**",
+      "src/elixir/*.md",
       "tests/elixir/**",
       "src/*.json",
       "*.md",
@@ -59,6 +60,7 @@ defmodule IFSC.Mixfile do
       {:httpoison, "~> 0.13"},
       {:memoize, "~> 1.2"},
       {:exvcr, "~> 0.8", only: :test},
+      {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
 end
