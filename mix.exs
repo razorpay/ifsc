@@ -49,6 +49,7 @@ defmodule IFSC.Mixfile do
       "src/elixir/lib/**",
       "src/elixir/*.md",
       "tests/elixir/**",
+      "tests/*.json",
       "src/*.json",
       "*.md",
     ]
