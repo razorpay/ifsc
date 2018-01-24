@@ -1,13 +1,34 @@
 defmodule Razorpay.IFSC.Data do
+  @moduledoc """
+  Fetches data from the API or offline JSON files
+  """
+
   use Memoize
 
   @path "./src/"
   @api "https://ifsc.razorpay.com/"
 
+  @doc """
+  Load, parse and memoize the data for IFSC.json
+  """
+  @spec ifsc() :: {:ok, data :: map} | {:error, reason :: any}
   defmemo ifsc, do: json("IFSC")
+
+  @doc """
+  Load, parse and memoize the data for banknames.json
+  """
+  @spec bank() :: {:ok, data :: map} | {:error, reason :: any}
   defmemo bank, do: json("banknames")
+
+  @doc """
+  Load, parse and memoize the data for sublet.json
+  """
+  @spec sublet() :: {:ok, data :: map} | {:error, reason :: any}
   defmemo sublet, do: json("sublet")
 
+  @doc """
+  Fetch the JSON payload for an IFSC
+  """
   @spec api(ifsc :: String.t) :: {:ok, data :: map} | {:error, reason :: any}
   def api(ifsc) do
     case api_memoized(ifsc) do
