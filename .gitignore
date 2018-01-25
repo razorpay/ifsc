@@ -15,3 +15,15 @@ Gemfile.lock
 .yardoc
 Gemfile.lock
 InstalledFiles
+
+# Elixir
+
+/_build/
+/cover/
+/deps/
+/doc/
+/.fetch
+erl_crash.dump
+*.ez
+/priv/ifsc-data/
+mix.lock

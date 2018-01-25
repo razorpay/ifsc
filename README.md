@@ -174,6 +174,61 @@ code = Razorpay::IFSC::IFSC.new '...'; code.get
 Razorpay::IFSC::IFSC.find '...'
 code = Razorpay::IFSC::IFSC.new '...'; code.get
 ```
+### Elixir
+
+[![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg?style=flat)](https://hex.pm/packages/ifsc)
+
+Documentation: [https://hexdocs.pm/ifsc](https://hexdocs.pm/ifsc)
+
+Online validation
+
+```elixir
+iex> IFSC.get("KKBK0000261")
+{:ok,
+ %Razorpay.IFSC{
+   address: "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,",
+   bank: "Kotak Mahindra Bank",
+   bank_code: "KKBK",
+   branch: "GURGAON",
+   city: "GURGAON",
+   contact: "4131000",
+   district: "GURGAON",
+   ifsc: "KKBK0000261",
+   rtgs: true,
+   state: "HARYANA"
+ }}
+
+iex> IFSC.get("foobar")
+{:error, :invalid_ifsc}
+```
+
+Offline validation
+
+```elixir
+iex> IFSC.validate("KKBK0000261")
+{:ok,
+ %Razorpay.IFSC{
+   address: nil,
+   bank: "Kotak Mahindra Bank",
+   bank_code: "KKBK",
+   branch: nil,
+   city: nil,
+   contact: nil,
+   district: nil,
+   ifsc: "KKBK0000261",
+   rtgs: nil,
+   state: nil
+ }}
+
+iex> IFSC.validate("foobar")
+{:error, :invalid_format}
+
+iex> IFSC.validate("AAAA0000000")
+{:error, :invalid_bank_code}
+
+iex(> IFSC.validate("HDFC0000000")
+{:error, :invalid_branch_code}
+```
 
 ### Code Notes
 
@@ -181,7 +236,7 @@ Both the packages ship with a 300kb JSON file, that
 includes the entire list of IFSC codes, in a compressed,
 but human-readable format.
 
-The Bank Code and Names list is mantained manually, but verified
+The Bank Code and Names list is maintained manually, but verified
 with tests to be accurate as per the latest RBI publications. This
 lets us add older Bank codes to the name list, without worrying
 about them getting deleted in newer builds.

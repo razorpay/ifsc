@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://ifsc.razorpay.com/KKBK0000261"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"BRANCH\":\"GURGAON\",\"ADDRESS\":\"JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,\",\"CONTACT\":\"4131000\",\"CITY\":\"GURGAON\",\"DISTRICT\":\"GURGAON\",\"STATE\":\"HARYANA\",\"RTGS\":true,\"BANK\":\"Kotak Mahindra Bank\",\"BANKCODE\":\"KKBK\",\"IFSC\":\"KKBK0000261\"}",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Security-Policy": "default-src 'self' razorpay.com; font-src 'self' fonts.gstatic.com; img-src cdn.razorpay.com razorpay.com; object-src 'none'; script-src 'none'; style-src 'self' 'unsafe-inline' fonts.googleapis.com",
+        "Content-Type": "application/json",
+        "Date": "Wed, 24 Jan 2018 09:42:24 GMT",
+        "Server": "thin",
+        "Strict-Transport-Security": "max-age=630720000; includeSubdomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Frame-Options": "DENY",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-Xss-Protection": "1; mode=block",
+        "Content-Length": "252",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
