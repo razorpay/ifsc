@@ -26,3 +26,4 @@ InstalledFiles
 erl_crash.dump
 *.ez
 /priv/ifsc-data/
+mix.lock
