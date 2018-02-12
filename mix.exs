@@ -63,13 +63,14 @@ defmodule IFSC.Mixfile do
       {:poison, "~> 3.1"},
       {:httpoison, "~> 0.13"},
       {:memoize, "~> 1.2"},
-      {:exvcr, "~> 0.8", only: :test},
+      {:exvcr, "~> 0.10", only: :test},
       {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
 
   defp aliases do
     [
+      "test": ["ifsc.copy_json", "test"],
       "hex.publish": ["ifsc.copy_json", "hex.publish"],
     ]
   end
