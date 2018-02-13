@@ -60,6 +60,9 @@ elixir:
   box: elixir
   steps:
     - script:
+      name: install hex
+      code: mix local.hex --force
+    - script:
       name: get dependencies
       code: mix deps.get
     - script:
