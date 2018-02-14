@@ -63,6 +63,9 @@ elixir:
       name: install hex
       code: mix local.hex --force
     - script:
+      name: install rebar3
+      code: mix local.rebar --force
+    - script:
       name: get dependencies
       code: mix deps.get
     - script:
