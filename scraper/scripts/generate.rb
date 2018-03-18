@@ -21,9 +21,6 @@ export_csv(data)
 log "Exporting YAML"
 export_yml(hash)
 
-log "Exporting JSON"
-export_json(hash)
-
 log "Exporting YAML List"
 export_yml_list(ifsc_codes_list)
 
