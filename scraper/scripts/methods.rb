@@ -171,10 +171,6 @@ def export_marshal(data)
   File.open("data/IFSC.marshal", 'w') { |f| Marshal.dump(data, f) }
 end
 
-def export_json(hash)
-  File.open("data/IFSC.json", 'w') { |f| f.write JSON.pretty_generate(hash) }
-end
-
 def export_sublet_json(hash)
   FileUtils.cp('../src/sublet.json', 'data/sublet.json')
 end
@@ -298,7 +294,6 @@ def export_to_code_json(list, ifsc_hash)
         branch_code
       end
     end
-    banks_hash[bank] = make_ranges banks_hash[bank]
   end
 
   File.open('../../src/IFSC.json', 'w') do |file|
