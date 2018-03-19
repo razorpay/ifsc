@@ -10,6 +10,7 @@ class Bank
     const ABEX = 'ABEX';
     const ABHY = 'ABHY';
     const ABNA = 'ABNA';
+    const ABPB = 'ABPB';
     const ABSB = 'ABSB';
     const ABUX = 'ABUX';
     const ACAX = 'ACAX';
@@ -1032,6 +1033,7 @@ class Bank
     const SIBL = 'SIBL';
     const SIBX = 'SIBX';
     const SICX = 'SICX';
+    const SIDB = 'SIDB';
     const SIDC = 'SIDC';
     const SIDX = 'SIDX';
     const SIGX = 'SIGX';
