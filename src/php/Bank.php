@@ -608,6 +608,7 @@ class Bank
     const KRIX = 'KRIX';
     const KRMX = 'KRMX';
     const KRNX = 'KRNX';
+    const KRTH = 'KRTH';
     const KRTX = 'KRTX';
     const KSBX = 'KSBX';
     const KSCB = 'KSCB';
@@ -619,6 +620,7 @@ class Bank
     const KTBX = 'KTBX';
     const KTCX = 'KTCX';
     const KTDX = 'KTDX';
+    const KUBX = 'KUBX';
     const KUCB = 'KUCB';
     const KUCX = 'KUCX';
     const KUKX = 'KUKX';
