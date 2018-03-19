@@ -10,6 +10,7 @@ class Bank
     const ABEX = 'ABEX';
     const ABHY = 'ABHY';
     const ABNA = 'ABNA';
+    const ABPB = 'ABPB';
     const ABSB = 'ABSB';
     const ABUX = 'ABUX';
     const ACAX = 'ACAX';
@@ -608,6 +609,7 @@ class Bank
     const KRIX = 'KRIX';
     const KRMX = 'KRMX';
     const KRNX = 'KRNX';
+    const KRTH = 'KRTH';
     const KRTX = 'KRTX';
     const KSBX = 'KSBX';
     const KSCB = 'KSCB';
@@ -619,6 +621,7 @@ class Bank
     const KTBX = 'KTBX';
     const KTCX = 'KTCX';
     const KTDX = 'KTDX';
+    const KUBX = 'KUBX';
     const KUCB = 'KUCB';
     const KUCX = 'KUCX';
     const KUKX = 'KUKX';
@@ -1030,6 +1033,7 @@ class Bank
     const SIBL = 'SIBL';
     const SIBX = 'SIBX';
     const SICX = 'SICX';
+    const SIDB = 'SIDB';
     const SIDC = 'SIDC';
     const SIDX = 'SIDX';
     const SIGX = 'SIGX';
