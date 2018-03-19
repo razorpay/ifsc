@@ -79,9 +79,6 @@ describe Razorpay::IFSC::IFSC do
         expect(described_class.valid?('KKBK0000261')).to eq true
         expect(described_class.valid?('HDFC0002854')).to eq true
         expect(described_class.valid?('KARB0000001')).to eq true
-      end
-
-      it 'should validate range branch codes' do
         expect(described_class.valid?('DLXB0000097')).to eq true
       end
 

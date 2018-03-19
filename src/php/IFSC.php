@@ -95,23 +95,6 @@ class IFSC
             return true;
         }
 
-        return static::lookupRanges($list, $branchCode);
-    }
-
-    protected static function lookupRanges(array $list, $branchCode)
-    {
-        foreach ($list as $item) {
-            if (!is_array($item)) {
-                continue;
-            }
-
-            assert(count($item) === 2);
-
-            if ($branchCode  >= $item[0] and $branchCode <= $item[1]) {
-                return true;
-            }
-        }
-
         return false;
     }
 

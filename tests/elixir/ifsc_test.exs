@@ -39,9 +39,6 @@ defmodule IFSCTest do
       assert {:ok, %IFSC{}} = IFSC.validate("KKBK0000261")
       assert {:ok, %IFSC{}} = IFSC.validate("HDFC0002854")
       assert {:ok, %IFSC{}} = IFSC.validate("KARB0000001")
-    end
-
-    test "should validate range branch codes" do
       assert {:ok, %IFSC{}} = IFSC.validate("DLXB0000097")
     end
 
