@@ -215,37 +215,6 @@ def export_json_by_banks(list, ifsc_hash)
   end
 end
 
-def make_ranges(list)
-  ranges = []
-  range_index = index = 0
-  while index < list.size
-    item = list[index]
-    ranges[range_index] = [item] if ranges[range_index].nil?
-
-    if item.is_a? String
-      ranges[range_index] = item
-      index+=1
-      range_index+=1
-      next
-    end
-
-    unless list[index + 1].nil?
-      if list[index].is_a? Integer and list[index] + 1 != list[index + 1]
-        if ranges[range_index] != [item]
-          ranges[range_index] << item
-        end
-        range_index+=1
-      end
-    else
-      if ranges[range_index] != [item]
-        ranges[range_index] << item
-      end
-    end
-    index+=1
-  end
-  #return ranges
-  ranges.map { |x| x.size==1 ? x[0] : x }
-end
 
 def parse_ifsc_rtgs(data_ifsc, data_rtgs)
   ifsc = Hash.new

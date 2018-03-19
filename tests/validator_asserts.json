@@ -2,9 +2,7 @@
 	"testBasicValidator": {
 		"KKBK0000261": true,
 		"HDFC0002854": true,
-		"KARB0000001": true
-	},
-	"testValidateInsideRange": {
+		"KARB0000001": true,
 		"DLXB0000097": true
 	},
 	"testValidateStringLookup": {
