@@ -18,7 +18,7 @@ Add `ifsc` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:ifsc, "~> 0.1.0"}
+    {:ifsc, "~> 1.1.0"}
   ]
 end
 ```
