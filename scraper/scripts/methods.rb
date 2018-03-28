@@ -256,7 +256,7 @@ def export_to_code_json(list, ifsc_hash)
   banks.each do |bank|
     banks_hash[bank] = find_bank_branches(bank, list).map do |code|
       # this is to drop lots of zeroes
-      branch_code = code[-6,6]
+      branch_code = code.strip[-6,6]
       if branch_code.match(/^(\d)+$/)
         branch_code.to_i
       else
