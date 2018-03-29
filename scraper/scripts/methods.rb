@@ -269,9 +269,6 @@ def export_to_code_json(list, ifsc_hash)
   File.open('../../src/IFSC.json', 'w') do |file|
     file.puts banks_hash.to_json
   end
-  File.open('data/IFSC.json', 'w') do |file|
-    file.puts banks_hash.to_json
-  end
 end
 
 def log(msg)
