@@ -221,10 +221,10 @@ def parse_ifsc_rtgs(data_ifsc, data_rtgs)
   rtgs = Hash.new
   hash = Hash.new
 
-  data_ifsc.each { |row| ifsc[row['IFSC']] = row }
+  data_ifsc.each { |row| ifsc[row['IFSC'].strip] = row }
   ifsc_keys = ifsc.keys
 
-  data_rtgs.each { |row| rtgs[row['IFSC']] = row }
+  data_rtgs.each { |row| rtgs[row['IFSC'].strip] = row }
   rtgs_keys = rtgs.keys
 
   data = []
@@ -232,6 +232,7 @@ def parse_ifsc_rtgs(data_ifsc, data_rtgs)
   rtgs.each do |key, value|
     if not ifsc_keys.include? key
       # already RTGS = true will be there in value
+      value['IFSC'] = value['IFSC'].strip
       data.push(value)
     end
   end
