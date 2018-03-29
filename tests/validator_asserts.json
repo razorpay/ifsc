@@ -620,9 +620,9 @@
 		"SBIN0071237": true
 	},
 	"testLookupsWithExtraSpaces": {
-		"ALLA0010163": true,
-		"ALLA0010471": true,
-		"ALLA0010522": true,
-		"ALLA0000893": true
+		"ALLA0010163": false,
+		"ALLA0010471": false,
+		"ALLA0010522": false,
+		"ALLA0000893": false
 	}
 }

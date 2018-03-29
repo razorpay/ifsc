@@ -241,6 +241,7 @@ def parse_ifsc_rtgs(data_ifsc, data_rtgs)
     if rtgs_keys.include? key
       value['RTGS'] = true
     end
+    value['IFSC'] = value['IFSC'].strip
     data.push(value)
   end
 
