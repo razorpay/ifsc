@@ -106,7 +106,7 @@ def parse_rtgs
     begin
       x = data_to_insert.transpose.to_h
       # IFSC values are in smaller case
-      x["IFSC"] = x["IFSC"].upcase
+      x["IFSC"] = x["IFSC"].upcase.strip
       # RTGS Flag
       x["RTGS"] = true
       data.push x
@@ -221,10 +221,10 @@ def parse_ifsc_rtgs(data_ifsc, data_rtgs)
   rtgs = Hash.new
   hash = Hash.new
 
-  data_ifsc.each { |row| ifsc[row['IFSC'].strip] = row }
+  data_ifsc.each { |row| ifsc[row['IFSC']] = row }
   ifsc_keys = ifsc.keys
 
-  data_rtgs.each { |row| rtgs[row['IFSC'].strip] = row }
+  data_rtgs.each { |row| rtgs[row['IFSC']] = row }
   rtgs_keys = rtgs.keys
 
   data = []
@@ -232,7 +232,6 @@ def parse_ifsc_rtgs(data_ifsc, data_rtgs)
   rtgs.each do |key, value|
     if not ifsc_keys.include? key
       # already RTGS = true will be there in value
-      value['IFSC'] = value['IFSC'].strip
       data.push(value)
     end
   end
@@ -268,6 +267,9 @@ def export_to_code_json(list, ifsc_hash)
   end
 
   File.open('../../src/IFSC.json', 'w') do |file|
+    file.puts banks_hash.to_json
+  end
+  File.open('data/IFSC.json', 'w') do |file|
     file.puts banks_hash.to_json
   end
 end
