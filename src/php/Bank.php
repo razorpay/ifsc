@@ -366,6 +366,7 @@ class Bank
     const GKNX = 'GKNX';
     const GMBX = 'GMBX';
     const GMCX = 'GMCX';
+    const GMUX = 'GMUX';
     const GNCX = 'GNCX';
     const GNSX = 'GNSX';
     const GODX = 'GODX';
