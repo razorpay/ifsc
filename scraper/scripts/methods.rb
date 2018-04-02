@@ -106,7 +106,7 @@ def parse_rtgs
     begin
       x = data_to_insert.transpose.to_h
       # IFSC values are in smaller case
-      x["IFSC"] = x["IFSC"].upcase.strip
+      x["IFSC"] = x["IFSC"].upcase.gsub!(/[^0-9A-Za-z]/, '')
       # RTGS Flag
       x["RTGS"] = true
       data.push x
@@ -241,7 +241,7 @@ def parse_ifsc_rtgs(data_ifsc, data_rtgs)
     if rtgs_keys.include? key
       value['RTGS'] = true
     end
-    value['IFSC'] = value['IFSC'].strip
+    value['IFSC'] = value['IFSC'].gsub!(/[^0-9A-Za-z]/, '')
     data.push(value)
   end
 
