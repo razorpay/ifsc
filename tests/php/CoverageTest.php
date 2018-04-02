@@ -77,4 +77,29 @@ class CoverageTest extends TestCase
         }
     }
 
+    public function testValidateJsonFormat()
+    {
+        // Move this to setUp if another tests uses this
+        $lists = json_decode(file_get_contents($this->root . '/src/IFSC.json'), true);
+
+        $failures = [];
+
+        foreach ($lists as $bankCode => $list) {
+            foreach ($list as $partialCode) {
+                if (is_string($partialCode) and (strlen(trim($partialCode)) !== 6))
+                {
+                    $failures[] = [$bankCode, $partialCode];
+                }
+            }
+        }
+
+        if(count($failures) > 0)
+        {
+            foreach ($failures as $failure) {
+                echo "{$failure[0]}: {$failure[1]}\n";
+            }
+        }
+        $this->assertCount(0, $failures);
+    }
+
 }

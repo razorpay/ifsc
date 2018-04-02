@@ -316,6 +316,7 @@ class Bank
     const DUCX = 'DUCX';
     const DUMX = 'DUMX';
     const DUNX = 'DUNX';
+    const DURG = 'DURG';
     const DVDX = 'DVDX';
     const DYPX = 'DYPX';
     const EBIL = 'EBIL';
@@ -365,6 +366,7 @@ class Bank
     const GKNX = 'GKNX';
     const GMBX = 'GMBX';
     const GMCX = 'GMCX';
+    const GMUX = 'GMUX';
     const GNCX = 'GNCX';
     const GNSX = 'GNSX';
     const GODX = 'GODX';
