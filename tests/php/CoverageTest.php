@@ -99,6 +99,7 @@ class CoverageTest extends TestCase
                 echo "{$failure[0]}: {$failure[1]}\n";
             }
         }
+        $this->assertCount(0, $failures);
     }
 
 }
