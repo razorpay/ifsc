@@ -119,6 +119,7 @@ class Bank
     const BCCX = 'BCCX';
     const BCEX = 'BCEX';
     const BCEY = 'BCEY';
+    const BCOX = 'BCOX';
     const BCUB = 'BCUB';
     const BCUX = 'BCUX';
     const BDBL = 'BDBL';
@@ -473,6 +474,7 @@ class Bank
     const JIKX = 'JIKX';
     const JIMX = 'JIMX';
     const JINX = 'JINX';
+    const JIOP = 'JIOP';
     const JIOX = 'JIOX';
     const JIRX = 'JIRX';
     const JISX = 'JISX';
@@ -769,6 +771,7 @@ class Bank
     const NCBL = 'NCBL';
     const NCBX = 'NCBX';
     const NCCX = 'NCCX';
+    const NCOX = 'NCOX';
     const NCUX = 'NCUX';
     const NDCX = 'NDCX';
     const NDDX = 'NDDX';
