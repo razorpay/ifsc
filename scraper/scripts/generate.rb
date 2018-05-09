@@ -1,17 +1,17 @@
 require './methods'
 
-rtgs_data = parse_rtgs()
+# rtgs_data = parse_rtgs()
 ifsc_data = parse_sheets()
 
 # Using IFSC data and marking rtgs=true for the applicable ifsc's
 
-data, hash = parse_ifsc_rtgs(ifsc_data, rtgs_data)
+data, hash = parse_ifsc_rtgs(ifsc_data, {})
 
-if File.exists? 'sheets/SUBLET.xlsx'
-	sublet_data = parse_sublet_sheet()
-	log "Exporting Sublet JSON"
-	export_sublet_json(sublet_data)
-end
+# if File.exists? 'sheets/SUBLET.xlsx'
+# 	sublet_data = parse_sublet_sheet()
+# 	log "Exporting Sublet JSON"
+# 	export_sublet_json(sublet_data)
+# end
 
 ifsc_codes_list = hash.keys
 
