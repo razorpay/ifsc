@@ -23,3 +23,7 @@ mix.lock
 Rakefile
 *.php
 wercker.yml
+_build
+doc
+deps
+*.tar
