@@ -951,6 +951,7 @@ class Bank
     const ROCX = 'ROCX';
     const ROHX = 'ROHX';
     const RPUX = 'RPUX';
+    const RRBP = 'RRBP';
     const RRSX = 'RRSX';
     const RSBL = 'RSBL';
     const RSBX = 'RSBX';
