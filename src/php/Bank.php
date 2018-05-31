@@ -340,6 +340,7 @@ class Bank
     const FEKX = 'FEKX';
     const FGCB = 'FGCB';
     const FINO = 'FINO';
+    const FINF = 'FINF';
     const FINX = 'FINX';
     const FIRN = 'FIRN';
     const FIRX = 'FIRX';
@@ -1175,6 +1176,7 @@ class Bank
     const TGUX = 'TGUX';
     const THCX = 'THCX';
     const THOX = 'THOX';
+    const THRS = 'THRS';
     const THRX = 'THRX';
     const THWX = 'THWX';
     const TIDX = 'TIDX';
