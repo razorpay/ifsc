@@ -26,7 +26,7 @@ rubygem:
     - script:
       name: Run tests
       cwd: src/ruby
-      code: rake
+      code: bundle exec rake
 # PHP package
 php:
   box: php

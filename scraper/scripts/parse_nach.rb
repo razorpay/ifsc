@@ -29,6 +29,10 @@ IGNORED_SUBLETS = [
   'UJVN0000001',
   # PKGB and PKGX are the same
   'PKGB0000001',
+  # IPOS and IPPB are the same
+  'IPOS0000001',
+  # FSFB and FINF are the same
+  'FSFB0000001',
 ]
 
 doc.css('table')[0].css('tr').each do |row|
