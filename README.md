@@ -4,7 +4,7 @@ This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
 [ifsc.razorpay.com](https://ifsc.razorpay.com).
 
-[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master "wercker status")](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504)
+[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.1.5.svg)](https://microbadger.com/images/razorpay/ifsc:1.1.5) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.1.5.svg)](https://microbadger.com/images/razorpay/ifsc:1.1.5) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Dataset
 
@@ -29,13 +29,13 @@ with the complete dataset as well.
 The following files will be generated, with approx file
 sizes given as well:
 
-|File|Size|
-|----|----------|
-| IFSC.csv| 19M |
-| IFSC.yml| 30M |
-| IFSC-list.json| 1.8M |
-| IFSC-list.yml| 1.8M |
-| by-bank.tar.gz| 6.3M |
+| File           | Size |
+| -------------- | ---- |
+| IFSC.csv       | 19M  |
+| IFSC.yml       | 30M  |
+| IFSC-list.json | 1.8M |
+| IFSC-list.yml  | 1.8M |
+| by-bank.tar.gz | 6.3M |
 
 The files with the `-list` suffix only contain the list of IFSC codes.
 This can be used for validation purposes.
@@ -174,6 +174,7 @@ code = Razorpay::IFSC::IFSC.new '...'; code.get
 Razorpay::IFSC::IFSC.find '...'
 code = Razorpay::IFSC::IFSC.new '...'; code.get
 ```
+
 ### Elixir
 
 [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg?style=flat)](https://hex.pm/packages/ifsc)
@@ -240,6 +241,10 @@ The Bank Code and Names list is maintained manually, but verified
 with tests to be accurate as per the latest RBI publications. This
 lets us add older Bank codes to the name list, without worrying
 about them getting deleted in newer builds.
+
+## API Development
+
+The IFSC API is maintained in a separate repository at <https://github.com/razorpay/ifsc-api>.
 
 ## License
 
