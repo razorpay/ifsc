@@ -769,6 +769,7 @@ class Bank
     const NBAD = 'NBAD';
     const NBBX = 'NBBX';
     const NBCX = 'NBCX';
+    const NBRD = 'NBRD';
     const NCBL = 'NCBL';
     const NCBX = 'NCBX';
     const NCCX = 'NCCX';
