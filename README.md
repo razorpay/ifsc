@@ -6,7 +6,7 @@ You can find more details about the entire release at
 
 [![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.1.6.svg)](https://microbadger.com/images/razorpay/ifsc:1.1.6) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.1.6.svg)](https://microbadger.com/images/razorpay/ifsc:1.1.6) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc)
+[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.1.6.svg)](https://microbadger.com/images/razorpay/ifsc:1.1.6) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg?style=flat)](https://hex.pm/packages/ifsc)
 
 ## Dataset
 
@@ -14,41 +14,21 @@ If you are just looking for the dataset, go to
 the [releases][releases] section and download
 the latest release.
 
-The code is just the downloader portion that scrapes
-the entire dataset from the RBI. The list of Excel
-files can be found [here][rbi]. There is also a
-[combined Excel file][combined] link around on the internet
-but that file doesn't seem to be updated.
-
-You will need ruby and wget to run the script, which
-is just `cd scripts && sh bootstrap.sh`. This will scrape the list page,
-download all the excel files in the `sheets/` directory,
-parse them and generate datasets in the `scripts/data/` directory.
-
 The latest [`build` pipeline][buildlist] on Wercker should result in a container
 with the complete dataset as well.
 
-The following files will be generated, with approx file
-sizes given as well:
-
-| File           | Size |
-| -------------- | ---- |
-| IFSC.csv       | 19M  |
-| IFSC.yml       | 30M  |
-| IFSC-list.json | 1.8M |
-| IFSC-list.yml  | 1.8M |
-| by-bank.tar.gz | 6.3M |
-
-The files with the `-list` suffix only contain the list of IFSC codes.
-This can be used for validation purposes.
-
-The `data/by-bank` directory holds multiple JSON files corresponding
-to each bank, for faster lookups.
-
 ## Installation
 
-`gem install ifsc` - Ruby
-`composer require razorpay/ifsc` - PHP
+## Ruby
+
+`gem install ifsc`
+
+## PHP
+
+`composer require razorpay/ifsc`
+
+## Node.js
+
 `npm install ifsc`
 
 ## API Documentation
@@ -179,8 +159,6 @@ code = Razorpay::IFSC::IFSC.new '...'; code.get
 
 ### Elixir
 
-[![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg?style=flat)](https://hex.pm/packages/ifsc)
-
 Documentation: [https://hexdocs.pm/ifsc](https://hexdocs.pm/ifsc)
 
 Online validation
@@ -257,4 +235,4 @@ should be under public domain.
 [rbi]: https://goo.gl/T9188H "goo.gl link because RBI doesn't allow you to link to their website"
 [combined]: https://goo.gl/UryY8j "goo.gl link because RBI doesn't allow you to link to their website"
 [releases]: https://github.com/razorpay/ifsc/releases
-[buildlist]: https://app.wercker.com/captn3m0/ifsc/runs?view=runs&q=pipeline%3Abuild
+[buildlist]: https://app.wercker.com/razorpay/ifsc/runs?view=runs&q=pipeline%3Abuild
