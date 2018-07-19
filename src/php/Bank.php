@@ -527,6 +527,7 @@ class Bank
     const JSCX = 'JSCX';
     const JSDX = 'JSDX';
     const JSEX = 'JSEX';
+    const JSFB = 'JSFB';
     const JSHX = 'JSHX';
     const JSKX = 'JSKX';
     const JSMX = 'JSMX';
