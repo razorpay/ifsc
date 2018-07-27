@@ -335,6 +335,7 @@ class Bank
     const EWCX = 'EWCX';
     const FCBX = 'FCBX';
     const FCCX = 'FCCX';
+    const FCOX = 'FCOX';
     const FDFX = 'FDFX';
     const FDRL = 'FDRL';
     const FEKX = 'FEKX';
@@ -812,6 +813,7 @@ class Bank
     const NPCX = 'NPCX';
     const NPKX = 'NPKX';
     const NRDX = 'NRDX';
+    const NSBB = 'NSBB';
     const NSBX = 'NSBX';
     const NSCX = 'NSCX';
     const NSGX = 'NSGX';
