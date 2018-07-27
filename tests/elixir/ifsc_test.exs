@@ -16,8 +16,9 @@ defmodule IFSCTest do
     rtgs: true,
   }
 
-  setup_all do
+  setup do
     ExVCR.Config.cassette_library_dir("tests/fixture/exvcr")
+    :ok
   end
 
   describe "#get" do

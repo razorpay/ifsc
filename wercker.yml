@@ -55,6 +55,22 @@ node:
     - script:
       name: run tests
       code: npm test
+# Elixir package
+elixir:
+  box: elixir
+  steps:
+    - script:
+      name: install hex
+      code: mix local.hex --force
+    - script:
+      name: install rebar3
+      code: mix local.rebar --force
+    - script:
+      name: get dependencies
+      code: mix deps.get
+    - script:
+      name: run tests
+      code: mix test
 release:
   box: php
   steps:

@@ -3,6 +3,8 @@ defmodule Mix.Tasks.Ifsc.CopyJson do
 
 
   def run(_) do
+  	IO.puts("Creating priv/ifsc-data in")
+  	IO.puts(File.cwd!())
     File.mkdir_p!("priv/ifsc-data")
     Enum.map(
       ~w(banknames.json IFSC.json sublet.json),
