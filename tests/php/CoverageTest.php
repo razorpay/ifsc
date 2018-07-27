@@ -16,7 +16,11 @@ class CoverageTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $contents = file_get_contents($this->root . '/scraper/scripts/data/IFSC-list.json');
+        $contents = "[]";
+        $file = $this->root . '/scraper/scripts/data/IFSC-list.json';
+        if (file_exists($file)) {
+            $contents = file_get_contents($file);
+        }
         $this->bankCodes = array_values(array_unique(array_map(function($ifsc) {
             return substr($ifsc, 0, 4);
         }, json_decode($contents, true))));
@@ -59,6 +63,13 @@ class CoverageTest extends TestCase
             $this->assertEquals($code2, $code, "Constant $code should equal its value: $code2");
 
             $this->assertNotNull(IFSC::getBankName($code), "Name missing for $code");
+        }
+    }
+
+    public function testSubletsAgainstConstants()
+    {
+        foreach ($this->sublets as $ifsc => $bankCode) {
+            $this->assertEquals($bankCode, constant("Razorpay\IFSC\Bank::$bankCode"));
         }
     }
 
