@@ -1,20 +1,7 @@
 var fs = require("fs");
 var data = require("../IFSC");
-
-var csv=require('fast-csv');
-var main=[];
-var stream=fs.createReadStream("IFSC.csv");
-
-csv
-    .fromStream(stream, {headers : true})
-    .on("data", function(data){
-        main[data.IFSC]=data
-    })
-    .on("end", function(){
-        console.log("done");
-    });
-
-
+var https=require('https');
+var request=require('request');
 
 
 var _validate = function(code) {
@@ -65,7 +52,32 @@ var lookupString = function(list, code) {
 };
 
 var _fetchDetails = function(code) {
-    return(main[code]);
+
+
+    var k='https://ifsc.razorpay.com/'+code;
+var ret='';
+if(code==='')
+{
+    ret="EMPTY ";
+}
+else {
+    var req = https.get(k, function (res) {
+        var data = '';
+
+        res.on('data', function (chunk) {
+            data += chunk;
+        });
+
+        res.on('end', function () {
+
+            var response = JSON.parse(data);
+            console.log(response);
+            ret = response;
+        });
+
+    });
+}
+return ret
 };
 
 module.exports = {
