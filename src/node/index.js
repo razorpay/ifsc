@@ -1,86 +1,76 @@
-var fs = require("fs");
-var data = require("../IFSC");
-var https=require('https');
-var request=require('request');
+const fs = require('fs');
+const data = require('../IFSC');
+const https = require('https');
+const request = require('request');
 
+const BASE_URL = 'https://ifsc.razorpay.com/';
 
-var _validate = function(code) {
-    if (code.length !== 11) {
-        return false;
-    }
-
-    if (code[4] !== "0") {
-        return false;
-    }
-
-    var bankCode = code.slice(0, 4).toUpperCase();
-    var branchCode = code.slice(5).toUpperCase();
-
-    if (!data.hasOwnProperty(bankCode)) {
-        return false;
-    }
-
-    var list = data[bankCode];
-
-    if (isInteger(branchCode)) {
-        return lookupNumeric(list, branchCode);
-    } else {
-        return lookupString(list, branchCode);
-    }
-};
-
-var isInteger = function(code) {
-    if (isNaN(parseInt(code, 10))) {
-        return false;
-    }
-
-    return true;
-};
-
-var lookupNumeric = function(list, code) {
-    code = parseInt(code, 10);
-
-    if (list.indexOf(code) > -1) {
-        return true;
-    }
-
+let _validate = function(code) {
+  if (code.length !== 11) {
     return false;
+  }
+
+  if (code[4] !== '0') {
+    return false;
+  }
+
+  let bankCode = code.slice(0, 4).toUpperCase();
+  let branchCode = code.slice(5).toUpperCase();
+
+  if (!data.hasOwnProperty(bankCode)) {
+    return false;
+  }
+
+  let list = data[bankCode];
+
+  if (isInteger(branchCode)) {
+    return lookupNumeric(list, branchCode);
+  } else {
+    return lookupString(list, branchCode);
+  }
 };
 
-var lookupString = function(list, code) {
-    return list.indexOf(code) !== -1;
+let isInteger = function(code) {
+  if (isNaN(parseInt(code, 10))) {
+    return false;
+  }
+
+  return true;
 };
 
-var _fetchDetails = function(code) {
+let lookupNumeric = function(list, code) {
+  code = parseInt(code, 10);
 
+  if (list.indexOf(code) > -1) {
+    return true;
+  }
 
-    var k='https://ifsc.razorpay.com/'+code;
-var ret='';
-if(code==='')
-{
-    ret="EMPTY ";
-}
-else {
-    var req = https.get(k, function (res) {
-        var data = '';
+  return false;
+};
 
-        res.on('data', function (chunk) {
-            data += chunk;
-        });
+let lookupString = function(list, code) {
+  return list.indexOf(code) !== -1;
+};
 
-        res.on('end', function () {
+let _fetchDetails = function(code, cb) {
+  let url = BASE_URL + code;
 
-            var response = JSON.parse(data);
-            console.log(response);
-            ret = response;
-        });
-
-    });
-}
-return ret
+  return new Promise(function(resolve, reject) {
+    if (!_validate(code)) {
+      reject('Invalid IFSC Code');
+    } else {
+      request.get({ url: url, json: true }, function(err, res, data) {
+        if (err) {
+          reject('API Call failed: ' + err.msg);
+        } else {
+          resolve(data);
+        }
+      });
+    }
+  });
 };
 
 module.exports = {
-    validate: _validate,
-    fetchDetails: _fetchDetails
+  validate: _validate,
+  fetchDetails: _fetchDetails,
 };
