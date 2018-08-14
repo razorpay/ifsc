@@ -52,8 +52,12 @@ let lookupString = function(list, code) {
   return list.indexOf(code) !== -1;
 };
 
+let _createUrl = function(code) {
+  return BASE_URL + code;
+};
+
 let _fetchDetails = function(code, cb) {
-  let url = BASE_URL + code;
+  let url = _createUrl(code);
 
   return new Promise(function(resolve, reject) {
     if (!_validate(code)) {

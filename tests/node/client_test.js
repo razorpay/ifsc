@@ -1,4 +1,4 @@
-const ifsc = require('./../../src/node/index');
+const ifsc = require('../../src/node');
 const assert = require('assert');
 
 ifsc
