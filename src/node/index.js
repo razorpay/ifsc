@@ -1,23 +1,27 @@
-var fs = require("fs");
-var data = require("./../IFSC.json");
+const fs = require('fs');
+const data = require('../IFSC');
+const https = require('https');
+const request = require('request');
 
-var _validate = function(code) {
+const BASE_URL = 'https://ifsc.razorpay.com/';
+
+let _validate = function(code) {
   if (code.length !== 11) {
     return false;
   }
 
-  if (code[4] !== "0") {
+  if (code[4] !== '0') {
     return false;
   }
 
-  var bankCode = code.slice(0, 4).toUpperCase();
-  var branchCode = code.slice(5).toUpperCase();
+  let bankCode = code.slice(0, 4).toUpperCase();
+  let branchCode = code.slice(5).toUpperCase();
 
   if (!data.hasOwnProperty(bankCode)) {
     return false;
   }
 
-  var list = data[bankCode];
+  let list = data[bankCode];
 
   if (isInteger(branchCode)) {
     return lookupNumeric(list, branchCode);
@@ -26,7 +30,7 @@ var _validate = function(code) {
   }
 };
 
-var isInteger = function(code) {
+let isInteger = function(code) {
   if (isNaN(parseInt(code, 10))) {
     return false;
   }
@@ -34,7 +38,7 @@ var isInteger = function(code) {
   return true;
 };
 
-var lookupNumeric = function(list, code) {
+let lookupNumeric = function(list, code) {
   code = parseInt(code, 10);
 
   if (list.indexOf(code) > -1) {
@@ -44,15 +48,33 @@ var lookupNumeric = function(list, code) {
   return false;
 };
 
-var lookupString = function(list, code) {
+let lookupString = function(list, code) {
   return list.indexOf(code) !== -1;
 };
 
-var _fetchDetails = function(code) {
-  throw Error("Not implemented yet");
+let _createUrl = function(code) {
+  return BASE_URL + code;
+};
+
+let _fetchDetails = function(code, cb) {
+  let url = _createUrl(code);
+
+  return new Promise(function(resolve, reject) {
+    if (!_validate(code)) {
+      reject('Invalid IFSC Code');
+    } else {
+      request.get({ url: url, json: true }, function(err, res, data) {
+        if (err) {
+          reject('API Call failed: ' + err.msg);
+        } else {
+          resolve(data);
+        }
+      });
+    }
+  });
 };
 
 module.exports = {
   validate: _validate,
-  fetchDetails: _fetchDetails
+  fetchDetails: _fetchDetails,
 };

@@ -1001,6 +1001,7 @@ class Bank
     const SBPX = 'SBPX';
     const SBSX = 'SBSX';
     const SBTR = 'SBTR';
+    const SBUJ = 'SBUJ';
     const SBUX = 'SBUX';
     const SCBL = 'SCBL';
     const SCBX = 'SCBX';
@@ -1174,6 +1175,7 @@ class Bank
     const TETX = 'TETX';
     const TFCX = 'TFCX';
     const TGBX = 'TGBX';
+    const TGCG = 'TGCG';
     const TGCX = 'TGCX';
     const TGDX = 'TGDX';
     const TGMB = 'TGMB';
@@ -1242,6 +1244,7 @@ class Bank
     const TTLX = 'TTLX';
     const TTUX = 'TTUX';
     const TUBX = 'TUBX';
+    const TUCL = 'TUCL';
     const TUCX = 'TUCX';
     const TUDX = 'TUDX';
     const TUMX = 'TUMX';
