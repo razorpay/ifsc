@@ -34,6 +34,7 @@ class Bank
     const AHMX = 'AHMX';
     const AHUX = 'AHUX';
     const AIRP = 'AIRP';
+    const AJHC = 'AJHC';
     const AJKB = 'AJKB';
     const AJMX = 'AJMX';
     const AJNX = 'AJNX';
@@ -168,6 +169,7 @@ class Bank
     const BNBX = 'BNBX';
     const BNCX = 'BNCX';
     const BNPA = 'BNPA';
+    const BNSB = 'BNSB';
     const BNSX = 'BNSX';
     const BODX = 'BODX';
     const BOFA = 'BOFA';
