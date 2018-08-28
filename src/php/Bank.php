@@ -168,6 +168,7 @@ class Bank
     const BNBX = 'BNBX';
     const BNCX = 'BNCX';
     const BNPA = 'BNPA';
+    const BNSB = 'BNSB';
     const BNSX = 'BNSX';
     const BODX = 'BODX';
     const BOFA = 'BOFA';
