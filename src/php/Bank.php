@@ -1014,6 +1014,7 @@ class Bank
     const SCDX = 'SCDX';
     const SCIX = 'SCIX';
     const SCNX = 'SCNX';
+    const SCOB = 'SCOB';
     const SCOX = 'SCOX';
     const SCPX = 'SCPX';
     const SCSX = 'SCSX';
