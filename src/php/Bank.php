@@ -1144,6 +1144,7 @@ class Bank
     const SVNX = 'SVNX';
     const SVOX = 'SVOX';
     const SVRX = 'SVRX';
+    const SVSH = 'SVSH';
     const SVSX = 'SVSX';
     const SWMX = 'SWMX';
     const SWSX = 'SWSX';
