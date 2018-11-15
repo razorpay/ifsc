@@ -632,6 +632,7 @@ class Bank
     const KTBX = 'KTBX';
     const KTCX = 'KTCX';
     const KTDX = 'KTDX';
+    const KTTX = 'KTTX';
     const KUBX = 'KUBX';
     const KUCB = 'KUCB';
     const KUCX = 'KUCX';
@@ -732,6 +733,7 @@ class Bank
     const MNCX = 'MNCX';
     const MNSX = 'MNSX';
     const MOGX = 'MOGX';
+    const MOUX = 'MOUX';
     const MPCX = 'MPCX';
     const MPDX = 'MPDX';
     const MPRX = 'MPRX';
@@ -776,6 +778,7 @@ class Bank
     const NBAD = 'NBAD';
     const NBBX = 'NBBX';
     const NBCX = 'NBCX';
+    const NBMX = 'NBMX';
     const NBRD = 'NBRD';
     const NCBL = 'NCBL';
     const NCBX = 'NCBX';
@@ -1244,6 +1247,7 @@ class Bank
     const TSMX = 'TSMX';
     const TSNX = 'TSNX';
     const TSPX = 'TSPX';
+    const TSSX = 'TSSX';
     const TSUX = 'TSUX';
     const TTBX = 'TTBX';
     const TTCB = 'TTCB';

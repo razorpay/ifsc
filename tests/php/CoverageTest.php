@@ -28,6 +28,8 @@ class CoverageTest extends TestCase
         $this->bankNamesList = json_decode(file_get_contents($this->root . '/src/banknames.json'), true);
 
         $this->sublets = json_decode(file_get_contents($this->root . '/src/sublet.json'), true);
+
+        $this->bankList = json_decode(file_get_contents($this->root . '/src/banks.json'), true);
     }
 
     public function testNames()
@@ -70,6 +72,16 @@ class CoverageTest extends TestCase
     {
         foreach ($this->sublets as $ifsc => $bankCode) {
             $this->assertEquals($bankCode, constant("Razorpay\IFSC\Bank::$bankCode"));
+        }
+    }
+
+    public function testConstantsAgainstCompleteBanksList()
+    {
+        foreach ($this->bankList as $code => $details)
+        {
+            $this->assertEquals($code, constant("Razorpay\IFSC\Bank::$code"));
+
+            $this->assertNotNull(IFSC::getBankName($code), "Name missing for $code");
         }
     }
 
