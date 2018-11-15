@@ -1168,6 +1168,7 @@ class Bank
     const TBUX = 'TBUX';
     const TCBX = 'TCBX';
     const TCCX = 'TCCX';
+    const TCHX = 'TCHX';
     const TCPX = 'TCPX';
     const TCUB = 'TCUB';
     const TCUX = 'TCUX';
