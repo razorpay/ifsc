@@ -1273,6 +1273,7 @@ module Razorpay
       UCDX = :UCDX
       UCUX = :UCUX
       UGBX = :UGBX
+      UICX = :UICX
       UJSX = :UJSX
       UJVN = :UJVN
       UKGX = :UKGX

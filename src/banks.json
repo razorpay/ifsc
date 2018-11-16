@@ -13243,6 +13243,17 @@
     "ach_debit": true,
     "nach_debit": true
   },
+  "UICX": {
+    "code": "UICX",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SUICB1",
+    "micr": "246856202",
+    "iin": "990289",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "UJSX": {
     "code": "UJSX",
     "type": "O-UCB",
