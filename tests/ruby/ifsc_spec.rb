@@ -1,4 +1,5 @@
 require 'ifsc'
+require 'bank'
 
 describe Razorpay::IFSC::IFSC do
   let(:mocked_response) do
@@ -106,5 +107,11 @@ describe Razorpay::IFSC::IFSC do
         end
       end
     end
+  end
+end
+
+describe Razorpay::IFSC::Bank do
+  it 'should define the relevant constants' do
+    expect(described_class::PUNB).to eq :PUNB
   end
 end

@@ -1168,6 +1168,7 @@ class Bank
     const TBUX = 'TBUX';
     const TCBX = 'TCBX';
     const TCCX = 'TCCX';
+    const TCHX = 'TCHX';
     const TCPX = 'TCPX';
     const TCUB = 'TCUB';
     const TCUX = 'TCUX';
@@ -1279,6 +1280,7 @@ class Bank
     const UCDX = 'UCDX';
     const UCUX = 'UCUX';
     const UGBX = 'UGBX';
+    const UICX = 'UICX';
     const UJSX = 'UJSX';
     const UJVN = 'UJVN';
     const UKGX = 'UKGX';
