@@ -829,6 +829,7 @@ class Bank
     const NSIX = 'NSIX';
     const NSJX = 'NSJX';
     const NSMX = 'NSMX';
+    const NSPB = 'NSPB';
     const NSPX = 'NSPX';
     const NSRX = 'NSRX';
     const NTBL = 'NTBL';

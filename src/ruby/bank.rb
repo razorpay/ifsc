@@ -823,6 +823,7 @@ module Razorpay
       NSIX = :NSIX
       NSJX = :NSJX
       NSMX = :NSMX
+      NSPB = :NSPB
       NSPX = :NSPX
       NSRX = :NSRX
       NTBL = :NTBL
