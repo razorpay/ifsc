@@ -63,11 +63,12 @@ def parse_sheets
     when '.xlsx'
       sheet = RubyXL::Parser.parse(file).worksheets[0]
       headings = sheet.sheet_data[0]
-      headings = (0..8).map {|e| headings[e].value}
+      max = headings.size
+      headings = (0...max).map {|e| headings[e].value}
       row_index = 0
       sheet.each do |row|
         row_index += 1
-        row = (0..8).map { |e| row[e] ? row[e].value : nil}
+        row = (0...max).map { |e| row[e] ? row[e].value : nil}
         next if row_index == 1
         next if row.compact.empty?
         data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
