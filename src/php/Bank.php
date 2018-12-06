@@ -785,6 +785,7 @@ class Bank
     const NCCX = 'NCCX';
     const NCOX = 'NCOX';
     const NCUX = 'NCUX';
+    const NDCB = 'NDCB';
     const NDCX = 'NDCX';
     const NDDX = 'NDDX';
     const NDGX = 'NDGX';
@@ -1096,6 +1097,7 @@ class Bank
     const SNKX = 'SNKX';
     const SNLX = 'SNLX';
     const SNPX = 'SNPX';
+    const SNSV = 'SNSV';
     const SNSX = 'SNSX';
     const SOBX = 'SOBX';
     const SOGE = 'SOGE';
