@@ -1,7 +1,8 @@
 {
   "name": "ifsc",
-  "version": "1.3.1",
-  "description": "This is part of the IFSC toolset released by Razorpay. You can find more details about the entire release at [ifsc.razorpay.com](https://ifsc.razorpay.com). Includes only a validation library as of now.",
+  "version": "1.3.2",
+  "description":
+    "This is part of the IFSC toolset released by Razorpay. You can find more details about the entire release at [ifsc.razorpay.com](https://ifsc.razorpay.com). Includes only a validation library as of now.",
   "main": "src/node/index.js",
   "directories": {
     "test": "tests"
@@ -11,7 +12,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node tests/node/validator_test.js && node tests/node/client_test.js"
+    "test":
+      "node tests/node/validator_test.js && node tests/node/client_test.js"
   },
   "repository": {
     "type": "git",
