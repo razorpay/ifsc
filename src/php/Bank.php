@@ -56,6 +56,7 @@ class Bank
     const AMMX = 'AMMX';
     const AMNX = 'AMNX';
     const AMRX = 'AMRX';
+    const AMSB = 'AMSB';
     const AMSX = 'AMSX';
     const ANBX = 'ANBX';
     const ANDB = 'ANDB';
@@ -583,6 +584,7 @@ class Bank
     const KESX = 'KESX';
     const KGBX = 'KGBX';
     const KGDX = 'KGDX';
+    const KGRB = 'KGRB';
     const KGSX = 'KGSX';
     const KHAX = 'KHAX';
     const KHCX = 'KHCX';
@@ -1297,6 +1299,7 @@ class Bank
     const UNSX = 'UNSX';
     const UOVB = 'UOVB';
     const UPCX = 'UPCX';
+    const URBN = 'URBN';
     const URCX = 'URCX';
     const URDX = 'URDX';
     const URMX = 'URMX';
@@ -1388,6 +1391,7 @@ class Bank
     const ZIMX = 'ZIMX';
     const ZISX = 'ZISX';
     const ZLLX = 'ZLLX';
+    const ZRNB = 'ZRNB';
     const ZMMX = 'ZMMX';
     const ZSAX = 'ZSAX';
     const ZSBL = 'ZSBL';
