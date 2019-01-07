@@ -53,6 +53,7 @@ module Razorpay
       AMMX = :AMMX
       AMNX = :AMNX
       AMRX = :AMRX
+      AMSB = :AMSB
       AMSX = :AMSX
       ANBX = :ANBX
       ANDB = :ANDB
@@ -580,6 +581,7 @@ module Razorpay
       KESX = :KESX
       KGBX = :KGBX
       KGDX = :KGDX
+      KGRB = :KGRB
       KGSX = :KGSX
       KHAX = :KHAX
       KHCX = :KHCX
@@ -1290,6 +1292,7 @@ module Razorpay
       UNSX = :UNSX
       UOVB = :UOVB
       UPCX = :UPCX
+      URBN = :URBN
       URCX = :URCX
       URDX = :URDX
       URMX = :URMX
@@ -1381,6 +1384,7 @@ module Razorpay
       ZIMX = :ZIMX
       ZISX = :ZISX
       ZLLX = :ZLLX
+      ZRNB = :ZRNB
       ZMMX = :ZMMX
       ZSAX = :ZSAX
       ZSBL = :ZSBL
