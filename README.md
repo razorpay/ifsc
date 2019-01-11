@@ -21,15 +21,43 @@ with the complete dataset as well.
 
 ## Ruby
 
-`gem install ifsc`
+Add this line to your application's Gemfile:
+
+```ruby
+gem "ifsc"
+```
+
+And then execute:
+
+```bash
+$ bundle
+```
+
+Or install it yourself as:
+
+```bash
+$ gem install ifsc
+```
+
+Inside of your Ruby program do:
+
+```ruby
+require "ifsc"
+```
+
+...to pull it in as a dependency.
 
 ## PHP
 
-`composer require razorpay/ifsc`
+`composer require php-http/curl-client razorpay/ifsc`
+
+The PHP package has a dependency on the virtual package `php-http/client-implementation` which requires you to install an adapter, but we do not care which one. That is an implementation detail in your application. You do not have to use the `php-http/curl-client` if you do not want to. You may use the `php-http/guzzle6-adapter`. Read more about the virtual packages, why this is a good idea and about the flexibility it brings at the [HTTPlug docs](http://docs.php-http.org/en/latest/httplug/users.html). You can find a list of suported providers on [packagist](https://packagist.org/providers/php-http/client-implementation).
+
+The minimum PHP version supported is 7.0
 
 ## Node.js
 
-`npm install ifsc`
+`$ npm install ifsc`
 
 ## API Documentation
 
