@@ -83,6 +83,7 @@ class Bank
     const ASBX = 'ASBX';
     const ASHX = 'ASHX';
     const ASKX = 'ASKX';
+    const ASNX = 'ASNX';
     const ASOX = 'ASOX';
     const ASSX = 'ASSX';
     const AUBL = 'AUBL';
