@@ -1414,4 +1414,32 @@ class Bank
     const ZSKX = 'ZSKX';
     const ZSLX = 'ZSLX';
     const ZSMX = 'ZSMX';
+
+    protected static $data = null;
+
+    public static function init()
+    {
+        if (!self::$data)
+        {
+            $contents = file_get_contents(__DIR__ . '/../banks.json');
+            self::$data = json_decode($contents, true);
+        }
+    }
+
+    public static function getDetails(string $bankCode) {
+        self::init();
+        $data = [];
+
+        if(array_key_exists($bankCode, self::$data)) {
+            $data = self::$data[$bankCode];
+            $data['name'] = IFSC::getBankName($bankCode);
+            if ($data['micr']) {
+                $data['bank_code'] = substr($data['micr'],3,3);
+            }
+            return $data;
+        }
+        else {
+            return false;
+        }
+    }
 }
