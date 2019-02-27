@@ -5,7 +5,7 @@ defmodule Mix.Tasks.Ifsc.CopyJson do
   def run(_) do
     File.mkdir_p!("priv/ifsc-data")
     Enum.map(
-      ~w(banknames.json IFSC.json sublet.json),
+      ~w(banknames.json IFSC.json sublet.json banks.json),
       &(File.copy("src/" <> &1, "priv/ifsc-data/" <> &1))
     )
   end
