@@ -1,8 +1,11 @@
 box: ruby
 no-response-timeout: 15
 build:
-  box: ruby
+  box: ruby:latest
   steps:
+    - script:
+      name: update bundler
+      code: sudo gem install bundler --version "$WERCKER_BUNDLE_INSTALL_VERSION"
     - bundle-install:
         cwd: scraper
     - script:
