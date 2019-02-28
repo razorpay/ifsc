@@ -99,7 +99,7 @@ def parse_rtgs
     row_index = 0
     headings = []
     log "Parsing #RTGS-#{sheet_id}.csv"
-    headers = CSV.foreach("sheets/RTGS-#{sheet_id}.csv", return_headers: true) do |row|
+    headers = CSV.foreach("sheets/RTGS-#{sheet_id}.csv", encoding:'utf-8', return_headers: true) do |row|
 
       headings = row if row_index == 0
 
