@@ -5,7 +5,7 @@ build:
   steps:
     - script:
       name: install ssconvert
-      code: sudo apt-get update && sudo apt-get install --no-install-recommends gnumeric
+      code: sudo apt-get update && sudo apt-get install --yes --no-install-recommends gnumeric
     - script:
       name: update bundler
       code: sudo gem install bundler --version "$WERCKER_BUNDLE_INSTALL_VERSION"

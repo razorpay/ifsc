@@ -53,7 +53,7 @@ require "ifsc"
 
 The PHP package has a dependency on the virtual package `php-http/client-implementation` which requires you to install an adapter, but we do not care which one. That is an implementation detail in your application. You do not have to use the `php-http/curl-client` if you do not want to. You may use the `php-http/guzzle6-adapter`. Read more about the virtual packages, why this is a good idea and about the flexibility it brings at the [HTTPlug docs](http://docs.php-http.org/en/latest/httplug/users.html). You can find a list of suported providers on [packagist](https://packagist.org/providers/php-http/client-implementation).
 
-The minimum PHP version supported is 7.0
+The minimum [PHP version supported is 7.1](https://secure.php.net/supported-versions.php).
 
 ## Node.js
 
@@ -263,8 +263,8 @@ The IFSC API is maintained in a separate repository at <https://github.com/razor
 ## License
 
 The code in this repository is licensed under the MIT License. License
-text is available in the `LICENSE.txt` file. The dataset itself
-should be under public domain.
+text is available in the `LICENSE` file. The dataset itself
+is under public domain.
 
 [rbi]: https://goo.gl/T9188H "goo.gl link because RBI doesn't allow you to link to their website"
 [combined]: https://goo.gl/UryY8j "goo.gl link because RBI doesn't allow you to link to their website"

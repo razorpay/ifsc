@@ -37,7 +37,7 @@ fi
 if [[ "$CI"=="true" ]]; then
     # Install ssconvert
     sudo apt-get update
-    sudo apt-get install --no-install-recommends gnumeric
+    sudo apt-get install --yes --no-install-recommends gnumeric
 fi
 
 # This gives us sheets/RTGS-{0|1|2}.csv
