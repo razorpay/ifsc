@@ -34,12 +34,6 @@ else
     cp --recursive --preserve=timestamps "$WERCKER_CACHE_DIR/sheets" .
 fi
 
-if [[ "$CI"=="true" ]]; then
-    # Install ssconvert
-    sudo apt-get update
-    sudo apt-get install --yes --no-install-recommends gnumeric
-fi
-
 # This gives us sheets/RTGS-{0|1|2}.csv
 ssconvert --export-file-per-sheet sheets/RTGS.xlsx sheets/RTGS-%n.csv
 
