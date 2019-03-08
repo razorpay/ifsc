@@ -1,15 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    mini_portile2 (2.3.0)
-    nokogiri (1.8.4)
-      mini_portile2 (~> 2.3.0)
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.1)
+      mini_portile2 (~> 2.4.0)
     ruby-ole (1.2.12.1)
-    rubyXL (3.3.30)
+    rubyXL (3.4.1)
       nokogiri (>= 1.4.4)
       rubyzip (>= 1.1.6)
     rubyzip (1.2.2)
-    spreadsheet (1.1.8)
+    spreadsheet (1.2.0)
       ruby-ole (>= 1.0)
 
 PLATFORMS
@@ -21,4 +21,4 @@ DEPENDENCIES
   spreadsheet
 
 BUNDLED WITH
-   1.16.4
+   2.0.1
