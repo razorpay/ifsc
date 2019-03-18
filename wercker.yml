@@ -1,5 +1,6 @@
 box: ruby
-no-response-timeout: 15
+no-response-timeout: 60
+command-timeout: 60
 build:
   box: ruby:latest
   steps:
