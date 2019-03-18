@@ -860,6 +860,7 @@ module Razorpay
       PBGX = :PBGX
       PCBL = :PCBL
       PCBX = :PCBX
+      PCCB = :PCCB
       PCCX = :PCCX
       PCLX = :PCLX
       PCMX = :PCMX

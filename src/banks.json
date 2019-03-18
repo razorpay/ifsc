@@ -673,7 +673,7 @@
   "APGX": {
     "code": "APGX",
     "type": "RRB",
-    "ifsc": "APGV0000001",
+    "ifsc": null,
     "micr": "500806002",
     "iin": "607198",
     "apbs": true,
@@ -4594,7 +4594,7 @@
     "iin": "990263",
     "apbs": true,
     "ach_credit": true,
-    "ach_debit": false,
+    "ach_debit": true,
     "nach_debit": false
   },
   "JBHX": {
@@ -6363,7 +6363,7 @@
     "ifsc": "UTIB0SKRN01",
     "micr": "500259254",
     "iin": "608425",
-    "apbs": false,
+    "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": false
@@ -8887,6 +8887,17 @@
     "ach_debit": true,
     "nach_debit": true
   },
+  "PCCB": {
+    "code": "PCCB",
+    "type": "O-UCB",
+    "ifsc": "WBSC0PCCB01",
+    "micr": "723810002",
+    "iin": "608193",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "PCCX": {
     "code": "PCCX",
     "type": "DCCB",
@@ -9825,7 +9836,7 @@
   "RGSX": {
     "code": "RGSX",
     "type": "O-UCB",
-    "ifsc": "RSBL0000001",
+    "ifsc": null,
     "micr": "411739001",
     "iin": "607271",
     "apbs": true,
@@ -10782,7 +10793,7 @@
   "SHIX": {
     "code": "SHIX",
     "type": "O-UCB",
-    "ifsc": "SMCB0000001",
+    "ifsc": null,
     "micr": "247721002",
     "iin": "607119",
     "apbs": true,

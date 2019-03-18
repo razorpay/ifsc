@@ -868,6 +868,7 @@ class Bank
     const PBGX = 'PBGX';
     const PCBL = 'PCBL';
     const PCBX = 'PCBX';
+    const PCCB = 'PCCB';
     const PCCX = 'PCCX';
     const PCLX = 'PCLX';
     const PCMX = 'PCMX';
