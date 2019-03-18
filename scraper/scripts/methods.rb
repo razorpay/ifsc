@@ -91,34 +91,41 @@ end
 def parse_rtgs
   data = []
 
-  log "Parsing #RTGS.xlsx"
-  sheet = RubyXL::Parser.parse("sheets/RTGS.xlsx").worksheets[1]
-  headings = sheet.sheet_data[0]
-  headings = (0..9).map {|e| headings[e].value}
-  row_index = 0
-  sheet.each do |row|
-    row_index += 1
-    # sanitize row
-    row = (0..9).map { |e| row[e] ? row[e].value  : nil}
-    next if row_index == 1
-    next if row.compact.empty?
 
-    data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
-    begin
-      x = data_to_insert.transpose.to_h
-      # IFSC values are in smaller case
-      x["IFSC"] = x["IFSC"].upcase.gsub(/[^0-9A-Za-z]/, '')
-      # RTGS Flag
-      x["RTGS"] = true
-      data.push x
-    rescue Exception => e
-      puts "Faced an Exception"
-      puts data_to_insert.to_json
-      puts e
-      exit
+  # The first sheet has bank codes
+  # the second and third are the ones we need
+  sheets = [1,2]
+  sheets.each do |sheet_id|
+    row_index = 0
+    headings = []
+    log "Parsing #RTGS-#{sheet_id}.csv"
+    headers = CSV.foreach("sheets/RTGS-#{sheet_id}.csv", encoding:'utf-8', return_headers: true) do |row|
+
+      headings = row if row_index == 0
+
+      row_index+=1
+
+      next if row_index == 1
+      next if row.compact.empty?
+
+      data_to_insert = [HEADINGS_INSERT, map_data(row, headings)]
+
+      begin
+        x = data_to_insert.transpose.to_h
+        # IFSC values are in smaller case
+        x["IFSC"] = x["IFSC"].upcase.gsub(/[^0-9A-Za-z]/, '')
+        # RTGS Flag
+        x["RTGS"] = true
+        data.push x
+      rescue Exception => e
+        puts "Faced an Exception"
+        puts data_to_insert.to_json
+        puts e
+        exit
+      end
+      puts row_index if row_index%1000 ==0
     end
   end
-  puts "[+] #{row_index} rows processed"
   data
 end
 

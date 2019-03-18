@@ -610,6 +610,7 @@ module Razorpay
       KOCX = :KOCX
       KODX = :KODX
       KOEX = :KOEX
+      KOLH = :KOLH
       KOSX = :KOSX
       KOTX = :KOTX
       KOYX = :KOYX
@@ -621,6 +622,7 @@ module Razorpay
       KRNX = :KRNX
       KRTH = :KRTH
       KRTX = :KRTX
+      KSBK = :KSBK
       KSBX = :KSBX
       KSCB = :KSCB
       KSCX = :KSCX
@@ -742,6 +744,7 @@ module Razorpay
       MSCI = :MSCI
       MSCX = :MSCX
       MSHQ = :MSHQ
+      MSLM = :MSLM
       MSNU = :MSNU
       MSNX = :MSNX
       MSOX = :MSOX
@@ -799,6 +802,7 @@ module Razorpay
       NILX = :NILX
       NIRX = :NIRX
       NIUX = :NIUX
+      NJBK = :NJBK
       NJCX = :NJCX
       NJGX = :NJGX
       NJMX = :NJMX
@@ -856,6 +860,7 @@ module Razorpay
       PBGX = :PBGX
       PCBL = :PCBL
       PCBX = :PCBX
+      PCCB = :PCCB
       PCCX = :PCCX
       PCLX = :PCLX
       PCMX = :PCMX
@@ -984,6 +989,7 @@ module Razorpay
       SAIX = :SAIX
       SALX = :SALX
       SAMX = :SAMX
+      SANT = :SANT
       SANX = :SANX
       SAPX = :SAPX
       SARX = :SARX
@@ -1022,6 +1028,7 @@ module Razorpay
       SCUX = :SCUX
       SDBX = :SDBX
       SDCB = :SDCB
+      SDCE = :SDCE
       SDCX = :SDCX
       SDHX = :SDHX
       SDSX = :SDSX

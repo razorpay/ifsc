@@ -13,6 +13,8 @@ banks = Hash.new
 # because they result in 1 bank
 # having 2 different codes
 IGNORED_SUBLETS = [
+  'RSBL0000001',
+  'APGV0000001',
   # Typo? in this one (AKJB|AJKB)
   'AKJB0000001',
   # DLSC and DSCB are the same
@@ -33,6 +35,8 @@ IGNORED_SUBLETS = [
   'IPOS0000001',
   # FSFB and FINF are the same
   'FSFB0000001',
+  # Same as SHIX
+  'SMCB0000001',
 ]
 
 doc.css('table')[0].css('tr').each do |row|
