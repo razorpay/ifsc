@@ -615,6 +615,7 @@ class Bank
     const KOCX = 'KOCX';
     const KODX = 'KODX';
     const KOEX = 'KOEX';
+    const KOLH = 'KOLH';
     const KOSX = 'KOSX';
     const KOTX = 'KOTX';
     const KOYX = 'KOYX';
@@ -626,6 +627,7 @@ class Bank
     const KRNX = 'KRNX';
     const KRTH = 'KRTH';
     const KRTX = 'KRTX';
+    const KSBK = 'KSBK';
     const KSBX = 'KSBX';
     const KSCB = 'KSCB';
     const KSCX = 'KSCX';
@@ -749,6 +751,7 @@ class Bank
     const MSCI = 'MSCI';
     const MSCX = 'MSCX';
     const MSHQ = 'MSHQ';
+    const MSLM = 'MSLM';
     const MSNU = 'MSNU';
     const MSNX = 'MSNX';
     const MSOX = 'MSOX';
@@ -807,6 +810,7 @@ class Bank
     const NILX = 'NILX';
     const NIRX = 'NIRX';
     const NIUX = 'NIUX';
+    const NJBK = 'NJBK';
     const NJCX = 'NJCX';
     const NJGX = 'NJGX';
     const NJMX = 'NJMX';
@@ -993,6 +997,7 @@ class Bank
     const SAIX = 'SAIX';
     const SALX = 'SALX';
     const SAMX = 'SAMX';
+    const SANT = 'SANT';
     const SANX = 'SANX';
     const SAPX = 'SAPX';
     const SARX = 'SARX';
@@ -1031,6 +1036,7 @@ class Bank
     const SCUX = 'SCUX';
     const SDBX = 'SDBX';
     const SDCB = 'SDCB';
+    const SDCE = 'SDCE';
     const SDCX = 'SDCX';
     const SDHX = 'SDHX';
     const SDSX = 'SDSX';
