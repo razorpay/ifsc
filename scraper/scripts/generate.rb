@@ -1,25 +1,20 @@
 require './methods'
 
-rtgs_data = parse_rtgs
+imps = parse_imps
+puts "[NPCI] Got #{imps.keys.size} entries"
 
-puts "Got #{rtgs_data.keys.size} entries"
-ifsc_data = parse_neft
-puts "Got #{ifsc_data.keys.size} entries"
+rtgs = parse_rtgs
+puts "[RTGS] Got #{rtgs.keys.size} entries"
 
-# Using IFSC data and marking rtgs=true for the applicable ifsc's
+neft = parse_neft
+puts "[NEFT] Got #{neft.keys.size} entries"
 
-log 'Combining the RTGS and IFSC lists'
-data, hash = parse_ifsc_rtgs(ifsc_data, rtgs_data)
+log 'Combining the above 3 lists'
+data, hash = merge_dataset(neft, rtgs, imps)
 
 puts "Got total #{hash.keys.size} entries"
 
-if File.exist? 'sheets/SUBLET.xlsx'
-  sublet_data = parse_sublet_sheet
-  log 'Exporting Sublet JSON'
-  export_sublet_json(sublet_data)
-end
-
-ifsc_codes_list = rtgs_data.keys + ifsc_data.keys
+ifsc_codes_list = rtgs.keys + neft.keys + imps.keys
 
 log 'Exporting CSV'
 export_csv(data)
@@ -30,7 +25,7 @@ export_json_by_banks(ifsc_codes_list, hash)
 log "Exporting JSON List"
 export_json_list(ifsc_codes_list)
 
-log 'Exporting to source code'
-export_to_code_json(ifsc_codes_list, hash)
+log 'Exporting to validation JSON'
+export_to_code_json(ifsc_codes_list)
 
 log 'Export done'
