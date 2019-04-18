@@ -17,7 +17,6 @@ wget --verbose "$RBI_LIST_URL" --output-document=list.html
 bundle exec ruby parse_list.rb > excel_list.txt
 rm --recursive --force sheets
 
-
 # Cache the downloaded files
 if [ -z "$WERCKER_CACHE_DIR" ]; then
     # A few files return a 404, so we force true here
