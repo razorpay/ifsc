@@ -7,13 +7,12 @@ git clone https://github.com/razorpay/ifsc-api.git --depth 1
 (cd data && tar -xzvf by-bank.tar.gz)
 # 3. Copy the data files to the repo
 cp data/by-bank/* ifsc-api/data/
-cd ifsc-api
+pushd ifsc-api
 git add data/
 # Generate the complete diff
-git diff --staged -U0 |grep IFSC |awk '{print $1substr($3,2,11)}'|sort -u > diff.txt
+git diff --staged -U0 |grep '"IFSC": "' |awk '{print $1substr($3,2,11)}'|sort -u > diff.txt
 # Generate the summarized diff
-cat diff.txt | cut -c-5|uniq -c|sort -n > diffsummary.txt
-cd ..
-pwd
+cat diff.txt | cut -c-5 | sort |uniq -c | sort -n > diffsummary.txt
+popd
 # Run the php script
 php releasenotes.php > release.md

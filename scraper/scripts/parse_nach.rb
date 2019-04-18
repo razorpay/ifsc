@@ -5,8 +5,8 @@ require 'uri'
 doc = Nokogiri::HTML(open('nach.html'))
 
 header_cleared = false
-sublets = Hash.new
-banks = Hash.new
+sublets = {}
+banks = {}
 
 # These are invalid sublets
 # given out by RBI
@@ -36,37 +36,37 @@ IGNORED_SUBLETS = [
   # FSFB and FINF are the same
   'FSFB0000001',
   # Same as SHIX
-  'SMCB0000001',
-]
+  'SMCB0000001'
+].freeze
 
 doc.css('table')[0].css('tr').each do |row|
-    if header_cleared
-        data = row.css('td')
-        ifsc = data[4].text.strip
-        bank_code = data[1].text.strip
-        if ifsc.size == 11 and ifsc[0..3] != bank_code and IGNORED_SUBLETS.include?(ifsc)==false
-          sublets[ifsc] = bank_code
-        end
-
-        banks[bank_code] = {
-          code: bank_code,
-          type: data[3].text.strip,
-          ifsc: IGNORED_SUBLETS.include?(ifsc)==false ? ifsc : nil,
-          micr: data[5].text.strip,
-          iin: data[6].text.strip,
-          apbs: data[7].text.strip == "Yes",
-          ach_credit: data[8].text.strip == "Yes",
-          ach_debit: data[9].text.strip == "Yes",
-          nach_debit: data[10].text.strip == "Yes"
-        }
+  if header_cleared
+    data = row.css('td')
+    ifsc = data[4].text.strip
+    bank_code = data[1].text.strip
+    if (ifsc.size == 11) && (ifsc[0..3] != bank_code) && (IGNORED_SUBLETS.include?(ifsc) == false)
+      sublets[ifsc] = bank_code
     end
-    header_cleared = true
+
+    banks[bank_code] = {
+      code: bank_code,
+      type: data[3].text.strip,
+      ifsc: IGNORED_SUBLETS.include?(ifsc) == false ? ifsc : nil,
+      micr: data[5].text.strip,
+      iin: data[6].text.strip,
+      apbs: data[7].text.strip == 'Yes',
+      ach_credit: data[8].text.strip == 'Yes',
+      ach_debit: data[9].text.strip == 'Yes',
+      nach_debit: data[10].text.strip == 'Yes'
+    }
+  end
+  header_cleared = true
 end
 
-File.open("../../src/sublet.json", "w") do |f|
+File.open('../../src/sublet.json', 'w') do |f|
   f.write JSON.pretty_generate(Hash[sublets.sort])
 end
 
-File.open("../../src/banks.json", "w") do |f|
+File.open('../../src/banks.json', 'w') do |f|
   f.write JSON.pretty_generate(Hash[banks.sort])
 end
