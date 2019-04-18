@@ -34,6 +34,7 @@ class Bank
     const AHMX = 'AHMX';
     const AHUX = 'AHUX';
     const AIRP = 'AIRP';
+    const AJAR = 'AJAR';
     const AJHC = 'AJHC';
     const AJKB = 'AJKB';
     const AJMX = 'AJMX';
