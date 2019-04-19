@@ -31,6 +31,7 @@ module Razorpay
       AHMX = :AHMX
       AHUX = :AHUX
       AIRP = :AIRP
+      AJAR = :AJAR
       AJHC = :AJHC
       AJKB = :AJKB
       AJMX = :AJMX

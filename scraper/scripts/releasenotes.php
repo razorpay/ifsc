@@ -1,6 +1,11 @@
 **Release Date**: `TODO`
 **RBI Update Date**: `TODO`
-**IFSC Count**: <?=`wc -l data/IFSC.csv`;?>
+<?php
+$ifscCount = (((int) `wc -l data/IFSC.csv`) - 1);
+$diffSize = (((int) `wc -l ifsc-api/diff.txt`) - 1);
+?>**IFSC Count**: <?=$ifscCount;?>
+
+**Diff Size**: <?=$diffSize?> (This only counts new or deleted IFSCs from previous release)
 
 - Only metadata changes in this release.
 - TODO

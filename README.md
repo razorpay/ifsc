@@ -4,9 +4,9 @@ This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
 [ifsc.razorpay.com](https://ifsc.razorpay.com).
 
-[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.3.4.svg)](https://microbadger.com/images/razorpay/ifsc:1.3.4) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master "wercker status")](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.4.0.svg)](https://microbadger.com/images/razorpay/ifsc:1.4.0) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.3.4.svg)](https://microbadger.com/images/razorpay/ifsc:1.3.4) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)
+[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.4.0.svg)](https://microbadger.com/images/razorpay/ifsc:1.4.0) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)
 
 ## Dataset
 
@@ -106,13 +106,13 @@ echo $res->getBankName(); // 'Kotak Mahindra Bank'
 ### Node.js
 
 ```js
-var ifsc = require('ifsc');
+var ifsc = require("ifsc");
 
-ifsc.validate('KKBK0000261'); // returns true
-ifsc.validate('BOTM0XEEMRA'); // returns false
+ifsc.validate("KKBK0000261"); // returns true
+ifsc.validate("BOTM0XEEMRA"); // returns false
 
-ifsc.fetchDetails('KKBK0000261').then(function(res) {
-	console.log(res);
+ifsc.fetchDetails("KKBK0000261").then(function(res) {
+  console.log(res);
 });
 // Prints the entire JSON from https://ifsc.razorpay.com/KKBK0000261
 // res is an object, not string

@@ -13,18 +13,12 @@ build:
     - bundle-install:
         cwd: scraper
     - script:
-      name: List cache
-      code: ls --recursive $WERCKER_CACHE_DIR/sheets -l || true
-    - script:
       name: Run bootstrap
       code: bash bootstrap.sh
       cwd: scraper/scripts
     - script:
-      name: List cache
-      code: ls --recursive $WERCKER_CACHE_DIR/sheets -l || true
-    - script:
       name: Copy artifacts
-      code: cp scraper/scripts/data/* $WERCKER_REPORT_ARTIFACTS_DIR/ && cp src/*.json $WERCKER_REPORT_ARTIFACTS_DIR/
+      code: cp scraper/scripts/data/* $WERCKER_REPORT_ARTIFACTS_DIR/
 # This is the ruby gem that we have
 rubygem:
   box: ruby
@@ -38,22 +32,26 @@ rubygem:
 php:
   box: php
   steps:
-  - install-packages:
-    packages: git
-  - script:
-    name: install phpunit
-    code: |-
-      curl -L https://phar.phpunit.de/phpunit-7.5.2.phar -o /usr/local/bin/phpunit
-      chmod +x /usr/local/bin/phpunit
-  - script:
-    name: install composer
-    code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-  - script:
-    name: install dependencies
-    code: composer install --no-interaction
-  - script:
-    name: Run PHP tests
-    code: phpunit
+    - install-packages:
+      packages: git
+    - script:
+      name: install phpunit
+      code: |-
+        curl -L https://phar.phpunit.de/phpunit-7.5.2.phar -o /usr/local/bin/phpunit
+        chmod +x /usr/local/bin/phpunit
+    - script:
+      name: install composer
+      code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    - script:
+      name: install dependencies
+      code: composer install --no-interaction
+    - script:
+      name: Copy Files from Build step
+      code: |-
+        cp scraper/scripts/data/*.json src/
+    - script:
+      name: Run PHP tests
+      code: phpunit
 # Node package
 node:
   box: node

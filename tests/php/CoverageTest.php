@@ -17,7 +17,7 @@ class CoverageTest extends TestCase
     {
         parent::setUp();
         $contents = "[]";
-        $file = $this->root . '/scraper/scripts/data/IFSC-list.json';
+        $file = $this->root . '/src/IFSC-list.json';
         if (file_exists($file)) {
             $contents = file_get_contents($file);
         }
@@ -141,4 +141,21 @@ class CoverageTest extends TestCase
         $this->assertCount(0, $failures);
     }
 
+    /**
+     * This checks the `banks.json` file (generated from NPCI Data) against our validation
+     * which is based on RBI data.
+     */
+    public function testNpciListAgainstRbi()
+    {
+        $failures = [];
+        foreach ($this->bankList as $code => $data) {
+            $ifsc = $data['ifsc'];
+            if (strlen($ifsc) === 11 and IFSC::validate($ifsc) !== true)
+            {
+                $failures[] = $ifsc;
+            }
+        }
+
+        $this->assertEquals([], $failures, "IFSC codes present in NPCI, but missing in RBI lists");
+    }
 }

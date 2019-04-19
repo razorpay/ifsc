@@ -5433,6 +5433,17 @@
     "ach_debit": false,
     "nach_debit": false
   },
+  "JSFB": {
+    "code": "JSFB",
+    "type": "SFB",
+    "ifsc": "JSFB0000001",
+    "micr": "560788005",
+    "iin": "652268",
+    "apbs": true,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "JSHX": {
     "code": "JSHX",
     "type": "DCCB",
@@ -7122,7 +7133,7 @@
     "ifsc": "UTIB0SMUCB1",
     "micr": "431851202",
     "iin": "990281",
-    "apbs": false,
+    "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": false
