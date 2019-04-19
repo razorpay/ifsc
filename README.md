@@ -84,6 +84,25 @@ IFSC::getBankName('ABCD'); // Returns null
 
 IFSC::getBankName(Bank::PUNB); //Returns Punjab National Bank
 
+Bank::getDetails(Bank::PUNB);
+Bank::getDetails('PUNB');
+
+// Returns an array:
+// [
+//    'code' => 'PUNB',
+//    'type' => 'PSB',
+//    'ifsc' => 'PUNB0244200',
+//    'micr' => '110024001',
+//    'iin' => '508568',
+//    'apbs' => true,
+//    'ach_credit' => true,
+//    'ach_debit' => true,
+//    'nach_debit' => true,
+//    'name' => 'Punjab National Bank',
+//    'bank_code' => '024',
+// ]
+
+
 $client = new Client();
 $res = $client->lookupIFSC('KKBK0000261');
 
