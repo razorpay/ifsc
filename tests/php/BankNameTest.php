@@ -32,13 +32,14 @@ class Name extends TestCase
             'code' => 'FINO',
             'type' => 'PB',
             'ifsc' => 'FINO0000001',
-            'micr' => '',
+            'micr' => null,
             'iin' => '608001',
-            'apbs' => false,
+            'apbs' => true,
             'ach_credit' => true,
             'ach_debit' => false,
             'nach_debit' => false,
             'name' => 'Fino Payments Bank',
+            'bank_code' => null
         ], Bank::getDetails('FINO'));
     }
 }

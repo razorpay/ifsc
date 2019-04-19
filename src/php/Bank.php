@@ -1436,6 +1436,9 @@ class Bank
             if ($data['micr']) {
                 $data['bank_code'] = substr($data['micr'],3,3);
             }
+            else {
+                $data['bank_code'] = null;
+            }
             return $data;
         }
         else {
