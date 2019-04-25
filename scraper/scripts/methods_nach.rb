@@ -49,12 +49,17 @@ def write_banks_json(banks)
 end
 
 def bank_data(bank_code, data, ifsc)
+  micr = data[5].text.strip
+  micr = micr.length == 9 ? micr : nil
+
+  iin = data[6].text.strip
+  iin = iin.length == 6 ? iin : nil
   {
     code: bank_code,
     type: data[3].text.strip,
     ifsc: IGNORED_SUBLETS.include?(ifsc) == false ? ifsc : nil,
-    micr: data[5].text.strip,
-    iin: data[6].text.strip,
+    micr: micr,
+    iin: iin,
     apbs: data[7].text.strip == 'Yes',
     ach_credit: data[8].text.strip == 'Yes',
     ach_debit: data[9].text.strip == 'Yes',
