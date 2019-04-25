@@ -5,9 +5,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2019-04-25
+
 ### Fixed
 
 - Parsing of empty/NA MICR/IINs/IFSCs in NPCI ACH List. #100
+
+### Changed
+
+- Updated list of sublets to remove all exceptions
 
 ## [1.4.0] - 2019-04-19
 

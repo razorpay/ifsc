@@ -35,7 +35,7 @@
   "ABEX": {
     "code": "ABEX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "500438001",
     "iin": null,
     "apbs": false,
@@ -57,7 +57,7 @@
   "ABNA": {
     "code": "ABNA",
     "type": "Foreign",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": false,
@@ -332,7 +332,7 @@
   "AJKB": {
     "code": "AJKB",
     "type": "S-UCB",
-    "ifsc": null,
+    "ifsc": "AKJB0000001",
     "micr": "440364002",
     "iin": "608013",
     "apbs": true,
@@ -387,7 +387,7 @@
   "AJUX": {
     "code": "AJUX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "400014251",
     "iin": null,
     "apbs": false,
@@ -453,7 +453,7 @@
   "ALLX": {
     "code": "ALLX",
     "type": "DCCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "211490002",
     "iin": null,
     "apbs": false,
@@ -596,7 +596,7 @@
   "ANDX": {
     "code": "ANDX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "422259253",
     "iin": null,
     "apbs": false,
@@ -673,7 +673,7 @@
   "APGX": {
     "code": "APGX",
     "type": "RRB",
-    "ifsc": null,
+    "ifsc": "APGV0000001",
     "micr": "500806002",
     "iin": "607198",
     "apbs": true,
@@ -948,7 +948,7 @@
   "AWUX": {
     "code": "AWUX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": false,
@@ -970,7 +970,7 @@
   "AZPX": {
     "code": "AZPX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "444806000",
     "iin": "608056",
     "apbs": false,
@@ -1509,7 +1509,7 @@
   "BHEX": {
     "code": "BHEX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "620538000",
     "iin": null,
     "apbs": false,
@@ -1531,7 +1531,7 @@
   "BHIX": {
     "code": "BHIX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": false,
@@ -2081,7 +2081,7 @@
   "BWCX": {
     "code": "BWCX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": true,
@@ -2169,7 +2169,7 @@
   "CCOB": {
     "code": "CCOB",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": true,
@@ -2180,7 +2180,7 @@
   "CCUX": {
     "code": "CCUX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "600091319",
     "iin": null,
     "apbs": false,
@@ -2686,7 +2686,7 @@
   "CUBX": {
     "code": "CUBX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "500259253",
     "iin": null,
     "apbs": false,
@@ -2719,7 +2719,7 @@
   "CZCX": {
     "code": "CZCX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "110240257",
     "iin": "990031",
     "apbs": true,
@@ -3203,7 +3203,7 @@
   "DRGX": {
     "code": "DRGX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "400018101",
     "iin": null,
     "apbs": true,
@@ -3225,7 +3225,7 @@
   "DSCB": {
     "code": "DSCB",
     "type": "SCB",
-    "ifsc": null,
+    "ifsc": "DLSC0000001",
     "micr": "110094002",
     "iin": "607912",
     "apbs": true,
@@ -3522,7 +3522,7 @@
   "FINF": {
     "code": "FINF",
     "type": "SFB",
-    "ifsc": null,
+    "ifsc": "FSFB0000001",
     "micr": "560775002",
     "iin": "608304",
     "apbs": true,
@@ -3555,7 +3555,7 @@
   "FIRX": {
     "code": "FIRX",
     "type": "Foreign",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": false,
@@ -3665,7 +3665,7 @@
   "GCBX": {
     "code": "GCBX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "680815052",
     "iin": null,
     "apbs": false,
@@ -3742,7 +3742,7 @@
   "GGBK": {
     "code": "GGBK",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": true,
@@ -3940,7 +3940,7 @@
   "GTCX": {
     "code": "GTCX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "600458001",
     "iin": null,
     "apbs": false,
@@ -3973,7 +3973,7 @@
   "GUNX": {
     "code": "GUNX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "520801102",
     "iin": "508997",
     "apbs": true,
@@ -4413,7 +4413,7 @@
   "IPPB": {
     "code": "IPPB",
     "type": "PB",
-    "ifsc": null,
+    "ifsc": "IPOS0000001",
     "micr": "600768002",
     "iin": "508528",
     "apbs": true,
@@ -5150,7 +5150,7 @@
   "JMMX": {
     "code": "JMMX",
     "type": "DCCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "180645001",
     "iin": null,
     "apbs": false,
@@ -5546,7 +5546,7 @@
   "JTSX": {
     "code": "JTSX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "431082671",
     "iin": "990186",
     "apbs": false,
@@ -5777,7 +5777,7 @@
   "KCBL": {
     "code": "KCBL",
     "type": "S-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": false,
@@ -5843,7 +5843,7 @@
   "KCOB": {
     "code": "KCOB",
     "type": "O-UCB",
-    "ifsc": null,
+    "ifsc": "KANG0000001",
     "micr": "110304001",
     "iin": "607710",
     "apbs": true,
@@ -6063,7 +6063,7 @@
   "KJSX": {
     "code": "KJSX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": false,
@@ -6492,7 +6492,7 @@
   "KTTX": {
     "code": "KTTX",
     "type": "DCCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "572804019",
     "iin": "508940",
     "apbs": true,
@@ -6635,7 +6635,7 @@
   "LACX": {
     "code": "LACX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "413612002",
     "iin": null,
     "apbs": false,
@@ -6756,7 +6756,7 @@
   "LKCX": {
     "code": "LKCX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "600091281",
     "iin": null,
     "apbs": false,
@@ -6888,7 +6888,7 @@
   "MAGX": {
     "code": "MAGX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": true,
@@ -7086,7 +7086,7 @@
   "MCBX": {
     "code": "MCBX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "424865202",
     "iin": "607582",
     "apbs": true,
@@ -7394,7 +7394,7 @@
   "MHEX": {
     "code": "MHEX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": false,
@@ -7405,7 +7405,7 @@
   "MHLX": {
     "code": "MHLX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "560267002",
     "iin": null,
     "apbs": false,
@@ -7581,7 +7581,7 @@
   "MOUX": {
     "code": "MOUX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "813858501",
     "iin": null,
     "apbs": false,
@@ -8571,7 +8571,7 @@
   "NSMX": {
     "code": "NSMX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "781450002",
     "iin": null,
     "apbs": false,
@@ -9055,7 +9055,7 @@
   "PGBX": {
     "code": "PGBX",
     "type": "RRB",
-    "ifsc": null,
+    "ifsc": "PKGB0000001",
     "micr": "583697103",
     "iin": "607389",
     "apbs": true,
@@ -9231,7 +9231,7 @@
   "PNPX": {
     "code": "PNPX",
     "type": "DCCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "132801003",
     "iin": "607757",
     "apbs": true,
@@ -9484,7 +9484,7 @@
   "PUNX": {
     "code": "PUNX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "411307000",
     "iin": "607145",
     "apbs": true,
@@ -9506,7 +9506,7 @@
   "PUSX": {
     "code": "PUSX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "600092253",
     "iin": null,
     "apbs": false,
@@ -9550,7 +9550,7 @@
   "PVVX": {
     "code": "PVVX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": false,
@@ -9847,7 +9847,7 @@
   "RGSX": {
     "code": "RGSX",
     "type": "O-UCB",
-    "ifsc": null,
+    "ifsc": "RSBL0000001",
     "micr": "411739001",
     "iin": "607271",
     "apbs": true,
@@ -10298,7 +10298,7 @@
   "SAUX": {
     "code": "SAUX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "600092256",
     "iin": null,
     "apbs": false,
@@ -10694,7 +10694,7 @@
   "SGCX": {
     "code": "SGCX",
     "type": "DCCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "416818151",
     "iin": "607670",
     "apbs": true,
@@ -10804,7 +10804,7 @@
   "SHIX": {
     "code": "SHIX",
     "type": "O-UCB",
-    "ifsc": null,
+    "ifsc": "SMCB0000001",
     "micr": "247721002",
     "iin": "607119",
     "apbs": true,
@@ -10815,7 +10815,7 @@
   "SHKX": {
     "code": "SHKX",
     "type": "S-UCB",
-    "ifsc": null,
+    "ifsc": "SKSB0000001",
     "micr": "440182000",
     "iin": "607708",
     "apbs": false,
@@ -11024,7 +11024,7 @@
   "SJSX": {
     "code": "SJSX",
     "type": "S-UCB",
-    "ifsc": null,
+    "ifsc": "SJSB0000001",
     "micr": "413587002",
     "iin": "508570",
     "apbs": true,
@@ -11222,7 +11222,7 @@
   "SMWX": {
     "code": "SMWX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "560455002",
     "iin": null,
     "apbs": false,
@@ -11288,7 +11288,7 @@
   "SNKX": {
     "code": "SNKX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "452556002",
     "iin": null,
     "apbs": false,
@@ -12113,7 +12113,7 @@
   "TCPX": {
     "code": "TCPX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "600092257",
     "iin": null,
     "apbs": false,
@@ -12124,7 +12124,7 @@
   "TCUB": {
     "code": "TCUB",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "695198000",
     "iin": null,
     "apbs": false,
@@ -12135,7 +12135,7 @@
   "TCUX": {
     "code": "TCUX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "600091273",
     "iin": null,
     "apbs": false,
@@ -12201,7 +12201,7 @@
   "TDPX": {
     "code": "TDPX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "685819002",
     "iin": null,
     "apbs": false,
@@ -12212,7 +12212,7 @@
   "TDSX": {
     "code": "TDSX",
     "type": "DCCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "503814002",
     "iin": "607056",
     "apbs": true,
@@ -12971,7 +12971,7 @@
   "TSSX": {
     "code": "TSSX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "580914002",
     "iin": "608030",
     "apbs": false,
@@ -13026,7 +13026,7 @@
   "TTLX": {
     "code": "TTLX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "560260002",
     "iin": null,
     "apbs": false,
@@ -13125,7 +13125,7 @@
   "TUPX": {
     "code": "TUPX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "387812501",
     "iin": "990237",
     "apbs": false,
@@ -13147,7 +13147,7 @@
   "TVBX": {
     "code": "TVBX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "600092252",
     "iin": null,
     "apbs": false,
@@ -13246,7 +13246,7 @@
   "UCBS": {
     "code": "UCBS",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": "751221002",
     "iin": null,
     "apbs": false,
@@ -13488,7 +13488,7 @@
   "USFB": {
     "code": "USFB",
     "type": "SFB",
-    "ifsc": null,
+    "ifsc": "UJVN0000001",
     "micr": "560761002",
     "iin": "508991",
     "apbs": true,
@@ -14258,7 +14258,7 @@
   "YDCX": {
     "code": "YDCX",
     "type": "O-UCB",
-    "ifsc": "NA",
+    "ifsc": null,
     "micr": null,
     "iin": null,
     "apbs": true,
