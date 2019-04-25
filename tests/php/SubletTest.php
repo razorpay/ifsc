@@ -28,6 +28,11 @@ class SubletTest extends TestCase
      */
     public function testNamesDiffer()
     {
+        // This test is currently marked as skipped
+        // Since some of the Banks in the NPCI ACH list have sublets
+        // Belonging to themselves. Skipped till we figure out a better way
+        // Reported to RBI, no response yet
+        $this->markTestSkipped();
         foreach ($this->sublets as $ifsc => $bankCode)
         {
             // This would be the naive owner
