@@ -22,7 +22,7 @@ export_csv(data)
 log 'Exporting JSON by Banks'
 export_json_by_banks(ifsc_codes_list, hash)
 
-log "Exporting JSON List"
+log 'Exporting JSON List'
 export_json_list(ifsc_codes_list)
 
 log 'Exporting to validation JSON'

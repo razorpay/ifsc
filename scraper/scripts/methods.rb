@@ -21,21 +21,21 @@ HEADINGS_INSERT = %w[
 def parse_imps
   banks = parse_nach
   data = {}
-  banknames =  JSON.parse File.read('../../src/banknames.json')
+  banknames = JSON.parse File.read('../../src/banknames.json')
   banks.each do |code, row|
-    if row[:ifsc] && row[:ifsc].strip.to_s.length == 11
-      data[row[:ifsc]] = {
-        "BANK" => banknames[code],
-        "IFSC" => row[:ifsc],
-        "BRANCH" => "#{banknames[code]} IMPS",
-        "CENTRE" => "NA",
-        "DISTRICT" => "NA",
-        "STATE" => "NA",
-        "ADDRESS" => "NA",
-        "CONTACT" => nil,
-        "IMPS" => true
-      }
-    end
+    next unless row[:ifsc] && row[:ifsc].strip.to_s.length == 11
+
+    data[row[:ifsc]] = {
+      'BANK' => banknames[code],
+      'IFSC' => row[:ifsc],
+      'BRANCH' => "#{banknames[code]} IMPS",
+      'CENTRE' => 'NA',
+      'DISTRICT' => 'NA',
+      'STATE' => 'NA',
+      'ADDRESS' => 'NA',
+      'CONTACT' => nil,
+      'IMPS' => true
+    }
   end
   data
 end
@@ -97,7 +97,7 @@ def parse_rtgs
         row['IFSC'] = ifsc_11
       end
 
-      if data.has_key? row['IFSC']
+      if data.key? row['IFSC']
         log "Second Entry found for #{row['IFSC']}, discarding", :warn
         next
       end
@@ -115,7 +115,7 @@ def export_csv(data)
     csv << keys
     data.each do |row|
       sorted_data = []
-      for key in keys
+      keys.each do |key|
         sorted_data << row[key]
       end
       csv << sorted_data
@@ -177,15 +177,13 @@ def merge_dataset(neft, rtgs, imps)
     h[ifsc] = combined_data
 
     data << combined_data
-
   end
   [data, h]
 end
 
 def export_json_list(list)
-  File.open("data/IFSC-list.json", 'w') { |f| JSON.dump(list, f) }
+  File.open('data/IFSC-list.json', 'w') { |f| JSON.dump(list, f) }
 end
-
 
 def export_to_code_json(list)
   banks = find_bank_codes list
@@ -208,7 +206,7 @@ def export_to_code_json(list)
   end
 end
 
-def log(msg, status=:info)
+def log(msg, status = :info)
   case status
   when :info
     msg = "[INFO] #{msg}"

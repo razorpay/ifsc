@@ -5,14 +5,14 @@ require 'uri'
 def write_sublet_json(sublets)
   File.open('data/sublet.json', 'w') do |f|
     f.write JSON.pretty_generate(Hash[sublets.sort])
-    log "Saved data/sublet.json"
+    log 'Saved data/sublet.json'
   end
 end
 
 def write_banks_json(banks)
   File.open('data/banks.json', 'w') do |f|
     f.write JSON.pretty_generate(Hash[banks.sort])
-    log "Saved data/banks.json"
+    log 'Saved data/banks.json'
   end
 end
 
@@ -21,7 +21,7 @@ def match_length_or_nil(data, expected_length)
   data.length === expected_length ? data : nil
 end
 
-def bank_data(bank_code, data, ifsc)
+def bank_data(bank_code, data, _ifsc)
   {
     code: bank_code,
     type: data[3].text.strip,
@@ -49,9 +49,7 @@ def parse_nach
       data = row.css('td')
       ifsc = data[4].text.strip
       bank_code = data[1].text.strip
-      if ifsc.size == 11 && ifsc[0..3] != bank_code
-        sublets[ifsc] = bank_code
-      end
+      sublets[ifsc] = bank_code if ifsc.size == 11 && ifsc[0..3] != bank_code
 
       banks[bank_code] = bank_data(bank_code, data, ifsc)
     end
