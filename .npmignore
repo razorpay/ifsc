@@ -28,3 +28,4 @@ doc
 deps
 *.tar
 fixture/
+src/IFSC-list.json
