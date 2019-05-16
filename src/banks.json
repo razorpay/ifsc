@@ -4732,9 +4732,9 @@
   "JGBX": {
     "code": "JGBX",
     "type": "RRB",
-    "ifsc": "BKID0JHARGB",
-    "micr": "834807002",
-    "iin": "508526",
+    "ifsc": "SBIN0RRVCGB",
+    "micr": "822812002",
+    "iin": "607210",
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
@@ -5441,7 +5441,7 @@
     "iin": "652268",
     "apbs": true,
     "ach_credit": true,
-    "ach_debit": false,
+    "ach_debit": true,
     "nach_debit": false
   },
   "JSHX": {
@@ -7339,9 +7339,9 @@
   "MGRB": {
     "code": "MGRB",
     "type": "RRB",
-    "ifsc": "SBIN0RRMLGB",
-    "micr": "140846102",
-    "iin": "607241",
+    "ifsc": "PUNB0PGB003",
+    "micr": "152337302",
+    "iin": "607138",
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
@@ -11013,9 +11013,9 @@
   "SJGX": {
     "code": "SJGX",
     "type": "RRB",
-    "ifsc": "PSIB0SGB002",
-    "micr": "151830052",
-    "iin": "607310",
+    "ifsc": "PUNB0PGB003",
+    "micr": "152337302",
+    "iin": "607138",
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
