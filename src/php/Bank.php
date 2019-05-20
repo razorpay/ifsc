@@ -1445,4 +1445,17 @@ class Bank
             return false;
         }
     }
+
+    public static function lookupByNBIN(string $nbin) {
+        self::init();
+        $matchingData = array_values(array_filter(self::$data, function($bankData) use ($nbin){
+            return ($bankData['micr'] &&
+                substr($bankData['micr'], 3, 3) === substr($nbin, 1)
+            );
+        }));
+
+        assert(count($matchingData) <= 1);
+
+        return (count($matchingData) === 1 ? $matchingData[0] : null);
+    }
 }
