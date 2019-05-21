@@ -731,6 +731,7 @@ class Bank
     const MHUX = 'MHUX';
     const MIZX = 'MIZX';
     const MJCX = 'MJCX';
+    const MKPB = 'MKPB';
     const MKUX = 'MKUX';
     const MKYX = 'MKYX';
     const MLDX = 'MLDX';

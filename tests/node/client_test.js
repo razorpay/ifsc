@@ -1,23 +1,28 @@
-const ifsc = require('../../src/node');
-const assert = require('assert');
+const ifsc = require("../../src/node");
+const assert = require("assert");
 
 ifsc
-  .fetchDetails('KKBK0000261')
+  .fetchDetails("KKBK0000261")
   .then(function(res) {
     assert.deepEqual(
       {
-        BRANCH: 'GURGAON',
         ADDRESS:
-          'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,',
-        CONTACT: '4131000',
-        CITY: 'GURGAON',
-        DISTRICT: 'GURGAON',
-        STATE: 'HARYANA',
+          "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,",
+        BANK: "Kotak Mahindra Bank",
+        BANKCODE: "KKBK",
+        BRANCH: "GURGAON",
+        CENTRE: "GURGAON",
+        CITY: "GURGAON",
+        CONTACT: "4131000",
+        DISTRICT: "GURGAON",
+        IFSC: "KKBK0000261",
+        IMPS: true,
+        MICR: "",
+        NEFT: true,
         RTGS: true,
-        BANK: 'Kotak Mahindra Bank',
-        BANKCODE: 'KKBK',
-        IFSC: 'KKBK0000261',
+        STATE: "HARYANA"
       },
+
       res
     );
   })
