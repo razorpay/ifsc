@@ -4,12 +4,12 @@ GEM
     mini_portile2 (2.4.0)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
-    ruby-ole (1.2.12.1)
+    ruby-ole (1.2.12.2)
     rubyXL (3.4.1)
       nokogiri (>= 1.4.4)
       rubyzip (>= 1.1.6)
     rubyzip (1.2.2)
-    spreadsheet (1.2.0)
+    spreadsheet (1.2.4)
       ruby-ole (>= 1.0)
 
 PLATFORMS
