@@ -48,7 +48,7 @@
         "guzzlehttp/psr7"       : "^1.3",
         "php-http/message"      : "^1.0",
         "php-http/mock-client"  : "^0.3",
-        "phpunit/phpunit"       : "^6.0"
+        "phpunit/phpunit"       : "^6.0 || ^8.0"
     },
     "scripts": {
         "test": "phpunit"
