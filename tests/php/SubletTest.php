@@ -45,4 +45,21 @@ class SubletTest extends TestCase
             $this->assertTrue(!$match, "Bank Name for $ifsc matches $ownerBankCode (expected $expected)");
         }
     }
+
+    public function testCustomSublet()
+    {
+        $data = [
+            // Test a complete 11 character prefix
+            "VIJB0SSB001" => "Shimsha Sahakara Bank Niyamitha",
+            // A 8 character prefix pointing to a bank code
+            "KSCB0006001" => "Tumkur District Central Bank",
+            // A 9 character prefix pointing to a static name
+            "WBSC0KPCB01" => "Kolkata Police Co-operative Bank",
+            "YESB0ADB002" => "Amravati District Central Co-operative Bank"
+        ];
+
+        foreach ($data as $code => $expected) {
+            $this->assertEquals($expected, IFSC::getBankName($code));
+        }
+    }
 }
