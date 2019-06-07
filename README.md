@@ -151,6 +151,10 @@ Razorpay::IFSC::IFSC.valid? 'BOTM0XEEMRA' # => false
 
 Razorpay::IFSC::IFSC.validate! 'KKBK0000261' # => true
 Razorpay::IFSC::IFSC.validate! 'BOTM0XEEMRA' # => Razorpay::IFSC::InvalidCodeError
+
+# bank_name_for(code) gets you the bank name offline
+Razorpay::IFSC::IFSC.bank_name_for 'PUNB0026200' -> "Punjab National Bank"
+Razorpay::IFSC::IFSC.bank_name_for 'KSCB0006001' -> "Tumkur District Central Bank"
 ```
 
 Validate online and retrieve details from the server
