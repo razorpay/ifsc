@@ -81,10 +81,25 @@ module Razorpay
         def bank_name_for(code)
           sublet_code = sublet_data[code]
           regular_code = code[0..3].upcase
-          bank_name_data[sublet_code || regular_code]
+          custom_name = bank_name_via_custom_sublet code
+          custom_name || bank_name_data[sublet_code || regular_code]
         end
 
         private
+
+        # See getCustomSubletName in IFSC.php
+        def bank_name_via_custom_sublet(code)
+          custom_sublet_data.each do |prefix, value|
+            if prefix == code[0..prefix.length - 1]
+              if value.length == 4
+                return bank_name_data[value]
+              else
+                return value
+              end
+            end
+          end
+          return nil
+        end
 
         def parse_json_file(file)
           file = "../#{file}.json"
@@ -101,6 +116,10 @@ module Razorpay
 
         def sublet_data
           @sublet_data ||= parse_json_file 'sublet'
+        end
+
+        def custom_sublet_data
+          @custom_sublet_data ||= parse_json_file 'custom-sublets'
         end
       end
     end
