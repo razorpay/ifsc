@@ -7,27 +7,30 @@ class IFSC
     protected static $data = null;
     protected static $bankNames = null;
     protected static $sublet = null;
+    protected static $customSublets = null;
+    protected static $customSubletPrefixes = [];
 
     public static function init()
     {
-        if (!self::$data)
-        {
+        if (!self::$data) {
             $contents = file_get_contents(__DIR__ . '/../IFSC.json');
             self::$data = json_decode($contents, true);
         }
 
-        if (!self::$bankNames)
-        {
+        if (!self::$bankNames) {
             self::$bankNames = json_decode(file_get_contents(__DIR__ . '/../banknames.json'), true);
         }
 
-        if (!self::$sublet)
-        {
+        if (!self::$sublet) {
             self::$sublet = json_decode(file_get_contents(__DIR__ . '/../sublet.json'), true);
+        }
+        if (!self::$customSublets) {
+            self::$customSublets = json_decode(file_get_contents(__DIR__ . '/../custom-sublets.json'), true);
+            self::$customSubletPrefixes = array_keys(self::$customSublets);
         }
     }
 
-    public static function validate($code)
+    public static function validate(string $code)
     {
         self::init();
 
@@ -74,16 +77,35 @@ class IFSC
     {
         self::init();
 
-        if (self::validateBankCode($code))
-        {
+        if (self::validateBankCode($code)) {
             return self::$bankNames[$code];
         }
-        else if (self::validate($code))
-        {
-            // Check if the IFSC is sublet, if not use first 4
-            $bankCode = self::$sublet[$code] ?? substr($code, 0, 4);
+        else if (self::validate($code)) {
+            if (isset(self::$sublet[$code])) {
+                $bankCode = self::$sublet[$code];
+                return self::$bankNames[$bankCode];
+            }
+            else {
+                return self::getCustomSubletName($code) ?? self::$bankNames[substr($code, 0, 4)];
+            }
+        }
+    }
 
-            return self::$bankNames[$bankCode];
+    private static function getCustomSubletName(string $code)
+    {
+        foreach (self::$customSubletPrefixes as $prefix) {
+            $prefixLength = strlen($prefix);
+            // If the prefix matches
+            if (substr($code, 0, $prefixLength) == $prefix) {
+                // And the value in custom-sublets.json is a bank code
+                if (strlen(self::$customSublets[$prefix]) == 4) {
+                    return self::getBankName(self::$customSublets[$prefix]);
+                }
+                else {
+                    // the value is a string that needs to be returned as-is
+                    return self::$customSublets[$prefix];
+                }
+            }
         }
     }
 

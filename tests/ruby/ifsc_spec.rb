@@ -73,6 +73,13 @@ describe Razorpay::IFSC::IFSC do
       it 'should return the correct sublet bank name' do
         expect(described_class.bank_name_for('ALLA0AU1002')).to eq 'Allahabad Up Gramin Bank'
       end
+
+      it 'should return the correct sublet bank name for custom sublets' do
+        expect(described_class.bank_name_for('VIJB0SSB001')).to eq 'Shimsha Sahakara Bank Niyamitha'
+        expect(described_class.bank_name_for('KSCB0006001')).to eq 'Tumkur District Central Bank'
+        expect(described_class.bank_name_for('WBSC0KPCB01')).to eq 'Kolkata Police Co-operative Bank'
+        expect(described_class.bank_name_for('YESB0ADB002')).to eq 'Amravati District Central Co-operative Bank'
+      end
     end
 
     describe '#valid?' do
