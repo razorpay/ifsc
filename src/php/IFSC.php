@@ -30,7 +30,7 @@ class IFSC
         }
     }
 
-    public static function validate($code)
+    public static function validate(string $code)
     {
         self::init();
 

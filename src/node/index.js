@@ -6,6 +6,7 @@ const request = require('request');
 const BASE_URL = 'https://ifsc.razorpay.com/';
 
 let _validate = function(code) {
+
   if (code.length !== 11) {
     return false;
   }
