@@ -59,6 +59,17 @@ The minimum [PHP version supported is 7.1](https://endoflife.date/php).
 
 `$ npm install ifsc`
 
+## Support Matrix
+
+Only the latest version of each SDK is considered.
+
+| Language | Validation | API Client | Sublet Support (Custom) | Bank Constants |
+| -------- | ---------- | ---------- | ----------------------- | -------------- |
+| PHP      | ✅         | ✅         | ✅ (✅)                 | ✅             |
+| Ruby     | ✅         | ✅         | ✅ (✅)                 | ✅             |
+| Elixir   | ✅         | ✅         | ✅ (❎)                 | ❎             |
+| Node.js  | ✅         | ✅         | ❎ (❎)                 | ❎             |
+
 ## API Documentation
 
 This repository also hosts the source code for 3 modules: PHP/Node.js/Ruby as of now.
