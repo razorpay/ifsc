@@ -5,11 +5,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.4.3] - 2019-05-20
+## [1.4.4] - 2019-06-17
 
 ### Changed
 
 -   Regular Metadata Updates
+-   Adds support for custom sublets.
 
 ## [1.4.2] - 2019-05-16
 
