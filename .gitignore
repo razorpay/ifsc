@@ -6,17 +6,22 @@ scraper/scripts/data/
 scraper/scripts/ifsc-api/
 scraper/scripts/release.md
 scraper/vendor
-/vendor/
-composer.lock
+src/IFSC-list.json
+
+# Node.js
 node_modules
+
+# Ruby
 Gemfile.lock
 *.gem
 .bundle
-.config
-.yardoc
-Gemfile.lock
-InstalledFiles
 
+
+# php
+/vendor/
+composer.lock
+
+.phpunit.result.cache
 # Elixir
 
 /_build/
@@ -28,4 +33,10 @@ erl_crash.dump
 *.ez
 /priv/ifsc-data/
 mix.lock
-src/IFSC-list.json
+
+
+# Misc
+.config
+.yardoc
+Gemfile.lock
+InstalledFiles

@@ -7,7 +7,7 @@ class ValidatorTest extends TestCase
 {
     protected static $allTests = [];
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $contents = file_get_contents($this->root . '/tests/validator_asserts.json');
