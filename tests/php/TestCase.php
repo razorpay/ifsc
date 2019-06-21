@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->root = realpath(__DIR__ . '/../../');
     }
