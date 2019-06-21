@@ -16,7 +16,7 @@ class ClientTest extends TestCase
 
     const AIRP = 'AIRP';
 
-    public function setUp()
+    public function setUp(): void
     {
         HttpClientDiscovery::prependStrategy(MockClientStrategy::class);
 
@@ -117,11 +117,10 @@ class ClientTest extends TestCase
         $this->assertSame($mockData['STATE'], $entity->state);
     }
 
-    /**
-     * @expectedException Razorpay\IFSC\Exception\ServerError
-     */
     public function testServerErrorResponse()
     {
+        $this->expectException(IFSC\Exception\ServerError::class);
+
         $expectedResponse = $this->getDefaultResponse(500);
 
         $this->mockResponse($expectedResponse);
@@ -129,11 +128,10 @@ class ClientTest extends TestCase
         $entity = $this->client->lookupIFSC(self::REAL_IFSC);
     }
 
-    /**
-     * @expectedException Razorpay\IFSC\Exception\InvalidCode
-     */
     public function testMissingResponse()
     {
+        $this->expectException(IFSC\Exception\InvalidCode::class);
+
         $expectedResponse = $this->getDefaultResponse(404);
 
         $this->mockResponse($expectedResponse);
@@ -141,11 +139,10 @@ class ClientTest extends TestCase
         $entity = $this->client->lookupIFSC(self::REAL_IFSC);
     }
 
-    /**
-     * @expectedException Razorpay\IFSC\Exception\InvalidCode
-     */
     public function testInvalidCode()
     {
+        $this->expectException(IFSC\Exception\InvalidCode::class);
+
         $expectedResponse = $this->getDefaultResponse(404);
 
         $this->mockResponse($expectedResponse);

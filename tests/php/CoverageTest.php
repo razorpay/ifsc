@@ -13,7 +13,7 @@ use Razorpay\IFSC\Bank;
  */
 class CoverageTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $contents = "[]";

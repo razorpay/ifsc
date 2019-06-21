@@ -9,7 +9,7 @@ use Razorpay\IFSC\Bank;
  */
 class SubletTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->sublets = json_decode(file_get_contents($this->root . '/src/sublet.json'), true);
