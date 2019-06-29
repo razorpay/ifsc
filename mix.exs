@@ -4,7 +4,7 @@ defmodule IFSC.Mixfile do
   def project do
     [
       app: :ifsc,
-      version: "1.4.3",
+      version: "1.4.4",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       description: description(),
@@ -70,7 +70,7 @@ defmodule IFSC.Mixfile do
 
   defp aliases do
     [
-      "test": ["ifsc.copy_json", "test"],
+      test: ["ifsc.copy_json", "test"],
       "hex.publish": ["ifsc.copy_json", "hex.publish"],
     ]
   end

@@ -40,3 +40,4 @@ mix.lock
 .yardoc
 Gemfile.lock
 InstalledFiles
+.wercker

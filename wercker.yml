@@ -85,5 +85,8 @@ elixir:
       name: get dependencies
       code: mix deps.get
     - script:
+      name: copy Files
+      code: mix ifsc.copy_json
+    - script:
       name: run tests
       code: mix test

@@ -1410,13 +1410,13 @@
   "BGBX": {
     "code": "BGBX",
     "type": "RRB",
-    "ifsc": "UCBA0RRBBKG",
-    "micr": "851704102",
-    "iin": "607377",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true
+    "ifsc": "PUNB0MBGB06",
+    "micr": "801811102",
+    "iin": "607136",
+    "apbs": false,
+    "ach_credit": false,
+    "ach_debit": false,
+    "nach_debit": false
   },
   "BGCX": {
     "code": "BGCX",
@@ -2414,7 +2414,7 @@
     "ifsc": "UTIB0SCJMSB",
     "micr": "577259251",
     "iin": "608029",
-    "apbs": false,
+    "apbs": true,
     "ach_credit": true,
     "ach_debit": false,
     "nach_debit": false
@@ -3523,7 +3523,7 @@
     "code": "FINF",
     "type": "SFB",
     "ifsc": "FSFB0000001",
-    "micr": "560775002",
+    "micr": "560775001",
     "iin": "608304",
     "apbs": true,
     "ach_credit": true,
@@ -4451,7 +4451,7 @@
     "iin": "608192",
     "apbs": true,
     "ach_credit": true,
-    "ach_debit": false,
+    "ach_debit": true,
     "nach_debit": false
   },
   "ITCX": {
@@ -4732,13 +4732,13 @@
   "JGBX": {
     "code": "JGBX",
     "type": "RRB",
-    "ifsc": "BKID0JHARGB",
-    "micr": "834807002",
-    "iin": "508526",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true
+    "ifsc": "SBIN0RRVCGB",
+    "micr": "822812002",
+    "iin": "607210",
+    "apbs": false,
+    "ach_credit": false,
+    "ach_debit": false,
+    "nach_debit": false
   },
   "JGCX": {
     "code": "JGCX",
@@ -7339,13 +7339,13 @@
   "MGRB": {
     "code": "MGRB",
     "type": "RRB",
-    "ifsc": "SBIN0RRMLGB",
-    "micr": "140846102",
-    "iin": "607241",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true
+    "ifsc": "PUNB0PGB003",
+    "micr": "152337302",
+    "iin": "607138",
+    "apbs": false,
+    "ach_credit": false,
+    "ach_debit": false,
+    "nach_debit": false
   },
   "MGSX": {
     "code": "MGSX",
@@ -7364,10 +7364,10 @@
     "ifsc": "HDFC0CMUB02",
     "micr": "403417001",
     "iin": "607572",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true
+    "apbs": false,
+    "ach_credit": false,
+    "ach_debit": false,
+    "nach_debit": false
   },
   "MHCB": {
     "code": "MHCB",
@@ -11013,13 +11013,13 @@
   "SJGX": {
     "code": "SJGX",
     "type": "RRB",
-    "ifsc": "PSIB0SGB002",
-    "micr": "151830052",
-    "iin": "607310",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true
+    "ifsc": "PUNB0PGB003",
+    "micr": "152337302",
+    "iin": "607138",
+    "apbs": false,
+    "ach_credit": false,
+    "ach_debit": false,
+    "nach_debit": false
   },
   "SJSX": {
     "code": "SJSX",
@@ -14071,7 +14071,7 @@
   "VYPX": {
     "code": "VYPX",
     "type": "O-UCB",
-    "ifsc": "UTIB0CCH274",
+    "ifsc": "HDFC0CVSBMS",
     "micr": "413592002",
     "iin": "990262",
     "apbs": true,
