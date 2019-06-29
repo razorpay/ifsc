@@ -29,3 +29,5 @@ deps
 *.tar
 fixture/
 src/IFSC-list.json
+.wercker
+.phpunit.result.cache
