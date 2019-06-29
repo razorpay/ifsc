@@ -1,7 +1,6 @@
 defmodule Mix.Tasks.Ifsc.CopyJson do
   use Mix.Task
 
-
   def run(_) do
     File.mkdir_p!("priv/ifsc-data")
     Enum.map(

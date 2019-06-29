@@ -70,7 +70,7 @@ defmodule IFSC.Mixfile do
 
   defp aliases do
     [
-      "test": ["ifsc.copy_json", "test"],
+      test: ["ifsc.copy_json", "test"],
       "hex.publish": ["ifsc.copy_json", "hex.publish"],
     ]
   end
