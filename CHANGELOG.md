@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.5][1.4.5] - 2019-07-15
+
+-   Regular Metadata Updates
+
 ## [1.4.4][1.4.4] - 2019-06-17
 
 ### Changed
@@ -51,7 +55,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/1.4.4...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/1.4.5...HEAD
+[1.4.5]: https://github.com/razorpay/ifsc/releases/tag/1.4.5
 [1.4.4]: https://github.com/razorpay/ifsc/releases/tag/1.4.4
 [1.4.3]: https://github.com/razorpay/ifsc/releases/tag/1.4.3
 [1.4.2]: https://github.com/razorpay/ifsc/releases/tag/1.4.2
