@@ -793,6 +793,7 @@ class Bank
     const NCBX = 'NCBX';
     const NCCX = 'NCCX';
     const NCOX = 'NCOX';
+    const NCUB = 'NCUB';
     const NCUX = 'NCUX';
     const NDCB = 'NDCB';
     const NDCX = 'NDCX';
@@ -969,6 +970,7 @@ class Bank
     const RJTX = 'RJTX';
     const RKCX = 'RKCX';
     const RLUX = 'RLUX';
+    const RMGB = 'RMGB';
     const RNBX = 'RNBX';
     const RNDX = 'RNDX';
     const RNGX = 'RNGX';
@@ -1105,6 +1107,7 @@ class Bank
     const SMVC = 'SMVC';
     const SMWX = 'SMWX';
     const SNAX = 'SNAX';
+    const SNBK = 'SNBK';
     const SNBX = 'SNBX';
     const SNCX = 'SNCX';
     const SNDX = 'SNDX';

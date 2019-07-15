@@ -784,6 +784,7 @@ module Razorpay
       NCBX = :NCBX
       NCCX = :NCCX
       NCOX = :NCOX
+      NCUB = :NCUB
       NCUX = :NCUX
       NDCB = :NDCB
       NDCX = :NDCX
@@ -959,6 +960,7 @@ module Razorpay
       RJTX = :RJTX
       RKCX = :RKCX
       RLUX = :RLUX
+      RMGB = :RMGB
       RNBX = :RNBX
       RNDX = :RNDX
       RNGX = :RNGX
@@ -1095,6 +1097,7 @@ module Razorpay
       SMVC = :SMVC
       SMWX = :SMWX
       SNAX = :SNAX
+      SNBK = :SNBK
       SNBX = :SNBX
       SNCX = :SNCX
       SNDX = :SNDX
