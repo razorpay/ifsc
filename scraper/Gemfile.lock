@@ -8,7 +8,7 @@ GEM
     rubyXL (3.4.6)
       nokogiri (>= 1.4.4)
       rubyzip (>= 1.1.6)
-    rubyzip (1.2.3)
+    rubyzip (2.0.0)
     spreadsheet (1.2.4)
       ruby-ole (>= 1.0)
 
