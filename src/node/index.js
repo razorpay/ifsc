@@ -26,9 +26,9 @@ let _validate = function(code) {
 
   if (isInteger(branchCode)) {
     return lookupNumeric(list, branchCode);
-  } else {
-    return lookupString(list, branchCode);
-  }
+  } 
+
+  return lookupString(list, branchCode);
 };
 
 let isInteger = function(code) {
