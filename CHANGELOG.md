@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.4.8][1.4.8] - 2019-10-14
 - Fix RBI combined excel path
+- Metadata Updates
 
 ## [1.4.7][1.4.7] - 2019-10-14
 - Minor Metadata updates
@@ -66,7 +67,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/1.4.5...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/1.4.8...HEAD
+
+[1.4.8]: https://github.com/razorpay/ifsc/releases/tag/1.4.8
+[1.4.7]: https://github.com/razorpay/ifsc/releases/tag/1.4.7
+[1.4.6]: https://github.com/razorpay/ifsc/releases/tag/1.4.6
 [1.4.5]: https://github.com/razorpay/ifsc/releases/tag/1.4.5
 [1.4.4]: https://github.com/razorpay/ifsc/releases/tag/1.4.4
 [1.4.3]: https://github.com/razorpay/ifsc/releases/tag/1.4.3
