@@ -17,6 +17,14 @@ the latest release.
 The latest [`build` pipeline][buildlist] on Wercker should result in a container
 with the complete dataset as well.
 
+### Source
+
+The source for the dataset are the following files:
+
+- List of NEFT IFSCs from [RBI website][combined]
+- List of RTGS IFSCs from [RBI website][rtgs]
+- List of ACH Live Banks from [NPCI website][ach] used for IFSC sublet branches
+
 ## Installation
 
 ## Ruby
@@ -307,7 +315,8 @@ The code in this repository is licensed under the MIT License. License
 text is available in the `LICENSE` file. The dataset itself
 is under public domain.
 
-[rbi]: https://goo.gl/T9188H "goo.gl link because RBI doesn't allow you to link to their website"
-[combined]: https://goo.gl/UryY8j "goo.gl link because RBI doesn't allow you to link to their website"
+[combined]: https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx
 [releases]: https://github.com/razorpay/ifsc/releases
 [buildlist]: https://app.wercker.com/razorpay/ifsc/runs?view=runs&q=pipeline%3Abuild
+[rtgs]: https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx
+[ach]: https://www.npci.org.in/national-automated-clearing-live-members-1

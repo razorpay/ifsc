@@ -5,8 +5,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+## [1.4.8][1.4.8] - 2019-10-14
+- Fix RBI combined excel path
+
 ## [1.4.7][1.4.7] - 2019-10-14
-- Metadata updates
+- Minor Metadata updates
 
 ## [1.4.6][1.4.6] - 2019-09-05
 
