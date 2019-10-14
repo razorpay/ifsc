@@ -14,7 +14,7 @@ echo "Sheet Download complete, starting export"
 # Convert the NEFT and RTGS lists from RBI
 ssconvert --export-file-per-sheet sheets/RTGEB0815.xlsx sheets/RTGS-%n.csv
 echo "Converted RTGS file to CSV"
-ssconvert --export-file-per-sheet sheets/68774.xls sheets/NEFT-%n.csv
+ssconvert --export-file-per-sheet sheets/68774.xlsx sheets/NEFT-%n.csv
 echo "Converted NEFT file to CSV"
 
 # This is the script that does all the data generation
