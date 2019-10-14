@@ -2,6 +2,7 @@ module Razorpay
   module IFSC
     module Bank
       AACX = :AACX
+      ABBL = :ABBL
       ABCX = :ABCX
       ABDX = :ABDX
       ABEX = :ABEX

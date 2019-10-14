@@ -10,6 +10,17 @@
     "ach_debit": true,
     "nach_debit": true
   },
+  "ABBL": {
+    "code": "ABBL",
+    "type": "Foreign",
+    "ifsc": "HDFC0CABBLM",
+    "micr": "400240262",
+    "iin": "990312",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "ABCX": {
     "code": "ABCX",
     "type": "DCCB",
@@ -376,7 +387,7 @@
   "AJSX": {
     "code": "AJSX",
     "type": "O-UCB",
-    "ifsc": "AJHC0000001",
+    "ifsc": "ICIC00AJHCB",
     "micr": "411805002",
     "iin": "607151",
     "apbs": true,
@@ -1990,6 +2001,17 @@
     "ach_debit": true,
     "nach_debit": true
   },
+  "BUCL": {
+    "code": "BUCL",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SUBBLR",
+    "micr": "573803302",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "BUCX": {
     "code": "BUCX",
     "type": "O-UCB",
@@ -2477,13 +2499,13 @@
   "CMPX": {
     "code": "CMPX",
     "type": "RRB",
-    "ifsc": "CBIN0R20002",
-    "micr": "454512201",
+    "ifsc": "BKID0NAMRGB",
+    "micr": "452653002",
     "iin": "607071",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true
+    "apbs": false,
+    "ach_credit": false,
+    "ach_debit": false,
+    "nach_debit": false
   },
   "CNRB": {
     "code": "CNRB",
@@ -3331,6 +3353,17 @@
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": true
+  },
+  "EBIL": {
+    "code": "EBIL",
+    "type": "Foreign",
+    "ifsc": "EBIL0000001",
+    "micr": "400770002",
+    "iin": "990315",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
   },
   "ECBL": {
     "code": "ECBL",
@@ -13876,7 +13909,7 @@
     "ifsc": "IBKL0031VCB",
     "micr": "530469002",
     "iin": "990086",
-    "apbs": false,
+    "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": true
