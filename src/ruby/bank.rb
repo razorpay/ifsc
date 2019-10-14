@@ -190,6 +190,7 @@ module Razorpay
       BTCX = :BTCX
       BTUX = :BTUX
       BUBX = :BUBX
+      BUCL = :BUCL
       BUCX = :BUCX
       BUGX = :BUGX
       BUNX = :BUNX
