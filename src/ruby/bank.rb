@@ -921,6 +921,7 @@ module Razorpay
       PUNB = :PUNB
       PUNX = :PUNX
       PURX = :PURX
+      PUSD = :PUSD
       PUSX = :PUSX
       PUUX = :PUUX
       PVAX = :PVAX

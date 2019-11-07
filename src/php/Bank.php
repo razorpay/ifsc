@@ -930,6 +930,7 @@ class Bank
     const PUNB = 'PUNB';
     const PUNX = 'PUNX';
     const PURX = 'PURX';
+    const PUSD = 'PUSD';
     const PUSX = 'PUSX';
     const PUUX = 'PUUX';
     const PVAX = 'PVAX';
