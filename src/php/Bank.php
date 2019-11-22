@@ -250,6 +250,7 @@ class Bank
     const CORP = 'CORP';
     const COSB = 'COSB';
     const CPDX = 'CPDX';
+    const CPSN = 'CPSN';
     const CRBX = 'CRBX';
     const CRES = 'CRES';
     const CRLY = 'CRLY';
@@ -304,6 +305,7 @@ class Bank
     const DICX = 'DICX';
     const DIUX = 'DIUX';
     const DJCX = 'DJCX';
+    const DKCL = 'DKCL';
     const DKSX = 'DKSX';
     const DLSC = 'DLSC';
     const DLXB = 'DLXB';

@@ -245,6 +245,7 @@ module Razorpay
       CORP = :CORP
       COSB = :COSB
       CPDX = :CPDX
+      CPSN = :CPSN
       CRBX = :CRBX
       CRES = :CRES
       CRLY = :CRLY
@@ -299,6 +300,7 @@ module Razorpay
       DICX = :DICX
       DIUX = :DIUX
       DJCX = :DJCX
+      DKCL = :DKCL
       DKSX = :DKSX
       DLSC = :DLSC
       DLXB = :DLXB
