@@ -1318,6 +1318,7 @@ class Bank
     const UNMX = 'UNMX';
     const UNSX = 'UNSX';
     const UOVB = 'UOVB';
+    const UPCB = 'UPCB';
     const UPCX = 'UPCX';
     const URBN = 'URBN';
     const URCX = 'URCX';

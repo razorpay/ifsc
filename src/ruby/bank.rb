@@ -1307,6 +1307,7 @@ module Razorpay
       UNMX = :UNMX
       UNSX = :UNSX
       UOVB = :UOVB
+      UPCB = :UPCB
       UPCX = :UPCX
       URBN = :URBN
       URCX = :URCX
