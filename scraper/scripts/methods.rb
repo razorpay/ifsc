@@ -43,7 +43,7 @@ end
 def parse_neft
   data = {}
   codes = Set.new
-  sheets = 0..3
+  sheets = 0..2
   sheets.each do |sheet_id|
     row_index = 0
     headings = []
@@ -179,6 +179,19 @@ def merge_dataset(neft, rtgs, imps)
     data << combined_data
   end
   [data, h]
+end
+
+def apply_patches(hash)
+  Dir.glob('../../src/patches/*.yml').each do |patch|
+    data = YAML.safe_load(File.read(patch))
+    patch = data['patch']
+    codes = data['ifsc']
+
+    codes.each do |code|
+      hash[code].merge!(patch)
+    end
+  end
+  hash
 end
 
 def export_json_list(list)

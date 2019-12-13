@@ -14,6 +14,10 @@ data, hash = merge_dataset(neft, rtgs, imps)
 
 puts "Got total #{hash.keys.size} entries"
 
+hash = apply_patches(hash)
+
+puts 'Applied patches'
+
 ifsc_codes_list = rtgs.keys + neft.keys + imps.keys
 
 log 'Exporting CSV'

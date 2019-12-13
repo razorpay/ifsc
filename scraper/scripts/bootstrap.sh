@@ -5,7 +5,7 @@ IFS=$'\n\t'
 mkdir --parents data/by-bank sheets
 
 # List of sublet branches, and IMPS only branches
-wget "https://www.npci.org.in/national-automated-clearing-live-members-1" --output-document=nach.html --user-agent="Firefox"
+wget --timeout=10 "https://www.npci.org.in/national-automated-clearing-live-members-1" --output-document=nach.html --user-agent="Firefox"
 wget --timestamping --no-verbose --directory-prefix=sheets/ "https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx" || true
 wget --timestamping --no-verbose --directory-prefix=sheets/ "https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx" || true
 

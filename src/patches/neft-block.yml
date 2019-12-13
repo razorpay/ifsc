@@ -1,10 +1,10 @@
 ---
 # https://github.com/razorpay/ifsc/issues/154
 patch:
-  "NEFT": false
+  NEFT: false
 ifsc:
  # These are not VALID IFSCs as of now, so are
- # left commented.
+ # left commented
  # - BCEY0NEFTSC
  # - KGRB00000SC
  # - KLGB0NEFT01
