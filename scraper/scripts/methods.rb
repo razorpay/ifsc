@@ -184,11 +184,20 @@ end
 def apply_patches(hash)
   Dir.glob('../../src/patches/*.yml').each do |patch|
     data = YAML.safe_load(File.read(patch))
-    patch = data['patch']
+
     codes = data['ifsc']
 
-    codes.each do |code|
-      hash[code].merge!(patch)
+    case data['action']
+    when 'patch'
+      patch = data['patch']
+      codes.each do |code|
+        hash[code].merge!(patch)
+      end
+    when 'delete'
+      codes.each do |code|
+        log "Removed #{code} from the list", :warn
+        hash.delete code
+      end
     end
   end
   hash

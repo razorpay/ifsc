@@ -1,5 +1,6 @@
 ---
 # https://github.com/razorpay/ifsc/issues/154
+action: patch
 patch:
   NEFT: false
 ifsc:
