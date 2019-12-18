@@ -181,7 +181,7 @@ def merge_dataset(neft, rtgs, imps)
   [data, h]
 end
 
-def apply_patches(hash)
+def apply_patches(list, hash)
   Dir.glob('../../src/patches/*.yml').each do |patch|
     data = YAML.safe_load(File.read(patch))
 
@@ -195,12 +195,13 @@ def apply_patches(hash)
       end
     when 'delete'
       codes.each do |code|
-        log "Removed #{code} from the list", :warn
         hash.delete code
+        list = list - [code]
+        log "Removed #{code} from the list", :warn
       end
     end
   end
-  hash
+  [list, hash]
 end
 
 def export_json_list(list)

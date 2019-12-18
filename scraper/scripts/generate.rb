@@ -14,7 +14,7 @@ data, hash = merge_dataset(neft, rtgs, imps)
 
 puts "Got total #{hash.keys.size} entries"
 
-hash = apply_patches(hash)
+data, hash = apply_patches(data, hash)
 
 puts 'Applied patches'
 
