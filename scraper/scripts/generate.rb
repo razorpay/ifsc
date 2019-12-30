@@ -1,22 +1,22 @@
 require './methods'
 
 imps = parse_imps
-puts "[NPCI] Got #{imps.keys.size} entries"
+log "[NPCI] Got #{imps.keys.size} entries"
 
 rtgs = parse_rtgs
-puts "[RTGS] Got #{rtgs.keys.size} entries"
+log "[RTGS] Got #{rtgs.keys.size} entries"
 
 neft = parse_neft
-puts "[NEFT] Got #{neft.keys.size} entries"
+log "[NEFT] Got #{neft.keys.size} entries"
 
 log 'Combining the above 3 lists'
 data, hash = merge_dataset(neft, rtgs, imps)
 
-puts "Got total #{hash.keys.size} entries"
+log "Got total #{hash.keys.size} entries", :info
 
 data, hash = apply_patches(data, hash)
 
-puts 'Applied patches'
+log 'Applied patches', :info
 
 ifsc_codes_list = rtgs.keys + neft.keys + imps.keys
 

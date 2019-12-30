@@ -1,5 +1,5 @@
 ---
-action: DELETE
+action: delete
 # The current RTGS File from RBI
 # contains an invalid entry
 ifsc:

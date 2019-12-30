@@ -187,7 +187,7 @@ def apply_patches(list, hash)
 
     codes = data['ifsc']
 
-    case data['action']
+    case data['action'].downcase
     when 'patch'
       patch = data['patch']
       codes.each do |code|
@@ -197,7 +197,7 @@ def apply_patches(list, hash)
       codes.each do |code|
         hash.delete code
         list = list - [code]
-        log "Removed #{code} from the list", :warn
+        log "Removed #{code} from the list", :info
       end
     end
   end
