@@ -111,12 +111,12 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = data[0].keys
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR']
     csv << keys
-    data.each do |row|
+    data.each do |code, ifsc_data|
       sorted_data = []
       keys.each do |key|
-        sorted_data << row[key]
+        sorted_data << ifsc_data.fetch(key, "NA")
       end
       csv << sorted_data
     end
@@ -156,9 +156,7 @@ def export_json_by_banks(list, ifsc_hash)
 end
 
 def merge_dataset(neft, rtgs, imps)
-  data = []
   h = {}
-
   combined_set = Set.new(neft.keys) + Set.new(rtgs.keys) + Set.new(imps.keys)
 
   combined_set.each do |ifsc|
@@ -175,13 +173,11 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['IMPS'] ||= true
     combined_data['MICR'] ||= nil
     h[ifsc] = combined_data
-
-    data << combined_data
   end
-  [data, h]
+  h
 end
 
-def apply_patches(list, hash)
+def apply_patches(dataset)
   Dir.glob('../../src/patches/*.yml').each do |patch|
     data = YAML.safe_load(File.read(patch))
 
@@ -191,17 +187,16 @@ def apply_patches(list, hash)
     when 'patch'
       patch = data['patch']
       codes.each do |code|
-        hash[code].merge!(patch)
+        dataset[code].merge!(patch) if dataset.has_key? code
       end
     when 'delete'
       codes.each do |code|
-        hash.delete code
-        list = list - [code]
+        dataset.delete code
         log "Removed #{code} from the list", :info
       end
     end
   end
-  [list, hash]
+  dataset
 end
 
 def export_json_list(list)
