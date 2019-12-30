@@ -433,6 +433,7 @@ module Razorpay
       IDIB = :IDIB
       IDUK = :IDUK
       IDUX = :IDUX
+      ILCB = :ILCB
       IMPX = :IMPX
       INCX = :INCX
       INDB = :INDB

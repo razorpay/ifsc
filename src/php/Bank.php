@@ -438,6 +438,7 @@ class Bank
     const IDIB = 'IDIB';
     const IDUK = 'IDUK';
     const IDUX = 'IDUX';
+    const ILCB = 'ILCB';
     const IMPX = 'IMPX';
     const INCX = 'INCX';
     const INDB = 'INDB';

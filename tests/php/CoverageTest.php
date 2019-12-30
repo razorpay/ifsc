@@ -174,13 +174,14 @@ class CoverageTest extends TestCase
 
             foreach ($yaml['ifsc'] as $code)
             {
-                if (IFSC::validate($code) !== true)
+                if (IFSC::validate($code) !== true and $yaml['action'] != 'delete')
                 {
                     $failures[] = $code;
                 }
             }
         }
 
+        // BANKOFBAROD is an invalid code, so it is marked as an exception
         $this->assertEquals([], $failures, "IFSC codes present in patches, but fails validation");
     }
 }
