@@ -250,6 +250,7 @@ class Bank
     const CORP = 'CORP';
     const COSB = 'COSB';
     const CPDX = 'CPDX';
+    const CPSN = 'CPSN';
     const CRBX = 'CRBX';
     const CRES = 'CRES';
     const CRLY = 'CRLY';
@@ -304,6 +305,7 @@ class Bank
     const DICX = 'DICX';
     const DIUX = 'DIUX';
     const DJCX = 'DJCX';
+    const DKCL = 'DKCL';
     const DKSX = 'DKSX';
     const DLSC = 'DLSC';
     const DLXB = 'DLXB';
@@ -436,6 +438,7 @@ class Bank
     const IDIB = 'IDIB';
     const IDUK = 'IDUK';
     const IDUX = 'IDUX';
+    const ILCB = 'ILCB';
     const IMPX = 'IMPX';
     const INCX = 'INCX';
     const INDB = 'INDB';
@@ -1316,6 +1319,7 @@ class Bank
     const UNMX = 'UNMX';
     const UNSX = 'UNSX';
     const UOVB = 'UOVB';
+    const UPCB = 'UPCB';
     const UPCX = 'UPCX';
     const URBN = 'URBN';
     const URCX = 'URCX';

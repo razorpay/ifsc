@@ -3,6 +3,7 @@ namespace Razorpay\IFSC\Tests;
 
 use Razorpay\IFSC\IFSC;
 use Razorpay\IFSC\Bank;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Checks coverage of all Bank Codes and Names and other lists
@@ -157,5 +158,30 @@ class CoverageTest extends TestCase
         }
 
         $this->assertEquals([], $failures, "IFSC codes present in NPCI, but missing in RBI lists");
+    }
+
+    /**
+     * Takes all the IFSC
+     * @return [type] [description]
+     */
+    public function testPatches()
+    {
+        $failures = [];
+
+        foreach (glob("src/patches/*.yml") as $file)
+        {
+            $yaml = Yaml::parseFile($file);
+
+            foreach ($yaml['ifsc'] as $code)
+            {
+                if (IFSC::validate($code) !== true and $yaml['action'] != 'delete')
+                {
+                    $failures[] = $code;
+                }
+            }
+        }
+
+        // BANKOFBAROD is an invalid code, so it is marked as an exception
+        $this->assertEquals([], $failures, "IFSC codes present in patches, but fails validation");
     }
 }

@@ -40,3 +40,13 @@ Releases are partially automated. To draft a new release, follow these steps:
 7. Tag the merge commit (don't use a prefix, just `X.Y.Z`)
 8. Push the tag to GitHub.
 9. Create a release on GitHub for the tag. Use `release.md` from Step 4 as the template. Replace `TODO` as applicable for the release.
+
+
+## Patches
+
+Sometimes, when you know a certain information to be incorrect in the dataset (temporarily or permanently), you might want to override what the official dataset says. For such cases, the library maintains patches in YAML format in the `patches/` directory. Each patch has 2 components:
+
+1. Diff that must be applied (`patch`)
+2. List of IFSC that it must be applied to (`ifsc`)
+
+Using this, you can selectively correct data for various IFSC, including turning "NEFT"/"IMPS" properties on or off, or setting the right state name.

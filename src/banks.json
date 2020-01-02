@@ -2606,6 +2606,17 @@
     "ach_debit": false,
     "nach_debit": false
   },
+  "CPSN": {
+    "code": "CPSN",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SCPSBN",
+    "micr": "577815102",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "CRBX": {
     "code": "CRBX",
     "type": "DCCB",
@@ -3128,6 +3139,17 @@
     "type": "O-UCB",
     "ifsc": "HDFC0CDILIP",
     "micr": "413800201",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
+  "DKCL": {
+    "code": "DKCL",
+    "type": "O-UCB",
+    "ifsc": "ICIC00DKDCB",
+    "micr": "274862001",
     "iin": null,
     "apbs": false,
     "ach_credit": true,

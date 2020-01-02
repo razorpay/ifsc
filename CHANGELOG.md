@@ -5,6 +5,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+## [1.4.10][1.4.10] - 2019-11-20
+- Metadata Updates
+- Support for patches that can override data for specific IFSC codes
+- NEFT Block for certain banks:
+    + Bank Of Ceylon
+    + Krung Thai Bank
+    + Kaveri Grameena Bank
+    + Kerala Gramin Bank
+    + Pragathi Krishna Gramin Bank
+    + Sbm Bank Mauritius Ltd
+
 ## [1.4.9][1.4.8] - 2019-11-07
 - Metadata Updates
 
@@ -68,6 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [unreleased]: https://github.com/razorpay/ifsc/compare/1.4.9...HEAD
 
+[1.4.10]: https://github.com/razorpay/ifsc/releases/tag/1.4.10
 [1.4.9]: https://github.com/razorpay/ifsc/releases/tag/1.4.9
 [1.4.8]: https://github.com/razorpay/ifsc/releases/tag/1.4.8
 [1.4.7]: https://github.com/razorpay/ifsc/releases/tag/1.4.7
