@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
-## [1.4.10][1.4.10] - 2019-11-20
+## [1.4.10][1.4.10] - 2020-01-02
 - Metadata Updates
 - Support for patches that can override data for specific IFSC codes
 - NEFT Block for certain banks:
