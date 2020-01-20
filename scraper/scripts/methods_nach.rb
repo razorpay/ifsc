@@ -57,6 +57,7 @@ def parse_nach
   end
 
   write_sublet_json(sublets)
+  banks = apply_bank_patches(banks)
   write_banks_json(banks)
 
   banks

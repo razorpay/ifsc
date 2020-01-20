@@ -177,8 +177,19 @@ def merge_dataset(neft, rtgs, imps)
   h
 end
 
+def apply_bank_patches(dataset)
+  Dir.glob('../../src/patches/banks/*.yml').each do |patch|
+    data = YAML.safe_load(File.read(patch))
+    banks = data['banks']
+    patch = data['patch']
+    banks.each do |bankcode|
+      dataset['bankcode'].merge!(patch)
+    end
+  end
+end
+
 def apply_patches(dataset)
-  Dir.glob('../../src/patches/*.yml').each do |patch|
+  Dir.glob('../../src/patches/ifsc/*.yml').each do |patch|
     data = YAML.safe_load(File.read(patch))
 
     codes = data['ifsc']
