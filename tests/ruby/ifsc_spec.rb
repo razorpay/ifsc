@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'ifsc'
 require 'bank'
 
@@ -120,5 +122,18 @@ end
 describe Razorpay::IFSC::Bank do
   it 'should define the relevant constants' do
     expect(described_class::PUNB).to eq :PUNB
+  end
+
+  it 'should return details from the bank code' do
+    expect(described_class.get_details(:PUNB)).to eq(code: 'PUNB',
+                                                     type: 'PSB',
+                                                     ifsc: 'PUNB0244200',
+                                                     micr: '110024001',
+                                                     bank_code: '024',
+                                                     iin: '508568',
+                                                     apbs: true,
+                                                     ach_credit: true,
+                                                     ach_debit: true,
+                                                     nach_debit: true)
   end
 end
