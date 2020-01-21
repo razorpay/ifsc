@@ -18,12 +18,13 @@ HEADINGS_INSERT = %w[
   STATE
 ].freeze
 
-def parse_imps
-  banks = parse_nach
+def parse_imps(banks)
   data = {}
   banknames = JSON.parse File.read('../../src/banknames.json')
   banks.each do |code, row|
     next unless row[:ifsc] && row[:ifsc].strip.to_s.length == 11
+
+
 
     data[row[:ifsc]] = {
       'BANK' => banknames[code],
@@ -34,13 +35,14 @@ def parse_imps
       'STATE' => 'NA',
       'ADDRESS' => 'NA',
       'CONTACT' => nil,
-      'IMPS' => true
+      'IMPS' => true,
+      'UPI' => banks[code][:upi] ? true : false
     }
   end
   data
 end
 
-def parse_neft
+def parse_neft(banks)
   data = {}
   codes = Set.new
   sheets = 0..2
@@ -56,6 +58,13 @@ def parse_neft
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '')
       codes.add row['IFSC']
       row['NEFT'] = true
+      bankcode = row['IFSC'][0..3]
+
+      if banks[bankcode] and banks[bankcode].key? :upi and banks[bankcode][:upi]
+        row['UPI'] = true
+      else
+        row['UPI'] = false
+      end
 
       if data.key? row['IFSC']
         "Second Entry found for #{row['IFSC']}, discarding"
@@ -67,7 +76,7 @@ def parse_neft
   data
 end
 
-def parse_rtgs
+def parse_rtgs(banks)
   data = {}
   sheets = 1..2
   sheets.each do |sheet_id|
@@ -91,6 +100,14 @@ def parse_rtgs
       original_ifsc = row['IFSC']
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '').strip
 
+      bankcode = row['IFSC'][0..3]
+
+      if banks[bankcode] and banks[bankcode].key? :upi and banks[bankcode][:upi]
+        row['UPI'] = true
+      else
+        row['UPI'] = false
+      end
+
       if row['IFSC'].length != 11
         ifsc_11 = row['IFSC'][0..10]
         log "IFSC code longer than 11 characters: #{original_ifsc}, using #{ifsc_11}", :warn
@@ -111,7 +128,7 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR']
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR','UPI']
     csv << keys
     data.each do |code, ifsc_data|
       sorted_data = []
@@ -171,6 +188,7 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['RTGS'] ||= false
     # IMPS is true everywhere, till we have clarity on this from NPCI
     combined_data['IMPS'] ||= true
+    combined_data['UPI']  ||= false
     combined_data['MICR'] ||= nil
     h[ifsc] = combined_data
   end
@@ -179,12 +197,11 @@ end
 
 def apply_bank_patches(dataset)
   Dir.glob('../../src/patches/banks/*.yml').each do |patch|
-    data = YAML.safe_load(File.read(patch))
+    data = YAML.safe_load(File.read(patch), [Symbol])
     banks = data['banks']
     patch = data['patch']
     banks.each do |bankcode|
       if dataset.key? bankcode
-        log "#{bankcode} patched", :info
         dataset[bankcode].merge!(patch)
       else
         log "#{bankcode} not found", :critical

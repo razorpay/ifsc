@@ -1,12 +1,15 @@
 require './methods'
 
-imps = parse_imps
+banks = parse_nach
+log "[NPCI] Parsed the NACH sheet, got #{banks.keys.size} banks"
+
+imps = parse_imps(banks)
 log "[NPCI] Got #{imps.keys.size} entries"
 
-rtgs = parse_rtgs
+rtgs = parse_rtgs(banks)
 log "[RTGS] Got #{rtgs.keys.size} entries"
 
-neft = parse_neft
+neft = parse_neft(banks)
 log "[NEFT] Got #{neft.keys.size} entries"
 
 log 'Combining the above 3 lists'

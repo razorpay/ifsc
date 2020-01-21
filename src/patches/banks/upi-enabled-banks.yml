@@ -4,7 +4,7 @@
 # Last Updated: Jan 2020 (Count = 143)
 action: patch
 patch:
-  upi: true
+  :upi: true
 banks:
 - ABHY
 - ACBX

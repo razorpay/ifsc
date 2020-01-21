@@ -57,6 +57,7 @@ def parse_nach
   end
 
   write_sublet_json(sublets)
+  # This is where the upi:true parameter to banks.json gets added
   banks = apply_bank_patches(banks)
   write_banks_json(banks)
   banks
