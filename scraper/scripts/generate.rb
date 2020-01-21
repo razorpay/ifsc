@@ -1,5 +1,7 @@
 require './methods'
 
+upi_banks = parse_upi
+
 banks = parse_nach
 log "[NPCI] Parsed the NACH sheet, got #{banks.keys.size} banks"
 

@@ -38,6 +38,22 @@ def bank_data(bank_code, data, _ifsc)
   }
 end
 
+def parse_upi
+  doc = Nokogiri::HTML(open('upi.html'))
+  header_cleared = false
+  count = doc.css('table>tbody')[0].css('tr').size
+
+  upi_patch_filename = '../../src/patches/banks/upi-enabled-banks.yml'
+  # Count the number of banks we have in our UPI patch file:
+  data = YAML.safe_load(File.read(upi_patch_filename), [Symbol])
+  if data['banks'].size != count
+    log "Number of UPI-enabled banks (#{data['banks'].size}) does not match the count on the NPCI website (#{count})}", :critical
+    log "Please check https://www.npci.org.in/upi-live-members and update src/patches/banks/upi-enabled-banks.yml", :debug
+    exit 1
+  end
+
+end
+
 def parse_nach
   doc = Nokogiri::HTML(open('nach.html'))
   header_cleared = false
