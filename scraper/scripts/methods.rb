@@ -183,9 +183,15 @@ def apply_bank_patches(dataset)
     banks = data['banks']
     patch = data['patch']
     banks.each do |bankcode|
-      dataset['bankcode'].merge!(patch)
+      if dataset.key? bankcode
+        log "#{bankcode} patched", :info
+        dataset[bankcode].merge!(patch)
+      else
+        log "#{bankcode} not found", :critical
+      end
     end
   end
+  dataset
 end
 
 def apply_patches(dataset)
