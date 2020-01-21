@@ -1274,6 +1274,7 @@ class Bank
     const TSMX = 'TSMX';
     const TSNX = 'TSNX';
     const TSPX = 'TSPX';
+    const TSSB = 'TSSB';
     const TSSX = 'TSSX';
     const TSUX = 'TSUX';
     const TTBX = 'TTBX';

@@ -24,6 +24,7 @@ class Name extends TestCase
             'ach_credit' => true,
             'ach_debit' => true,
             'nach_debit' => true,
+            'upi' => true,
             'name' => 'Punjab National Bank',
             'bank_code' => '024',
         ], Bank::getDetails('PUNB'));
@@ -38,6 +39,7 @@ class Name extends TestCase
             'ach_credit' => true,
             'ach_debit' => false,
             'nach_debit' => false,
+            'upi' => true,
             'name' => 'Fino Payments Bank',
             'bank_code' => null
         ], Bank::getDetails('FINO'));
