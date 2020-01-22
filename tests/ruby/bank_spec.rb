@@ -9,6 +9,7 @@ describe Razorpay::IFSC::Bank do
   it 'should return details from the bank code' do
     expect(described_class.get_details(:PUNB)).to eq(code: 'PUNB',
                                                      type: 'PSB',
+                                                     upi: true,
                                                      ifsc: 'PUNB0244200',
                                                      micr: '110024001',
                                                      bank_code: '024',
