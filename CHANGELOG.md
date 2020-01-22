@@ -5,8 +5,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 ### Added
+- Adds offline bank details fetch method in ruby.
 - Adds support for `upi: true` flag in `banks.json`
 - Adds `UPI: true/false` flag in `IFSC.csv` and `by-banks` JSON files
+
+### Changed
+- Improves coverage of bank constants in ruby.
 
 ## [1.4.10][1.4.10] - 2020-01-02
 - Metadata Updates
