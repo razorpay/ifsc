@@ -99,6 +99,12 @@ class CoverageTest extends TestCase
             $this->assertEquals($code, constant("Razorpay\IFSC\Bank::$code"));
 
             $this->assertNotNull(IFSC::getBankName($code), "Name missing for $code");
+
+            $innerCode = substr($code, 0, 4);
+
+            $this->assertEquals($code, constant("Razorpay\IFSC\Bank::$innerCode"));
+
+            $this->assertNotNull(IFSC::getBankName($innerCode), "Name missing for $innerCode");
         }
     }
 

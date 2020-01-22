@@ -54,6 +54,7 @@ module Razorpay
       AMBX = :AMBX
       AMCB = :AMCB
       AMCX = :AMCX
+      AMDN = :AMDN
       AMMX = :AMMX
       AMNX = :AMNX
       AMRX = :AMRX
@@ -84,6 +85,7 @@ module Razorpay
       ASBX = :ASBX
       ASHX = :ASHX
       ASKX = :ASKX
+      ASNX = :ASNX
       ASOX = :ASOX
       ASSX = :ASSX
       AUBL = :AUBL
@@ -641,6 +643,7 @@ module Razorpay
       KTBX = :KTBX
       KTCX = :KTCX
       KTDX = :KTDX
+      KTTX = :KTTX
       KUBX = :KUBX
       KUCB = :KUCB
       KUCX = :KUCX
@@ -732,6 +735,7 @@ module Razorpay
       MHUX = :MHUX
       MIZX = :MIZX
       MJCX = :MJCX
+      MKPB = :MKPB
       MKUX = :MKUX
       MKYX = :MKYX
       MLDX = :MLDX
@@ -741,6 +745,7 @@ module Razorpay
       MNCX = :MNCX
       MNSX = :MNSX
       MOGX = :MOGX
+      MOUX = :MOUX
       MPCX = :MPCX
       MPDX = :MPDX
       MPRX = :MPRX
@@ -786,6 +791,7 @@ module Razorpay
       NBAD = :NBAD
       NBBX = :NBBX
       NBCX = :NBCX
+      NBMX = :NBMX
       NBRD = :NBRD
       NCBL = :NCBL
       NCBX = :NCBX
@@ -949,6 +955,7 @@ module Razorpay
       RBBX = :RBBX
       RBCX = :RBCX
       RBIS = :RBIS
+      RBIH = :RBIH
       RCBX = :RCBX
       RCCX = :RCCX
       RCDX = :RCDX
@@ -1341,6 +1348,7 @@ module Razorpay
       VCBX = :VCBX
       VCCX = :VCCX
       VCNB = :VCNB
+      VCOB = :VCOB
       VCOX = :VCOX
       VDCX = :VDCX
       VDYX = :VDYX
