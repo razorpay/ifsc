@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## UNRELEASED
+### Added
+- Adds support for `upi: true` flag in `banks.json`
+- Adds `UPI: true/false` flag in `IFSC.csv` and `by-banks` JSON files
 
 ## [1.4.10][1.4.10] - 2020-01-02
 - Metadata Updates
