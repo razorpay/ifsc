@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Razorpay
   module IFSC
     module Bank
@@ -1415,6 +1417,23 @@ module Razorpay
       ZSKX = :ZSKX
       ZSLX = :ZSLX
       ZSMX = :ZSMX
+
+      class << self
+        def get_details(code)
+          h = data[code]
+          h[:bank_code] = (h[:micr][3..5] if h.key? :micr)
+          h
+        end
+
+        def parse_json_file(file)
+          file = "../#{file}.json"
+          JSON.parse(File.read(File.join(__dir__, file)), symbolize_names: true)
+        end
+
+        def data
+          @data ||= parse_json_file 'banks'
+        end
+      end
     end
   end
 end
