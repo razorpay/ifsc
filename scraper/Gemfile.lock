@@ -9,7 +9,7 @@ GEM
       nokogiri (>= 1.4.4)
       rubyzip (>= 1.3.0)
     rubyzip (2.0.0)
-    spreadsheet (1.2.5)
+    spreadsheet (1.2.6)
       ruby-ole (>= 1.0)
 
 PLATFORMS
