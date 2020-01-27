@@ -21,9 +21,9 @@ with the complete dataset as well.
 
 The source for the dataset are the following files:
 
-- List of NEFT IFSCs from [RBI website][combined]
-- List of RTGS IFSCs from [RBI website][rtgs]
-- List of ACH Live Banks from [NPCI website][ach] used for IFSC sublet branches
+-  List of NEFT IFSCs from [RBI website][combined]
+-  List of RTGS IFSCs from [RBI website][rtgs]
+-  List of ACH Live Banks from [NPCI website][ach] used for IFSC sublet branches
 
 ## Installation
 
@@ -151,6 +151,8 @@ ifsc.validate('BOTM0XEEMRA'); // returns false
 ifsc.fetchDetails('KKBK0000261').then(function(res) {
    console.log(res);
 });
+
+console.log(ifsc.bank.PUNB); // prints PUNB
 // Prints the entire JSON from https://ifsc.razorpay.com/KKBK0000261
 // res is an object, not string
 ```
