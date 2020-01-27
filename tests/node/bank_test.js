@@ -1,4 +1,5 @@
 const BANK = require('./../../src/node/bank');
+const IFSC = require('./../../src/node/index');
 const assert = require('assert');
 
 const fs = require('fs');
@@ -18,4 +19,5 @@ let file = fs
 	})
 	.forEach(code => {
 		assert.equal(BANK[code], code);
+		assert.equal(IFSC.bank[code], code);
 	});
