@@ -2,11 +2,11 @@ const fs = require('fs');
 const data = require('../IFSC');
 const https = require('https');
 const request = require('request');
+const BANK = require('./bank');
 
 const BASE_URL = 'https://ifsc.razorpay.com/';
 
 let _validate = function(code) {
-
   if (code.length !== 11) {
     return false;
   }
@@ -26,7 +26,7 @@ let _validate = function(code) {
 
   if (isInteger(branchCode)) {
     return lookupNumeric(list, branchCode);
-  } 
+  }
 
   return lookupString(list, branchCode);
 };
@@ -78,4 +78,5 @@ let _fetchDetails = function(code, cb) {
 module.exports = {
   validate: _validate,
   fetchDetails: _fetchDetails,
+  bank: BANK,
 };

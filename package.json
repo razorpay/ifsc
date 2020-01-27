@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node tests/node/validator_test.js && node tests/node/client_test.js"
+    "test": "node tests/node/validator_test.js && node tests/node/client_test.js && node tests/node/bank_test.js"
   },
   "repository": {
     "type": "git",

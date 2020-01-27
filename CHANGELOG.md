@@ -4,35 +4,42 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## UNRELEASED
+
 ### Added
-- Adds offline bank details fetch method in ruby.
-- Adds support for `upi: true` flag in `banks.json`
-- Adds `UPI: true/false` flag in `IFSC.csv` and `by-banks` JSON files
+
+-   Adds bank constants in nodejs
+-   Adds offline bank details fetch method in ruby.
+-   Adds support for `upi: true` flag in `banks.json`
+-   Adds `UPI: true/false` flag in `IFSC.csv` and `by-banks` JSON files
 
 ### Changed
-- Improves coverage of bank constants in ruby.
+
+-   Improves coverage of bank constants in ruby.
 
 ## [1.4.10][1.4.10] - 2020-01-02
-- Metadata Updates
-- Support for patches that can override data for specific IFSC codes
-- NEFT Block for certain banks:
-    + Bank Of Ceylon
-    + Krung Thai Bank
-    + Kaveri Grameena Bank
-    + Kerala Gramin Bank
-    + Pragathi Krishna Gramin Bank
-    + Sbm Bank Mauritius Ltd
+
+-   Metadata Updates
+-   Support for patches that can override data for specific IFSC codes
+-   NEFT Block for certain banks:
+    -   Bank Of Ceylon
+    -   Krung Thai Bank
+    -   Kaveri Grameena Bank
+    -   Kerala Gramin Bank
+    -   Pragathi Krishna Gramin Bank
+    -   Sbm Bank Mauritius Ltd
 
 ## [1.4.9][1.4.8] - 2019-11-07
-- Metadata Updates
+
+-   Metadata Updates
 
 ## [1.4.7][1.4.7] - 2019-10-14
-- Minor Metadata updates
+
+-   Minor Metadata updates
 
 ## [1.4.6][1.4.6] - 2019-09-05
 
-- Metadata updates
-- Catholic Syrian Bank is renamed to CSB Bank
+-   Metadata updates
+-   Catholic Syrian Bank is renamed to CSB Bank
 
 ## [1.4.5][1.4.5] - 2019-07-15
 
@@ -85,7 +92,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
 [unreleased]: https://github.com/razorpay/ifsc/compare/1.4.9...HEAD
-
 [1.4.10]: https://github.com/razorpay/ifsc/releases/tag/1.4.10
 [1.4.9]: https://github.com/razorpay/ifsc/releases/tag/1.4.9
 [1.4.8]: https://github.com/razorpay/ifsc/releases/tag/1.4.8
