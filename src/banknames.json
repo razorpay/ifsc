@@ -99,7 +99,11 @@
   "AWUX": "Alwar Urban Co-operative Bank",
   "AZAX": "Azad Co-operative Bank",
   "AZPX": "Amravati Zilla Parishad Shikshak Sahakari Bank",
+<<<<<<< HEAD
   "AZSX": "Almora Zila d Bank",
+=======
+  "AZSX": "Almora Zila Sahakari Bank",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "AZUX": "Azad Urban Co-operative Bank Hubli",
   "BACB": "Bassein Catholic Co-operative Bank",
   "BACX": "Bihar Awami Co-operative Bank",
@@ -195,7 +199,11 @@
   "BRDX": "Baroda Central Co-operative Bank",
   "BRGX": "Baroda Rajasthan Kshetriya Gramin Bank",
   "BRMX": "Bramhapuri Urban Co-operative Bank",
+<<<<<<< HEAD
   "BRSX": "Baran Nagrik Bank",
+=======
+  "BRSX": "Baran Nagrik Sahakari Bank",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "BRUX": "Bharuch District Central Co-operative Bank Bharuc",
   "BSBX": "Baramati Sahakari Bank",
   "BSCX": "Baidyabati Sheoraphuli Co-operative Bank",
@@ -208,7 +216,11 @@
   "BUNX": "Bundi Central Co-operative Bank",
   "BURX": "Burdwan Central Co-operative Bank",
   "BUSX": "Business Co-operative Bank",
+<<<<<<< HEAD
   "BUZX": "Badaun Zila d Bank",
+=======
+  "BUZX": "Badaun Zila Sahakari Bank",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "BVNX": "Bhavnagar District Co-operative Bank",
   "BVSX": "Bhavani Sahakari Bank",
   "BWCX": "Brahmawart Commercial Co-operative Bank",
@@ -226,7 +238,11 @@
   "CGBX": "Chhattisgarh Rajya Gramin Bank",
   "CGGX": "Chaitanya Godavari Grameena Bank",
   "CHAS": "JP Morgan Chase Bank NA",
+<<<<<<< HEAD
   "CHAX": "Chamoli Zila d Bank",
+=======
+  "CHAX": "Chamoli Zila Sahakari Bank",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "CHBX": "Chamba Urban Co-operative Bank Chamba",
   "CHCX": "Churu Central Co-operative Bank",
   "CHDX": "Chittoor District Co-operative Central Bank",
@@ -319,7 +335,11 @@
   "DIUX": "Dilip Urban Co-operative Bank",
   "DJCX": "Deoghar Jamtara Central Co-operative Bank Deoghar",
   "DKCL": "Deoria Kasia District Co-operative Bank",
+<<<<<<< HEAD
   "DKSX": "Dausa Kendriya Bank",
+=======
+  "DKSX": "Dausa Kendriya Sahakari Bank Dausa",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "DLSC": "Delhi State Co-operative Bank",
   "DLXB": "Dhanlaxmi Bank",
   "DMCB": "Deccan Merchants Co-operative Bank",
@@ -376,7 +396,11 @@
   "FSCX": "Fatehgrah Sahib Central Co-operative Bank",
   "FSFB": "Fincare Small Finance Bank",
   "FZCX": "Ferozepur Central Co-operative. Bank",
+<<<<<<< HEAD
   "FZSX": "Firozabad Zila d Bank",
+=======
+  "FZSX": "Firozabad Zila Sahakari Bank",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "GACX": "Gujarat Ambuja Co-operative Bank",
   "GADX": "Gadhinglaj Urban Co-operative Bank",
   "GAMX": "Ganga Mercantile Urban Co-operative Bank",
@@ -489,7 +513,11 @@
   "JASX": "Janatha Seva Co-operative Bank",
   "JAUX": "Jaihind Urban Co-operative Bank",
   "JBHX": "Jila Sahakari Kendriya Bank Maryadit Bhind",
+<<<<<<< HEAD
   "JBIX": "Jila d Kendriya Bank Maryadit Bilaspur",
+=======
+  "JBIX": "Jila Sahakari Kendriya Bank Maryadit Bilaspur",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "JBMX": "Jila Sahakari Kendriya Bank Maryadit Sagar",
   "JCBX": "Janata Co-operative Bank Malegaon.",
   "JCCB": "Jaipur Central Co-operative Bank",
@@ -508,7 +536,11 @@
   "JHUX": "Jhunjhunu Kenddriya Sahakari Bak",
   "JIBX": "Jila Sahakari Kendriya Bank Maryadit Balaghat",
   "JICX": "Jila Sahakari Kendriya Bank Maryadit Chhindwara",
+<<<<<<< HEAD
   "JIDX": "Jila d Kendriya Bank Mydt Damoh",
+=======
+  "JIDX": "Jila Sahakari Kendriya Bank Mydt Damoh",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "JIGX": "Jila Sahakari Kendriya Bank Mydt Guna",
   "JIKX": "Jila Sahakari Kendariya Bank Mydt Khandwa",
   "JIMX": "Jila Sahakari Kendriya Bank Mydt Mandla",
@@ -519,6 +551,7 @@
   "JISX": "Jila Sahakari Kendriya Bank Maryadit Sidhi",
   "JIVX": "Jivaji Sahakari Bank  Ichalkaranji",
   "JJCX": "Jhajjar Central Co-operative Bank",
+<<<<<<< HEAD
   "JJHX": "Jila d Kendriya Bank Mydt Jhabua",
   "JJSB": "Jalgaon Janata Bank",
   "JKAX": "Jila Sahakari Kendriya Bank Mydt Ambikapur",
@@ -526,6 +559,15 @@
   "JKDX": "Jila Sahakari Kendriya Bank Mydt. Jabalpur",
   "JKEX": "Jhalawar Kendriya Bank",
   "JKHX": "Jila Kendriya Bank Maryadit Khargone",
+=======
+  "JJHX": "Jila Sahakari Kendriya Bank Mydt Jhabua",
+  "JJSB": "Jalgaon Janata Sahakari Bank",
+  "JKAX": "Jila Sahakari Kendriya Bank Mydt Ambikapur",
+  "JKCX": "Janakalyan Co-operative Bank Nashik",
+  "JKDX": "Jila Sahakari Kendriya Bank Mydt. Jabalpur",
+  "JKEX": "Jhalawar Kendriya Sahakari Bank",
+  "JKHX": "Jila Sahakari Kendriya Bank Maryadit Khargone",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "JKMX": "Jila Sahakari Kendriya Bank Maryadit Jagdalpur",
   "JKRX": "Jilla Sahakari Kendriya Bank Mydt Raisen",
   "JKSX": "J&k State Co-operative Bank",
@@ -537,7 +579,11 @@
   "JMAX": "Jila Sahakari Kendriya Bank Mydt Mandsaur",
   "JMBX": "Jila Sahakari Kendriya Bank Maryadit Betul",
   "JMCX": "Jalna Merchants Co-operative Bank",
+<<<<<<< HEAD
   "JMDX": "Jila d Kendriya Bank Mydt Datia",
+=======
+  "JMDX": "Jila Sahakari Kendriya Bank Mydt Datia",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "JMHX": "Jamshedpur Urban Co-operative Bank",
   "JMMX": "Jammu Central Co-operative Bank",
   "JMOX": "Jila Sahakari Kendriya Bank Mydt Morena",
@@ -623,7 +669,11 @@
   "KGDX": "Khagaria District Central Co-operative Bank",
   "KGRB": "Kaveri Grameena Bank",
   "KGSX": "Kashi Gomti Samyut Gramin Bank",
+<<<<<<< HEAD
   "KHAX": "Khalilabad Nagar d Bank",
+=======
+  "KHAX": "Khalilabad Nagar Sahakari Bank",
+>>>>>>> b5c1a95 (Adds SVCB custom sublets)
   "KHCX": "Khardah Co-operative Bank",
   "KHDX": "Kheda People's Co-operative Bank",
   "KHNX": "Kohinoor Sahakari Bank Ichalkaranji",
@@ -634,7 +684,7 @@
   "KJSX": "Karad Janata Sahakari Bank",
   "KKBK": "Kotak Mahindra Bank",
   "KKMX": "Kankaria Mainagar Nagrik Sahakari Bank",
-  "KKSX": "Kumbhi Kasari Bank Kuditre",
+  "KKSX": "Kumbhi Kasari Sahakari Bank Kuditre",
   "KLGB": "Kerala Gramin Bank",
   "KLMX": "Kollam District Co-operative Bank",
   "KMCB": "Kokan Mercantile Co-operative Bank",
@@ -653,8 +703,8 @@
   "KOEX": "KEB Hana Bank",
   "KOLH": "Kolhapur Urban Co-operative Bank",
   "KORX": "Koraput Central Co-operative Bank",
-  "KOSX": "Kota Nagrik d Bank Kota",
   "KOTX": "Kodinar Taluka Co-operative Banking Union",
+  "KOSX": "Kota Nagrik Sahakari Bank Kota",
   "KOYX": "Koylanchal Urban Co-operative Bank",
   "KPCX": "Kolhapur District Central Co-operative Bank",
   "KRCX": "Kolar And Chickballapur Dt Co-operative Central Bank",
