@@ -6,146 +6,147 @@ action: patch
 patch:
   :upi: true
 banks:
-- ABHY
-- ACBX
-- ADBX
-- AGVX
-- AIRP
-- ALLA
-- AMCB
-- ANDB
-- APBL
-- APGB
-- APGB
-- APMC
-- ASBL
-- AUBL
-- BACB
-- BARB
-- BDBL
-- BGGX
-- BHUX
-- BKDN
-- BKID
-- BRDX
-- BRGX
-- BUGX
-- CBIN
-- CGGX
-- CITI
-- CIUB
-- CNRB
-- COLX
-- CORP
-- COSB
-- CRSX
-- CSBK
-- DBSS
-- DCBL
-- DEGX
-- DEUT
-- DGBX
-- DLXB
-- DNSB
-- ESFB
-- ESMF
-- FDRL
-- FINO
-- FSFB
-- GSCB
-- HCBX
-- HDFC
-- HGBX
-- HMBX
-- HSBC
-- HUTX
-- IBKL
-- ICIC
-- IDFB
-- IDIB
-- INDB
-- IOBA
-- IPPB
-- JAKA
-- JIOP
-- JJSB
-- JSBP
-- JSFB
-- KAIJ
-- KARB
-- KCCB
-- KDIX
-- KGSX
-- KJSB
-- KKBK
-- KLGB
-- KVBL
-- KVGB
-- LAVB
-- MAHB
-- MAHG
-- MBGX
-- MCBL
-- MERX
-- MRBX
-- MRTX
-- MSBL
-- MSCI
-- MSNU
-- MUBL
-- MUSX
-- MZRX
-- NKGS
-- NSPB
-- NTBL
-- ORBC
-- PASX
-- PJSB
-- PKGB
-- PKGB
-- PMCB
-- PRTH
-- PSIB
-- PUGX
-- PUNB
-- PURX
-- PYTM
-- RATN
-- RMGB
-- RNSB
-- SAGX
-- SBIN
-- SCBL
-- SCOB
-- SIBL
-- SPCB
-- SRCB
-- SSDX
-- SUBX
-- SURY
-- SUTB
-- SUVX
-- SVCB
-- SYNB
-- TBSB
-- TGBX
-- TJSB
-- TMBL
-- TSAB
-- TUDX
-- TUMX
-- UBIN
-- UCBA
-- UMSX
-- USFB
-- UTBI
-- UTGX
-- UTIB
-- VARA
-- VGBX
-- VIJB
-- VIJX
-- VSBL
-- VVSB
-- XJKG
-- YESB
+  - ABHY
+  - ACBX
+  - ADBX
+  - AGVX
+  - AIRP
+  - ALLA
+  - AMCB
+  - ANDB
+  - APBL
+  - APGB
+  - APGB
+  - APMC
+  - ASBL
+  - AUBL
+  - BACB
+  - BARB
+  - BDBL
+  - BGGX
+  - BHUX
+  - BKDN
+  - BKID
+  - BRDX
+  - BRGX
+  - BUGX
+  - CBIN
+  - CGGX
+  - CITI
+  - CIUB
+  - CNRB
+  - COLX
+  - CORP
+  - COSB
+  - CRSX
+  - CSBK
+  - DBSS
+  - DCBL
+  - DEGX
+  - DEUT
+  - DGBX
+  - DLXB
+  - DNSB
+  - ESFB
+  - ESMF
+  - FDRL
+  - FINO
+  - FSFB
+  - GSCB
+  - HCBX
+  - HDFC
+  - HGBX
+  - HMBX
+  - HSBC
+  - HUTX
+  - IBKL
+  - ICIC
+  - IDFB
+  - IDIB
+  - INDB
+  - IOBA
+  - IPPB
+  - JAKA
+  - JIOP
+  - JJSB
+  - JSBP
+  - JSFB
+  - KAIJ
+  - KARB
+  - KCCB
+  - KDIX
+  - KGSX
+  - KJSB
+  - KKBK
+  - KLGB
+  - KVBL
+  - KVGB
+  - LAVB
+  - MAHB
+  - MAHG
+  - MBGX
+  - MCBL
+  - MERX
+  - MRBX
+  - MRTX
+  - MSBL
+  - MSCI
+  - MSNU
+  - MUBL
+  - MUSX
+  - MZRX
+  - NKGS
+  - NSPB
+  - NTBL
+  - ORBC
+  - PASX
+  - PJSB
+  - PKGB
+  - PKGB
+  - PMCB
+  - PRTH
+  - PSIB
+  - PTSX
+  - PUGX
+  - PUNB
+  - PURX
+  - PYTM
+  - RATN
+  - RMGB
+  - RNSB
+  - SAGX
+  - SBIN
+  - SCBL
+  - SCOB
+  - SIBL
+  - SPCB
+  - SRCB
+  - SSDX
+  - SUBX
+  - SURY
+  - SUTB
+  - SUVX
+  - SVCB
+  - SYNB
+  - TBSB
+  - TGBX
+  - TJSB
+  - TMBL
+  - TSAB
+  - TUDX
+  - TUMX
+  - UBIN
+  - UCBA
+  - UMSX
+  - USFB
+  - UTBI
+  - UTGX
+  - UTIB
+  - VARA
+  - VGBX
+  - VIJB
+  - VIJX
+  - VSBL
+  - VVSB
+  - XJKG
+  - YESB

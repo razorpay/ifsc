@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+## 1.5.0
+
 ### Added
 
 -   Adds bank constants in nodejs
