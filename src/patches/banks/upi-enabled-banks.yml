@@ -16,13 +16,14 @@ banks:
   - ANDB
   - APBL
   - APGB
-  - APGB
+  - APGV
   - APMC
   - ASBL
   - AUBL
   - BACB
   - BARB
   - BDBL
+  - BGBX
   - BGGX
   - BHUX
   - BKDN
@@ -84,7 +85,6 @@ banks:
   - LAVB
   - MAHB
   - MAHG
-  - MBGX
   - MCBL
   - MERX
   - MRBX
@@ -100,6 +100,7 @@ banks:
   - NTBL
   - ORBC
   - PASX
+  - PGBX
   - PJSB
   - PKGB
   - PMCB
