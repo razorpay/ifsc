@@ -450,8 +450,8 @@
     "type": "DCCB",
     "ifsc": null,
     "micr": "211490002",
-    "iin": null,
-    "apbs": false,
+    "iin": "990320",
+    "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": true
@@ -1279,6 +1279,17 @@
     "ach_debit": false,
     "nach_debit": false
   },
+  "BDBB": {
+    "code": "BDBB",
+    "type": "DCCB",
+    "ifsc": "ICIC00BAHDC",
+    "micr": "271804002",
+    "iin": "990316",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "BDBL": {
     "code": "BDBL",
     "type": "Private",
@@ -1410,7 +1421,8 @@
     "apbs": false,
     "ach_credit": false,
     "ach_debit": false,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "BGCX": {
     "code": "BGCX",
@@ -2943,8 +2955,8 @@
     "type": "DCCB",
     "ifsc": "ICIC00VDCBL",
     "micr": "221299001",
-    "iin": null,
-    "apbs": false,
+    "iin": "990317",
+    "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": true
@@ -4114,6 +4126,17 @@
     "ach_debit": false,
     "nach_debit": false
   },
+  "HDCL": {
+    "code": "HDCL",
+    "type": "DCCB",
+    "ifsc": "ICIC00HDCBL",
+    "micr": "241801001",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "HDCX": {
     "code": "HDCX",
     "type": "DCCB",
@@ -4305,6 +4328,17 @@
     "ach_debit": false,
     "nach_debit": false
   },
+  "HUCB": {
+    "code": "HUCB",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SHUCBH",
+    "micr": "583913501",
+    "iin": "608406",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "HUCX": {
     "code": "HUCX",
     "type": "O-UCB",
@@ -4425,7 +4459,7 @@
     "type": "O-UCB",
     "ifsc": "UTIB0SICB25",
     "micr": "587855501",
-    "iin": null,
+    "iin": "607282",
     "apbs": false,
     "ach_credit": true,
     "ach_debit": false,
@@ -7154,8 +7188,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
+    "nach_debit": true
   },
   "MBLX": {
     "code": "MBLX",
@@ -9182,7 +9215,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": true
+    "nach_debit": true,
+    "upi": true
   },
   "PGCX": {
     "code": "PGCX",
@@ -9549,7 +9583,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "PUBX": {
     "code": "PUBX",

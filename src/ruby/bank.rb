@@ -127,6 +127,7 @@ module Razorpay
       BCEY = :BCEY
       BCOX = :BCOX
       BCUB = :BCUB
+      BDBB = :BDBB
       BCUX = :BCUX
       BDBL = :BDBL
       BDBX = :BDBX
@@ -404,6 +405,7 @@ module Razorpay
       HCBX = :HCBX
       HCCX = :HCCX
       HCLX = :HCLX
+      HDCL = :HDCL
       HDCX = :HDCX
       HDFC = :HDFC
       HGBX = :HGBX
@@ -423,6 +425,7 @@ module Razorpay
       HSSX = :HSSX
       HUBX = :HUBX
       HUCX = :HUCX
+      HUCB = :HUCB
       HUTX = :HUTX
       HVBK = :HVBK
       IBBK = :IBBK
