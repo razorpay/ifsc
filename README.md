@@ -119,6 +119,7 @@ Bank::getDetails('PUNB');
 //    'nach_debit' => true,
 //    'name' => 'Punjab National Bank',
 //    'bank_code' => '024',
+//    'upi' => true
 // ]
 
 $client = new Client();

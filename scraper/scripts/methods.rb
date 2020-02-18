@@ -45,7 +45,7 @@ end
 def parse_neft(banks)
   data = {}
   codes = Set.new
-  sheets = 0..2
+  sheets = 0..1
   sheets.each do |sheet_id|
     row_index = 0
     headings = []
