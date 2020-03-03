@@ -2,6 +2,8 @@ require './methods'
 
 upi_banks = parse_upi
 
+validate_sbi_swift
+
 banks = parse_nach
 log "[NPCI] Parsed the NACH sheet, got #{banks.keys.size} banks"
 

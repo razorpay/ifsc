@@ -5,6 +5,8 @@ require 'yaml'
 require 'json'
 require 'set'
 require 'fileutils'
+require 'nokogiri'
+require 'open-uri'
 require './methods_nach'
 
 HEADINGS_INSERT = %w[
@@ -296,4 +298,32 @@ def log(msg, status = :info)
     msg = "[DEBG] #{msg}"
   end
   puts msg
+end
+
+# Downloads the SWIFT data from
+# https://sbi.co.in/web/nri/quick-links/swift-codes
+def validate_sbi_swift
+  doc = Nokogiri::HTML(open("https://sbi.co.in/web/nri/quick-links/swift-codes"))
+  table = doc.css('tbody')[0]
+  website_bics = Set.new
+
+  for row in table.css('tr')
+    website_bics.add row.css('td')[2].text.gsub(/[[:space:]]/, '')
+  end
+
+  # Validate that all of these are covered in our swift patch
+  patch_bics = YAML.safe_load(File.read('../../src/patches/ifsc/sbi-swift.yml'))['patches']
+    .map(&:values)
+    .map {|x| x[0]['SWIFT']}
+    .to_set
+
+  missing = (website_bics - patch_bics)
+  if missing.size != 0
+    log "[SBI] Missing SWIFT/BICs for SBI. Please match https://sbi.co.in/web/nri/quick-links/swift-codes to src/patches/ifsc/sbi-swift.yml", :critical
+    log "[SBI] You can use https://www.sbi.co.in/web/home/locator/branch to find IFSC from BRANCH code or guess it as SBIN00+BRANCH_CODE", :info
+    log "[SBI] Count of Missing BICS: #{missing.size}", :debug
+    log "[SBI] Missing BICS follow", :debug
+    log missing.to_a.join(", "), :debug
+    exit 1
+  end
 end
