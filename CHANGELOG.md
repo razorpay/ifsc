@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+### Addded
+
+-   SWIFT support for SBI Bank.
+
 ## 1.5.6
 
 - Metadata updates
