@@ -63,9 +63,9 @@ defmodule IFSCTest do
 
     test "should return the correct bank name and code for sublet branches" do
       assert {:ok, %IFSC{
-        bank: "Allahabad Up Gramin Bank",
-        bank_code: "AUGX",
-      }} = IFSC.validate("ALLA0AU1002")
+        bank: "Darjeeling District Central Co-operative Bank",
+        bank_code: "DDCX",
+      }} = IFSC.validate("WBSC0DJCB01")
     end
   end
 end
