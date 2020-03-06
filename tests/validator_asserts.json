@@ -4,7 +4,10 @@
 		"HDFC0002854": true,
 		"KARB0000001": true,
 		"DLXB0000097": true,
-		"ICIC0007429": true
+		"ICIC0007429": true,
+		"IDIB000J052": true,
+		"IDIB000C040": true,
+		"UTIB0001688": true
 	},
 	"testValidateStringLookup": {
 		"BOTM0NEEMRA": true,
