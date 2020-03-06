@@ -1,0 +1,10 @@
+---
+# https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=49476
+action: patch
+patch:
+  :upi: false
+  :neft: false
+  :imps: false
+  :rtgs: false
+banks:
+  - YESB
