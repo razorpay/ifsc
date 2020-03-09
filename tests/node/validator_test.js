@@ -1,7 +1,7 @@
-var ifsc = require("./../../src/node/index");
-var assertions = require("../validator_asserts.json");
+var ifsc = require('./../../src/node/index');
+var assertions = require('../validator_asserts.json');
 
-var assert = require("assert");
+var assert = require('assert');
 
 for (var testLabel in assertions) {
   var group = assertions[testLabel];
@@ -10,6 +10,9 @@ for (var testLabel in assertions) {
 
 function assertGroup(message, group) {
   for (var code in group) {
-    assert.equal(group[code], ifsc.validate(code), message);
+    if (group[code] != ifsc.validate(code)) {
+      console.log(`Failed ${message}. Expected: ` + group[code]);
+      assert.fail(group[code], ifsc.validate(code), message);
+    }
   }
 }
