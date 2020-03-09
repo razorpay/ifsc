@@ -68,7 +68,9 @@ class DatasetTest extends TestCase
             foreach ($data as $row) {
                 $ifsc = $row['IFSC'];
                 $fields = array_keys($row);
-                $this->assertContains("CITY", $fields, "$ifsc missing CITY in $json");
+                foreach (self::KNOWN_FIELDS as $field) {
+                    $this->assertContains($field, $fields, "$ifsc missing $field in $json");
+                }
             }
         }
     }
