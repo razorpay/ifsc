@@ -1,17 +1,17 @@
-const fs = require("fs");
-const data = require("../IFSC");
-const https = require("https");
-const request = require("request");
-const BANK = require("./bank");
+const fs = require('fs');
+const data = require('../IFSC');
+const https = require('https');
+const request = require('request');
+const BANK = require('./bank');
 
-const BASE_URL = "https://ifsc.razorpay.com/";
+const BASE_URL = 'https://ifsc.razorpay.com/';
 
 let _validate = function(code) {
   if (code.length !== 11) {
     return false;
   }
 
-  if (code[4] !== "0") {
+  if (code[4] !== '0') {
     return false;
   }
 
@@ -32,11 +32,7 @@ let _validate = function(code) {
 };
 
 let isInteger = function(code) {
-  if (isNaN(parseInt(code, 10))) {
-    return false;
-  }
-
-  return true;
+  return code.match(/^(\d)+$/);
 };
 
 let lookupNumeric = function(list, code) {
@@ -62,11 +58,11 @@ let _fetchDetails = function(code, cb) {
 
   return new Promise(function(resolve, reject) {
     if (!_validate(code)) {
-      reject("Invalid IFSC Code");
+      reject('Invalid IFSC Code');
     } else {
       request.get({ url: url, json: true }, function(err, res, data) {
         if (err) {
-          reject("API Call failed: " + err.msg);
+          reject('API Call failed: ' + err.msg);
         } else {
           resolve(data);
         }
@@ -78,5 +74,5 @@ let _fetchDetails = function(code, cb) {
 module.exports = {
   validate: _validate,
   fetchDetails: _fetchDetails,
-  bank: BANK
+  bank: BANK,
 };

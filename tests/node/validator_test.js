@@ -11,8 +11,10 @@ for (var testLabel in assertions) {
 function assertGroup(message, group) {
   for (var code in group) {
     if (group[code] !== ifsc.validate(code)) {
-      console.log(`Failed ${message}. Expected: ` + group[code]);
-      assert.fail(group[code], ifsc.validate(code), message);
+      console.log(
+        `Failed ${message}. Expected: ` + group[code] + ` for ${code}`
+      );
+      process.exit(1);
     }
   }
 }
