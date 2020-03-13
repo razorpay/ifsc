@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     mini_portile2 (2.4.0)
-    nokogiri (1.10.8)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     ruby-ole (1.2.12.2)
     rubyXL (3.4.12)
