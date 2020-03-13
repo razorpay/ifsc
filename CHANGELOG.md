@@ -5,6 +5,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+## 1.5.1
+
+### Changed
+
+-   Metadata updates
+-   Madhya Bihar Gramin Bank and Bihar Gramin Bank merged to form
+    Dakshin Bihar Gramin Bank.
+
+### Fixed
+
+-   Fixes a critical bug in the node.js SDK which reported some valid IFSCs as invalid.
+-   `CENTRE` and `CITY` fields should now be present across all rows. If we don't have a value, it will be set to `NA`.
+
+### Added
+
+-   New `DatasetTest` to ensure fields don't get missed out in the future
+
 ## 1.5.0
 
 ### Added

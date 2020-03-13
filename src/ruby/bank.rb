@@ -128,6 +128,7 @@ module Razorpay
       BCOX = :BCOX
       BCUB = :BCUB
       BCUX = :BCUX
+      BDBB = :BDBB
       BDBL = :BDBL
       BDBX = :BDBX
       BDCX = :BDCX
@@ -312,6 +313,7 @@ module Razorpay
       DMCX = :DMCX
       DMKB = :DMKB
       DMKJ = :DMKJ
+      DNDC = :DNDC
       DNSB = :DNSB
       DNSX = :DNSX
       DOBX = :DOBX
@@ -350,8 +352,8 @@ module Razorpay
       FDRL = :FDRL
       FEKX = :FEKX
       FGCB = :FGCB
-      FINO = :FINO
       FINF = :FINF
+      FINO = :FINO
       FINX = :FINX
       FIRN = :FIRN
       FIRX = :FIRX
@@ -404,6 +406,7 @@ module Razorpay
       HCBX = :HCBX
       HCCX = :HCCX
       HCLX = :HCLX
+      HDCL = :HDCL
       HDCX = :HDCX
       HDFC = :HDFC
       HGBX = :HGBX
@@ -422,6 +425,7 @@ module Razorpay
       HSDX = :HSDX
       HSSX = :HSSX
       HUBX = :HUBX
+      HUCB = :HUCB
       HUCX = :HUCX
       HUTX = :HUTX
       HVBK = :HVBK
@@ -438,6 +442,7 @@ module Razorpay
       IDUK = :IDUK
       IDUX = :IDUX
       ILCB = :ILCB
+      IMCX = :IMCX
       IMPX = :IMPX
       INCX = :INCX
       INDB = :INDB
@@ -693,6 +698,7 @@ module Razorpay
       MASX = :MASX
       MAUX = :MAUX
       MAVX = :MAVX
+      MAWX = :MAWX
       MAYX = :MAYX
       MBCX = :MBCX
       MBGX = :MBGX
@@ -837,6 +843,7 @@ module Razorpay
       NPCX = :NPCX
       NPKX = :NPKX
       NRDX = :NRDX
+      NRMX = :NRMX
       NSBB = :NSBB
       NSBX = :NSBX
       NSCX = :NSCX
@@ -954,8 +961,9 @@ module Razorpay
       RAUX = :RAUX
       RBBX = :RBBX
       RBCX = :RBCX
-      RBIS = :RBIS
       RBIH = :RBIH
+      RBIN = :RBIN
+      RBIS = :RBIS
       RCBX = :RCBX
       RCCX = :RCCX
       RCDX = :RCDX
@@ -1414,9 +1422,10 @@ module Razorpay
       ZIMX = :ZIMX
       ZISX = :ZISX
       ZLLX = :ZLLX
-      ZRNB = :ZRNB
       ZMMX = :ZMMX
+      ZRNB = :ZRNB
       ZSAX = :ZSAX
+      ZSBG = :ZSBG
       ZSBL = :ZSBL
       ZSBX = :ZSBX
       ZSGX = :ZSGX

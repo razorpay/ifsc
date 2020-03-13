@@ -129,6 +129,7 @@ class Bank
     const BCOX = 'BCOX';
     const BCUB = 'BCUB';
     const BCUX = 'BCUX';
+    const BDBB = 'BDBB';
     const BDBL = 'BDBL';
     const BDBX = 'BDBX';
     const BDCX = 'BDCX';
@@ -313,6 +314,7 @@ class Bank
     const DMCX = 'DMCX';
     const DMKB = 'DMKB';
     const DMKJ = 'DMKJ';
+    const DNDC = 'DNDC';
     const DNSB = 'DNSB';
     const DNSX = 'DNSX';
     const DOBX = 'DOBX';
@@ -351,8 +353,8 @@ class Bank
     const FDRL = 'FDRL';
     const FEKX = 'FEKX';
     const FGCB = 'FGCB';
-    const FINO = 'FINO';
     const FINF = 'FINF';
+    const FINO = 'FINO';
     const FINX = 'FINX';
     const FIRN = 'FIRN';
     const FIRX = 'FIRX';
@@ -405,6 +407,7 @@ class Bank
     const HCBX = 'HCBX';
     const HCCX = 'HCCX';
     const HCLX = 'HCLX';
+    const HDCL = 'HDCL';
     const HDCX = 'HDCX';
     const HDFC = 'HDFC';
     const HGBX = 'HGBX';
@@ -423,6 +426,7 @@ class Bank
     const HSDX = 'HSDX';
     const HSSX = 'HSSX';
     const HUBX = 'HUBX';
+    const HUCB = 'HUCB';
     const HUCX = 'HUCX';
     const HUTX = 'HUTX';
     const HVBK = 'HVBK';
@@ -439,6 +443,7 @@ class Bank
     const IDUK = 'IDUK';
     const IDUX = 'IDUX';
     const ILCB = 'ILCB';
+    const IMCX = 'IMCX';
     const IMPX = 'IMPX';
     const INCX = 'INCX';
     const INDB = 'INDB';
@@ -694,6 +699,7 @@ class Bank
     const MASX = 'MASX';
     const MAUX = 'MAUX';
     const MAVX = 'MAVX';
+    const MAWX = 'MAWX';
     const MAYX = 'MAYX';
     const MBCX = 'MBCX';
     const MBGX = 'MBGX';
@@ -838,6 +844,7 @@ class Bank
     const NPCX = 'NPCX';
     const NPKX = 'NPKX';
     const NRDX = 'NRDX';
+    const NRMX = 'NRMX';
     const NSBB = 'NSBB';
     const NSBX = 'NSBX';
     const NSCX = 'NSCX';
@@ -955,8 +962,9 @@ class Bank
     const RAUX = 'RAUX';
     const RBBX = 'RBBX';
     const RBCX = 'RBCX';
-    const RBIS = 'RBIS';
     const RBIH = 'RBIH';
+    const RBIN = 'RBIN';
+    const RBIS = 'RBIS';
     const RCBX = 'RCBX';
     const RCCX = 'RCCX';
     const RCDX = 'RCDX';
@@ -1415,9 +1423,10 @@ class Bank
     const ZIMX = 'ZIMX';
     const ZISX = 'ZISX';
     const ZLLX = 'ZLLX';
-    const ZRNB = 'ZRNB';
     const ZMMX = 'ZMMX';
+    const ZRNB = 'ZRNB';
     const ZSAX = 'ZSAX';
+    const ZSBG = 'ZSBG';
     const ZSBL = 'ZSBL';
     const ZSBX = 'ZSBX';
     const ZSGX = 'ZSGX';

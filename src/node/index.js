@@ -32,11 +32,7 @@ let _validate = function(code) {
 };
 
 let isInteger = function(code) {
-  if (isNaN(parseInt(code, 10))) {
-    return false;
-  }
-
-  return true;
+  return code.match(/^(\d)+$/);
 };
 
 let lookupNumeric = function(list, code) {

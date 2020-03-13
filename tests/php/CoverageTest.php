@@ -18,7 +18,8 @@ class CoverageTest extends TestCase
     {
         parent::setUp();
         $contents = "[]";
-        $file = $this->root . '/src/IFSC-list.json';
+
+        $file = $this->root . '/scraper/scripts/data/IFSC-list.json';
         if (file_exists($file)) {
             $contents = file_get_contents($file);
         }

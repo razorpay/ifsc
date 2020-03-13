@@ -24,8 +24,6 @@ def parse_imps(banks)
   banks.each do |code, row|
     next unless row[:ifsc] && row[:ifsc].strip.to_s.length == 11
 
-
-
     data[row[:ifsc]] = {
       'BANK' => banknames[code],
       'IFSC' => row[:ifsc],
@@ -36,6 +34,7 @@ def parse_imps(banks)
       'ADDRESS' => 'NA',
       'CONTACT' => nil,
       'IMPS' => true,
+      'CITY' => 'NA',
       'UPI' => banks[code][:upi] ? true : false
     }
   end
@@ -45,7 +44,7 @@ end
 def parse_neft(banks)
   data = {}
   codes = Set.new
-  sheets = 0..2
+  sheets = 0..1
   sheets.each do |sheet_id|
     row_index = 0
     headings = []
@@ -58,6 +57,9 @@ def parse_neft(banks)
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '')
       codes.add row['IFSC']
       row['NEFT'] = true
+
+      # This hopefully is overwritten by RTGS dataset
+      row['CENTRE'] = 'NA'
       bankcode = row['IFSC'][0..3]
 
       if banks[bankcode] and banks[bankcode].key? :upi and banks[bankcode][:upi]
@@ -120,6 +122,9 @@ def parse_rtgs(banks)
       end
       row['ADDRESS'] = row['ADDRESS'].to_s.strip
       row['RTGS'] = true
+      # This is fallback option and we fake it
+      # because the RTGS sheet does not have the CITY
+      row['CITY'] = row['CENTRE']
       data[row['IFSC']] = row
     end
   end
@@ -177,13 +182,28 @@ def merge_dataset(neft, rtgs, imps)
   combined_set = Set.new(neft.keys) + Set.new(rtgs.keys) + Set.new(imps.keys)
 
   combined_set.each do |ifsc|
+
     data_from_neft = neft.fetch ifsc, {}
     data_from_rtgs = rtgs.fetch ifsc, {}
     data_from_imps = imps.fetch ifsc, {}
 
     # Preference Order is:
     # NEFT > RTGS > IMPS
-    combined_data = data_from_imps.merge(data_from_rtgs.merge(data_from_neft))
+    combined_data = data_from_imps.merge(
+      data_from_rtgs.merge(data_from_neft) do |key, oldval, newval|
+        if oldval and oldval != 'NA'
+          oldval
+        else
+          newval
+        end
+      end
+    ) do |key, oldval, newval|
+        if oldval and oldval != 'NA'
+          oldval
+        else
+          newval
+        end
+      end
     combined_data['NEFT'] ||= false
     combined_data['RTGS'] ||= false
     # IMPS is true everywhere, till we have clarity on this from NPCI

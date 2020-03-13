@@ -17,9 +17,9 @@ class SubletTest extends TestCase
 
     public function testBasicNames()
     {
-        $name = IFSC::getBankName('ALLA0AU1002');
+        $name = IFSC::getBankName('WBSC0DJCB01');
 
-        $this->assertEquals("Allahabad Up Gramin Bank", $name);
+        $this->assertEquals("Darjeeling District Central Co-operative Bank", $name);
     }
 
     /**
