@@ -1,12 +1,14 @@
 {
 	"testBasicValidator": {
-		"KKBK0000261": true,
-		"HDFC0002854": true,
-		"KARB0000001": true,
 		"DLXB0000097": true,
+		"HDFC0002854": true,
 		"ICIC0007429": true,
-		"IDIB000J052": true,
+		"IDIB000A001": true,
 		"IDIB000C040": true,
+		"IDIB000C122": true,
+		"IDIB000J052": true,
+		"KARB0000001": true,
+		"KKBK0000261": true,
 		"UTIB0001688": true
 	},
 	"testValidateStringLookup": {
