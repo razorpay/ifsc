@@ -5,10 +5,10 @@ GEM
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     ruby-ole (1.2.12.2)
-    rubyXL (3.4.12)
-      nokogiri (>= 1.4.4)
+    rubyXL (3.4.14)
+      nokogiri (>= 1.10.8)
       rubyzip (>= 1.3.0)
-    rubyzip (2.2.0)
+    rubyzip (2.3.0)
     spreadsheet (1.2.6)
       ruby-ole (>= 1.0)
 
