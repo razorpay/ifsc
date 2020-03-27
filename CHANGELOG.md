@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Metadata updates
+
+## 1.5.1
+
+### Changed
+
 -   Metadata updates
 -   Madhya Bihar Gramin Bank and Bihar Gramin Bank merged to form
     Dakshin Bihar Gramin Bank.
