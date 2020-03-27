@@ -16,10 +16,26 @@ foreach(file('ifsc-api/diff.txt') as $row) {
 $common = array_intersect($plus, $minus);
 $plus = array_diff($plus, $common);
 $minus = array_diff($minus, $common);
+$summary = [];
+
+foreach ($plus as $ifsc){
+    $bank = substr($ifsc, 0, 4);
+    if(!isset($summary[$bank])) {
+        $summary[$bank] = 0;
+    }
+    $summary[$bank] +=1;
+}
+foreach ($minus as $ifsc) {
+    if(!isset($summary[$bank])) {
+        $summary[$bank] = 0;
+    }
+    $summary[$bank] -=1;
+}
+asort($summary);
 
 sort($plus);sort($minus);
 
-$diffSize = count($plus)+count($minus);
+$diffSize = count($plus) + count($minus);
 
 // Reduce one for the final newline
 $ifscCount = (((int) `wc -l data/IFSC.csv`) - 1);
@@ -34,7 +50,11 @@ $ifscCount = (((int) `wc -l data/IFSC.csv`) - 1);
 </summary>
 
 ```
-<?=file_get_contents('ifsc-api/diffsummary.txt');?>
+<?php
+foreach ($summary as $bank => $count) {
+    echo str_pad(sprintf("%+d",$count), 4) . "\t" . $bank . "\n";
+}
+?>
 ```
 </details>
 
