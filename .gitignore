@@ -41,3 +41,6 @@ mix.lock
 Gemfile.lock
 InstalledFiles
 .wercker
+
+# One-off scripts
+*.php

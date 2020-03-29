@@ -14199,10 +14199,7 @@
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": false,
-    "upi": true,
-    "neft": false,
-    "imps": false,
-    "rtgs": false
+    "upi": true
   },
   "YLNX": {
     "code": "YLNX",

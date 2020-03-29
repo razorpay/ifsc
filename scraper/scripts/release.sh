@@ -10,9 +10,7 @@ cp data/by-bank/* ifsc-api/data/
 pushd ifsc-api
 git add data/
 # Generate the complete diff
-git diff --staged -U0 |grep '"IFSC": "' |awk '{print $1substr($3,2,11)}'|sort -u > diff.txt
-# Generate the summarized diff
-cat diff.txt | cut -c-5 | sort |uniq -c | sort -n > diffsummary.txt
+git diff --ignore-all-space --staged -U0 |grep '"IFSC": "' |awk '{print $1substr($3,2,11)}'|sort -u > diff.txt
 popd
 # Run the php script
 php releasenotes.php > release.md
