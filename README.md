@@ -4,18 +4,15 @@ This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
 [ifsc.razorpay.com](https://ifsc.razorpay.com).
 
-[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.5.2.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.2) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.5.2.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.2) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/razorpay/ifsc?label=docker)](https://hub.docker.com/r/razorpay/ifsc/) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)
 
 ## Dataset
 
-If you are just looking for the dataset, go to
-the [releases][releases] section and download
-the latest release.
+If you are just looking for the dataset, go to the [releases][releases] section and download the latest release.
 
-The latest [`build` pipeline][buildlist] on Wercker should result in a container
-with the complete dataset as well.
+The latest [`build` pipeline][buildlist] on Wercker should result in a container with the complete dataset as well.
 
 ### Source
 
@@ -334,9 +331,7 @@ The IFSC API is maintained in a separate repository at <https://github.com/razor
 
 ## License
 
-The code in this repository is licensed under the MIT License. License
-text is available in the `LICENSE` file. The dataset itself
-is under public domain.
+The code in this repository is licensed under the MIT License. License text is available in the `LICENSE` file. The dataset itself is under public domain.
 
 [combined]: https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx
 [releases]: https://github.com/razorpay/ifsc/releases
