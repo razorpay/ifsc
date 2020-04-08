@@ -1178,7 +1178,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "BCBX": {
     "code": "BCBX",
@@ -4171,6 +4172,17 @@
     "ach_debit": true,
     "nach_debit": true,
     "upi": true
+  },
+  "HSBM": {
+    "code": "HSBM",
+    "type": "O-UCB",
+    "ifsc": "YESB0HSBLM0",
+    "micr": "411945002",
+    "iin": "508550",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
   },
   "HSBX": {
     "code": "HSBX",
@@ -7443,6 +7455,17 @@
     "ach_debit": true,
     "nach_debit": false
   },
+  "MLCG": {
+    "code": "MLCG",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SMLCBK",
+    "micr": "582802002",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "MLDX": {
     "code": "MLDX",
     "type": "DCCB",
@@ -9503,7 +9526,7 @@
     "ifsc": "PYTM0000001",
     "micr": "110766001",
     "iin": "608032",
-    "apbs": false,
+    "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": false,
@@ -11758,6 +11781,17 @@
     "ach_debit": true,
     "nach_debit": false
   },
+  "SVMC": {
+    "code": "SVMC",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SSVMCB",
+    "micr": "587866501",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "SVNX": {
     "code": "SVNX",
     "type": "O-UCB",
@@ -11933,6 +11967,17 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
+    "nach_debit": false
+  },
+  "TBNS": {
+    "code": "TBNS",
+    "type": "O-UCB",
+    "ifsc": "GSCB0UTBSBL",
+    "micr": "384822501",
+    "iin": "608223",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
     "nach_debit": false
   },
   "TBPX": {
@@ -13932,7 +13977,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "VSSX": {
     "code": "VSSX",
