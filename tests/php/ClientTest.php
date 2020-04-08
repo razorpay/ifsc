@@ -73,14 +73,21 @@ class ClientTest extends TestCase
     protected function getMockData(string $ifsc)
     {
         return [
-            "BANK" => "AIRTEL PAYMENTS BANK LIMITED",
-            "IFSC" => $ifsc,
             "BRANCH" => "AIRTEL PAYMENTS BRANCH",
-            "ADDRESS" => "AIRTEL CENTER, PLAT NO-16, UDYOG VIHAR, PHASE-4, GURGOAN",
-            "CONTACT" => "4222222",
-            "CITY" => "GURGOAN",
+            "CENTRE" => "GURGOAN",
             "DISTRICT" => "GURGOAN",
-            "STATE" => "HARYANA"
+            "STATE" => "HARYANA",
+            "ADDRESS" => "AIRTEL CENTER, PLAT NO-16, UDYOG VIHAR, PHASE-4, GURGOAN",
+            "CONTACT" => "01244222222",
+            "UPI" => true,
+            "RTGS" => true,
+            "CITY" => "GURGOAN",
+            "NEFT" => true,
+            "IMPS" => true,
+            "MICR" => "",
+            "BANK" => "Airtel Payments Bank",
+            "BANKCODE" => "AIRP",
+            "IFSC" => "AIRP0000001"
         ];
     }
 

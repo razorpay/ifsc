@@ -22,6 +22,7 @@ banks:
   - AUBL
   - BACB
   - BARB
+  - BCBM
   - BDBL
   - BGBX
   - BGGX
@@ -149,8 +150,7 @@ banks:
   - VIJB
   - VIJX
   - VSBL
+  - VSCX
   - VVSB
   - XJKG
-  # Enabled here because NPCI website still lists it,
-  # But disabled via a second patch.
   - YESB

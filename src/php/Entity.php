@@ -20,16 +20,17 @@ class Entity
     {
         $data = json_decode($response->getBody(), true);
 
-        $this->bank = $data['BANK'];
-        $this->branch = $data['BRANCH'];
-        $this->address = $data['ADDRESS'];
-        $this->contact = $data['CONTACT'];
-        $this->city = $data['CITY'];
-        $this->code = $this->ifsc = $data['IFSC'];
-        $this->district = $data['DISTRICT'];
-        $this->state = $data['STATE'];
-
-        $this->bankCode = $this->getBankCode();
+        if ($data) {
+            $this->bank = $data['BANK'];
+            $this->branch = $data['BRANCH'];
+            $this->address = $data['ADDRESS'];
+            $this->contact = $data['CONTACT'];
+            $this->city = $data['CITY'];
+            $this->code = $this->ifsc = $data['IFSC'];
+            $this->district = $data['DISTRICT'];
+            $this->state = $data['STATE'];
+            $this->bankCode = $this->getBankCode();
+        }
     }
 
     public function getBankCode()
