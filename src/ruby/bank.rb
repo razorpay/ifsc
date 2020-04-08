@@ -745,6 +745,7 @@ module Razorpay
       MKPB = :MKPB
       MKUX = :MKUX
       MKYX = :MKYX
+      MLCG = :MLCG
       MLDX = :MLDX
       MMCX = :MMCX
       MMMX = :MMMX
@@ -1178,6 +1179,7 @@ module Razorpay
       SVCB = :SVCB
       SVCX = :SVCX
       SVGX = :SVGX
+      SVMC = :SVMC
       SVNX = :SVNX
       SVOX = :SVOX
       SVRX = :SVRX

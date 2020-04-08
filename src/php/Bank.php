@@ -746,6 +746,7 @@ class Bank
     const MKPB = 'MKPB';
     const MKUX = 'MKUX';
     const MKYX = 'MKYX';
+    const MLCG = 'MLCG';
     const MLDX = 'MLDX';
     const MMCX = 'MMCX';
     const MMMX = 'MMMX';
@@ -1179,6 +1180,7 @@ class Bank
     const SVCB = 'SVCB';
     const SVCX = 'SVCX';
     const SVGX = 'SVGX';
+    const SVMC = 'SVMC';
     const SVNX = 'SVNX';
     const SVOX = 'SVOX';
     const SVRX = 'SVRX';
