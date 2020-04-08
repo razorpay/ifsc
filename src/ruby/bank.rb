@@ -420,6 +420,7 @@ module Razorpay
       HPSC = :HPSC
       HPSX = :HPSX
       HSBC = :HSBC
+      HSBM = :HSBM
       HSBX = :HSBX
       HSCX = :HSCX
       HSDX = :HSDX
@@ -1194,6 +1195,7 @@ module Razorpay
       TBDX = :TBDX
       TBHX = :TBHX
       TBMX = :TBMX
+      TBNS = :TBNS
       TBPX = :TBPX
       TBSB = :TBSB
       TBSX = :TBSX

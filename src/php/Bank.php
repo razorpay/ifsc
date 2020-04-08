@@ -421,6 +421,7 @@ class Bank
     const HPSC = 'HPSC';
     const HPSX = 'HPSX';
     const HSBC = 'HSBC';
+    const HSBM = 'HSBM';
     const HSBX = 'HSBX';
     const HSCX = 'HSCX';
     const HSDX = 'HSDX';
@@ -1195,6 +1196,7 @@ class Bank
     const TBDX = 'TBDX';
     const TBHX = 'TBHX';
     const TBMX = 'TBMX';
+    const TBNS = 'TBNS';
     const TBPX = 'TBPX';
     const TBSB = 'TBSB';
     const TBSX = 'TBSX';
