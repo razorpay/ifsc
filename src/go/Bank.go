@@ -1447,7 +1447,7 @@ var bankData map[string]Bank
 
 func LoadBankData() {
 	if bankData == nil {
-		if err := LoadFile("../banks.json", &bankData); err != nil {
+		if err := LoadFile("banks.json", &bankData); err != nil {
 			fmt.Println("there is some error in banknames.json file: ", err)
 		}
 	}
