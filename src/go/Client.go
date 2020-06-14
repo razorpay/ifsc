@@ -9,22 +9,20 @@ import (
 
 const API_BASE = "https://ifsc.razorpay.com"
 
-type IfscResponse struct {
+type IFSCResponse struct {
 	Bank     string `json:"BANK"`
 	Branch   string `json:"BRANCH"`
 	Address  string `json:"ADDRESS"`
 	Contact  string `json:"CONTACT"`
 	City     string `json:"CITY"`
-	Ifsc     string `json:"IFSC"`
 	District string `json:"DISTRICT"`
 	State    string `json:"STATE"`
 	BankCode string
 }
 
 // LookUP fetches the response from ifsc api for
-func LookUP(ifsc string) (*IfscResponse, error) {
-	var respStruct *IfscResponse
-
+func LookUP(ifsc string) (*IFSCResponse, error) {
+	var respStruct *IFSCResponse
 	resp, err := http.Get(API_BASE + "/" + ifsc)
 	if err != nil {
 		return nil, err
@@ -39,7 +37,7 @@ func LookUP(ifsc string) (*IfscResponse, error) {
 		if err != nil {
 			return nil, err
 		}
-		//respStruct.SetBankCode()
+		respStruct.setBankCode()
 
 	} else if status == http.StatusNotFound {
 		return nil, errors.New("InvalidCode")
@@ -50,14 +48,20 @@ func LookUP(ifsc string) (*IfscResponse, error) {
 	return respStruct, nil
 }
 
-//func ( ifsc * IfscResponse) SetBankCode(){
-//
-//}
-//
-//func (ifsc * IfscResponse) GetBankCode()string{
-//
-//}
-//
-//func (ifsc * IfscResponse) GetBankName()string{
-//
-//}
+func ( ifsc * IFSCResponse) setBankCode(){
+	if ifsc.BankCode == ""{
+		ifsc.BankCode = ifsc.GetBankCode()
+	}
+}
+
+func (ifsc * IFSCResponse) GetBankCode()string{
+	return ifsc.BankCode[0:4]
+}
+
+func (ifsc * IFSCResponse) GetBankName()string{
+	bankName, err :=  GetBankName(ifsc.GetBankCode())
+	if err !=nil{
+		return ""
+	}
+	return bankName
+}
