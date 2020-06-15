@@ -65,12 +65,12 @@ func init() {
 
 func LoadFile(fileName string, result interface{}) error {
 	_, fileN, _, ok := runtime.Caller(0)
-	if !ok{
+	if !ok {
 		return errors.New("it was not possible to recover the information. Caller function error")
 	}
-	dir, _:= path.Split(fileN)
+	dir, _ := path.Split(fileN)
 	jsonDir := path.Join(dir, "..")
-	completePath := path.Join( jsonDir, fileName)
+	completePath := path.Join(jsonDir, fileName)
 	bytes, err := ioutil.ReadFile(completePath)
 	if err != nil {
 		return err
@@ -82,20 +82,20 @@ func LoadFile(fileName string, result interface{}) error {
 }
 
 func Validate(code string) bool {
-	if len(code) != 11 || string(code[4]) != "0"{
+	if len(code) != 11 || string(code[4]) != "0" {
 		return false
 	}
 	bankCode := strings.ToUpper(code[0:4])
 	branchCode := strings.ToUpper(code[5:])
-	list,ok := ifsc[bankCode]
-	if !ok{
+	list, ok := ifsc[bankCode]
+	if !ok {
 		return false
 	}
 	branchData, err := getData(branchCode)
-	if err != nil{
+	if err != nil {
 		return false
 	}
-	for _, data := range list{
+	for _, data := range list {
 		if data == *branchData {
 			return true
 		}
@@ -103,51 +103,51 @@ func Validate(code string) bool {
 	return false
 }
 
-func getData(input string)( *Data, error){
+func getData(input string) (*Data, error) {
 	var inputBytes []byte
 	var err error
-	intValue , err := strconv.ParseInt(input , 10, 32)
-	if err == nil{
+	intValue, err := strconv.ParseInt(input, 10, 32)
+	if err == nil {
 		input = strconv.Itoa(int(intValue))
 	}
-	if inputBytes , err = json.Marshal(input); err != nil{
+	if inputBytes, err = json.Marshal(input); err != nil {
 		return nil, err
 	}
 	var output Data
-	if err := json.Unmarshal(inputBytes, &output); err != nil{
+	if err := json.Unmarshal(inputBytes, &output); err != nil {
 		return nil, err
 	}
-	return &output,nil
+	return &output, nil
 }
 
-func GetBankName(code string) (string,error) {
-	bankName , ok :=  bankNames[code]
+func GetBankName(code string) (string, error) {
+	bankName, ok := bankNames[code]
 	if !ok {
-			if Validate(code){
-				bankCode, ok := sublet[code]
-				if !ok{
-					bankName, err := getCustomSubletName(code)
-					if err != nil{
-						bankName, _ :=  bankNames[code[0:4]]
-						return bankName,nil
-					}else{
-						return bankName, nil
-					}
-				}
-				return bankNames[bankCode], nil
-
-			} else{
-					return "", errors.New("invalid bank code")
+		if Validate(code) {
+			bankCode, ok := sublet[code]
+			if !ok {
+				bankName, err := getCustomSubletName(code)
+				if err != nil {
+					bankName, _ := bankNames[code[0:4]]
+					return bankName, nil
+				} else {
+					return bankName, nil
 				}
 			}
-	return bankName,nil
+			return bankNames[bankCode], nil
+
+		} else {
+			return "", errors.New("invalid bank code")
+		}
+	}
+	return bankName, nil
 }
-func getCustomSubletName(code string) (string, error){
-	for key, value := range customSublets{
-		if len(code) >= len(key) && code[0:len(key)] == key{
-			bankName , ok := bankNames[value]
-			if !ok{
-				return value,nil
+func getCustomSubletName(code string) (string, error) {
+	for key, value := range customSublets {
+		if len(code) >= len(key) && code[0:len(key)] == key {
+			bankName, ok := bankNames[value]
+			if !ok {
+				return value, nil
 			}
 			return bankName, nil
 		}
@@ -155,7 +155,7 @@ func getCustomSubletName(code string) (string, error){
 	return "", errors.New("custom sublet name not found")
 }
 
-func ValidateBankCode(bankCodeInput string) bool{
-	_, ok:=  bankCodes[bankCodeInput]
+func ValidateBankCode(bankCodeInput string) bool {
+	_, ok := bankCodes[bankCodeInput]
 	return ok
 }

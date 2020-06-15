@@ -48,19 +48,19 @@ func LookUP(ifsc string) (*IFSCResponse, error) {
 	return respStruct, nil
 }
 
-func ( ifsc * IFSCResponse) setBankCode(){
-	if ifsc.BankCode == ""{
+func (ifsc *IFSCResponse) setBankCode() {
+	if ifsc.BankCode == "" {
 		ifsc.BankCode = ifsc.GetBankCode()
 	}
 }
 
-func (ifsc * IFSCResponse) GetBankCode()string{
+func (ifsc *IFSCResponse) GetBankCode() string {
 	return ifsc.BankCode[0:4]
 }
 
-func (ifsc * IFSCResponse) GetBankName()string{
-	bankName, err :=  GetBankName(ifsc.GetBankCode())
-	if err !=nil{
+func (ifsc *IFSCResponse) GetBankName() string {
+	bankName, err := GetBankName(ifsc.GetBankCode())
+	if err != nil {
 		return ""
 	}
 	return bankName
