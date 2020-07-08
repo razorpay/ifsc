@@ -61,7 +61,7 @@ class DatasetTest extends TestCase
 
         // unarchive from the tar
         $phar = new PharData($tarFile);
-        print_r($phar->extractTo($dir));
+        $phar->extractTo($dir);
 
         foreach(glob("$dir/by-bank/*.json") as $json) {
             $data = json_decode(file_get_contents($json), true);
