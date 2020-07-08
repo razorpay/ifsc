@@ -1001,6 +1001,7 @@ class Bank
     const RSBL = 'RSBL';
     const RSBX = 'RSBX';
     const RSCB = 'RSCB';
+    const RSSB = 'RSSB';
     const RSSX = 'RSSX';
     const RSUX = 'RSUX';
     const RSVX = 'RSVX';
@@ -1173,6 +1174,7 @@ class Bank
     const SUNB = 'SUNB';
     const SURX = 'SURX';
     const SURY = 'SURY';
+    const SUSB = 'SUSB';
     const SUSX = 'SUSX';
     const SUTB = 'SUTB';
     const SUVX = 'SUVX';
@@ -1350,6 +1352,7 @@ class Bank
     const UTKS = 'UTKS';
     const UTKX = 'UTKX';
     const UTZX = 'UTZX';
+    const UUCB = 'UUCB';
     const UUCX = 'UUCX';
     const VADX = 'VADX';
     const VAIX = 'VAIX';
