@@ -97,7 +97,7 @@ def parse_rtgs(banks)
 
       # There is a second header in the middle of the sheet.
       # :facepalm: RBI
-      next if row['IFSC'].nil? || ['IFSC_CODE', 'BANK OF BARODA', ""].include? row['IFSC']
+      next if row['IFSC'].nil? or ['IFSC_CODE', 'BANK OF BARODA', ''].include?(row['IFSC'])
 
       original_ifsc = row['IFSC']
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '').strip
