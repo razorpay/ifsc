@@ -18,7 +18,9 @@ build:
       cwd: scraper/scripts
     - script:
       name: Copy artifacts
-      code: cp scraper/scripts/data/* $WERCKER_REPORT_ARTIFACTS_DIR/
+      code: cp `ls | egrep -v '^by-bank.tar$'` $WERCKER_REPORT_ARTIFACTS_DIR/
+      cwd: scraper/scripts/data
+
 # This is the ruby gem that we have
 rubygem:
   box: ruby
