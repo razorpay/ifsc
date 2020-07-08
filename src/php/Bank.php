@@ -577,6 +577,7 @@ class Bank
     const KATX = 'KATX';
     const KAYX = 'KAYX';
     const KBCX = 'KBCX';
+    const KBKB = 'KBKB';
     const KBNX = 'KBNX';
     const KBSX = 'KBSX';
     const KCBL = 'KCBL';

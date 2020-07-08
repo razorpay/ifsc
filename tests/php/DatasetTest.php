@@ -52,7 +52,6 @@ class DatasetTest extends TestCase
 
         $dir = tempnam(sys_get_temp_dir(), '') . '.dir';
 
-        @unlink($tarFile);
         mkdir($dir);
 
         // unarchive from the tar
