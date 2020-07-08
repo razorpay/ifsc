@@ -48,16 +48,12 @@ class DatasetTest extends TestCase
      * compression helps keep the download file size for releases low.
      */
     public function testBankFiles() {
-        $gzFile = __DIR__ . "/../../scraper/scripts/data/by-bank.tar.gz";
         $tarFile = __DIR__ . "/../../scraper/scripts/data/by-bank.tar";
 
         $dir = tempnam(sys_get_temp_dir(), '') . '.dir';
 
         @unlink($tarFile);
         mkdir($dir);
-
-        $p = new PharData($gzFile);
-        $p->decompress();
 
         // unarchive from the tar
         $phar = new PharData($tarFile);
