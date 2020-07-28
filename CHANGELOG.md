@@ -5,6 +5,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+## 1.5.5
+
+### Changed
+
+- Metadata updates
+- New Banks:
+	- HUCH : Hanamasagar Urban Co-operative Bank
+	- MDBK : Model Co-operative Bank
+	- SDTC : Shri D T Patil Co-operative Bank
 ## 1.5.4
 
 ### Changed

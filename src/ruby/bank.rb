@@ -426,6 +426,7 @@ module Razorpay
       HSDX = :HSDX
       HSSX = :HSSX
       HUBX = :HUBX
+      HUCH = :HUCH
       HUCB = :HUCB
       HUCX = :HUCX
       HUTX = :HUTX
@@ -714,6 +715,7 @@ module Razorpay
       MCOX = :MCOX
       MCSX = :MCSX
       MCUX = :MCUX
+      MDBK = :MDBK
       MDCB = :MDCB
       MDCX = :MDCX
       MDEX = :MDEX
@@ -1062,6 +1064,7 @@ module Razorpay
       SDCX = :SDCX
       SDHX = :SDHX
       SDSX = :SDSX
+      SDTC = :SDTC
       SDTX = :SDTX
       SDUX = :SDUX
       SEMX = :SEMX

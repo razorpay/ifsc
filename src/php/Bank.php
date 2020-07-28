@@ -428,6 +428,7 @@ class Bank
     const HSSX = 'HSSX';
     const HUBX = 'HUBX';
     const HUCB = 'HUCB';
+    const HUCH = 'HUCH';
     const HUCX = 'HUCX';
     const HUTX = 'HUTX';
     const HVBK = 'HVBK';
@@ -715,6 +716,7 @@ class Bank
     const MCOX = 'MCOX';
     const MCSX = 'MCSX';
     const MCUX = 'MCUX';
+    const MDBK = 'MDBK';
     const MDCB = 'MDCB';
     const MDCX = 'MDCX';
     const MDEX = 'MDEX';
@@ -1063,6 +1065,7 @@ class Bank
     const SDCX = 'SDCX';
     const SDHX = 'SDHX';
     const SDSX = 'SDSX';
+    const SDTC = 'SDTC';
     const SDTX = 'SDTX';
     const SDUX = 'SDUX';
     const SEMX = 'SEMX';
