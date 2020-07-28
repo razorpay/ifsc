@@ -13,6 +13,7 @@ banks:
   - AIRP
   - ALLA
   - AMCB
+  - AMDN
   - ANDB
   - APBL
   - APGB
@@ -21,6 +22,7 @@ banks:
   - ASBL
   - AUBL
   - BACB
+  - BARA
   - BARB
   - BCBM
   - BDBL
@@ -99,6 +101,7 @@ banks:
   - NKGS
   - NSPB
   - NTBL
+  - NNSB
   - ORBC
   - PASX
   - PGBX
@@ -116,12 +119,15 @@ banks:
   - RMGB
   - RNSB
   - SAGX
+  - SACB
   - SBIN
   - SCBL
   - SCOB
+  - SDCX
   - SIBL
   - SIDC
   - SPCB
+  - SPSX
   - SRCB
   - SSDX
   - SUBX
@@ -145,6 +151,7 @@ banks:
   - UTBI
   - UTGX
   - UTIB
+  - UUCX
   - VARA
   - VGBX
   - VIJB

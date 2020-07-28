@@ -576,6 +576,7 @@ module Razorpay
       KATX = :KATX
       KAYX = :KAYX
       KBCX = :KBCX
+      KBKB = :KBKB
       KBNX = :KBNX
       KBSX = :KBSX
       KCBL = :KCBL
@@ -999,6 +1000,7 @@ module Razorpay
       RSBL = :RSBL
       RSBX = :RSBX
       RSCB = :RSCB
+      RSSB = :RSSB
       RSSX = :RSSX
       RSUX = :RSUX
       RSVX = :RSVX
@@ -1171,6 +1173,7 @@ module Razorpay
       SUNB = :SUNB
       SURX = :SURX
       SURY = :SURY
+      SUSB = :SUSB
       SUSX = :SUSX
       SUTB = :SUTB
       SUVX = :SUVX
@@ -1348,6 +1351,7 @@ module Razorpay
       UTKS = :UTKS
       UTKX = :UTKX
       UTZX = :UTZX
+      UUCB = :UUCB
       UUCX = :UUCX
       VADX = :VADX
       VAIX = :VAIX

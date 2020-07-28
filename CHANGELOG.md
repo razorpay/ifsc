@@ -5,6 +5,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+## 1.5.4
+
+### Changed
+
+- Metadata updates
+- Optimized memory consumption in php tests.
+- New Banks:
+	- KBKB : Kookmin Bank
+	- SUSB : Suco Souharda Sahakari Bank
+
 ## 1.5.3
 
 ### Changed

@@ -34,6 +34,7 @@ pushd data
 
 # Compress the $BANK.json files
 tar --gzip --create --file by-bank.tar.gz by-bank
+tar cvf by-bank.tar by-bank
 rm --recursive --force by-bank/
 
 # Delete all the sheets for a much smaller
