@@ -9,7 +9,7 @@ import (
 func Test_BankGetDetails(t *testing.T) {
 	assert := assert.New(t)
 	result := GetBankDetails("FINO")
-	assert.Equal(getFINOixture(), *result)
+	assert.Equal(getFINOfixture(), *result)
 	result = GetBankDetails("PUNB")
 	assert.Equal(getPUNBFixture(), *result)
 }
@@ -29,7 +29,7 @@ func getPUNBFixture() Bank {
 		Upi:       true,
 	}
 }
-func getFINOixture() Bank {
+func getFINOfixture() Bank {
 	return Bank{
 		Name:      "Fino Payments Bank",
 		BankCode:  "",

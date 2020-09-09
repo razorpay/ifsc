@@ -82,6 +82,16 @@ The minimum [PHP version supported is 7.2](https://endoflife.date/php).
 
 `$ npm install ifsc`
 
+## Go
+
+`$ go get -u github.com/razorpay/ifsc`
+
+To use the go pkg, the import path should be:
+
+```go
+import "github.com/razorpay/ifsc/src/go"
+```
+
 ## Support Matrix
 
 Only the latest version of each SDK is considered.
@@ -91,10 +101,11 @@ Only the latest version of each SDK is considered.
 | PHP      | ✅         | ✅         | ✅ (✅)                 | ✅             |
 | Ruby     | ✅         | ✅         | ✅ (✅)                 | ✅             |
 | Node.js  | ✅         | ✅         | ❎ (❎)                 | ✅             |
+| Go       | ✅         | ✅         | ✅ (✅)                 | ✅             |
 
 ## API Documentation
 
-This repository also hosts the source code for 3 modules: PHP/Node.js/Ruby as of now.
+This repository also hosts the source code for 5 modules: PHP/Node.js/Ruby/Go as of now.
 The API is documented below:
 
 ### PHP
@@ -277,6 +288,72 @@ Razorpay::IFSC::IFSC.find '...'
 code = Razorpay::IFSC::IFSC.new '...'; code.get
 ```
 
+### Go
+
+```go
+package main
+
+import (
+	ifsc "github.com/gyanesh-m/ifsc/src/go"
+)
+
+// todo: change funcs not required to lower case.
+
+func main() {
+
+	ifsc.Validate("KKBK0000261") // Returns true
+	ifsc.Validate("BOTM0XEEMRA") // Returns false
+
+	ifsc.ValidateBankCode("PUNB") // Returns true
+	ifsc.ValidateBankCode("ABCD") // Returns false
+
+	ifsc.GetBankName("PUNB") // Returns "Punjab National Bank", nil
+	ifsc.GetBankName("ABCD") // Returns "", errors.New(invalid bank code)
+	ifsc.GetBankName(ifsc.HDFC) // Returns "HDFC Bank", nil
+
+
+	ifsc.GetBankDetails("PUNB")
+	// or
+	ifsc.GetBankDetails(ifsc.PUNB)
+
+	/* Returns
+		(*ifsc.Bank){
+		Name	  : "Punjab National Bank",
+		BankCode  : "024",
+		Code	  : "PUNB",
+		Type	  : "PSB",
+		IFSC	  : "PUNB0244200",
+		MICR      : "110024001",
+		IIN       : "508568",
+		APBS      : true,
+		AchCredit : true,
+		AchDebit  : true,
+		NachDebit : true,
+		Upi       : true
+	}), nil
+	*/
+
+	ifsc.LookUP("KKBK0000261")
+
+	/*
+	Returns
+	(*ifsc.IFSCResponse)({
+	 Bank	  :  "Kotak Mahindra Bank",
+	 Branch	  :  "GURGAON",
+	 Address  :  "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,",
+	 Contact  :  "4131000",
+	 City	  :  "GURGAON",
+	 District :  "GURGAON",
+	 State	  :  "HARYANA",
+	 IFSC	  :  "KKBK0000261",
+	 BankCode :  "KKBK"
+	}), nil
+	 */
+}
+
+```
+
+>>>>>>> 5ff434d (update readme & make bank code constants.)
 ### Code Notes
 
 Both the packages ship with a 300kb JSON file, that
