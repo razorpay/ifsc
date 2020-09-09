@@ -25,7 +25,7 @@ func TestGetBankName_Sublet(t *testing.T) {
 		assert.Equal(expected, actual)
 	}
 }
-func TestGetBankName_CustomSublet(t *testing.T) {
+func TestGetBankName_CustomSublet_Success(t *testing.T) {
 	assert := assert.New(t)
 	fixtureData := getCustomSubletFixture()
 	for input, expected := range fixtureData {
@@ -55,5 +55,34 @@ func getSubletFixture() map[string]string {
 		"MSSX": "IBKL01241MB",
 		"TNCX": "IBKL01248NC",
 		"URDX": "IBKL01263UC",
+	}
+}
+
+func TestValidateBankCode(t *testing.T) {
+	type args struct {
+		bankCodeInput string
+	}
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		{
+			"success",
+			args{"ABCX"},
+			true,
+		},
+		{
+			"failure",
+			args{"Aaaa"},
+			false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := ValidateBankCode(tt.args.bankCodeInput); got != tt.want {
+				t.Errorf("ValidateBankCode() = %v, want %v", got, tt.want)
+			}
+		})
 	}
 }

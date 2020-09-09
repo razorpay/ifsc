@@ -17,6 +17,7 @@ type IFSCResponse struct {
 	City     string `json:"CITY"`
 	District string `json:"DISTRICT"`
 	State    string `json:"STATE"`
+	IFSC     string `json:"IFSC"`
 	BankCode string
 }
 
@@ -49,13 +50,11 @@ func LookUP(ifsc string) (*IFSCResponse, error) {
 }
 
 func (ifsc *IFSCResponse) setBankCode() {
-	if ifsc.BankCode == "" {
-		ifsc.BankCode = ifsc.GetBankCode()
-	}
+	ifsc.BankCode = ifsc.GetBankCode()
 }
 
 func (ifsc *IFSCResponse) GetBankCode() string {
-	return ifsc.BankCode[0:4]
+	return ifsc.IFSC[0:4]
 }
 
 func (ifsc *IFSCResponse) GetBankName() string {
