@@ -42,35 +42,41 @@ func (d *Data) UnmarshalJSON(input []byte) error {
 func init() {
 	LoadBankData()
 	if ifsc == nil {
-		if err := LoadFile("IFSC.json", &ifsc); err != nil {
+		if err := LoadFile("IFSC.json", &ifsc, ""); err != nil {
 			log.Panic(fmt.Sprintf("there is some error in IFSC.json file: %v", err))
 		}
 	}
 	if sublet == nil {
-		if err := LoadFile("sublet.json", &sublet); err != nil {
+		if err := LoadFile("sublet.json", &sublet, ""); err != nil {
 			log.Panic(fmt.Sprintf("there is some error in sublet.json file: %v", err))
 		}
 	}
 	if customSublets == nil {
-		if err := LoadFile("custom-sublets.json", &customSublets); err != nil {
+		if err := LoadFile("custom-sublets.json", &customSublets, ""); err != nil {
 			log.Panic(fmt.Sprintf("there is some error in  custom-sublets.json file: %v", err))
 		}
 	}
 	if bankNames == nil {
-		if err := LoadFile("banknames.json", &bankNames); err != nil {
+		if err := LoadFile("banknames.json", &bankNames, ""); err != nil {
 			log.Panic(fmt.Sprintf("there is some error in banknames.json file: %v", err))
 		}
 	}
 }
 
-func LoadFile(fileName string, result interface{}) error {
+func LoadFile(fileName string, result interface{}, fullDirPath string) error {
 	_, fileN, _, ok := runtime.Caller(0)
 	if !ok {
 		return errors.New("it was not possible to recover the information. Caller function error")
 	}
 	dir, _ := path.Split(fileN)
 	jsonDir := path.Join(dir, "..")
-	completePath := path.Join(jsonDir, fileName)
+	var completePath string
+	if fullDirPath != "" {
+		completePath = path.Join(fullDirPath, fileName)
+	} else {
+		completePath = path.Join(jsonDir, fileName)
+
+	}
 	bytes, err := ioutil.ReadFile(completePath)
 	if err != nil {
 		return err

@@ -86,3 +86,35 @@ func TestValidateBankCode(t *testing.T) {
 		})
 	}
 }
+
+func TestValidate(t *testing.T) {
+	var result interface{}
+	err := LoadFile("validator_asserts.json", &result, "../../tests")
+	if err != nil {
+		t.Fatalf("error: %+v", err)
+	}
+	type args struct {
+		code string
+	}
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{}
+	for key, value := range result.(map[string]interface{}) {
+		for inp_key, expected_val := range value.(map[string]interface{}) {
+			tests = append(tests, struct {
+				name string
+				args args
+				want bool
+			}{key + ":" + inp_key, args{inp_key}, expected_val.(bool)})
+		}
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := Validate(tt.args.code); got != tt.want {
+				t.Errorf("Validate() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
