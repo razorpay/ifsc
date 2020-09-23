@@ -27,6 +27,7 @@ ifsc
       res
     );
   })
-  .catch(function(err) {
-    console.log(err);
-  });
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  })
