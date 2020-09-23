@@ -1,7 +1,7 @@
 ---
 # https://github.com/razorpay/ifsc/issues/126
 # Source: https://www.npci.org.in/upi-live-members
-# Last Updated: Jan 2020 (Count = 143)
+# Last Updated: Sep 2020 (Count = 168)
 action: patch
 patch:
   :upi: true
@@ -30,7 +30,9 @@ banks:
   - BGGX
   - BHUX
   - BKDN
+  - BKDX
   - BKID
+  - BNSB
   - BRDX
   - BRGX
   - BUGX
@@ -44,6 +46,8 @@ banks:
   - COSB
   - CRSX
   - CSBK
+  - CSBX
+  - CZCX
   - DBSS
   - DCBL
   - DEGX
@@ -77,6 +81,8 @@ banks:
   - JSFB
   - KAIJ
   - KARB
+  - KARX
+  - KBSX
   - KCCB
   - KDIX
   - KGSX
@@ -99,11 +105,12 @@ banks:
   - MUSX
   - MZRX
   - NKGS
+  - NNSB
   - NSPB
   - NTBL
-  - NNSB
   - ORBC
   - PASX
+  - PDSX
   - PGBX
   - PJSB
   - PKGB
@@ -118,11 +125,13 @@ banks:
   - RATN
   - RMGB
   - RNSB
-  - SAGX
   - SACB
+  - SADX
+  - SAGX
   - SBIN
   - SCBL
   - SCOB
+  - SDCE
   - SDCX
   - SIBL
   - SIDC
@@ -130,6 +139,7 @@ banks:
   - SPSX
   - SRCB
   - SSDX
+  - STRX
   - SUBX
   - SURY
   - SUTB
@@ -137,6 +147,7 @@ banks:
   - SVCB
   - SVCX
   - SYNB
+  - TAMX
   - TBSB
   - TGBX
   - TJSB
@@ -153,9 +164,11 @@ banks:
   - UTIB
   - UUCX
   - VARA
+  - VCCX
   - VGBX
   - VIJB
   - VIJX
+  - VISX
   - VSBL
   - VSCX
   - VVSB
