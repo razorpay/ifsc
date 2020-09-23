@@ -53,6 +53,10 @@ def parse_neft(banks)
       row = row.to_h
       scan_contact = row['CONTACT'].to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
       row['CONTACT'] = scan_contact.nil? || (scan_contact == 0) || (scan_contact == '0') || (scan_contact.is_a?(Array) && (scan_contact == ['0'])) ? nil : scan_contact.first
+
+      row['MICR'] = row['MICR CODE']
+      row.delete 'MICR CODE'
+      row.delete 'STD CODE'
       row['ADDRESS'] = row['ADDRESS'].to_s.strip
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '')
       codes.add row['IFSC']
