@@ -237,6 +237,7 @@ end
 
 def apply_patches(dataset)
   Dir.glob('../../src/patches/ifsc/*.yml').each do |patch|
+    log "Applying #{patch}", :debug
     data = YAML.safe_load(File.read(patch))
 
     codes = data['ifsc']
@@ -245,6 +246,7 @@ def apply_patches(dataset)
     when 'patch'
       patch = data['patch']
       codes.each do |code|
+        log "Patching #{code}"
         dataset[code].merge!(patch) if dataset.has_key? code
       end
     when 'delete'

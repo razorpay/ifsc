@@ -1,0 +1,13 @@
+---
+# The branch is reported differently in the NEFT and RTGS datasets
+# The official ICICI website marks it as belonging to Bangalore
+# https://www.icicibank.com/Personal-Banking/onlineservice/online-services/FundsTransfer/ifsc-code.page
+action: patch
+patch:
+  BRANCH: Chamrajpet
+  CENTRE: BANGALORE
+  DISTRICT: BANGALORE URBAN
+  STATE: KARNATAKA
+  ADDRESS: Bull Temple Road No 100/1, Maruthi Krupa (Next to Telephone Exchange), Chamrajpet
+ifsc:
+  - ICIC0006254
