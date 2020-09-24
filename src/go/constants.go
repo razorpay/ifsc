@@ -1,1426 +1,1426 @@
 package ifsc
 
-const (
-	AACX = "AACX"
-	ABBL = "ABBL"
-	ABCX = "ABCX"
-	ABDX = "ABDX"
-	ABEX = "ABEX"
-	ABHY = "ABHY"
-	ABNA = "ABNA"
-	ABPB = "ABPB"
-	ABSB = "ABSB"
-	ABUX = "ABUX"
-	ACAX = "ACAX"
-	ACBX = "ACBX"
-	ACCX = "ACCX"
-	ACKX = "ACKX"
-	ACOX = "ACOX"
-	ACUB = "ACUB"
-	ACUX = "ACUX"
-	ADBX = "ADBX"
-	ADCB = "ADCB"
-	ADCC = "ADCC"
-	ADCX = "ADCX"
-	ADDX = "ADDX"
-	AGCX = "AGCX"
-	AGDX = "AGDX"
-	AGRX = "AGRX"
-	AGSX = "AGSX"
-	AGUX = "AGUX"
-	AGVX = "AGVX"
-	AHMX = "AHMX"
-	AHUX = "AHUX"
-	AIRP = "AIRP"
-	AJAR = "AJAR"
-	AJHC = "AJHC"
-	AJKB = "AJKB"
-	AJMX = "AJMX"
-	AJNX = "AJNX"
-	AJPX = "AJPX"
-	AJSX = "AJSX"
-	AJUX = "AJUX"
-	AKJB = "AKJB"
-	AKMX = "AKMX"
-	AKOX = "AKOX"
-	ALAX = "ALAX"
-	ALIX = "ALIX"
-	ALLA = "ALLA"
-	ALLX = "ALLX"
-	ALWX = "ALWX"
-	AMAX = "AMAX"
-	AMBX = "AMBX"
-	AMCB = "AMCB"
-	AMCX = "AMCX"
-	AMDN = "AMDN"
-	AMMX = "AMMX"
-	AMNX = "AMNX"
-	AMRX = "AMRX"
-	AMSB = "AMSB"
-	AMSX = "AMSX"
-	ANBX = "ANBX"
-	ANDB = "ANDB"
-	ANDX = "ANDX"
-	ANMX = "ANMX"
-	ANSX = "ANSX"
-	ANUX = "ANUX"
-	ANZB = "ANZB"
-	APBL = "APBL"
-	APCX = "APCX"
-	APGB = "APGB"
-	APGV = "APGV"
-	APGX = "APGX"
-	APJX = "APJX"
-	APMC = "APMC"
-	APMX = "APMX"
-	APNX = "APNX"
-	APRX = "APRX"
-	APSX = "APSX"
-	ARCX = "ARCX"
-	ARMX = "ARMX"
-	ARYX = "ARYX"
-	ASBL = "ASBL"
-	ASBX = "ASBX"
-	ASHX = "ASHX"
-	ASKX = "ASKX"
-	ASNX = "ASNX"
-	ASOX = "ASOX"
-	ASSX = "ASSX"
-	AUBL = "AUBL"
-	AUBX = "AUBX"
-	AUCB = "AUCB"
-	AUCX = "AUCX"
-	AUGX = "AUGX"
-	AURX = "AURX"
-	AVDX = "AVDX"
-	AWCX = "AWCX"
-	AWUX = "AWUX"
-	AZAX = "AZAX"
-	AZPX = "AZPX"
-	AZSX = "AZSX"
-	AZUX = "AZUX"
-	BACB = "BACB"
-	BACX = "BACX"
-	BADX = "BADX"
-	BALX = "BALX"
-	BANX = "BANX"
-	BARA = "BARA"
-	BARB = "BARB"
-	BARC = "BARC"
-	BARX = "BARX"
-	BASX = "BASX"
-	BAUX = "BAUX"
-	BAVX = "BAVX"
-	BBKM = "BBKM"
-	BBLX = "BBLX"
-	BBRX = "BBRX"
-	BBSX = "BBSX"
-	BBUX = "BBUX"
-	BBVX = "BBVX"
-	BCBM = "BCBM"
-	BCBX = "BCBX"
-	BCCB = "BCCB"
-	BCCX = "BCCX"
-	BCEX = "BCEX"
-	BCEY = "BCEY"
-	BCOX = "BCOX"
-	BCUB = "BCUB"
-	BCUX = "BCUX"
-	BDBL = "BDBL"
-	BDBX = "BDBX"
-	BDCX = "BDCX"
-	BDDX = "BDDX"
-	BDIX = "BDIX"
-	BDNX = "BDNX"
-	BDOX = "BDOX"
-	BDUX = "BDUX"
-	BEDX = "BEDX"
-	BELX = "BELX"
-	BFUX = "BFUX"
-	BGBX = "BGBX"
-	BGCX = "BGCX"
-	BGGX = "BGGX"
-	BGUX = "BGUX"
-	BGVX = "BGVX"
-	BHAX = "BHAX"
-	BHBX = "BHBX"
-	BHCX = "BHCX"
-	BHDX = "BHDX"
-	BHEX = "BHEX"
-	BHGX = "BHGX"
-	BHIX = "BHIX"
-	BHJX = "BHJX"
-	BHMX = "BHMX"
-	BHOX = "BHOX"
-	BHRX = "BHRX"
-	BHSX = "BHSX"
-	BHTX = "BHTX"
-	BHUX = "BHUX"
-	BHWX = "BHWX"
-	BJUX = "BJUX"
-	BKCX = "BKCX"
-	BKDN = "BKDN"
-	BKDX = "BKDX"
-	BKID = "BKID"
-	BKSX = "BKSX"
-	BLGX = "BLGX"
-	BMBL = "BMBL"
-	BMCB = "BMCB"
-	BMCX = "BMCX"
-	BMPX = "BMPX"
-	BMSX = "BMSX"
-	BNBX = "BNBX"
-	BNCX = "BNCX"
-	BNPA = "BNPA"
-	BNSB = "BNSB"
-	BNSX = "BNSX"
-	BODX = "BODX"
-	BOFA = "BOFA"
-	BORX = "BORX"
-	BOTM = "BOTM"
-	BOTX = "BOTX"
-	BPCX = "BPCX"
-	BPSX = "BPSX"
-	BRCX = "BRCX"
-	BRDX = "BRDX"
-	BRGX = "BRGX"
-	BRMX = "BRMX"
-	BRSX = "BRSX"
-	BRUX = "BRUX"
-	BSBX = "BSBX"
-	BSCX = "BSCX"
-	BTCX = "BTCX"
-	BTUX = "BTUX"
-	BUBX = "BUBX"
-	BUCL = "BUCL"
-	BUCX = "BUCX"
-	BUGX = "BUGX"
-	BUNX = "BUNX"
-	BURX = "BURX"
-	BUSX = "BUSX"
-	BUZX = "BUZX"
-	BVNX = "BVNX"
-	BVSX = "BVSX"
-	BWCX = "BWCX"
-	CALX = "CALX"
-	CBHX = "CBHX"
-	CBIN = "CBIN"
-	CCBL = "CCBL"
-	CCBX = "CCBX"
-	CCCX = "CCCX"
-	CCMX = "CCMX"
-	CCOB = "CCOB"
-	CCUX = "CCUX"
-	CDCX = "CDCX"
-	CEBX = "CEBX"
-	CGBX = "CGBX"
-	CGGX = "CGGX"
-	CHAS = "CHAS"
-	CHAX = "CHAX"
-	CHBX = "CHBX"
-	CHCX = "CHCX"
-	CHDX = "CHDX"
-	CHIX = "CHIX"
-	CHKX = "CHKX"
-	CHPX = "CHPX"
-	CHRX = "CHRX"
-	CHSX = "CHSX"
-	CHTX = "CHTX"
-	CIDX = "CIDX"
-	CITI = "CITI"
-	CITX = "CITX"
-	CIUB = "CIUB"
-	CJAX = "CJAX"
-	CJMX = "CJMX"
-	CLBL = "CLBL"
-	CMCB = "CMCB"
-	CMCX = "CMCX"
-	CMDX = "CMDX"
-	CMLX = "CMLX"
-	CMPX = "CMPX"
-	CNRB = "CNRB"
-	CNSX = "CNSX"
-	COCX = "COCX"
-	COLX = "COLX"
-	COMX = "COMX"
-	CONX = "CONX"
-	CORP = "CORP"
-	COSB = "COSB"
-	CPDX = "CPDX"
-	CPSN = "CPSN"
-	CRBX = "CRBX"
-	CRES = "CRES"
-	CRLY = "CRLY"
-	CRSX = "CRSX"
-	CRUB = "CRUB"
-	CSBK = "CSBK"
-	CSBX = "CSBX"
-	CTBA = "CTBA"
-	CTBX = "CTBX"
-	CTCB = "CTCB"
-	CTOX = "CTOX"
-	CTUX = "CTUX"
-	CUBX = "CUBX"
-	CUCX = "CUCX"
-	CURX = "CURX"
-	CZCX = "CZCX"
-	CZUX = "CZUX"
-	DAAX = "DAAX"
-	DAHX = "DAHX"
-	DAUX = "DAUX"
-	DBAX = "DBAX"
-	DBSS = "DBSS"
-	DCBL = "DCBL"
-	DCBX = "DCBX"
-	DCCX = "DCCX"
-	DCDX = "DCDX"
-	DCEX = "DCEX"
-	DCKX = "DCKX"
-	DCMX = "DCMX"
-	DCNX = "DCNX"
-	DCPX = "DCPX"
-	DCSX = "DCSX"
-	DCTX = "DCTX"
-	DCUX = "DCUX"
-	DDBX = "DDBX"
-	DDCX = "DDCX"
-	DDDX = "DDDX"
-	DDHX = "DDHX"
-	DEGX = "DEGX"
-	DENS = "DENS"
-	DEOB = "DEOB"
-	DEOX = "DEOX"
-	DEUT = "DEUT"
-	DEUX = "DEUX"
-	DEVX = "DEVX"
-	DGBX = "DGBX"
-	DHBX = "DHBX"
-	DHKX = "DHKX"
-	DHUX = "DHUX"
-	DIBX = "DIBX"
-	DICG = "DICG"
-	DICX = "DICX"
-	DIUX = "DIUX"
-	DJCX = "DJCX"
-	DKCL = "DKCL"
-	DKSX = "DKSX"
-	DLSC = "DLSC"
-	DLXB = "DLXB"
-	DMCB = "DMCB"
-	DMCX = "DMCX"
-	DMKB = "DMKB"
-	DMKJ = "DMKJ"
-	DNSB = "DNSB"
-	DNSX = "DNSX"
-	DOBX = "DOBX"
-	DOHB = "DOHB"
-	DRGX = "DRGX"
-	DSBX = "DSBX"
-	DSCB = "DSCB"
-	DSHX = "DSHX"
-	DSPX = "DSPX"
-	DSUX = "DSUX"
-	DTCX = "DTCX"
-	DTPX = "DTPX"
-	DUCX = "DUCX"
-	DUMX = "DUMX"
-	DUNX = "DUNX"
-	DURG = "DURG"
-	DVDX = "DVDX"
-	DYPX = "DYPX"
-	EBIL = "EBIL"
-	ECBL = "ECBL"
-	EDBX = "EDBX"
-	EDCX = "EDCX"
-	EDSX = "EDSX"
-	EIBI = "EIBI"
-	ESAF = "ESAF"
-	ESFB = "ESFB"
-	ESMF = "ESMF"
-	ETCX = "ETCX"
-	ETDX = "ETDX"
-	EUCX = "EUCX"
-	EWCX = "EWCX"
-	FCBX = "FCBX"
-	FCCX = "FCCX"
-	FCOX = "FCOX"
-	FDFX = "FDFX"
-	FDRL = "FDRL"
-	FEKX = "FEKX"
-	FGCB = "FGCB"
-	FINO = "FINO"
-	FINF = "FINF"
-	FINX = "FINX"
-	FIRN = "FIRN"
-	FIRX = "FIRX"
-	FMCX = "FMCX"
-	FRIX = "FRIX"
-	FSCX = "FSCX"
-	FSFB = "FSFB"
-	FZCX = "FZCX"
-	FZSX = "FZSX"
-	GACX = "GACX"
-	GADX = "GADX"
-	GANX = "GANX"
-	GBCB = "GBCB"
-	GCBX = "GCBX"
-	GCCX = "GCCX"
-	GCUL = "GCUL"
-	GCUX = "GCUX"
-	GDCB = "GDCB"
-	GDCX = "GDCX"
-	GDDX = "GDDX"
-	GDUX = "GDUX"
-	GGBK = "GGBK"
-	GGCX = "GGCX"
-	GHPX = "GHPX"
-	GKNX = "GKNX"
-	GMBX = "GMBX"
-	GMCX = "GMCX"
-	GMUX = "GMUX"
-	GNCX = "GNCX"
-	GNSX = "GNSX"
-	GODX = "GODX"
-	GOSX = "GOSX"
-	GPCX = "GPCX"
-	GPOX = "GPOX"
-	GRAX = "GRAX"
-	GSBL = "GSBL"
-	GSBX = "GSBX"
-	GSCB = "GSCB"
-	GSCX = "GSCX"
-	GSSX = "GSSX"
-	GTCX = "GTCX"
-	GUBX = "GUBX"
-	GUCX = "GUCX"
-	GUNX = "GUNX"
-	GUOX = "GUOX"
-	HAMX = "HAMX"
-	HANX = "HANX"
-	HARC = "HARC"
-	HCBL = "HCBL"
-	HCBX = "HCBX"
-	HCCX = "HCCX"
-	HCLX = "HCLX"
-	HDCX = "HDCX"
-	HDFC = "HDFC"
-	HGBX = "HGBX"
-	HINX = "HINX"
-	HISX = "HISX"
-	HMBX = "HMBX"
-	HMNX = "HMNX"
-	HOCX = "HOCX"
-	HOOX = "HOOX"
-	HPCX = "HPCX"
-	HPSC = "HPSC"
-	HPSX = "HPSX"
-	HSBC = "HSBC"
-	HSBX = "HSBX"
-	HSCX = "HSCX"
-	HSDX = "HSDX"
-	HSSX = "HSSX"
-	HUBX = "HUBX"
-	HUCX = "HUCX"
-	HUTX = "HUTX"
-	HVBK = "HVBK"
-	IBBK = "IBBK"
-	IBKL = "IBKL"
-	IBKO = "IBKO"
-	ICBK = "ICBK"
-	ICBL = "ICBL"
-	ICHX = "ICHX"
-	ICIC = "ICIC"
-	ICMX = "ICMX"
-	IDFB = "IDFB"
-	IDIB = "IDIB"
-	IDUK = "IDUK"
-	IDUX = "IDUX"
-	ILCB = "ILCB"
-	IMPX = "IMPX"
-	INCX = "INCX"
-	INDB = "INDB"
-	INDX = "INDX"
-	IOBA = "IOBA"
-	IPCX = "IPCX"
-	IPOS = "IPOS"
-	IPPB = "IPPB"
-	IPSX = "IPSX"
-	ISBX = "ISBX"
-	ISMX = "ISMX"
-	ITBL = "ITBL"
-	ITCX = "ITCX"
-	ITDX = "ITDX"
-	IUCB = "IUCB"
-	IUCX = "IUCX"
-	JACX = "JACX"
-	JAKA = "JAKA"
-	JALX = "JALX"
-	JAMX = "JAMX"
-	JANA = "JANA"
-	JANX = "JANX"
-	JASB = "JASB"
-	JASX = "JASX"
-	JAUX = "JAUX"
-	JBHX = "JBHX"
-	JBIX = "JBIX"
-	JBMX = "JBMX"
-	JCBX = "JCBX"
-	JCCB = "JCCB"
-	JCCX = "JCCX"
-	JCDX = "JCDX"
-	JCHX = "JCHX"
-	JCPX = "JCPX"
-	JCUX = "JCUX"
-	JDCX = "JDCX"
-	JDEX = "JDEX"
-	JGBX = "JGBX"
-	JGCX = "JGCX"
-	JGWX = "JGWX"
-	JHAX = "JHAX"
-	JHSX = "JHSX"
-	JHUX = "JHUX"
-	JIBX = "JIBX"
-	JICX = "JICX"
-	JIDX = "JIDX"
-	JIGX = "JIGX"
-	JIKX = "JIKX"
-	JIMX = "JIMX"
-	JINX = "JINX"
-	JIOP = "JIOP"
-	JIOX = "JIOX"
-	JIRX = "JIRX"
-	JISX = "JISX"
-	JIVX = "JIVX"
-	JJCX = "JJCX"
-	JJHX = "JJHX"
-	JJSB = "JJSB"
-	JKAX = "JKAX"
-	JKCX = "JKCX"
-	JKDX = "JKDX"
-	JKEX = "JKEX"
-	JKHX = "JKHX"
-	JKMX = "JKMX"
-	JKRX = "JKRX"
-	JKSX = "JKSX"
-	JLCX = "JLCX"
-	JLDX = "JLDX"
-	JLNX = "JLNX"
-	JLSX = "JLSX"
-	JLWX = "JLWX"
-	JMAX = "JMAX"
-	JMBX = "JMBX"
-	JMCX = "JMCX"
-	JMDX = "JMDX"
-	JMHX = "JMHX"
-	JMMX = "JMMX"
-	JMOX = "JMOX"
-	JMPX = "JMPX"
-	JMSX = "JMSX"
-	JMYX = "JMYX"
-	JNAX = "JNAX"
-	JNDX = "JNDX"
-	JNSX = "JNSX"
-	JODX = "JODX"
-	JONX = "JONX"
-	JOWX = "JOWX"
-	JPAX = "JPAX"
-	JPCB = "JPCB"
-	JPCX = "JPCX"
-	JRAX = "JRAX"
-	JRKX = "JRKX"
-	JRNX = "JRNX"
-	JRSX = "JRSX"
-	JSAB = "JSAB"
-	JSAX = "JSAX"
-	JSBL = "JSBL"
-	JSBP = "JSBP"
-	JSBX = "JSBX"
-	JSCX = "JSCX"
-	JSDX = "JSDX"
-	JSEX = "JSEX"
-	JSFB = "JSFB"
-	JSHX = "JSHX"
-	JSKX = "JSKX"
-	JSMX = "JSMX"
-	JSOX = "JSOX"
-	JSRX = "JSRX"
-	JSTX = "JSTX"
-	JSVX = "JSVX"
-	JSWX = "JSWX"
-	JTIX = "JTIX"
-	JTSX = "JTSX"
-	JUCX = "JUCX"
-	JUSX = "JUSX"
-	JVCX = "JVCX"
-	KAAX = "KAAX"
-	KACE = "KACE"
-	KACX = "KACX"
-	KADX = "KADX"
-	KAGX = "KAGX"
-	KAIJ = "KAIJ"
-	KALX = "KALX"
-	KAMX = "KAMX"
-	KANG = "KANG"
-	KANX = "KANX"
-	KARB = "KARB"
-	KARX = "KARX"
-	KASX = "KASX"
-	KATX = "KATX"
-	KAYX = "KAYX"
-	KBCX = "KBCX"
-	KBNX = "KBNX"
-	KBSX = "KBSX"
-	KCBL = "KCBL"
-	KCBX = "KCBX"
-	KCCB = "KCCB"
-	KCCX = "KCCX"
-	KCDX = "KCDX"
-	KCEX = "KCEX"
-	KCOB = "KCOB"
-	KCUB = "KCUB"
-	KCUX = "KCUX"
-	KDBX = "KDBX"
-	KDCB = "KDCB"
-	KDCX = "KDCX"
-	KDIX = "KDIX"
-	KDNX = "KDNX"
-	KDUX = "KDUX"
-	KEMX = "KEMX"
-	KESX = "KESX"
-	KGBX = "KGBX"
-	KGDX = "KGDX"
-	KGRB = "KGRB"
-	KGSX = "KGSX"
-	KHAX = "KHAX"
-	KHCX = "KHCX"
-	KHDX = "KHDX"
-	KHNX = "KHNX"
-	KHUX = "KHUX"
-	KICX = "KICX"
-	KJSB = "KJSB"
-	KJSX = "KJSX"
-	KKBK = "KKBK"
-	KKMX = "KKMX"
-	KKSX = "KKSX"
-	KLGB = "KLGB"
-	KLMX = "KLMX"
-	KMCB = "KMCB"
-	KMCX = "KMCX"
-	KMNX = "KMNX"
-	KMSX = "KMSX"
-	KNBX = "KNBX"
-	KNCX = "KNCX"
-	KNNX = "KNNX"
-	KNPX = "KNPX"
-	KNSB = "KNSB"
-	KNSX = "KNSX"
-	KOBX = "KOBX"
-	KOCX = "KOCX"
-	KODX = "KODX"
-	KOEX = "KOEX"
-	KOLH = "KOLH"
-	KOSX = "KOSX"
-	KOTX = "KOTX"
-	KOYX = "KOYX"
-	KPCX = "KPCX"
-	KRCX = "KRCX"
-	KRDX = "KRDX"
-	KRIX = "KRIX"
-	KRMX = "KRMX"
-	KRNX = "KRNX"
-	KRTH = "KRTH"
-	KRTX = "KRTX"
-	KSBK = "KSBK"
-	KSBX = "KSBX"
-	KSCB = "KSCB"
-	KSCX = "KSCX"
-	KSMX = "KSMX"
-	KSNX = "KSNX"
-	KSTX = "KSTX"
-	KSUX = "KSUX"
-	KTBX = "KTBX"
-	KTCX = "KTCX"
-	KTDX = "KTDX"
-	KTTX = "KTTX"
-	KUBX = "KUBX"
-	KUCB = "KUCB"
-	KUCX = "KUCX"
-	KUKX = "KUKX"
-	KULX = "KULX"
-	KUMX = "KUMX"
-	KUNS = "KUNS"
-	KURX = "KURX"
-	KVBL = "KVBL"
-	KVCX = "KVCX"
-	KVGB = "KVGB"
-	KYDX = "KYDX"
-	LACX = "LACX"
-	LATX = "LATX"
-	LAVB = "LAVB"
-	LBMX = "LBMX"
-	LCBX = "LCBX"
-	LCCX = "LCCX"
-	LDCX = "LDCX"
-	LDPX = "LDPX"
-	LDRX = "LDRX"
-	LECX = "LECX"
-	LICB = "LICB"
-	LKBL = "LKBL"
-	LKCX = "LKCX"
-	LKHX = "LKHX"
-	LKMX = "LKMX"
-	LMNX = "LMNX"
-	LNSX = "LNSX"
-	LOKX = "LOKX"
-	LONX = "LONX"
-	LUCX = "LUCX"
-	LULX = "LULX"
-	MABL = "MABL"
-	MACX = "MACX"
-	MADX = "MADX"
-	MAGX = "MAGX"
-	MAHB = "MAHB"
-	MAHG = "MAHG"
-	MAHX = "MAHX"
-	MAJX = "MAJX"
-	MAKX = "MAKX"
-	MALX = "MALX"
-	MAMX = "MAMX"
-	MANX = "MANX"
-	MAPX = "MAPX"
-	MASX = "MASX"
-	MAUX = "MAUX"
-	MAVX = "MAVX"
-	MAYX = "MAYX"
-	MBCX = "MBCX"
-	MBGX = "MBGX"
-	MBLX = "MBLX"
-	MCAX = "MCAX"
-	MCBL = "MCBL"
-	MCBX = "MCBX"
-	MCCX = "MCCX"
-	MCDX = "MCDX"
-	MCLX = "MCLX"
-	MCOX = "MCOX"
-	MCSX = "MCSX"
-	MCUX = "MCUX"
-	MDCB = "MDCB"
-	MDCX = "MDCX"
-	MDEX = "MDEX"
-	MDGX = "MDGX"
-	MDIX = "MDIX"
-	MDMX = "MDMX"
-	MDPX = "MDPX"
-	MEDX = "MEDX"
-	MERX = "MERX"
-	MEUX = "MEUX"
-	MFCX = "MFCX"
-	MFUX = "MFUX"
-	MGBX = "MGBX"
-	MGCB = "MGCB"
-	MGCX = "MGCX"
-	MGDX = "MGDX"
-	MGRB = "MGRB"
-	MGSX = "MGSX"
-	MGUX = "MGUX"
-	MHCB = "MHCB"
-	MHCX = "MHCX"
-	MHEX = "MHEX"
-	MHLX = "MHLX"
-	MHMX = "MHMX"
-	MHNX = "MHNX"
-	MHSX = "MHSX"
-	MHUX = "MHUX"
-	MIZX = "MIZX"
-	MJCX = "MJCX"
-	MKPB = "MKPB"
-	MKUX = "MKUX"
-	MKYX = "MKYX"
-	MLDX = "MLDX"
-	MMCX = "MMCX"
-	MMMX = "MMMX"
-	MNBX = "MNBX"
-	MNCX = "MNCX"
-	MNSX = "MNSX"
-	MOGX = "MOGX"
-	MOUX = "MOUX"
-	MPCX = "MPCX"
-	MPDX = "MPDX"
-	MPRX = "MPRX"
-	MRBX = "MRBX"
-	MRTX = "MRTX"
-	MSAX = "MSAX"
-	MSBL = "MSBL"
-	MSBX = "MSBX"
-	MSCI = "MSCI"
-	MSCX = "MSCX"
-	MSHQ = "MSHQ"
-	MSLM = "MSLM"
-	MSNU = "MSNU"
-	MSNX = "MSNX"
-	MSOX = "MSOX"
-	MSSX = "MSSX"
-	MUBL = "MUBL"
-	MUBX = "MUBX"
-	MUCX = "MUCX"
-	MUDX = "MUDX"
-	MUNX = "MUNX"
-	MUPX = "MUPX"
-	MURX = "MURX"
-	MUSX = "MUSX"
-	MVCB = "MVCB"
-	MVCX = "MVCX"
-	MVIX = "MVIX"
-	MYAX = "MYAX"
-	MYSX = "MYSX"
-	MZCX = "MZCX"
-	MZRX = "MZRX"
-	NABX = "NABX"
-	NACX = "NACX"
-	NAGX = "NAGX"
-	NAIX = "NAIX"
-	NALX = "NALX"
-	NANX = "NANX"
-	NASX = "NASX"
-	NATA = "NATA"
-	NAUX = "NAUX"
-	NAVX = "NAVX"
-	NAWX = "NAWX"
-	NBAD = "NBAD"
-	NBBX = "NBBX"
-	NBCX = "NBCX"
-	NBMX = "NBMX"
-	NBRD = "NBRD"
-	NCBL = "NCBL"
-	NCBX = "NCBX"
-	NCCX = "NCCX"
-	NCOX = "NCOX"
-	NCUB = "NCUB"
-	NCUX = "NCUX"
-	NDCB = "NDCB"
-	NDCX = "NDCX"
-	NDDX = "NDDX"
-	NDGX = "NDGX"
-	NDIX = "NDIX"
-	NESF = "NESF"
-	NEYX = "NEYX"
-	NGBX = "NGBX"
-	NGKX = "NGKX"
-	NGNX = "NGNX"
-	NGRX = "NGRX"
-	NGSB = "NGSB"
-	NGSX = "NGSX"
-	NICB = "NICB"
-	NIDX = "NIDX"
-	NILX = "NILX"
-	NIRX = "NIRX"
-	NIUX = "NIUX"
-	NJBK = "NJBK"
-	NJCX = "NJCX"
-	NJGX = "NJGX"
-	NJMX = "NJMX"
-	NJSX = "NJSX"
-	NKGS = "NKGS"
-	NLGX = "NLGX"
-	NLUX = "NLUX"
-	NMCB = "NMCB"
-	NMCX = "NMCX"
-	NMGB = "NMGB"
-	NNCX = "NNCX"
-	NNSB = "NNSB"
-	NNSX = "NNSX"
-	NOBX = "NOBX"
-	NOIX = "NOIX"
-	NOSC = "NOSC"
-	NPCX = "NPCX"
-	NPKX = "NPKX"
-	NRDX = "NRDX"
-	NSBB = "NSBB"
-	NSBX = "NSBX"
-	NSCX = "NSCX"
-	NSGX = "NSGX"
-	NSIX = "NSIX"
-	NSJX = "NSJX"
-	NSMX = "NSMX"
-	NSPB = "NSPB"
-	NSPX = "NSPX"
-	NSRX = "NSRX"
-	NTBL = "NTBL"
-	NUBX = "NUBX"
-	NUCB = "NUCB"
-	NUCX = "NUCX"
-	NVCX = "NVCX"
-	NVNM = "NVNM"
-	NVSX = "NVSX"
-	NWCX = "NWCX"
-	ODCX = "ODCX"
-	ODGB = "ODGB"
-	OIBA = "OIBA"
-	OMCX = "OMCX"
-	ONSX = "ONSX"
-	ORBC = "ORBC"
-	ORCB = "ORCB"
-	OSMX = "OSMX"
-	PABX = "PABX"
-	PACX = "PACX"
-	PADX = "PADX"
-	PALX = "PALX"
-	PANX = "PANX"
-	PARX = "PARX"
-	PASX = "PASX"
-	PATX = "PATX"
-	PAYX = "PAYX"
-	PBGX = "PBGX"
-	PCBL = "PCBL"
-	PCBX = "PCBX"
-	PCCB = "PCCB"
-	PCCX = "PCCX"
-	PCLX = "PCLX"
-	PCMX = "PCMX"
-	PCOX = "PCOX"
-	PCPX = "PCPX"
-	PCSX = "PCSX"
-	PCTX = "PCTX"
-	PCUX = "PCUX"
-	PDBX = "PDBX"
-	PDCX = "PDCX"
-	PDNX = "PDNX"
-	PDSX = "PDSX"
-	PDUX = "PDUX"
-	PGBX = "PGBX"
-	PGCX = "PGCX"
-	PGRX = "PGRX"
-	PGTX = "PGTX"
-	PITX = "PITX"
-	PJSB = "PJSB"
-	PKBX = "PKBX"
-	PKDX = "PKDX"
-	PKGB = "PKGB"
-	PLOX = "PLOX"
-	PLUX = "PLUX"
-	PMCB = "PMCB"
-	PMCX = "PMCX"
-	PMEC = "PMEC"
-	PMNX = "PMNX"
-	PNCX = "PNCX"
-	PNMX = "PNMX"
-	PNPX = "PNPX"
-	PNSX = "PNSX"
-	PPBX = "PPBX"
-	PPCX = "PPCX"
-	PRCX = "PRCX"
-	PREX = "PREX"
-	PROX = "PROX"
-	PRPX = "PRPX"
-	PRSX = "PRSX"
-	PRTH = "PRTH"
-	PSBX = "PSBX"
-	PSCX = "PSCX"
-	PSIB = "PSIB"
-	PSRX = "PSRX"
-	PSSX = "PSSX"
-	PTCX = "PTCX"
-	PTNX = "PTNX"
-	PTSX = "PTSX"
-	PUBX = "PUBX"
-	PUCB = "PUCB"
-	PUCX = "PUCX"
-	PUDX = "PUDX"
-	PUGX = "PUGX"
-	PUNB = "PUNB"
-	PUNX = "PUNX"
-	PURX = "PURX"
-	PUSD = "PUSD"
-	PUSX = "PUSX"
-	PUUX = "PUUX"
-	PVAX = "PVAX"
-	PVCX = "PVCX"
-	PVVX = "PVVX"
-	PWUX = "PWUX"
-	PYCX = "PYCX"
-	PYTM = "PYTM"
-	QNBA = "QNBA"
-	QUCX = "QUCX"
-	RABO = "RABO"
-	RACX = "RACX"
-	RAEX = "RAEX"
-	RAJX = "RAJX"
-	RAKX = "RAKX"
-	RAMX = "RAMX"
-	RANX = "RANX"
-	RATN = "RATN"
-	RAUX = "RAUX"
-	RBBX = "RBBX"
-	RBCX = "RBCX"
-	RBIS = "RBIS"
-	RBIH = "RBIH"
-	RCBX = "RCBX"
-	RCCX = "RCCX"
-	RCDX = "RCDX"
-	RCMX = "RCMX"
-	RCUX = "RCUX"
-	RDCX = "RDCX"
-	RDNX = "RDNX"
-	REBX = "REBX"
-	RECX = "RECX"
-	REWX = "REWX"
-	RGCX = "RGCX"
-	RGSX = "RGSX"
-	RHMX = "RHMX"
-	RJCX = "RJCX"
-	RJJX = "RJJX"
-	RJNX = "RJNX"
-	RJTX = "RJTX"
-	RKCX = "RKCX"
-	RLUX = "RLUX"
-	RMGB = "RMGB"
-	RNBX = "RNBX"
-	RNDX = "RNDX"
-	RNGX = "RNGX"
-	RNSB = "RNSB"
-	RNSX = "RNSX"
-	ROCX = "ROCX"
-	ROHX = "ROHX"
-	RPUX = "RPUX"
-	RRBP = "RRBP"
-	RRSX = "RRSX"
-	RSBL = "RSBL"
-	RSBX = "RSBX"
-	RSCB = "RSCB"
-	RSSX = "RSSX"
-	RSUX = "RSUX"
-	RSVX = "RSVX"
-	RUCX = "RUCX"
-	RUKX = "RUKX"
-	RUMX = "RUMX"
-	RZSX = "RZSX"
-	SABR = "SABR"
-	SABX = "SABX"
-	SACB = "SACB"
-	SACX = "SACX"
-	SADX = "SADX"
-	SAGX = "SAGX"
-	SAHE = "SAHE"
-	SAHX = "SAHX"
-	SAIX = "SAIX"
-	SALX = "SALX"
-	SAMX = "SAMX"
-	SANT = "SANT"
-	SANX = "SANX"
-	SAPX = "SAPX"
-	SARX = "SARX"
-	SASA = "SASA"
-	SASX = "SASX"
-	SATX = "SATX"
-	SAUX = "SAUX"
-	SAVX = "SAVX"
-	SAWX = "SAWX"
-	SBBJ = "SBBJ"
-	SBCX = "SBCX"
-	SBHY = "SBHY"
-	SBIN = "SBIN"
-	SBKX = "SBKX"
-	SBLD = "SBLD"
-	SBLS = "SBLS"
-	SBLX = "SBLX"
-	SBMX = "SBMX"
-	SBMY = "SBMY"
-	SBNX = "SBNX"
-	SBPX = "SBPX"
-	SBSX = "SBSX"
-	SBTR = "SBTR"
-	SBUJ = "SBUJ"
-	SBUX = "SBUX"
-	SCBL = "SCBL"
-	SCBX = "SCBX"
-	SCCX = "SCCX"
-	SCDX = "SCDX"
-	SCIX = "SCIX"
-	SCNX = "SCNX"
-	SCOB = "SCOB"
-	SCOX = "SCOX"
-	SCPX = "SCPX"
-	SCSX = "SCSX"
-	SCUX = "SCUX"
-	SDBX = "SDBX"
-	SDCB = "SDCB"
-	SDCE = "SDCE"
-	SDCX = "SDCX"
-	SDHX = "SDHX"
-	SDSX = "SDSX"
-	SDTX = "SDTX"
-	SDUX = "SDUX"
-	SEMX = "SEMX"
-	SENX = "SENX"
-	SEUX = "SEUX"
-	SEWX = "SEWX"
-	SGCX = "SGCX"
-	SGLX = "SGLX"
-	SGSX = "SGSX"
-	SGUX = "SGUX"
-	SHAX = "SHAX"
-	SHBK = "SHBK"
-	SHBX = "SHBX"
-	SHCX = "SHCX"
-	SHEX = "SHEX"
-	SHGX = "SHGX"
-	SHIX = "SHIX"
-	SHKX = "SHKX"
-	SHMX = "SHMX"
-	SHNX = "SHNX"
-	SHOX = "SHOX"
-	SHRX = "SHRX"
-	SHSX = "SHSX"
-	SHUX = "SHUX"
-	SIBL = "SIBL"
-	SIBX = "SIBX"
-	SICX = "SICX"
-	SIDB = "SIDB"
-	SIDC = "SIDC"
-	SIDX = "SIDX"
-	SIGX = "SIGX"
-	SIHX = "SIHX"
-	SIKX = "SIKX"
-	SINX = "SINX"
-	SIRX = "SIRX"
-	SISX = "SISX"
-	SITX = "SITX"
-	SIWX = "SIWX"
-	SJGX = "SJGX"
-	SJSB = "SJSB"
-	SJSX = "SJSX"
-	SKCX = "SKCX"
-	SKKX = "SKKX"
-	SKNX = "SKNX"
-	SKSB = "SKSB"
-	SKUX = "SKUX"
-	SLAX = "SLAX"
-	SLCX = "SLCX"
-	SMBC = "SMBC"
-	SMBX = "SMBX"
-	SMCB = "SMCB"
-	SMCX = "SMCX"
-	SMEX = "SMEX"
-	SMMX = "SMMX"
-	SMNX = "SMNX"
-	SMPX = "SMPX"
-	SMSX = "SMSX"
-	SMTX = "SMTX"
-	SMUX = "SMUX"
-	SMVC = "SMVC"
-	SMWX = "SMWX"
-	SNAX = "SNAX"
-	SNBK = "SNBK"
-	SNBX = "SNBX"
-	SNCX = "SNCX"
-	SNDX = "SNDX"
-	SNGX = "SNGX"
-	SNKX = "SNKX"
-	SNLX = "SNLX"
-	SNPX = "SNPX"
-	SNSV = "SNSV"
-	SNSX = "SNSX"
-	SOBX = "SOBX"
-	SOGE = "SOGE"
-	SOLX = "SOLX"
-	SONX = "SONX"
-	SPBX = "SPBX"
-	SPCB = "SPCB"
-	SPCX = "SPCX"
-	SPNX = "SPNX"
-	SPSX = "SPSX"
-	SPTX = "SPTX"
-	SRCB = "SRCB"
-	SRCX = "SRCX"
-	SREX = "SREX"
-	SRGX = "SRGX"
-	SRHX = "SRHX"
-	SRSX = "SRSX"
-	SSBL = "SSBL"
-	SSBX = "SSBX"
-	SSDX = "SSDX"
-	SSHX = "SSHX"
-	SSKX = "SSKX"
-	SSLX = "SSLX"
-	SSNX = "SSNX"
-	SSOX = "SSOX"
-	SSSX = "SSSX"
-	SSWX = "SSWX"
-	STBP = "STBP"
-	STCB = "STCB"
-	STCX = "STCX"
-	STDX = "STDX"
-	STRX = "STRX"
-	SUBX = "SUBX"
-	SUCX = "SUCX"
-	SUDX = "SUDX"
-	SULX = "SULX"
-	SUMX = "SUMX"
-	SUNB = "SUNB"
-	SURX = "SURX"
-	SURY = "SURY"
-	SUSX = "SUSX"
-	SUTB = "SUTB"
-	SUVX = "SUVX"
-	SVAX = "SVAX"
-	SVBL = "SVBL"
-	SVCB = "SVCB"
-	SVCX = "SVCX"
-	SVGX = "SVGX"
-	SVNX = "SVNX"
-	SVOX = "SVOX"
-	SVRX = "SVRX"
-	SVSH = "SVSH"
-	SVSX = "SVSX"
-	SWMX = "SWMX"
-	SWSX = "SWSX"
-	SYNB = "SYNB"
-	TACX = "TACX"
-	TADX = "TADX"
-	TAMX = "TAMX"
-	TAPX = "TAPX"
-	TASX = "TASX"
-	TBCX = "TBCX"
-	TBDX = "TBDX"
-	TBHX = "TBHX"
-	TBMX = "TBMX"
-	TBPX = "TBPX"
-	TBSB = "TBSB"
-	TBSX = "TBSX"
-	TBTX = "TBTX"
-	TBUX = "TBUX"
-	TCBX = "TCBX"
-	TCCX = "TCCX"
-	TCHX = "TCHX"
-	TCPX = "TCPX"
-	TCUB = "TCUB"
-	TCUX = "TCUX"
-	TDBX = "TDBX"
-	TDCB = "TDCB"
-	TDCX = "TDCX"
-	TDIX = "TDIX"
-	TDMX = "TDMX"
-	TDPX = "TDPX"
-	TDSX = "TDSX"
-	TECX = "TECX"
-	TEHX = "TEHX"
-	TEMX = "TEMX"
-	TESX = "TESX"
-	TETX = "TETX"
-	TFCX = "TFCX"
-	TGBX = "TGBX"
-	TGCG = "TGCG"
-	TGCX = "TGCX"
-	TGDX = "TGDX"
-	TGMB = "TGMB"
-	TGNX = "TGNX"
-	TGUX = "TGUX"
-	THCX = "THCX"
-	THOX = "THOX"
-	THRS = "THRS"
-	THRX = "THRX"
-	THWX = "THWX"
-	TIDX = "TIDX"
-	TIRX = "TIRX"
-	TJAX = "TJAX"
-	TJBX = "TJBX"
-	TJCX = "TJCX"
-	TJDX = "TJDX"
-	TJMX = "TJMX"
-	TJNX = "TJNX"
-	TJSB = "TJSB"
-	TKAX = "TKAX"
-	TKCX = "TKCX"
-	TKDX = "TKDX"
-	TKTX = "TKTX"
-	TKUX = "TKUX"
-	TLPX = "TLPX"
-	TMAX = "TMAX"
-	TMBL = "TMBL"
-	TMBX = "TMBX"
-	TMCX = "TMCX"
-	TMNX = "TMNX"
-	TMPX = "TMPX"
-	TMSC = "TMSC"
-	TMSX = "TMSX"
-	TMTX = "TMTX"
-	TMUX = "TMUX"
-	TNBX = "TNBX"
-	TNCX = "TNCX"
-	TNDC = "TNDC"
-	TNEX = "TNEX"
-	TNHX = "TNHX"
-	TNIX = "TNIX"
-	TNKX = "TNKX"
-	TNMX = "TNMX"
-	TNSC = "TNSC"
-	TNUX = "TNUX"
-	TOCX = "TOCX"
-	TPCX = "TPCX"
-	TPDX = "TPDX"
-	TPSX = "TPSX"
-	TPUX = "TPUX"
-	TRAX = "TRAX"
-	TRDX = "TRDX"
-	TSAB = "TSAB"
-	TSAX = "TSAX"
-	TSBX = "TSBX"
-	TSCX = "TSCX"
-	TSDX = "TSDX"
-	TSIX = "TSIX"
-	TSMX = "TSMX"
-	TSNX = "TSNX"
-	TSPX = "TSPX"
-	TSSB = "TSSB"
-	TSSX = "TSSX"
-	TSUX = "TSUX"
-	TTBX = "TTBX"
-	TTCB = "TTCB"
-	TTCX = "TTCX"
-	TTGX = "TTGX"
-	TTLX = "TTLX"
-	TTUX = "TTUX"
-	TUBX = "TUBX"
-	TUCL = "TUCL"
-	TUCX = "TUCX"
-	TUDX = "TUDX"
-	TUMX = "TUMX"
-	TUNX = "TUNX"
-	TUOX = "TUOX"
-	TUPX = "TUPX"
-	TURX = "TURX"
-	TVBX = "TVBX"
-	TVDX = "TVDX"
-	TVPX = "TVPX"
-	TVUX = "TVUX"
-	TYCX = "TYCX"
-	UBBX = "UBBX"
-	UBGX = "UBGX"
-	UBIN = "UBIN"
-	UCBA = "UCBA"
-	UCBS = "UCBS"
-	UCBX = "UCBX"
-	UCCX = "UCCX"
-	UCDX = "UCDX"
-	UCUX = "UCUX"
-	UGBX = "UGBX"
-	UICX = "UICX"
-	UJSX = "UJSX"
-	UJVN = "UJVN"
-	UKGX = "UKGX"
-	UMAX = "UMAX"
-	UMCX = "UMCX"
-	UMSX = "UMSX"
-	UMUX = "UMUX"
-	UNAX = "UNAX"
-	UNIX = "UNIX"
-	UNMX = "UNMX"
-	UNSX = "UNSX"
-	UOVB = "UOVB"
-	UPCB = "UPCB"
-	UPCX = "UPCX"
-	URBN = "URBN"
-	URCX = "URCX"
-	URDX = "URDX"
-	URMX = "URMX"
-	UROX = "UROX"
-	USFB = "USFB"
-	USNX = "USNX"
-	UTBI = "UTBI"
-	UTBX = "UTBX"
-	UTCX = "UTCX"
-	UTGX = "UTGX"
-	UTIB = "UTIB"
-	UTKS = "UTKS"
-	UTKX = "UTKX"
-	UTZX = "UTZX"
-	UUCX = "UUCX"
-	VADX = "VADX"
-	VAIX = "VAIX"
-	VANX = "VANX"
-	VARA = "VARA"
-	VASJ = "VASJ"
-	VASX = "VASX"
-	VAUX = "VAUX"
-	VCAX = "VCAX"
-	VCBX = "VCBX"
-	VCCX = "VCCX"
-	VCNB = "VCNB"
-	VCOB = "VCOB"
-	VCOX = "VCOX"
-	VDCX = "VDCX"
-	VDYX = "VDYX"
-	VEDX = "VEDX"
-	VERX = "VERX"
-	VGBX = "VGBX"
-	VHDX = "VHDX"
-	VICX = "VICX"
-	VIDX = "VIDX"
-	VIJB = "VIJB"
-	VIJX = "VIJX"
-	VIKX = "VIKX"
-	VIMX = "VIMX"
-	VIRX = "VIRX"
-	VISX = "VISX"
-	VJSX = "VJSX"
-	VKCX = "VKCX"
-	VKSX = "VKSX"
-	VMCX = "VMCX"
-	VMMX = "VMMX"
-	VMUX = "VMUX"
-	VNSX = "VNSX"
-	VRDX = "VRDX"
-	VSBL = "VSBL"
-	VSBX = "VSBX"
-	VSCX = "VSCX"
-	VSSX = "VSSX"
-	VSVX = "VSVX"
-	VUCX = "VUCX"
-	VVCX = "VVCX"
-	VVSB = "VVSB"
-	VYAX = "VYAX"
-	VYPX = "VYPX"
-	VYSA = "VYSA"
-	WACX = "WACX"
-	WAIX = "WAIX"
-	WARX = "WARX"
-	WAUX = "WAUX"
-	WBSC = "WBSC"
-	WCBX = "WCBX"
-	WDCX = "WDCX"
-	WKGX = "WKGX"
-	WNBX = "WNBX"
-	WPAC = "WPAC"
-	WRCX = "WRCX"
-	WUCX = "WUCX"
-	WZUX = "WZUX"
-	XJKG = "XJKG"
-	YADX = "YADX"
-	YAVX = "YAVX"
-	YCBX = "YCBX"
-	YDCX = "YDCX"
-	YESB = "YESB"
-	YLNX = "YLNX"
-	YMSX = "YMSX"
-	YNCX = "YNCX"
-	YNSX = "YNSX"
-	ZBBX = "ZBBX"
-	ZBSX = "ZBSX"
-	ZCBL = "ZCBL"
-	ZIBX = "ZIBX"
-	ZILX = "ZILX"
-	ZIMX = "ZIMX"
-	ZISX = "ZISX"
-	ZLLX = "ZLLX"
-	ZRNB = "ZRNB"
-	ZMMX = "ZMMX"
-	ZSAX = "ZSAX"
-	ZSBL = "ZSBL"
-	ZSBX = "ZSBX"
-	ZSGX = "ZSGX"
-	ZSHX = "ZSHX"
-	ZSJX = "ZSJX"
-	ZSKX = "ZSKX"
-	ZSLX = "ZSLX"
-	ZSMX = "ZSMX"
-)
+type bankCode struct {
+	AACX string
+	ABBL string
+	ABCX string
+	ABDX string
+	ABEX string
+	ABHY string
+	ABNA string
+	ABPB string
+	ABSB string
+	ABUX string
+	ACAX string
+	ACBX string
+	ACCX string
+	ACKX string
+	ACOX string
+	ACUB string
+	ACUX string
+	ADBX string
+	ADCB string
+	ADCC string
+	ADCX string
+	ADDX string
+	AGCX string
+	AGDX string
+	AGRX string
+	AGSX string
+	AGUX string
+	AGVX string
+	AHMX string
+	AHUX string
+	AIRP string
+	AJAR string
+	AJHC string
+	AJKB string
+	AJMX string
+	AJNX string
+	AJPX string
+	AJSX string
+	AJUX string
+	AKJB string
+	AKMX string
+	AKOX string
+	ALAX string
+	ALIX string
+	ALLA string
+	ALLX string
+	ALWX string
+	AMAX string
+	AMBX string
+	AMCB string
+	AMCX string
+	AMDN string
+	AMMX string
+	AMNX string
+	AMRX string
+	AMSB string
+	AMSX string
+	ANBX string
+	ANDB string
+	ANDX string
+	ANMX string
+	ANSX string
+	ANUX string
+	ANZB string
+	APBL string
+	APCX string
+	APGB string
+	APGV string
+	APGX string
+	APJX string
+	APMC string
+	APMX string
+	APNX string
+	APRX string
+	APSX string
+	ARCX string
+	ARMX string
+	ARYX string
+	ASBL string
+	ASBX string
+	ASHX string
+	ASKX string
+	ASNX string
+	ASOX string
+	ASSX string
+	AUBL string
+	AUBX string
+	AUCB string
+	AUCX string
+	AUGX string
+	AURX string
+	AVDX string
+	AWCX string
+	AWUX string
+	AZAX string
+	AZPX string
+	AZSX string
+	AZUX string
+	BACB string
+	BACX string
+	BADX string
+	BALX string
+	BANX string
+	BARA string
+	BARB string
+	BARC string
+	BARX string
+	BASX string
+	BAUX string
+	BAVX string
+	BBKM string
+	BBLX string
+	BBRX string
+	BBSX string
+	BBUX string
+	BBVX string
+	BCBM string
+	BCBX string
+	BCCB string
+	BCCX string
+	BCEX string
+	BCEY string
+	BCOX string
+	BCUB string
+	BCUX string
+	BDBL string
+	BDBX string
+	BDCX string
+	BDDX string
+	BDIX string
+	BDNX string
+	BDOX string
+	BDUX string
+	BEDX string
+	BELX string
+	BFUX string
+	BGBX string
+	BGCX string
+	BGGX string
+	BGUX string
+	BGVX string
+	BHAX string
+	BHBX string
+	BHCX string
+	BHDX string
+	BHEX string
+	BHGX string
+	BHIX string
+	BHJX string
+	BHMX string
+	BHOX string
+	BHRX string
+	BHSX string
+	BHTX string
+	BHUX string
+	BHWX string
+	BJUX string
+	BKCX string
+	BKDN string
+	BKDX string
+	BKID string
+	BKSX string
+	BLGX string
+	BMBL string
+	BMCB string
+	BMCX string
+	BMPX string
+	BMSX string
+	BNBX string
+	BNCX string
+	BNPA string
+	BNSB string
+	BNSX string
+	BODX string
+	BOFA string
+	BORX string
+	BOTM string
+	BOTX string
+	BPCX string
+	BPSX string
+	BRCX string
+	BRDX string
+	BRGX string
+	BRMX string
+	BRSX string
+	BRUX string
+	BSBX string
+	BSCX string
+	BTCX string
+	BTUX string
+	BUBX string
+	BUCL string
+	BUCX string
+	BUGX string
+	BUNX string
+	BURX string
+	BUSX string
+	BUZX string
+	BVNX string
+	BVSX string
+	BWCX string
+	CALX string
+	CBHX string
+	CBIN string
+	CCBL string
+	CCBX string
+	CCCX string
+	CCMX string
+	CCOB string
+	CCUX string
+	CDCX string
+	CEBX string
+	CGBX string
+	CGGX string
+	CHAS string
+	CHAX string
+	CHBX string
+	CHCX string
+	CHDX string
+	CHIX string
+	CHKX string
+	CHPX string
+	CHRX string
+	CHSX string
+	CHTX string
+	CIDX string
+	CITI string
+	CITX string
+	CIUB string
+	CJAX string
+	CJMX string
+	CLBL string
+	CMCB string
+	CMCX string
+	CMDX string
+	CMLX string
+	CMPX string
+	CNRB string
+	CNSX string
+	COCX string
+	COLX string
+	COMX string
+	CONX string
+	CORP string
+	COSB string
+	CPDX string
+	CPSN string
+	CRBX string
+	CRES string
+	CRLY string
+	CRSX string
+	CRUB string
+	CSBK string
+	CSBX string
+	CTBA string
+	CTBX string
+	CTCB string
+	CTOX string
+	CTUX string
+	CUBX string
+	CUCX string
+	CURX string
+	CZCX string
+	CZUX string
+	DAAX string
+	DAHX string
+	DAUX string
+	DBAX string
+	DBSS string
+	DCBL string
+	DCBX string
+	DCCX string
+	DCDX string
+	DCEX string
+	DCKX string
+	DCMX string
+	DCNX string
+	DCPX string
+	DCSX string
+	DCTX string
+	DCUX string
+	DDBX string
+	DDCX string
+	DDDX string
+	DDHX string
+	DEGX string
+	DENS string
+	DEOB string
+	DEOX string
+	DEUT string
+	DEUX string
+	DEVX string
+	DGBX string
+	DHBX string
+	DHKX string
+	DHUX string
+	DIBX string
+	DICG string
+	DICX string
+	DIUX string
+	DJCX string
+	DKCL string
+	DKSX string
+	DLSC string
+	DLXB string
+	DMCB string
+	DMCX string
+	DMKB string
+	DMKJ string
+	DNSB string
+	DNSX string
+	DOBX string
+	DOHB string
+	DRGX string
+	DSBX string
+	DSCB string
+	DSHX string
+	DSPX string
+	DSUX string
+	DTCX string
+	DTPX string
+	DUCX string
+	DUMX string
+	DUNX string
+	DURG string
+	DVDX string
+	DYPX string
+	EBIL string
+	ECBL string
+	EDBX string
+	EDCX string
+	EDSX string
+	EIBI string
+	ESAF string
+	ESFB string
+	ESMF string
+	ETCX string
+	ETDX string
+	EUCX string
+	EWCX string
+	FCBX string
+	FCCX string
+	FCOX string
+	FDFX string
+	FDRL string
+	FEKX string
+	FGCB string
+	FINO string
+	FINF string
+	FINX string
+	FIRN string
+	FIRX string
+	FMCX string
+	FRIX string
+	FSCX string
+	FSFB string
+	FZCX string
+	FZSX string
+	GACX string
+	GADX string
+	GANX string
+	GBCB string
+	GCBX string
+	GCCX string
+	GCUL string
+	GCUX string
+	GDCB string
+	GDCX string
+	GDDX string
+	GDUX string
+	GGBK string
+	GGCX string
+	GHPX string
+	GKNX string
+	GMBX string
+	GMCX string
+	GMUX string
+	GNCX string
+	GNSX string
+	GODX string
+	GOSX string
+	GPCX string
+	GPOX string
+	GRAX string
+	GSBL string
+	GSBX string
+	GSCB string
+	GSCX string
+	GSSX string
+	GTCX string
+	GUBX string
+	GUCX string
+	GUNX string
+	GUOX string
+	HAMX string
+	HANX string
+	HARC string
+	HCBL string
+	HCBX string
+	HCCX string
+	HCLX string
+	HDCX string
+	HDFC string
+	HGBX string
+	HINX string
+	HISX string
+	HMBX string
+	HMNX string
+	HOCX string
+	HOOX string
+	HPCX string
+	HPSC string
+	HPSX string
+	HSBC string
+	HSBX string
+	HSCX string
+	HSDX string
+	HSSX string
+	HUBX string
+	HUCX string
+	HUTX string
+	HVBK string
+	IBBK string
+	IBKL string
+	IBKO string
+	ICBK string
+	ICBL string
+	ICHX string
+	ICIC string
+	ICMX string
+	IDFB string
+	IDIB string
+	IDUK string
+	IDUX string
+	ILCB string
+	IMPX string
+	INCX string
+	INDB string
+	INDX string
+	IOBA string
+	IPCX string
+	IPOS string
+	IPPB string
+	IPSX string
+	ISBX string
+	ISMX string
+	ITBL string
+	ITCX string
+	ITDX string
+	IUCB string
+	IUCX string
+	JACX string
+	JAKA string
+	JALX string
+	JAMX string
+	JANA string
+	JANX string
+	JASB string
+	JASX string
+	JAUX string
+	JBHX string
+	JBIX string
+	JBMX string
+	JCBX string
+	JCCB string
+	JCCX string
+	JCDX string
+	JCHX string
+	JCPX string
+	JCUX string
+	JDCX string
+	JDEX string
+	JGBX string
+	JGCX string
+	JGWX string
+	JHAX string
+	JHSX string
+	JHUX string
+	JIBX string
+	JICX string
+	JIDX string
+	JIGX string
+	JIKX string
+	JIMX string
+	JINX string
+	JIOP string
+	JIOX string
+	JIRX string
+	JISX string
+	JIVX string
+	JJCX string
+	JJHX string
+	JJSB string
+	JKAX string
+	JKCX string
+	JKDX string
+	JKEX string
+	JKHX string
+	JKMX string
+	JKRX string
+	JKSX string
+	JLCX string
+	JLDX string
+	JLNX string
+	JLSX string
+	JLWX string
+	JMAX string
+	JMBX string
+	JMCX string
+	JMDX string
+	JMHX string
+	JMMX string
+	JMOX string
+	JMPX string
+	JMSX string
+	JMYX string
+	JNAX string
+	JNDX string
+	JNSX string
+	JODX string
+	JONX string
+	JOWX string
+	JPAX string
+	JPCB string
+	JPCX string
+	JRAX string
+	JRKX string
+	JRNX string
+	JRSX string
+	JSAB string
+	JSAX string
+	JSBL string
+	JSBP string
+	JSBX string
+	JSCX string
+	JSDX string
+	JSEX string
+	JSFB string
+	JSHX string
+	JSKX string
+	JSMX string
+	JSOX string
+	JSRX string
+	JSTX string
+	JSVX string
+	JSWX string
+	JTIX string
+	JTSX string
+	JUCX string
+	JUSX string
+	JVCX string
+	KAAX string
+	KACE string
+	KACX string
+	KADX string
+	KAGX string
+	KAIJ string
+	KALX string
+	KAMX string
+	KANG string
+	KANX string
+	KARB string
+	KARX string
+	KASX string
+	KATX string
+	KAYX string
+	KBCX string
+	KBNX string
+	KBSX string
+	KCBL string
+	KCBX string
+	KCCB string
+	KCCX string
+	KCDX string
+	KCEX string
+	KCOB string
+	KCUB string
+	KCUX string
+	KDBX string
+	KDCB string
+	KDCX string
+	KDIX string
+	KDNX string
+	KDUX string
+	KEMX string
+	KESX string
+	KGBX string
+	KGDX string
+	KGRB string
+	KGSX string
+	KHAX string
+	KHCX string
+	KHDX string
+	KHNX string
+	KHUX string
+	KICX string
+	KJSB string
+	KJSX string
+	KKBK string
+	KKMX string
+	KKSX string
+	KLGB string
+	KLMX string
+	KMCB string
+	KMCX string
+	KMNX string
+	KMSX string
+	KNBX string
+	KNCX string
+	KNNX string
+	KNPX string
+	KNSB string
+	KNSX string
+	KOBX string
+	KOCX string
+	KODX string
+	KOEX string
+	KOLH string
+	KOSX string
+	KOTX string
+	KOYX string
+	KPCX string
+	KRCX string
+	KRDX string
+	KRIX string
+	KRMX string
+	KRNX string
+	KRTH string
+	KRTX string
+	KSBK string
+	KSBX string
+	KSCB string
+	KSCX string
+	KSMX string
+	KSNX string
+	KSTX string
+	KSUX string
+	KTBX string
+	KTCX string
+	KTDX string
+	KTTX string
+	KUBX string
+	KUCB string
+	KUCX string
+	KUKX string
+	KULX string
+	KUMX string
+	KUNS string
+	KURX string
+	KVBL string
+	KVCX string
+	KVGB string
+	KYDX string
+	LACX string
+	LATX string
+	LAVB string
+	LBMX string
+	LCBX string
+	LCCX string
+	LDCX string
+	LDPX string
+	LDRX string
+	LECX string
+	LICB string
+	LKBL string
+	LKCX string
+	LKHX string
+	LKMX string
+	LMNX string
+	LNSX string
+	LOKX string
+	LONX string
+	LUCX string
+	LULX string
+	MABL string
+	MACX string
+	MADX string
+	MAGX string
+	MAHB string
+	MAHG string
+	MAHX string
+	MAJX string
+	MAKX string
+	MALX string
+	MAMX string
+	MANX string
+	MAPX string
+	MASX string
+	MAUX string
+	MAVX string
+	MAYX string
+	MBCX string
+	MBGX string
+	MBLX string
+	MCAX string
+	MCBL string
+	MCBX string
+	MCCX string
+	MCDX string
+	MCLX string
+	MCOX string
+	MCSX string
+	MCUX string
+	MDCB string
+	MDCX string
+	MDEX string
+	MDGX string
+	MDIX string
+	MDMX string
+	MDPX string
+	MEDX string
+	MERX string
+	MEUX string
+	MFCX string
+	MFUX string
+	MGBX string
+	MGCB string
+	MGCX string
+	MGDX string
+	MGRB string
+	MGSX string
+	MGUX string
+	MHCB string
+	MHCX string
+	MHEX string
+	MHLX string
+	MHMX string
+	MHNX string
+	MHSX string
+	MHUX string
+	MIZX string
+	MJCX string
+	MKPB string
+	MKUX string
+	MKYX string
+	MLDX string
+	MMCX string
+	MMMX string
+	MNBX string
+	MNCX string
+	MNSX string
+	MOGX string
+	MOUX string
+	MPCX string
+	MPDX string
+	MPRX string
+	MRBX string
+	MRTX string
+	MSAX string
+	MSBL string
+	MSBX string
+	MSCI string
+	MSCX string
+	MSHQ string
+	MSLM string
+	MSNU string
+	MSNX string
+	MSOX string
+	MSSX string
+	MUBL string
+	MUBX string
+	MUCX string
+	MUDX string
+	MUNX string
+	MUPX string
+	MURX string
+	MUSX string
+	MVCB string
+	MVCX string
+	MVIX string
+	MYAX string
+	MYSX string
+	MZCX string
+	MZRX string
+	NABX string
+	NACX string
+	NAGX string
+	NAIX string
+	NALX string
+	NANX string
+	NASX string
+	NATA string
+	NAUX string
+	NAVX string
+	NAWX string
+	NBAD string
+	NBBX string
+	NBCX string
+	NBMX string
+	NBRD string
+	NCBL string
+	NCBX string
+	NCCX string
+	NCOX string
+	NCUB string
+	NCUX string
+	NDCB string
+	NDCX string
+	NDDX string
+	NDGX string
+	NDIX string
+	NESF string
+	NEYX string
+	NGBX string
+	NGKX string
+	NGNX string
+	NGRX string
+	NGSB string
+	NGSX string
+	NICB string
+	NIDX string
+	NILX string
+	NIRX string
+	NIUX string
+	NJBK string
+	NJCX string
+	NJGX string
+	NJMX string
+	NJSX string
+	NKGS string
+	NLGX string
+	NLUX string
+	NMCB string
+	NMCX string
+	NMGB string
+	NNCX string
+	NNSB string
+	NNSX string
+	NOBX string
+	NOIX string
+	NOSC string
+	NPCX string
+	NPKX string
+	NRDX string
+	NSBB string
+	NSBX string
+	NSCX string
+	NSGX string
+	NSIX string
+	NSJX string
+	NSMX string
+	NSPB string
+	NSPX string
+	NSRX string
+	NTBL string
+	NUBX string
+	NUCB string
+	NUCX string
+	NVCX string
+	NVNM string
+	NVSX string
+	NWCX string
+	ODCX string
+	ODGB string
+	OIBA string
+	OMCX string
+	ONSX string
+	ORBC string
+	ORCB string
+	OSMX string
+	PABX string
+	PACX string
+	PADX string
+	PALX string
+	PANX string
+	PARX string
+	PASX string
+	PATX string
+	PAYX string
+	PBGX string
+	PCBL string
+	PCBX string
+	PCCB string
+	PCCX string
+	PCLX string
+	PCMX string
+	PCOX string
+	PCPX string
+	PCSX string
+	PCTX string
+	PCUX string
+	PDBX string
+	PDCX string
+	PDNX string
+	PDSX string
+	PDUX string
+	PGBX string
+	PGCX string
+	PGRX string
+	PGTX string
+	PITX string
+	PJSB string
+	PKBX string
+	PKDX string
+	PKGB string
+	PLOX string
+	PLUX string
+	PMCB string
+	PMCX string
+	PMEC string
+	PMNX string
+	PNCX string
+	PNMX string
+	PNPX string
+	PNSX string
+	PPBX string
+	PPCX string
+	PRCX string
+	PREX string
+	PROX string
+	PRPX string
+	PRSX string
+	PRTH string
+	PSBX string
+	PSCX string
+	PSIB string
+	PSRX string
+	PSSX string
+	PTCX string
+	PTNX string
+	PTSX string
+	PUBX string
+	PUCB string
+	PUCX string
+	PUDX string
+	PUGX string
+	PUNB string
+	PUNX string
+	PURX string
+	PUSD string
+	PUSX string
+	PUUX string
+	PVAX string
+	PVCX string
+	PVVX string
+	PWUX string
+	PYCX string
+	PYTM string
+	QNBA string
+	QUCX string
+	RABO string
+	RACX string
+	RAEX string
+	RAJX string
+	RAKX string
+	RAMX string
+	RANX string
+	RATN string
+	RAUX string
+	RBBX string
+	RBCX string
+	RBIS string
+	RBIH string
+	RCBX string
+	RCCX string
+	RCDX string
+	RCMX string
+	RCUX string
+	RDCX string
+	RDNX string
+	REBX string
+	RECX string
+	REWX string
+	RGCX string
+	RGSX string
+	RHMX string
+	RJCX string
+	RJJX string
+	RJNX string
+	RJTX string
+	RKCX string
+	RLUX string
+	RMGB string
+	RNBX string
+	RNDX string
+	RNGX string
+	RNSB string
+	RNSX string
+	ROCX string
+	ROHX string
+	RPUX string
+	RRBP string
+	RRSX string
+	RSBL string
+	RSBX string
+	RSCB string
+	RSSX string
+	RSUX string
+	RSVX string
+	RUCX string
+	RUKX string
+	RUMX string
+	RZSX string
+	SABR string
+	SABX string
+	SACB string
+	SACX string
+	SADX string
+	SAGX string
+	SAHE string
+	SAHX string
+	SAIX string
+	SALX string
+	SAMX string
+	SANT string
+	SANX string
+	SAPX string
+	SARX string
+	SASA string
+	SASX string
+	SATX string
+	SAUX string
+	SAVX string
+	SAWX string
+	SBBJ string
+	SBCX string
+	SBHY string
+	SBIN string
+	SBKX string
+	SBLD string
+	SBLS string
+	SBLX string
+	SBMX string
+	SBMY string
+	SBNX string
+	SBPX string
+	SBSX string
+	SBTR string
+	SBUJ string
+	SBUX string
+	SCBL string
+	SCBX string
+	SCCX string
+	SCDX string
+	SCIX string
+	SCNX string
+	SCOB string
+	SCOX string
+	SCPX string
+	SCSX string
+	SCUX string
+	SDBX string
+	SDCB string
+	SDCE string
+	SDCX string
+	SDHX string
+	SDSX string
+	SDTX string
+	SDUX string
+	SEMX string
+	SENX string
+	SEUX string
+	SEWX string
+	SGCX string
+	SGLX string
+	SGSX string
+	SGUX string
+	SHAX string
+	SHBK string
+	SHBX string
+	SHCX string
+	SHEX string
+	SHGX string
+	SHIX string
+	SHKX string
+	SHMX string
+	SHNX string
+	SHOX string
+	SHRX string
+	SHSX string
+	SHUX string
+	SIBL string
+	SIBX string
+	SICX string
+	SIDB string
+	SIDC string
+	SIDX string
+	SIGX string
+	SIHX string
+	SIKX string
+	SINX string
+	SIRX string
+	SISX string
+	SITX string
+	SIWX string
+	SJGX string
+	SJSB string
+	SJSX string
+	SKCX string
+	SKKX string
+	SKNX string
+	SKSB string
+	SKUX string
+	SLAX string
+	SLCX string
+	SMBC string
+	SMBX string
+	SMCB string
+	SMCX string
+	SMEX string
+	SMMX string
+	SMNX string
+	SMPX string
+	SMSX string
+	SMTX string
+	SMUX string
+	SMVC string
+	SMWX string
+	SNAX string
+	SNBK string
+	SNBX string
+	SNCX string
+	SNDX string
+	SNGX string
+	SNKX string
+	SNLX string
+	SNPX string
+	SNSV string
+	SNSX string
+	SOBX string
+	SOGE string
+	SOLX string
+	SONX string
+	SPBX string
+	SPCB string
+	SPCX string
+	SPNX string
+	SPSX string
+	SPTX string
+	SRCB string
+	SRCX string
+	SREX string
+	SRGX string
+	SRHX string
+	SRSX string
+	SSBL string
+	SSBX string
+	SSDX string
+	SSHX string
+	SSKX string
+	SSLX string
+	SSNX string
+	SSOX string
+	SSSX string
+	SSWX string
+	STBP string
+	STCB string
+	STCX string
+	STDX string
+	STRX string
+	SUBX string
+	SUCX string
+	SUDX string
+	SULX string
+	SUMX string
+	SUNB string
+	SURX string
+	SURY string
+	SUSX string
+	SUTB string
+	SUVX string
+	SVAX string
+	SVBL string
+	SVCB string
+	SVCX string
+	SVGX string
+	SVNX string
+	SVOX string
+	SVRX string
+	SVSH string
+	SVSX string
+	SWMX string
+	SWSX string
+	SYNB string
+	TACX string
+	TADX string
+	TAMX string
+	TAPX string
+	TASX string
+	TBCX string
+	TBDX string
+	TBHX string
+	TBMX string
+	TBPX string
+	TBSB string
+	TBSX string
+	TBTX string
+	TBUX string
+	TCBX string
+	TCCX string
+	TCHX string
+	TCPX string
+	TCUB string
+	TCUX string
+	TDBX string
+	TDCB string
+	TDCX string
+	TDIX string
+	TDMX string
+	TDPX string
+	TDSX string
+	TECX string
+	TEHX string
+	TEMX string
+	TESX string
+	TETX string
+	TFCX string
+	TGBX string
+	TGCG string
+	TGCX string
+	TGDX string
+	TGMB string
+	TGNX string
+	TGUX string
+	THCX string
+	THOX string
+	THRS string
+	THRX string
+	THWX string
+	TIDX string
+	TIRX string
+	TJAX string
+	TJBX string
+	TJCX string
+	TJDX string
+	TJMX string
+	TJNX string
+	TJSB string
+	TKAX string
+	TKCX string
+	TKDX string
+	TKTX string
+	TKUX string
+	TLPX string
+	TMAX string
+	TMBL string
+	TMBX string
+	TMCX string
+	TMNX string
+	TMPX string
+	TMSC string
+	TMSX string
+	TMTX string
+	TMUX string
+	TNBX string
+	TNCX string
+	TNDC string
+	TNEX string
+	TNHX string
+	TNIX string
+	TNKX string
+	TNMX string
+	TNSC string
+	TNUX string
+	TOCX string
+	TPCX string
+	TPDX string
+	TPSX string
+	TPUX string
+	TRAX string
+	TRDX string
+	TSAB string
+	TSAX string
+	TSBX string
+	TSCX string
+	TSDX string
+	TSIX string
+	TSMX string
+	TSNX string
+	TSPX string
+	TSSB string
+	TSSX string
+	TSUX string
+	TTBX string
+	TTCB string
+	TTCX string
+	TTGX string
+	TTLX string
+	TTUX string
+	TUBX string
+	TUCL string
+	TUCX string
+	TUDX string
+	TUMX string
+	TUNX string
+	TUOX string
+	TUPX string
+	TURX string
+	TVBX string
+	TVDX string
+	TVPX string
+	TVUX string
+	TYCX string
+	UBBX string
+	UBGX string
+	UBIN string
+	UCBA string
+	UCBS string
+	UCBX string
+	UCCX string
+	UCDX string
+	UCUX string
+	UGBX string
+	UICX string
+	UJSX string
+	UJVN string
+	UKGX string
+	UMAX string
+	UMCX string
+	UMSX string
+	UMUX string
+	UNAX string
+	UNIX string
+	UNMX string
+	UNSX string
+	UOVB string
+	UPCB string
+	UPCX string
+	URBN string
+	URCX string
+	URDX string
+	URMX string
+	UROX string
+	USFB string
+	USNX string
+	UTBI string
+	UTBX string
+	UTCX string
+	UTGX string
+	UTIB string
+	UTKS string
+	UTKX string
+	UTZX string
+	UUCX string
+	VADX string
+	VAIX string
+	VANX string
+	VARA string
+	VASJ string
+	VASX string
+	VAUX string
+	VCAX string
+	VCBX string
+	VCCX string
+	VCNB string
+	VCOB string
+	VCOX string
+	VDCX string
+	VDYX string
+	VEDX string
+	VERX string
+	VGBX string
+	VHDX string
+	VICX string
+	VIDX string
+	VIJB string
+	VIJX string
+	VIKX string
+	VIMX string
+	VIRX string
+	VISX string
+	VJSX string
+	VKCX string
+	VKSX string
+	VMCX string
+	VMMX string
+	VMUX string
+	VNSX string
+	VRDX string
+	VSBL string
+	VSBX string
+	VSCX string
+	VSSX string
+	VSVX string
+	VUCX string
+	VVCX string
+	VVSB string
+	VYAX string
+	VYPX string
+	VYSA string
+	WACX string
+	WAIX string
+	WARX string
+	WAUX string
+	WBSC string
+	WCBX string
+	WDCX string
+	WKGX string
+	WNBX string
+	WPAC string
+	WRCX string
+	WUCX string
+	WZUX string
+	XJKG string
+	YADX string
+	YAVX string
+	YCBX string
+	YDCX string
+	YESB string
+	YLNX string
+	YMSX string
+	YNCX string
+	YNSX string
+	ZBBX string
+	ZBSX string
+	ZCBL string
+	ZIBX string
+	ZILX string
+	ZIMX string
+	ZISX string
+	ZLLX string
+	ZRNB string
+	ZMMX string
+	ZSAX string
+	ZSBL string
+	ZSBX string
+	ZSGX string
+	ZSHX string
+	ZSJX string
+	ZSKX string
+	ZSLX string
+	ZSMX string
+}
