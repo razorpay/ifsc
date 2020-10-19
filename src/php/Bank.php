@@ -244,6 +244,7 @@ class Bank
     const CMPX = 'CMPX';
     const CNRB = 'CNRB';
     const CNSX = 'CNSX';
+    const COAS = 'COAS';
     const COCX = 'COCX';
     const COLX = 'COLX';
     const COMX = 'COMX';
@@ -1089,6 +1090,7 @@ class Bank
     const SHOX = 'SHOX';
     const SHRX = 'SHRX';
     const SHSX = 'SHSX';
+    const SHUB = 'SHUB';
     const SHUX = 'SHUX';
     const SIBL = 'SIBL';
     const SIBX = 'SIBX';

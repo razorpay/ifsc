@@ -53,6 +53,10 @@ def parse_neft(banks)
       row = row.to_h
       scan_contact = row['CONTACT'].to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
       row['CONTACT'] = scan_contact.nil? || (scan_contact == 0) || (scan_contact == '0') || (scan_contact.is_a?(Array) && (scan_contact == ['0'])) ? nil : scan_contact.first
+
+      row['MICR'] = row['MICR CODE']
+      row.delete 'MICR CODE'
+      row.delete 'STD CODE'
       row['ADDRESS'] = row['ADDRESS'].to_s.strip
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '')
       codes.add row['IFSC']
@@ -224,7 +228,7 @@ def apply_bank_patches(dataset)
       if dataset.key? bankcode
         dataset[bankcode].merge!(patch)
       else
-        log "#{bankcode} not found", :critical
+        log "#{bankcode} not found in the list of ACH banks while applying patch", :info
       end
     end
   end
@@ -233,6 +237,7 @@ end
 
 def apply_patches(dataset)
   Dir.glob('../../src/patches/ifsc/*.yml').each do |patch|
+    log "Applying #{patch}", :debug
     data = YAML.safe_load(File.read(patch))
 
     codes = data['ifsc']
@@ -241,6 +246,7 @@ def apply_patches(dataset)
     when 'patch'
       patch = data['patch']
       codes.each do |code|
+        log "Patching #{code}"
         dataset[code].merge!(patch) if dataset.has_key? code
       end
     when 'delete'

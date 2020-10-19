@@ -1,0 +1,12 @@
+---
+# Deletion of IFSC from IMPS Ecosystem
+action: patch
+patch:
+  :imps: true
+banks:
+- SBBJ
+- SBHY
+- SBMY
+- STBP
+- SBTR
+- BMBL
