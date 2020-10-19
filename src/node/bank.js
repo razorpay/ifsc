@@ -244,6 +244,7 @@ module.exports = Object.freeze({
   COMX: 'COMX',
   CONX: 'CONX',
   CORP: 'CORP',
+  COAS: 'COAS',
   COSB: 'COSB',
   CPDX: 'CPDX',
   CPSN: 'CPSN',

@@ -248,6 +248,7 @@ module Razorpay
       COMX = :COMX
       CONX = :CONX
       CORP = :CORP
+      COAS = :COAS
       COSB = :COSB
       CPDX = :CPDX
       CPSN = :CPSN
