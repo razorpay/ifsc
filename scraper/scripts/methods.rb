@@ -228,7 +228,7 @@ def apply_bank_patches(dataset)
       if dataset.key? bankcode
         dataset[bankcode].merge!(patch)
       else
-        log "#{bankcode} not found", :critical
+        log "#{bankcode} not found in the list of ACH banks while applying patch", :info
       end
     end
   end
