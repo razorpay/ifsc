@@ -40,6 +40,7 @@ banks:
   - CGGX
   - CITI
   - CIUB
+  - CLBL
   - CNRB
   - COLX
   - CORP
@@ -58,8 +59,10 @@ banks:
   - ESFB
   - ESMF
   - FDRL
+  - FGCB
   - FINO
   - FSFB
+  - GDCB
   - GSCB
   - HCBX
   - HDFC
@@ -89,6 +92,7 @@ banks:
   - KJSB
   - KKBK
   - KLGB
+  - KMCB
   - KVBL
   - KVGB
   - LAVB
@@ -110,10 +114,10 @@ banks:
   - NTBL
   - ORBC
   - PASX
+  - PCTX
   - PDSX
   - PGBX
   - PJSB
-  - PKGB
   - PMCB
   - PRTH
   - PSIB
@@ -123,6 +127,7 @@ banks:
   - PURX
   - PYTM
   - RATN
+  - RJTX
   - RMGB
   - RNSB
   - SACB
@@ -174,3 +179,4 @@ banks:
   - VVSB
   - XJKG
   - YESB
+  - ZRNB
