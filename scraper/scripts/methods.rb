@@ -251,6 +251,11 @@ def apply_patches(dataset)
         log "Patching #{code}"
         dataset[code].merge!(patch) if dataset.has_key? code
       end
+    when 'patch_multiple'
+      codes.each_entry do |code, patch|
+        log "Patching #{code}"
+        dataset[code].merge!(patch) if dataset.has_key? code
+      end
     when 'delete'
       codes.each do |code|
         dataset.delete code
@@ -312,9 +317,9 @@ def validate_sbi_swift
   end
 
   # Validate that all of these are covered in our swift patch
-  patch_bics = YAML.safe_load(File.read('../../src/patches/ifsc/sbi-swift.yml'))['patches']
-    .map(&:values)
-    .map {|x| x[0]['SWIFT']}
+  patch_bics = YAML.safe_load(File.read('../../src/patches/ifsc/sbi-swift.yml'))['ifsc']
+    .values
+    .map {|x| x['SWIFT']}
     .to_set
 
   missing = (website_bics - patch_bics)
