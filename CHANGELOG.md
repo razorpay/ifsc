@@ -5,7 +5,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
-## 1.5.6
+## [1.5.7][1.5.7]
+### Changed
+- 1 new bank - TPSC ("Punjab State Cooperative Bank")
+- 15 new banks in UPI
+- Patches `PUNB0641100` to give correct response.
+- [php] Returns the BANKCODE from the API instead of using the first 4 characters.
+- The large number of additions to Union Bank/Punjab National bank is due to the upcoming mergers. The existing IFSC for the merged banks are not impacted.
+
+## [1.5.6][1.5.6]
+### Changed
 
 - Metadata updates
 
@@ -18,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	- HUCH : Hanamasagar Urban Co-operative Bank
 	- MDBK : Model Co-operative Bank
 	- SDTC : Shri D T Patil Co-operative Bank
+
 ## 1.5.4
 
 ### Changed
@@ -146,6 +156,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
 [unreleased]: https://github.com/razorpay/ifsc/compare/1.4.9...HEAD
+[1.5.7]: https://github.com/razorpay/ifsc/releases/tag/1.5.7
+[1.5.6]: https://github.com/razorpay/ifsc/releases/tag/1.5.6
 [1.4.10]: https://github.com/razorpay/ifsc/releases/tag/1.4.10
 [1.4.9]: https://github.com/razorpay/ifsc/releases/tag/1.4.9
 [1.4.8]: https://github.com/razorpay/ifsc/releases/tag/1.4.8
