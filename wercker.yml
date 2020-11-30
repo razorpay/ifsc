@@ -1,8 +1,14 @@
-box: ruby
+box:
+  id: ruby
+  username: $DOCKERHUB_USERNAME
+  password: $DOCKERHUB_ACCESS_TOKEN
 no-response-timeout: 60
 command-timeout: 60
 build:
-  box: ruby:latest
+  box:
+    id: "ruby:latest"
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
   steps:
     - script:
       name: install ssconvert
@@ -23,7 +29,10 @@ build:
 
 # This is the ruby gem that we have
 rubygem:
-  box: ruby
+  box:
+    id: "ruby"
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
   steps:
     - bundle-install
     - script:
@@ -32,7 +41,10 @@ rubygem:
       code: bundle exec rake
 # PHP package
 php:
-  box: php
+  box:
+    id: "php"
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
   steps:
     - install-packages:
       packages: git
@@ -56,14 +68,20 @@ php:
       code: phpunit
 # Node package
 node:
-  box: node
+  box:
+    id: "node"
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
   steps:
     - npm-install
     - script:
       name: run tests
       code: npm test
 release:
-  box: php
+  box:
+    id: php
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
   steps:
     - install-packages:
       packages: git original-awk
@@ -75,7 +93,10 @@ release:
       name: Copy Release.md
       code: cp scraper/scripts/release.md $WERCKER_REPORT_ARTIFACTS_DIR/
 elixir:
-  box: elixir
+  box:
+    id: "elixir"
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
   steps:
     - script:
       name: install hex
