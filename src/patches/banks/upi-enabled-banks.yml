@@ -32,7 +32,9 @@ banks:
   - BKDN
   - BKDX
   - BKID
+  - BMPX
   - BNSB
+  - BOFA
   - BRDX
   - BRGX
   - BUGX
@@ -48,9 +50,11 @@ banks:
   - CRSX
   - CSBK
   - CSBX
+  - CTBX
   - CZCX
   - DBSS
   - DCBL
+  - DCUX
   - DEGX
   - DEUT
   - DGBX
@@ -62,12 +66,14 @@ banks:
   - FGCB
   - FINO
   - FSFB
+  - GCUX
   - GDCB
   - GSCB
   - HCBX
   - HDFC
   - HGBX
   - HMBX
+  - HPSC
   - HSBC
   - HUTX
   - IBKL
@@ -78,10 +84,14 @@ banks:
   - IOBA
   - IPPB
   - JAKA
+  - JANA
   - JIOP
   - JJSB
+  - JMCX
+  - JSBL
   - JSBP
   - JSFB
+  - JVCX
   - KAIJ
   - KARB
   - KARX
@@ -107,12 +117,15 @@ banks:
   - MSNU
   - MUBL
   - MUSX
+  - MVIX
   - MZRX
+  - NBMX
   - NKGS
   - NNSB
   - NSPB
   - NTBL
   - ORBC
+  - PALX
   - PASX
   - PCTX
   - PDSX
@@ -143,12 +156,14 @@ banks:
   - SPCB
   - SPSX
   - SRCB
+  - SRHX
   - SSDX
   - STRX
   - SUBX
   - SURY
   - SUTB
   - SUVX
+  - SVAX
   - SVCB
   - SVCX
   - SYNB
