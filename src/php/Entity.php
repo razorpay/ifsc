@@ -33,9 +33,14 @@ class Entity
         }
     }
 
+    public function getBankCode()
+    {
+        return $this->bankCode;
+    }
+
     public function getBankName()
     {
-        return IFSC::getBankName($this->bankCode);
+        return IFSC::getBankName($this->getBankCode());
     }
 
     public function __get ($name)
