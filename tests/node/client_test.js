@@ -17,7 +17,7 @@ ifsc
         DISTRICT: 'GURGAON',
         IFSC: 'KKBK0000261',
         IMPS: true,
-        MICR: '',
+        MICR: '110485003',
         UPI: true,
         NEFT: true,
         RTGS: true,
