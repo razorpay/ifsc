@@ -29,6 +29,7 @@ module Razorpay
         @city = api_data['CITY']
         @district = api_data['DISTRICT']
         @state = api_data['STATE']
+        @bankcode = api_data['BANKCODE']
         @valid = true
         self
       end
