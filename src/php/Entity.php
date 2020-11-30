@@ -29,13 +29,13 @@ class Entity
             $this->code = $this->ifsc = $data['IFSC'];
             $this->district = $data['DISTRICT'];
             $this->state = $data['STATE'];
-            $this->bankCode = $this->getBankCode();
+            $this->bankCode = $data['BANKCODE'];
         }
     }
 
     public function getBankCode()
     {
-        return substr($this->code, 0, 4);
+        return $this->bankCode;
     }
 
     public function getBankName()

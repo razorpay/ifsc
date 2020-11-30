@@ -1281,6 +1281,7 @@ class Bank
     const TOCX = 'TOCX';
     const TPCX = 'TPCX';
     const TPDX = 'TPDX';
+    const TPSC = 'TPSC';
     const TPSX = 'TPSX';
     const TPUX = 'TPUX';
     const TRAX = 'TRAX';

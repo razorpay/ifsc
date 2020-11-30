@@ -1280,6 +1280,7 @@ module Razorpay
       TOCX = :TOCX
       TPCX = :TPCX
       TPDX = :TPDX
+      TPSC = :TPSC
       TPSX = :TPSX
       TPUX = :TPUX
       TRAX = :TRAX

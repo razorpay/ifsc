@@ -1,0 +1,13 @@
+---
+# The branch is reported differently in the NEFT and RTGS datasets
+# The PNB website marks it as belonging to Himachal Pradesh, but the RTGS dataset says its in Karnataka
+action: patch
+patch:
+  BRANCH: JAISINGH PUR
+  CENTRE: JAISINGH PUR
+  DISTRICT: JAISINGH PUR
+  STATE: HIMACHAL PRADESH
+  MICR: "176024265"
+  ADDRESS: "VPO JAISINGH PUR DISTT. KANGRA (HP)"
+ifsc:
+  - PUNB0641100
