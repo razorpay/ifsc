@@ -33,3 +33,5 @@ src/IFSC-list.json
 .phpunit.result.cache
 src/patches/*
 tests/
+tmp/
+*.csv
