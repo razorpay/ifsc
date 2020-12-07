@@ -42,7 +42,7 @@ rubygem:
 # PHP package
 php:
   box:
-    id: "php"
+    id: "php7.4"
     username: $DOCKERHUB_USERNAME
     password: $DOCKERHUB_ACCESS_TOKEN
   steps:
@@ -79,7 +79,7 @@ node:
       code: npm test
 release:
   box:
-    id: php
+    id: php7.4
     username: $DOCKERHUB_USERNAME
     password: $DOCKERHUB_ACCESS_TOKEN
   steps:
