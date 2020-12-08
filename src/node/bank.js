@@ -39,6 +39,7 @@ module.exports = Object.freeze({
   AJSX: 'AJSX',
   AJUX: 'AJUX',
   AKJB: 'AKJB',
+  AKKB: 'AKKB',
   AKMX: 'AKMX',
   AKOX: 'AKOX',
   ALAX: 'ALAX',
