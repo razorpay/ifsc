@@ -22,8 +22,7 @@ def match_length_or_nil(data, expected_length)
 end
 
 def get_value(data)
-     if (data != nil && data.text.strip == 'Yes') ? true : false
-     end
+  (data != nil && data.text.strip == 'Yes') ? true : false
 end
 
 def bank_data(bank_code, data, _ifsc)

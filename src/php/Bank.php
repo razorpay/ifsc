@@ -44,6 +44,7 @@ class Bank
     const AJSX = 'AJSX';
     const AJUX = 'AJUX';
     const AKJB = 'AKJB';
+    const AKKB = 'AKKB';
     const AKMX = 'AKMX';
     const AKOX = 'AKOX';
     const ALAX = 'ALAX';
