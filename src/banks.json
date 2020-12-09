@@ -389,6 +389,17 @@
     "ach_debit": true,
     "nach_debit": false
   },
+  "AKKB": {
+    "code": "AKKB",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SAMMSB",
+    "micr": "590924002",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "AKMX": {
     "code": "AKMX",
     "type": "O-UCB",
@@ -2608,7 +2619,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "CSBK": {
     "code": "CSBK",
@@ -4184,6 +4196,17 @@
     "nach_debit": true,
     "upi": true
   },
+  "HSBM": {
+    "code": "HSBM",
+    "type": "O-UCB",
+    "ifsc": "YESB0HSBLM0",
+    "micr": "411945002",
+    "iin": "508550",
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": true,
+    "nach_debit": false
+  },
   "HSBX": {
     "code": "HSBX",
     "type": "O-UCB",
@@ -4487,7 +4510,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "ISBX": {
     "code": "ISBX",
@@ -5807,7 +5831,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "KBNX": {
     "code": "KBNX",
@@ -6321,7 +6346,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "KRCX": {
     "code": "KRCX",
@@ -7765,6 +7791,17 @@
     "ach_debit": true,
     "nach_debit": false
   },
+  "MUCG": {
+    "code": "MUCG",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SMUCBG",
+    "micr": "582883002",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "MUDX": {
     "code": "MUDX",
     "type": "O-UCB",
@@ -8995,7 +9032,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "PDBX": {
     "code": "PDBX",
@@ -9550,7 +9588,7 @@
     "ifsc": "PYTM0000001",
     "micr": "110766001",
     "iin": "608032",
-    "apbs": true,
+    "apbs": false,
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": false,
@@ -10310,6 +10348,17 @@
     "ach_debit": false,
     "nach_debit": false
   },
+  "SBCR": {
+    "code": "SBCR",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SBUBRN",
+    "micr": "581821102",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
+    "nach_debit": false
+  },
   "SBCX": {
     "code": "SBCX",
     "type": "O-UCB",
@@ -10386,6 +10435,17 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
+    "nach_debit": false
+  },
+  "SBPS": {
+    "code": "SBPS",
+    "type": "O-UCB",
+    "ifsc": "UTIB0SBPSBN",
+    "micr": "586824002",
+    "iin": null,
+    "apbs": false,
+    "ach_credit": true,
+    "ach_debit": false,
     "nach_debit": false
   },
   "SBPX": {
@@ -10564,7 +10624,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SDCX": {
     "code": "SDCX",
@@ -10605,7 +10666,7 @@
     "type": "O-UCB",
     "ifsc": "IBKL01340DT",
     "micr": "591846202",
-    "iin": "990324",
+    "iin": null,
     "apbs": true,
     "ach_credit": true,
     "ach_debit": false,
@@ -10675,7 +10736,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SGCX": {
     "code": "SGCX",
@@ -11314,7 +11376,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SOBX": {
     "code": "SOBX",
@@ -12041,7 +12104,7 @@
     "ifsc": "GSCB0UTBSBL",
     "micr": "384822501",
     "iin": "608223",
-    "apbs": false,
+    "apbs": true,
     "ach_credit": true,
     "ach_debit": false,
     "nach_debit": false
@@ -12686,7 +12749,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "TMTX": {
     "code": "TMTX",
@@ -14325,7 +14389,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "YMSX": {
     "code": "YMSX",
