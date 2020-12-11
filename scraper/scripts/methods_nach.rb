@@ -21,6 +21,10 @@ def match_length_or_nil(data, expected_length)
   data.length === expected_length ? data : nil
 end
 
+def get_value(data)
+  (data != nil && data.text.strip == 'Yes') ? true : false
+end
+
 def bank_data(bank_code, data, _ifsc)
   {
     code: bank_code,
@@ -34,7 +38,7 @@ def bank_data(bank_code, data, _ifsc)
     apbs: data[7].text.strip == 'Yes',
     ach_credit: data[8].text.strip == 'Yes',
     ach_debit: data[9].text.strip == 'Yes',
-    nach_debit: data[10].text.strip == 'Yes'
+    nach_debit: get_value(data[10])
   }
 end
 

@@ -48,6 +48,7 @@ banks:
   - CORP
   - COSB
   - CRSX
+  - CRUB
   - CSBK
   - CSBX
   - CTBX
@@ -83,6 +84,7 @@ banks:
   - INDB
   - IOBA
   - IPPB
+  - IPSX
   - JAKA
   - JANA
   - JIOP
@@ -95,6 +97,7 @@ banks:
   - KAIJ
   - KARB
   - KARX
+  - KBCX
   - KBSX
   - KCCB
   - KDIX
@@ -103,6 +106,7 @@ banks:
   - KKBK
   - KLGB
   - KMCB
+  - KPCX
   - KVBL
   - KVGB
   - LAVB
@@ -128,6 +132,7 @@ banks:
   - PALX
   - PASX
   - PCTX
+  - PCUX
   - PDSX
   - PGBX
   - PJSB
@@ -147,12 +152,16 @@ banks:
   - SADX
   - SAGX
   - SBIN
+  - SBLS
   - SCBL
   - SCOB
+  - SDCB
   - SDCE
   - SDCX
+  - SEWX
   - SIBL
   - SIDC
+  - SNSX
   - SPCB
   - SPSX
   - SRCB
@@ -172,6 +181,7 @@ banks:
   - TGBX
   - TJSB
   - TMBL
+  - TMSX
   - TSAB
   - TUDX
   - TUMX
@@ -194,4 +204,5 @@ banks:
   - VVSB
   - XJKG
   - YESB
+  - YLNX
   - ZRNB

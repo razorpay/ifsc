@@ -43,6 +43,7 @@ module Razorpay
       AJSX = :AJSX
       AJUX = :AJUX
       AKJB = :AKJB
+      AKKB = :AKKB
       AKMX = :AKMX
       AKOX = :AKOX
       ALAX = :ALAX
@@ -776,6 +777,7 @@ module Razorpay
       MSSX = :MSSX
       MUBL = :MUBL
       MUBX = :MUBX
+      MUCG = :MUCG
       MUCX = :MUCX
       MUDX = :MUDX
       MUNX = :MUNX
@@ -1033,6 +1035,7 @@ module Razorpay
       SAVX = :SAVX
       SAWX = :SAWX
       SBBJ = :SBBJ
+      SBCR = :SBCR
       SBCX = :SBCX
       SBHY = :SBHY
       SBIN = :SBIN
@@ -1043,6 +1046,7 @@ module Razorpay
       SBMX = :SBMX
       SBMY = :SBMY
       SBNX = :SBNX
+      SBPS = :SBPS
       SBPX = :SBPX
       SBSX = :SBSX
       SBTR = :SBTR

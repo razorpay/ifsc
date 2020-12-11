@@ -44,6 +44,7 @@ class Bank
     const AJSX = 'AJSX';
     const AJUX = 'AJUX';
     const AKJB = 'AKJB';
+    const AKKB = 'AKKB';
     const AKMX = 'AKMX';
     const AKOX = 'AKOX';
     const ALAX = 'ALAX';
@@ -777,6 +778,7 @@ class Bank
     const MSSX = 'MSSX';
     const MUBL = 'MUBL';
     const MUBX = 'MUBX';
+    const MUCG = 'MUCG';
     const MUCX = 'MUCX';
     const MUDX = 'MUDX';
     const MUNX = 'MUNX';
@@ -1034,6 +1036,7 @@ class Bank
     const SAVX = 'SAVX';
     const SAWX = 'SAWX';
     const SBBJ = 'SBBJ';
+    const SBCR = 'SBCR';
     const SBCX = 'SBCX';
     const SBHY = 'SBHY';
     const SBIN = 'SBIN';
@@ -1044,6 +1047,7 @@ class Bank
     const SBMX = 'SBMX';
     const SBMY = 'SBMY';
     const SBNX = 'SBNX';
+    const SBPS = 'SBPS';
     const SBPX = 'SBPX';
     const SBSX = 'SBSX';
     const SBTR = 'SBTR';
