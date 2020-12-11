@@ -3,7 +3,16 @@
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## UNRELEASED
+## [UNRELEASED][unreleased]
+
+## [1.5.8][1.5.8]
+### Changed
+- Only metadata changes in this release
+- New Banks:
+    - `AKKB`: Akkamahadevi Mahila Sahakari Bank Niyamit
+    - `MUCG`: Merchants Urban Coop Bank
+    - `SBCR`: Shree Basaveshwar Urban Coop Bank
+    - `SBPS`: Sri Basaveshwar Pattana Sahakari Bank
 
 ## [1.5.7][1.5.7]
 ### Changed
@@ -155,7 +164,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/1.4.9...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/1.5.8...HEAD
+[1.5.8]: https://github.com/razorpay/ifsc/releases/tag/1.5.9
 [1.5.7]: https://github.com/razorpay/ifsc/releases/tag/1.5.7
 [1.5.6]: https://github.com/razorpay/ifsc/releases/tag/1.5.6
 [1.4.10]: https://github.com/razorpay/ifsc/releases/tag/1.4.10
