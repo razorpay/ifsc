@@ -352,4 +352,4 @@ is under public domain.
 [releases]: https://github.com/razorpay/ifsc/releases
 [buildlist]: https://app.wercker.com/razorpay/ifsc/runs?view=runs&q=pipeline%3Abuild
 [rtgs]: https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx
-[ach]: https://www.npci.org.in/national-automated-clearing-live-members-1
+[ach]: https://www.npci.org.in/what-we-do/nach/live-members/live-banks
