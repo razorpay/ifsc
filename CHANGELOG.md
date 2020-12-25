@@ -5,6 +5,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [1.5.9][1.5.9]
+### Added
+- Initial support for SWIFT mappings. Only SBI and PNB branches are currently supported, and accuracy is not guaranteed. Feedback is welcome.
+
+### Changed
+- Metadata changes
+
 ## [1.5.8][1.5.8]
 ### Changed
 - Only metadata changes in this release
@@ -24,7 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.5.6][1.5.6]
 ### Changed
-
 - Metadata updates
 
 ## 1.5.5

@@ -5,6 +5,8 @@ require 'yaml'
 require 'json'
 require 'set'
 require 'fileutils'
+require 'nokogiri'
+require 'open-uri'
 require './methods_nach'
 
 HEADINGS_INSERT = %w[
@@ -137,7 +139,7 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR','UPI']
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR','UPI', 'SWIFT']
     csv << keys
     data.each do |code, ifsc_data|
       sorted_data = []
@@ -214,6 +216,9 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['IMPS'] ||= true
     combined_data['UPI']  ||= false
     combined_data['MICR'] ||= nil
+    combined_data['SWIFT'] = nil
+    combined_data.delete('DATE')
+
     h[ifsc] = combined_data
   end
   h
@@ -240,16 +245,34 @@ def apply_patches(dataset)
     log "Applying #{patch}", :debug
     data = YAML.safe_load(File.read(patch))
 
-    codes = data['ifsc']
-
     case data['action'].downcase
     when 'patch'
+      codes = data['ifsc']
       patch = data['patch']
       codes.each do |code|
         log "Patching #{code}"
         dataset[code].merge!(patch) if dataset.has_key? code
       end
+    when 'patch_multiple'
+      codes = data['ifsc']
+      codes.each_entry do |code, patch|
+        log "Patching #{code}"
+        dataset[code].merge!(patch) if dataset.has_key? code
+      end
+    when 'patch_bank'
+      patch = data['patch']
+      all_ifsc = dataset.keys
+      banks = data['banks']
+      banks.each do |bankcode|
+        log "Patching #{bankcode}"
+        codes = all_ifsc.select {|code| code[0..3] == bankcode}
+        codes.each do |code|
+          dataset[code].merge!(patch)
+        end
+      end
+
     when 'delete'
+      codes = data['ifsc']
       codes.each do |code|
         dataset.delete code
         log "Removed #{code} from the list", :info
@@ -296,4 +319,32 @@ def log(msg, status = :info)
     msg = "[DEBG] #{msg}"
   end
   puts msg
+end
+
+# Downloads the SWIFT data from
+# https://sbi.co.in/web/nri/quick-links/swift-codes
+def validate_sbi_swift
+  doc = Nokogiri::HTML(open("https://sbi.co.in/web/nri/quick-links/swift-codes"))
+  table = doc.css('tbody')[0]
+  website_bics = Set.new
+
+  for row in table.css('tr')
+    website_bics.add row.css('td')[2].text.gsub(/[[:space:]]/, '')
+  end
+
+  # Validate that all of these are covered in our swift patch
+  patch_bics = YAML.safe_load(File.read('../../src/patches/ifsc/sbi-swift.yml'))['ifsc']
+    .values
+    .map {|x| x['SWIFT']}
+    .to_set
+
+  missing = (website_bics - patch_bics)
+  if missing.size != 0
+    log "[SBI] Missing SWIFT/BICs for SBI. Please match https://sbi.co.in/web/nri/quick-links/swift-codes to src/patches/ifsc/sbi-swift.yml", :critical
+    log "[SBI] You can use https://www.sbi.co.in/web/home/locator/branch to find IFSC from BRANCH code or guess it as SBIN00+BRANCH_CODE", :info
+    log "[SBI] Count of Missing BICS: #{missing.size}", :debug
+    log "[SBI] Missing BICS follow", :debug
+    log missing.to_a.join(", "), :debug
+    exit 1
+  end
 end

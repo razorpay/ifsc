@@ -6,6 +6,7 @@ scraper/scripts/data/
 scraper/scripts/ifsc-api/
 scraper/scripts/release.md
 scraper/vendor
+scraper/banks
 src/IFSC-list.json
 
 # Node.js

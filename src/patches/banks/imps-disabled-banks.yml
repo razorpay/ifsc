@@ -2,7 +2,7 @@
 # Deletion of IFSC from IMPS Ecosystem
 action: patch
 patch:
-  :imps: true
+  :imps: false
 banks:
 - SBBJ
 - SBHY

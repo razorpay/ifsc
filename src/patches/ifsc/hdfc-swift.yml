@@ -1,0 +1,8 @@
+---
+# Source: https://www.hdfcbank.com/nri-banking/correspondent-banks
+# There is no separate SWIFT code for HDFC individual branches. The above mentioned HDFC Bank Swift code can be used for remitting funds to HDFC bank anywhere in India
+action: patch_bank
+patch:
+  SWIFT: 'HDFCINBB'
+banks:
+  - HDFC

@@ -4,9 +4,9 @@ This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
 [ifsc.razorpay.com](https://ifsc.razorpay.com).
 
-[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.5.8.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.8) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.5.9.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.9) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.5.8.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.8) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)
+[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.5.9.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.9) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)
 
 ## Dataset
 
@@ -24,6 +24,22 @@ The source for the dataset are the following files:
 -  List of NEFT IFSCs from [RBI website][combined]
 -  List of RTGS IFSCs from [RBI website][rtgs]
 -  List of ACH Live Banks from [NPCI website][ach] used for IFSC sublet branches
+
+#### SWIFT
+
+SWIFT/BIC codes are supported for a few banks.
+
+##### SBI
+-  https://sbi.co.in/web/nri/quick-links/swift-codes
+-  https://sbi.co.in/documents/16012/263663/sbinri_merged_bran_swfcodet.xlsx
+-  Branch codes from above are checked against the [SBI Branch Locator](https://www.sbi.co.in/web/home/locator/branch) to get the IFSC.
+
+##### PNB
+- https://pnbindia.com/downloadprocess.aspx?fid=Zb7ImdUNlz9Ge73qn1nXQg==
+- https://www.pnbindia.in/document/PNB-helpdesk/bic_code.pdf
+
+##### HDFC
+- https://www.hdfcbank.com/nri-banking/correspondent-banks
 
 ## Installation
 
@@ -342,4 +358,4 @@ is under public domain.
 [releases]: https://github.com/razorpay/ifsc/releases
 [buildlist]: https://app.wercker.com/razorpay/ifsc/runs?view=runs&q=pipeline%3Abuild
 [rtgs]: https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx
-[ach]: https://www.npci.org.in/national-automated-clearing-live-members-1
+[ach]: https://www.npci.org.in/what-we-do/nach/live-members/live-banks
