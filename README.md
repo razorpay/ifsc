@@ -30,10 +30,16 @@ The source for the dataset are the following files:
 SWIFT/BIC codes are supported for a few banks.
 
 ##### SBI
-
--  https://sbi.co.in/web/nri/quick-links/swift-codes (Automatically Monitored as part of test suite)
+-  https://sbi.co.in/web/nri/quick-links/swift-codes
 -  https://sbi.co.in/documents/16012/263663/sbinri_merged_bran_swfcodet.xlsx
 -  Branch codes from above are checked against the [SBI Branch Locator](https://www.sbi.co.in/web/home/locator/branch) to get the IFSC.
+
+##### PNB
+- https://pnbindia.com/downloadprocess.aspx?fid=Zb7ImdUNlz9Ge73qn1nXQg==
+- https://www.pnbindia.in/document/PNB-helpdesk/bic_code.pdf
+
+##### HDFC
+- https://www.hdfcbank.com/nri-banking/correspondent-banks
 
 ## Installation
 
