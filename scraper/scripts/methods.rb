@@ -245,21 +245,34 @@ def apply_patches(dataset)
     log "Applying #{patch}", :debug
     data = YAML.safe_load(File.read(patch))
 
-    codes = data['ifsc']
-
     case data['action'].downcase
     when 'patch'
+      codes = data['ifsc']
       patch = data['patch']
       codes.each do |code|
         log "Patching #{code}"
         dataset[code].merge!(patch) if dataset.has_key? code
       end
     when 'patch_multiple'
+      codes = data['ifsc']
       codes.each_entry do |code, patch|
         log "Patching #{code}"
         dataset[code].merge!(patch) if dataset.has_key? code
       end
+    when 'patch_bank'
+      patch = data['patch']
+      all_ifsc = dataset.keys
+      banks = data['banks']
+      banks.each do |bankcode|
+        log "Patching #{bankcode}"
+        codes = all_ifsc.select {|code| code[0..3] == bankcode}
+        codes.each do |code|
+          dataset[code].merge!(patch)
+        end
+      end
+
     when 'delete'
+      codes = data['ifsc']
       codes.each do |code|
         dataset.delete code
         log "Removed #{code} from the list", :info
