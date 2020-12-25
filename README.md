@@ -25,6 +25,16 @@ The source for the dataset are the following files:
 -  List of RTGS IFSCs from [RBI website][rtgs]
 -  List of ACH Live Banks from [NPCI website][ach] used for IFSC sublet branches
 
+#### SWIFT
+
+SWIFT/BIC codes are supported for a few banks.
+
+##### SBI
+
+-  https://sbi.co.in/web/nri/quick-links/swift-codes (Automatically Monitored as part of test suite)
+-  https://sbi.co.in/documents/16012/263663/sbinri_merged_bran_swfcodet.xlsx
+-  Branch codes from above are checked against the [SBI Branch Locator](https://www.sbi.co.in/web/home/locator/branch) to get the IFSC.
+
 ## Installation
 
 ## Ruby
