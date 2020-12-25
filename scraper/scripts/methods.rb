@@ -137,7 +137,7 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR','UPI']
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR','UPI', 'SWIFT']
     csv << keys
     data.each do |code, ifsc_data|
       sorted_data = []
@@ -214,6 +214,9 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['IMPS'] ||= true
     combined_data['UPI']  ||= false
     combined_data['MICR'] ||= nil
+    combined_data['SWIFT'] = nil
+    combined_data.delete('DATE')
+
     h[ifsc] = combined_data
   end
   h
