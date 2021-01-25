@@ -259,6 +259,12 @@ def apply_patches(dataset)
         log "Patching #{code}"
         dataset[code].merge!(patch) if dataset.has_key? code
       end
+    when 'add_multiple'
+      codes = data['ifsc']
+      codes.each_entry do |code, data|
+        log "Adding #{code}"
+        dataset[code] = data
+      end
     when 'patch_bank'
       patch = data['patch']
       all_ifsc = dataset.keys
