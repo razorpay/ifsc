@@ -179,7 +179,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
 [unreleased]: https://github.com/razorpay/ifsc/compare/1.5.8...HEAD
-[1.5.8]: https://github.com/razorpay/ifsc/releases/tag/1.5.9
+[1.5.10]: https://github.com/razorpay/ifsc/releases/tag/1.5.10
+[1.5.9]: https://github.com/razorpay/ifsc/releases/tag/1.5.9
+[1.5.8]: https://github.com/razorpay/ifsc/releases/tag/1.5.8
 [1.5.7]: https://github.com/razorpay/ifsc/releases/tag/1.5.7
 [1.5.6]: https://github.com/razorpay/ifsc/releases/tag/1.5.6
 [1.4.10]: https://github.com/razorpay/ifsc/releases/tag/1.4.10
