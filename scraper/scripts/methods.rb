@@ -264,6 +264,7 @@ def apply_patches(dataset)
       codes.each_entry do |code, data|
         log "Adding #{code}"
         dataset[code] = data
+        dataset[code]['IFSC'] = code
       end
     when 'patch_bank'
       patch = data['patch']

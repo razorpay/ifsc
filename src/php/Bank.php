@@ -80,6 +80,7 @@ class Bank
     const APNX = 'APNX';
     const APRX = 'APRX';
     const APSX = 'APSX';
+    const ARBL = 'ARBL';
     const ARCX = 'ARCX';
     const ARMX = 'ARMX';
     const ARYX = 'ARYX';
@@ -1276,6 +1277,7 @@ class Bank
     const TMTX = 'TMTX';
     const TMUX = 'TMUX';
     const TNBX = 'TNBX';
+    const TNCB = 'TNCB';
     const TNCX = 'TNCX';
     const TNDC = 'TNDC';
     const TNEX = 'TNEX';

@@ -79,6 +79,7 @@ module Razorpay
       APNX = :APNX
       APRX = :APRX
       APSX = :APSX
+      ARBL = :ARBL
       ARCX = :ARCX
       ARMX = :ARMX
       ARYX = :ARYX
@@ -1275,6 +1276,7 @@ module Razorpay
       TMTX = :TMTX
       TMUX = :TMUX
       TNBX = :TNBX
+      TNCB = :TNCB
       TNCX = :TNCX
       TNDC = :TNDC
       TNEX = :TNEX
