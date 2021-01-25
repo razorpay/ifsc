@@ -6967,7 +6967,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "MAMX": {
     "code": "MAMX",
@@ -7766,7 +7767,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": false,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "MUBL": {
     "code": "MUBL",
@@ -9212,7 +9214,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "PMNX": {
     "code": "PMNX",
@@ -11679,7 +11682,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "STCX": {
     "code": "STCX",
@@ -14155,7 +14159,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "VVSB": {
     "code": "VVSB",
