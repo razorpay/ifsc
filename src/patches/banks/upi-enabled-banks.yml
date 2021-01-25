@@ -112,13 +112,16 @@ banks:
   - LAVB
   - MAHB
   - MAHG
+  - MALX
   - MCBL
+  - MDBK
   - MERX
   - MRBX
   - MRTX
   - MSBL
   - MSCI
   - MSNU
+  - MSSX
   - MUBL
   - MUSX
   - MVIX
@@ -137,6 +140,7 @@ banks:
   - PGBX
   - PJSB
   - PMCB
+  - PMEC
   - PRTH
   - PSIB
   - PTSX
@@ -167,6 +171,7 @@ banks:
   - SRCB
   - SRHX
   - SSDX
+  - STCB
   - STRX
   - SUBX
   - SURY
@@ -175,6 +180,9 @@ banks:
   - SVAX
   - SVCB
   - SVCX
+  # This is a temporary assignment
+  # since the bank code is not known
+  - SXXX
   - SYNB
   - TAMX
   - TBSB
@@ -201,6 +209,7 @@ banks:
   - VISX
   - VSBL
   - VSCX
+  - VVCX
   - VVSB
   - XJKG
   - YESB

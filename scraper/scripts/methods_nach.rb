@@ -52,7 +52,7 @@ def parse_upi
   data = YAML.safe_load(File.read(upi_patch_filename), [Symbol])
   if data['banks'].size != count
     log "Number of UPI-enabled banks (#{data['banks'].size}) does not match the count on the NPCI website (#{count})}", :critical
-    log "Please check https://www.npci.org.in/upi-live-members and update src/patches/banks/upi-enabled-banks.yml", :debug
+    log "Please check https://www.npci.org.in/what-we-do/upi/live-members and update src/patches/banks/upi-enabled-banks.yml", :debug
     exit 1
   end
 

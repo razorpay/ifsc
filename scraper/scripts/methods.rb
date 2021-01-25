@@ -259,6 +259,13 @@ def apply_patches(dataset)
         log "Patching #{code}"
         dataset[code].merge!(patch) if dataset.has_key? code
       end
+    when 'add_multiple'
+      codes = data['ifsc']
+      codes.each_entry do |code, data|
+        log "Adding #{code}"
+        dataset[code] = data
+        dataset[code]['IFSC'] = code
+      end
     when 'patch_bank'
       patch = data['patch']
       all_ifsc = dataset.keys
@@ -324,7 +331,7 @@ end
 # Downloads the SWIFT data from
 # https://sbi.co.in/web/nri/quick-links/swift-codes
 def validate_sbi_swift
-  doc = Nokogiri::HTML(open("https://sbi.co.in/web/nri/quick-links/swift-codes"))
+  doc = Nokogiri::HTML(URI.open("https://sbi.co.in/web/nri/quick-links/swift-codes"))
   table = doc.css('tbody')[0]
   website_bics = Set.new
 

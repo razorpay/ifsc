@@ -5,6 +5,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [1.5.10][1.5.10]
+- 2 new banks:
+  - ARBL: Arvind Sahakari Bank
+  - TNCB: Nawanagar Co-operative Bank
+- Name for STCB changed from "State Bank of Mauritius" to "SBM Bank"
+- Temporary code added for "Sri Rama Co-operative Bank": `SXXX`
+- Support for ICLL (Indian Clearing Corporation) added. `ICLL0000001` is the branch.
+
 ## [1.5.9][1.5.9]
 ### Added
 - Initial support for SWIFT mappings. Only SBI and PNB branches are currently supported, and accuracy is not guaranteed. Feedback is welcome.
@@ -171,7 +179,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
 [unreleased]: https://github.com/razorpay/ifsc/compare/1.5.8...HEAD
-[1.5.8]: https://github.com/razorpay/ifsc/releases/tag/1.5.9
+[1.5.10]: https://github.com/razorpay/ifsc/releases/tag/1.5.10
+[1.5.9]: https://github.com/razorpay/ifsc/releases/tag/1.5.9
+[1.5.8]: https://github.com/razorpay/ifsc/releases/tag/1.5.8
 [1.5.7]: https://github.com/razorpay/ifsc/releases/tag/1.5.7
 [1.5.6]: https://github.com/razorpay/ifsc/releases/tag/1.5.6
 [1.4.10]: https://github.com/razorpay/ifsc/releases/tag/1.4.10

@@ -79,6 +79,7 @@ module Razorpay
       APNX = :APNX
       APRX = :APRX
       APSX = :APSX
+      ARBL = :ARBL
       ARCX = :ARCX
       ARMX = :ARMX
       ARYX = :ARYX
@@ -440,6 +441,7 @@ module Razorpay
       ICBL = :ICBL
       ICHX = :ICHX
       ICIC = :ICIC
+      ICLL = :ICLL
       ICMX = :ICMX
       IDFB = :IDFB
       IDIB = :IDIB
@@ -1199,6 +1201,8 @@ module Razorpay
       SVSX = :SVSX
       SWMX = :SWMX
       SWSX = :SWSX
+      # Temporary assignment
+      SXXX = :SXXX
       SYNB = :SYNB
       TACX = :TACX
       TADX = :TADX
@@ -1272,6 +1276,7 @@ module Razorpay
       TMTX = :TMTX
       TMUX = :TMUX
       TNBX = :TNBX
+      TNCB = :TNCB
       TNCX = :TNCX
       TNDC = :TNDC
       TNEX = :TNEX

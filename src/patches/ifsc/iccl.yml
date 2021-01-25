@@ -1,0 +1,25 @@
+---
+# RTGS is open to non-banking institutions as wel
+# but they do not show up on the list of enabled bank branches
+# that RBI provides
+# Links:
+# - https://www.rbi.org.in/Scripts/Bs_viewRTGS.aspx
+# - https://rbidocs.rbi.org.in/rdocs/RTGS/PDFs/RTGEB101014.PDF
+# - https://rbidocs.rbi.org.in/rdocs/rtgs/pdfs/lps15022012.pdf
+action: add_multiple
+ifsc:
+  ICLL0000001:
+    ADDRESS: FLOOR 25, P J TOWERS, DALAL STREET, MUMBAI
+    BRANCH: Mumbai
+    BANK: Indian Clearing Corporation
+    CENTRE: Mumbai
+    CITY: MUMBAI
+    CONTACT: null
+    DISTRICT: Mumbai
+    IMPS: false
+    MICR: null
+    NEFT: false
+    RTGS: true
+    STATE: MAHARASHTRA
+    SWIFT: null
+    UPI: false
