@@ -441,6 +441,7 @@ class Bank
     const ICBL = 'ICBL';
     const ICHX = 'ICHX';
     const ICIC = 'ICIC';
+    const ICLL = 'ICLL';
     const ICMX = 'ICMX';
     const IDFB = 'IDFB';
     const IDIB = 'IDIB';
@@ -1200,6 +1201,8 @@ class Bank
     const SVSX = 'SVSX';
     const SWMX = 'SWMX';
     const SWSX = 'SWSX';
+    // This is a temporary assignment
+    const SXXX = 'SXXX';
     const SYNB = 'SYNB';
     const TACX = 'TACX';
     const TADX = 'TADX';

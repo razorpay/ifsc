@@ -436,6 +436,7 @@ module.exports = Object.freeze({
   ICBL: 'ICBL',
   ICHX: 'ICHX',
   ICIC: 'ICIC',
+  ICLL: 'ICLL',
   ICMX: 'ICMX',
   IDFB: 'IDFB',
   IDIB: 'IDIB',
@@ -1195,6 +1196,8 @@ module.exports = Object.freeze({
   SVSX: 'SVSX',
   SWMX: 'SWMX',
   SWSX: 'SWSX',
+  // Temporary assignment
+  SXXX: 'SXXX',
   SYNB: 'SYNB',
   TACX: 'TACX',
   TADX: 'TADX',
