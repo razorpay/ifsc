@@ -3,10 +3,7 @@ package ifsc
 import (
 	"fmt"
 	"log"
-	"reflect"
 )
-
-var bankCodes = map[string]int{}
 
 type Bank struct {
 	Name      string `json:"name"`
@@ -24,16 +21,7 @@ type Bank struct {
 }
 
 var bankData map[string]Bank
-var BankCode bankCode
 
-func init() {
-	val := reflect.Indirect(reflect.ValueOf(&BankCode))
-	for i := 0; i < val.NumField(); i++ {
-		bankName := val.Type().Field(i).Name
-		bankCodes[bankName] = 1
-		val.Field(i).SetString(bankName)
-	}
-}
 func LoadBankData() {
 	if bankData == nil {
 		if err := LoadFile("banks.json", &bankData, ""); err != nil {

@@ -309,12 +309,12 @@ func main() {
 
 	ifsc.GetBankName("PUNB") // Returns "Punjab National Bank", nil
 	ifsc.GetBankName("ABCD") // Returns "", errors.New(invalid bank code)
-	ifsc.GetBankName(ifsc.BankCode.HDFC) // Returns "HDFC Bank", nil
+	ifsc.GetBankName(ifsc.HDFC) // Returns "HDFC Bank", nil
 
 
 	ifsc.GetBankDetails("PUNB")
 	// or
-	ifsc.GetBankDetails(ifsc.BankCode.PUNB)
+	ifsc.GetBankDetails(ifsc.PUNB)
 
 	/* Returns
 		(*ifsc.Bank){
