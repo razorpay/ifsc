@@ -5,7 +5,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [1.5.11][1.5.11]
+## Changed
+- Metadata updates
+
 ## [1.5.10][1.5.10]
+## Changed
 - 2 new banks:
   - ARBL: Arvind Sahakari Bank
   - TNCB: Nawanagar Co-operative Bank
