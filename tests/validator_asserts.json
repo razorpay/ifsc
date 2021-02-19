@@ -11,7 +11,9 @@
 		"KKBK0000261": true,
 		"UTIB0001688": true,
 		"BARB0DBAGIY": true,
-		"BARB0DBAAHM": true
+		"BARB0DBAAHM": true,
+		"ICLL0000001": true,
+		"CNRB0011023": true
 	},
 	"testValidateStringLookup": {
 		"BOTM0NEEMRA": true,

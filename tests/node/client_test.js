@@ -22,6 +22,7 @@ ifsc
         NEFT: true,
         RTGS: true,
         STATE: 'HARYANA',
+        SWIFT: ''
       },
 
       res
