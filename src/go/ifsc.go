@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-var ifsc map[string][]Data
+var ifscMap map[string][]Data
 var bankNames map[string]string
 var sublet map[string]string
 var customSublets map[string]string
@@ -41,9 +41,9 @@ func (d *Data) UnmarshalJSON(input []byte) error {
 
 func init() {
 	LoadBankData()
-	if ifsc == nil {
-		if err := LoadFile("IFSC.json", &ifsc, ""); err != nil {
-			log.Panic(fmt.Sprintf("there is some error in IFSC.json file: %v", err))
+	if ifscMap == nil {
+		if err := LoadFile("ifsc.json", &ifscMap, ""); err != nil {
+			log.Panic(fmt.Sprintf("there is some error in ifsc.json file: %v", err))
 		}
 	}
 	if sublet == nil {
@@ -93,7 +93,7 @@ func Validate(code string) bool {
 	}
 	bankCode := strings.ToUpper(code[0:4])
 	branchCode := strings.ToUpper(code[5:])
-	list, ok := ifsc[bankCode]
+	list, ok := ifscMap[bankCode]
 	if !ok {
 		return false
 	}

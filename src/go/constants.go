@@ -45,6 +45,7 @@ const (
         AJSX = "AJSX"
         AJUX = "AJUX"
         AKJB = "AKJB"
+        AKKB = "AKKB"
         AKMX = "AKMX"
         AKOX = "AKOX"
         ALAX = "ALAX"
@@ -80,6 +81,7 @@ const (
         APNX = "APNX"
         APRX = "APRX"
         APSX = "APSX"
+        ARBL = "ARBL"
         ARCX = "ARCX"
         ARMX = "ARMX"
         ARYX = "ARYX"
@@ -441,6 +443,7 @@ const (
         ICBL = "ICBL"
         ICHX = "ICHX"
         ICIC = "ICIC"
+        ICLL = "ICLL"
         ICMX = "ICMX"
         IDFB = "IDFB"
         IDIB = "IDIB"
@@ -778,6 +781,7 @@ const (
         MSSX = "MSSX"
         MUBL = "MUBL"
         MUBX = "MUBX"
+        MUCG = "MUCG"
         MUCX = "MUCX"
         MUDX = "MUDX"
         MUNX = "MUNX"
@@ -1035,6 +1039,7 @@ const (
         SAVX = "SAVX"
         SAWX = "SAWX"
         SBBJ = "SBBJ"
+        SBCR = "SBCR"
         SBCX = "SBCX"
         SBHY = "SBHY"
         SBIN = "SBIN"
@@ -1045,6 +1050,7 @@ const (
         SBMX = "SBMX"
         SBMY = "SBMY"
         SBNX = "SBNX"
+        SBPS = "SBPS"
         SBPX = "SBPX"
         SBSX = "SBSX"
         SBTR = "SBTR"
@@ -1197,6 +1203,7 @@ const (
         SVSX = "SVSX"
         SWMX = "SWMX"
         SWSX = "SWSX"
+        SXXX = "SXXX"
         SYNB = "SYNB"
         TACX = "TACX"
         TADX = "TADX"
@@ -1270,6 +1277,7 @@ const (
         TMTX = "TMTX"
         TMUX = "TMUX"
         TNBX = "TNBX"
+        TNCB = "TNCB"
         TNCX = "TNCX"
         TNDC = "TNDC"
         TNEX = "TNEX"
@@ -1282,6 +1290,7 @@ const (
         TOCX = "TOCX"
         TPCX = "TPCX"
         TPDX = "TPDX"
+        TPSC = "TPSC"
         TPSX = "TPSX"
         TPUX = "TPUX"
         TRAX = "TRAX"
@@ -1492,6 +1501,7 @@ var bankCodes = map[string]bool{
         "AJSX" : true, 
         "AJUX" : true, 
         "AKJB" : true, 
+        "AKKB" : true, 
         "AKMX" : true, 
         "AKOX" : true, 
         "ALAX" : true, 
@@ -1527,6 +1537,7 @@ var bankCodes = map[string]bool{
         "APNX" : true, 
         "APRX" : true, 
         "APSX" : true, 
+        "ARBL" : true, 
         "ARCX" : true, 
         "ARMX" : true, 
         "ARYX" : true, 
@@ -1888,6 +1899,7 @@ var bankCodes = map[string]bool{
         "ICBL" : true, 
         "ICHX" : true, 
         "ICIC" : true, 
+        "ICLL" : true, 
         "ICMX" : true, 
         "IDFB" : true, 
         "IDIB" : true, 
@@ -2225,6 +2237,7 @@ var bankCodes = map[string]bool{
         "MSSX" : true, 
         "MUBL" : true, 
         "MUBX" : true, 
+        "MUCG" : true, 
         "MUCX" : true, 
         "MUDX" : true, 
         "MUNX" : true, 
@@ -2482,6 +2495,7 @@ var bankCodes = map[string]bool{
         "SAVX" : true, 
         "SAWX" : true, 
         "SBBJ" : true, 
+        "SBCR" : true, 
         "SBCX" : true, 
         "SBHY" : true, 
         "SBIN" : true, 
@@ -2492,6 +2506,7 @@ var bankCodes = map[string]bool{
         "SBMX" : true, 
         "SBMY" : true, 
         "SBNX" : true, 
+        "SBPS" : true, 
         "SBPX" : true, 
         "SBSX" : true, 
         "SBTR" : true, 
@@ -2644,6 +2659,7 @@ var bankCodes = map[string]bool{
         "SVSX" : true, 
         "SWMX" : true, 
         "SWSX" : true, 
+        "SXXX" : true, 
         "SYNB" : true, 
         "TACX" : true, 
         "TADX" : true, 
@@ -2717,6 +2733,7 @@ var bankCodes = map[string]bool{
         "TMTX" : true, 
         "TMUX" : true, 
         "TNBX" : true, 
+        "TNCB" : true, 
         "TNCX" : true, 
         "TNDC" : true, 
         "TNEX" : true, 
@@ -2729,6 +2746,7 @@ var bankCodes = map[string]bool{
         "TOCX" : true, 
         "TPCX" : true, 
         "TPDX" : true, 
+        "TPSC" : true, 
         "TPSX" : true, 
         "TPUX" : true, 
         "TRAX" : true, 
