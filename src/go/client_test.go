@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gyanesh-m/ifsc/src/go/mocks"
+	"github.com/razorpay/ifsc/src/go/mocks"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -1,4 +1,4 @@
-module github.com/gyanesh-m/ifsc
+module github.com/razorpay/ifsc
 
 go 1.15
 
