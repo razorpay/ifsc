@@ -42,8 +42,8 @@ func (d *Data) UnmarshalJSON(input []byte) error {
 func init() {
 	LoadBankData()
 	if ifscMap == nil {
-		if err := LoadFile("ifsc.json", &ifscMap, ""); err != nil {
-			log.Panic(fmt.Sprintf("there is some error in ifsc.json file: %v", err))
+		if err := LoadFile("IFSC.json", &ifscMap, ""); err != nil {
+			log.Panic(fmt.Sprintf("there is some error in IFSC.json file: %v", err))
 		}
 	}
 	if sublet == nil {
