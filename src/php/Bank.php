@@ -97,6 +97,7 @@ class Bank
     const AUCX = 'AUCX';
     const AUGX = 'AUGX';
     const AURX = 'AURX';
+    const AUSF = 'AUSF';
     const AVDX = 'AVDX';
     const AWCX = 'AWCX';
     const AWUX = 'AWUX';
