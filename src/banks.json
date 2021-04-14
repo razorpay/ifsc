@@ -164,7 +164,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "ADBX": {
     "code": "ADBX",
@@ -198,7 +199,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "ADCX": {
     "code": "ADCX",
@@ -856,7 +858,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "ASSX": {
     "code": "ASSX",
@@ -2539,8 +2542,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
+    "nach_debit": true
   },
   "COSB": {
     "code": "COSB",
@@ -7034,7 +7036,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "MAWX": {
     "code": "MAWX",
@@ -7255,7 +7258,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": false,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "MDPX": {
     "code": "MDPX",
@@ -7630,7 +7634,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "MRBX": {
     "code": "MRBX",
@@ -8191,7 +8196,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "NEYX": {
     "code": "NEYX",
@@ -8656,7 +8662,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "NUCB": {
     "code": "NUCB",
@@ -8777,8 +8784,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
+    "nach_debit": true
   },
   "ORCB": {
     "code": "ORCB",
@@ -10261,7 +10267,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": false,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SAPX": {
     "code": "SAPX",
@@ -10360,7 +10367,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": false,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SBCX": {
     "code": "SBCX",
@@ -10861,7 +10869,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SHKX": {
     "code": "SHKX",
@@ -13329,8 +13338,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
+    "nach_debit": true
   },
   "UCBA": {
     "code": "UCBA",
