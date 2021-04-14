@@ -45,3 +45,9 @@ InstalledFiles
 
 # One-off scripts
 *.php
+
+# IDE files
+.idea/*
+
+# Temp files
+.*~

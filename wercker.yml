@@ -113,3 +113,10 @@ elixir:
     - script:
       name: run tests
       code: mix test
+go:
+  box: golang
+  steps:
+    - setup-go-workspace
+    - script:
+        name: Unit tests
+        code: make test

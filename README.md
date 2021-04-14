@@ -6,7 +6,7 @@ You can find more details about the entire release at
 
 [![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.5.11.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.11) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.5.11.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.11) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)
+[![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.5.11.svg)](https://microbadger.com/images/razorpay/ifsc:1.5.11) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)[![Go project version](https://badge.fury.io/go/github.com%2Frazorpay%2Fifsc.svg)](https://badge.fury.io/go/github.com%2Frazorpay%2Fifsc)
 
 ## Dataset
 
@@ -83,6 +83,16 @@ The minimum [PHP version supported is 7.2](https://endoflife.date/php).
 
 `$ npm install ifsc`
 
+## Go
+
+`$ go get -u github.com/razorpay/ifsc`
+
+To use the go pkg, the import path should be:
+
+```go
+import "github.com/razorpay/ifsc/src/go"
+```
+
 ## Support Matrix
 
 Only the latest version of each SDK is considered.
@@ -93,10 +103,11 @@ Only the latest version of each SDK is considered.
 | Ruby     | ✅         | ✅         | ✅ (✅)                 | ✅             |
 | Elixir   | ✅         | ✅         | ✅ (❎)                 | ❎             |
 | Node.js  | ✅         | ✅         | ❎ (❎)                 | ✅             |
+| Go       | ✅         | ✅         | ✅ (✅)                 | ✅             |
 
 ## API Documentation
 
-This repository also hosts the source code for 3 modules: PHP/Node.js/Ruby as of now.
+This repository also hosts the source code for 5 modules: PHP/Node.js/Ruby/Elixir/Go as of now.
 The API is documented below:
 
 ### PHP
@@ -331,6 +342,71 @@ iex> IFSC.validate("AAAA0000000")
 
 iex(> IFSC.validate("HDFC0000000")
 {:error, :invalid_branch_code}
+```
+
+### Go
+
+```go
+package main
+
+import (
+	ifsc "github.com/razorpay/ifsc/src/go"
+)
+
+// todo: change funcs not required to lower case.
+
+func main() {
+	            
+	ifsc.Validate("KKBK0000261") // Returns true
+	ifsc.Validate("BOTM0XEEMRA") // Returns false
+
+	ifsc.ValidateBankCode("PUNB") // Returns true
+	ifsc.ValidateBankCode("ABCD") // Returns false
+
+	ifsc.GetBankName("PUNB") // Returns "Punjab National Bank", nil
+	ifsc.GetBankName("ABCD") // Returns "", errors.New(invalid bank code)
+	ifsc.GetBankName(ifsc.HDFC) // Returns "HDFC Bank", nil
+
+
+	ifsc.GetBankDetails("PUNB")
+	// or
+	ifsc.GetBankDetails(ifsc.PUNB)
+
+	/* Returns                                    
+		(*ifsc.Bank){                             
+		Name	  : "Punjab National Bank",    
+		BankCode  : "024",                    
+		Code	  : "PUNB",                   
+		Type	  : "PSB",                    
+		IFSC	  : "PUNB0244200",            
+		MICR      : "110024001",              
+		IIN       : "508568",                 
+		APBS      : true,                     
+		AchCredit : true,                     
+		AchDebit  : true,                     
+		NachDebit : true,                     
+		Upi       : true                      
+	}), nil                                       
+	*/
+
+	ifsc.LookUP("KKBK0000261")
+	
+	/*
+	Returns
+	(*ifsc.IFSCResponse)({
+	 Bank	  :  "Kotak Mahindra Bank",
+	 Branch	  :  "GURGAON",
+	 Address  :  "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,",
+	 Contact  :  "4131000",
+	 City	  :  "GURGAON",
+	 District :  "GURGAON",
+	 State	  :  "HARYANA",
+	 IFSC	  :  "KKBK0000261",
+	 BankCode :  "KKBK"
+	}), nil
+	 */
+}
+
 ```
 
 ### Code Notes

@@ -11,8 +11,8 @@ else
   # Till NPCI fixes their certificate: https://twitter.com/captn3m0/status/1247806778529599496
   wget --no-check-certificate --timeout=10 "https://www.npci.org.in/what-we-do/nach/live-members/live-banks" --output-document=nach.html --user-agent="Firefox"
   wget --no-check-certificate --timeout=10 "https://www.npci.org.in/what-we-do/upi/live-members" --output-document=upi.html --user-agent="Firefox"
-  wget --timestamping --no-verbose --directory-prefix=sheets/ "https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx" || true
-  wget --timestamping --no-verbose --directory-prefix=sheets/ "https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx" || true
+  wget --no-check-certificate --timestamping --no-verbose --directory-prefix=sheets/ "https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx" || true
+  wget --no-check-certificate --timestamping --no-verbose --directory-prefix=sheets/ "https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx" || true
 
   echo "Sheet Download complete, starting export"
 fi
