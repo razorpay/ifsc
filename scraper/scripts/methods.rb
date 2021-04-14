@@ -20,6 +20,26 @@ HEADINGS_INSERT = %w[
   STATE
 ].freeze
 
+# These are not all the known states
+# because the usage is quite limited for now
+KNOWN_STATES = [
+  'ANDHRA PRADESH',
+  'DELHI',
+  'GUJARAT',
+  'JAMMU AND KASHMIR',
+  'HIMACHAL PRADESH',
+  'KARNATAKA',
+  'KERALA',
+  'MAHARASHTRA',
+  'PUNJAB',
+  'TAMIL NADU',
+  'MADHYA PRADESH',
+  'UTTARAKHAND',
+  'RAJASTHAN',
+  'TELANGANA',
+  'WEST BENGAL'
+].freeze
+
 def parse_imps(banks)
   data = {}
   banknames = JSON.parse File.read('../../src/banknames.json')
@@ -84,6 +104,50 @@ def parse_neft(banks)
   data
 end
 
+# Some rows have last 2 columns shifted by 2
+# Check for numeric values of STATE in RTGEB0815.xlsx for examples
+# This checks and fixes those
+def fix_row_alignment_for_rtgs(row)
+  # List of recognized states
+  unless KNOWN_STATES.include? row['CITY2'].to_s.strip
+    log "#{row['IFSC']} has an unknown state (#{row['CITY2']}), please check"
+    exit 1
+  end
+  # Start right shifting from the right-most column
+  row['PHONE'] = row['STD CODE']
+  # Move STATE's numeric value to STD CODE
+  row['STD CODE'] = row['STATE']
+  row['STATE'] = row['CITY2']
+  # Fix CITY2 value by duplicating CITY1
+  row['CITY2'] = row['CITY1']
+  return row
+end
+
+# Parses the contact details on the RTGS Sheet
+def rtgs_parse_contact(std_code, phone)
+  scan_contact = phone.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
+  scan_std_code = std_code.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
+
+  contact = scan_contact.nil? || (scan_contact == 0) || (scan_contact == '0') || (scan_contact.is_a?(Array) && (scan_contact == ['0'])) ? nil : scan_contact.first
+  std_code = scan_std_code.nil? || (scan_std_code == 0) || (scan_std_code == '0') || (scan_std_code.is_a?(Array) && (scan_std_code == ['0'])) ? nil : scan_std_code.first
+
+  # If std code starts with 0, strip that out
+  if std_code and std_code[0] == '0'
+    std_code = std_code[1..]
+  end
+
+  # If we have an STD code, use it correctly
+  # Formatting as per E.164 format
+  # https://en.wikipedia.org/wiki/E.164
+  if std_code
+    return "+91#{std_code}#{contact}"
+  elsif contact
+    return "+91#{contact}"
+  else
+    return nil
+  end
+end
+
 def parse_rtgs(banks)
   data = {}
   sheets = 1..2
@@ -96,10 +160,12 @@ def parse_rtgs(banks)
       micr_match = row['MICR_CODE'].to_s.strip.match('\d{9}')
       row['MICR'] = micr_match[0] if micr_match
       row['BANK'] = row.delete('BANK NAME')
-      row.delete('Date')
-      row.delete('MICR_CODE')
-      scan_contact = row['CONTACT'].to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
-      row['CONTACT'] = scan_contact.nil? || (scan_contact == 0) || (scan_contact == '0') || (scan_contact.is_a?(Array) && (scan_contact == ['0'])) ? nil : scan_contact.first
+
+      if row['STATE'].to_s.strip.match('\d')
+        row = fix_row_alignment_for_rtgs(row)
+      end
+
+      row['CONTACT'] = rtgs_parse_contact(row['STD CODE'], row['PHONE'])
 
       # There is a second header in the middle of the sheet.
       # :facepalm: RBI
@@ -128,9 +194,18 @@ def parse_rtgs(banks)
       end
       row['ADDRESS'] = row['ADDRESS'].to_s.strip
       row['RTGS'] = true
-      # This is fallback option and we fake it
-      # because the RTGS sheet does not have the CITY
-      row['CITY'] = row['CENTRE']
+      # This isn't accurate sadly, because RBI has both the columns
+      # all over the place. As an example, check LAVB0000882 vs LAVB0000883
+      # which have the flipped values for CITY1 and CITY2
+      row['CITY'] = row['CITY2']
+      row['CENTRE'] = row['CITY1']
+      row['DISTRICT'] = row['CITY1']
+      # Delete rows we don't want in output
+      # Merged into CONTACRT
+      row.delete('STD CODE')
+      row.delete('PHONE')
+      row.delete('CITY1')
+      row.delete('CITY2')
       data[row['IFSC']] = row
     end
   end
