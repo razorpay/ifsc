@@ -562,6 +562,7 @@ class Bank
     const JSVX = 'JSVX';
     const JSWX = 'JSWX';
     const JTIX = 'JTIX';
+    const JTSC = 'JTSC';
     const JTSX = 'JTSX';
     const JUCX = 'JUCX';
     const JUSX = 'JUSX';
@@ -974,6 +975,7 @@ class Bank
     const RBCX = 'RBCX';
     const RBIH = 'RBIH';
     const RBIN = 'RBIN';
+    const RBIP = 'RBIP';
     const RBIS = 'RBIS';
     const RCBX = 'RCBX';
     const RCCX = 'RCCX';
@@ -1075,6 +1077,7 @@ class Bank
     const SDTC = 'SDTC';
     const SDTX = 'SDTX';
     const SDUX = 'SDUX';
+    const SECB = 'SECB';
     const SEMX = 'SEMX';
     const SENX = 'SENX';
     const SEUX = 'SEUX';

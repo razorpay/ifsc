@@ -245,12 +245,12 @@ module Razorpay
       CMPX = :CMPX
       CNRB = :CNRB
       CNSX = :CNSX
+      COAS = :COAS
       COCX = :COCX
       COLX = :COLX
       COMX = :COMX
       CONX = :CONX
       CORP = :CORP
-      COAS = :COAS
       COSB = :COSB
       CPDX = :CPDX
       CPSN = :CPSN
@@ -429,8 +429,8 @@ module Razorpay
       HSDX = :HSDX
       HSSX = :HSSX
       HUBX = :HUBX
-      HUCH = :HUCH
       HUCB = :HUCB
+      HUCH = :HUCH
       HUCX = :HUCX
       HUTX = :HUTX
       HVBK = :HVBK
@@ -561,6 +561,7 @@ module Razorpay
       JSVX = :JSVX
       JSWX = :JSWX
       JTIX = :JTIX
+      JTSC = :JTSC
       JTSX = :JTSX
       JUCX = :JUCX
       JUSX = :JUSX
@@ -973,6 +974,7 @@ module Razorpay
       RBCX = :RBCX
       RBIH = :RBIH
       RBIN = :RBIN
+      RBIP = :RBIP
       RBIS = :RBIS
       RCBX = :RCBX
       RCCX = :RCCX
@@ -1074,6 +1076,7 @@ module Razorpay
       SDTC = :SDTC
       SDTX = :SDTX
       SDUX = :SDUX
+      SECB = :SECB
       SEMX = :SEMX
       SENX = :SENX
       SEUX = :SEUX
