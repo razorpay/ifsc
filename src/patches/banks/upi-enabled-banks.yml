@@ -8,7 +8,9 @@ patch:
 banks:
   - ABHY
   - ACBX
+  - ACUX
   - ADBX
+  - ADCC
   - AGVX
   - AIRP
   - ALLA
@@ -20,6 +22,7 @@ banks:
   - APGV
   - APMC
   - ASBL
+  - ASOX
   - AUBL
   - BACB
   - BARA
@@ -45,7 +48,6 @@ banks:
   - CLBL
   - CNRB
   - COLX
-  - CORP
   - COSB
   - CRSX
   - CRUB
@@ -85,6 +87,7 @@ banks:
   - IOBA
   - IPPB
   - IPSX
+  - ITBL
   - JAKA
   - JANA
   - JIOP
@@ -113,9 +116,12 @@ banks:
   - MAHB
   - MAHG
   - MALX
+  - MAVX
   - MCBL
   - MDBK
+  - MDMX
   - MERX
+  - MPRX
   - MRBX
   - MRTX
   - MSBL
@@ -127,11 +133,12 @@ banks:
   - MVIX
   - MZRX
   - NBMX
+  - NESF
   - NKGS
   - NNSB
   - NSPB
   - NTBL
-  - ORBC
+  - NUBX
   - PALX
   - PASX
   - PCTX
@@ -155,6 +162,8 @@ banks:
   - SACB
   - SADX
   - SAGX
+  - SANX
+  - SBCR
   - SBIN
   - SBLS
   - SCBL
@@ -163,6 +172,7 @@ banks:
   - SDCE
   - SDCX
   - SEWX
+  - SHIX
   - SIBL
   - SIDC
   - SNSX
@@ -180,8 +190,6 @@ banks:
   - SVAX
   - SVCB
   - SVCX
-  # This is a temporary assignment
-  # since the bank code is not known
   - SXXX
   - SYNB
   - TAMX
@@ -193,7 +201,6 @@ banks:
   - TSAB
   - TUDX
   - TUMX
-  - UBIN
   - UCBA
   - UMSX
   - USFB
