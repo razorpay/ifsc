@@ -5,6 +5,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [1.5.12][1.5.12]
+
+- Only metadata changes in this release.
+- Data corrections to account for broken alignment in RBI's RTGS spreadsheet
+- Improved support for Contact details that are sourced from RTGS dataset. CONTACT details are returned in E.164 format
+
 ## [1.5.11][1.5.11]
 ## Changed
 - Metadata updates
@@ -183,7 +189,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/1.5.11...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/1.5.12...HEAD
+[1.5.12]: https://github.com/razorpay/ifsc/releases/tag/1.5.12
 [1.5.11]: https://github.com/razorpay/ifsc/releases/tag/1.5.11
 [1.5.10]: https://github.com/razorpay/ifsc/releases/tag/1.5.10
 [1.5.9]: https://github.com/razorpay/ifsc/releases/tag/1.5.9
