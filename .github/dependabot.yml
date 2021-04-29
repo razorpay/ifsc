@@ -1,0 +1,37 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+    timezone: Asia/Calcutta
+- package-ecosystem: bundler
+  directory: "/scraper"
+  schedule:
+    interval: daily
+    time: "04:00"
+    timezone: Asia/Calcutta
+  ignore:
+  - dependency-name: nokogiri
+    versions:
+    - 1.11.2
+    - 1.11.3
+  - dependency-name: spreadsheet
+    versions:
+    - 1.2.8
+  - dependency-name: rubyXL
+    versions:
+    - 3.4.17
+- package-ecosystem: mix
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+    timezone: Asia/Calcutta
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+    timezone: Asia/Calcutta
