@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED][unreleased]
+## [1.5.13][1.5.13]
+- [upi] Vijaya Bank and Dena Gujarat Gramin Bank are no more
+- [upi] 7 new banks now support UPI
+- Metadata update for new release
+- Sanitizes most text fields to remove special characters that show up from encoding errors. Fixes #29, #32
+- Start parsing contact numbers from NEFT sheet as well. Published in E.164 wherever possible
+- Changes some empty fields to null instead of "NA"
+
+## [1.5.12][1.5.12]
+
+- Only metadata changes in this release.
+- Data corrections to account for broken alignment in RBI's RTGS spreadsheet
+- Improved support for Contact details that are sourced from RTGS dataset. CONTACT details are returned in E.164 format
 
 ## [1.5.11][1.5.11]
 ## Changed
@@ -183,7 +196,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/1.5.11...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/1.5.13...HEAD
+[1.5.13]: https://github.com/razorpay/ifsc/releases/tag/1.5.13
+[1.5.12]: https://github.com/razorpay/ifsc/releases/tag/1.5.12
 [1.5.11]: https://github.com/razorpay/ifsc/releases/tag/1.5.11
 [1.5.10]: https://github.com/razorpay/ifsc/releases/tag/1.5.10
 [1.5.9]: https://github.com/razorpay/ifsc/releases/tag/1.5.9

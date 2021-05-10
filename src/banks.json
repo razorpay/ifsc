@@ -6692,7 +6692,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "LAVB": {
     "code": "LAVB",
@@ -9634,7 +9635,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "RAEX": {
     "code": "RAEX",
@@ -11793,7 +11795,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SURX": {
     "code": "SURX",
@@ -11838,7 +11841,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": false,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SUTB": {
     "code": "SUTB",
@@ -12187,7 +12191,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "TCCX": {
     "code": "TCCX",
@@ -13942,8 +13947,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false,
-    "upi": true
+    "nach_debit": false
   },
   "VIJX": {
     "code": "VIJX",
@@ -13966,7 +13970,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "VIMX": {
     "code": "VIMX",
