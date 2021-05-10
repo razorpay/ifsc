@@ -4,29 +4,16 @@ const assert = require('assert');
 ifsc
   .fetchDetails('KKBK0000261')
   .then(function(res) {
-    assert.deepEqual(
-      {
-        ADDRESS:
-          'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,',
-        BANK: 'Kotak Mahindra Bank',
-        BANKCODE: 'KKBK',
-        BRANCH: 'GURGAON',
-        CENTRE: 'GURGAON',
-        CITY: 'GURGAON',
-        CONTACT: '4131000',
-        DISTRICT: 'GURGAON',
-        IFSC: 'KKBK0000261',
-        IMPS: true,
-        MICR: '110485003',
-        UPI: true,
-        NEFT: true,
-        RTGS: true,
-        STATE: 'HARYANA',
-        SWIFT: ''
-      },
-
-      res
-    );
+    assert.equal('JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,',res['ADDRESS'])
+    assert.equal('Kotak Mahindra Bank',res['BANK'])
+    assert.equal('KKBK',res['BANKCODE'])
+    assert.equal('GURGAON',res['BRANCH'])
+    assert.equal('GURGAON',res['CENTRE'])
+    assert.equal('GURGAON',res['CITY'])
+    assert.equal('GURGAON',res['DISTRICT'])
+    assert.equal('KKBK0000261',res['IFSC'])
+    assert.equal('110485003',res['MICR'])
+    assert.equal('HARYANA',res['STATE'])
   })
   .catch(err => {
     console.error(err);
