@@ -8,6 +8,7 @@ require 'fileutils'
 require 'nokogiri'
 require 'open-uri'
 require './methods_nach'
+require './utils'
 
 HEADINGS_INSERT = %w[
   BANK
@@ -22,6 +23,8 @@ HEADINGS_INSERT = %w[
 
 # These are not all the known states
 # because the usage is quite limited for now
+# TODO: Change this to a accurate mapping
+# And store statecode instead
 KNOWN_STATES = [
   'ANDHRA PRADESH',
   'DELHI',
@@ -74,18 +77,24 @@ def parse_neft(banks)
     headers = CSV.foreach("sheets/NEFT-#{sheet_id}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
       row = row.to_h
       scan_contact = row['CONTACT'].to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
-      row['CONTACT'] = scan_contact.nil? || (scan_contact == 0) || (scan_contact == '0') || (scan_contact.is_a?(Array) && (scan_contact == ['0'])) ? nil : scan_contact.first
+      row['CONTACT'] = parse_contact(row['STD CODE'], row['CONTACT'])
 
       row['MICR'] = row['MICR CODE']
       row.delete 'MICR CODE'
       row.delete 'STD CODE'
-      row['ADDRESS'] = row['ADDRESS'].to_s.strip
+
+      row['ADDRESS'] = sanitize(row['ADDRESS'])
+      row['BRANCH'] = sanitize(row['BRANCH'])
+      row['STATE'] = sanitize(row['STATE'])
+      row['DISTRICT'] = sanitize(row['DISTRICT'])
+      row['CITY'] = sanitize(row['CITY'])
+
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '')
       codes.add row['IFSC']
       row['NEFT'] = true
 
-      # This hopefully is overwritten by RTGS dataset
-      row['CENTRE'] = 'NA'
+      # This hopefully is merged-in from RTGS dataset
+      row['CENTRE'] = nil
       bankcode = row['IFSC'][0..3]
 
       if banks[bankcode] and banks[bankcode].key? :upi and banks[bankcode][:upi]
@@ -104,27 +113,9 @@ def parse_neft(banks)
   data
 end
 
-# Some rows have last 2 columns shifted by 2
-# Check for numeric values of STATE in RTGEB0815.xlsx for examples
-# This checks and fixes those
-def fix_row_alignment_for_rtgs(row)
-  # List of recognized states
-  unless KNOWN_STATES.include? row['CITY2'].to_s.strip
-    log "#{row['IFSC']} has an unknown state (#{row['CITY2']}), please check"
-    exit 1
-  end
-  # Start right shifting from the right-most column
-  row['PHONE'] = row['STD CODE']
-  # Move STATE's numeric value to STD CODE
-  row['STD CODE'] = row['STATE']
-  row['STATE'] = row['CITY2']
-  # Fix CITY2 value by duplicating CITY1
-  row['CITY2'] = row['CITY1']
-  return row
-end
-
 # Parses the contact details on the RTGS Sheet
-def rtgs_parse_contact(std_code, phone)
+# TODO: Add support for parsing NEFT contact data as well
+def parse_contact(std_code, phone)
   scan_contact = phone.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
   scan_std_code = std_code.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
 
@@ -139,10 +130,16 @@ def rtgs_parse_contact(std_code, phone)
   # If we have an STD code, use it correctly
   # Formatting as per E.164 format
   # https://en.wikipedia.org/wiki/E.164
+  # if possible
   if std_code
     return "+91#{std_code}#{contact}"
-  elsif contact
+  # If it looks like a mobile number
+  elsif contact and contact.size > 9
     return "+91#{contact}"
+  # This is a local number but we don't have a STD code
+  # So we return the local number as-is
+  elsif contact
+    return contact
   else
     return nil
   end
@@ -165,7 +162,7 @@ def parse_rtgs(banks)
         row = fix_row_alignment_for_rtgs(row)
       end
 
-      row['CONTACT'] = rtgs_parse_contact(row['STD CODE'], row['PHONE'])
+      row['CONTACT'] = parse_contact(row['STD CODE'], row['PHONE'])
 
       # There is a second header in the middle of the sheet.
       # :facepalm: RBI
@@ -192,14 +189,15 @@ def parse_rtgs(banks)
         log "Second Entry found for #{row['IFSC']}, discarding", :warn
         next
       end
-      row['ADDRESS'] = row['ADDRESS'].to_s.strip
+      row['ADDRESS'] = sanitize(row['ADDRESS'])
+      row['BRANCH'] = sanitize(row['BRANCH'])
       row['RTGS'] = true
       # This isn't accurate sadly, because RBI has both the columns
       # all over the place. As an example, check LAVB0000882 vs LAVB0000883
       # which have the flipped values for CITY1 and CITY2
-      row['CITY'] = row['CITY2']
-      row['CENTRE'] = row['CITY1']
-      row['DISTRICT'] = row['CITY1']
+      row['CITY'] = sanitize(row['CITY2'])
+      row['CENTRE'] = sanitize(row['CITY1'])
+      row['DISTRICT'] = sanitize(row['CITY1'])
       # Delete rows we don't want in output
       # Merged into CONTACRT
       row.delete('STD CODE')
