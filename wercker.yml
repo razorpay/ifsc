@@ -11,21 +11,8 @@ build:
     password: $DOCKERHUB_ACCESS_TOKEN
   steps:
     - script:
-      name: install ssconvert
-      code: sudo apt-get update && sudo apt-get install --yes --no-install-recommends gnumeric
-    - script:
-      name: update bundler
-      code: sudo gem install bundler --version "$WERCKER_BUNDLE_INSTALL_VERSION"
-    - bundle-install:
-        cwd: scraper
-    - script:
-      name: Run bootstrap
-      code: bash bootstrap.sh
-      cwd: scraper/scripts
-    - script:
-      name: Copy artifacts
-      code: cp `ls | egrep -v '^by-bank.tar$'` $WERCKER_REPORT_ARTIFACTS_DIR/
-      cwd: scraper/scripts/data
+      name: dummy
+      code: echo hello
 
 # This is the ruby gem that we have
 rubygem:
