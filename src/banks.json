@@ -13902,17 +13902,6 @@
     "ach_debit": true,
     "nach_debit": false
   },
-  "VIJB": {
-    "code": "VIJB",
-    "type": "PSB",
-    "ifsc": "VIJB0009502",
-    "micr": "560029001",
-    "iin": "607075",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": false
-  },
   "VIJX": {
     "code": "VIJX",
     "type": "O-UCB",

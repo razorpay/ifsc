@@ -1385,7 +1385,6 @@ module.exports = Object.freeze({
   VHDX: 'VHDX',
   VICX: 'VICX',
   VIDX: 'VIDX',
-  VIJB: 'VIJB',
   VIJX: 'VIJX',
   VIKX: 'VIKX',
   VIMX: 'VIMX',

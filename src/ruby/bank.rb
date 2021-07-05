@@ -1389,7 +1389,6 @@ module Razorpay
       VHDX = :VHDX
       VICX = :VICX
       VIDX = :VIDX
-      VIJB = :VIJB
       VIJX = :VIJX
       VIKX = :VIKX
       VIMX = :VIMX

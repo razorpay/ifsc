@@ -1390,7 +1390,6 @@ class Bank
     const VHDX = 'VHDX';
     const VICX = 'VICX';
     const VIDX = 'VIDX';
-    const VIJB = 'VIJB';
     const VIJX = 'VIJX';
     const VIKX = 'VIKX';
     const VIMX = 'VIMX';
