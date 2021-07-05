@@ -446,18 +446,6 @@
     "ach_debit": true,
     "nach_debit": false
   },
-  "ALLA": {
-    "code": "ALLA",
-    "type": "PSB",
-    "ifsc": "ALLA0888888",
-    "micr": "700010001",
-    "iin": "607117",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
-  },
   "ALLX": {
     "code": "ALLX",
     "type": "DCCB",
@@ -1637,18 +1625,6 @@
     "ach_credit": true,
     "ach_debit": true,
     "nach_debit": false
-  },
-  "BKDN": {
-    "code": "BKDN",
-    "type": "PSB",
-    "ifsc": "BKDN0RTGSSC",
-    "micr": "400018001",
-    "iin": "508547",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": false,
-    "upi": true
   },
   "BKDX": {
     "code": "BKDX",
@@ -12003,18 +11979,6 @@
     "ach_debit": true,
     "nach_debit": false
   },
-  "SYNB": {
-    "code": "SYNB",
-    "type": "PSB",
-    "ifsc": "SYNB000RTGS",
-    "micr": "560025000",
-    "iin": "508508",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
-  },
   "TACX": {
     "code": "TACX",
     "type": "O-UCB",
@@ -13933,17 +13897,6 @@
     "ifsc": "WBSC0VCCB01",
     "micr": "721800051",
     "iin": "607172",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": false
-  },
-  "VIJB": {
-    "code": "VIJB",
-    "type": "PSB",
-    "ifsc": "VIJB0009502",
-    "micr": "560029001",
-    "iin": "607075",
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,

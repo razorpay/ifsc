@@ -14,7 +14,6 @@ banks:
   - ADCC
   - AGVX
   - AIRP
-  - ALLA
   - AMCB
   - AMDN
   - ANDB
@@ -33,7 +32,6 @@ banks:
   - BGBX
   - BGGX
   - BHUX
-  - BKDN
   - BKDX
   - BKID
   - BMPX
@@ -196,7 +194,6 @@ banks:
   - SVCB
   - SVCX
   - SXXX
-  - SYNB
   - TAMX
   - TBSB
   - TCBX

@@ -49,7 +49,6 @@ class Bank
     const AKOX = 'AKOX';
     const ALAX = 'ALAX';
     const ALIX = 'ALIX';
-    const ALLA = 'ALLA';
     const ALLX = 'ALLX';
     const ALWX = 'ALWX';
     const AMAX = 'AMAX';
@@ -165,7 +164,6 @@ class Bank
     const BHWX = 'BHWX';
     const BJUX = 'BJUX';
     const BKCX = 'BKCX';
-    const BKDN = 'BKDN';
     const BKDX = 'BKDX';
     const BKID = 'BKID';
     const BKSX = 'BKSX';
@@ -1207,7 +1205,6 @@ class Bank
     const SWSX = 'SWSX';
     // This is a temporary assignment
     const SXXX = 'SXXX';
-    const SYNB = 'SYNB';
     const TACX = 'TACX';
     const TADX = 'TADX';
     const TAMX = 'TAMX';
@@ -1393,7 +1390,6 @@ class Bank
     const VHDX = 'VHDX';
     const VICX = 'VICX';
     const VIDX = 'VIDX';
-    const VIJB = 'VIJB';
     const VIJX = 'VIJX';
     const VIKX = 'VIKX';
     const VIMX = 'VIMX';

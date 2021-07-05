@@ -48,7 +48,6 @@ module Razorpay
       AKOX = :AKOX
       ALAX = :ALAX
       ALIX = :ALIX
-      ALLA = :ALLA
       ALLX = :ALLX
       ALWX = :ALWX
       AMAX = :AMAX
@@ -164,7 +163,6 @@ module Razorpay
       BHWX = :BHWX
       BJUX = :BJUX
       BKCX = :BKCX
-      BKDN = :BKDN
       BKDX = :BKDX
       BKID = :BKID
       BKSX = :BKSX
@@ -1206,7 +1204,6 @@ module Razorpay
       SWSX = :SWSX
       # Temporary assignment
       SXXX = :SXXX
-      SYNB = :SYNB
       TACX = :TACX
       TADX = :TADX
       TAMX = :TAMX
@@ -1392,7 +1389,6 @@ module Razorpay
       VHDX = :VHDX
       VICX = :VICX
       VIDX = :VIDX
-      VIJB = :VIJB
       VIJX = :VIJX
       VIKX = :VIKX
       VIMX = :VIMX
