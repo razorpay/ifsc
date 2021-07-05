@@ -49,7 +49,6 @@ class Bank
     const AKOX = 'AKOX';
     const ALAX = 'ALAX';
     const ALIX = 'ALIX';
-    const ALLA = 'ALLA';
     const ALLX = 'ALLX';
     const ALWX = 'ALWX';
     const AMAX = 'AMAX';

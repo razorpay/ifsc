@@ -44,7 +44,6 @@ module.exports = Object.freeze({
   AKOX: 'AKOX',
   ALAX: 'ALAX',
   ALIX: 'ALIX',
-  ALLA: 'ALLA',
   ALLX: 'ALLX',
   ALWX: 'ALWX',
   AMAX: 'AMAX',

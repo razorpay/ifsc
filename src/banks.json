@@ -446,18 +446,6 @@
     "ach_debit": true,
     "nach_debit": false
   },
-  "ALLA": {
-    "code": "ALLA",
-    "type": "PSB",
-    "ifsc": "ALLA0888888",
-    "micr": "700010001",
-    "iin": "607117",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
-  },
   "ALLX": {
     "code": "ALLX",
     "type": "DCCB",
