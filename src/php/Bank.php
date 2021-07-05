@@ -1206,7 +1206,6 @@ class Bank
     const SWSX = 'SWSX';
     // This is a temporary assignment
     const SXXX = 'SXXX';
-    const SYNB = 'SYNB';
     const TACX = 'TACX';
     const TADX = 'TADX';
     const TAMX = 'TAMX';

@@ -11991,18 +11991,6 @@
     "ach_debit": true,
     "nach_debit": false
   },
-  "SYNB": {
-    "code": "SYNB",
-    "type": "PSB",
-    "ifsc": "SYNB000RTGS",
-    "micr": "560025000",
-    "iin": "508508",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
-  },
   "TACX": {
     "code": "TACX",
     "type": "O-UCB",

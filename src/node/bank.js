@@ -1201,7 +1201,6 @@ module.exports = Object.freeze({
   SWSX: 'SWSX',
   // Temporary assignment
   SXXX: 'SXXX',
-  SYNB: 'SYNB',
   TACX: 'TACX',
   TADX: 'TADX',
   TAMX: 'TAMX',
