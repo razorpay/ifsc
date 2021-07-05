@@ -1626,18 +1626,6 @@
     "ach_debit": true,
     "nach_debit": false
   },
-  "BKDN": {
-    "code": "BKDN",
-    "type": "PSB",
-    "ifsc": "BKDN0RTGSSC",
-    "micr": "400018001",
-    "iin": "508547",
-    "apbs": true,
-    "ach_credit": true,
-    "ach_debit": true,
-    "nach_debit": false,
-    "upi": true
-  },
   "BKDX": {
     "code": "BKDX",
     "type": "DCCB",

@@ -163,7 +163,6 @@ module Razorpay
       BHWX = :BHWX
       BJUX = :BJUX
       BKCX = :BKCX
-      BKDN = :BKDN
       BKDX = :BKDX
       BKID = :BKID
       BKSX = :BKSX

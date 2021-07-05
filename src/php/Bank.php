@@ -164,7 +164,6 @@ class Bank
     const BHWX = 'BHWX';
     const BJUX = 'BJUX';
     const BKCX = 'BKCX';
-    const BKDN = 'BKDN';
     const BKDX = 'BKDX';
     const BKID = 'BKID';
     const BKSX = 'BKSX';

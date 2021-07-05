@@ -159,7 +159,6 @@ module.exports = Object.freeze({
   BHWX: 'BHWX',
   BJUX: 'BJUX',
   BKCX: 'BKCX',
-  BKDN: 'BKDN',
   BKDX: 'BKDX',
   BKID: 'BKID',
   BKSX: 'BKSX',
