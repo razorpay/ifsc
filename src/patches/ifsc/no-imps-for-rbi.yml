@@ -1,0 +1,10 @@
+---
+# RBI does not support IMPS
+action: patch_bank
+patch:
+  :imps: false
+banks:
+  - RBIS
+  - RBIN
+  - RBIP
+

@@ -306,6 +306,7 @@ end
 
 def apply_bank_patches(dataset)
   Dir.glob('../../src/patches/banks/*.yml').each do |patch|
+    log "Applying Bank level patch: #{patch}", :debug
     data = YAML.safe_load(File.read(patch), [Symbol])
     banks = data['banks']
     patch = data['patch']
@@ -323,7 +324,7 @@ end
 def apply_patches(dataset)
   Dir.glob('../../src/patches/ifsc/*.yml').each do |patch|
     log "Applying #{patch}", :debug
-    data = YAML.safe_load(File.read(patch))
+    data = YAML.safe_load(File.read(patch), [Symbol])
 
     case data['action'].downcase
     when 'patch'
