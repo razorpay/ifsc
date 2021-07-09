@@ -14,10 +14,8 @@ banks:
   - ADCC
   - AGVX
   - AIRP
-  - ALLA
   - AMCB
   - AMDN
-  - ANDB
   - APBL
   - APGB
   - APGV
@@ -51,6 +49,7 @@ banks:
   - COLX
   - COSB
   - CRSX
+  - CRSX
   - CRUB
   - CSBK
   - CSBX
@@ -71,6 +70,7 @@ banks:
   - FSFB
   - GCUX
   - GDCB
+  - GDUX
   - GSCB
   - HCBX
   - HDFC
@@ -93,6 +93,7 @@ banks:
   - JIOP
   - JJSB
   - JMCX
+  - JPCB
   - JSBL
   - JSBP
   - JSFB
@@ -109,11 +110,13 @@ banks:
   - KKBK
   - KLGB
   - KMCB
+  - KMSX
   - KPCX
   - KVBL
   - KVGB
   - LATX
   - LAVB
+  - LONX
   - MAHB
   - MAHG
   - MALX
@@ -147,7 +150,6 @@ banks:
   - PDSX
   - PGBX
   - PJSB
-  - PMCB
   - PMEC
   - PRTH
   - PSIB
@@ -158,6 +160,7 @@ banks:
   - PYTM
   - RACX
   - RATN
+  - RGSX
   - RJTX
   - RMGB
   - RNSB
@@ -165,7 +168,9 @@ banks:
   - SACB
   - SADX
   - SAGX
+  - SAHX
   - SANX
+  - SAVX
   - SBCR
   - SBIN
   - SBLS
@@ -200,6 +205,7 @@ banks:
   - TAMX
   - TBSB
   - TCBX
+  - TECX
   - TGBX
   - TJSB
   - TMBL
@@ -213,7 +219,9 @@ banks:
   - UTBI
   - UTGX
   - UTIB
+  - UTKS
   - UUCX
+  - VANX
   - VARA
   - VCCX
   - VGBX
