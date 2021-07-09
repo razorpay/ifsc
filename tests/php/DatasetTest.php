@@ -30,15 +30,16 @@ class DatasetTest extends TestCase
     ];
 
     public function testIFSCDotCsv() {
-
         $fileName = __DIR__ . "/../../scraper/scripts/data/IFSC.csv";
-        if(file_exists($fileName) || getenv('CI')) {
+        if(file_exists($fileName) or getenv('CI')) {
             $file = fopen($fileName, 'r');
             $line = fgets($file);
             $row = str_getcsv($line);
             foreach (self::KNOWN_FIELDS as $field) {
                 $this->assertContains($field, $row, "$field missing in IFSC.csv");
             }
+
+            $expectedCount = count($row);
 
             $bankNameIndex = array_search('BANK', $row);
             $micrIndex = array_search('MICR', $row);
@@ -47,13 +48,13 @@ class DatasetTest extends TestCase
 
             while($line = fgets($file)) {
                 $row = str_getcsv($line);
+                $this->assertCount($expectedCount, $row, "IFSC.csv L$lineno missing fields: $line");
                 $this->assertNotEmpty($row[$bankNameIndex], "IFSC.csv L$lineno has empty bankname $line");
-                $this->assertNotEquals('NA', "IFSC.csv L$lineno has MICR set to NA")
+                $this->assertNotEquals('NA', $row[$micrIndex], "IFSC.csv L$lineno has MICR set to NA $line");
                 $lineno++;
             }
         }
         else {
-            $this->assertTrue(false);
             $this->markTestSkipped("IFSC.csv missing. This should not be skipped in CI");
         }
     }

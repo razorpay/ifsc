@@ -154,9 +154,14 @@ def parse_rtgs(banks)
     log "Parsing #RTGS-#{sheet_id}.csv"
     headers = CSV.foreach("sheets/RTGS-#{sheet_id}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
       row = row.to_h
-      micr_match = row['MICR_CODE'].to_s.strip.match('\d{9}')
-      row['MICR'] = micr_match[0] if micr_match
-      row['BANK'] = row.delete('BANK NAME')
+
+      micr_match = row['MICR'].to_s.strip.match('\d{9}')
+
+      if micr_match
+        row['MICR'] = micr_match[0]
+      else
+        row['MICR'] = nil
+      end
 
       if row['STATE'].to_s.strip.match('\d')
         row = fix_row_alignment_for_rtgs(row)
@@ -290,6 +295,8 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['UPI']  ||= false
     combined_data['MICR'] ||= nil
     combined_data['SWIFT'] = nil
+    # Set the bank name considering sublets
+    combined_data['BANK'] = bank_name_from_code(combined_data['IFSC'])
     combined_data.delete('DATE')
 
     h[ifsc] = combined_data

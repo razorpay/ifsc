@@ -1,3 +1,5 @@
+require '../../src/ruby/ifsc'
+
 def sanitize(str)
   return nil if str.nil? or str.length==0
   ["┬ô", "┬û",'┬ö','┬Æ','┬á','┬æ','┬ù','ý','ý','┬á'].each do |pattern|
@@ -6,6 +8,8 @@ def sanitize(str)
   str.gsub!('├ë','e')
   str.gsub!('├å','a')
   str.gsub!('├ë','e')
+  # replace newlines
+  str.gsub!("\n", " ")
   # Remove all spaces (including nbsp) at the start and end of the string
   str.gsub(/\A[[:space:]]+|[[:space:]]+\z/, '')
 end
@@ -27,4 +31,8 @@ def fix_row_alignment_for_rtgs(row)
   # Fix CITY2 value by duplicating CITY1
   row['CITY2'] = row['CITY1']
   return row
+end
+
+def bank_name_from_code(code)
+  Razorpay::IFSC::IFSC.bank_name_for(code)
 end
