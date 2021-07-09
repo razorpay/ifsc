@@ -24,6 +24,8 @@ The source for the dataset are the following files:
 -  List of NEFT IFSCs from [RBI website][combined]
 -  List of RTGS IFSCs from [RBI website][rtgs]
 -  List of ACH Live Banks from [NPCI website][ach] used for IFSC sublet branches
+-  List of [IMPS Live members](https://www.npci.org.in/what-we-do/imps/live-members) on the NPCI website.
+-  RBI maintains a [list of banks in India](https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx) and [websites of banks in India](https://www.rbi.org.in/scripts/banklinks.aspx)
 
 #### SWIFT
 
