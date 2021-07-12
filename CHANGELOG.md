@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED][unreleased]
+
+## [1.6.0][1.6.0]
+- Support PHP8
+- Fix for some invalid IFSCs being marked as valid. Ex: `PUNB0000000` (#229)
+- Update list of UPI enabled banks
+- Fix all exported datasets to include correct bank name.
+- Only use validated MICR codes
+
 ## [1.5.13][1.5.13]
 - [upi] Vijaya Bank and Dena Gujarat Gramin Bank are no more
 - [upi] 7 new banks now support UPI
@@ -196,7 +204,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/1.5.13...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/1.6.0...HEAD
+[1.6.0]: https://github.com/razorpay/ifsc/releases/tag/1.6.0
 [1.5.13]: https://github.com/razorpay/ifsc/releases/tag/1.5.13
 [1.5.12]: https://github.com/razorpay/ifsc/releases/tag/1.5.12
 [1.5.11]: https://github.com/razorpay/ifsc/releases/tag/1.5.11

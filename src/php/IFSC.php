@@ -113,7 +113,7 @@ class IFSC
     {
         $branchCode = intval($branchCode);
 
-        if (in_array($branchCode, $list)) {
+        if (in_array($branchCode, $list, true)) {
             return true;
         }
 
@@ -122,6 +122,6 @@ class IFSC
 
     protected static function lookupString(array $list, $branchCode)
     {
-        return in_array($branchCode, $list);
+        return in_array($branchCode, $list, true);
     }
 }

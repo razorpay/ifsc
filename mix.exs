@@ -4,7 +4,7 @@ defmodule IFSC.Mixfile do
   def project do
     [
       app: :ifsc,
-      version: "1.5.13",
+      version: "1.6.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       description: description(),
