@@ -21,11 +21,12 @@ file, here are a few guidelines:
 7. Try not to leave any unexpanded abbreviations in the name
 8. Also ensure that the 4 character code is committed to `Bank.php`
 9. No period after `Co-operative`
+10. Grameen is spelled three ways: Grameen/Gramin/Grameena. Check the RBI List for the corresponding bank [here](https://m.rbi.org.in/scripts/Bs_viewcontent.aspx?Id=3657).
+11. `Sahakari`, not `sahkari`.
 
 ## Code Guidelines
 
 We use `prettier` for the javascript and `rubocop` for the Ruby code for style fixes
-
 
 ## Releases
 
@@ -40,7 +41,6 @@ Releases are partially automated. To draft a new release, follow these steps:
 7. Tag the merge commit (don't use a prefix, just `X.Y.Z`)
 8. Push the tag to GitHub.
 9. Create a release on GitHub for the tag. Use `release.md` from Step 4 as the template. Replace `TODO` as applicable for the release.
-
 
 ## Patches
 
