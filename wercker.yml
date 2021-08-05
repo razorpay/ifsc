@@ -65,7 +65,7 @@ php:
         cp scraper/scripts/data/*.json src/
     - script:
       name: Run PHP tests
-      code: phpunit
+      code: phpunit -d memory_limit=-1
 # Node package
 node:
   box:
