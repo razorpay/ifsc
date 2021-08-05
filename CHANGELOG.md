@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
-## [1.6.0][1.6.0]
+## [1.6.1][1.6.1]
 - Support PHP8
 - Fix for some invalid IFSCs being marked as valid. Ex: `PUNB0000000` (#229)
 - Update list of UPI enabled banks
@@ -204,8 +204,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/1.6.0...HEAD
-[1.6.0]: https://github.com/razorpay/ifsc/releases/tag/1.6.0
+[unreleased]: https://github.com/razorpay/ifsc/compare/1.6.1...HEAD
+[1.6.1]: https://github.com/razorpay/ifsc/releases/tag/1.6.1
 [1.5.13]: https://github.com/razorpay/ifsc/releases/tag/1.5.13
 [1.5.12]: https://github.com/razorpay/ifsc/releases/tag/1.5.12
 [1.5.11]: https://github.com/razorpay/ifsc/releases/tag/1.5.11
