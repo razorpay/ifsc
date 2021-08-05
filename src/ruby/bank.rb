@@ -981,6 +981,7 @@ module Razorpay
       RCDX = :RCDX
       RCMX = :RCMX
       RCUX = :RCUX
+      RDCB = :RDCB
       RDCX = :RDCX
       RDNX = :RDNX
       REBX = :REBX
@@ -1274,6 +1275,7 @@ module Razorpay
       TMCX = :TMCX
       TMNX = :TMNX
       TMPX = :TMPX
+      TMSB = :TMSB
       TMSC = :TMSC
       TMSX = :TMSX
       TMTX = :TMTX
