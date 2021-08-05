@@ -49,8 +49,6 @@ class SubletTest extends TestCase
     public function testCustomSublet()
     {
         $data = [
-            // Test a complete 11 character prefix
-            "VIJB0SSB001" => "Shimsha Sahakara Bank Niyamitha",
             // A 8 character prefix pointing to a bank code
             "KSCB0006001" => "Tumkur District Central Bank",
             // A 9 character prefix pointing to a static name
