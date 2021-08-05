@@ -982,6 +982,7 @@ class Bank
     const RCDX = 'RCDX';
     const RCMX = 'RCMX';
     const RCUX = 'RCUX';
+    const RDCB = 'RDCB';
     const RDCX = 'RDCX';
     const RDNX = 'RDNX';
     const REBX = 'REBX';
@@ -1275,6 +1276,7 @@ class Bank
     const TMCX = 'TMCX';
     const TMNX = 'TMNX';
     const TMPX = 'TMPX';
+    const TMSB = 'TMSB';
     const TMSC = 'TMSC';
     const TMSX = 'TMSX';
     const TMTX = 'TMTX';
