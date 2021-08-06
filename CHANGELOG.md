@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.6.1][1.6.1]
 ### Added
-- Addition of new IFSCs
+- Only metadata changes in this release.
 - 2 new banks
     - RDCB: Rajnandgaon District Central Co Operative Bank
     - TMSB: The Malad Sahakari Bank Ltd
