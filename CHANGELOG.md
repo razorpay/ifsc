@@ -5,6 +5,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [1.6.1][1.6.1]
+### Added
+- Only metadata changes in this release.
+- 2 new banks
+    - RDCB: Rajnandgaon District Central Co Operative Bank
+    - TMSB: The Malad Sahakari Bank Ltd
 ## [1.6.0][1.6.0]
 - Support PHP8
 - Fix for some invalid IFSCs being marked as valid. Ex: `PUNB0000000` (#229)
@@ -204,8 +210,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/1.6.0...HEAD
-[1.6.0]: https://github.com/razorpay/ifsc/releases/tag/1.6.0
+[unreleased]: https://github.com/razorpay/ifsc/compare/1.6.1...HEAD
+[1.6.1]: https://github.com/razorpay/ifsc/releases/tag/1.6.1
 [1.5.13]: https://github.com/razorpay/ifsc/releases/tag/1.5.13
 [1.5.12]: https://github.com/razorpay/ifsc/releases/tag/1.5.12
 [1.5.11]: https://github.com/razorpay/ifsc/releases/tag/1.5.11
