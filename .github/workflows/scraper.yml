@@ -28,4 +28,24 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: release-artifact
-          path: scraper/scripts/data/*
+          path: |
+            scraper/scripts/data/*
+            ! scraper/scripts/data/by-bank.tar
+  php:
+    name: Post-scraper tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.0
+          tools: phpunit, composer
+      - run: composer install --no-interaction
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: release-artifact
+          path: scraper/scripts/data
+      - run: phpunit -d memory_limit=-1
+        env:
+          RUN_DATASET_TESTS: true

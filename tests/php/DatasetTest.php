@@ -31,7 +31,7 @@ class DatasetTest extends TestCase
 
     public function testIFSCDotCsv() {
         $fileName = __DIR__ . "/../../scraper/scripts/data/IFSC.csv";
-        if(file_exists($fileName)) {
+        if(file_exists($fileName) or getenv('RUN_DATASET_TESTS')) {
             $file = fopen($fileName, 'r');
             $line = fgets($file);
             $row = str_getcsv($line);
@@ -66,7 +66,7 @@ class DatasetTest extends TestCase
     public function testBankFiles() {
         $tarFile = __DIR__ . "/../../scraper/scripts/data/by-bank.tar";
 
-        if (file_exists($tarFile)) {
+        if (file_exists($tarFile) or getenv('RUN_DATASET_TESTS')) {
             $dir = tempnam(sys_get_temp_dir(), '') . '.dir';
 
             mkdir($dir);
