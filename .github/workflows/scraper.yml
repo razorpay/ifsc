@@ -1,5 +1,11 @@
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Version
+        required: false
 name: Scraper
-on: [workflow_dispatch]
 jobs:
   scraper:
     name: Run
