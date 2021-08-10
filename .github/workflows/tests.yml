@@ -1,0 +1,45 @@
+on: push
+name: Tests
+jobs:
+  node:
+    strategy:
+      matrix:
+        node: ["16", "14", "12"]
+    name: Run Node tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{matrix.node}}
+      - run: npm install
+      - run: npm test
+  php:
+    strategy:
+      matrix:
+        # https://www.php.net/supported-versions.php
+        php: ["7.3", "7.4", "8.0"]
+    name: Run PHP tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{matrix.php}}
+          tools: phpunit, composer
+      - run: composer install --no-interaction
+      - run: phpunit -d memory_limit=-1
+  ruby:
+    strategy:
+      matrix:
+        ruby: ["3.0", "2.6", "2.7"]
+    name: Run Ruby Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - run: bundle install
+      - run: bundle exec rake
