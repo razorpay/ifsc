@@ -1,0 +1,25 @@
+name: Scraper
+on: [workflow_dispatch]
+jobs:
+  scraper:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install ssconvert
+        run: apt-get update && apt-get install --yes --no-install-recommends gnumeric
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+          bundler-cache: true
+      - name: Install scraper dependencies
+        run: bundle install
+        working-directory: scraper
+      - name: Run scraper
+        run: bash bootstrap.sh
+        working-directory: scraper/scripts
+      - name: Save artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-artifact
+          path: scraper/scripts/data/*
