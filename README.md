@@ -93,7 +93,6 @@ Only the latest version of each SDK is considered.
 | -------- | ---------- | ---------- | ----------------------- | -------------- |
 | PHP      | ✅         | ✅         | ✅ (✅)                 | ✅             |
 | Ruby     | ✅         | ✅         | ✅ (✅)                 | ✅             |
-| Elixir   | ✅         | ✅         | ✅ (❎)                 | ❎             |
 | Node.js  | ✅         | ✅         | ❎ (❎)                 | ✅             |
 
 ## API Documentation
@@ -279,60 +278,6 @@ code = Razorpay::IFSC::IFSC.new '...'; code.get
 # communicating with the server
 Razorpay::IFSC::IFSC.find '...'
 code = Razorpay::IFSC::IFSC.new '...'; code.get
-```
-
-### Elixir
-
-Documentation: [https://hexdocs.pm/ifsc](https://hexdocs.pm/ifsc)
-
-Online validation
-
-```elixir
-iex> IFSC.get("KKBK0000261")
-{:ok,
- %Razorpay.IFSC{
-   address: "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,",
-   bank: "Kotak Mahindra Bank",
-   bank_code: "KKBK",
-   branch: "GURGAON",
-   city: "GURGAON",
-   contact: "4131000",
-   district: "GURGAON",
-   ifsc: "KKBK0000261",
-   rtgs: true,
-   state: "HARYANA"
- }}
-
-iex> IFSC.get("foobar")
-{:error, :invalid_ifsc}
-```
-
-Offline validation
-
-```elixir
-iex> IFSC.validate("KKBK0000261")
-{:ok,
- %Razorpay.IFSC{
-   address: nil,
-   bank: "Kotak Mahindra Bank",
-   bank_code: "KKBK",
-   branch: nil,
-   city: nil,
-   contact: nil,
-   district: nil,
-   ifsc: "KKBK0000261",
-   rtgs: nil,
-   state: nil
- }}
-
-iex> IFSC.validate("foobar")
-{:error, :invalid_format}
-
-iex> IFSC.validate("AAAA0000000")
-{:error, :invalid_bank_code}
-
-iex(> IFSC.validate("HDFC0000000")
-{:error, :invalid_branch_code}
 ```
 
 ### Code Notes
