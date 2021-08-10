@@ -31,7 +31,7 @@ class DatasetTest extends TestCase
 
     public function testIFSCDotCsv() {
         $fileName = __DIR__ . "/../../scraper/scripts/data/IFSC.csv";
-        if(file_exists($fileName) or getenv('CI')) {
+        if(file_exists($fileName)) {
             $file = fopen($fileName, 'r');
             $line = fgets($file);
             $row = str_getcsv($line);
