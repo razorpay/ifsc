@@ -33,6 +33,7 @@ const (
         AGSX = "AGSX"
         AGUX = "AGUX"
         AGVX = "AGVX"
+        AHDC = "AHDC"
         AHMX = "AHMX"
         AHUX = "AHUX"
         AIRP = "AIRP"
@@ -1494,6 +1495,7 @@ var bankCodes = map[string]bool{
         "AGSX" : true, 
         "AGUX" : true, 
         "AGVX" : true, 
+        "AHDC" : true, 
         "AHMX" : true, 
         "AHUX" : true, 
         "AIRP" : true, 
