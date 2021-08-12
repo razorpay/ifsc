@@ -563,6 +563,7 @@ const (
         JSVX = "JSVX"
         JSWX = "JSWX"
         JTIX = "JTIX"
+        JTSC = "JTSC"
         JTSX = "JTSX"
         JUCX = "JUCX"
         JUSX = "JUSX"
@@ -975,12 +976,14 @@ const (
         RBCX = "RBCX"
         RBIH = "RBIH"
         RBIN = "RBIN"
+        RBIP = "RBIP"
         RBIS = "RBIS"
         RCBX = "RCBX"
         RCCX = "RCCX"
         RCDX = "RCDX"
         RCMX = "RCMX"
         RCUX = "RCUX"
+        RDCB = "RDCB"
         RDCX = "RDCX"
         RDNX = "RDNX"
         REBX = "REBX"
@@ -1076,6 +1079,7 @@ const (
         SDTC = "SDTC"
         SDTX = "SDTX"
         SDUX = "SDUX"
+        SECB = "SECB"
         SEMX = "SEMX"
         SENX = "SENX"
         SEUX = "SEUX"
@@ -1272,6 +1276,7 @@ const (
         TMCX = "TMCX"
         TMNX = "TMNX"
         TMPX = "TMPX"
+        TMSB = "TMSB"
         TMSC = "TMSC"
         TMSX = "TMSX"
         TMTX = "TMTX"
@@ -2019,6 +2024,7 @@ var bankCodes = map[string]bool{
         "JSVX" : true, 
         "JSWX" : true, 
         "JTIX" : true, 
+        "JTSC" : true, 
         "JTSX" : true, 
         "JUCX" : true, 
         "JUSX" : true, 
@@ -2431,12 +2437,14 @@ var bankCodes = map[string]bool{
         "RBCX" : true, 
         "RBIH" : true, 
         "RBIN" : true, 
+        "RBIP" : true, 
         "RBIS" : true, 
         "RCBX" : true, 
         "RCCX" : true, 
         "RCDX" : true, 
         "RCMX" : true, 
         "RCUX" : true, 
+        "RDCB" : true, 
         "RDCX" : true, 
         "RDNX" : true, 
         "REBX" : true, 
@@ -2532,6 +2540,7 @@ var bankCodes = map[string]bool{
         "SDTC" : true, 
         "SDTX" : true, 
         "SDUX" : true, 
+        "SECB" : true, 
         "SEMX" : true, 
         "SENX" : true, 
         "SEUX" : true, 
@@ -2728,6 +2737,7 @@ var bankCodes = map[string]bool{
         "TMCX" : true, 
         "TMNX" : true, 
         "TMPX" : true, 
+        "TMSB" : true, 
         "TMSC" : true, 
         "TMSX" : true, 
         "TMTX" : true, 
