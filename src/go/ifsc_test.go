@@ -39,7 +39,6 @@ func TestGetBankName_CustomSublet_Success(t *testing.T) {
 func getCustomSubletFixture() map[string]string {
 	return map[string]string{
 		"KSCB0006001": "Tumkur District Central Bank",
-		"VIJB0SSB001": "Shimsha Sahakara Bank Niyamitha",
 		"WBSC0KPCB01": "Kolkata Police Co-operative Bank",
 		"YESB0ADB002": "Amravati District Central Co-operative Bank",
 	}

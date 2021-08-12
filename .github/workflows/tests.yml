@@ -55,4 +55,4 @@ jobs:
         with:
           go-version: ${{ matrix.go }}
           bundler-cache: true
-      - run: make test
+      - run: make go-test
