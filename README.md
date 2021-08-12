@@ -84,13 +84,21 @@ The minimum [PHP version supported is 7.2](https://endoflife.date/php).
 
 ## Go
 
-`$ go get -u github.com/razorpay/ifsc`
+This package is compatible with modern Go releases in module mode, with Go installed:
 
-To use the go pkg, the import path should be:
+`go get github.com/razorpay/ifsc/v2`
 
-```go
-import "github.com/razorpay/ifsc/src/go"
-```
+will resolve and add the package to the current development module, along with its dependencies.
+
+Alternatively the same can be achieved if you use import in a package:
+
+`import "github.com/razorpay/ifsc/v2/src/go"`
+
+and run go get without parameters.
+
+Finally, to use the top-of-trunk version of this repo, use the following command:
+
+`go get github.com/razorpay/ifsc/v2@master`
 
 ## Support Matrix
 
