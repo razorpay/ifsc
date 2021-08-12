@@ -45,3 +45,9 @@ InstalledFiles
 
 # One-off scripts
 *.php
+
+#python
+.idea
+venv
+__pycache__
+.pyc
