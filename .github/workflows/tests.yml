@@ -43,3 +43,16 @@ jobs:
           bundler-cache: true
       - run: bundle install
       - run: bundle exec rake
+  go:
+    strategy:
+      matrix:
+        go: ["^1.16.7", "^1.15.15"]
+    name: Go
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go }}
+          bundler-cache: true
+      - run: make test
