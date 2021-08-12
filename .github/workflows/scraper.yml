@@ -53,3 +53,24 @@ jobs:
       - run: phpunit -d memory_limit=-1
         env:
           RUN_DATASET_TESTS: true
+  release-notes:
+    needs: scraper
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.0
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: release-artifact
+          path: scraper/scripts/data
+      - name: Run release script
+        run: bash release.sh
+        working-directory: scraper/scripts
+      - name: Save Release Notes
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-notes.md
+          path: scraper/scripts/release.md
