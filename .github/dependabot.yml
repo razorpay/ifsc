@@ -12,12 +12,6 @@ updates:
       interval: weekly
       time: "04:00"
       timezone: Asia/Calcutta
-  - package-ecosystem: mix
-    directory: "/"
-    schedule:
-      interval: weekly
-      time: "04:00"
-      timezone: Asia/Calcutta
   - package-ecosystem: composer
     directory: "/"
     schedule:
