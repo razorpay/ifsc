@@ -4,18 +4,15 @@ This is part of the IFSC toolset released by Razorpay.
 You can find more details about the entire release at
 [ifsc.razorpay.com](https://ifsc.razorpay.com).
 
-[![wercker status](https://app.wercker.com/status/bc9b22047e1b8eb55ce98ba451d7b504/s/master 'wercker status')](https://app.wercker.com/project/byKey/bc9b22047e1b8eb55ce98ba451d7b504) [![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.6.1.svg)](https://microbadger.com/images/razorpay/ifsc:1.6.1) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![](https://images.microbadger.com/badges/image/razorpay/ifsc:1.6.1.svg)](https://microbadger.com/images/razorpay/ifsc:1.6.1) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 [![](https://images.microbadger.com/badges/version/razorpay/ifsc:1.6.1.svg)](https://microbadger.com/images/razorpay/ifsc:1.6.1) [![npm version](https://badge.fury.io/js/ifsc.svg)](https://badge.fury.io/js/ifsc) [![Gem Version](https://badge.fury.io/rb/ifsc.svg)](https://badge.fury.io/rb/ifsc) [![PHP version](https://badge.fury.io/ph/razorpay%2Fifsc.svg)](https://badge.fury.io/ph/razorpay%2Fifsc) [![Hex pm](http://img.shields.io/hexpm/v/ifsc.svg)](https://hex.pm/packages/ifsc)
 
 ## Dataset
 
-If you are just looking for the dataset, go to
-the [releases][releases] section and download
-the latest release.
+If you are just looking for the dataset, go to the [releases][releases] section and download the latest release.
 
-The latest [`build` pipeline][buildlist] on Wercker should result in a container
-with the complete dataset as well.
+The latest `scraper` workflow on GitHub should publish a `release-artifact` as well.
 
 ### Source
 
@@ -93,7 +90,6 @@ Only the latest version of each SDK is considered.
 | -------- | ---------- | ---------- | ----------------------- | -------------- |
 | PHP      | ✅         | ✅         | ✅ (✅)                 | ✅             |
 | Ruby     | ✅         | ✅         | ✅ (✅)                 | ✅             |
-| Elixir   | ✅         | ✅         | ✅ (❎)                 | ❎             |
 | Node.js  | ✅         | ✅         | ❎ (❎)                 | ✅             |
 
 ## API Documentation
@@ -281,60 +277,6 @@ Razorpay::IFSC::IFSC.find '...'
 code = Razorpay::IFSC::IFSC.new '...'; code.get
 ```
 
-### Elixir
-
-Documentation: [https://hexdocs.pm/ifsc](https://hexdocs.pm/ifsc)
-
-Online validation
-
-```elixir
-iex> IFSC.get("KKBK0000261")
-{:ok,
- %Razorpay.IFSC{
-   address: "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,",
-   bank: "Kotak Mahindra Bank",
-   bank_code: "KKBK",
-   branch: "GURGAON",
-   city: "GURGAON",
-   contact: "4131000",
-   district: "GURGAON",
-   ifsc: "KKBK0000261",
-   rtgs: true,
-   state: "HARYANA"
- }}
-
-iex> IFSC.get("foobar")
-{:error, :invalid_ifsc}
-```
-
-Offline validation
-
-```elixir
-iex> IFSC.validate("KKBK0000261")
-{:ok,
- %Razorpay.IFSC{
-   address: nil,
-   bank: "Kotak Mahindra Bank",
-   bank_code: "KKBK",
-   branch: nil,
-   city: nil,
-   contact: nil,
-   district: nil,
-   ifsc: "KKBK0000261",
-   rtgs: nil,
-   state: nil
- }}
-
-iex> IFSC.validate("foobar")
-{:error, :invalid_format}
-
-iex> IFSC.validate("AAAA0000000")
-{:error, :invalid_bank_code}
-
-iex(> IFSC.validate("HDFC0000000")
-{:error, :invalid_branch_code}
-```
-
 ### Code Notes
 
 Both the packages ship with a 300kb JSON file, that
@@ -358,6 +300,5 @@ is under public domain.
 
 [combined]: https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx
 [releases]: https://github.com/razorpay/ifsc/releases
-[buildlist]: https://app.wercker.com/razorpay/ifsc/runs?view=runs&q=pipeline%3Abuild
 [rtgs]: https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx
 [ach]: https://www.npci.org.in/what-we-do/nach/live-members/live-banks

@@ -31,7 +31,7 @@ class DatasetTest extends TestCase
 
     public function testIFSCDotCsv() {
         $fileName = __DIR__ . "/../../scraper/scripts/data/IFSC.csv";
-        if(file_exists($fileName) or getenv('CI')) {
+        if(file_exists($fileName) or getenv('RUN_DATASET_TESTS')) {
             $file = fopen($fileName, 'r');
             $line = fgets($file);
             $row = str_getcsv($line);
@@ -55,7 +55,7 @@ class DatasetTest extends TestCase
             }
         }
         else {
-            $this->markTestSkipped("IFSC.csv missing. This should not be skipped in CI");
+            $this->markTestSkipped("IFSC.csv missing");
         }
     }
 
@@ -66,23 +66,27 @@ class DatasetTest extends TestCase
     public function testBankFiles() {
         $tarFile = __DIR__ . "/../../scraper/scripts/data/by-bank.tar";
 
-        $dir = tempnam(sys_get_temp_dir(), '') . '.dir';
+        if (file_exists($tarFile) or getenv('RUN_DATASET_TESTS')) {
+            $dir = tempnam(sys_get_temp_dir(), '') . '.dir';
 
-        mkdir($dir);
+            mkdir($dir);
 
-        // unarchive from the tar
-        $phar = new PharData($tarFile);
-        $phar->extractTo($dir);
+            // unarchive from the tar
+            $phar = new PharData($tarFile);
+            $phar->extractTo($dir);
 
-        foreach(glob("$dir/by-bank/*.json") as $json) {
-            $data = json_decode(file_get_contents($json), true);
-            foreach ($data as $row) {
-                $ifsc = $row['IFSC'];
-                $fields = array_keys($row);
-                foreach (self::KNOWN_FIELDS as $field) {
-                    $this->assertContains($field, $fields, "$ifsc missing $field in $json");
+            foreach(glob("$dir/by-bank/*.json") as $json) {
+                $data = json_decode(file_get_contents($json), true);
+                foreach ($data as $row) {
+                    $ifsc = $row['IFSC'];
+                    $fields = array_keys($row);
+                    foreach (self::KNOWN_FIELDS as $field) {
+                        $this->assertContains($field, $fields, "$ifsc missing $field in $json");
+                    }
                 }
             }
+        } else {
+            $this->markTestSkipped("by-bank.tar missing");
         }
     }
 }
