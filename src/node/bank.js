@@ -27,6 +27,7 @@ module.exports = Object.freeze({
   AGSX: 'AGSX',
   AGUX: 'AGUX',
   AGVX: 'AGVX',
+  AHDC: 'AHDC',
   AHMX: 'AHMX',
   AHUX: 'AHUX',
   AIRP: 'AIRP',
