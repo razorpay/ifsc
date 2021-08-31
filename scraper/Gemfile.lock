@@ -9,7 +9,7 @@ GEM
     mime-types-data (3.2021.0704)
     mini_portile2 (2.6.1)
     multi_xml (0.6.0)
-    nokogiri (1.12.3)
+    nokogiri (1.12.4)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     racc (1.5.2)
@@ -31,4 +31,4 @@ DEPENDENCIES
   spreadsheet
 
 BUNDLED WITH
-   2.2.25
+   2.2.26
