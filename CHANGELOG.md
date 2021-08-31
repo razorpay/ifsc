@@ -4,11 +4,15 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED][unreleased]
+
 ## [2.0.0][2.0.0]
 ### Removed
 - Removed support for Elixir package
 ### Changed
 - Builds are now powered by GitHub Actions, instead of Wercker
+### Added
+- There is a supported golang SDK. See the README for instructions on how to use it.
+- 1 New Bank: `"AHDC": "Ahmednagar District Central Co-operative Bank"`
 
 ## [1.6.1][1.6.1]
 ### Added

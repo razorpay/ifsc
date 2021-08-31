@@ -52,7 +52,7 @@ class CoverageTest extends TestCase
     {
         $failures = [];
         // For some reason the CSV header is picked up as a IFSC code
-        // Skip the check while this is fixed.
+        // TODO: Skip the check while this is fixed.
         $exceptions = ['IFSC'];
 
         foreach ($this->bankCodes as $code)

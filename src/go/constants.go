@@ -33,6 +33,7 @@ const (
         AGSX = "AGSX"
         AGUX = "AGUX"
         AGVX = "AGVX"
+        AHDC = "AHDC"
         AHMX = "AHMX"
         AHUX = "AHUX"
         AIRP = "AIRP"
@@ -1217,6 +1218,7 @@ const (
         TBCX = "TBCX"
         TBDX = "TBDX"
         TBHX = "TBHX"
+        TBMC = "TBMC"
         TBMX = "TBMX"
         TBNS = "TBNS"
         TBPX = "TBPX"
@@ -1494,6 +1496,7 @@ var bankCodes = map[string]bool{
         "AGSX" : true, 
         "AGUX" : true, 
         "AGVX" : true, 
+        "AHDC" : true, 
         "AHMX" : true, 
         "AHUX" : true, 
         "AIRP" : true, 
@@ -2678,6 +2681,7 @@ var bankCodes = map[string]bool{
         "TBCX" : true, 
         "TBDX" : true, 
         "TBHX" : true, 
+        "TBMC" : true, 
         "TBMX" : true, 
         "TBNS" : true, 
         "TBPX" : true, 

@@ -32,6 +32,7 @@ class Bank
     const AGSX = 'AGSX';
     const AGUX = 'AGUX';
     const AGVX = 'AGVX';
+    const AHDC = 'AHDC';
     const AHMX = 'AHMX';
     const AHUX = 'AHUX';
     const AIRP = 'AIRP';
@@ -1217,6 +1218,7 @@ class Bank
     const TBCX = 'TBCX';
     const TBDX = 'TBDX';
     const TBHX = 'TBHX';
+    const TBMC = 'TBMC';
     const TBMX = 'TBMX';
     const TBNS = 'TBNS';
     const TBPX = 'TBPX';
