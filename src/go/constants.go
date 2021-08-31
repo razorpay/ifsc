@@ -1218,6 +1218,7 @@ const (
         TBCX = "TBCX"
         TBDX = "TBDX"
         TBHX = "TBHX"
+        TBMC = "TBMC"
         TBMX = "TBMX"
         TBNS = "TBNS"
         TBPX = "TBPX"
@@ -2680,6 +2681,7 @@ var bankCodes = map[string]bool{
         "TBCX" : true, 
         "TBDX" : true, 
         "TBHX" : true, 
+        "TBMC" : true, 
         "TBMX" : true, 
         "TBNS" : true, 
         "TBPX" : true, 
