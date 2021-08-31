@@ -1335,7 +1335,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": false,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "BDIX": {
     "code": "BDIX",
@@ -1645,8 +1646,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false,
-    "upi": true
+    "nach_debit": false
   },
   "BKDX": {
     "code": "BKDX",
@@ -3069,7 +3069,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": false,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "DIBX": {
     "code": "DIBX",
@@ -4036,7 +4037,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "HCBX": {
     "code": "HCBX",
@@ -7084,7 +7086,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "MBLX": {
     "code": "MBLX",
@@ -8432,7 +8435,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "NNCX": {
     "code": "NNCX",
@@ -11308,7 +11312,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SNCX": {
     "code": "SNCX",
@@ -11486,7 +11491,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "SPSX": {
     "code": "SPSX",
@@ -12018,8 +12024,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
+    "nach_debit": true
   },
   "TACX": {
     "code": "TACX",
@@ -12641,7 +12646,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "TKDX": {
     "code": "TKDX",
@@ -13911,8 +13917,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false,
-    "upi": true
+    "nach_debit": false
   },
   "VHDX": {
     "code": "VHDX",
