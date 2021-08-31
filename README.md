@@ -361,7 +361,6 @@ func main() {
 
 ```
 
->>>>>>> 5ff434d (update readme & make bank code constants.)
 ### Code Notes
 
 Both the packages ship with a 300kb JSON file, that

@@ -44,8 +44,9 @@ end
 
 def parse_upi
   doc = Nokogiri::HTML(open('upi.html'))
-  header_cleared = false
-  count = doc.css('table>tbody')[0].css('tr').size
+  # We count the unique number of banks mentioned in the table
+  # Since sometimes NPCI will repeat banks
+  count = doc.css('table>tbody')[0].css('tr').map{|e| e.css('td')[1].text.strip}.uniq.size
 
   upi_patch_filename = '../../src/patches/banks/upi-enabled-banks.yml'
   # Count the number of banks we have in our UPI patch file:
