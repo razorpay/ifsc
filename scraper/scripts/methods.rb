@@ -21,28 +21,6 @@ HEADINGS_INSERT = %w[
   STATE
 ].freeze
 
-# These are not all the known states
-# because the usage is quite limited for now
-# TODO: Change this to a accurate mapping
-# And store statecode instead
-KNOWN_STATES = [
-  'ANDHRA PRADESH',
-  'DELHI',
-  'GUJARAT',
-  'JAMMU AND KASHMIR',
-  'HIMACHAL PRADESH',
-  'KARNATAKA',
-  'KERALA',
-  'MAHARASHTRA',
-  'PUNJAB',
-  'TAMIL NADU',
-  'MADHYA PRADESH',
-  'UTTARAKHAND',
-  'RAJASTHAN',
-  'TELANGANA',
-  'WEST BENGAL'
-].freeze
-
 def parse_imps(banks)
   data = {}
   banknames = JSON.parse File.read('../../src/banknames.json')
@@ -124,7 +102,7 @@ def parse_contact(std_code, phone)
 
   # If std code starts with 0, strip that out
   if std_code and std_code[0] == '0'
-    std_code = std_code[1..]
+    std_code = std_code[1..-1]
   end
 
   # If we have an STD code, use it correctly
