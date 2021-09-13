@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [2.0.1][2.0.1]
+## Changed
+- Metadata Changes
+
 ## [2.0.0][2.0.0]
 ### Removed
 - Removed support for Elixir package
@@ -219,7 +223,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.0...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.1...HEAD
+[2.0.1]: https://github.com/razorpay/ifsc/releases/tag/2.0.1
 [2.0.0]: https://github.com/razorpay/ifsc/releases/tag/2.0.0
 [1.6.1]: https://github.com/razorpay/ifsc/releases/tag/1.6.1
 [1.5.13]: https://github.com/razorpay/ifsc/releases/tag/1.5.13
