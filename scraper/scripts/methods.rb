@@ -108,10 +108,9 @@ def fix_state!(row)
 
     }[possible_state]
   end
-  if final_state
+  if final_state and final_state != row['STATE']
     log "#{row['IFSC']}: Setting State=(#{final_state}) instead of (#{possible_state})"
     row['STATE'] = final_state
-    return true
   end
 end
 
