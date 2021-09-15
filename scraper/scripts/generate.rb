@@ -10,10 +10,11 @@ log "[NPCI] Parsed the NACH sheet, got #{banks.keys.size} banks"
 imps = parse_imps(banks)
 log "[NPCI] Got #{imps.keys.size} entries"
 
-rtgs = parse_rtgs(banks)
+# The first sheet on RTGS gives summary numbers, which we ignore
+rtgs = parse_csv(['RTGS-1', 'RTGS-2'], banks, {"RTGS"=> true})
 log "[RTGS] Got #{rtgs.keys.size} entries"
 
-neft = parse_neft(banks)
+neft = parse_csv(['NEFT-0', 'NEFT-1'], banks, {"NEFT"=> true})
 log "[NEFT] Got #{neft.keys.size} entries"
 
 log 'Combining the above 3 lists'

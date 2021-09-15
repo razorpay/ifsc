@@ -21,28 +21,6 @@ HEADINGS_INSERT = %w[
   STATE
 ].freeze
 
-# These are not all the known states
-# because the usage is quite limited for now
-# TODO: Change this to a accurate mapping
-# And store statecode instead
-KNOWN_STATES = [
-  'ANDHRA PRADESH',
-  'DELHI',
-  'GUJARAT',
-  'JAMMU AND KASHMIR',
-  'HIMACHAL PRADESH',
-  'KARNATAKA',
-  'KERALA',
-  'MAHARASHTRA',
-  'PUNJAB',
-  'TAMIL NADU',
-  'MADHYA PRADESH',
-  'UTTARAKHAND',
-  'RAJASTHAN',
-  'TELANGANA',
-  'WEST BENGAL'
-].freeze
-
 def parse_imps(banks)
   data = {}
   banknames = JSON.parse File.read('../../src/banknames.json')
@@ -66,51 +44,74 @@ def parse_imps(banks)
   data
 end
 
-def parse_neft(banks)
-  data = {}
-  codes = Set.new
-  sheets = 0..1
-  sheets.each do |sheet_id|
-    row_index = 0
-    headings = []
-    log "Parsing #NEFT-#{sheet_id}.csv"
-    headers = CSV.foreach("sheets/NEFT-#{sheet_id}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
-      row = row.to_h
-      scan_contact = row['CONTACT'].to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
-      row['CONTACT'] = parse_contact(row['STD CODE'], row['CONTACT'])
-
-      row['MICR'] = row['MICR CODE']
-      row.delete 'MICR CODE'
-      row.delete 'STD CODE'
-
-      row['ADDRESS'] = sanitize(row['ADDRESS'])
-      row['BRANCH'] = sanitize(row['BRANCH'])
-      row['STATE'] = sanitize(row['STATE'])
-      row['DISTRICT'] = sanitize(row['DISTRICT'])
-      row['CITY'] = sanitize(row['CITY'])
-
-      row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '')
-      codes.add row['IFSC']
-      row['NEFT'] = true
-
-      # This hopefully is merged-in from RTGS dataset
-      row['CENTRE'] = nil
-      bankcode = row['IFSC'][0..3]
-
-      if banks[bankcode] and banks[bankcode].key? :upi and banks[bankcode][:upi]
-        row['UPI'] = true
-      else
-        row['UPI'] = false
-      end
-
-      if data.key? row['IFSC']
-        "Second Entry found for #{row['IFSC']}, discarding"
-        next
-      end
-      data[row['IFSC']] = row
+# TODO: Return state/UT ISO code and use that instead
+def fix_state!(row)
+  possible_state = row['STATE'].upcase
+  final_state = nil
+  map = {
+    /ANDAMAN/ => 'ANDAMAN AND NICOBAR ISLAND',
+    /BANGALORE/ => 'KARNATAKA',
+    /BARDEZ/ => 'GOA',
+    /BHUSAWAL/ => 'MAHARASHTRA',
+    /BTM/ => 'KARNATAKA',
+    /BULDHANA/ => 'MAHARASHTRA',
+    /BUNDI/ => 'RAJASTHAN',
+    /RAJAS/ => 'RAJASTHAN',
+    /CARMELARAM/ => 'KARNATAKA',
+    # Chandigarh is not a state, but the branches there are ambigous b/w Haryana and Punjab
+    # /CHANDIGARH/ => 'PUNJAB',
+    /CHEMBUR/ => 'PUNJAB',
+    /CHENNAI/ => 'TAMIL NADU',
+    /CHHATIS/ => 'CHHATTISGARH',
+    /CHHATISHGARH/ => 'CHHATTISGARH',
+    /DADRA/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
+    /DAHEGAM/ => 'GUJARAT',
+    /DAHEJ/ => 'GUJARAT',
+    # Do not use DAMAN as that clashes with ANDAMAN
+    /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
+    /DELHI/ => 'DELHI',
+    /DINDORI/ => 'MADHYA PRADESH',
+    /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
+    /GOA/ => 'GOA',
+    /HIMACHAL/ => 'HIMACHAL PRADESH',
+    /HYDERABAD/ => 'ANDHRA PRADESH',
+    /IDAR/ => 'ANDHRA PRADESH',
+    /INDORE/ => 'MADHYA PRADESH',
+    /JAMMU/ => 'JAMMU AND KASHMIR',
+    /MADURAI/ => 'TAMIL NADU',
+    /MALEGAON/ => 'MAHARASHTRA',
+    /MUMBAI/ => 'MAHARASHTRA',
+    /NASHIK/ => 'MAHARASHTRA',
+    /NASIK/ => 'MAHARASHTRA',
+    /PONDICHERRY/ => 'PUDUCHERRY',
+    /SAMBRA/ => 'KARNATAKA',
+    /SANTACRUZ/ => 'MAHARASHTRA',
+    /TAMIL/ => 'TAMIL NADU',
+    /UTTARA/ => 'UTTARAKHAND',
+    /UTTARPRADESH/ => 'UTTAR PRADESH',
+    /WEST/ => 'WEST BENGAL',
+    /CHURU/ => 'RAJASTHAN'
+  }
+  map.each_pair do |r, state|
+    if r.match? possible_state
+      final_state = state
     end
   end
-  data
+
+  if possible_state.size == 2
+    final_state = {
+      "AP" => "ANDHRA PRADESH",
+      "KA" => "KARNATAKA",
+      "TN" => "TELANGANA",
+      "MH" => "MAHARASHTRA",
+      "CG" => "CHHATTISGARH",
+
+    }[possible_state]
+  end
+  if final_state and final_state != row['STATE']
+    log "#{row['IFSC']}: Setting State=(#{final_state}) instead of (#{possible_state})"
+    row['STATE'] = final_state
+  end
 end
 
 # Parses the contact details on the RTGS Sheet
@@ -124,20 +125,30 @@ def parse_contact(std_code, phone)
 
   # If std code starts with 0, strip that out
   if std_code and std_code[0] == '0'
-    std_code = std_code[1..]
+    std_code = std_code[1..-1]
   end
 
   # If we have an STD code, use it correctly
   # Formatting as per E.164 format
   # https://en.wikipedia.org/wiki/E.164
   # if possible
-  if std_code
-    return "+91#{std_code}#{contact}"
-  # If it looks like a mobile number
-  elsif contact and contact.size > 9
+  if std_code == '91'
+    return "+#{std_code}#{contact}"
+  # Toll free number
+  elsif contact and contact[0..3]=='1800'
+    return "+91022#{contact}"
+  # Mobile Number
+  elsif contact and contact.size == 10
     return "+91#{contact}"
+  # STD codes can't be 5 digits long, so this is likely a mobile number split into two
+  elsif std_code and contact and std_code.size==5 and contact.size==5 and ["6","7","8","9"].include? std_code[0]
+    return "+91#{std_code}#{contact}"
+  # We likely have a good enough STD code
+  elsif std_code
+    return "+91#{std_code}#{contact}"
   # This is a local number but we don't have a STD code
   # So we return the local number as-is
+  # TODO: Try to guess the STD code from PIN/Address/State perhaps?
   elsif contact
     return contact
   else
@@ -145,15 +156,26 @@ def parse_contact(std_code, phone)
   end
 end
 
-def parse_rtgs(banks)
+def parse_csv(files, banks, additional_attributes = {})
   data = {}
-  sheets = 1..2
-  sheets.each do |sheet_id|
+
+  files.each do |file|
     row_index = 0
     headings = []
-    log "Parsing #RTGS-#{sheet_id}.csv"
-    headers = CSV.foreach("sheets/RTGS-#{sheet_id}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
+    log "Parsing #{file}"
+    headers = CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
       row = row.to_h
+
+
+      # Some column is missing, and the STATE column has shifted by one.
+      if row['STATE'].to_s.strip.match('\d')
+        fix_row_alignment!(row)
+      end
+
+      # The address somehow contains a pipe-delimited value for other columns
+      if row['ADDRESS'].count('|') > 2
+        fix_pipe_delimited_address!(row)
+      end
 
       micr_match = row['MICR'].to_s.strip.match('\d{9}')
 
@@ -161,10 +183,6 @@ def parse_rtgs(banks)
         row['MICR'] = micr_match[0]
       else
         row['MICR'] = nil
-      end
-
-      if row['STATE'].to_s.strip.match('\d')
-        row = fix_row_alignment_for_rtgs(row)
       end
 
       row['CONTACT'] = parse_contact(row['STD CODE'], row['PHONE'])
@@ -191,18 +209,23 @@ def parse_rtgs(banks)
       end
 
       if data.key? row['IFSC']
+        # TODO: Put a diff in the logs?
         log "Second Entry found for #{row['IFSC']}, discarding", :warn
         next
       end
+
       row['ADDRESS'] = sanitize(row['ADDRESS'])
       row['BRANCH'] = sanitize(row['BRANCH'])
-      row['RTGS'] = true
+      fix_state!(row)
+
+      row.merge!(additional_attributes)
       # This isn't accurate sadly, because RBI has both the columns
       # all over the place. As an example, check LAVB0000882 vs LAVB0000883
       # which have the flipped values for CITY1 and CITY2
       row['CITY'] = sanitize(row['CITY2'])
       row['CENTRE'] = sanitize(row['CITY1'])
       row['DISTRICT'] = sanitize(row['CITY1'])
+
       # Delete rows we don't want in output
       # Merged into CONTACRT
       row.delete('STD CODE')
@@ -217,7 +240,7 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR','UPI', 'SWIFT']
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR','UPI','SWIFT']
     csv << keys
     data.each do |code, ifsc_data|
       sorted_data = []
