@@ -2,7 +2,7 @@ name: SecurityChecks
 on:
   pull_request: {}
   push:
-    branches: ["master", "semgrep"]
+    branches: ["master"]
 jobs:
   semgrep:
     name: Scan
