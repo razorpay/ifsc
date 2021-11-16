@@ -32,11 +32,11 @@ func getPUNBFixture() Bank {
 func getFINOfixture() Bank {
 	return Bank{
 		Name:      "Fino Payments Bank",
-		BankCode:  "",
+		BankCode:  "099",
 		Code:      "FINO",
 		Type:      "PB",
 		IFSC:      "FINO0000001",
-		MICR:      "",
+		MICR:      "990099909",
 		IIN:       "608001",
 		APBS:      true,
 		AchCredit: true,

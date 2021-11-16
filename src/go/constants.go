@@ -109,6 +109,7 @@ const (
         BACB = "BACB"
         BACX = "BACX"
         BADX = "BADX"
+        BAGX = "BAGX"
         BALX = "BALX"
         BANX = "BANX"
         BARA = "BARA"
@@ -118,6 +119,7 @@ const (
         BASX = "BASX"
         BAUX = "BAUX"
         BAVX = "BAVX"
+        BAWX = "BAWX"
         BBKM = "BBKM"
         BBLX = "BBLX"
         BBRX = "BBRX"
@@ -144,6 +146,7 @@ const (
         BDUX = "BDUX"
         BEDX = "BEDX"
         BELX = "BELX"
+        BERX = "BERX"
         BFUX = "BFUX"
         BGBX = "BGBX"
         BGCX = "BGCX"
@@ -179,9 +182,11 @@ const (
         BMSX = "BMSX"
         BNBX = "BNBX"
         BNCX = "BNCX"
+        BNKX = "BNKX"
         BNPA = "BNPA"
         BNSB = "BNSB"
         BNSX = "BNSX"
+        BOCX = "BOCX"
         BODX = "BODX"
         BOFA = "BOFA"
         BORX = "BORX"
@@ -246,6 +251,7 @@ const (
         CMDX = "CMDX"
         CMLX = "CMLX"
         CMPX = "CMPX"
+        CMSV = "CMSV"
         CNRB = "CNRB"
         CNSX = "CNSX"
         COAS = "COAS"
@@ -272,6 +278,7 @@ const (
         CUBX = "CUBX"
         CUCX = "CUCX"
         CURX = "CURX"
+        CUTX = "CUTX"
         CZCX = "CZCX"
         CZUX = "CZUX"
         DAAX = "DAAX"
@@ -309,6 +316,7 @@ const (
         DIBX = "DIBX"
         DICG = "DICG"
         DICX = "DICX"
+        DISX = "DISX"
         DIUX = "DIUX"
         DJCX = "DJCX"
         DKCL = "DKCL"
@@ -371,6 +379,7 @@ const (
         FZSX = "FZSX"
         GACX = "GACX"
         GADX = "GADX"
+        GAMX = "GAMX"
         GANX = "GANX"
         GBCB = "GBCB"
         GCBX = "GCBX"
@@ -471,7 +480,6 @@ const (
         JACX = "JACX"
         JAKA = "JAKA"
         JALX = "JALX"
-        JAMX = "JAMX"
         JANA = "JANA"
         JANX = "JANX"
         JASB = "JASB"
@@ -585,6 +593,7 @@ const (
         KATX = "KATX"
         KAYX = "KAYX"
         KBCX = "KBCX"
+        KBHB = "KBHB"
         KBKB = "KBKB"
         KBNX = "KBNX"
         KBSX = "KBSX"
@@ -603,6 +612,7 @@ const (
         KDIX = "KDIX"
         KDNX = "KDNX"
         KDUX = "KDUX"
+        KEJX = "KEJX"
         KEMX = "KEMX"
         KESX = "KESX"
         KGBX = "KGBX"
@@ -613,6 +623,7 @@ const (
         KHCX = "KHCX"
         KHDX = "KHDX"
         KHNX = "KHNX"
+        KHTX = "KHTX"
         KHUX = "KHUX"
         KICX = "KICX"
         KJSB = "KJSB"
@@ -637,6 +648,7 @@ const (
         KODX = "KODX"
         KOEX = "KOEX"
         KOLH = "KOLH"
+        KORX = "KORX"
         KOSX = "KOSX"
         KOTX = "KOTX"
         KOYX = "KOYX"
@@ -667,7 +679,9 @@ const (
         KULX = "KULX"
         KUMX = "KUMX"
         KUNS = "KUNS"
+        KUOB = "KUOB"
         KURX = "KURX"
+        KUTX = "KUTX"
         KVBL = "KVBL"
         KVCX = "KVCX"
         KVGB = "KVGB"
@@ -794,11 +808,13 @@ const (
         MVCX = "MVCX"
         MVIX = "MVIX"
         MYAX = "MYAX"
+        MYCX = "MYCX"
         MYSX = "MYSX"
         MZCX = "MZCX"
         MZRX = "MZRX"
         NABX = "NABX"
         NACX = "NACX"
+        NADX = "NADX"
         NAGX = "NAGX"
         NAIX = "NAIX"
         NALX = "NALX"
@@ -824,6 +840,7 @@ const (
         NDDX = "NDDX"
         NDGX = "NDGX"
         NDIX = "NDIX"
+        NDOX = "NDOX"
         NESF = "NESF"
         NEYX = "NEYX"
         NGBX = "NGBX"
@@ -832,6 +849,7 @@ const (
         NGRX = "NGRX"
         NGSB = "NGSB"
         NGSX = "NGSX"
+        NGUX = "NGUX"
         NICB = "NICB"
         NIDX = "NIDX"
         NILX = "NILX"
@@ -872,6 +890,7 @@ const (
         NUBX = "NUBX"
         NUCB = "NUCB"
         NUCX = "NUCX"
+        NULX = "NULX"
         NVCX = "NVCX"
         NVNM = "NVNM"
         NVSX = "NVSX"
@@ -937,6 +956,7 @@ const (
         PRPX = "PRPX"
         PRSX = "PRSX"
         PRTH = "PRTH"
+        PRUX = "PRUX"
         PSBX = "PSBX"
         PSCX = "PSCX"
         PSIB = "PSIB"
@@ -963,6 +983,7 @@ const (
         PYCX = "PYCX"
         PYTM = "PYTM"
         QNBA = "QNBA"
+        QNBX = "QNBX"
         QUCX = "QUCX"
         RABO = "RABO"
         RACX = "RACX"
@@ -1034,6 +1055,7 @@ const (
         SAMX = "SAMX"
         SANT = "SANT"
         SANX = "SANX"
+        SAOX = "SAOX"
         SAPX = "SAPX"
         SARX = "SARX"
         SASA = "SASA"
@@ -1086,6 +1108,7 @@ const (
         SEUX = "SEUX"
         SEWX = "SEWX"
         SGCX = "SGCX"
+        SGDX = "SGDX"
         SGLX = "SGLX"
         SGSX = "SGSX"
         SGUX = "SGUX"
@@ -1208,13 +1231,13 @@ const (
         SVSX = "SVSX"
         SWMX = "SWMX"
         SWSX = "SWSX"
-        SXXX = "SXXX"
         SYNB = "SYNB"
         TACX = "TACX"
         TADX = "TADX"
         TAMX = "TAMX"
         TAPX = "TAPX"
         TASX = "TASX"
+        TAUB = "TAUB"
         TBCX = "TBCX"
         TBDX = "TBDX"
         TBHX = "TBHX"
@@ -1253,6 +1276,7 @@ const (
         TGNX = "TGNX"
         TGUX = "TGUX"
         THCX = "THCX"
+        THMX = "THMX"
         THOX = "THOX"
         THRS = "THRS"
         THRX = "THRX"
@@ -1308,6 +1332,7 @@ const (
         TSCX = "TSCX"
         TSDX = "TSDX"
         TSIX = "TSIX"
+        TSKX = "TSKX"
         TSMX = "TSMX"
         TSNX = "TSNX"
         TSPX = "TSPX"
@@ -1359,6 +1384,7 @@ const (
         UOVB = "UOVB"
         UPCB = "UPCB"
         UPCX = "UPCX"
+        UPNX = "UPNX"
         URBN = "URBN"
         URCX = "URCX"
         URDX = "URDX"
@@ -1465,6 +1491,8 @@ const (
         ZSKX = "ZSKX"
         ZSLX = "ZSLX"
         ZSMX = "ZSMX"
+        SXXX = "SXXX"
+        JAMX = "JAMX"
 )
 
 var bankCodes = map[string]bool{ 
@@ -1572,6 +1600,7 @@ var bankCodes = map[string]bool{
         "BACB" : true, 
         "BACX" : true, 
         "BADX" : true, 
+        "BAGX" : true, 
         "BALX" : true, 
         "BANX" : true, 
         "BARA" : true, 
@@ -1581,6 +1610,7 @@ var bankCodes = map[string]bool{
         "BASX" : true, 
         "BAUX" : true, 
         "BAVX" : true, 
+        "BAWX" : true, 
         "BBKM" : true, 
         "BBLX" : true, 
         "BBRX" : true, 
@@ -1607,6 +1637,7 @@ var bankCodes = map[string]bool{
         "BDUX" : true, 
         "BEDX" : true, 
         "BELX" : true, 
+        "BERX" : true, 
         "BFUX" : true, 
         "BGBX" : true, 
         "BGCX" : true, 
@@ -1642,9 +1673,11 @@ var bankCodes = map[string]bool{
         "BMSX" : true, 
         "BNBX" : true, 
         "BNCX" : true, 
+        "BNKX" : true, 
         "BNPA" : true, 
         "BNSB" : true, 
         "BNSX" : true, 
+        "BOCX" : true, 
         "BODX" : true, 
         "BOFA" : true, 
         "BORX" : true, 
@@ -1709,6 +1742,7 @@ var bankCodes = map[string]bool{
         "CMDX" : true, 
         "CMLX" : true, 
         "CMPX" : true, 
+        "CMSV" : true, 
         "CNRB" : true, 
         "CNSX" : true, 
         "COAS" : true, 
@@ -1735,6 +1769,7 @@ var bankCodes = map[string]bool{
         "CUBX" : true, 
         "CUCX" : true, 
         "CURX" : true, 
+        "CUTX" : true, 
         "CZCX" : true, 
         "CZUX" : true, 
         "DAAX" : true, 
@@ -1772,6 +1807,7 @@ var bankCodes = map[string]bool{
         "DIBX" : true, 
         "DICG" : true, 
         "DICX" : true, 
+        "DISX" : true, 
         "DIUX" : true, 
         "DJCX" : true, 
         "DKCL" : true, 
@@ -1834,6 +1870,7 @@ var bankCodes = map[string]bool{
         "FZSX" : true, 
         "GACX" : true, 
         "GADX" : true, 
+        "GAMX" : true, 
         "GANX" : true, 
         "GBCB" : true, 
         "GCBX" : true, 
@@ -1934,7 +1971,6 @@ var bankCodes = map[string]bool{
         "JACX" : true, 
         "JAKA" : true, 
         "JALX" : true, 
-        "JAMX" : true, 
         "JANA" : true, 
         "JANX" : true, 
         "JASB" : true, 
@@ -2048,6 +2084,7 @@ var bankCodes = map[string]bool{
         "KATX" : true, 
         "KAYX" : true, 
         "KBCX" : true, 
+        "KBHB" : true, 
         "KBKB" : true, 
         "KBNX" : true, 
         "KBSX" : true, 
@@ -2066,6 +2103,7 @@ var bankCodes = map[string]bool{
         "KDIX" : true, 
         "KDNX" : true, 
         "KDUX" : true, 
+        "KEJX" : true, 
         "KEMX" : true, 
         "KESX" : true, 
         "KGBX" : true, 
@@ -2076,6 +2114,7 @@ var bankCodes = map[string]bool{
         "KHCX" : true, 
         "KHDX" : true, 
         "KHNX" : true, 
+        "KHTX" : true, 
         "KHUX" : true, 
         "KICX" : true, 
         "KJSB" : true, 
@@ -2100,6 +2139,7 @@ var bankCodes = map[string]bool{
         "KODX" : true, 
         "KOEX" : true, 
         "KOLH" : true, 
+        "KORX" : true, 
         "KOSX" : true, 
         "KOTX" : true, 
         "KOYX" : true, 
@@ -2130,7 +2170,9 @@ var bankCodes = map[string]bool{
         "KULX" : true, 
         "KUMX" : true, 
         "KUNS" : true, 
+        "KUOB" : true, 
         "KURX" : true, 
+        "KUTX" : true, 
         "KVBL" : true, 
         "KVCX" : true, 
         "KVGB" : true, 
@@ -2257,11 +2299,13 @@ var bankCodes = map[string]bool{
         "MVCX" : true, 
         "MVIX" : true, 
         "MYAX" : true, 
+        "MYCX" : true, 
         "MYSX" : true, 
         "MZCX" : true, 
         "MZRX" : true, 
         "NABX" : true, 
         "NACX" : true, 
+        "NADX" : true, 
         "NAGX" : true, 
         "NAIX" : true, 
         "NALX" : true, 
@@ -2287,6 +2331,7 @@ var bankCodes = map[string]bool{
         "NDDX" : true, 
         "NDGX" : true, 
         "NDIX" : true, 
+        "NDOX" : true, 
         "NESF" : true, 
         "NEYX" : true, 
         "NGBX" : true, 
@@ -2295,6 +2340,7 @@ var bankCodes = map[string]bool{
         "NGRX" : true, 
         "NGSB" : true, 
         "NGSX" : true, 
+        "NGUX" : true, 
         "NICB" : true, 
         "NIDX" : true, 
         "NILX" : true, 
@@ -2335,6 +2381,7 @@ var bankCodes = map[string]bool{
         "NUBX" : true, 
         "NUCB" : true, 
         "NUCX" : true, 
+        "NULX" : true, 
         "NVCX" : true, 
         "NVNM" : true, 
         "NVSX" : true, 
@@ -2400,6 +2447,7 @@ var bankCodes = map[string]bool{
         "PRPX" : true, 
         "PRSX" : true, 
         "PRTH" : true, 
+        "PRUX" : true, 
         "PSBX" : true, 
         "PSCX" : true, 
         "PSIB" : true, 
@@ -2426,6 +2474,7 @@ var bankCodes = map[string]bool{
         "PYCX" : true, 
         "PYTM" : true, 
         "QNBA" : true, 
+        "QNBX" : true, 
         "QUCX" : true, 
         "RABO" : true, 
         "RACX" : true, 
@@ -2497,6 +2546,7 @@ var bankCodes = map[string]bool{
         "SAMX" : true, 
         "SANT" : true, 
         "SANX" : true, 
+        "SAOX" : true, 
         "SAPX" : true, 
         "SARX" : true, 
         "SASA" : true, 
@@ -2549,6 +2599,7 @@ var bankCodes = map[string]bool{
         "SEUX" : true, 
         "SEWX" : true, 
         "SGCX" : true, 
+        "SGDX" : true, 
         "SGLX" : true, 
         "SGSX" : true, 
         "SGUX" : true, 
@@ -2671,13 +2722,13 @@ var bankCodes = map[string]bool{
         "SVSX" : true, 
         "SWMX" : true, 
         "SWSX" : true, 
-        "SXXX" : true, 
         "SYNB" : true, 
         "TACX" : true, 
         "TADX" : true, 
         "TAMX" : true, 
         "TAPX" : true, 
         "TASX" : true, 
+        "TAUB" : true, 
         "TBCX" : true, 
         "TBDX" : true, 
         "TBHX" : true, 
@@ -2716,6 +2767,7 @@ var bankCodes = map[string]bool{
         "TGNX" : true, 
         "TGUX" : true, 
         "THCX" : true, 
+        "THMX" : true, 
         "THOX" : true, 
         "THRS" : true, 
         "THRX" : true, 
@@ -2771,6 +2823,7 @@ var bankCodes = map[string]bool{
         "TSCX" : true, 
         "TSDX" : true, 
         "TSIX" : true, 
+        "TSKX" : true, 
         "TSMX" : true, 
         "TSNX" : true, 
         "TSPX" : true, 
@@ -2822,6 +2875,7 @@ var bankCodes = map[string]bool{
         "UOVB" : true, 
         "UPCB" : true, 
         "UPCX" : true, 
+        "UPNX" : true, 
         "URBN" : true, 
         "URCX" : true, 
         "URDX" : true, 
@@ -2928,4 +2982,6 @@ var bankCodes = map[string]bool{
         "ZSKX" : true, 
         "ZSLX" : true, 
         "ZSMX" : true, 
+        "SXXX" : true, 
+        "JAMX" : true, 
 }
