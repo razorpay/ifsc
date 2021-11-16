@@ -76,7 +76,7 @@ require "ifsc"
 
 The PHP package has a dependency on the virtual package `php-http/client-implementation` which requires you to install an adapter, but we do not care which one. That is an implementation detail in your application. You do not have to use the `php-http/curl-client` if you do not want to. You may use the `php-http/guzzle6-adapter`. Read more about the virtual packages, why this is a good idea and about the flexibility it brings at the [HTTPlug docs](http://docs.php-http.org/en/latest/httplug/users.html). You can find a list of suported providers on [packagist](https://packagist.org/providers/php-http/client-implementation).
 
-The minimum [PHP version supported is 7.2](https://endoflife.date/php).
+The minimum [PHP version supported is 7.3](https://endoflife.date/php). The package can be installed on PHP>=7.1 however.
 
 ## Node.js
 
