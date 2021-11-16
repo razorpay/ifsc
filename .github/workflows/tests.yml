@@ -4,7 +4,7 @@ jobs:
   node:
     strategy:
       matrix:
-        node: ["17", 16", "14", "12"]
+        node: ["17", "16", "14", "12"]
     name: Node.js
     runs-on: ubuntu-latest
     steps:
