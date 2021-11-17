@@ -107,6 +107,7 @@ module Razorpay
       BACB = :BACB
       BACX = :BACX
       BADX = :BADX
+      BAGX = :BAGX
       BALX = :BALX
       BANX = :BANX
       BARA = :BARA
@@ -116,6 +117,7 @@ module Razorpay
       BASX = :BASX
       BAUX = :BAUX
       BAVX = :BAVX
+      BAWX = :BAWX
       BBKM = :BBKM
       BBLX = :BBLX
       BBRX = :BBRX
@@ -142,6 +144,7 @@ module Razorpay
       BDUX = :BDUX
       BEDX = :BEDX
       BELX = :BELX
+      BERX = :BERX
       BFUX = :BFUX
       BGBX = :BGBX
       BGCX = :BGCX
@@ -177,9 +180,11 @@ module Razorpay
       BMSX = :BMSX
       BNBX = :BNBX
       BNCX = :BNCX
+      BNKX = :BNKX
       BNPA = :BNPA
       BNSB = :BNSB
       BNSX = :BNSX
+      BOCX = :BOCX
       BODX = :BODX
       BOFA = :BOFA
       BORX = :BORX
@@ -244,6 +249,7 @@ module Razorpay
       CMDX = :CMDX
       CMLX = :CMLX
       CMPX = :CMPX
+      CMSV = :CMSV
       CNRB = :CNRB
       CNSX = :CNSX
       COAS = :COAS
@@ -270,6 +276,7 @@ module Razorpay
       CUBX = :CUBX
       CUCX = :CUCX
       CURX = :CURX
+      CUTX = :CUTX
       CZCX = :CZCX
       CZUX = :CZUX
       DAAX = :DAAX
@@ -307,6 +314,7 @@ module Razorpay
       DIBX = :DIBX
       DICG = :DICG
       DICX = :DICX
+      DISX = :DISX
       DIUX = :DIUX
       DJCX = :DJCX
       DKCL = :DKCL
@@ -369,6 +377,7 @@ module Razorpay
       FZSX = :FZSX
       GACX = :GACX
       GADX = :GADX
+      GAMX = :GAMX
       GANX = :GANX
       GBCB = :GBCB
       GCBX = :GCBX
@@ -469,7 +478,6 @@ module Razorpay
       JACX = :JACX
       JAKA = :JAKA
       JALX = :JALX
-      JAMX = :JAMX
       JANA = :JANA
       JANX = :JANX
       JASB = :JASB
@@ -583,6 +591,7 @@ module Razorpay
       KATX = :KATX
       KAYX = :KAYX
       KBCX = :KBCX
+      KBHB = :KBHB
       KBKB = :KBKB
       KBNX = :KBNX
       KBSX = :KBSX
@@ -601,6 +610,7 @@ module Razorpay
       KDIX = :KDIX
       KDNX = :KDNX
       KDUX = :KDUX
+      KEJX = :KEJX
       KEMX = :KEMX
       KESX = :KESX
       KGBX = :KGBX
@@ -611,6 +621,7 @@ module Razorpay
       KHCX = :KHCX
       KHDX = :KHDX
       KHNX = :KHNX
+      KHTX = :KHTX
       KHUX = :KHUX
       KICX = :KICX
       KJSB = :KJSB
@@ -635,6 +646,7 @@ module Razorpay
       KODX = :KODX
       KOEX = :KOEX
       KOLH = :KOLH
+      KORX = :KORX
       KOSX = :KOSX
       KOTX = :KOTX
       KOYX = :KOYX
@@ -665,7 +677,9 @@ module Razorpay
       KULX = :KULX
       KUMX = :KUMX
       KUNS = :KUNS
+      KUOB = :KUOB
       KURX = :KURX
+      KUTX = :KUTX
       KVBL = :KVBL
       KVCX = :KVCX
       KVGB = :KVGB
@@ -792,11 +806,13 @@ module Razorpay
       MVCX = :MVCX
       MVIX = :MVIX
       MYAX = :MYAX
+      MYCX = :MYCX
       MYSX = :MYSX
       MZCX = :MZCX
       MZRX = :MZRX
       NABX = :NABX
       NACX = :NACX
+      NADX = :NADX
       NAGX = :NAGX
       NAIX = :NAIX
       NALX = :NALX
@@ -822,6 +838,7 @@ module Razorpay
       NDDX = :NDDX
       NDGX = :NDGX
       NDIX = :NDIX
+      NDOX = :NDOX
       NESF = :NESF
       NEYX = :NEYX
       NGBX = :NGBX
@@ -830,6 +847,7 @@ module Razorpay
       NGRX = :NGRX
       NGSB = :NGSB
       NGSX = :NGSX
+      NGUX = :NGUX
       NICB = :NICB
       NIDX = :NIDX
       NILX = :NILX
@@ -870,6 +888,7 @@ module Razorpay
       NUBX = :NUBX
       NUCB = :NUCB
       NUCX = :NUCX
+      NULX = :NULX
       NVCX = :NVCX
       NVNM = :NVNM
       NVSX = :NVSX
@@ -935,6 +954,7 @@ module Razorpay
       PRPX = :PRPX
       PRSX = :PRSX
       PRTH = :PRTH
+      PRUX = :PRUX
       PSBX = :PSBX
       PSCX = :PSCX
       PSIB = :PSIB
@@ -961,6 +981,7 @@ module Razorpay
       PYCX = :PYCX
       PYTM = :PYTM
       QNBA = :QNBA
+      QNBX = :QNBX
       QUCX = :QUCX
       RABO = :RABO
       RACX = :RACX
@@ -1032,6 +1053,7 @@ module Razorpay
       SAMX = :SAMX
       SANT = :SANT
       SANX = :SANX
+      SAOX = :SAOX
       SAPX = :SAPX
       SARX = :SARX
       SASA = :SASA
@@ -1084,6 +1106,7 @@ module Razorpay
       SEUX = :SEUX
       SEWX = :SEWX
       SGCX = :SGCX
+      SGDX = :SGDX
       SGLX = :SGLX
       SGSX = :SGSX
       SGUX = :SGUX
@@ -1206,14 +1229,13 @@ module Razorpay
       SVSX = :SVSX
       SWMX = :SWMX
       SWSX = :SWSX
-      # Temporary assignment
-      SXXX = :SXXX
       SYNB = :SYNB
       TACX = :TACX
       TADX = :TADX
       TAMX = :TAMX
       TAPX = :TAPX
       TASX = :TASX
+      TAUB = :TAUB
       TBCX = :TBCX
       TBDX = :TBDX
       TBHX = :TBHX
@@ -1252,6 +1274,7 @@ module Razorpay
       TGNX = :TGNX
       TGUX = :TGUX
       THCX = :THCX
+      THMX = :THMX
       THOX = :THOX
       THRS = :THRS
       THRX = :THRX
@@ -1307,6 +1330,7 @@ module Razorpay
       TSCX = :TSCX
       TSDX = :TSDX
       TSIX = :TSIX
+      TSKX = :TSKX
       TSMX = :TSMX
       TSNX = :TSNX
       TSPX = :TSPX
@@ -1358,6 +1382,7 @@ module Razorpay
       UOVB = :UOVB
       UPCB = :UPCB
       UPCX = :UPCX
+      UPNX = :UPNX
       URBN = :URBN
       URCX = :URCX
       URDX = :URDX
@@ -1464,6 +1489,9 @@ module Razorpay
       ZSKX = :ZSKX
       ZSLX = :ZSLX
       ZSMX = :ZSMX
+
+      SXXX = :SXXX
+      JAMX = :JAMX
 
       class << self
         def get_details(code)

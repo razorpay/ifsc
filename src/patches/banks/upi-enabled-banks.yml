@@ -1,12 +1,15 @@
 ---
 # Source: https://www.npci.org.in/what-we-do/upi/live-members
-# Remember to take a snapshot at https://web.archive.org/
+# Remember to take a snapshot at https://web.archive.org/save
 # when you make changes to this file
-# Last Updated: May 2021 (Count = 221)
+# Last Updated: Nov 2021 (Count = 259)
+# Keep all confusing changes at the bottom of this file, to
+# keep this sorted
 action: patch
 patch:
   :upi: true
 banks:
+  - AACX
   - ABHY
   - ACBX
   - ACUX
@@ -14,8 +17,10 @@ banks:
   - ADCC
   - AGVX
   - AIRP
+  - AJPX
   - AMCB
   - AMDN
+  - AMRX
   - APBL
   - APGB
   - APGV
@@ -30,6 +35,7 @@ banks:
   - BDBL
   - BDDX
   - BGGX
+  - BHAX
   - BHUX
   - BKDX
   - BKID
@@ -43,9 +49,11 @@ banks:
   - CGGX
   - CITI
   - CIUB
+  - CJMX
   - CLBL
   - CNRB
   - COLX
+  - COMX
   - COSB
   - CRSX
   - CRUB
@@ -94,6 +102,7 @@ banks:
   - JIOP
   - JJSB
   - JMCX
+  - JMSX
   - JPCB
   - JSBL
   - JSBP
@@ -107,26 +116,33 @@ banks:
   - KCCB
   - KDIX
   - KGSX
+  - KHUX
   - KJSB
   - KKBK
+  - KKMX
   - KLGB
   - KMCB
   - KMSX
+  - KOLH
   - KPCX
+  - KRTX
+  - KSCB
   - KVBL
   - KVGB
   - LATX
-  - LAVB
   - LONX
   - MAHB
   - MAHG
   - MALX
+  - MAMX
   - MAVX
   - MBGX
   - MCBL
   - MDBK
   - MDMX
   - MERX
+  - MHNX
+  - MHSX
   - MPRX
   - MRBX
   - MRTX
@@ -168,6 +184,7 @@ banks:
   - RMGB
   - RNSB
   - RSBL
+  - RSSB
   - SACB
   - SADX
   - SAGX
@@ -177,15 +194,20 @@ banks:
   - SBCR
   - SBIN
   - SBLS
+  - SBPX
+  - SBUJ
   - SCBL
   - SCOB
   - SDCB
   - SDCE
   - SDCX
+  - SDUX
+  - SECB
   - SEWX
   - SHIX
   - SIBL
   - SIDC
+  - SNBK
   - SNBX
   - SNSX
   - SPCB
@@ -197,6 +219,7 @@ banks:
   - STCB
   - STRX
   - SUBX
+  - SUMX
   - SUNB
   - SURY
   - SUSX
@@ -211,11 +234,14 @@ banks:
   - TCBX
   - TECX
   - TGBX
+  - TGNX
   - TJSB
   - TKCX
   - TMBL
   - TMSX
   - TSAB
+  - TSUX
+  - TUCX
   - TUDX
   - TUMX
   - UCBA
@@ -243,3 +269,5 @@ banks:
   # There is some confusion regarding this
   # This is HASTI Bank here
   - HCBL
+  # Made up code for jamkhandi urban co-operative bank
+  - JAMX

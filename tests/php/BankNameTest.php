@@ -33,7 +33,7 @@ class Name extends TestCase
             'code' => 'FINO',
             'type' => 'PB',
             'ifsc' => 'FINO0000001',
-            'micr' => null,
+            'micr' => '990099909',
             'iin' => '608001',
             'apbs' => true,
             'ach_credit' => true,
@@ -41,7 +41,7 @@ class Name extends TestCase
             'nach_debit' => false,
             'upi' => true,
             'name' => 'Fino Payments Bank',
-            'bank_code' => null
+            'bank_code' => '099'
         ], Bank::getDetails('FINO'));
     }
 }
