@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [2.0.3][2.0.3]
+## Changed
+- Adds back 20 IFSC codes removed due to a change on the RBI sheet structure in 2.0.2
+
 ## [2.0.2][2.0.2]
 ## Changed
 - Metadata changes
@@ -227,7 +231,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.2...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.3...HEAD
+[2.0.3]: https://github.com/razorpay/ifsc/releases/tag/2.0.3
 [2.0.2]: https://github.com/razorpay/ifsc/releases/tag/2.0.2
 [2.0.1]: https://github.com/razorpay/ifsc/releases/tag/2.0.1
 [2.0.0]: https://github.com/razorpay/ifsc/releases/tag/2.0.0
