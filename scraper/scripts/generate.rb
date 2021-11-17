@@ -11,7 +11,7 @@ imps = parse_imps(banks)
 log "[NPCI] Got #{imps.keys.size} entries"
 
 # The first sheet on RTGS gives summary numbers, which we ignore
-rtgs = parse_csv(['RTGS-1', 'RTGS-2'], banks, {"RTGS"=> true})
+rtgs = parse_csv(['RTGS-1', 'RTGS-2', 'RTGS-3'], banks, {"RTGS"=> true})
 log "[RTGS] Got #{rtgs.keys.size} entries"
 
 neft = parse_csv(['NEFT-0', 'NEFT-1'], banks, {"NEFT"=> true})
