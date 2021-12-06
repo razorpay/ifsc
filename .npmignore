@@ -36,3 +36,5 @@ tests/
 tmp/
 *.csv
 .github/*
+src/go
+go.*

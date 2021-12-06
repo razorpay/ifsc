@@ -4,7 +4,7 @@ jobs:
   node:
     strategy:
       matrix:
-        node: ["16", "14", "12"]
+        node: ["17", "16", "14", "12"]
     name: Node.js
     runs-on: ubuntu-latest
     steps:
@@ -46,7 +46,7 @@ jobs:
   go:
     strategy:
       matrix:
-        go: ["^1.16.7", "^1.15.15"]
+        go: ["^1.16.10", "^1.17.3"]
     name: Go
     runs-on: ubuntu-latest
     steps:
