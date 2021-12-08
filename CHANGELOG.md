@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [2.0.5][2.0.5]
+## Changed
+- Updated Metadata
+
 ## [2.0.4][2.0.4]
 ## Changed
 - Update IFSC.json for the below 20 IFSC codes
