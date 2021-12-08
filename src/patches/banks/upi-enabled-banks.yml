@@ -5,6 +5,10 @@
 # Last Updated: Nov 2021 (Count = 259)
 # Keep all confusing changes at the bottom of this file, to
 # keep this sorted
+#
+# In case the bank doesn't have a code of it's own, find the corresponding
+# IFSC and use it. Make sure the IFSC is reflected in the src/custom-sublets.json
+# file as well
 action: patch
 patch:
   :upi: true
@@ -15,8 +19,10 @@ banks:
   - ACUX
   - ADBX
   - ADCC
+  - AGCX
   - AGVX
   - AIRP
+  - AJNX
   - AJPX
   - AMCB
   - AMDN
@@ -51,6 +57,7 @@ banks:
   - CIUB
   - CJMX
   - CLBL
+  - CMCB
   - CNRB
   - COLX
   - COMX
@@ -69,6 +76,7 @@ banks:
   - DGBX
   - DHUX
   - DLXB
+  - DMKB
   - DNSB
   - ESFB
   - ESMF
@@ -76,6 +84,7 @@ banks:
   - FGCB
   - FINO
   - FSFB
+  - GBCB
   - GCUX
   - GDCB
   - GDUX
@@ -107,6 +116,7 @@ banks:
   - JSBL
   - JSBP
   - JSFB
+  - JUCX
   - JVCX
   - KAIJ
   - KARB
@@ -154,8 +164,10 @@ banks:
   - MUSX
   - MVIX
   - MZRX
+  - NAVX
   - NBMX
   - NESF
+  - NGKX
   - NKGS
   - NMCX
   - NNSB
@@ -216,6 +228,7 @@ banks:
   - SRCB
   - SRHX
   - SSDX
+  - SSWX
   - STCB
   - STRX
   - SUBX
@@ -233,12 +246,14 @@ banks:
   - TBSB
   - TCBX
   - TECX
+  - TETX
   - TGBX
   - TGNX
   - TJSB
   - TKCX
   - TMBL
   - TMSX
+  - TNUX
   - TSAB
   - TSUX
   - TUCX
@@ -252,6 +267,7 @@ banks:
   - UTIB
   - UTKS
   - UUCX
+  - VAIX
   - VANX
   - VARA
   - VCCX
@@ -260,6 +276,7 @@ banks:
   - VISX
   - VSBL
   - VSCX
+  - VSSX
   - VVCX
   - VVSB
   - XJKG
@@ -269,5 +286,8 @@ banks:
   # There is some confusion regarding this
   # This is HASTI Bank here
   - HCBL
-  # Made up code for jamkhandi urban co-operative bank
-  - JAMX
+  # jamkhandi urban co-operative bank
+  - ICIC00TJUCB
+  # https://pratapbank.in/imps.php
+  # Pratap Co-operative Bank
+  - MDCB0680265
