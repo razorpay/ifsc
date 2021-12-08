@@ -286,8 +286,4 @@ banks:
   # There is some confusion regarding this
   # This is HASTI Bank here
   - HCBL
-  # jamkhandi urban co-operative bank
-  - ICIC00TJUCB
-  # https://pratapbank.in/imps.php
-  # Pratap Co-operative Bank
-  - MDCB0680265
+# See ifsc/upi-enabled-branches.yml for a "branch-specific version"

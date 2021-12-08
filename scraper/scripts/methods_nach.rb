@@ -49,9 +49,12 @@ def parse_upi
   count = doc.css('table>tbody')[0].css('tr').map{|e| e.css('td')[1].text.strip}.uniq.size
 
   upi_patch_filename = '../../src/patches/banks/upi-enabled-banks.yml'
+  upi_branch_patch_filename = '../../src/patches/ifsc/upi-enabled-branches.yml'
+
   # Count the number of banks we have in our UPI patch file:
   data = YAML.safe_load(File.read(upi_patch_filename), [Symbol])
-  if data['banks'].size != count
+  branch_data = YAML.safe_load(File.read(upi_branch_patch_filename), [Symbol])
+  if data['banks'].size + branch_data['ifsc'].size != count
     log "Number of UPI-enabled banks (#{data['banks'].size}) does not match the count on the NPCI website (#{count})}", :critical
     log "Please check https://www.npci.org.in/what-we-do/upi/live-members and update src/patches/banks/upi-enabled-banks.yml", :debug
     exit 1
