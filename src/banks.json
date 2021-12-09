@@ -223,7 +223,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "AGDX": {
     "code": "AGDX",
@@ -346,7 +347,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "AJPX": {
     "code": "AJPX",
@@ -2477,7 +2479,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "CMCX": {
     "code": "CMCX",
@@ -3275,7 +3278,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "DNDC": {
     "code": "DNDC",
@@ -3797,7 +3801,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "GCBX": {
     "code": "GCBX",
@@ -4741,8 +4746,7 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": true,
-    "upi": true
+    "nach_debit": true
   },
   "JANA": {
     "code": "JANA",
@@ -5786,7 +5790,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "JUSX": {
     "code": "JUSX",
@@ -8294,7 +8299,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "NAWX": {
     "code": "NAWX",
@@ -8505,7 +8511,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "NGNX": {
     "code": "NGNX",
@@ -12033,7 +12040,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "STCB": {
     "code": "STCB",
@@ -12742,7 +12750,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "TFCX": {
     "code": "TFCX",
@@ -13276,7 +13285,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "TOCX": {
     "code": "TOCX",
@@ -14125,7 +14135,8 @@
     "apbs": true,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "VANX": {
     "code": "VANX",
@@ -14518,7 +14529,8 @@
     "apbs": false,
     "ach_credit": true,
     "ach_debit": true,
-    "nach_debit": false
+    "nach_debit": false,
+    "upi": true
   },
   "VSVX": {
     "code": "VSVX",
