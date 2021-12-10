@@ -40,7 +40,7 @@ sort($plus);sort($minus);
 $diffSize = count($plus) + count($minus);
 
 // Reduce one for the final newline
-$ifscCount = (((int) `wc -l data/IFSC.csv`) - 1);
+$ifscCount = (((int) `wc -l data/IFSC.csv`) - 1);  // nosemgrep : php.lang.security.backticks-use.backticks-use
 ?>**IFSC Count**: <?=$ifscCount;?>
 
 **Diff Size**: <?=$diffSize?> (This only counts new or deleted IFSCs from previous release)
