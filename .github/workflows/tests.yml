@@ -4,7 +4,7 @@ jobs:
   node:
     strategy:
       matrix:
-        node: ["17", "16", "14", "12"]
+        node: ["12", "14", "16", "17"]
     name: Node.js
     runs-on: ubuntu-latest
     steps:
@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         # https://www.php.net/supported-versions.php
-        php: ["7.3", "7.4", "8.0"]
+        php: ["7.3", "7.4", "8.0", "8.1"]
     name: PHP
     runs-on: ubuntu-latest
     steps:
@@ -32,7 +32,7 @@ jobs:
   ruby:
     strategy:
       matrix:
-        ruby: ["3.0", "2.6", "2.7"]
+        ruby: ["2.6", "2.7", "3.0", "3.1"]
     name: Ruby
     runs-on: ubuntu-latest
     steps:
@@ -46,7 +46,7 @@ jobs:
   go:
     strategy:
       matrix:
-        go: ["^1.16.10", "^1.17.3"]
+        go: ["^1.16.0", "^1.17.0"]
     name: Go
     runs-on: ubuntu-latest
     steps:

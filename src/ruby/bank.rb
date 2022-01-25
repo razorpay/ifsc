@@ -295,6 +295,7 @@ module Razorpay
       DCPX = :DCPX
       DCSX = :DCSX
       DCTX = :DCTX
+      DCUB = :DCUB
       DCUX = :DCUX
       DDBX = :DDBX
       DDCX = :DDCX
@@ -442,6 +443,7 @@ module Razorpay
       HUCB = :HUCB
       HUCH = :HUCH
       HUCX = :HUCX
+      HUSB = :HUSB
       HUTX = :HUTX
       HVBK = :HVBK
       IBBK = :IBBK
@@ -955,6 +957,7 @@ module Razorpay
       PRSX = :PRSX
       PRTH = :PRTH
       PRUX = :PRUX
+      PSBL = :PSBL
       PSBX = :PSBX
       PSCX = :PSCX
       PSIB = :PSIB
@@ -1155,6 +1158,7 @@ module Razorpay
       SMCX = :SMCX
       SMEX = :SMEX
       SMMX = :SMMX
+      SMNB = :SMNB
       SMNX = :SMNX
       SMPX = :SMPX
       SMSX = :SMSX

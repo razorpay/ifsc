@@ -67,10 +67,9 @@ def fix_state!(row)
     /DADRA/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /DAHEGAM/ => 'GUJARAT',
     /DAHEJ/ => 'GUJARAT',
-    # Do not use DAMAN as that clashes with ANDAMAN
-    /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /DELHI/ => 'DELHI',
     /DINDORI/ => 'MADHYA PRADESH',
+    # Do not use DAMAN as that clashes with ANDAMAN
     /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /GOA/ => 'GOA',
     /HIMACHAL/ => 'HIMACHAL PRADESH',
@@ -330,7 +329,7 @@ end
 def apply_bank_patches(dataset)
   Dir.glob('../../src/patches/banks/*.yml').each do |patch|
     log "Applying Bank level patch: #{patch}", :debug
-    data = YAML.safe_load(File.read(patch), [Symbol])
+    data = YAML.safe_load(File.read(patch), permitted_classes: [Symbol])
     banks = data['banks']
     patch = data['patch']
     banks.each do |bankcode|
@@ -347,7 +346,7 @@ end
 def apply_patches(dataset)
   Dir.glob('../../src/patches/ifsc/*.yml').each do |patch|
     log "Applying #{patch}", :debug
-    data = YAML.safe_load(File.read(patch), [Symbol])
+    data = YAML.safe_load(File.read(patch), permitted_classes: [Symbol])
 
     case data['action'].downcase
     when 'patch'
@@ -435,7 +434,7 @@ end
 # Downloads the SWIFT data from
 # https://sbi.co.in/web/nri/quick-links/swift-codes
 def validate_sbi_swift
-  doc = Nokogiri::HTML(URI.open("https://sbi.co.in/web/nri/quick-links/swift-codes"))
+  doc = Nokogiri::HTML(URI.open("https://web.archive.org/https://sbi.co.in/hi/web/nri/quick-links/swift-codes"))
   table = doc.css('tbody')[0]
   website_bics = Set.new
 

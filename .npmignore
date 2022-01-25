@@ -38,3 +38,5 @@ tmp/
 .github/*
 src/go
 go.*
+*.cov
+Makefile
