@@ -67,10 +67,9 @@ def fix_state!(row)
     /DADRA/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /DAHEGAM/ => 'GUJARAT',
     /DAHEJ/ => 'GUJARAT',
-    # Do not use DAMAN as that clashes with ANDAMAN
-    /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /DELHI/ => 'DELHI',
     /DINDORI/ => 'MADHYA PRADESH',
+    # Do not use DAMAN as that clashes with ANDAMAN
     /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /GOA/ => 'GOA',
     /HIMACHAL/ => 'HIMACHAL PRADESH',
