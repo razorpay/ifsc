@@ -434,7 +434,7 @@ end
 # Downloads the SWIFT data from
 # https://sbi.co.in/web/nri/quick-links/swift-codes
 def validate_sbi_swift
-  doc = Nokogiri::HTML(URI.open("https://sbi.co.in/web/nri/quick-links/swift-codes"))
+  doc = Nokogiri::HTML(URI.open("https://web.archive.org/https://sbi.co.in/hi/web/nri/quick-links/swift-codes"))
   table = doc.css('tbody')[0]
   website_bics = Set.new
 
