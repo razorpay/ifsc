@@ -297,6 +297,7 @@ const (
         DCPX = "DCPX"
         DCSX = "DCSX"
         DCTX = "DCTX"
+        DCUB = "DCUB"
         DCUX = "DCUX"
         DDBX = "DDBX"
         DDCX = "DDCX"
@@ -444,6 +445,7 @@ const (
         HUCB = "HUCB"
         HUCH = "HUCH"
         HUCX = "HUCX"
+        HUSB = "HUSB"
         HUTX = "HUTX"
         HVBK = "HVBK"
         IBBK = "IBBK"
@@ -957,6 +959,7 @@ const (
         PRSX = "PRSX"
         PRTH = "PRTH"
         PRUX = "PRUX"
+        PSBL = "PSBL"
         PSBX = "PSBX"
         PSCX = "PSCX"
         PSIB = "PSIB"
@@ -1157,6 +1160,7 @@ const (
         SMCX = "SMCX"
         SMEX = "SMEX"
         SMMX = "SMMX"
+        SMNB = "SMNB"
         SMNX = "SMNX"
         SMPX = "SMPX"
         SMSX = "SMSX"
@@ -1788,6 +1792,7 @@ var bankCodes = map[string]bool{
         "DCPX" : true, 
         "DCSX" : true, 
         "DCTX" : true, 
+        "DCUB" : true, 
         "DCUX" : true, 
         "DDBX" : true, 
         "DDCX" : true, 
@@ -1935,6 +1940,7 @@ var bankCodes = map[string]bool{
         "HUCB" : true, 
         "HUCH" : true, 
         "HUCX" : true, 
+        "HUSB" : true, 
         "HUTX" : true, 
         "HVBK" : true, 
         "IBBK" : true, 
@@ -2448,6 +2454,7 @@ var bankCodes = map[string]bool{
         "PRSX" : true, 
         "PRTH" : true, 
         "PRUX" : true, 
+        "PSBL" : true, 
         "PSBX" : true, 
         "PSCX" : true, 
         "PSIB" : true, 
@@ -2648,6 +2655,7 @@ var bankCodes = map[string]bool{
         "SMCX" : true, 
         "SMEX" : true, 
         "SMMX" : true, 
+        "SMNB" : true, 
         "SMNX" : true, 
         "SMPX" : true, 
         "SMSX" : true, 
