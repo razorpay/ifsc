@@ -31,6 +31,7 @@ banks:
   - APGB
   - APGV
   - APMC
+  - ARBL
   - ASBL
   - ASOX
   - AUBL
@@ -51,6 +52,7 @@ banks:
   - BRDX
   - BRGX
   - BUGX
+  - BUSX
   - CBIN
   - CGGX
   - CITI
@@ -78,6 +80,8 @@ banks:
   - DLXB
   - DMKB
   - DNSB
+  - DNSX
+  - DOBX
   - ESFB
   - ESMF
   - FDRL
@@ -93,6 +97,7 @@ banks:
   - HDFC
   - HGBX
   - HMBX
+  - HMNX
   - HPSC
   - HSBC
   - HUTX
@@ -182,11 +187,13 @@ banks:
   - PGBX
   - PJSB
   - PMEC
+  - PNSX
   - PRTH
   - PSIB
   - PTSX
   - PUGX
   - PUNB
+  - PUNX
   - PURX
   - PYTM
   - RACX
@@ -245,6 +252,7 @@ banks:
   - TAMX
   - TBSB
   - TCBX
+  - TDCB
   - TECX
   - TETX
   - TGBX
