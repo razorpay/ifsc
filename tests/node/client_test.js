@@ -1,6 +1,8 @@
 const ifsc = require('../../src/node');
 const assert = require('assert');
 
+const expected = require('./HDFC0CAGSBK')
+
 ifsc
   .fetchDetails('KKBK0000261')
   .then(function(res) {
@@ -14,6 +16,16 @@ ifsc
     assert.equal('KKBK0000261',res['IFSC'])
     assert.equal('110485003',res['MICR'])
     assert.equal('HARYANA',res['STATE'])
+    assert.equal('110485003',res['MICR'])
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  })
+
+ifsc.fetchDetails('HDFC0CAGSBK')
+  .then(function(res) {
+    assert.deepEqual(expected, res)
   })
   .catch(err => {
     console.error(err);
