@@ -38,6 +38,8 @@ banks:
   - BACB
   - BARA
   - BARB
+  - BARX
+  - BASX
   - BCBM
   - BDBL
   - BDDX
@@ -51,6 +53,8 @@ banks:
   - BOFA
   - BRDX
   - BRGX
+  - BRSX
+  - BTUX
   - BUGX
   - BUSX
   - CBIN
@@ -92,6 +96,7 @@ banks:
   - GCUX
   - GDCB
   - GDUX
+  - GPCX
   - GSCB
   - HCBX
   - HDFC
@@ -138,8 +143,10 @@ banks:
   - KLGB
   - KMCB
   - KMSX
+  - KODX
   - KOLH
   - KPCX
+  - KRNX
   - KRTX
   - KSCB
   - KVBL
@@ -148,6 +155,7 @@ banks:
   - LONX
   - MAHB
   - MAHG
+  - MAHX
   - MALX
   - MAMX
   - MAVX
@@ -167,6 +175,7 @@ banks:
   - MSSX
   - MUBL
   - MUSX
+  - MVCX
   - MVIX
   - MZRX
   - NAVX
@@ -188,6 +197,7 @@ banks:
   - PJSB
   - PMEC
   - PNSX
+  - PPBX
   - PRTH
   - PSIB
   - PTSX
@@ -197,6 +207,7 @@ banks:
   - PURX
   - PYTM
   - RACX
+  - RAKX
   - RATN
   - RGSX
   - RJTX
@@ -208,6 +219,7 @@ banks:
   - SADX
   - SAGX
   - SAHX
+  - SAMX
   - SANX
   - SAVX
   - SBCR
@@ -226,6 +238,7 @@ banks:
   - SHIX
   - SIBL
   - SIDC
+  - SMCX
   - SNBK
   - SNBX
   - SNSX
@@ -248,7 +261,6 @@ banks:
   - SVAX
   - SVCB
   - SVCX
-  - SXXX
   - TAMX
   - TBSB
   - TCBX
@@ -294,4 +306,14 @@ banks:
   # There is some confusion regarding this
   # This is HASTI Bank here
   - HCBL
+
+  # The following codes are made up, since we do not have a
+  # authoritative code from RBI for the below banks
+
+  # Maharashtra Mantralaya & Allied Offices Co-operative Bank
+  - MXXX
+  # Udupi Co-operative Town Bank
+  - UXXX
+  # Sri Rama Co-operative Bank
+  - SXXX
 # See ifsc/upi-enabled-branches.yml for a "branch-specific version"
