@@ -30,6 +30,13 @@ module Razorpay
         @district = api_data['DISTRICT']
         @state = api_data['STATE']
         @bankcode = api_data['BANKCODE']
+        @centre = api_data['CENTRE']
+        @imps     = api_data['IMPS']
+        @neft     = api_data['NEFT']
+        @rtgs     = api_data['RTGS']
+        @upi     = api_data['UPI']
+        @micr     = api_data['MICR']
+        @swift     = api_data['SWIFT']
         @valid = true
         self
       end

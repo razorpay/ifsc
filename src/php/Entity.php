@@ -21,15 +21,25 @@ class Entity
         $data = json_decode($response->getBody(), true);
 
         if ($data) {
-            $this->bank = $data['BANK'];
             $this->branch = $data['BRANCH'];
+            $this->bank = $data['BANK'];
+
+            $this->code = $this->ifsc = $data['IFSC'];
+            $this->bankCode = $data['BANKCODE'];
+
             $this->address = $data['ADDRESS'];
             $this->contact = $data['CONTACT'];
-            $this->city = $data['CITY'];
-            $this->code = $this->ifsc = $data['IFSC'];
             $this->district = $data['DISTRICT'];
             $this->state = $data['STATE'];
-            $this->bankCode = $data['BANKCODE'];
+            $this->city = $data['CITY'];
+            $this->centre = $data['CENTRE'];
+
+            $this->neft = $data['NEFT'];
+            $this->rtgs = $data['RTGS'];
+            $this->upi = $data['UPI'];
+            $this->imps = $data['IMPS'];
+            $this->micr = $data['MICR'];
+            $this->swift = $data['SWIFT'];
         }
     }
 
