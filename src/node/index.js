@@ -60,7 +60,7 @@ let _fetchDetails = function(code, cb) {
     if (!_validate(code)) {
       reject('Invalid IFSC Code');
     } else {
-      request.get({ url: url, json: true }, function(err, res, data) {
+      request.get({ url: url, json: true, timeout: 5000 }, function(err, res, data) {
         if (err) {
           reject('API Call failed: ' + err.msg);
         } else {
