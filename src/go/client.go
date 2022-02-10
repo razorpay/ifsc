@@ -22,7 +22,7 @@ const API_BASE = "https://ifsc.razorpay.com"
 type IFSCResponse struct {
 	Bank     *string `json:"bank"`
 	Branch   *string `json:"branch"`
-	Centre   *string `json:"center"`
+	Centre   *string `json:"centre"`
 	District *string `json:"district"`
 	State    *string `json:"state"`
 	Address  *string `json:"address"`
