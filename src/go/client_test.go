@@ -110,7 +110,7 @@ func TestLookUP(t *testing.T) {
 				assert.Equal(t, tt.IfscResponse.NEFT, got.NEFT)
 				assert.Equal(t, tt.IfscResponse.SWIFT, got.SWIFT)
 				assert.Equal(t, tt.IfscResponse.IMPS, got.IMPS)
-				// assert.Equal(t, tt.IfscResponse.BankCode, got.BankCode)
+				assert.Equal(t, tt.IfscResponse.BankCode, got.BankCode)
 			}
 		})
 	}
