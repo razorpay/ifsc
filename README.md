@@ -165,8 +165,15 @@ echo $res->contact; // '4131000'
 echo $res->city; // 'GURGAON'
 echo $res->district; // 'GURGAON'
 echo $res->state; // 'HARYANA'
+echo $res->centre; // 'GURGAON'
 echo $res->getBankCode(); // KKBK
 echo $res->getBankName(); // 'Kotak Mahindra Bank'
+echo $res->micr; // '110485003'
+// Boolean fields: $res->upi, $res->rtgs, $res->neft, res->imps
+
+// You will get a SWIFT code where possible:
+
+echo $client->lookupIFSC('https://ifsc.razorpay.com/HDFC0CAGSBK')->swift; // 'HDFCINBB'
 
 // lookupIFSC may throw `Razorpay\IFSC\Exception\ServerError`
 // in case of server not responding in time
@@ -184,6 +191,24 @@ ifsc.validate('BOTM0XEEMRA'); // returns false
 
 ifsc.fetchDetails('KKBK0000261').then(function(res) {
    console.log(res);
+    // {
+    //   MICR: '560226263',
+    //   BRANCH: 'THE AGS EMPLOYEES COOP BANK LTD',
+    //   ADDRESS: 'SANGMESH BIRADAR BANGALORE',
+    //   STATE: 'KARNATAKA',
+    //   CONTACT: '+91802265658',
+    //   UPI: true,
+    //   RTGS: true,
+    //   CITY: 'BANGALORE',
+    //   CENTRE: 'BANGALORE URBAN',
+    //   DISTRICT: 'BANGALORE URBAN',
+    //   NEFT: true,
+    //   IMPS: true,
+    //   SWIFT: 'HDFCINBB',
+    //   BANK: 'HDFC Bank',
+    //   BANKCODE: 'HDFC',
+    //   IFSC: 'HDFC0CAGSBK'
+    // }
 });
 
 console.log(ifsc.bank.PUNB); // prints PUNB
@@ -261,6 +286,19 @@ code.district
 # => "GURGAON"
 code.state
 # => "HARYANA"
+code.centre
+# => GURGAON
+code.neft
+# => true
+code.upi
+# => true
+code.imps
+# => true
+code.rtgs
+# => true
+code.swift
+# => ""
+
 ```
 
 #### Sublet Branches
