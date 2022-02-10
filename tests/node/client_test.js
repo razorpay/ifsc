@@ -1,7 +1,7 @@
 const ifsc = require('../../src/node');
 const assert = require('assert');
 
-const expected = require('./HDFC0CAGSBK')
+const expected = require('../fixture/HDFC0CAGSBK')
 
 ifsc
   .fetchDetails('KKBK0000261')
