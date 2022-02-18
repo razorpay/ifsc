@@ -3,6 +3,7 @@ const assert = require('assert');
 
 const expected = require('../fixture/HDFC0CAGSBK')
 
+// The nodejs tests do not mock the connect call, so this might break after a new release.
 ifsc
   .fetchDetails('KKBK0000261')
   .then(function(res) {
@@ -17,6 +18,11 @@ ifsc
     assert.equal('110485003',res['MICR'])
     assert.equal('HARYANA',res['STATE'])
     assert.equal('110485003',res['MICR'])
+    assert.equal(true,res['UPI'])
+    assert.equal(true,res['NEFT'])
+    assert.equal(true,res['IMPS'])
+    assert.equal(true,res['RTGS'])
+    assert.equal("",res['SWIFT'])
   })
   .catch(err => {
     console.error(err);
