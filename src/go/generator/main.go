@@ -44,7 +44,7 @@ func GenerateConstantsFile(outputFileWriter io.Writer, templateFilePath string, 
 
 	t := template.Must(template.New(templateFilePath).Parse(string(fileBytes)))
 	t.Execute(outputFileWriter, constantsArr)
-	fmt.Printf("Updated %s", templateFilePath)
+
 	return nil
 }
 
@@ -61,5 +61,5 @@ func main() {
 	if err := GenerateConstantsFile(writer, templateFilePath, constantsArr); err != nil {
 		log.Printf("error generation constants file, err:%v", err)
 	}
-	fmt.Printf("saved to %v \n", outputFilePath)
+	fmt.Printf("Updated %v \n", outputFilePath)
 }
