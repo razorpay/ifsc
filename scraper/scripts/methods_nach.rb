@@ -33,10 +33,10 @@ def bank_data(bank_code, data, _ifsc)
     # MICR codes are 9 digits long
     micr: match_length_or_nil(data[3], 9),
     # IINs are 6 digits long
-    iin: match_length_or_nil(data[5], 8),
-    apbs: data[7].text.strip == 'Yes',
-    ach_credit: data[8].text.strip == 'Yes',
-    ach_debit: data[9].text.strip == 'Yes',
+    iin: match_length_or_nil(data[5], 6),
+    apbs: data[6].text.strip == 'Yes',
+    ach_credit: data[7].text.strip == 'Yes',
+    ach_debit: data[8].text.strip == 'Yes',
     nach_debit: get_value(data[10])
   }
 end
