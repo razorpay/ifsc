@@ -13,8 +13,10 @@ class ClientTest extends TestCase
 {
     const FAKE_IFSC = 'RAZR0000001';
     const REAL_IFSC = 'AIRP0000001';
+    const REAL_IFSC2 = 'HDFC0CAGSBK';
 
     const AIRP = 'AIRP';
+    const HDFC = 'HDFC';
 
     public function setUp(): void
     {
@@ -72,23 +74,13 @@ class ClientTest extends TestCase
 
     protected function getMockData(string $ifsc)
     {
-        return [
-            "BRANCH" => "AIRTEL PAYMENTS BRANCH",
-            "CENTRE" => "GURGOAN",
-            "DISTRICT" => "GURGOAN",
-            "STATE" => "HARYANA",
-            "ADDRESS" => "AIRTEL CENTER, PLAT NO-16, UDYOG VIHAR, PHASE-4, GURGOAN",
-            "CONTACT" => "01244222222",
-            "UPI" => true,
-            "RTGS" => true,
-            "CITY" => "GURGOAN",
-            "NEFT" => true,
-            "IMPS" => true,
-            "MICR" => "",
-            "BANK" => "Airtel Payments Bank",
-            "BANKCODE" => "AIRP",
-            "IFSC" => "AIRP0000001"
-        ];
+        switch($ifsc) {
+            case 'AIRP0000001':
+            return json_decode('{"MICR":"","BRANCH":"AIRTEL PAYMENTS BRANCH","ADDRESS":"AIRTEL CENTER, PLAT NO-16, UDYOG VIHAR, PHASE-4, GURGOAN","STATE":"HARYANA","CONTACT":"+911244222222","UPI":true,"RTGS":true,"CITY":"GURGOAN","CENTRE":"GURGOAN","DISTRICT":"GURGOAN","NEFT":true,"IMPS":true,"SWIFT":"","BANK":"Airtel Payments Bank","BANKCODE":"AIRP","IFSC":"AIRP0000001"}', true);
+
+            case 'HDFC0CAGSBK':
+            return json_decode('{"MICR":"560226263","BRANCH":"THE AGS EMPLOYEES COOP BANK LTD","ADDRESS":"SANGMESH BIRADAR BANGALORE","STATE":"KARNATAKA","CONTACT":"+91802265658","UPI":true,"RTGS":true,"CITY":"BANGALORE","CENTRE":"BANGALORE URBAN","DISTRICT":"BANGALORE URBAN","NEFT":true,"IMPS":true,"SWIFT":"HDFCINBB","BANK":"HDFC Bank","BANKCODE":"HDFC","IFSC":"HDFC0CAGSBK"}', true);
+        }
     }
 
     public function testLookupResponse()
@@ -122,6 +114,63 @@ class ClientTest extends TestCase
         $this->assertSame($mockData['DISTRICT'], $entity->district);
 
         $this->assertSame($mockData['STATE'], $entity->state);
+
+        $this->assertSame($mockData['UPI'], $entity->upi);
+
+        $this->assertSame($mockData['NEFT'], $entity->neft);
+
+        $this->assertSame($mockData['MICR'], $entity->micr);
+
+        $this->assertSame($mockData['SWIFT'], $entity->swift);
+
+        $this->assertSame($mockData['CENTRE'], $entity->centre);
+    }
+
+    public function testLookupResponse2()
+    {
+        $expectedResponse = $this->getExpectedResponse(self::REAL_IFSC2);
+
+        $this->client->getHttpClient()->addResponse($expectedResponse);
+
+        $entity = $this->client->lookupIFSC(self::REAL_IFSC2);
+
+        $this->assertInstanceOf(IFSC\Entity::class, $entity);
+
+        $this->assertSame(self::HDFC, $entity->getBankCode());
+
+        $this->assertSame(IFSC\IFSC::getBankName(self::HDFC), $entity->getBankName());
+
+        $mockData = $this->getMockData(self::REAL_IFSC2);
+
+        $this->assertSame($mockData['BANK'], $entity->bank);
+
+        $this->assertSame($mockData['BRANCH'], $entity->branch);
+
+        $this->assertSame($mockData['ADDRESS'], $entity->address);
+
+        $this->assertSame($mockData['CONTACT'], $entity->contact);
+
+        $this->assertSame($mockData['CITY'], $entity->city);
+
+        $this->assertSame($mockData['IFSC'], $entity->code);
+
+        $this->assertSame($mockData['DISTRICT'], $entity->district);
+
+        $this->assertSame($mockData['STATE'], $entity->state);
+
+        $this->assertSame($mockData['IMPS'], $entity->imps);
+
+        $this->assertSame($mockData['RTGS'], $entity->rtgs);
+
+        $this->assertSame($mockData['UPI'], $entity->upi);
+
+        $this->assertSame($mockData['NEFT'], $entity->neft);
+
+        $this->assertSame($mockData['MICR'], $entity->micr);
+
+        $this->assertSame($mockData['SWIFT'], $entity->swift);
+
+        $this->assertSame($mockData['CENTRE'], $entity->centre);
     }
 
     public function testServerErrorResponse()

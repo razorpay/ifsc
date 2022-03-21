@@ -54,5 +54,4 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.go }}
-          bundler-cache: true
       - run: make go-test
