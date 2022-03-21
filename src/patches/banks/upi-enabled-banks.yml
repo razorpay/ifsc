@@ -57,6 +57,7 @@ banks:
   - BTUX
   - BUGX
   - BUSX
+  - BVNX
   - CBIN
   - CGGX
   - CITI
@@ -65,6 +66,7 @@ banks:
   - CLBL
   - CMCB
   - CNRB
+  - CNSX
   - COLX
   - COMX
   - COSB
@@ -98,6 +100,7 @@ banks:
   - GDUX
   - GPCX
   - GSCB
+  - HCBL
   - HCBX
   - HDFC
   - HGBX
@@ -180,6 +183,7 @@ banks:
   - MZRX
   - NAVX
   - NBMX
+  - NCBL
   - NESF
   - NGKX
   - NKGS
@@ -189,6 +193,7 @@ banks:
   - NTBL
   - NUBX
   - PALX
+  - PANX
   - PASX
   - PCTX
   - PCUX
@@ -198,7 +203,6 @@ banks:
   - PMEC
   - PNSX
   - PPBX
-  - PRTH
   - PSIB
   - PTSX
   - PUGX
@@ -214,6 +218,7 @@ banks:
   - RMGB
   - RNSB
   - RSBL
+  - RSCB
   - RSSB
   - SACB
   - SADX
@@ -264,6 +269,7 @@ banks:
   - TAMX
   - TBSB
   - TCBX
+  - TCCX
   - TDCB
   - TECX
   - TETX
@@ -290,6 +296,7 @@ banks:
   - VAIX
   - VANX
   - VARA
+  - VAUX
   - VCCX
   - VIJX
   - VIKX
@@ -303,13 +310,12 @@ banks:
   - YESB
   - YLNX
   - ZRNB
-  # There is some confusion regarding this
-  # This is HASTI Bank here
-  - HCBL
 
   # The following codes are made up, since we do not have a
   # authoritative code from RBI for the below banks
 
+  # Indrayani Co-operative Bank
+  - IXXX
   # Maharashtra Mantralaya & Allied Offices Co-operative Bank
   - MXXX
   # Udupi Co-operative Town Bank
