@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.7][2.0.7]
 ## Changed
-- Dependency Updates for scanner
+- Dependency Updates
+- All constant files are now automatically generated
+- `IXXX` as custom bank code for "Indrayani Co-operative Bank"
+- NPCI does not publish bank type any more, so these are now maintained in this repository as patches
+- Minor bank name updates
+- Support for Go 1.18
 
 ## [2.0.6][2.0.6]
 ## Changed
