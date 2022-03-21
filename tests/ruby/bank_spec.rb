@@ -20,11 +20,8 @@ describe Razorpay::IFSC::Bank do
                                                      nach_debit: true)
   end
 
-  it 'should match all constants defined in PHP' do
-  	constants_file = File.readlines('src/php/Bank.php')
-	bank_constants = constants_file.select { |e| e.match(/const/) }.map { |e| e[/\s+const (\w{4})/, 1] }
-
-  	bank_constants.each do |c|
+  it 'should match all constants defined in banknames.json' do
+  	JSON.parse(File.read('src/banknames.json')).keys.each do |c|
   	  expect(described_class::const_get(c)).to eq c.to_sym
   	end
   end
