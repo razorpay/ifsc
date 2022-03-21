@@ -23,6 +23,7 @@ type Bank struct {
 var bankData map[string]Bank
 
 func LoadBankData() {
+	// added a test comment
 	if bankData == nil {
 		if err := LoadFile("banks.json", &bankData, ""); err != nil {
 			log.Panic(fmt.Sprintf("there is some error in banknames.json file: %v", err))
