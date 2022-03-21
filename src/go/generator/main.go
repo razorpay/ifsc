@@ -1,10 +1,7 @@
 package main
 
-import (
+import ( // nosemgrep go.lang.security.audit.xss.import-text-template.import-text-template
 	"fmt"
-	// We are not dealing with HTML content so
-	// https://semgrep.dev/r?q=go.lang.security.audit.xss.import-text-template.import-text-template is irrelevant
-	// nosemgrep
 	"text/template"
 	"io"
 	"io/ioutil"
