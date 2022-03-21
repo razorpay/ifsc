@@ -1,5 +1,7 @@
 # frozen_string_literal: true
-
+# The bank.rb file is generated from `bank.rb.tpl` using constants
+# from banknames.json. Run `make generate-constants` to
+# update this file
 module Razorpay
   module IFSC
     module Bank
@@ -477,9 +479,11 @@ module Razorpay
       ITDX = :ITDX
       IUCB = :IUCB
       IUCX = :IUCX
+      IXXX = :IXXX
       JACX = :JACX
       JAKA = :JAKA
       JALX = :JALX
+      JAMX = :JAMX
       JANA = :JANA
       JANX = :JANX
       JASB = :JASB
@@ -1233,6 +1237,7 @@ module Razorpay
       SVSX = :SVSX
       SWMX = :SWMX
       SWSX = :SWSX
+      SXXX = :SXXX
       SYNB = :SYNB
       TACX = :TACX
       TADX = :TADX
@@ -1493,9 +1498,6 @@ module Razorpay
       ZSKX = :ZSKX
       ZSLX = :ZSLX
       ZSMX = :ZSMX
-
-      SXXX = :SXXX
-      JAMX = :JAMX
 
       class << self
         def get_details(code)

@@ -1,4 +1,7 @@
-module.exports = Object.freeze({
+// This file is generated from `bank.js.tpl` using constants
+// from banknames.json. Run `make generate-constants` to update
+
+module.exports = Object.freeze({ 
   AACX: 'AACX',
   ABBL: 'ABBL',
   ABCX: 'ABCX',
@@ -473,9 +476,11 @@ module.exports = Object.freeze({
   ITDX: 'ITDX',
   IUCB: 'IUCB',
   IUCX: 'IUCX',
+  IXXX: 'IXXX',
   JACX: 'JACX',
   JAKA: 'JAKA',
   JALX: 'JALX',
+  JAMX: 'JAMX',
   JANA: 'JANA',
   JANX: 'JANX',
   JASB: 'JASB',
@@ -1070,7 +1075,6 @@ module.exports = Object.freeze({
   SBLD: 'SBLD',
   SBLS: 'SBLS',
   SBLX: 'SBLX',
-  SMNB: 'SMNB',
   SBMX: 'SBMX',
   SBMY: 'SBMY',
   SBNX: 'SBNX',
@@ -1230,6 +1234,7 @@ module.exports = Object.freeze({
   SVSX: 'SVSX',
   SWMX: 'SWMX',
   SWSX: 'SWSX',
+  SXXX: 'SXXX',
   SYNB: 'SYNB',
   TACX: 'TACX',
   TADX: 'TADX',
@@ -1490,7 +1495,4 @@ module.exports = Object.freeze({
   ZSKX: 'ZSKX',
   ZSLX: 'ZSLX',
   ZSMX: 'ZSMX',
-  // Extras
-  SXXX: 'SXXX',
-  JAMX: 'JAMX',
 });
