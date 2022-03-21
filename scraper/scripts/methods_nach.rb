@@ -28,13 +28,12 @@ end
 def bank_data(bank_code, data, _ifsc)
   {
     code: bank_code,
-    type: data[3].text.strip,
     # IFSC codes are 11 characters long
     ifsc: match_length_or_nil(data[4], 11),
     # MICR codes are 9 digits long
-    micr: match_length_or_nil(data[5], 9),
+    micr: match_length_or_nil(data[3], 9),
     # IINs are 6 digits long
-    iin: match_length_or_nil(data[6], 6),
+    iin: match_length_or_nil(data[5], 8),
     apbs: data[7].text.strip == 'Yes',
     ach_credit: data[8].text.strip == 'Yes',
     ach_debit: data[9].text.strip == 'Yes',

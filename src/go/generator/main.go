@@ -4,7 +4,7 @@ import (
 	"fmt"
 	// We are not dealing with HTML content so
 	// https://semgrep.dev/r?q=go.lang.security.audit.xss.import-text-template.import-text-template is irrelevant
-	// semgrepignore
+	// nosemgrep
 	"text/template"
 	"io"
 	"io/ioutil"

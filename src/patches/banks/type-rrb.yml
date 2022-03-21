@@ -1,0 +1,61 @@
+---
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+action: patch
+patch:
+  :type: RRB
+banks:
+- AGVX
+- APGB
+- APGX
+- APRX
+- ARYX
+- AUGX
+- BGBX
+- BGGX
+- BGVX
+- BRGX
+- BUGX
+- CGBX
+- CGGX
+- CMPX
+- DEGX
+- DGBX
+- EDBX
+- HGBX
+- HMBX
+- JGBX
+- KGBX
+- KGSX
+- KLGB
+- KVGB
+- LDRX
+- MADX
+- MBGX
+- MDGX
+- MERX
+- MGBX
+- MGRB
+- MRBX
+- MZRX
+- NAGX
+- NJGX
+- ODGB
+- PABX
+- PASX
+- PBGX
+- PDNX
+- PGBX
+- PUGX
+- PURX
+- SAGX
+- SJGX
+- SPBX
+- SUBX
+- TGBX
+- UBGX
+- UGBX
+- UKGX
+- UTGX
+- VGBX
+- WKGX
+- XJKG

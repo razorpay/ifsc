@@ -1,0 +1,27 @@
+---
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+action: patch
+patch:
+  :type: Private
+banks:
+- BDBL
+- CIUB
+- CSBK
+- DCBL
+- DLXB
+- FDRL
+- HDFC
+- ICIC
+- IDFB
+- INDB
+- JAKA
+- KARB
+- KKBK
+- KVBL
+- LAVB
+- NTBL
+- RATN
+- SIBL
+- TMBL
+- UTIB
+- YESB
