@@ -32,7 +32,7 @@ class SubletTest extends TestCase
         // Since some of the Banks in the NPCI ACH list have sublets
         // Belonging to themselves. Skipped till we figure out a better way
         // Reported to RBI, no response yet
-        $this->markTestSkipped();
+        $this->markTestSkipped('Some banks are their own sublets, so this test is skipped for now');
         foreach ($this->sublets as $ifsc => $bankCode)
         {
             // This would be the naive owner
