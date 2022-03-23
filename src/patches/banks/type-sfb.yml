@@ -4,12 +4,24 @@ action: patch
 patch:
   :type: SFB
 banks:
-- AUBL
-- ESAF
-- ESFB
-- FINF
-- JSFB
-- NESF
-- SURY
-- USFB
-- UTKS
+# RBI website lists 12 Banks
+- AUBL # AU SFB
+- ESAF # ESAF SFB
+- ESFB # Equitas SFB
+- FINF # Fincare SFB
+- JSFB # Jana SFB
+- NESF # North East SFB
+- SURY # Suryoday SFB
+- USFB # Ujjivan SFB
+- UTKS # Utkarsh SFB
+# Capital used to be a LAB, now a SFB
+# https://www.capitalbank.co.in/about-us
+- CLBL # Capital SFB (erstwhile Local Area Bank)
+
+# Shivalik used to be a Urbank Co-operative Bank
+# That transitioned to a SFB
+# https://shivalikbank.com/transition.php
+- SMCB
+
+# Hasn't yet begin operations
+# - Unity Small Finance Bank

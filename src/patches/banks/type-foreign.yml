@@ -1,5 +1,7 @@
 ---
+# Foreign Banks
 # Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+# Check against https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx#FB
 action: patch
 patch:
   :type: Foreign

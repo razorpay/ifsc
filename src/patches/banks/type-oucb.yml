@@ -1,5 +1,8 @@
 ---
+# Non-Scheduled Urban Co-operative Banks
 # Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+# Listed at https://rbidocs.rbi.org.in/rdocs/Content/pdfs/nonschedulecoop.pdf
+# and https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx
 action: patch
 patch:
   :type: O-UCB
@@ -579,7 +582,6 @@ banks:
 - SHCX
 - SHEX
 - SHGX
-- SHIX
 - SHMX
 - SHNX
 - SHOX
