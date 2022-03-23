@@ -46,6 +46,7 @@ end
 
 # TODO: Return state/UT ISO code and use that instead
 def fix_state!(row)
+  return unless row['STATE']
   possible_state = row['STATE'].upcase
   final_state = nil
   map = {
@@ -108,7 +109,7 @@ def fix_state!(row)
     }[possible_state]
   end
   if final_state and final_state != row['STATE']
-    log "#{row['IFSC']}: Setting State=(#{final_state}) instead of (#{possible_state})"
+    log "#{row['IFSC']}: Setting State=(#{final_state}) instead of (#{row['STATE']})"
     row['STATE'] = final_state
   end
 end
@@ -165,6 +166,10 @@ def parse_csv(files, banks, additional_attributes = {})
     headers = CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
       row = row.to_h
 
+      # BDBL0001094 RTGS sheet, so it gets overridden with data from NEFT sheet
+      if row['STATE'] == '0'
+        row['STATE'] = nil
+      end
 
       # Some column is missing, and the STATE column has shifted by one.
       if row['STATE'].to_s.strip.match('\d')
