@@ -1,6 +1,8 @@
 ---
 # Data is incorrect in RBI NEFT sheet
 # Points to Kerala instead of Gujarat
+# Correct data comes from the SBI Branch Locator
+# https://www.sbi.co.in/web/home/locator/branch
 action: patch
 patch:
   CITY: AHMEDABAD
