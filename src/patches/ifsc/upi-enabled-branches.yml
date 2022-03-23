@@ -13,6 +13,8 @@ action: patch
 patch:
   :upi: true
 ifsc:
+  # jamkhandi urban co-operative bank
+  - ICIC00TJUCB
   # https://pratapbank.in/imps.php
   # Pratap Co-operative Bank
   - MDCB0680265
