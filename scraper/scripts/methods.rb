@@ -58,6 +58,7 @@ def fix_state!(row)
     /BULDHANA/ => 'MAHARASHTRA',
     /BUNDI/ => 'RAJASTHAN',
     /RAJAS/ => 'RAJASTHAN',
+    /KARANATAKA/ => 'KARNATAKA',
     /CARMELARAM/ => 'KARNATAKA',
     # Chandigarh is not a state, but the branches there are ambigous b/w Haryana and Punjab
     # /CHANDIGARH/ => 'PUNJAB',
@@ -70,9 +71,11 @@ def fix_state!(row)
     /DAHEJ/ => 'GUJARAT',
     /DELHI/ => 'DELHI',
     /DINDORI/ => 'MADHYA PRADESH',
+    /MADHYAPRADESH/ => 'MADHYA PRADESH',
     # Do not use DAMAN as that clashes with ANDAMAN
     /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /GOA/ => 'GOA',
+    /HIMANCHAL/ => 'HIMACHAL PRADESH',
     /HIMACHAL/ => 'HIMACHAL PRADESH',
     /HYDERABAD/ => 'ANDHRA PRADESH',
     /IDAR/ => 'ANDHRA PRADESH',
@@ -90,7 +93,14 @@ def fix_state!(row)
     /UTTARA/ => 'UTTARAKHAND',
     /UTTARPRADESH/ => 'UTTAR PRADESH',
     /WEST/ => 'WEST BENGAL',
-    /CHURU/ => 'RAJASTHAN'
+    /CHURU/ => 'RAJASTHAN',
+    /AHMEDABAD/ => 'GUJARAT',
+    /GUJRAT/ =>  'GUJARAT',
+    /HARKHAND/ => 'JHARKHAND',
+    /JHAGRAKHAND/ => 'JHARKHAND',
+    /ORISSA/ => 'ODISHA',
+    /PUNE/ => 'MAHARASHTRA',
+    /TELENGANA/ => 'TELANGANA'
   }
   map.each_pair do |r, state|
     if r.match? possible_state
