@@ -14,7 +14,7 @@ class Name extends TestCase
     }
 
     public function testBankDetails() {
-        $this->assertSame([
+        $this->assertEqualsCanonicalizing([
             'code' => 'PUNB',
             'ifsc' => 'PUNB0244200',
             'micr' => '110024001',
@@ -29,7 +29,7 @@ class Name extends TestCase
             'bank_code' => '024',
         ], Bank::getDetails('PUNB'));
 
-        $this->assertSame([
+        $this->assertEqualsCanonicalizing([
             'code' => 'FINO',
             'ifsc' => 'FINO0000001',
             'micr' => '990099909',
