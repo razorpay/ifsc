@@ -109,6 +109,35 @@ class CoverageTest extends TestCase
         }
     }
 
+    public function testAllBanksHaveValidType()
+    {
+        $validBankTypes = [
+            'DCCB',
+            'Foreign',
+            'LAB',
+            'O-UCB',
+            'PB',
+            'Private',
+            'PSB',
+            'RRB',
+            'SCB',
+            'SFB',
+            'S-UCB',
+        ];
+
+        $invalidBanks = [];
+
+        foreach ($this->bankList as $code => $details)
+        {
+            if(!isset($details['type']) || !in_array($details['type'], $validBankTypes))
+            {
+                $invalidBanks []= $code;
+            }
+        }
+
+        $this->assertSame($invalidBanks, [], "Invalid `type` in src/banks.json for these banks. Please add these in the corresponding src/patches/type*.yml files");
+    }
+
     /**
      * Ensures that all 4 character codes are well-defined and known
      */

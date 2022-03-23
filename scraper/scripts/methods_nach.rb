@@ -37,6 +37,9 @@ def bank_data(bank_code, data, _ifsc)
     ach_credit: data[6].text.strip == 'Yes',
     ach_debit: data[7].text.strip == 'Yes',
     apbs: data[8].text.strip == 'Yes',
+    # This will get overwritten by src/patches/nach-debit-banks.yml
+    # Can be stale information
+    nach_debit: false
   }
 end
 

@@ -80,6 +80,7 @@ const (
         APMC = "APMC"
         APMX = "APMX"
         APNX = "APNX"
+        APRR = "APRR"
         APRX = "APRX"
         APSX = "APSX"
         ARBL = "ARBL"
@@ -110,6 +111,7 @@ const (
         BACX = "BACX"
         BADX = "BADX"
         BAGX = "BAGX"
+        BALB = "BALB"
         BALX = "BALX"
         BANX = "BANX"
         BARA = "BARA"
@@ -120,6 +122,7 @@ const (
         BAUX = "BAUX"
         BAVX = "BAVX"
         BAWX = "BAWX"
+        BBDX = "BBDX"
         BBKM = "BBKM"
         BBLX = "BBLX"
         BBRX = "BBRX"
@@ -334,6 +337,7 @@ const (
         DOBX = "DOBX"
         DOHB = "DOHB"
         DRGX = "DRGX"
+        DSAX = "DSAX"
         DSBX = "DSBX"
         DSCB = "DSCB"
         DSHX = "DSHX"
@@ -878,6 +882,7 @@ const (
         NOSC = "NOSC"
         NPCX = "NPCX"
         NPKX = "NPKX"
+        NPPX = "NPPX"
         NRDX = "NRDX"
         NRMX = "NRMX"
         NSBB = "NSBB"
@@ -937,6 +942,7 @@ const (
         PGCX = "PGCX"
         PGRX = "PGRX"
         PGTX = "PGTX"
+        PHIX = "PHIX"
         PITX = "PITX"
         PJSB = "PJSB"
         PKBX = "PKBX"
@@ -1576,6 +1582,7 @@ var bankCodes = map[string]bool{
         "APMC" : true, 
         "APMX" : true, 
         "APNX" : true, 
+        "APRR" : true, 
         "APRX" : true, 
         "APSX" : true, 
         "ARBL" : true, 
@@ -1606,6 +1613,7 @@ var bankCodes = map[string]bool{
         "BACX" : true, 
         "BADX" : true, 
         "BAGX" : true, 
+        "BALB" : true, 
         "BALX" : true, 
         "BANX" : true, 
         "BARA" : true, 
@@ -1616,6 +1624,7 @@ var bankCodes = map[string]bool{
         "BAUX" : true, 
         "BAVX" : true, 
         "BAWX" : true, 
+        "BBDX" : true, 
         "BBKM" : true, 
         "BBLX" : true, 
         "BBRX" : true, 
@@ -1830,6 +1839,7 @@ var bankCodes = map[string]bool{
         "DOBX" : true, 
         "DOHB" : true, 
         "DRGX" : true, 
+        "DSAX" : true, 
         "DSBX" : true, 
         "DSCB" : true, 
         "DSHX" : true, 
@@ -2374,6 +2384,7 @@ var bankCodes = map[string]bool{
         "NOSC" : true, 
         "NPCX" : true, 
         "NPKX" : true, 
+        "NPPX" : true, 
         "NRDX" : true, 
         "NRMX" : true, 
         "NSBB" : true, 
@@ -2433,6 +2444,7 @@ var bankCodes = map[string]bool{
         "PGCX" : true, 
         "PGRX" : true, 
         "PGTX" : true, 
+        "PHIX" : true, 
         "PITX" : true, 
         "PJSB" : true, 
         "PKBX" : true, 

@@ -16,14 +16,14 @@ class Name extends TestCase
     public function testBankDetails() {
         $this->assertSame([
             'code' => 'PUNB',
-            'type' => 'PSB',
             'ifsc' => 'PUNB0244200',
             'micr' => '110024001',
             'iin' => '508568',
-            'apbs' => true,
             'ach_credit' => true,
             'ach_debit' => true,
+            'apbs' => true,
             'nach_debit' => true,
+            'type' => 'PSB',
             'upi' => true,
             'name' => 'Punjab National Bank',
             'bank_code' => '024',
@@ -31,14 +31,14 @@ class Name extends TestCase
 
         $this->assertSame([
             'code' => 'FINO',
-            'type' => 'PB',
             'ifsc' => 'FINO0000001',
             'micr' => '990099909',
             'iin' => '608001',
-            'apbs' => true,
             'ach_credit' => true,
             'ach_debit' => false,
             'nach_debit' => false,
+            'apbs' => true,
+            'type' => 'PB',
             'upi' => true,
             'name' => 'Fino Payments Bank',
             'bank_code' => '099'

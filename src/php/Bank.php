@@ -84,6 +84,7 @@ class Bank
     const APMC = 'APMC';
     const APMX = 'APMX';
     const APNX = 'APNX';
+    const APRR = 'APRR';
     const APRX = 'APRX';
     const APSX = 'APSX';
     const ARBL = 'ARBL';
@@ -114,6 +115,7 @@ class Bank
     const BACX = 'BACX';
     const BADX = 'BADX';
     const BAGX = 'BAGX';
+    const BALB = 'BALB';
     const BALX = 'BALX';
     const BANX = 'BANX';
     const BARA = 'BARA';
@@ -124,6 +126,7 @@ class Bank
     const BAUX = 'BAUX';
     const BAVX = 'BAVX';
     const BAWX = 'BAWX';
+    const BBDX = 'BBDX';
     const BBKM = 'BBKM';
     const BBLX = 'BBLX';
     const BBRX = 'BBRX';
@@ -338,6 +341,7 @@ class Bank
     const DOBX = 'DOBX';
     const DOHB = 'DOHB';
     const DRGX = 'DRGX';
+    const DSAX = 'DSAX';
     const DSBX = 'DSBX';
     const DSCB = 'DSCB';
     const DSHX = 'DSHX';
@@ -882,6 +886,7 @@ class Bank
     const NOSC = 'NOSC';
     const NPCX = 'NPCX';
     const NPKX = 'NPKX';
+    const NPPX = 'NPPX';
     const NRDX = 'NRDX';
     const NRMX = 'NRMX';
     const NSBB = 'NSBB';
@@ -941,6 +946,7 @@ class Bank
     const PGCX = 'PGCX';
     const PGRX = 'PGRX';
     const PGTX = 'PGTX';
+    const PHIX = 'PHIX';
     const PITX = 'PITX';
     const PJSB = 'PJSB';
     const PKBX = 'PKBX';
