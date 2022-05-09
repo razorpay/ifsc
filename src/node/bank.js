@@ -1,4 +1,8 @@
-module.exports = Object.freeze({
+// This file is generated from `bank.js.tpl` using constants
+// from banknames.json. Run `make generate-constants` to update
+// bank.js
+
+module.exports = Object.freeze({ 
   AACX: 'AACX',
   ABBL: 'ABBL',
   ABCX: 'ABCX',
@@ -74,6 +78,7 @@ module.exports = Object.freeze({
   APMC: 'APMC',
   APMX: 'APMX',
   APNX: 'APNX',
+  APRR: 'APRR',
   APRX: 'APRX',
   APSX: 'APSX',
   ARBL: 'ARBL',
@@ -104,6 +109,7 @@ module.exports = Object.freeze({
   BACX: 'BACX',
   BADX: 'BADX',
   BAGX: 'BAGX',
+  BALB: 'BALB',
   BALX: 'BALX',
   BANX: 'BANX',
   BARA: 'BARA',
@@ -114,6 +120,7 @@ module.exports = Object.freeze({
   BAUX: 'BAUX',
   BAVX: 'BAVX',
   BAWX: 'BAWX',
+  BBDX: 'BBDX',
   BBKM: 'BBKM',
   BBLX: 'BBLX',
   BBRX: 'BBRX',
@@ -328,6 +335,7 @@ module.exports = Object.freeze({
   DOBX: 'DOBX',
   DOHB: 'DOHB',
   DRGX: 'DRGX',
+  DSAX: 'DSAX',
   DSBX: 'DSBX',
   DSCB: 'DSCB',
   DSHX: 'DSHX',
@@ -473,9 +481,11 @@ module.exports = Object.freeze({
   ITDX: 'ITDX',
   IUCB: 'IUCB',
   IUCX: 'IUCX',
+  IXXX: 'IXXX',
   JACX: 'JACX',
   JAKA: 'JAKA',
   JALX: 'JALX',
+  JAMX: 'JAMX',
   JANA: 'JANA',
   JANX: 'JANX',
   JASB: 'JASB',
@@ -870,6 +880,7 @@ module.exports = Object.freeze({
   NOSC: 'NOSC',
   NPCX: 'NPCX',
   NPKX: 'NPKX',
+  NPPX: 'NPPX',
   NRDX: 'NRDX',
   NRMX: 'NRMX',
   NSBB: 'NSBB',
@@ -929,6 +940,7 @@ module.exports = Object.freeze({
   PGCX: 'PGCX',
   PGRX: 'PGRX',
   PGTX: 'PGTX',
+  PHIX: 'PHIX',
   PITX: 'PITX',
   PJSB: 'PJSB',
   PKBX: 'PKBX',
@@ -1070,7 +1082,6 @@ module.exports = Object.freeze({
   SBLD: 'SBLD',
   SBLS: 'SBLS',
   SBLX: 'SBLX',
-  SMNB: 'SMNB',
   SBMX: 'SBMX',
   SBMY: 'SBMY',
   SBNX: 'SBNX',
@@ -1230,6 +1241,7 @@ module.exports = Object.freeze({
   SVSX: 'SVSX',
   SWMX: 'SWMX',
   SWSX: 'SWSX',
+  SXXX: 'SXXX',
   SYNB: 'SYNB',
   TACX: 'TACX',
   TADX: 'TADX',
@@ -1490,7 +1502,4 @@ module.exports = Object.freeze({
   ZSKX: 'ZSKX',
   ZSLX: 'ZSLX',
   ZSMX: 'ZSMX',
-  // Extras
-  SXXX: 'SXXX',
-  JAMX: 'JAMX',
 });

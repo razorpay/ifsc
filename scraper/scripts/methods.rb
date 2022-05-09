@@ -9,6 +9,7 @@ require 'nokogiri'
 require 'open-uri'
 require './methods_nach'
 require './utils'
+require './iso3166'
 
 HEADINGS_INSERT = %w[
   BANK
@@ -27,17 +28,18 @@ def parse_imps(banks)
   banks.each do |code, row|
     next unless row[:ifsc] && row[:ifsc].strip.to_s.length == 11
 
+    # These are virtual branches, so we fix them to NPCI HQ for now
     data[row[:ifsc]] = {
       'BANK' => banknames[code],
       'IFSC' => row[:ifsc],
       'BRANCH' => "#{banknames[code]} IMPS",
       'CENTRE' => 'NA',
       'DISTRICT' => 'NA',
-      'STATE' => 'NA',
+      'STATE' => 'MAHARASHTRA',
       'ADDRESS' => 'NA',
       'CONTACT' => nil,
       'IMPS' => true,
-      'CITY' => 'NA',
+      'CITY' => 'MUMBAI',
       'UPI' => banks[code][:upi] ? true : false
     }
   end
@@ -46,10 +48,10 @@ end
 
 # TODO: Return state/UT ISO code and use that instead
 def fix_state!(row)
-  possible_state = row['STATE'].upcase
-  final_state = nil
+  return unless row['STATE']
+  possible_state = final_state = row['STATE'].upcase
   map = {
-    /ANDAMAN/ => 'ANDAMAN AND NICOBAR ISLAND',
+    /ANDAMAN/ => 'ANDAMAN AND NICOBAR ISLANDS',
     /BANGALORE/ => 'KARNATAKA',
     /BARDEZ/ => 'GOA',
     /BHUSAWAL/ => 'MAHARASHTRA',
@@ -57,21 +59,27 @@ def fix_state!(row)
     /BULDHANA/ => 'MAHARASHTRA',
     /BUNDI/ => 'RAJASTHAN',
     /RAJAS/ => 'RAJASTHAN',
+    /KARANATAKA/ => 'KARNATAKA',
     /CARMELARAM/ => 'KARNATAKA',
     # Chandigarh is not a state, but the branches there are ambigous b/w Haryana and Punjab
     # /CHANDIGARH/ => 'PUNJAB',
     /CHEMBUR/ => 'PUNJAB',
     /CHENNAI/ => 'TAMIL NADU',
     /CHHATIS/ => 'CHHATTISGARH',
+    # Double H, Single T
     /CHHATISHGARH/ => 'CHHATTISGARH',
+    # Single H, Double T
+    /CHATTISGARH/ => 'CHHATTISGARH',
     /DADRA/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /DAHEGAM/ => 'GUJARAT',
     /DAHEJ/ => 'GUJARAT',
     /DELHI/ => 'DELHI',
     /DINDORI/ => 'MADHYA PRADESH',
+    /MADHYAPRADESH/ => 'MADHYA PRADESH',
     # Do not use DAMAN as that clashes with ANDAMAN
     /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /GOA/ => 'GOA',
+    /HIMANCHAL/ => 'HIMACHAL PRADESH',
     /HIMACHAL/ => 'HIMACHAL PRADESH',
     /HYDERABAD/ => 'ANDHRA PRADESH',
     /IDAR/ => 'ANDHRA PRADESH',
@@ -89,13 +97,16 @@ def fix_state!(row)
     /UTTARA/ => 'UTTARAKHAND',
     /UTTARPRADESH/ => 'UTTAR PRADESH',
     /WEST/ => 'WEST BENGAL',
-    /CHURU/ => 'RAJASTHAN'
+    /CHURU/ => 'RAJASTHAN',
+    /AHMEDABAD/ => 'GUJARAT',
+    /GUJRAT/ =>  'GUJARAT',
+    /HARKHAND/ => 'JHARKHAND',
+    /JHAGRAKHAND/ => 'JHARKHAND',
+    /ORISSA/ => 'ODISHA',
+    /PUNE/ => 'MAHARASHTRA',
+    /TELENGANA/ => 'TELANGANA',
+    /PANJAB/ => 'PUNJAB'
   }
-  map.each_pair do |r, state|
-    if r.match? possible_state
-      final_state = state
-    end
-  end
 
   if possible_state.size == 2
     final_state = {
@@ -104,11 +115,17 @@ def fix_state!(row)
       "TN" => "TELANGANA",
       "MH" => "MAHARASHTRA",
       "CG" => "CHHATTISGARH",
-
     }[possible_state]
+  else
+    map.each_pair do |r, state|
+      if r.match? possible_state
+        final_state = state
+      end
+    end
   end
-  if final_state and final_state != row['STATE']
-    log "#{row['IFSC']}: Setting State=(#{final_state}) instead of (#{possible_state})"
+
+  if final_state != row['STATE']
+    log "#{row['IFSC']}: Setting State=(#{final_state}) instead of (#{row['STATE']})"
     row['STATE'] = final_state
   end
 end
@@ -165,6 +182,10 @@ def parse_csv(files, banks, additional_attributes = {})
     headers = CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
       row = row.to_h
 
+      # BDBL0001094 RTGS sheet, so it gets overridden with data from NEFT sheet
+      if row['STATE'] == '0'
+        row['STATE'] = nil
+      end
 
       # Some column is missing, and the STATE column has shifted by one.
       if row['STATE'].to_s.strip.match('\d')
@@ -239,7 +260,7 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','NEFT','MICR','UPI','SWIFT']
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','ISO3166','NEFT','MICR','UPI','SWIFT']
     csv << keys
     data.each do |code, ifsc_data|
       sorted_data = []
@@ -320,6 +341,7 @@ def merge_dataset(neft, rtgs, imps)
     # Set the bank name considering sublets
     combined_data['BANK'] = bank_name_from_code(combined_data['IFSC'])
     combined_data.delete('DATE')
+    combined_data['ISO3166'] = ISO3166_MAP[combined_data['STATE']]
 
     h[ifsc] = combined_data
   end

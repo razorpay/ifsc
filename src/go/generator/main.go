@@ -1,82 +1,65 @@
 package main
 
-import (
-	"errors"
+import ( // nosemgrep go.lang.security.audit.xss.import-text-template.import-text-template
 	"fmt"
-	"html/template"
+	"text/template"
 	"io"
 	"io/ioutil"
 	"log"
 	"os"
-	"path"
-	"regexp"
-	"runtime"
+	"sort"
+	"encoding/json"
 )
+
 
 type bankConstants struct {
 	Value []string
 }
 
-func ExtractPhpConstant() (*bankConstants, error) {
-	re := regexp.MustCompile(`(?P<bankCode>[A-Z]{4}) =`)
-	_, fileN, _, ok := runtime.Caller(0)
-	if !ok {
-		return nil, errors.New("it was not possible to recover the information. Caller function error")
-	}
-	dir, _ := path.Split(fileN)
-	phpFilePath := path.Join(dir, "..", "..", "php", "Bank.php")
-	bytes, err := ioutil.ReadFile(phpFilePath)
-	if err != nil {
-		return nil, err
-	}
-	matches := re.FindAllStringSubmatch(string(bytes), -1)
+
+func GetConstants() (*bankConstants) {
+	jsonString, _ := ioutil.ReadFile("src/banknames.json")
 	var result bankConstants
-	for _, match := range matches {
-		result.Value = append(result.Value, match[1])
+	var data map[string]interface{}
+	json.Unmarshal([]byte(jsonString), &data)
+
+	keys := []string{}
+	for k := range data {
+		keys = append(keys, k)
 	}
-	return &result, nil
+
+	sort.Strings(keys)
+
+	for _,k := range keys {
+		result.Value = append(result.Value, k)
+	}
+	return &result
 }
 
-func GenerateConstantsFile(writer io.Writer) error {
-	cwd, err := getCwd()
-	if err != nil {
-		log.Fatal(err)
-	}
-	templateFilePath := path.Join(cwd, "constants.template")
+func GenerateConstantsFile(outputFileWriter io.Writer, templateFilePath string, constantsArr *bankConstants) error {
 	fileBytes, err := ioutil.ReadFile(templateFilePath)
 	if err != nil {
 		return err
 	}
-	constantsArr, err := ExtractPhpConstant()
-	if err != nil {
-		return err
-	}
-	t := template.Must(template.New("constants.template").Parse(string(fileBytes)))
-	t.Execute(writer, constantsArr)
-	fmt.Printf("added %d constants ", len(constantsArr.Value))
+
+	t := template.Must(template.New(templateFilePath).Parse(string(fileBytes)))
+	t.Execute(outputFileWriter, constantsArr)
+
 	return nil
 }
-func getCwd() (string, error) {
-	_, fileN, _, ok := runtime.Caller(0)
-	if !ok {
-		return "", errors.New("it was not possible to recover the information. Caller function error")
-	}
-	dir, _ := path.Split(fileN)
-	return dir, nil
-}
+
 func main() {
-	cwd, err := getCwd()
+	constantsArr := GetConstants()
+	templateFilePath := os.Args[1]
+	outputFilePath := os.Args[2]
+
+	writer, err := os.Create(outputFilePath)
 	if err != nil {
 		log.Fatal(err)
 	}
-	constantsFilePath := path.Join(cwd, "..", "constants.go")
-	os.Remove(constantsFilePath)
-	file, err := os.Create(constantsFilePath)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if err := GenerateConstantsFile(file); err != nil {
+
+	if err := GenerateConstantsFile(writer, templateFilePath, constantsArr); err != nil {
 		log.Printf("error generation constants file, err:%v", err)
 	}
-	fmt.Printf("saved to %v \n", constantsFilePath)
+	fmt.Printf("Updated %v \n", outputFilePath)
 }

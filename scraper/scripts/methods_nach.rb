@@ -28,17 +28,18 @@ end
 def bank_data(bank_code, data, _ifsc)
   {
     code: bank_code,
-    type: data[3].text.strip,
     # IFSC codes are 11 characters long
     ifsc: match_length_or_nil(data[4], 11),
     # MICR codes are 9 digits long
-    micr: match_length_or_nil(data[5], 9),
+    micr: match_length_or_nil(data[3], 9),
     # IINs are 6 digits long
-    iin: match_length_or_nil(data[6], 6),
-    apbs: data[7].text.strip == 'Yes',
-    ach_credit: data[8].text.strip == 'Yes',
-    ach_debit: data[9].text.strip == 'Yes',
-    nach_debit: get_value(data[10])
+    iin: match_length_or_nil(data[5], 6),
+    ach_credit: data[6].text.strip == 'Yes',
+    ach_debit: data[7].text.strip == 'Yes',
+    apbs: data[8].text.strip == 'Yes',
+    # This will get overwritten by src/patches/nach-debit-banks.yml
+    # Can be stale information
+    nach_debit: false
   }
 end
 
@@ -46,7 +47,9 @@ def parse_upi
   doc = Nokogiri::HTML(open('upi.html'))
   # We count the unique number of banks mentioned in the table
   # Since sometimes NPCI will repeat banks
-  count = doc.css('table>tbody')[0].css('tr').map{|e| e.css('td')[1].text.strip}.uniq.size
+  # We also skip PPI Issuers, since those don't have a corresponding bank code for us
+  valid_banks = doc.css('table>tbody')[0].css('tr').map{|e| [e.css('td')[1].text.strip, e.css('td')[2].text.strip]}.select{|e| e[1] !~ /PPI/}.uniq
+  count = valid_banks.size
 
   upi_patch_filename = '../../src/patches/banks/upi-enabled-banks.yml'
   upi_branch_patch_filename = '../../src/patches/ifsc/upi-enabled-branches.yml'
@@ -54,8 +57,8 @@ def parse_upi
   # Count the number of banks we have in our UPI patch file:
   data = YAML.safe_load(File.read(upi_patch_filename), permitted_classes: [Symbol])
   branch_data = YAML.safe_load(File.read(upi_branch_patch_filename), permitted_classes: [Symbol])
-  if data['banks'].size + branch_data['ifsc'].size != count
-    log "Number of UPI-enabled banks (#{data['banks'].size}) does not match the count on the NPCI website (#{count})}", :critical
+  if (data['banks'].size + branch_data['ifsc'].size) != count
+    log "Number of UPI-enabled banks in code (Banks+Branches) (#{data['banks'].size}+#{branch_data['ifsc'].size}) does not match the count on the NPCI website (#{count})}", :critical
     log "Please check https://www.npci.org.in/what-we-do/upi/live-members and update src/patches/banks/upi-enabled-banks.yml", :debug
     exit 1
   end

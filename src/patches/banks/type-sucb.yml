@@ -1,0 +1,57 @@
+---
+# Scheduled Urban Co-operative Banks
+# https://rbidocs.rbi.org.in/rdocs/Content/pdfs/schedulecoop.pdf
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+action: patch
+patch:
+  :type: S-UCB
+banks:
+# TODO: The RBI website lists 53, so we are missing a few
+- ABHY
+- AJKB
+- AKOX
+- AMCB
+- APMC
+- ASBL
+- BACB
+- BCBM
+- BHSX
+- BMCB
+- CCBL
+- COSB
+- DNSB
+- GBCB
+- GUCX
+- JALX
+- JJSB
+- JPCB
+- JSBL
+- JSBP
+- KAIJ
+- KCCB
+- KHUX
+- KJSB
+- KUCB
+- MCBL
+- MSNU
+- NGSB
+- NICB
+- NKGS
+- NMCB
+- NNSB
+- NUCB
+- PJSB
+- PRSX
+- RBBX
+- RNSB
+- SBPX
+- SHKX
+- SJSX
+- SPCB
+- SRCB
+- SUCX
+- SVCB
+- TBSB
+- TJSB
+- VVSB
+- ZCBL

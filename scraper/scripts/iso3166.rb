@@ -1,0 +1,42 @@
+ISO3166_MAP = {
+  # https://en.wikipedia.org/wiki/States_and_union_territories_of_India
+  # 28 States
+  'ANDHRA PRADESH' => 'IN-AP',
+  'ARUNACHAL PRADESH' => 'IN-AR',
+  'ASSAM' => 'IN-AS',
+  'BIHAR' => 'IN-BR',
+  'CHHATTISGARH' => 'IN-CT',
+  'GOA' => 'IN-GA',
+  'GUJARAT' => 'IN-GJ',
+  'HARYANA' => 'IN-HR',
+  'HIMACHAL PRADESH' => 'IN-HP',
+  'JHARKHAND' => 'IN-JH',
+  'KARNATAKA' => 'IN-KA',
+  'KERALA' => 'IN-KL',
+  'MADHYA PRADESH' => 'IN-MP',
+  'MAHARASHTRA' => 'IN-MH',
+  'MANIPUR' => 'IN-MN',
+  'MEGHALAYA' => 'IN-ML',
+  'MIZORAM' => 'IN-MZ',
+  'NAGALAND' => 'IN-NL',
+  'ODISHA' => 'IN-OR',
+  'PUNJAB' => 'IN-PB',
+  'RAJASTHAN' => 'IN-RJ',
+  'SIKKIM' => 'IN-SK',
+  'TAMIL NADU' => 'IN-TN',
+  'TELANGANA' => 'IN-TG',
+  'TRIPURA' => 'IN-TR',
+  'UTTAR PRADESH' => 'IN-UP',
+  'UTTARAKHAND' => 'IN-UT',
+  'WEST BENGAL' => 'IN-WB',
+  # 8 Union Territories
+  # https://en.wikipedia.org/wiki/Union_territory
+  'ANDAMAN AND NICOBAR ISLANDS' => 'IN-AN',
+  'CHANDIGARH' => 'IN-CH',
+  'DADRA AND NAGAR HAVELI AND DAMAN AND DIU' => 'IN-DH',
+  'DELHI' => 'IN-DL',
+  'JAMMU AND KASHMIR' => 'IN-JK',
+  'LADAKH' => 'IN-LA',
+  'LAKSHADWEEP' => 'IN-LD',
+  'PUDUCHERRY' => 'IN-PY'
+}

@@ -1,0 +1,38 @@
+---
+# Foreign Banks
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+# Check against https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx#FB
+# and https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=3657
+action: patch
+patch:
+  :type: Foreign
+banks:
+- ABBL
+- BARC
+- BBKM
+- BCEY
+- BNPA
+- BOFA
+- BOTM
+- CHAS
+- CITI
+- CRLY
+- DBSS
+- DEUT
+- EBIL
+- HSBC
+- KBHB
+- MHCB
+- NOSC
+- OIBA
+- QNBX
+- RABO
+- SBLD
+- SCBL
+- SHBK
+- SMBC
+- SOGE
+- STCB
+# Lakshmi Vilas Bank was a Private Sector Bank. Now that it is merged into DBS Bank
+# It will be classified as a Foreign Bank (technically, it no longer exists.)
+- LAVB

@@ -1,0 +1,31 @@
+---
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+# Check against https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx#IB
+action: patch
+patch:
+  :type: Private
+banks:
+- BDBL
+- CIUB
+- CSBK
+- DCBL
+- DLXB
+- FDRL
+- HDFC
+- ICIC
+- IDFB
+# IDBI Bank was re-categorized as private after LIC acquired a 51% stake
+# Ref https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=46552
+# Ref https://www.idbibank.in/pdf/BriefHistoryofIDBI.pdf
+- IBKL
+- INDB
+- JAKA
+- KARB
+- KKBK
+- KVBL
+- NTBL
+- RATN
+- SIBL
+- TMBL
+- UTIB
+- YESB

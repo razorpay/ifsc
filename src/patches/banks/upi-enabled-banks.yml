@@ -22,6 +22,7 @@ banks:
   - AGCX
   - AGVX
   - AIRP
+  - AJHC
   - AJNX
   - AJPX
   - AMCB
@@ -41,6 +42,7 @@ banks:
   - BARX
   - BASX
   - BCBM
+  - BCUB
   - BDBL
   - BDDX
   - BGGX
@@ -57,6 +59,7 @@ banks:
   - BTUX
   - BUGX
   - BUSX
+  - BVNX
   - CBIN
   - CGGX
   - CITI
@@ -65,6 +68,7 @@ banks:
   - CLBL
   - CMCB
   - CNRB
+  - CNSX
   - COLX
   - COMX
   - COSB
@@ -74,6 +78,7 @@ banks:
   - CSBX
   - CTBX
   - CZCX
+  - DAUX
   - DBSS
   - DCBL
   - DCUX
@@ -98,6 +103,7 @@ banks:
   - GDUX
   - GPCX
   - GSCB
+  - HCBL
   - HCBX
   - HDFC
   - HGBX
@@ -112,6 +118,7 @@ banks:
   - IDIB
   - INDB
   - IOBA
+  - IPCX
   - IPPB
   - IPSX
   - ITBL
@@ -120,8 +127,10 @@ banks:
   - JGBX
   - JIOP
   - JJSB
+  - JKHX
   - JMCX
   - JMSX
+  - JNDX
   - JPCB
   - JSBL
   - JSBP
@@ -135,7 +144,6 @@ banks:
   - KBSX
   - KCCB
   - KDIX
-  - KGSX
   - KHUX
   - KJSB
   - KKBK
@@ -145,13 +153,13 @@ banks:
   - KMSX
   - KODX
   - KOLH
+  - KOTX
   - KPCX
   - KRNX
   - KRTX
   - KSCB
   - KVBL
   - KVGB
-  - LATX
   - LONX
   - MAHB
   - MAHG
@@ -164,6 +172,8 @@ banks:
   - MDBK
   - MDMX
   - MERX
+  - MGCX
+  - MHMX
   - MHNX
   - MHSX
   - MPRX
@@ -180,6 +190,7 @@ banks:
   - MZRX
   - NAVX
   - NBMX
+  - NCBL
   - NESF
   - NGKX
   - NKGS
@@ -189,6 +200,7 @@ banks:
   - NTBL
   - NUBX
   - PALX
+  - PANX
   - PASX
   - PCTX
   - PCUX
@@ -198,9 +210,10 @@ banks:
   - PMEC
   - PNSX
   - PPBX
-  - PRTH
+  - PSBL
   - PSIB
   - PTSX
+  - PUBX
   - PUGX
   - PUNB
   - PUNX
@@ -214,6 +227,7 @@ banks:
   - RMGB
   - RNSB
   - RSBL
+  - RSCB
   - RSSB
   - SACB
   - SADX
@@ -229,15 +243,16 @@ banks:
   - SBUJ
   - SCBL
   - SCOB
+  - SCUX
   - SDCB
   - SDCE
   - SDCX
   - SDUX
   - SECB
   - SEWX
-  - SHIX
   - SIBL
   - SIDC
+  - SMCB
   - SMCX
   - SNBK
   - SNBX
@@ -251,7 +266,6 @@ banks:
   - SSWX
   - STCB
   - STRX
-  - SUBX
   - SUMX
   - SUNB
   - SURY
@@ -263,7 +277,7 @@ banks:
   - SVCX
   - TAMX
   - TBSB
-  - TCBX
+  - TCCX
   - TDCB
   - TECX
   - TETX
@@ -290,6 +304,7 @@ banks:
   - VAIX
   - VANX
   - VARA
+  - VAUX
   - VCCX
   - VIJX
   - VIKX
@@ -303,13 +318,14 @@ banks:
   - YESB
   - YLNX
   - ZRNB
-  # There is some confusion regarding this
-  # This is HASTI Bank here
-  - HCBL
 
   # The following codes are made up, since we do not have a
   # authoritative code from RBI for the below banks
+  # The Jampeta Co-Operative Urban Bank Ltd
+  - JXXX
 
+  # Indrayani Co-operative Bank
+  - IXXX
   # Maharashtra Mantralaya & Allied Offices Co-operative Bank
   - MXXX
   # Udupi Co-operative Town Bank

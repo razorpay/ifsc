@@ -26,7 +26,8 @@ class DatasetTest extends TestCase
         'CITY',
         'NEFT',
         'MICR',
-        'UPI'
+        'UPI',
+        'ISO3166'
     ];
 
     public function testIFSCDotCsv() {
@@ -69,11 +70,9 @@ class DatasetTest extends TestCase
         if (file_exists($tarFile) or getenv('RUN_DATASET_TESTS')) {
             $dir = tempnam(sys_get_temp_dir(), '') . '.dir';
 
-            mkdir($dir);
-
             // unarchive from the tar
             $phar = new PharData($tarFile);
-            $phar->extractTo($dir);
+            $phar->extractTo($dir, null, true);
 
             foreach(glob("$dir/by-bank/*.json") as $json) {
                 $data = json_decode(file_get_contents($json), true);

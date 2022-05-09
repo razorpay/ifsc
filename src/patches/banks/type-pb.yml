@@ -1,0 +1,15 @@
+---
+# Payment Banks
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+# Listed at https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx
+# And https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=3657
+action: patch
+patch:
+  :type: PB
+banks:
+- AIRP
+- FINO
+- IPPB
+- JIOP
+- NSPB
+- PYTM

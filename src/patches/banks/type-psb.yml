@@ -1,0 +1,39 @@
+---
+# Public Sector Banks
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+# https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx
+action: patch
+patch:
+  :type: PSB
+banks:
+# The following 12 Banks are listed as Public Sector Banks by RBI
+# at https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspxUBIN
+- BARB
+- BKID
+- MAHB
+- CNRB
+- CBIN
+- IDIB
+- IOBA
+- PSIB
+- PUNB
+- SBIN
+- UCBA
+- UBIN
+# The following 2 banks are special, since they are technically public sector
+# But not listed on the RBI website
+
+- RBIN # Reserve Bank of India
+# See list of Saving Schemes here: https://www.indiapost.gov.in/VAS/Pages/RTI/RTI-Manual-5.aspx
+# POSA (Post Office Savings Account) are managed under GPOX
+- GPOX # General Post Office, it's not really a Bank, but acts like a BANK?
+
+# The following banks have been merged
+- ALLA # Merged with Indian Bank
+- ANDB # Merged with Union Bank of India
+- BKDN # Merged with Bank of Baroda
+- CORP # Merged with Union Bank of India
+- ORBC # Merged with Punjab National Bank
+- SYNB # Merged with Canara Bank
+- UTBI # Merged with Punjab National Bank
+- VIJB # Merged with Bank of Baroda

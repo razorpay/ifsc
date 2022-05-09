@@ -1,0 +1,15 @@
+---
+# Data is incorrect in RBI NEFT sheet
+# Points to Kerala instead of Gujarat
+# Correct data comes from the SBI Branch Locator
+# https://www.sbi.co.in/web/home/locator/branch
+action: patch
+patch:
+  CITY: AHMEDABAD
+  DISTRICT: AHMEDABAD
+  CENTRE: AHMEDABAD
+  STATE: GUJARAT
+  ADDRESS: A/24, SWASTIK SOCIETY, 1ST FLOOR  NEAR STADIUM PANCH RASTA  C.G. ROAD
+  CONTACT: 917926403522
+ifsc:
+  - SBIN0005181

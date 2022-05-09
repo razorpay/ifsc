@@ -1,0 +1,29 @@
+---
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+action: patch
+patch:
+  :type: SFB
+banks:
+# RBI website lists 12 Banks
+- AUBL # 1. AU SFB
+- ESAF # 2. ESAF SFB
+- ESFB # 3. Equitas SFB
+- FINF # 4. Fincare SFB
+- JSFB # 5. Jana SFB
+- NESF # 6. North East SFB
+- SURY # 7. Suryoday SFB
+- USFB # 8. Ujjivan SFB
+- UTKS # 9. Utkarsh SFB
+# Capital used to be a LAB, now a SFB
+# https://www.capitalbank.co.in/about-us
+- CLBL # 10. Capital SFB (erstwhile Local Area Bank)
+
+# 11. Shivalik used to be a Urbank Co-operative Bank
+# That transitioned to a SFB
+# https://shivalikbank.com/transition.php
+- SMCB
+# 11. Shivalik Bank's Old Code, still in use by NPCI
+- SHIX
+
+# Hasn't yet begin operations (TODO)
+# XXXX - 12. Unity Small Finance Bank

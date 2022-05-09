@@ -46,7 +46,7 @@ jobs:
   go:
     strategy:
       matrix:
-        go: ["^1.16.0", "^1.17.0"]
+        go: ["^1.16.0", "^1.17.0", "^1.18.0"]
     name: Go
     runs-on: ubuntu-latest
     steps:
@@ -54,4 +54,4 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.go }}
-      - run: make go-test
+      - run: ./tests/constants.sh

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
-
+# The bank.rb file is generated from `bank.rb.tpl` using constants
+# from banknames.json. Run `make generate-constants` to
+# update this file
 module Razorpay
   module IFSC
     module Bank
@@ -78,6 +80,7 @@ module Razorpay
       APMC = :APMC
       APMX = :APMX
       APNX = :APNX
+      APRR = :APRR
       APRX = :APRX
       APSX = :APSX
       ARBL = :ARBL
@@ -108,6 +111,7 @@ module Razorpay
       BACX = :BACX
       BADX = :BADX
       BAGX = :BAGX
+      BALB = :BALB
       BALX = :BALX
       BANX = :BANX
       BARA = :BARA
@@ -118,6 +122,7 @@ module Razorpay
       BAUX = :BAUX
       BAVX = :BAVX
       BAWX = :BAWX
+      BBDX = :BBDX
       BBKM = :BBKM
       BBLX = :BBLX
       BBRX = :BBRX
@@ -332,6 +337,7 @@ module Razorpay
       DOBX = :DOBX
       DOHB = :DOHB
       DRGX = :DRGX
+      DSAX = :DSAX
       DSBX = :DSBX
       DSCB = :DSCB
       DSHX = :DSHX
@@ -477,9 +483,11 @@ module Razorpay
       ITDX = :ITDX
       IUCB = :IUCB
       IUCX = :IUCX
+      IXXX = :IXXX
       JACX = :JACX
       JAKA = :JAKA
       JALX = :JALX
+      JAMX = :JAMX
       JANA = :JANA
       JANX = :JANX
       JASB = :JASB
@@ -874,6 +882,7 @@ module Razorpay
       NOSC = :NOSC
       NPCX = :NPCX
       NPKX = :NPKX
+      NPPX = :NPPX
       NRDX = :NRDX
       NRMX = :NRMX
       NSBB = :NSBB
@@ -933,6 +942,7 @@ module Razorpay
       PGCX = :PGCX
       PGRX = :PGRX
       PGTX = :PGTX
+      PHIX = :PHIX
       PITX = :PITX
       PJSB = :PJSB
       PKBX = :PKBX
@@ -1233,6 +1243,7 @@ module Razorpay
       SVSX = :SVSX
       SWMX = :SWMX
       SWSX = :SWSX
+      SXXX = :SXXX
       SYNB = :SYNB
       TACX = :TACX
       TADX = :TADX
@@ -1493,9 +1504,6 @@ module Razorpay
       ZSKX = :ZSKX
       ZSLX = :ZSLX
       ZSMX = :ZSMX
-
-      SXXX = :SXXX
-      JAMX = :JAMX
 
       class << self
         def get_details(code)

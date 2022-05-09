@@ -5,6 +5,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [2.0.7][2.0.7]
+## Changed
+- Dependency Updates
+- Updated metadata
+- All constant files are now automatically generated
+- `IXXX` as custom bank code for "Indrayani Co-operative Bank"
+- NPCI does not publish bank type any more, so these are now maintained in this repository as patches
+- Minor bank name updates
+- Support for Go 1.18
+
 ## [2.0.6][2.0.6]
 ## Changed
 - Updated Metadata
@@ -243,7 +253,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.6...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.7...HEAD
+[2.0.6]: https://github.com/razorpay/ifsc/releases/tag/2.0.7
 [2.0.6]: https://github.com/razorpay/ifsc/releases/tag/2.0.6
 [2.0.5]: https://github.com/razorpay/ifsc/releases/tag/2.0.5
 [2.0.4]: https://github.com/razorpay/ifsc/releases/tag/2.0.4

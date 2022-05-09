@@ -1,0 +1,63 @@
+---
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+# These are banks supporting the direct debit legacy format for NACH 156 format.
+# Unless absolutely needed, use the ach_debit and ach_credit fields instead
+action: patch
+patch:
+  :nach_debit: true
+banks:
+- ALLA
+- ANDB
+- BARB
+- BKID
+- BMCB
+- BNPA
+- BOFA
+- CBIN
+- CITI
+- CIUB
+- CNRB
+- CORP
+- CSBK
+- DCBL
+- DENS
+- DEUT
+- DLXB
+- DSCB
+- FDRL
+- HDFC
+- HSBC
+- IBKL
+- ICIC
+- IDIB
+- INDB
+- IOBA
+- ISBX
+- JACX
+- JAKA
+- JAMX
+- JANX
+- KARB
+- KCOB
+- KCUB
+- KVBL
+- LAVB
+- MAHB
+- NOSC
+- NTBL
+- ORBC
+- PSIB
+- PUNB
+- SBIN
+- SCBL
+- SIBL
+- SYNB
+- TMBL
+- UBIN
+- UCBA
+- UTBI
+- UTIB
+- VCAX
+- VCNB
+- GPOX
+- RBIN

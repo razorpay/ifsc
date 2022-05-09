@@ -1,0 +1,39 @@
+---
+# State Co-operative Banks
+# Based on https://web.archive.org/web/20220201173820/https://www.npci.org.in/what-we-do/nach/live-members/live-banks
+# https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx#SCB
+action: patch
+patch:
+  :type: SCB
+banks:
+- ACAX
+- ANSX
+- APBL
+- ARCX
+- CHSX
+- CRSX
+- DSCB
+- GSBL
+- GSCB
+- HPSX
+- HSCX
+- JKSX
+- JSCX
+- KSCB
+- KSCX
+- MIZX
+- MSCI
+- MSCX
+- MYAX
+- NSCX
+- ORCB
+- PCSX
+- PSCX
+- RSCB
+- SKKX
+- TBSX
+- TNSC
+- TPSX
+- UPCX
+- UTKX
+- WBSC
