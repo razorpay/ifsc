@@ -144,7 +144,6 @@ banks:
   - KBSX
   - KCCB
   - KDIX
-  - KGSX
   - KHUX
   - KJSB
   - KKBK
@@ -161,7 +160,6 @@ banks:
   - KSCB
   - KVBL
   - KVGB
-  - LATX
   - LONX
   - MAHB
   - MAHG
@@ -268,7 +266,6 @@ banks:
   - SSWX
   - STCB
   - STRX
-  - SUBX
   - SUMX
   - SUNB
   - SURY
@@ -280,7 +277,6 @@ banks:
   - SVCX
   - TAMX
   - TBSB
-  - TCBX
   - TCCX
   - TDCB
   - TECX

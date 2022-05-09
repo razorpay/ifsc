@@ -47,7 +47,9 @@ def parse_upi
   doc = Nokogiri::HTML(open('upi.html'))
   # We count the unique number of banks mentioned in the table
   # Since sometimes NPCI will repeat banks
-  count = doc.css('table>tbody')[0].css('tr').map{|e| e.css('td')[1].text.strip}.uniq.size
+  # We also skip PPI Issuers, since those don't have a corresponding bank code for us
+  valid_banks = doc.css('table>tbody')[0].css('tr').map{|e| [e.css('td')[1].text.strip, e.css('td')[2].text.strip]}.select{|e| e[1] !~ /PPI/}.uniq
+  count = valid_banks.size
 
   upi_patch_filename = '../../src/patches/banks/upi-enabled-banks.yml'
   upi_branch_patch_filename = '../../src/patches/ifsc/upi-enabled-branches.yml'
@@ -56,7 +58,7 @@ def parse_upi
   data = YAML.safe_load(File.read(upi_patch_filename), permitted_classes: [Symbol])
   branch_data = YAML.safe_load(File.read(upi_branch_patch_filename), permitted_classes: [Symbol])
   if (data['banks'].size + branch_data['ifsc'].size) != count
-    log "Number of UPI-enabled banks (#{data['banks'].size}) does not match the count on the NPCI website (#{count})}", :critical
+    log "Number of UPI-enabled banks in code (Banks+Branches) (#{data['banks'].size}+#{branch_data['ifsc'].size}) does not match the count on the NPCI website (#{count})}", :critical
     log "Please check https://www.npci.org.in/what-we-do/upi/live-members and update src/patches/banks/upi-enabled-banks.yml", :debug
     exit 1
   end

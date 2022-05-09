@@ -18,3 +18,5 @@ ifsc:
   # https://pratapbank.in/imps.php
   # Pratap Co-operative Bank
   - MDCB0680265
+  # Prathama U.P.Gramin Bank
+  - PUNB0SUPGB5
