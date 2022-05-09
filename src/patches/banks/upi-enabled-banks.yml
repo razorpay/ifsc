@@ -22,6 +22,7 @@ banks:
   - AGCX
   - AGVX
   - AIRP
+  - AJHC
   - AJNX
   - AJPX
   - AMCB
@@ -41,6 +42,7 @@ banks:
   - BARX
   - BASX
   - BCBM
+  - BCUB
   - BDBL
   - BDDX
   - BGGX
@@ -76,6 +78,7 @@ banks:
   - CSBX
   - CTBX
   - CZCX
+  - DAUX
   - DBSS
   - DCBL
   - DCUX
@@ -115,6 +118,7 @@ banks:
   - IDIB
   - INDB
   - IOBA
+  - IPCX
   - IPPB
   - IPSX
   - ITBL
@@ -123,8 +127,10 @@ banks:
   - JGBX
   - JIOP
   - JJSB
+  - JKHX
   - JMCX
   - JMSX
+  - JNDX
   - JPCB
   - JSBL
   - JSBP
@@ -148,6 +154,7 @@ banks:
   - KMSX
   - KODX
   - KOLH
+  - KOTX
   - KPCX
   - KRNX
   - KRTX
@@ -167,6 +174,8 @@ banks:
   - MDBK
   - MDMX
   - MERX
+  - MGCX
+  - MHMX
   - MHNX
   - MHSX
   - MPRX
@@ -203,8 +212,10 @@ banks:
   - PMEC
   - PNSX
   - PPBX
+  - PSBL
   - PSIB
   - PTSX
+  - PUBX
   - PUGX
   - PUNB
   - PUNX
@@ -234,15 +245,16 @@ banks:
   - SBUJ
   - SCBL
   - SCOB
+  - SCUX
   - SDCB
   - SDCE
   - SDCX
   - SDUX
   - SECB
   - SEWX
-  - SMCB
   - SIBL
   - SIDC
+  - SMCB
   - SMCX
   - SNBK
   - SNBX
@@ -313,6 +325,8 @@ banks:
 
   # The following codes are made up, since we do not have a
   # authoritative code from RBI for the below banks
+  # The Jampeta Co-Operative Urban Bank Ltd
+  - JXXX
 
   # Indrayani Co-operative Bank
   - IXXX
