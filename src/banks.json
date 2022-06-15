@@ -1330,7 +1330,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "BCUX": {
     "code": "BCUX",
@@ -1799,8 +1800,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "BMSX": {
     "code": "BMSX",
@@ -2293,7 +2293,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "RRB"
+    "type": "RRB",
+    "upi": true
   },
   "CGGX": {
     "code": "CGGX",
@@ -2632,8 +2633,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "CONX": {
     "code": "CONX",
@@ -2893,7 +2893,8 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "DBAX": {
     "code": "DBAX",
@@ -4212,8 +4213,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "HCBX": {
     "code": "HCBX",
@@ -4666,7 +4666,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB"
+    "type": "DCCB",
+    "upi": true
   },
   "IPPB": {
     "code": "IPPB",
@@ -5000,8 +5001,7 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "RRB",
-    "upi": true
+    "type": "RRB"
   },
   "JGCX": {
     "code": "JGCX",
@@ -5278,7 +5278,8 @@
     "ach_debit": false,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB"
+    "type": "DCCB",
+    "upi": true
   },
   "JKMX": {
     "code": "JKMX",
@@ -5478,7 +5479,8 @@
     "ach_debit": false,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB"
+    "type": "DCCB",
+    "upi": true
   },
   "JNAX": {
     "code": "JNAX",
@@ -5500,7 +5502,8 @@
     "ach_debit": false,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB"
+    "type": "DCCB",
+    "upi": true
   },
   "JNSX": {
     "code": "JNSX",
@@ -5746,7 +5749,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB"
+    "type": "DCCB",
+    "upi": true
   },
   "JSMX": {
     "code": "JSMX",
@@ -6283,8 +6287,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "RRB",
-    "upi": true
+    "type": "RRB"
   },
   "KHAX": {
     "code": "KHAX",
@@ -6600,7 +6603,8 @@
     "ach_debit": false,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB"
+    "type": "DCCB",
+    "upi": true
   },
   "KOYX": {
     "code": "KOYX",
@@ -6980,8 +6984,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "LAVB": {
     "code": "LAVB",
@@ -7282,8 +7285,7 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "MANX": {
     "code": "MANX",
@@ -7651,7 +7653,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "MGDX": {
     "code": "MGDX",
@@ -7728,7 +7731,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "MHNX": {
     "code": "MHNX",
@@ -8044,7 +8048,8 @@
     "ach_debit": true,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "MSSX": {
     "code": "MSSX",
@@ -8055,8 +8060,7 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "MUBL": {
     "code": "MUBL",
@@ -8336,8 +8340,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "NAWX": {
     "code": "NAWX",
@@ -9554,7 +9557,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "PMCX": {
     "code": "PMCX",
@@ -9565,7 +9569,8 @@
     "ach_debit": true,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "PMEC": {
     "code": "PMEC",
@@ -9823,7 +9828,8 @@
     "ach_debit": true,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "PUCX": {
     "code": "PUCX",
@@ -9892,8 +9898,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "RRB",
-    "upi": true
+    "type": "RRB"
   },
   "PUSX": {
     "code": "PUSX",
@@ -10261,8 +10266,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "RHMX": {
     "code": "RHMX",
@@ -11015,7 +11019,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "SDBX": {
     "code": "SDBX",
@@ -11049,8 +11054,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB",
-    "upi": true
+    "type": "DCCB"
   },
   "SDHX": {
     "code": "SDHX",
@@ -11792,8 +11796,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "SOBX": {
     "code": "SOBX",
@@ -12007,8 +12010,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "SSHX": {
     "code": "SSHX",
@@ -12235,7 +12237,8 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "SUSX": {
     "code": "SUSX",
@@ -12595,8 +12598,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "TCCX": {
     "code": "TCCX",
@@ -12786,8 +12788,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "TFCX": {
     "code": "TFCX",
@@ -13510,7 +13511,8 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "TSUX": {
     "code": "TSUX",
@@ -13756,7 +13758,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": true,
-    "type": "PSB"
+    "type": "PSB",
+    "upi": true
   },
   "UCBA": {
     "code": "UCBA",
@@ -14045,8 +14048,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": true,
-    "type": "PSB",
-    "upi": true
+    "type": "PSB"
   },
   "UTBX": {
     "code": "UTBX",
@@ -14319,7 +14321,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "RRB"
+    "type": "RRB",
+    "upi": true
   },
   "VHDX": {
     "code": "VHDX",
@@ -14374,8 +14377,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "VIKX": {
     "code": "VIKX",
@@ -14432,7 +14434,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "VKCX": {
     "code": "VKCX",

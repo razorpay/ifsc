@@ -268,6 +268,7 @@ module Razorpay
       CPSN = :CPSN
       CRBX = :CRBX
       CRES = :CRES
+      CRGB = :CRGB
       CRLY = :CRLY
       CRSX = :CRSX
       CRUB = :CRUB
@@ -585,6 +586,7 @@ module Razorpay
       JUCX = :JUCX
       JUSX = :JUSX
       JVCX = :JVCX
+      JXXX = :JXXX
       KAAX = :KAAX
       KACE = :KACE
       KACX = :KACX
@@ -736,6 +738,7 @@ module Razorpay
       MBCX = :MBCX
       MBGX = :MBGX
       MBLX = :MBLX
+      MCAB = :MCAB
       MCAX = :MCAX
       MCBL = :MCBL
       MCBX = :MCBX
@@ -815,6 +818,7 @@ module Razorpay
       MVCB = :MVCB
       MVCX = :MVCX
       MVIX = :MVIX
+      MXXX = :MXXX
       MYAX = :MYAX
       MYCX = :MYCX
       MYSX = :MYSX
@@ -1157,6 +1161,7 @@ module Razorpay
       SJSX = :SJSX
       SKCX = :SKCX
       SKKX = :SKKX
+      SKNB = :SKNB
       SKNX = :SKNX
       SKSB = :SKSB
       SKUX = :SKUX
@@ -1415,6 +1420,7 @@ module Razorpay
       UTZX = :UTZX
       UUCB = :UUCB
       UUCX = :UUCX
+      UXXX = :UXXX
       VADX = :VADX
       VAIX = :VAIX
       VANX = :VANX

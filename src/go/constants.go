@@ -268,6 +268,7 @@ const (
         CPSN = "CPSN"
         CRBX = "CRBX"
         CRES = "CRES"
+        CRGB = "CRGB"
         CRLY = "CRLY"
         CRSX = "CRSX"
         CRUB = "CRUB"
@@ -585,6 +586,7 @@ const (
         JUCX = "JUCX"
         JUSX = "JUSX"
         JVCX = "JVCX"
+        JXXX = "JXXX"
         KAAX = "KAAX"
         KACE = "KACE"
         KACX = "KACX"
@@ -736,6 +738,7 @@ const (
         MBCX = "MBCX"
         MBGX = "MBGX"
         MBLX = "MBLX"
+        MCAB = "MCAB"
         MCAX = "MCAX"
         MCBL = "MCBL"
         MCBX = "MCBX"
@@ -815,6 +818,7 @@ const (
         MVCB = "MVCB"
         MVCX = "MVCX"
         MVIX = "MVIX"
+        MXXX = "MXXX"
         MYAX = "MYAX"
         MYCX = "MYCX"
         MYSX = "MYSX"
@@ -1157,6 +1161,7 @@ const (
         SJSX = "SJSX"
         SKCX = "SKCX"
         SKKX = "SKKX"
+        SKNB = "SKNB"
         SKNX = "SKNX"
         SKSB = "SKSB"
         SKUX = "SKUX"
@@ -1415,6 +1420,7 @@ const (
         UTZX = "UTZX"
         UUCB = "UUCB"
         UUCX = "UUCX"
+        UXXX = "UXXX"
         VADX = "VADX"
         VAIX = "VAIX"
         VANX = "VANX"
@@ -1770,6 +1776,7 @@ var bankCodes = map[string]bool{
         "CPSN" : true, 
         "CRBX" : true, 
         "CRES" : true, 
+        "CRGB" : true, 
         "CRLY" : true, 
         "CRSX" : true, 
         "CRUB" : true, 
@@ -2087,6 +2094,7 @@ var bankCodes = map[string]bool{
         "JUCX" : true, 
         "JUSX" : true, 
         "JVCX" : true, 
+        "JXXX" : true, 
         "KAAX" : true, 
         "KACE" : true, 
         "KACX" : true, 
@@ -2238,6 +2246,7 @@ var bankCodes = map[string]bool{
         "MBCX" : true, 
         "MBGX" : true, 
         "MBLX" : true, 
+        "MCAB" : true, 
         "MCAX" : true, 
         "MCBL" : true, 
         "MCBX" : true, 
@@ -2317,6 +2326,7 @@ var bankCodes = map[string]bool{
         "MVCB" : true, 
         "MVCX" : true, 
         "MVIX" : true, 
+        "MXXX" : true, 
         "MYAX" : true, 
         "MYCX" : true, 
         "MYSX" : true, 
@@ -2659,6 +2669,7 @@ var bankCodes = map[string]bool{
         "SJSX" : true, 
         "SKCX" : true, 
         "SKKX" : true, 
+        "SKNB" : true, 
         "SKNX" : true, 
         "SKSB" : true, 
         "SKUX" : true, 
@@ -2917,6 +2928,7 @@ var bankCodes = map[string]bool{
         "UTZX" : true, 
         "UUCB" : true, 
         "UUCX" : true, 
+        "UXXX" : true, 
         "VADX" : true, 
         "VAIX" : true, 
         "VANX" : true, 

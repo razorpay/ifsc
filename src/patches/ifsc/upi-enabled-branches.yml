@@ -18,5 +18,12 @@ ifsc:
   # https://pratapbank.in/imps.php
   # Pratap Co-operative Bank
   - MDCB0680265
-  # Prathama U.P.Gramin Bank
-  - PUNB0SUPGB5
+  # Shri Janata  Sahakari  Bank Ltd.,Halol
+  # https://www.janatabank.co.in/
+  - GSCB0USJSBL
+  # Sindhudurg Sahakari Bank Ltd.,Mumbai
+  # This is not the DCCB, but the Non-Scheduled Urban Co-operative Banks
+  - IBKL0726SCB
+  # The Mandvi Nagrik Sahakari Bank Ltd.
+  # https://mnsbank.in/branches/
+  - GSCB0UTMNBL

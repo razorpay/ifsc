@@ -9,6 +9,8 @@
 # In case the bank doesn't have a code of it's own, find the corresponding
 # IFSC and use it. Make sure the IFSC is reflected in the src/custom-sublets.json
 # file as well
+
+# See ifsc/upi-enabled-branches.yml for a "branch-specific version"
 action: patch
 patch:
   :upi: true
@@ -50,7 +52,6 @@ banks:
   - BHUX
   - BKDX
   - BKID
-  - BMPX
   - BNSB
   - BOFA
   - BRDX
@@ -61,6 +62,7 @@ banks:
   - BUSX
   - BVNX
   - CBIN
+  - CGBX
   - CGGX
   - CITI
   - CIUB
@@ -70,7 +72,6 @@ banks:
   - CNRB
   - CNSX
   - COLX
-  - COMX
   - COSB
   - CRSX
   - CRUB
@@ -104,7 +105,6 @@ banks:
   - GPCX
   - GSCB
   - HCBL
-  - HCBX
   - HDFC
   - HGBX
   - HMBX
@@ -122,21 +122,24 @@ banks:
   - IPPB
   - IPSX
   - ITBL
+  - IXXX
   - JAKA
   - JANA
-  - JGBX
   - JIOP
   - JJSB
   - JKHX
   - JMCX
   - JMSX
+  - JMYX
   - JNDX
   - JPCB
   - JSBL
   - JSBP
   - JSFB
+  - JSKX
   - JUCX
   - JVCX
+  - JXXX
   - KAIJ
   - KARB
   - KARX
@@ -165,7 +168,6 @@ banks:
   - MAHG
   - MAHX
   - MALX
-  - MAMX
   - MAVX
   - MBGX
   - MCBL
@@ -182,13 +184,14 @@ banks:
   - MSBL
   - MSCI
   - MSNU
-  - MSSX
+  - MSNU
+  - MSOX
   - MUBL
   - MUSX
   - MVCX
   - MVIX
+  - MXXX
   - MZRX
-  - NAVX
   - NBMX
   - NCBL
   - NESF
@@ -199,6 +202,7 @@ banks:
   - NSPB
   - NTBL
   - NUBX
+  - NVNM
   - PALX
   - PANX
   - PASX
@@ -207,6 +211,8 @@ banks:
   - PDSX
   - PGBX
   - PJSB
+  - PLUX
+  - PMCX
   - PMEC
   - PNSX
   - PPBX
@@ -217,15 +223,14 @@ banks:
   - PUGX
   - PUNB
   - PUNX
-  - PURX
   - PYTM
   - RACX
   - RAKX
   - RATN
-  - RGSX
   - RJTX
   - RMGB
   - RNSB
+  - RRBP
   - RSBL
   - RSCB
   - RSSB
@@ -246,41 +251,41 @@ banks:
   - SCUX
   - SDCB
   - SDCE
-  - SDCX
   - SDUX
   - SECB
   - SEWX
   - SIBL
-  - SIDC
   - SMCB
   - SMCX
+  - SMNB
   - SNBK
   - SNBX
-  - SNSX
   - SPCB
   - SPNX
   - SPSX
   - SRCB
   - SRHX
-  - SSDX
   - SSWX
   - STCB
   - STRX
+  - SUBX
   - SUMX
   - SUNB
   - SURY
+  - SUSB
   - SUSX
   - SUTB
   - SUVX
   - SVAX
   - SVCB
   - SVCX
+  - SXXX
   - TAMX
+  - TBMC
   - TBSB
   - TCCX
   - TDCB
   - TECX
-  - TETX
   - TGBX
   - TGNX
   - TJSB
@@ -289,26 +294,31 @@ banks:
   - TMSX
   - TNUX
   - TSAB
+  - TSSX
   - TSUX
+  - TTCB
   - TUCX
   - TUDX
   - TUMX
+  - UBIN
   - UCBA
   - UMSX
   - USFB
-  - UTBI
   - UTGX
   - UTIB
   - UTKS
   - UUCX
+  - UXXX
   - VAIX
   - VANX
   - VARA
   - VAUX
   - VCCX
-  - VIJX
+  - VCOB
+  - VGBX
   - VIKX
   - VISX
+  - VJSX
   - VSBL
   - VSCX
   - VSSX
@@ -318,18 +328,3 @@ banks:
   - YESB
   - YLNX
   - ZRNB
-
-  # The following codes are made up, since we do not have a
-  # authoritative code from RBI for the below banks
-  # The Jampeta Co-Operative Urban Bank Ltd
-  - JXXX
-
-  # Indrayani Co-operative Bank
-  - IXXX
-  # Maharashtra Mantralaya & Allied Offices Co-operative Bank
-  - MXXX
-  # Udupi Co-operative Town Bank
-  - UXXX
-  # Sri Rama Co-operative Bank
-  - SXXX
-# See ifsc/upi-enabled-branches.yml for a "branch-specific version"

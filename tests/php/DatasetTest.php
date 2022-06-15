@@ -43,6 +43,7 @@ class DatasetTest extends TestCase
             $expectedCount = count($row);
 
             $bankNameIndex = array_search('BANK', $row);
+            $iso3166Index = array_search('ISO3166', $row);
             $micrIndex = array_search('MICR', $row);
 
             $lineno = 2;
@@ -51,6 +52,7 @@ class DatasetTest extends TestCase
                 $row = str_getcsv($line);
                 $this->assertCount($expectedCount, $row, "IFSC.csv L$lineno missing fields: $line");
                 $this->assertNotEmpty($row[$bankNameIndex], "IFSC.csv L$lineno has empty bankname $line");
+                $this->assertNotEmpty($row[$iso3166Index], "IFSC.csv L$lineno has empty ISO3166 code");
                 $this->assertNotEquals('NA', $row[$micrIndex], "IFSC.csv L$lineno has MICR set to NA $line");
                 $lineno++;
             }
