@@ -585,6 +585,7 @@ module Razorpay
       JUCX = :JUCX
       JUSX = :JUSX
       JVCX = :JVCX
+      JXXX = :JXXX
       KAAX = :KAAX
       KACE = :KACE
       KACX = :KACX
@@ -815,6 +816,7 @@ module Razorpay
       MVCB = :MVCB
       MVCX = :MVCX
       MVIX = :MVIX
+      MXXX = :MXXX
       MYAX = :MYAX
       MYCX = :MYCX
       MYSX = :MYSX
@@ -1415,6 +1417,7 @@ module Razorpay
       UTZX = :UTZX
       UUCB = :UUCB
       UUCX = :UUCX
+      UXXX = :UXXX
       VADX = :VADX
       VAIX = :VAIX
       VANX = :VANX

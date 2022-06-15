@@ -589,6 +589,7 @@ class Bank
     const JUCX = 'JUCX';
     const JUSX = 'JUSX';
     const JVCX = 'JVCX';
+    const JXXX = 'JXXX';
     const KAAX = 'KAAX';
     const KACE = 'KACE';
     const KACX = 'KACX';
@@ -819,6 +820,7 @@ class Bank
     const MVCB = 'MVCB';
     const MVCX = 'MVCX';
     const MVIX = 'MVIX';
+    const MXXX = 'MXXX';
     const MYAX = 'MYAX';
     const MYCX = 'MYCX';
     const MYSX = 'MYSX';
@@ -1419,6 +1421,7 @@ class Bank
     const UTZX = 'UTZX';
     const UUCB = 'UUCB';
     const UUCX = 'UUCX';
+    const UXXX = 'UXXX';
     const VADX = 'VADX';
     const VAIX = 'VAIX';
     const VANX = 'VANX';

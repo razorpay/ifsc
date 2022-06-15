@@ -585,6 +585,7 @@ const (
         JUCX = "JUCX"
         JUSX = "JUSX"
         JVCX = "JVCX"
+        JXXX = "JXXX"
         KAAX = "KAAX"
         KACE = "KACE"
         KACX = "KACX"
@@ -815,6 +816,7 @@ const (
         MVCB = "MVCB"
         MVCX = "MVCX"
         MVIX = "MVIX"
+        MXXX = "MXXX"
         MYAX = "MYAX"
         MYCX = "MYCX"
         MYSX = "MYSX"
@@ -1415,6 +1417,7 @@ const (
         UTZX = "UTZX"
         UUCB = "UUCB"
         UUCX = "UUCX"
+        UXXX = "UXXX"
         VADX = "VADX"
         VAIX = "VAIX"
         VANX = "VANX"
@@ -2087,6 +2090,7 @@ var bankCodes = map[string]bool{
         "JUCX" : true, 
         "JUSX" : true, 
         "JVCX" : true, 
+        "JXXX" : true, 
         "KAAX" : true, 
         "KACE" : true, 
         "KACX" : true, 
@@ -2317,6 +2321,7 @@ var bankCodes = map[string]bool{
         "MVCB" : true, 
         "MVCX" : true, 
         "MVIX" : true, 
+        "MXXX" : true, 
         "MYAX" : true, 
         "MYCX" : true, 
         "MYSX" : true, 
@@ -2917,6 +2922,7 @@ var bankCodes = map[string]bool{
         "UTZX" : true, 
         "UUCB" : true, 
         "UUCX" : true, 
+        "UXXX" : true, 
         "VADX" : true, 
         "VAIX" : true, 
         "VANX" : true, 
