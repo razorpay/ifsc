@@ -49,8 +49,9 @@ end
 # TODO: Return state/UT ISO code and use that instead
 def fix_state!(row)
   return unless row['STATE']
-  possible_state = final_state = row['STATE'].upcase
+  possible_state = final_state = row['STATE'].strip.upcase
   map = {
+    /ANDHRAPRADESH/ => 'ANDHRA PRADESH',
     /ANDAMAN/ => 'ANDAMAN AND NICOBAR ISLANDS',
     /BANGALORE/ => 'KARNATAKA',
     /BARDEZ/ => 'GOA',
@@ -78,6 +79,8 @@ def fix_state!(row)
     /MADHYAPRADESH/ => 'MADHYA PRADESH',
     # Do not use DAMAN as that clashes with ANDAMAN
     /DIU/ => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
+    # Do an exact match for Daman instead
+    'DAMAN' => 'DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
     /GOA/ => 'GOA',
     /HIMANCHAL/ => 'HIMACHAL PRADESH',
     /HIMACHAL/ => 'HIMACHAL PRADESH',
@@ -96,6 +99,7 @@ def fix_state!(row)
     /TAMIL/ => 'TAMIL NADU',
     /UTTARA/ => 'UTTARAKHAND',
     /UTTARPRADESH/ => 'UTTAR PRADESH',
+    /UTTRAKHAND/ => 'UTTARAKHAND',
     /WEST/ => 'WEST BENGAL',
     /CHURU/ => 'RAJASTHAN',
     /AHMEDABAD/ => 'GUJARAT',
@@ -106,7 +110,10 @@ def fix_state!(row)
     /PUNE/ => 'MAHARASHTRA',
     /TELENGANA/ => 'TELANGANA',
     /PANJAB/ => 'PUNJAB',
-    /MEGHALAY/ => 'MEGHALAYA'
+    /MEGHALAY/ => 'MEGHALAYA',
+    # Only if the branch is specifically marked as a UT branch
+    # Otherwise, it could be Haryana or Punjab
+    /CHANDIGARH UT/ => 'CHANDIGARH'
   }
 
   if possible_state.size == 2
@@ -116,11 +123,14 @@ def fix_state!(row)
       "TN" => "TELANGANA",
       "MH" => "MAHARASHTRA",
       "CG" => "CHHATTISGARH",
-      "ML" => "MEGHALAYA"
+      "ML" => "MEGHALAYA",
+      "MP" => "MADHYA PRADESH"
     }[possible_state]
   else
     map.each_pair do |r, state|
-      if r.match? possible_state
+      if r.is_a? Regexp and r.match? possible_state
+        final_state = state
+      elsif r == possible_state
         final_state = state
       end
     end
@@ -238,6 +248,7 @@ def parse_csv(files, banks, additional_attributes = {})
 
       row['ADDRESS'] = sanitize(row['ADDRESS'])
       row['BRANCH'] = sanitize(row['BRANCH'])
+      row['STATE'].strip! if row['STATE']
       fix_state!(row)
 
       row.merge!(additional_attributes)
