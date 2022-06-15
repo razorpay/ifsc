@@ -272,6 +272,7 @@ class Bank
     const CPSN = 'CPSN';
     const CRBX = 'CRBX';
     const CRES = 'CRES';
+    const CRGB = 'CRGB';
     const CRLY = 'CRLY';
     const CRSX = 'CRSX';
     const CRUB = 'CRUB';
@@ -741,6 +742,7 @@ class Bank
     const MBCX = 'MBCX';
     const MBGX = 'MBGX';
     const MBLX = 'MBLX';
+    const MCAB = 'MCAB';
     const MCAX = 'MCAX';
     const MCBL = 'MCBL';
     const MCBX = 'MCBX';
@@ -1163,6 +1165,7 @@ class Bank
     const SJSX = 'SJSX';
     const SKCX = 'SKCX';
     const SKKX = 'SKKX';
+    const SKNB = 'SKNB';
     const SKNX = 'SKNX';
     const SKSB = 'SKSB';
     const SKUX = 'SKUX';

@@ -268,6 +268,7 @@ const (
         CPSN = "CPSN"
         CRBX = "CRBX"
         CRES = "CRES"
+        CRGB = "CRGB"
         CRLY = "CRLY"
         CRSX = "CRSX"
         CRUB = "CRUB"
@@ -737,6 +738,7 @@ const (
         MBCX = "MBCX"
         MBGX = "MBGX"
         MBLX = "MBLX"
+        MCAB = "MCAB"
         MCAX = "MCAX"
         MCBL = "MCBL"
         MCBX = "MCBX"
@@ -1159,6 +1161,7 @@ const (
         SJSX = "SJSX"
         SKCX = "SKCX"
         SKKX = "SKKX"
+        SKNB = "SKNB"
         SKNX = "SKNX"
         SKSB = "SKSB"
         SKUX = "SKUX"
@@ -1773,6 +1776,7 @@ var bankCodes = map[string]bool{
         "CPSN" : true, 
         "CRBX" : true, 
         "CRES" : true, 
+        "CRGB" : true, 
         "CRLY" : true, 
         "CRSX" : true, 
         "CRUB" : true, 
@@ -2242,6 +2246,7 @@ var bankCodes = map[string]bool{
         "MBCX" : true, 
         "MBGX" : true, 
         "MBLX" : true, 
+        "MCAB" : true, 
         "MCAX" : true, 
         "MCBL" : true, 
         "MCBX" : true, 
@@ -2664,6 +2669,7 @@ var bankCodes = map[string]bool{
         "SJSX" : true, 
         "SKCX" : true, 
         "SKKX" : true, 
+        "SKNB" : true, 
         "SKNX" : true, 
         "SKSB" : true, 
         "SKUX" : true, 
