@@ -105,7 +105,8 @@ def fix_state!(row)
     /ORISSA/ => 'ODISHA',
     /PUNE/ => 'MAHARASHTRA',
     /TELENGANA/ => 'TELANGANA',
-    /PANJAB/ => 'PUNJAB'
+    /PANJAB/ => 'PUNJAB',
+    /MEGHALAY/ => 'MEGHALAYA'
   }
 
   if possible_state.size == 2
@@ -115,6 +116,7 @@ def fix_state!(row)
       "TN" => "TELANGANA",
       "MH" => "MAHARASHTRA",
       "CG" => "CHHATTISGARH",
+      "ML" => "MEGHALAYA"
     }[possible_state]
   else
     map.each_pair do |r, state|
