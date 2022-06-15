@@ -615,8 +615,7 @@
     "ach_debit": true,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "ANSX": {
     "code": "ANSX",
@@ -840,8 +839,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "ASNX": {
     "code": "ASNX",
@@ -2037,8 +2035,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "BSCX": {
     "code": "BSCX",
@@ -4364,8 +4361,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "SCB",
-    "upi": true
+    "type": "SCB"
   },
   "HSBC": {
     "code": "HSBC",
@@ -4728,8 +4724,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "ITDX": {
     "code": "ITDX",
@@ -7524,8 +7519,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "MDGX": {
     "code": "MDGX",
@@ -7536,8 +7530,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "RRB",
-    "upi": true
+    "type": "RRB"
   },
   "MDIX": {
     "code": "MDIX",
@@ -7638,8 +7631,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "RRB",
-    "upi": true
+    "type": "RRB"
   },
   "MGCB": {
     "code": "MGCB",
@@ -7885,8 +7877,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "MOGX": {
     "code": "MOGX",
@@ -9940,8 +9931,7 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "PVCX": {
     "code": "PVCX",
@@ -10477,8 +10467,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "RSUX": {
     "code": "RSUX",
@@ -11087,8 +11076,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB",
-    "upi": true
+    "type": "DCCB"
   },
   "SDTC": {
     "code": "SDTC",
@@ -12077,8 +12065,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "SSSX": {
     "code": "SSSX",

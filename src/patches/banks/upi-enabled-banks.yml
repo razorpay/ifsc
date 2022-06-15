@@ -9,6 +9,8 @@
 # In case the bank doesn't have a code of it's own, find the corresponding
 # IFSC and use it. Make sure the IFSC is reflected in the src/custom-sublets.json
 # file as well
+
+# See ifsc/upi-enabled-branches.yml for a "branch-specific version"
 action: patch
 patch:
   :upi: true
@@ -26,17 +28,18 @@ banks:
   - AJNX
   - AJPX
   - AMCB
+  - AMDN
   - AMRX
-  - ANMX
   - APBL
   - APGB
   - APGV
   - APMC
+  - ARBL
   - ASBL
-  - ASKX
   - ASOX
   - AUBL
   - BACB
+  - BARA
   - BARB
   - BARX
   - BASX
@@ -54,7 +57,6 @@ banks:
   - BRDX
   - BRGX
   - BRSX
-  - BSBX
   - BTUX
   - BUGX
   - BUSX
@@ -102,12 +104,12 @@ banks:
   - GDUX
   - GPCX
   - GSCB
-  - HCBX
+  - HCBL
   - HDFC
   - HGBX
   - HMBX
   - HMNX
-  - HPSX
+  - HPSC
   - HSBC
   - HUTX
   - IBKL
@@ -119,7 +121,7 @@ banks:
   - IPCX
   - IPPB
   - IPSX
-  - ITCX
+  - ITBL
   - IXXX
   - JAKA
   - JANA
@@ -163,26 +165,25 @@ banks:
   - KVGB
   - LONX
   - MAHB
+  - MAHG
   - MAHX
   - MALX
   - MAVX
   - MBGX
   - MCBL
-  - MDEX
-  - MDGX
+  - MDBK
   - MDMX
   - MERX
-  - MGBX
   - MGCX
   - MHMX
   - MHNX
   - MHSX
-  - MNSX
   - MPRX
   - MRBX
   - MRTX
   - MSBL
   - MSCI
+  - MSNU
   - MSNU
   - MSOX
   - MUBL
@@ -215,23 +216,24 @@ banks:
   - PMEC
   - PNSX
   - PPBX
+  - PSBL
   - PSIB
   - PTSX
   - PUBX
   - PUGX
   - PUNB
   - PUNX
-  - PVAX
   - PYTM
   - RACX
   - RAKX
   - RATN
   - RJTX
+  - RMGB
   - RNSB
   - RRBP
   - RSBL
   - RSCB
-  - RSSX
+  - RSSB
   - SACB
   - SADX
   - SAGX
@@ -241,13 +243,14 @@ banks:
   - SAVX
   - SBCR
   - SBIN
+  - SBLS
   - SBPX
   - SBUJ
   - SCBL
   - SCOB
   - SCUX
   - SDCB
-  - SDSX
+  - SDCE
   - SDUX
   - SECB
   - SEWX
@@ -262,7 +265,6 @@ banks:
   - SPSX
   - SRCB
   - SRHX
-  - SSOX
   - SSWX
   - STCB
   - STRX
@@ -326,4 +328,3 @@ banks:
   - YESB
   - YLNX
   - ZRNB
-# See ifsc/upi-enabled-branches.yml for a "branch-specific version"
