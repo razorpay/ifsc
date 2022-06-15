@@ -14,29 +14,41 @@ The latest `scraper` workflow on GitHub should publish a `release-artifact` as w
 
 ### Source
 
-The source for the dataset are the following files:
+Various official sources are linked below, with the ones currently used marked with a †
 
--  List of NEFT IFSCs from [RBI website][combined]
--  List of RTGS IFSCs from [RBI website][rtgs]
--  List of ACH Live Banks from [NPCI website][ach] used for IFSC sublet branches
--  List of [IMPS Live members](https://www.npci.org.in/what-we-do/imps/live-members) on the NPCI website.
--  RBI maintains a [list of banks in India](https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx) and [websites of banks in India](https://www.rbi.org.in/scripts/banklinks.aspx)
+-  List of NEFT IFSCs from [RBI website][combined]†
+-  List of RTGS IFSCs from [RBI website][rtgs]†
+-  RBI maintains several lists:
+  - [List of banks in India](https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx)
+  - [Websites of banks in India](https://www.rbi.org.in/scripts/banklinks.aspx).
+  - [Bankwise Volumes in ECS/NEFT/RTGS/Mobile](https://www.rbi.org.in/Scripts/NEFTUserView.aspx?Id=166)
+  - [List of Banks permitted to provide Mobile Banking](https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2463)
+- NPCI website has several lists:
+  - [NACH Live Members][ach]†
+  - [RuPay Live Members](https://www.npci.org.in/what-we-do/rupay/live-members)
+  - [IMPS Live members](https://www.npci.org.in/what-we-do/imps/live-members)
+  - [Banks and Apps live on AutoPay](https://www.npci.org.in/what-we-do/autopay/list-of-banks-and-apps-live-on-autopay)
+  - [Sub member banks IFSC and MICR Codes](https://www.npci.org.in/PDF/npci/ifsc-and-micr-codes/Submember-banks-IFSC-and-MICR.xlsx)
+  - [Merged banks IFSC and MICR Codes](https://www.npci.org.in/PDF/npci/ifsc-and-micr-codes/Merged-banks-IFSC-and-MICR.xlsx)
+  - [Routing codes used in API E-Mandates](https://www.npci.org.in/PDF/nach/live-members-e-mandates/Routing%20codes%20to%20be%20used%20in%20API%20E-Mandates_11_7_19.pdf)
+  - [Merged Banks on NACH](https://www.npci.org.in/what-we-do/nach/live-members/merged-banks)
+  - [Blocked Banks on NACH](https://www.npci.org.in/what-we-do/nach/live-members/blocked-banks)
 
 #### SWIFT
 
 SWIFT/BIC codes are supported for a few banks.
 
 ##### SBI
--  https://sbi.co.in/web/nri/quick-links/swift-codes
--  https://sbi.co.in/documents/16012/263663/sbinri_merged_bran_swfcodet.xlsx
+-  https://sbi.co.in/web/nri/quick-links/swift-codes †
+-  https://sbi.co.in/documents/16012/263663/sbinri_merged_bran_swfcodet.xlsx †
 -  Branch codes from above are checked against the [SBI Branch Locator](https://www.sbi.co.in/web/home/locator/branch) to get the IFSC.
 
 ##### PNB
-- https://pnbindia.com/downloadprocess.aspx?fid=Zb7ImdUNlz9Ge73qn1nXQg==
-- https://www.pnbindia.in/document/PNB-helpdesk/bic_code.pdf
+- https://pnbindia.com/downloadprocess.aspx?fid=Zb7ImdUNlz9Ge73qn1nXQg== †
+- https://www.pnbindia.in/document/PNB-helpdesk/bic_code.pdf †
 
 ##### HDFC
-- https://www.hdfcbank.com/nri-banking/correspondent-banks
+- https://www.hdfcbank.com/nri-banking/correspondent-banks †
 
 ## Installation
 
