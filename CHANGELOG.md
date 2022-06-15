@@ -5,8 +5,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [2.0.8][2.0.8]
+### Changed
+- Metadata updates
+
 ## [2.0.7][2.0.7]
-## Changed
+### Changed
 - Dependency Updates
 - Updated metadata
 - All constant files are now automatically generated
@@ -16,27 +20,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for Go 1.18
 
 ## [2.0.6][2.0.6]
-## Changed
+### Changed
 - Updated Metadata
 
 ## [2.0.5][2.0.5]
-## Changed
+### Changed
 - Updated Metadata
 
 ## [2.0.4][2.0.4]
-## Changed
+### Changed
 - Update IFSC.json for the below 20 IFSC codes
 
 ## [2.0.3][2.0.3]
-## Changed
+### Changed
 - Adds back 20 IFSC codes removed due to a change on the RBI sheet structure in 2.0.2
 
 ## [2.0.2][2.0.2]
-## Changed
+### Changed
 - Metadata changes
 
 ## [2.0.1][2.0.1]
-## Changed
+### Changed
 - Metadata changes
 
 ## [2.0.0][2.0.0]
@@ -76,11 +80,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved support for Contact details that are sourced from RTGS dataset. CONTACT details are returned in E.164 format
 
 ## [1.5.11][1.5.11]
-## Changed
+### Changed
 - Metadata updates
 
 ## [1.5.10][1.5.10]
-## Changed
+### Changed
 - 2 new banks:
   - ARBL: Arvind Sahakari Bank
   - TNCB: Nawanagar Co-operative Bank
@@ -253,8 +257,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.7...HEAD
-[2.0.6]: https://github.com/razorpay/ifsc/releases/tag/2.0.7
+[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.8...HEAD
+[2.0.8]: https://github.com/razorpay/ifsc/releases/tag/2.0.8
+[2.0.7]: https://github.com/razorpay/ifsc/releases/tag/2.0.7
 [2.0.6]: https://github.com/razorpay/ifsc/releases/tag/2.0.6
 [2.0.5]: https://github.com/razorpay/ifsc/releases/tag/2.0.5
 [2.0.4]: https://github.com/razorpay/ifsc/releases/tag/2.0.4
