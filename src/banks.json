@@ -2293,8 +2293,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "RRB",
-    "upi": true
+    "type": "RRB"
   },
   "CGGX": {
     "code": "CGGX",

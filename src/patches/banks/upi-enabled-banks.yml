@@ -62,7 +62,7 @@ banks:
   - BUSX
   - BVNX
   - CBIN
-  - CGBX
+  - CRGB
   - CGGX
   - CITI
   - CIUB
@@ -185,7 +185,7 @@ banks:
   - MSCI
   - MSNU
   - MSNU
-  - MSOX
+  - MSSX
   - MUBL
   - MUSX
   - MVCX
