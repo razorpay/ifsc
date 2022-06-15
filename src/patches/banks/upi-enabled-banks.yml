@@ -26,18 +26,17 @@ banks:
   - AJNX
   - AJPX
   - AMCB
-  - AMDN
   - AMRX
+  - ANMX
   - APBL
   - APGB
   - APGV
   - APMC
-  - ARBL
   - ASBL
+  - ASKX
   - ASOX
   - AUBL
   - BACB
-  - BARA
   - BARB
   - BARX
   - BASX
@@ -50,17 +49,18 @@ banks:
   - BHUX
   - BKDX
   - BKID
-  - BMPX
   - BNSB
   - BOFA
   - BRDX
   - BRGX
   - BRSX
+  - BSBX
   - BTUX
   - BUGX
   - BUSX
   - BVNX
   - CBIN
+  - CGBX
   - CGGX
   - CITI
   - CIUB
@@ -70,7 +70,6 @@ banks:
   - CNRB
   - CNSX
   - COLX
-  - COMX
   - COSB
   - CRSX
   - CRUB
@@ -103,13 +102,12 @@ banks:
   - GDUX
   - GPCX
   - GSCB
-  - HCBL
   - HCBX
   - HDFC
   - HGBX
   - HMBX
   - HMNX
-  - HPSC
+  - HPSX
   - HSBC
   - HUTX
   - IBKL
@@ -121,22 +119,25 @@ banks:
   - IPCX
   - IPPB
   - IPSX
-  - ITBL
+  - ITCX
+  - IXXX
   - JAKA
   - JANA
-  - JGBX
   - JIOP
   - JJSB
   - JKHX
   - JMCX
   - JMSX
+  - JMYX
   - JNDX
   - JPCB
   - JSBL
   - JSBP
   - JSFB
+  - JSKX
   - JUCX
   - JVCX
+  - JXXX
   - KAIJ
   - KARB
   - KARX
@@ -162,33 +163,34 @@ banks:
   - KVGB
   - LONX
   - MAHB
-  - MAHG
   - MAHX
   - MALX
-  - MAMX
   - MAVX
   - MBGX
   - MCBL
-  - MDBK
+  - MDEX
+  - MDGX
   - MDMX
   - MERX
+  - MGBX
   - MGCX
   - MHMX
   - MHNX
   - MHSX
+  - MNSX
   - MPRX
   - MRBX
   - MRTX
   - MSBL
   - MSCI
   - MSNU
-  - MSSX
+  - MSOX
   - MUBL
   - MUSX
   - MVCX
   - MVIX
+  - MXXX
   - MZRX
-  - NAVX
   - NBMX
   - NCBL
   - NESF
@@ -199,6 +201,7 @@ banks:
   - NSPB
   - NTBL
   - NUBX
+  - NVNM
   - PALX
   - PANX
   - PASX
@@ -207,28 +210,28 @@ banks:
   - PDSX
   - PGBX
   - PJSB
+  - PLUX
+  - PMCX
   - PMEC
   - PNSX
   - PPBX
-  - PSBL
   - PSIB
   - PTSX
   - PUBX
   - PUGX
   - PUNB
   - PUNX
-  - PURX
+  - PVAX
   - PYTM
   - RACX
   - RAKX
   - RATN
-  - RGSX
   - RJTX
-  - RMGB
   - RNSB
+  - RRBP
   - RSBL
   - RSCB
-  - RSSB
+  - RSSX
   - SACB
   - SADX
   - SAGX
@@ -238,49 +241,49 @@ banks:
   - SAVX
   - SBCR
   - SBIN
-  - SBLS
   - SBPX
   - SBUJ
   - SCBL
   - SCOB
   - SCUX
   - SDCB
-  - SDCE
-  - SDCX
+  - SDSX
   - SDUX
   - SECB
   - SEWX
   - SIBL
-  - SIDC
   - SMCB
   - SMCX
+  - SMNB
   - SNBK
   - SNBX
-  - SNSX
   - SPCB
   - SPNX
   - SPSX
   - SRCB
   - SRHX
-  - SSDX
+  - SSOX
   - SSWX
   - STCB
   - STRX
+  - SUBX
   - SUMX
   - SUNB
   - SURY
+  - SUSB
   - SUSX
   - SUTB
   - SUVX
   - SVAX
   - SVCB
   - SVCX
+  - SXXX
   - TAMX
+  - TBMC
   - TBSB
   - TCCX
   - TDCB
   - TECX
-  - TETX
   - TGBX
   - TGNX
   - TJSB
@@ -289,26 +292,31 @@ banks:
   - TMSX
   - TNUX
   - TSAB
+  - TSSX
   - TSUX
+  - TTCB
   - TUCX
   - TUDX
   - TUMX
+  - UBIN
   - UCBA
   - UMSX
   - USFB
-  - UTBI
   - UTGX
   - UTIB
   - UTKS
   - UUCX
+  - UXXX
   - VAIX
   - VANX
   - VARA
   - VAUX
   - VCCX
-  - VIJX
+  - VCOB
+  - VGBX
   - VIKX
   - VISX
+  - VJSX
   - VSBL
   - VSCX
   - VSSX
@@ -318,18 +326,4 @@ banks:
   - YESB
   - YLNX
   - ZRNB
-
-  # The following codes are made up, since we do not have a
-  # authoritative code from RBI for the below banks
-  # The Jampeta Co-Operative Urban Bank Ltd
-  - JXXX
-
-  # Indrayani Co-operative Bank
-  - IXXX
-  # Maharashtra Mantralaya & Allied Offices Co-operative Bank
-  - MXXX
-  # Udupi Co-operative Town Bank
-  - UXXX
-  # Sri Rama Co-operative Bank
-  - SXXX
 # See ifsc/upi-enabled-branches.yml for a "branch-specific version"
