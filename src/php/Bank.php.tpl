@@ -8,8 +8,8 @@
 namespace Razorpay\IFSC;
 
 class Bank
-{ {{ range  .Value }}
-    const {{ . }} = '{{ . }}';{{ end }}
+{ {{ range $key, $value := . }}
+    const {{ $key }} = '{{ $key }}';{{ end }}
 
     protected static $data = null;
 

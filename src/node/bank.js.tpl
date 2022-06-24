@@ -2,6 +2,6 @@
 // from banknames.json. Run `make generate-constants` to update
 // bank.js
 
-module.exports = Object.freeze({ {{ range  .Value }}
-  {{ . }}: '{{ . }}',{{ end }}
+module.exports = Object.freeze({ {{ range $key, $value := . }}
+  {{ $key }}: '{{ $key }}',{{ end }}
 });

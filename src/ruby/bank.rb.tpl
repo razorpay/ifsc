@@ -4,8 +4,8 @@
 # update this file
 module Razorpay
   module IFSC
-    module Bank{{ range  .Value }}
-      {{ . }} = :{{ . }}{{ end }}
+    module Bank{{ range $key, $value := . }}
+      {{ $key }} = :{{ $key }}{{ end }}
 
       class << self
         def get_details(code)
