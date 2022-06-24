@@ -1512,7 +1512,7 @@ const (
     ZSMX = "ZSMX"
 )
 
-var bankCodes = map[string]bool{
+var bankCodes = map[string]bool{ 
     "AACX": true,
     "ABBL": true,
     "ABCX": true,
@@ -3020,7 +3020,7 @@ var bankCodes = map[string]bool{
     "ZSMX": true,
 }
 
-var bankName = map[string]string{
+var bankName = map[string]string{ 
     "AACX": "Akhand Anand Co.op Bank",
     "ABBL": "AB Bank",
     "ABCX": "Aurangabad District Central Co-operative Bank",
