@@ -9,9 +9,9 @@ const ({{ range $key, $value := . }}
 )
 
 var bankCodes = map[string]bool{ {{ range $key, $value := . }}
-        "{{ $key }}" : true, {{ end }}
+        "{{ $key }}": true,{{ end }}
 }
 
 var bankName = map[string]string{ {{ range $key, $value := . }}
-        "{{ $key }}" : "{{ $value }}", {{ end }}
+        "{{ $key }}": "{{ $value }}",{{ end }}
 }
