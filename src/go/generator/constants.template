@@ -5,13 +5,13 @@ Run make generate-constants to update
 package ifsc
 
 const ({{ range $key, $value := . }}
-        {{ $key }} = "{{ $key }}"{{ end }}
+    {{ $key }} = "{{ $key }}"{{ end }}
 )
 
 var bankCodes = map[string]bool{ {{ range $key, $value := . }}
-        "{{ $key }}": true,{{ end }}
+    "{{ $key }}": true,{{ end }}
 }
 
 var bankName = map[string]string{ {{ range $key, $value := . }}
-        "{{ $key }}": "{{ $value }}",{{ end }}
+    "{{ $key }}": "{{ $value }}",{{ end }}
 }

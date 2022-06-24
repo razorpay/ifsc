@@ -5,4525 +5,4525 @@ Run make generate-constants to update
 package ifsc
 
 const (
-	AACX = "AACX"
-	ABBL = "ABBL"
-	ABCX = "ABCX"
-	ABDX = "ABDX"
-	ABEX = "ABEX"
-	ABHY = "ABHY"
-	ABNA = "ABNA"
-	ABPB = "ABPB"
-	ABSB = "ABSB"
-	ABUX = "ABUX"
-	ACAX = "ACAX"
-	ACBX = "ACBX"
-	ACCX = "ACCX"
-	ACKX = "ACKX"
-	ACOX = "ACOX"
-	ACUB = "ACUB"
-	ACUX = "ACUX"
-	ADBX = "ADBX"
-	ADCB = "ADCB"
-	ADCC = "ADCC"
-	ADCX = "ADCX"
-	ADDX = "ADDX"
-	AGCX = "AGCX"
-	AGDX = "AGDX"
-	AGRX = "AGRX"
-	AGSX = "AGSX"
-	AGUX = "AGUX"
-	AGVX = "AGVX"
-	AHDC = "AHDC"
-	AHMX = "AHMX"
-	AHUX = "AHUX"
-	AIRP = "AIRP"
-	AJAR = "AJAR"
-	AJHC = "AJHC"
-	AJKB = "AJKB"
-	AJMX = "AJMX"
-	AJNX = "AJNX"
-	AJPX = "AJPX"
-	AJSX = "AJSX"
-	AJUX = "AJUX"
-	AKJB = "AKJB"
-	AKKB = "AKKB"
-	AKMX = "AKMX"
-	AKOX = "AKOX"
-	ALAX = "ALAX"
-	ALIX = "ALIX"
-	ALLA = "ALLA"
-	ALLX = "ALLX"
-	ALWX = "ALWX"
-	AMAX = "AMAX"
-	AMBX = "AMBX"
-	AMCB = "AMCB"
-	AMCX = "AMCX"
-	AMDN = "AMDN"
-	AMMX = "AMMX"
-	AMNX = "AMNX"
-	AMRX = "AMRX"
-	AMSB = "AMSB"
-	AMSX = "AMSX"
-	ANBX = "ANBX"
-	ANDB = "ANDB"
-	ANDX = "ANDX"
-	ANMX = "ANMX"
-	ANSX = "ANSX"
-	ANUX = "ANUX"
-	ANZB = "ANZB"
-	APBL = "APBL"
-	APCX = "APCX"
-	APGB = "APGB"
-	APGV = "APGV"
-	APGX = "APGX"
-	APJX = "APJX"
-	APMC = "APMC"
-	APMX = "APMX"
-	APNX = "APNX"
-	APRR = "APRR"
-	APRX = "APRX"
-	APSX = "APSX"
-	ARBL = "ARBL"
-	ARCX = "ARCX"
-	ARMX = "ARMX"
-	ARYX = "ARYX"
-	ASBL = "ASBL"
-	ASBX = "ASBX"
-	ASHX = "ASHX"
-	ASKX = "ASKX"
-	ASNX = "ASNX"
-	ASOX = "ASOX"
-	ASSX = "ASSX"
-	AUBL = "AUBL"
-	AUBX = "AUBX"
-	AUCB = "AUCB"
-	AUCX = "AUCX"
-	AUGX = "AUGX"
-	AURX = "AURX"
-	AVDX = "AVDX"
-	AWCX = "AWCX"
-	AWUX = "AWUX"
-	AZAX = "AZAX"
-	AZPX = "AZPX"
-	AZSX = "AZSX"
-	AZUX = "AZUX"
-	BACB = "BACB"
-	BACX = "BACX"
-	BADX = "BADX"
-	BAGX = "BAGX"
-	BALB = "BALB"
-	BALX = "BALX"
-	BANX = "BANX"
-	BARA = "BARA"
-	BARB = "BARB"
-	BARC = "BARC"
-	BARX = "BARX"
-	BASX = "BASX"
-	BAUX = "BAUX"
-	BAVX = "BAVX"
-	BAWX = "BAWX"
-	BBDX = "BBDX"
-	BBKM = "BBKM"
-	BBLX = "BBLX"
-	BBRX = "BBRX"
-	BBSX = "BBSX"
-	BBUX = "BBUX"
-	BBVX = "BBVX"
-	BCBM = "BCBM"
-	BCBX = "BCBX"
-	BCCB = "BCCB"
-	BCCX = "BCCX"
-	BCEX = "BCEX"
-	BCEY = "BCEY"
-	BCOX = "BCOX"
-	BCUB = "BCUB"
-	BCUX = "BCUX"
-	BDBB = "BDBB"
-	BDBL = "BDBL"
-	BDBX = "BDBX"
-	BDCX = "BDCX"
-	BDDX = "BDDX"
-	BDIX = "BDIX"
-	BDNX = "BDNX"
-	BDOX = "BDOX"
-	BDUX = "BDUX"
-	BEDX = "BEDX"
-	BELX = "BELX"
-	BERX = "BERX"
-	BFUX = "BFUX"
-	BGBX = "BGBX"
-	BGCX = "BGCX"
-	BGGX = "BGGX"
-	BGUX = "BGUX"
-	BGVX = "BGVX"
-	BHAX = "BHAX"
-	BHBX = "BHBX"
-	BHCX = "BHCX"
-	BHDX = "BHDX"
-	BHEX = "BHEX"
-	BHGX = "BHGX"
-	BHIX = "BHIX"
-	BHJX = "BHJX"
-	BHMX = "BHMX"
-	BHOX = "BHOX"
-	BHRX = "BHRX"
-	BHSX = "BHSX"
-	BHTX = "BHTX"
-	BHUX = "BHUX"
-	BHWX = "BHWX"
-	BJUX = "BJUX"
-	BKCX = "BKCX"
-	BKDN = "BKDN"
-	BKDX = "BKDX"
-	BKID = "BKID"
-	BKSX = "BKSX"
-	BLGX = "BLGX"
-	BMBL = "BMBL"
-	BMCB = "BMCB"
-	BMCX = "BMCX"
-	BMPX = "BMPX"
-	BMSX = "BMSX"
-	BNBX = "BNBX"
-	BNCX = "BNCX"
-	BNKX = "BNKX"
-	BNPA = "BNPA"
-	BNSB = "BNSB"
-	BNSX = "BNSX"
-	BOCX = "BOCX"
-	BODX = "BODX"
-	BOFA = "BOFA"
-	BORX = "BORX"
-	BOTM = "BOTM"
-	BOTX = "BOTX"
-	BPCX = "BPCX"
-	BPSX = "BPSX"
-	BRCX = "BRCX"
-	BRDX = "BRDX"
-	BRGX = "BRGX"
-	BRMX = "BRMX"
-	BRSX = "BRSX"
-	BRUX = "BRUX"
-	BSBX = "BSBX"
-	BSCX = "BSCX"
-	BTCX = "BTCX"
-	BTUX = "BTUX"
-	BUBX = "BUBX"
-	BUCL = "BUCL"
-	BUCX = "BUCX"
-	BUGX = "BUGX"
-	BUNX = "BUNX"
-	BURX = "BURX"
-	BUSX = "BUSX"
-	BUZX = "BUZX"
-	BVNX = "BVNX"
-	BVSX = "BVSX"
-	BWCX = "BWCX"
-	CALX = "CALX"
-	CBHX = "CBHX"
-	CBIN = "CBIN"
-	CCBL = "CCBL"
-	CCBX = "CCBX"
-	CCCX = "CCCX"
-	CCMX = "CCMX"
-	CCOB = "CCOB"
-	CCUX = "CCUX"
-	CDCX = "CDCX"
-	CEBX = "CEBX"
-	CGBX = "CGBX"
-	CGGX = "CGGX"
-	CHAS = "CHAS"
-	CHAX = "CHAX"
-	CHBX = "CHBX"
-	CHCX = "CHCX"
-	CHDX = "CHDX"
-	CHIX = "CHIX"
-	CHKX = "CHKX"
-	CHPX = "CHPX"
-	CHRX = "CHRX"
-	CHSX = "CHSX"
-	CHTX = "CHTX"
-	CIDX = "CIDX"
-	CITI = "CITI"
-	CITX = "CITX"
-	CIUB = "CIUB"
-	CJAX = "CJAX"
-	CJMX = "CJMX"
-	CLBL = "CLBL"
-	CMCB = "CMCB"
-	CMCX = "CMCX"
-	CMDX = "CMDX"
-	CMLX = "CMLX"
-	CMPX = "CMPX"
-	CMSV = "CMSV"
-	CNRB = "CNRB"
-	CNSX = "CNSX"
-	COAS = "COAS"
-	COCX = "COCX"
-	COLX = "COLX"
-	COMX = "COMX"
-	CONX = "CONX"
-	CORP = "CORP"
-	COSB = "COSB"
-	CPDX = "CPDX"
-	CPSN = "CPSN"
-	CRBX = "CRBX"
-	CRES = "CRES"
-	CRGB = "CRGB"
-	CRLY = "CRLY"
-	CRSX = "CRSX"
-	CRUB = "CRUB"
-	CSBK = "CSBK"
-	CSBX = "CSBX"
-	CTBA = "CTBA"
-	CTBX = "CTBX"
-	CTCB = "CTCB"
-	CTOX = "CTOX"
-	CTUX = "CTUX"
-	CUBX = "CUBX"
-	CUCX = "CUCX"
-	CURX = "CURX"
-	CUTX = "CUTX"
-	CZCX = "CZCX"
-	CZUX = "CZUX"
-	DAAX = "DAAX"
-	DAHX = "DAHX"
-	DAUX = "DAUX"
-	DBAX = "DBAX"
-	DBSS = "DBSS"
-	DCBL = "DCBL"
-	DCBX = "DCBX"
-	DCCX = "DCCX"
-	DCDX = "DCDX"
-	DCEX = "DCEX"
-	DCKX = "DCKX"
-	DCMX = "DCMX"
-	DCNX = "DCNX"
-	DCPX = "DCPX"
-	DCSX = "DCSX"
-	DCTX = "DCTX"
-	DCUB = "DCUB"
-	DCUX = "DCUX"
-	DDBX = "DDBX"
-	DDCX = "DDCX"
-	DDDX = "DDDX"
-	DDHX = "DDHX"
-	DEGX = "DEGX"
-	DENS = "DENS"
-	DEOB = "DEOB"
-	DEOX = "DEOX"
-	DEUT = "DEUT"
-	DEUX = "DEUX"
-	DEVX = "DEVX"
-	DGBX = "DGBX"
-	DHBX = "DHBX"
-	DHKX = "DHKX"
-	DHUX = "DHUX"
-	DIBX = "DIBX"
-	DICG = "DICG"
-	DICX = "DICX"
-	DISX = "DISX"
-	DIUX = "DIUX"
-	DJCX = "DJCX"
-	DKCL = "DKCL"
-	DKSX = "DKSX"
-	DLSC = "DLSC"
-	DLXB = "DLXB"
-	DMCB = "DMCB"
-	DMCX = "DMCX"
-	DMKB = "DMKB"
-	DMKJ = "DMKJ"
-	DNDC = "DNDC"
-	DNSB = "DNSB"
-	DNSX = "DNSX"
-	DOBX = "DOBX"
-	DOHB = "DOHB"
-	DRGX = "DRGX"
-	DSAX = "DSAX"
-	DSBX = "DSBX"
-	DSCB = "DSCB"
-	DSHX = "DSHX"
-	DSPX = "DSPX"
-	DSUX = "DSUX"
-	DTCX = "DTCX"
-	DTPX = "DTPX"
-	DUCX = "DUCX"
-	DUMX = "DUMX"
-	DUNX = "DUNX"
-	DURG = "DURG"
-	DVDX = "DVDX"
-	DYPX = "DYPX"
-	EBIL = "EBIL"
-	ECBL = "ECBL"
-	EDBX = "EDBX"
-	EDCX = "EDCX"
-	EDSX = "EDSX"
-	EIBI = "EIBI"
-	ESAF = "ESAF"
-	ESFB = "ESFB"
-	ESMF = "ESMF"
-	ETCX = "ETCX"
-	ETDX = "ETDX"
-	EUCX = "EUCX"
-	EWCX = "EWCX"
-	FCBX = "FCBX"
-	FCCX = "FCCX"
-	FCOX = "FCOX"
-	FDFX = "FDFX"
-	FDRL = "FDRL"
-	FEKX = "FEKX"
-	FGCB = "FGCB"
-	FINF = "FINF"
-	FINO = "FINO"
-	FINX = "FINX"
-	FIRN = "FIRN"
-	FIRX = "FIRX"
-	FMCX = "FMCX"
-	FRIX = "FRIX"
-	FSCX = "FSCX"
-	FSFB = "FSFB"
-	FZCX = "FZCX"
-	FZSX = "FZSX"
-	GACX = "GACX"
-	GADX = "GADX"
-	GAMX = "GAMX"
-	GANX = "GANX"
-	GBCB = "GBCB"
-	GCBX = "GCBX"
-	GCCX = "GCCX"
-	GCUL = "GCUL"
-	GCUX = "GCUX"
-	GDCB = "GDCB"
-	GDCX = "GDCX"
-	GDDX = "GDDX"
-	GDUX = "GDUX"
-	GGBK = "GGBK"
-	GGCX = "GGCX"
-	GHPX = "GHPX"
-	GKNX = "GKNX"
-	GMBX = "GMBX"
-	GMCX = "GMCX"
-	GMUX = "GMUX"
-	GNCX = "GNCX"
-	GNSX = "GNSX"
-	GODX = "GODX"
-	GOSX = "GOSX"
-	GPCX = "GPCX"
-	GPOX = "GPOX"
-	GRAX = "GRAX"
-	GSBL = "GSBL"
-	GSBX = "GSBX"
-	GSCB = "GSCB"
-	GSCX = "GSCX"
-	GSSX = "GSSX"
-	GTCX = "GTCX"
-	GUBX = "GUBX"
-	GUCX = "GUCX"
-	GUNX = "GUNX"
-	GUOX = "GUOX"
-	HAMX = "HAMX"
-	HANX = "HANX"
-	HARC = "HARC"
-	HCBL = "HCBL"
-	HCBX = "HCBX"
-	HCCX = "HCCX"
-	HCLX = "HCLX"
-	HDCL = "HDCL"
-	HDCX = "HDCX"
-	HDFC = "HDFC"
-	HGBX = "HGBX"
-	HINX = "HINX"
-	HISX = "HISX"
-	HMBX = "HMBX"
-	HMNX = "HMNX"
-	HOCX = "HOCX"
-	HOOX = "HOOX"
-	HPCX = "HPCX"
-	HPSC = "HPSC"
-	HPSX = "HPSX"
-	HSBC = "HSBC"
-	HSBM = "HSBM"
-	HSBX = "HSBX"
-	HSCX = "HSCX"
-	HSDX = "HSDX"
-	HSSX = "HSSX"
-	HUBX = "HUBX"
-	HUCB = "HUCB"
-	HUCH = "HUCH"
-	HUCX = "HUCX"
-	HUSB = "HUSB"
-	HUTX = "HUTX"
-	HVBK = "HVBK"
-	IBBK = "IBBK"
-	IBKL = "IBKL"
-	IBKO = "IBKO"
-	ICBK = "ICBK"
-	ICBL = "ICBL"
-	ICHX = "ICHX"
-	ICIC = "ICIC"
-	ICLL = "ICLL"
-	ICMX = "ICMX"
-	IDFB = "IDFB"
-	IDIB = "IDIB"
-	IDUK = "IDUK"
-	IDUX = "IDUX"
-	ILCB = "ILCB"
-	IMCX = "IMCX"
-	IMPX = "IMPX"
-	INCX = "INCX"
-	INDB = "INDB"
-	INDX = "INDX"
-	IOBA = "IOBA"
-	IPCX = "IPCX"
-	IPOS = "IPOS"
-	IPPB = "IPPB"
-	IPSX = "IPSX"
-	ISBX = "ISBX"
-	ISMX = "ISMX"
-	ITBL = "ITBL"
-	ITCX = "ITCX"
-	ITDX = "ITDX"
-	IUCB = "IUCB"
-	IUCX = "IUCX"
-	IXXX = "IXXX"
-	JACX = "JACX"
-	JAKA = "JAKA"
-	JALX = "JALX"
-	JAMX = "JAMX"
-	JANA = "JANA"
-	JANX = "JANX"
-	JASB = "JASB"
-	JASX = "JASX"
-	JAUX = "JAUX"
-	JBHX = "JBHX"
-	JBIX = "JBIX"
-	JBMX = "JBMX"
-	JCBX = "JCBX"
-	JCCB = "JCCB"
-	JCCX = "JCCX"
-	JCDX = "JCDX"
-	JCHX = "JCHX"
-	JCPX = "JCPX"
-	JCUX = "JCUX"
-	JDCX = "JDCX"
-	JDEX = "JDEX"
-	JGBX = "JGBX"
-	JGCX = "JGCX"
-	JGWX = "JGWX"
-	JHAX = "JHAX"
-	JHSX = "JHSX"
-	JHUX = "JHUX"
-	JIBX = "JIBX"
-	JICX = "JICX"
-	JIDX = "JIDX"
-	JIGX = "JIGX"
-	JIKX = "JIKX"
-	JIMX = "JIMX"
-	JINX = "JINX"
-	JIOP = "JIOP"
-	JIOX = "JIOX"
-	JIRX = "JIRX"
-	JISX = "JISX"
-	JIVX = "JIVX"
-	JJCX = "JJCX"
-	JJHX = "JJHX"
-	JJSB = "JJSB"
-	JKAX = "JKAX"
-	JKCX = "JKCX"
-	JKDX = "JKDX"
-	JKEX = "JKEX"
-	JKHX = "JKHX"
-	JKMX = "JKMX"
-	JKRX = "JKRX"
-	JKSX = "JKSX"
-	JLCX = "JLCX"
-	JLDX = "JLDX"
-	JLNX = "JLNX"
-	JLSX = "JLSX"
-	JLWX = "JLWX"
-	JMAX = "JMAX"
-	JMBX = "JMBX"
-	JMCX = "JMCX"
-	JMDX = "JMDX"
-	JMHX = "JMHX"
-	JMMX = "JMMX"
-	JMOX = "JMOX"
-	JMPX = "JMPX"
-	JMSX = "JMSX"
-	JMYX = "JMYX"
-	JNAX = "JNAX"
-	JNDX = "JNDX"
-	JNSX = "JNSX"
-	JODX = "JODX"
-	JONX = "JONX"
-	JOWX = "JOWX"
-	JPAX = "JPAX"
-	JPCB = "JPCB"
-	JPCX = "JPCX"
-	JRAX = "JRAX"
-	JRKX = "JRKX"
-	JRNX = "JRNX"
-	JRSX = "JRSX"
-	JSAB = "JSAB"
-	JSAX = "JSAX"
-	JSBL = "JSBL"
-	JSBP = "JSBP"
-	JSBX = "JSBX"
-	JSCX = "JSCX"
-	JSDX = "JSDX"
-	JSEX = "JSEX"
-	JSFB = "JSFB"
-	JSHX = "JSHX"
-	JSKX = "JSKX"
-	JSMX = "JSMX"
-	JSOX = "JSOX"
-	JSRX = "JSRX"
-	JSTX = "JSTX"
-	JSVX = "JSVX"
-	JSWX = "JSWX"
-	JTIX = "JTIX"
-	JTSC = "JTSC"
-	JTSX = "JTSX"
-	JUCX = "JUCX"
-	JUSX = "JUSX"
-	JVCX = "JVCX"
-	JXXX = "JXXX"
-	KAAX = "KAAX"
-	KACE = "KACE"
-	KACX = "KACX"
-	KADX = "KADX"
-	KAGX = "KAGX"
-	KAIJ = "KAIJ"
-	KALX = "KALX"
-	KAMX = "KAMX"
-	KANG = "KANG"
-	KANX = "KANX"
-	KARB = "KARB"
-	KARX = "KARX"
-	KASX = "KASX"
-	KATX = "KATX"
-	KAYX = "KAYX"
-	KBCX = "KBCX"
-	KBHB = "KBHB"
-	KBKB = "KBKB"
-	KBNX = "KBNX"
-	KBSX = "KBSX"
-	KCBL = "KCBL"
-	KCBX = "KCBX"
-	KCCB = "KCCB"
-	KCCX = "KCCX"
-	KCDX = "KCDX"
-	KCEX = "KCEX"
-	KCOB = "KCOB"
-	KCUB = "KCUB"
-	KCUX = "KCUX"
-	KDBX = "KDBX"
-	KDCB = "KDCB"
-	KDCX = "KDCX"
-	KDIX = "KDIX"
-	KDNX = "KDNX"
-	KDUX = "KDUX"
-	KEJX = "KEJX"
-	KEMX = "KEMX"
-	KESX = "KESX"
-	KGBX = "KGBX"
-	KGDX = "KGDX"
-	KGRB = "KGRB"
-	KGSX = "KGSX"
-	KHAX = "KHAX"
-	KHCX = "KHCX"
-	KHDX = "KHDX"
-	KHNX = "KHNX"
-	KHTX = "KHTX"
-	KHUX = "KHUX"
-	KICX = "KICX"
-	KJSB = "KJSB"
-	KJSX = "KJSX"
-	KKBK = "KKBK"
-	KKMX = "KKMX"
-	KKSX = "KKSX"
-	KLGB = "KLGB"
-	KLMX = "KLMX"
-	KMCB = "KMCB"
-	KMCX = "KMCX"
-	KMNX = "KMNX"
-	KMSX = "KMSX"
-	KNBX = "KNBX"
-	KNCX = "KNCX"
-	KNNX = "KNNX"
-	KNPX = "KNPX"
-	KNSB = "KNSB"
-	KNSX = "KNSX"
-	KOBX = "KOBX"
-	KOCX = "KOCX"
-	KODX = "KODX"
-	KOEX = "KOEX"
-	KOLH = "KOLH"
-	KORX = "KORX"
-	KOSX = "KOSX"
-	KOTX = "KOTX"
-	KOYX = "KOYX"
-	KPCX = "KPCX"
-	KRCX = "KRCX"
-	KRDX = "KRDX"
-	KRIX = "KRIX"
-	KRMX = "KRMX"
-	KRNX = "KRNX"
-	KRTH = "KRTH"
-	KRTX = "KRTX"
-	KSBK = "KSBK"
-	KSBX = "KSBX"
-	KSCB = "KSCB"
-	KSCX = "KSCX"
-	KSMX = "KSMX"
-	KSNX = "KSNX"
-	KSTX = "KSTX"
-	KSUX = "KSUX"
-	KTBX = "KTBX"
-	KTCX = "KTCX"
-	KTDX = "KTDX"
-	KTTX = "KTTX"
-	KUBX = "KUBX"
-	KUCB = "KUCB"
-	KUCX = "KUCX"
-	KUKX = "KUKX"
-	KULX = "KULX"
-	KUMX = "KUMX"
-	KUNS = "KUNS"
-	KUOB = "KUOB"
-	KURX = "KURX"
-	KUTX = "KUTX"
-	KVBL = "KVBL"
-	KVCX = "KVCX"
-	KVGB = "KVGB"
-	KYDX = "KYDX"
-	LACX = "LACX"
-	LATX = "LATX"
-	LAVB = "LAVB"
-	LBMX = "LBMX"
-	LCBX = "LCBX"
-	LCCX = "LCCX"
-	LDCX = "LDCX"
-	LDPX = "LDPX"
-	LDRX = "LDRX"
-	LECX = "LECX"
-	LICB = "LICB"
-	LKBL = "LKBL"
-	LKCX = "LKCX"
-	LKHX = "LKHX"
-	LKMX = "LKMX"
-	LMNX = "LMNX"
-	LNSX = "LNSX"
-	LOKX = "LOKX"
-	LONX = "LONX"
-	LUCX = "LUCX"
-	LULX = "LULX"
-	MABL = "MABL"
-	MACX = "MACX"
-	MADX = "MADX"
-	MAGX = "MAGX"
-	MAHB = "MAHB"
-	MAHG = "MAHG"
-	MAHX = "MAHX"
-	MAJX = "MAJX"
-	MAKX = "MAKX"
-	MALX = "MALX"
-	MAMX = "MAMX"
-	MANX = "MANX"
-	MAPX = "MAPX"
-	MASX = "MASX"
-	MAUX = "MAUX"
-	MAVX = "MAVX"
-	MAWX = "MAWX"
-	MAYX = "MAYX"
-	MBCX = "MBCX"
-	MBGX = "MBGX"
-	MBLX = "MBLX"
-	MCAB = "MCAB"
-	MCAX = "MCAX"
-	MCBL = "MCBL"
-	MCBX = "MCBX"
-	MCCX = "MCCX"
-	MCDX = "MCDX"
-	MCLX = "MCLX"
-	MCOX = "MCOX"
-	MCSX = "MCSX"
-	MCUX = "MCUX"
-	MDBK = "MDBK"
-	MDCB = "MDCB"
-	MDCX = "MDCX"
-	MDEX = "MDEX"
-	MDGX = "MDGX"
-	MDIX = "MDIX"
-	MDMX = "MDMX"
-	MDPX = "MDPX"
-	MEDX = "MEDX"
-	MERX = "MERX"
-	MEUX = "MEUX"
-	MFCX = "MFCX"
-	MFUX = "MFUX"
-	MGBX = "MGBX"
-	MGCB = "MGCB"
-	MGCX = "MGCX"
-	MGDX = "MGDX"
-	MGRB = "MGRB"
-	MGSX = "MGSX"
-	MGUX = "MGUX"
-	MHCB = "MHCB"
-	MHCX = "MHCX"
-	MHEX = "MHEX"
-	MHLX = "MHLX"
-	MHMX = "MHMX"
-	MHNX = "MHNX"
-	MHSX = "MHSX"
-	MHUX = "MHUX"
-	MIZX = "MIZX"
-	MJCX = "MJCX"
-	MKPB = "MKPB"
-	MKUX = "MKUX"
-	MKYX = "MKYX"
-	MLCG = "MLCG"
-	MLDX = "MLDX"
-	MMCX = "MMCX"
-	MMMX = "MMMX"
-	MNBX = "MNBX"
-	MNCX = "MNCX"
-	MNSX = "MNSX"
-	MOGX = "MOGX"
-	MOUX = "MOUX"
-	MPCX = "MPCX"
-	MPDX = "MPDX"
-	MPRX = "MPRX"
-	MRBX = "MRBX"
-	MRTX = "MRTX"
-	MSAX = "MSAX"
-	MSBL = "MSBL"
-	MSBX = "MSBX"
-	MSCI = "MSCI"
-	MSCX = "MSCX"
-	MSHQ = "MSHQ"
-	MSLM = "MSLM"
-	MSNU = "MSNU"
-	MSNX = "MSNX"
-	MSOX = "MSOX"
-	MSSX = "MSSX"
-	MUBL = "MUBL"
-	MUBX = "MUBX"
-	MUCG = "MUCG"
-	MUCX = "MUCX"
-	MUDX = "MUDX"
-	MUNX = "MUNX"
-	MUPX = "MUPX"
-	MURX = "MURX"
-	MUSX = "MUSX"
-	MVCB = "MVCB"
-	MVCX = "MVCX"
-	MVIX = "MVIX"
-	MXXX = "MXXX"
-	MYAX = "MYAX"
-	MYCX = "MYCX"
-	MYSX = "MYSX"
-	MZCX = "MZCX"
-	MZRX = "MZRX"
-	NABX = "NABX"
-	NACX = "NACX"
-	NADX = "NADX"
-	NAGX = "NAGX"
-	NAIX = "NAIX"
-	NALX = "NALX"
-	NANX = "NANX"
-	NASX = "NASX"
-	NATA = "NATA"
-	NAUX = "NAUX"
-	NAVX = "NAVX"
-	NAWX = "NAWX"
-	NBAD = "NBAD"
-	NBBX = "NBBX"
-	NBCX = "NBCX"
-	NBMX = "NBMX"
-	NBRD = "NBRD"
-	NCBL = "NCBL"
-	NCBX = "NCBX"
-	NCCX = "NCCX"
-	NCOX = "NCOX"
-	NCUB = "NCUB"
-	NCUX = "NCUX"
-	NDCB = "NDCB"
-	NDCX = "NDCX"
-	NDDX = "NDDX"
-	NDGX = "NDGX"
-	NDIX = "NDIX"
-	NDOX = "NDOX"
-	NESF = "NESF"
-	NEYX = "NEYX"
-	NGBX = "NGBX"
-	NGKX = "NGKX"
-	NGNX = "NGNX"
-	NGRX = "NGRX"
-	NGSB = "NGSB"
-	NGSX = "NGSX"
-	NGUX = "NGUX"
-	NICB = "NICB"
-	NIDX = "NIDX"
-	NILX = "NILX"
-	NIRX = "NIRX"
-	NIUX = "NIUX"
-	NJBK = "NJBK"
-	NJCX = "NJCX"
-	NJGX = "NJGX"
-	NJMX = "NJMX"
-	NJSX = "NJSX"
-	NKGS = "NKGS"
-	NLGX = "NLGX"
-	NLUX = "NLUX"
-	NMCB = "NMCB"
-	NMCX = "NMCX"
-	NMGB = "NMGB"
-	NNCX = "NNCX"
-	NNSB = "NNSB"
-	NNSX = "NNSX"
-	NOBX = "NOBX"
-	NOIX = "NOIX"
-	NOSC = "NOSC"
-	NPCX = "NPCX"
-	NPKX = "NPKX"
-	NPPX = "NPPX"
-	NRDX = "NRDX"
-	NRMX = "NRMX"
-	NSBB = "NSBB"
-	NSBX = "NSBX"
-	NSCX = "NSCX"
-	NSGX = "NSGX"
-	NSIX = "NSIX"
-	NSJX = "NSJX"
-	NSMX = "NSMX"
-	NSPB = "NSPB"
-	NSPX = "NSPX"
-	NSRX = "NSRX"
-	NTBL = "NTBL"
-	NUBX = "NUBX"
-	NUCB = "NUCB"
-	NUCX = "NUCX"
-	NULX = "NULX"
-	NVCX = "NVCX"
-	NVNM = "NVNM"
-	NVSX = "NVSX"
-	NWCX = "NWCX"
-	ODCX = "ODCX"
-	ODGB = "ODGB"
-	OIBA = "OIBA"
-	OMCX = "OMCX"
-	ONSX = "ONSX"
-	ORBC = "ORBC"
-	ORCB = "ORCB"
-	OSMX = "OSMX"
-	PABX = "PABX"
-	PACX = "PACX"
-	PADX = "PADX"
-	PALX = "PALX"
-	PANX = "PANX"
-	PARX = "PARX"
-	PASX = "PASX"
-	PATX = "PATX"
-	PAYX = "PAYX"
-	PBGX = "PBGX"
-	PCBL = "PCBL"
-	PCBX = "PCBX"
-	PCCB = "PCCB"
-	PCCX = "PCCX"
-	PCLX = "PCLX"
-	PCMX = "PCMX"
-	PCOX = "PCOX"
-	PCPX = "PCPX"
-	PCSX = "PCSX"
-	PCTX = "PCTX"
-	PCUX = "PCUX"
-	PDBX = "PDBX"
-	PDCX = "PDCX"
-	PDNX = "PDNX"
-	PDSX = "PDSX"
-	PDUX = "PDUX"
-	PGBX = "PGBX"
-	PGCX = "PGCX"
-	PGRX = "PGRX"
-	PGTX = "PGTX"
-	PHIX = "PHIX"
-	PITX = "PITX"
-	PJSB = "PJSB"
-	PKBX = "PKBX"
-	PKDX = "PKDX"
-	PKGB = "PKGB"
-	PLOX = "PLOX"
-	PLUX = "PLUX"
-	PMCB = "PMCB"
-	PMCX = "PMCX"
-	PMEC = "PMEC"
-	PMNX = "PMNX"
-	PNCX = "PNCX"
-	PNMX = "PNMX"
-	PNPX = "PNPX"
-	PNSX = "PNSX"
-	PPBX = "PPBX"
-	PPCX = "PPCX"
-	PRCX = "PRCX"
-	PREX = "PREX"
-	PROX = "PROX"
-	PRPX = "PRPX"
-	PRSX = "PRSX"
-	PRTH = "PRTH"
-	PRUX = "PRUX"
-	PSBL = "PSBL"
-	PSBX = "PSBX"
-	PSCX = "PSCX"
-	PSIB = "PSIB"
-	PSRX = "PSRX"
-	PSSX = "PSSX"
-	PTCX = "PTCX"
-	PTNX = "PTNX"
-	PTSX = "PTSX"
-	PUBX = "PUBX"
-	PUCB = "PUCB"
-	PUCX = "PUCX"
-	PUDX = "PUDX"
-	PUGX = "PUGX"
-	PUNB = "PUNB"
-	PUNX = "PUNX"
-	PURX = "PURX"
-	PUSD = "PUSD"
-	PUSX = "PUSX"
-	PUUX = "PUUX"
-	PVAX = "PVAX"
-	PVCX = "PVCX"
-	PVVX = "PVVX"
-	PWUX = "PWUX"
-	PYCX = "PYCX"
-	PYTM = "PYTM"
-	QNBA = "QNBA"
-	QNBX = "QNBX"
-	QUCX = "QUCX"
-	RABO = "RABO"
-	RACX = "RACX"
-	RAEX = "RAEX"
-	RAJX = "RAJX"
-	RAKX = "RAKX"
-	RAMX = "RAMX"
-	RANX = "RANX"
-	RATN = "RATN"
-	RAUX = "RAUX"
-	RBBX = "RBBX"
-	RBCX = "RBCX"
-	RBIH = "RBIH"
-	RBIN = "RBIN"
-	RBIP = "RBIP"
-	RBIS = "RBIS"
-	RCBX = "RCBX"
-	RCCX = "RCCX"
-	RCDX = "RCDX"
-	RCMX = "RCMX"
-	RCUX = "RCUX"
-	RDCB = "RDCB"
-	RDCX = "RDCX"
-	RDNX = "RDNX"
-	REBX = "REBX"
-	RECX = "RECX"
-	REWX = "REWX"
-	RGCX = "RGCX"
-	RGSX = "RGSX"
-	RHMX = "RHMX"
-	RJCX = "RJCX"
-	RJJX = "RJJX"
-	RJNX = "RJNX"
-	RJTX = "RJTX"
-	RKCX = "RKCX"
-	RLUX = "RLUX"
-	RMGB = "RMGB"
-	RNBX = "RNBX"
-	RNDX = "RNDX"
-	RNGX = "RNGX"
-	RNSB = "RNSB"
-	RNSX = "RNSX"
-	ROCX = "ROCX"
-	ROHX = "ROHX"
-	RPUX = "RPUX"
-	RRBP = "RRBP"
-	RRSX = "RRSX"
-	RSBL = "RSBL"
-	RSBX = "RSBX"
-	RSCB = "RSCB"
-	RSSB = "RSSB"
-	RSSX = "RSSX"
-	RSUX = "RSUX"
-	RSVX = "RSVX"
-	RUCX = "RUCX"
-	RUKX = "RUKX"
-	RUMX = "RUMX"
-	RZSX = "RZSX"
-	SABR = "SABR"
-	SABX = "SABX"
-	SACB = "SACB"
-	SACX = "SACX"
-	SADX = "SADX"
-	SAGX = "SAGX"
-	SAHE = "SAHE"
-	SAHX = "SAHX"
-	SAIX = "SAIX"
-	SALX = "SALX"
-	SAMX = "SAMX"
-	SANT = "SANT"
-	SANX = "SANX"
-	SAOX = "SAOX"
-	SAPX = "SAPX"
-	SARX = "SARX"
-	SASA = "SASA"
-	SASX = "SASX"
-	SATX = "SATX"
-	SAUX = "SAUX"
-	SAVX = "SAVX"
-	SAWX = "SAWX"
-	SBBJ = "SBBJ"
-	SBCR = "SBCR"
-	SBCX = "SBCX"
-	SBHY = "SBHY"
-	SBIN = "SBIN"
-	SBKX = "SBKX"
-	SBLD = "SBLD"
-	SBLS = "SBLS"
-	SBLX = "SBLX"
-	SBMX = "SBMX"
-	SBMY = "SBMY"
-	SBNX = "SBNX"
-	SBPS = "SBPS"
-	SBPX = "SBPX"
-	SBSX = "SBSX"
-	SBTR = "SBTR"
-	SBUJ = "SBUJ"
-	SBUX = "SBUX"
-	SCBL = "SCBL"
-	SCBX = "SCBX"
-	SCCX = "SCCX"
-	SCDX = "SCDX"
-	SCIX = "SCIX"
-	SCNX = "SCNX"
-	SCOB = "SCOB"
-	SCOX = "SCOX"
-	SCPX = "SCPX"
-	SCSX = "SCSX"
-	SCUX = "SCUX"
-	SDBX = "SDBX"
-	SDCB = "SDCB"
-	SDCE = "SDCE"
-	SDCX = "SDCX"
-	SDHX = "SDHX"
-	SDSX = "SDSX"
-	SDTC = "SDTC"
-	SDTX = "SDTX"
-	SDUX = "SDUX"
-	SECB = "SECB"
-	SEMX = "SEMX"
-	SENX = "SENX"
-	SEUX = "SEUX"
-	SEWX = "SEWX"
-	SGCX = "SGCX"
-	SGDX = "SGDX"
-	SGLX = "SGLX"
-	SGSX = "SGSX"
-	SGUX = "SGUX"
-	SHAX = "SHAX"
-	SHBK = "SHBK"
-	SHBX = "SHBX"
-	SHCX = "SHCX"
-	SHEX = "SHEX"
-	SHGX = "SHGX"
-	SHIX = "SHIX"
-	SHKX = "SHKX"
-	SHMX = "SHMX"
-	SHNX = "SHNX"
-	SHOX = "SHOX"
-	SHRX = "SHRX"
-	SHSX = "SHSX"
-	SHUB = "SHUB"
-	SHUX = "SHUX"
-	SIBL = "SIBL"
-	SIBX = "SIBX"
-	SICX = "SICX"
-	SIDB = "SIDB"
-	SIDC = "SIDC"
-	SIDX = "SIDX"
-	SIGX = "SIGX"
-	SIHX = "SIHX"
-	SIKX = "SIKX"
-	SINX = "SINX"
-	SIRX = "SIRX"
-	SISX = "SISX"
-	SITX = "SITX"
-	SIWX = "SIWX"
-	SJGX = "SJGX"
-	SJSB = "SJSB"
-	SJSX = "SJSX"
-	SKCX = "SKCX"
-	SKKX = "SKKX"
-	SKNB = "SKNB"
-	SKNX = "SKNX"
-	SKSB = "SKSB"
-	SKUX = "SKUX"
-	SLAX = "SLAX"
-	SLCX = "SLCX"
-	SMBC = "SMBC"
-	SMBX = "SMBX"
-	SMCB = "SMCB"
-	SMCX = "SMCX"
-	SMEX = "SMEX"
-	SMMX = "SMMX"
-	SMNB = "SMNB"
-	SMNX = "SMNX"
-	SMPX = "SMPX"
-	SMSX = "SMSX"
-	SMTX = "SMTX"
-	SMUX = "SMUX"
-	SMVC = "SMVC"
-	SMWX = "SMWX"
-	SNAX = "SNAX"
-	SNBK = "SNBK"
-	SNBX = "SNBX"
-	SNCX = "SNCX"
-	SNDX = "SNDX"
-	SNGX = "SNGX"
-	SNKX = "SNKX"
-	SNLX = "SNLX"
-	SNPX = "SNPX"
-	SNSV = "SNSV"
-	SNSX = "SNSX"
-	SOBX = "SOBX"
-	SOGE = "SOGE"
-	SOLX = "SOLX"
-	SONX = "SONX"
-	SPBX = "SPBX"
-	SPCB = "SPCB"
-	SPCX = "SPCX"
-	SPNX = "SPNX"
-	SPSX = "SPSX"
-	SPTX = "SPTX"
-	SRCB = "SRCB"
-	SRCX = "SRCX"
-	SREX = "SREX"
-	SRGX = "SRGX"
-	SRHX = "SRHX"
-	SRSX = "SRSX"
-	SSBL = "SSBL"
-	SSBX = "SSBX"
-	SSDX = "SSDX"
-	SSHX = "SSHX"
-	SSKX = "SSKX"
-	SSLX = "SSLX"
-	SSNX = "SSNX"
-	SSOX = "SSOX"
-	SSSX = "SSSX"
-	SSWX = "SSWX"
-	STBP = "STBP"
-	STCB = "STCB"
-	STCX = "STCX"
-	STDX = "STDX"
-	STRX = "STRX"
-	SUBX = "SUBX"
-	SUCX = "SUCX"
-	SUDX = "SUDX"
-	SULX = "SULX"
-	SUMX = "SUMX"
-	SUNB = "SUNB"
-	SURX = "SURX"
-	SURY = "SURY"
-	SUSB = "SUSB"
-	SUSX = "SUSX"
-	SUTB = "SUTB"
-	SUVX = "SUVX"
-	SVAX = "SVAX"
-	SVBL = "SVBL"
-	SVCB = "SVCB"
-	SVCX = "SVCX"
-	SVGX = "SVGX"
-	SVMC = "SVMC"
-	SVNX = "SVNX"
-	SVOX = "SVOX"
-	SVRX = "SVRX"
-	SVSH = "SVSH"
-	SVSX = "SVSX"
-	SWMX = "SWMX"
-	SWSX = "SWSX"
-	SXXX = "SXXX"
-	SYNB = "SYNB"
-	TACX = "TACX"
-	TADX = "TADX"
-	TAMX = "TAMX"
-	TAPX = "TAPX"
-	TASX = "TASX"
-	TAUB = "TAUB"
-	TBCX = "TBCX"
-	TBDX = "TBDX"
-	TBHX = "TBHX"
-	TBMC = "TBMC"
-	TBMX = "TBMX"
-	TBNS = "TBNS"
-	TBPX = "TBPX"
-	TBSB = "TBSB"
-	TBSX = "TBSX"
-	TBTX = "TBTX"
-	TBUX = "TBUX"
-	TCBX = "TCBX"
-	TCCX = "TCCX"
-	TCHX = "TCHX"
-	TCPX = "TCPX"
-	TCUB = "TCUB"
-	TCUX = "TCUX"
-	TDBX = "TDBX"
-	TDCB = "TDCB"
-	TDCX = "TDCX"
-	TDIX = "TDIX"
-	TDMX = "TDMX"
-	TDPX = "TDPX"
-	TDSX = "TDSX"
-	TECX = "TECX"
-	TEHX = "TEHX"
-	TEMX = "TEMX"
-	TESX = "TESX"
-	TETX = "TETX"
-	TFCX = "TFCX"
-	TGBX = "TGBX"
-	TGCG = "TGCG"
-	TGCX = "TGCX"
-	TGDX = "TGDX"
-	TGMB = "TGMB"
-	TGNX = "TGNX"
-	TGUX = "TGUX"
-	THCX = "THCX"
-	THMX = "THMX"
-	THOX = "THOX"
-	THRS = "THRS"
-	THRX = "THRX"
-	THWX = "THWX"
-	TIDX = "TIDX"
-	TIRX = "TIRX"
-	TJAX = "TJAX"
-	TJBX = "TJBX"
-	TJCX = "TJCX"
-	TJDX = "TJDX"
-	TJMX = "TJMX"
-	TJNX = "TJNX"
-	TJSB = "TJSB"
-	TKAX = "TKAX"
-	TKCX = "TKCX"
-	TKDX = "TKDX"
-	TKTX = "TKTX"
-	TKUX = "TKUX"
-	TLPX = "TLPX"
-	TMAX = "TMAX"
-	TMBL = "TMBL"
-	TMBX = "TMBX"
-	TMCX = "TMCX"
-	TMNX = "TMNX"
-	TMPX = "TMPX"
-	TMSB = "TMSB"
-	TMSC = "TMSC"
-	TMSX = "TMSX"
-	TMTX = "TMTX"
-	TMUX = "TMUX"
-	TNBX = "TNBX"
-	TNCB = "TNCB"
-	TNCX = "TNCX"
-	TNDC = "TNDC"
-	TNEX = "TNEX"
-	TNHX = "TNHX"
-	TNIX = "TNIX"
-	TNKX = "TNKX"
-	TNMX = "TNMX"
-	TNSC = "TNSC"
-	TNUX = "TNUX"
-	TOCX = "TOCX"
-	TPCX = "TPCX"
-	TPDX = "TPDX"
-	TPSC = "TPSC"
-	TPSX = "TPSX"
-	TPUX = "TPUX"
-	TRAX = "TRAX"
-	TRDX = "TRDX"
-	TSAB = "TSAB"
-	TSAX = "TSAX"
-	TSBX = "TSBX"
-	TSCX = "TSCX"
-	TSDX = "TSDX"
-	TSIX = "TSIX"
-	TSKX = "TSKX"
-	TSMX = "TSMX"
-	TSNX = "TSNX"
-	TSPX = "TSPX"
-	TSSB = "TSSB"
-	TSSX = "TSSX"
-	TSUX = "TSUX"
-	TTBX = "TTBX"
-	TTCB = "TTCB"
-	TTCX = "TTCX"
-	TTGX = "TTGX"
-	TTLX = "TTLX"
-	TTUX = "TTUX"
-	TUBX = "TUBX"
-	TUCL = "TUCL"
-	TUCX = "TUCX"
-	TUDX = "TUDX"
-	TUMX = "TUMX"
-	TUNX = "TUNX"
-	TUOX = "TUOX"
-	TUPX = "TUPX"
-	TURX = "TURX"
-	TVBX = "TVBX"
-	TVDX = "TVDX"
-	TVPX = "TVPX"
-	TVUX = "TVUX"
-	TYCX = "TYCX"
-	UBBX = "UBBX"
-	UBGX = "UBGX"
-	UBIN = "UBIN"
-	UCBA = "UCBA"
-	UCBS = "UCBS"
-	UCBX = "UCBX"
-	UCCX = "UCCX"
-	UCDX = "UCDX"
-	UCUX = "UCUX"
-	UGBX = "UGBX"
-	UICX = "UICX"
-	UJSX = "UJSX"
-	UJVN = "UJVN"
-	UKGX = "UKGX"
-	UMAX = "UMAX"
-	UMCX = "UMCX"
-	UMSX = "UMSX"
-	UMUX = "UMUX"
-	UNAX = "UNAX"
-	UNIX = "UNIX"
-	UNMX = "UNMX"
-	UNSX = "UNSX"
-	UOVB = "UOVB"
-	UPCB = "UPCB"
-	UPCX = "UPCX"
-	UPNX = "UPNX"
-	URBN = "URBN"
-	URCX = "URCX"
-	URDX = "URDX"
-	URMX = "URMX"
-	UROX = "UROX"
-	USFB = "USFB"
-	USNX = "USNX"
-	UTBI = "UTBI"
-	UTBX = "UTBX"
-	UTCX = "UTCX"
-	UTGX = "UTGX"
-	UTIB = "UTIB"
-	UTKS = "UTKS"
-	UTKX = "UTKX"
-	UTZX = "UTZX"
-	UUCB = "UUCB"
-	UUCX = "UUCX"
-	UXXX = "UXXX"
-	VADX = "VADX"
-	VAIX = "VAIX"
-	VANX = "VANX"
-	VARA = "VARA"
-	VASJ = "VASJ"
-	VASX = "VASX"
-	VAUX = "VAUX"
-	VCAX = "VCAX"
-	VCBX = "VCBX"
-	VCCX = "VCCX"
-	VCNB = "VCNB"
-	VCOB = "VCOB"
-	VCOX = "VCOX"
-	VDCX = "VDCX"
-	VDYX = "VDYX"
-	VEDX = "VEDX"
-	VERX = "VERX"
-	VGBX = "VGBX"
-	VHDX = "VHDX"
-	VICX = "VICX"
-	VIDX = "VIDX"
-	VIJB = "VIJB"
-	VIJX = "VIJX"
-	VIKX = "VIKX"
-	VIMX = "VIMX"
-	VIRX = "VIRX"
-	VISX = "VISX"
-	VJSX = "VJSX"
-	VKCX = "VKCX"
-	VKSX = "VKSX"
-	VMCX = "VMCX"
-	VMMX = "VMMX"
-	VMUX = "VMUX"
-	VNSX = "VNSX"
-	VRDX = "VRDX"
-	VSBL = "VSBL"
-	VSBX = "VSBX"
-	VSCX = "VSCX"
-	VSSX = "VSSX"
-	VSVX = "VSVX"
-	VUCX = "VUCX"
-	VVCX = "VVCX"
-	VVSB = "VVSB"
-	VYAX = "VYAX"
-	VYPX = "VYPX"
-	VYSA = "VYSA"
-	WACX = "WACX"
-	WAIX = "WAIX"
-	WARX = "WARX"
-	WAUX = "WAUX"
-	WBSC = "WBSC"
-	WCBX = "WCBX"
-	WDCX = "WDCX"
-	WKGX = "WKGX"
-	WNBX = "WNBX"
-	WPAC = "WPAC"
-	WRCX = "WRCX"
-	WUCX = "WUCX"
-	WZUX = "WZUX"
-	XJKG = "XJKG"
-	YADX = "YADX"
-	YAVX = "YAVX"
-	YCBX = "YCBX"
-	YDCX = "YDCX"
-	YESB = "YESB"
-	YLNX = "YLNX"
-	YMSX = "YMSX"
-	YNCX = "YNCX"
-	YNSX = "YNSX"
-	ZBBX = "ZBBX"
-	ZBSX = "ZBSX"
-	ZCBL = "ZCBL"
-	ZIBX = "ZIBX"
-	ZILX = "ZILX"
-	ZIMX = "ZIMX"
-	ZISX = "ZISX"
-	ZLLX = "ZLLX"
-	ZMMX = "ZMMX"
-	ZRNB = "ZRNB"
-	ZSAX = "ZSAX"
-	ZSBG = "ZSBG"
-	ZSBL = "ZSBL"
-	ZSBX = "ZSBX"
-	ZSGX = "ZSGX"
-	ZSHX = "ZSHX"
-	ZSJX = "ZSJX"
-	ZSKX = "ZSKX"
-	ZSLX = "ZSLX"
-	ZSMX = "ZSMX"
+    AACX = "AACX"
+    ABBL = "ABBL"
+    ABCX = "ABCX"
+    ABDX = "ABDX"
+    ABEX = "ABEX"
+    ABHY = "ABHY"
+    ABNA = "ABNA"
+    ABPB = "ABPB"
+    ABSB = "ABSB"
+    ABUX = "ABUX"
+    ACAX = "ACAX"
+    ACBX = "ACBX"
+    ACCX = "ACCX"
+    ACKX = "ACKX"
+    ACOX = "ACOX"
+    ACUB = "ACUB"
+    ACUX = "ACUX"
+    ADBX = "ADBX"
+    ADCB = "ADCB"
+    ADCC = "ADCC"
+    ADCX = "ADCX"
+    ADDX = "ADDX"
+    AGCX = "AGCX"
+    AGDX = "AGDX"
+    AGRX = "AGRX"
+    AGSX = "AGSX"
+    AGUX = "AGUX"
+    AGVX = "AGVX"
+    AHDC = "AHDC"
+    AHMX = "AHMX"
+    AHUX = "AHUX"
+    AIRP = "AIRP"
+    AJAR = "AJAR"
+    AJHC = "AJHC"
+    AJKB = "AJKB"
+    AJMX = "AJMX"
+    AJNX = "AJNX"
+    AJPX = "AJPX"
+    AJSX = "AJSX"
+    AJUX = "AJUX"
+    AKJB = "AKJB"
+    AKKB = "AKKB"
+    AKMX = "AKMX"
+    AKOX = "AKOX"
+    ALAX = "ALAX"
+    ALIX = "ALIX"
+    ALLA = "ALLA"
+    ALLX = "ALLX"
+    ALWX = "ALWX"
+    AMAX = "AMAX"
+    AMBX = "AMBX"
+    AMCB = "AMCB"
+    AMCX = "AMCX"
+    AMDN = "AMDN"
+    AMMX = "AMMX"
+    AMNX = "AMNX"
+    AMRX = "AMRX"
+    AMSB = "AMSB"
+    AMSX = "AMSX"
+    ANBX = "ANBX"
+    ANDB = "ANDB"
+    ANDX = "ANDX"
+    ANMX = "ANMX"
+    ANSX = "ANSX"
+    ANUX = "ANUX"
+    ANZB = "ANZB"
+    APBL = "APBL"
+    APCX = "APCX"
+    APGB = "APGB"
+    APGV = "APGV"
+    APGX = "APGX"
+    APJX = "APJX"
+    APMC = "APMC"
+    APMX = "APMX"
+    APNX = "APNX"
+    APRR = "APRR"
+    APRX = "APRX"
+    APSX = "APSX"
+    ARBL = "ARBL"
+    ARCX = "ARCX"
+    ARMX = "ARMX"
+    ARYX = "ARYX"
+    ASBL = "ASBL"
+    ASBX = "ASBX"
+    ASHX = "ASHX"
+    ASKX = "ASKX"
+    ASNX = "ASNX"
+    ASOX = "ASOX"
+    ASSX = "ASSX"
+    AUBL = "AUBL"
+    AUBX = "AUBX"
+    AUCB = "AUCB"
+    AUCX = "AUCX"
+    AUGX = "AUGX"
+    AURX = "AURX"
+    AVDX = "AVDX"
+    AWCX = "AWCX"
+    AWUX = "AWUX"
+    AZAX = "AZAX"
+    AZPX = "AZPX"
+    AZSX = "AZSX"
+    AZUX = "AZUX"
+    BACB = "BACB"
+    BACX = "BACX"
+    BADX = "BADX"
+    BAGX = "BAGX"
+    BALB = "BALB"
+    BALX = "BALX"
+    BANX = "BANX"
+    BARA = "BARA"
+    BARB = "BARB"
+    BARC = "BARC"
+    BARX = "BARX"
+    BASX = "BASX"
+    BAUX = "BAUX"
+    BAVX = "BAVX"
+    BAWX = "BAWX"
+    BBDX = "BBDX"
+    BBKM = "BBKM"
+    BBLX = "BBLX"
+    BBRX = "BBRX"
+    BBSX = "BBSX"
+    BBUX = "BBUX"
+    BBVX = "BBVX"
+    BCBM = "BCBM"
+    BCBX = "BCBX"
+    BCCB = "BCCB"
+    BCCX = "BCCX"
+    BCEX = "BCEX"
+    BCEY = "BCEY"
+    BCOX = "BCOX"
+    BCUB = "BCUB"
+    BCUX = "BCUX"
+    BDBB = "BDBB"
+    BDBL = "BDBL"
+    BDBX = "BDBX"
+    BDCX = "BDCX"
+    BDDX = "BDDX"
+    BDIX = "BDIX"
+    BDNX = "BDNX"
+    BDOX = "BDOX"
+    BDUX = "BDUX"
+    BEDX = "BEDX"
+    BELX = "BELX"
+    BERX = "BERX"
+    BFUX = "BFUX"
+    BGBX = "BGBX"
+    BGCX = "BGCX"
+    BGGX = "BGGX"
+    BGUX = "BGUX"
+    BGVX = "BGVX"
+    BHAX = "BHAX"
+    BHBX = "BHBX"
+    BHCX = "BHCX"
+    BHDX = "BHDX"
+    BHEX = "BHEX"
+    BHGX = "BHGX"
+    BHIX = "BHIX"
+    BHJX = "BHJX"
+    BHMX = "BHMX"
+    BHOX = "BHOX"
+    BHRX = "BHRX"
+    BHSX = "BHSX"
+    BHTX = "BHTX"
+    BHUX = "BHUX"
+    BHWX = "BHWX"
+    BJUX = "BJUX"
+    BKCX = "BKCX"
+    BKDN = "BKDN"
+    BKDX = "BKDX"
+    BKID = "BKID"
+    BKSX = "BKSX"
+    BLGX = "BLGX"
+    BMBL = "BMBL"
+    BMCB = "BMCB"
+    BMCX = "BMCX"
+    BMPX = "BMPX"
+    BMSX = "BMSX"
+    BNBX = "BNBX"
+    BNCX = "BNCX"
+    BNKX = "BNKX"
+    BNPA = "BNPA"
+    BNSB = "BNSB"
+    BNSX = "BNSX"
+    BOCX = "BOCX"
+    BODX = "BODX"
+    BOFA = "BOFA"
+    BORX = "BORX"
+    BOTM = "BOTM"
+    BOTX = "BOTX"
+    BPCX = "BPCX"
+    BPSX = "BPSX"
+    BRCX = "BRCX"
+    BRDX = "BRDX"
+    BRGX = "BRGX"
+    BRMX = "BRMX"
+    BRSX = "BRSX"
+    BRUX = "BRUX"
+    BSBX = "BSBX"
+    BSCX = "BSCX"
+    BTCX = "BTCX"
+    BTUX = "BTUX"
+    BUBX = "BUBX"
+    BUCL = "BUCL"
+    BUCX = "BUCX"
+    BUGX = "BUGX"
+    BUNX = "BUNX"
+    BURX = "BURX"
+    BUSX = "BUSX"
+    BUZX = "BUZX"
+    BVNX = "BVNX"
+    BVSX = "BVSX"
+    BWCX = "BWCX"
+    CALX = "CALX"
+    CBHX = "CBHX"
+    CBIN = "CBIN"
+    CCBL = "CCBL"
+    CCBX = "CCBX"
+    CCCX = "CCCX"
+    CCMX = "CCMX"
+    CCOB = "CCOB"
+    CCUX = "CCUX"
+    CDCX = "CDCX"
+    CEBX = "CEBX"
+    CGBX = "CGBX"
+    CGGX = "CGGX"
+    CHAS = "CHAS"
+    CHAX = "CHAX"
+    CHBX = "CHBX"
+    CHCX = "CHCX"
+    CHDX = "CHDX"
+    CHIX = "CHIX"
+    CHKX = "CHKX"
+    CHPX = "CHPX"
+    CHRX = "CHRX"
+    CHSX = "CHSX"
+    CHTX = "CHTX"
+    CIDX = "CIDX"
+    CITI = "CITI"
+    CITX = "CITX"
+    CIUB = "CIUB"
+    CJAX = "CJAX"
+    CJMX = "CJMX"
+    CLBL = "CLBL"
+    CMCB = "CMCB"
+    CMCX = "CMCX"
+    CMDX = "CMDX"
+    CMLX = "CMLX"
+    CMPX = "CMPX"
+    CMSV = "CMSV"
+    CNRB = "CNRB"
+    CNSX = "CNSX"
+    COAS = "COAS"
+    COCX = "COCX"
+    COLX = "COLX"
+    COMX = "COMX"
+    CONX = "CONX"
+    CORP = "CORP"
+    COSB = "COSB"
+    CPDX = "CPDX"
+    CPSN = "CPSN"
+    CRBX = "CRBX"
+    CRES = "CRES"
+    CRGB = "CRGB"
+    CRLY = "CRLY"
+    CRSX = "CRSX"
+    CRUB = "CRUB"
+    CSBK = "CSBK"
+    CSBX = "CSBX"
+    CTBA = "CTBA"
+    CTBX = "CTBX"
+    CTCB = "CTCB"
+    CTOX = "CTOX"
+    CTUX = "CTUX"
+    CUBX = "CUBX"
+    CUCX = "CUCX"
+    CURX = "CURX"
+    CUTX = "CUTX"
+    CZCX = "CZCX"
+    CZUX = "CZUX"
+    DAAX = "DAAX"
+    DAHX = "DAHX"
+    DAUX = "DAUX"
+    DBAX = "DBAX"
+    DBSS = "DBSS"
+    DCBL = "DCBL"
+    DCBX = "DCBX"
+    DCCX = "DCCX"
+    DCDX = "DCDX"
+    DCEX = "DCEX"
+    DCKX = "DCKX"
+    DCMX = "DCMX"
+    DCNX = "DCNX"
+    DCPX = "DCPX"
+    DCSX = "DCSX"
+    DCTX = "DCTX"
+    DCUB = "DCUB"
+    DCUX = "DCUX"
+    DDBX = "DDBX"
+    DDCX = "DDCX"
+    DDDX = "DDDX"
+    DDHX = "DDHX"
+    DEGX = "DEGX"
+    DENS = "DENS"
+    DEOB = "DEOB"
+    DEOX = "DEOX"
+    DEUT = "DEUT"
+    DEUX = "DEUX"
+    DEVX = "DEVX"
+    DGBX = "DGBX"
+    DHBX = "DHBX"
+    DHKX = "DHKX"
+    DHUX = "DHUX"
+    DIBX = "DIBX"
+    DICG = "DICG"
+    DICX = "DICX"
+    DISX = "DISX"
+    DIUX = "DIUX"
+    DJCX = "DJCX"
+    DKCL = "DKCL"
+    DKSX = "DKSX"
+    DLSC = "DLSC"
+    DLXB = "DLXB"
+    DMCB = "DMCB"
+    DMCX = "DMCX"
+    DMKB = "DMKB"
+    DMKJ = "DMKJ"
+    DNDC = "DNDC"
+    DNSB = "DNSB"
+    DNSX = "DNSX"
+    DOBX = "DOBX"
+    DOHB = "DOHB"
+    DRGX = "DRGX"
+    DSAX = "DSAX"
+    DSBX = "DSBX"
+    DSCB = "DSCB"
+    DSHX = "DSHX"
+    DSPX = "DSPX"
+    DSUX = "DSUX"
+    DTCX = "DTCX"
+    DTPX = "DTPX"
+    DUCX = "DUCX"
+    DUMX = "DUMX"
+    DUNX = "DUNX"
+    DURG = "DURG"
+    DVDX = "DVDX"
+    DYPX = "DYPX"
+    EBIL = "EBIL"
+    ECBL = "ECBL"
+    EDBX = "EDBX"
+    EDCX = "EDCX"
+    EDSX = "EDSX"
+    EIBI = "EIBI"
+    ESAF = "ESAF"
+    ESFB = "ESFB"
+    ESMF = "ESMF"
+    ETCX = "ETCX"
+    ETDX = "ETDX"
+    EUCX = "EUCX"
+    EWCX = "EWCX"
+    FCBX = "FCBX"
+    FCCX = "FCCX"
+    FCOX = "FCOX"
+    FDFX = "FDFX"
+    FDRL = "FDRL"
+    FEKX = "FEKX"
+    FGCB = "FGCB"
+    FINF = "FINF"
+    FINO = "FINO"
+    FINX = "FINX"
+    FIRN = "FIRN"
+    FIRX = "FIRX"
+    FMCX = "FMCX"
+    FRIX = "FRIX"
+    FSCX = "FSCX"
+    FSFB = "FSFB"
+    FZCX = "FZCX"
+    FZSX = "FZSX"
+    GACX = "GACX"
+    GADX = "GADX"
+    GAMX = "GAMX"
+    GANX = "GANX"
+    GBCB = "GBCB"
+    GCBX = "GCBX"
+    GCCX = "GCCX"
+    GCUL = "GCUL"
+    GCUX = "GCUX"
+    GDCB = "GDCB"
+    GDCX = "GDCX"
+    GDDX = "GDDX"
+    GDUX = "GDUX"
+    GGBK = "GGBK"
+    GGCX = "GGCX"
+    GHPX = "GHPX"
+    GKNX = "GKNX"
+    GMBX = "GMBX"
+    GMCX = "GMCX"
+    GMUX = "GMUX"
+    GNCX = "GNCX"
+    GNSX = "GNSX"
+    GODX = "GODX"
+    GOSX = "GOSX"
+    GPCX = "GPCX"
+    GPOX = "GPOX"
+    GRAX = "GRAX"
+    GSBL = "GSBL"
+    GSBX = "GSBX"
+    GSCB = "GSCB"
+    GSCX = "GSCX"
+    GSSX = "GSSX"
+    GTCX = "GTCX"
+    GUBX = "GUBX"
+    GUCX = "GUCX"
+    GUNX = "GUNX"
+    GUOX = "GUOX"
+    HAMX = "HAMX"
+    HANX = "HANX"
+    HARC = "HARC"
+    HCBL = "HCBL"
+    HCBX = "HCBX"
+    HCCX = "HCCX"
+    HCLX = "HCLX"
+    HDCL = "HDCL"
+    HDCX = "HDCX"
+    HDFC = "HDFC"
+    HGBX = "HGBX"
+    HINX = "HINX"
+    HISX = "HISX"
+    HMBX = "HMBX"
+    HMNX = "HMNX"
+    HOCX = "HOCX"
+    HOOX = "HOOX"
+    HPCX = "HPCX"
+    HPSC = "HPSC"
+    HPSX = "HPSX"
+    HSBC = "HSBC"
+    HSBM = "HSBM"
+    HSBX = "HSBX"
+    HSCX = "HSCX"
+    HSDX = "HSDX"
+    HSSX = "HSSX"
+    HUBX = "HUBX"
+    HUCB = "HUCB"
+    HUCH = "HUCH"
+    HUCX = "HUCX"
+    HUSB = "HUSB"
+    HUTX = "HUTX"
+    HVBK = "HVBK"
+    IBBK = "IBBK"
+    IBKL = "IBKL"
+    IBKO = "IBKO"
+    ICBK = "ICBK"
+    ICBL = "ICBL"
+    ICHX = "ICHX"
+    ICIC = "ICIC"
+    ICLL = "ICLL"
+    ICMX = "ICMX"
+    IDFB = "IDFB"
+    IDIB = "IDIB"
+    IDUK = "IDUK"
+    IDUX = "IDUX"
+    ILCB = "ILCB"
+    IMCX = "IMCX"
+    IMPX = "IMPX"
+    INCX = "INCX"
+    INDB = "INDB"
+    INDX = "INDX"
+    IOBA = "IOBA"
+    IPCX = "IPCX"
+    IPOS = "IPOS"
+    IPPB = "IPPB"
+    IPSX = "IPSX"
+    ISBX = "ISBX"
+    ISMX = "ISMX"
+    ITBL = "ITBL"
+    ITCX = "ITCX"
+    ITDX = "ITDX"
+    IUCB = "IUCB"
+    IUCX = "IUCX"
+    IXXX = "IXXX"
+    JACX = "JACX"
+    JAKA = "JAKA"
+    JALX = "JALX"
+    JAMX = "JAMX"
+    JANA = "JANA"
+    JANX = "JANX"
+    JASB = "JASB"
+    JASX = "JASX"
+    JAUX = "JAUX"
+    JBHX = "JBHX"
+    JBIX = "JBIX"
+    JBMX = "JBMX"
+    JCBX = "JCBX"
+    JCCB = "JCCB"
+    JCCX = "JCCX"
+    JCDX = "JCDX"
+    JCHX = "JCHX"
+    JCPX = "JCPX"
+    JCUX = "JCUX"
+    JDCX = "JDCX"
+    JDEX = "JDEX"
+    JGBX = "JGBX"
+    JGCX = "JGCX"
+    JGWX = "JGWX"
+    JHAX = "JHAX"
+    JHSX = "JHSX"
+    JHUX = "JHUX"
+    JIBX = "JIBX"
+    JICX = "JICX"
+    JIDX = "JIDX"
+    JIGX = "JIGX"
+    JIKX = "JIKX"
+    JIMX = "JIMX"
+    JINX = "JINX"
+    JIOP = "JIOP"
+    JIOX = "JIOX"
+    JIRX = "JIRX"
+    JISX = "JISX"
+    JIVX = "JIVX"
+    JJCX = "JJCX"
+    JJHX = "JJHX"
+    JJSB = "JJSB"
+    JKAX = "JKAX"
+    JKCX = "JKCX"
+    JKDX = "JKDX"
+    JKEX = "JKEX"
+    JKHX = "JKHX"
+    JKMX = "JKMX"
+    JKRX = "JKRX"
+    JKSX = "JKSX"
+    JLCX = "JLCX"
+    JLDX = "JLDX"
+    JLNX = "JLNX"
+    JLSX = "JLSX"
+    JLWX = "JLWX"
+    JMAX = "JMAX"
+    JMBX = "JMBX"
+    JMCX = "JMCX"
+    JMDX = "JMDX"
+    JMHX = "JMHX"
+    JMMX = "JMMX"
+    JMOX = "JMOX"
+    JMPX = "JMPX"
+    JMSX = "JMSX"
+    JMYX = "JMYX"
+    JNAX = "JNAX"
+    JNDX = "JNDX"
+    JNSX = "JNSX"
+    JODX = "JODX"
+    JONX = "JONX"
+    JOWX = "JOWX"
+    JPAX = "JPAX"
+    JPCB = "JPCB"
+    JPCX = "JPCX"
+    JRAX = "JRAX"
+    JRKX = "JRKX"
+    JRNX = "JRNX"
+    JRSX = "JRSX"
+    JSAB = "JSAB"
+    JSAX = "JSAX"
+    JSBL = "JSBL"
+    JSBP = "JSBP"
+    JSBX = "JSBX"
+    JSCX = "JSCX"
+    JSDX = "JSDX"
+    JSEX = "JSEX"
+    JSFB = "JSFB"
+    JSHX = "JSHX"
+    JSKX = "JSKX"
+    JSMX = "JSMX"
+    JSOX = "JSOX"
+    JSRX = "JSRX"
+    JSTX = "JSTX"
+    JSVX = "JSVX"
+    JSWX = "JSWX"
+    JTIX = "JTIX"
+    JTSC = "JTSC"
+    JTSX = "JTSX"
+    JUCX = "JUCX"
+    JUSX = "JUSX"
+    JVCX = "JVCX"
+    JXXX = "JXXX"
+    KAAX = "KAAX"
+    KACE = "KACE"
+    KACX = "KACX"
+    KADX = "KADX"
+    KAGX = "KAGX"
+    KAIJ = "KAIJ"
+    KALX = "KALX"
+    KAMX = "KAMX"
+    KANG = "KANG"
+    KANX = "KANX"
+    KARB = "KARB"
+    KARX = "KARX"
+    KASX = "KASX"
+    KATX = "KATX"
+    KAYX = "KAYX"
+    KBCX = "KBCX"
+    KBHB = "KBHB"
+    KBKB = "KBKB"
+    KBNX = "KBNX"
+    KBSX = "KBSX"
+    KCBL = "KCBL"
+    KCBX = "KCBX"
+    KCCB = "KCCB"
+    KCCX = "KCCX"
+    KCDX = "KCDX"
+    KCEX = "KCEX"
+    KCOB = "KCOB"
+    KCUB = "KCUB"
+    KCUX = "KCUX"
+    KDBX = "KDBX"
+    KDCB = "KDCB"
+    KDCX = "KDCX"
+    KDIX = "KDIX"
+    KDNX = "KDNX"
+    KDUX = "KDUX"
+    KEJX = "KEJX"
+    KEMX = "KEMX"
+    KESX = "KESX"
+    KGBX = "KGBX"
+    KGDX = "KGDX"
+    KGRB = "KGRB"
+    KGSX = "KGSX"
+    KHAX = "KHAX"
+    KHCX = "KHCX"
+    KHDX = "KHDX"
+    KHNX = "KHNX"
+    KHTX = "KHTX"
+    KHUX = "KHUX"
+    KICX = "KICX"
+    KJSB = "KJSB"
+    KJSX = "KJSX"
+    KKBK = "KKBK"
+    KKMX = "KKMX"
+    KKSX = "KKSX"
+    KLGB = "KLGB"
+    KLMX = "KLMX"
+    KMCB = "KMCB"
+    KMCX = "KMCX"
+    KMNX = "KMNX"
+    KMSX = "KMSX"
+    KNBX = "KNBX"
+    KNCX = "KNCX"
+    KNNX = "KNNX"
+    KNPX = "KNPX"
+    KNSB = "KNSB"
+    KNSX = "KNSX"
+    KOBX = "KOBX"
+    KOCX = "KOCX"
+    KODX = "KODX"
+    KOEX = "KOEX"
+    KOLH = "KOLH"
+    KORX = "KORX"
+    KOSX = "KOSX"
+    KOTX = "KOTX"
+    KOYX = "KOYX"
+    KPCX = "KPCX"
+    KRCX = "KRCX"
+    KRDX = "KRDX"
+    KRIX = "KRIX"
+    KRMX = "KRMX"
+    KRNX = "KRNX"
+    KRTH = "KRTH"
+    KRTX = "KRTX"
+    KSBK = "KSBK"
+    KSBX = "KSBX"
+    KSCB = "KSCB"
+    KSCX = "KSCX"
+    KSMX = "KSMX"
+    KSNX = "KSNX"
+    KSTX = "KSTX"
+    KSUX = "KSUX"
+    KTBX = "KTBX"
+    KTCX = "KTCX"
+    KTDX = "KTDX"
+    KTTX = "KTTX"
+    KUBX = "KUBX"
+    KUCB = "KUCB"
+    KUCX = "KUCX"
+    KUKX = "KUKX"
+    KULX = "KULX"
+    KUMX = "KUMX"
+    KUNS = "KUNS"
+    KUOB = "KUOB"
+    KURX = "KURX"
+    KUTX = "KUTX"
+    KVBL = "KVBL"
+    KVCX = "KVCX"
+    KVGB = "KVGB"
+    KYDX = "KYDX"
+    LACX = "LACX"
+    LATX = "LATX"
+    LAVB = "LAVB"
+    LBMX = "LBMX"
+    LCBX = "LCBX"
+    LCCX = "LCCX"
+    LDCX = "LDCX"
+    LDPX = "LDPX"
+    LDRX = "LDRX"
+    LECX = "LECX"
+    LICB = "LICB"
+    LKBL = "LKBL"
+    LKCX = "LKCX"
+    LKHX = "LKHX"
+    LKMX = "LKMX"
+    LMNX = "LMNX"
+    LNSX = "LNSX"
+    LOKX = "LOKX"
+    LONX = "LONX"
+    LUCX = "LUCX"
+    LULX = "LULX"
+    MABL = "MABL"
+    MACX = "MACX"
+    MADX = "MADX"
+    MAGX = "MAGX"
+    MAHB = "MAHB"
+    MAHG = "MAHG"
+    MAHX = "MAHX"
+    MAJX = "MAJX"
+    MAKX = "MAKX"
+    MALX = "MALX"
+    MAMX = "MAMX"
+    MANX = "MANX"
+    MAPX = "MAPX"
+    MASX = "MASX"
+    MAUX = "MAUX"
+    MAVX = "MAVX"
+    MAWX = "MAWX"
+    MAYX = "MAYX"
+    MBCX = "MBCX"
+    MBGX = "MBGX"
+    MBLX = "MBLX"
+    MCAB = "MCAB"
+    MCAX = "MCAX"
+    MCBL = "MCBL"
+    MCBX = "MCBX"
+    MCCX = "MCCX"
+    MCDX = "MCDX"
+    MCLX = "MCLX"
+    MCOX = "MCOX"
+    MCSX = "MCSX"
+    MCUX = "MCUX"
+    MDBK = "MDBK"
+    MDCB = "MDCB"
+    MDCX = "MDCX"
+    MDEX = "MDEX"
+    MDGX = "MDGX"
+    MDIX = "MDIX"
+    MDMX = "MDMX"
+    MDPX = "MDPX"
+    MEDX = "MEDX"
+    MERX = "MERX"
+    MEUX = "MEUX"
+    MFCX = "MFCX"
+    MFUX = "MFUX"
+    MGBX = "MGBX"
+    MGCB = "MGCB"
+    MGCX = "MGCX"
+    MGDX = "MGDX"
+    MGRB = "MGRB"
+    MGSX = "MGSX"
+    MGUX = "MGUX"
+    MHCB = "MHCB"
+    MHCX = "MHCX"
+    MHEX = "MHEX"
+    MHLX = "MHLX"
+    MHMX = "MHMX"
+    MHNX = "MHNX"
+    MHSX = "MHSX"
+    MHUX = "MHUX"
+    MIZX = "MIZX"
+    MJCX = "MJCX"
+    MKPB = "MKPB"
+    MKUX = "MKUX"
+    MKYX = "MKYX"
+    MLCG = "MLCG"
+    MLDX = "MLDX"
+    MMCX = "MMCX"
+    MMMX = "MMMX"
+    MNBX = "MNBX"
+    MNCX = "MNCX"
+    MNSX = "MNSX"
+    MOGX = "MOGX"
+    MOUX = "MOUX"
+    MPCX = "MPCX"
+    MPDX = "MPDX"
+    MPRX = "MPRX"
+    MRBX = "MRBX"
+    MRTX = "MRTX"
+    MSAX = "MSAX"
+    MSBL = "MSBL"
+    MSBX = "MSBX"
+    MSCI = "MSCI"
+    MSCX = "MSCX"
+    MSHQ = "MSHQ"
+    MSLM = "MSLM"
+    MSNU = "MSNU"
+    MSNX = "MSNX"
+    MSOX = "MSOX"
+    MSSX = "MSSX"
+    MUBL = "MUBL"
+    MUBX = "MUBX"
+    MUCG = "MUCG"
+    MUCX = "MUCX"
+    MUDX = "MUDX"
+    MUNX = "MUNX"
+    MUPX = "MUPX"
+    MURX = "MURX"
+    MUSX = "MUSX"
+    MVCB = "MVCB"
+    MVCX = "MVCX"
+    MVIX = "MVIX"
+    MXXX = "MXXX"
+    MYAX = "MYAX"
+    MYCX = "MYCX"
+    MYSX = "MYSX"
+    MZCX = "MZCX"
+    MZRX = "MZRX"
+    NABX = "NABX"
+    NACX = "NACX"
+    NADX = "NADX"
+    NAGX = "NAGX"
+    NAIX = "NAIX"
+    NALX = "NALX"
+    NANX = "NANX"
+    NASX = "NASX"
+    NATA = "NATA"
+    NAUX = "NAUX"
+    NAVX = "NAVX"
+    NAWX = "NAWX"
+    NBAD = "NBAD"
+    NBBX = "NBBX"
+    NBCX = "NBCX"
+    NBMX = "NBMX"
+    NBRD = "NBRD"
+    NCBL = "NCBL"
+    NCBX = "NCBX"
+    NCCX = "NCCX"
+    NCOX = "NCOX"
+    NCUB = "NCUB"
+    NCUX = "NCUX"
+    NDCB = "NDCB"
+    NDCX = "NDCX"
+    NDDX = "NDDX"
+    NDGX = "NDGX"
+    NDIX = "NDIX"
+    NDOX = "NDOX"
+    NESF = "NESF"
+    NEYX = "NEYX"
+    NGBX = "NGBX"
+    NGKX = "NGKX"
+    NGNX = "NGNX"
+    NGRX = "NGRX"
+    NGSB = "NGSB"
+    NGSX = "NGSX"
+    NGUX = "NGUX"
+    NICB = "NICB"
+    NIDX = "NIDX"
+    NILX = "NILX"
+    NIRX = "NIRX"
+    NIUX = "NIUX"
+    NJBK = "NJBK"
+    NJCX = "NJCX"
+    NJGX = "NJGX"
+    NJMX = "NJMX"
+    NJSX = "NJSX"
+    NKGS = "NKGS"
+    NLGX = "NLGX"
+    NLUX = "NLUX"
+    NMCB = "NMCB"
+    NMCX = "NMCX"
+    NMGB = "NMGB"
+    NNCX = "NNCX"
+    NNSB = "NNSB"
+    NNSX = "NNSX"
+    NOBX = "NOBX"
+    NOIX = "NOIX"
+    NOSC = "NOSC"
+    NPCX = "NPCX"
+    NPKX = "NPKX"
+    NPPX = "NPPX"
+    NRDX = "NRDX"
+    NRMX = "NRMX"
+    NSBB = "NSBB"
+    NSBX = "NSBX"
+    NSCX = "NSCX"
+    NSGX = "NSGX"
+    NSIX = "NSIX"
+    NSJX = "NSJX"
+    NSMX = "NSMX"
+    NSPB = "NSPB"
+    NSPX = "NSPX"
+    NSRX = "NSRX"
+    NTBL = "NTBL"
+    NUBX = "NUBX"
+    NUCB = "NUCB"
+    NUCX = "NUCX"
+    NULX = "NULX"
+    NVCX = "NVCX"
+    NVNM = "NVNM"
+    NVSX = "NVSX"
+    NWCX = "NWCX"
+    ODCX = "ODCX"
+    ODGB = "ODGB"
+    OIBA = "OIBA"
+    OMCX = "OMCX"
+    ONSX = "ONSX"
+    ORBC = "ORBC"
+    ORCB = "ORCB"
+    OSMX = "OSMX"
+    PABX = "PABX"
+    PACX = "PACX"
+    PADX = "PADX"
+    PALX = "PALX"
+    PANX = "PANX"
+    PARX = "PARX"
+    PASX = "PASX"
+    PATX = "PATX"
+    PAYX = "PAYX"
+    PBGX = "PBGX"
+    PCBL = "PCBL"
+    PCBX = "PCBX"
+    PCCB = "PCCB"
+    PCCX = "PCCX"
+    PCLX = "PCLX"
+    PCMX = "PCMX"
+    PCOX = "PCOX"
+    PCPX = "PCPX"
+    PCSX = "PCSX"
+    PCTX = "PCTX"
+    PCUX = "PCUX"
+    PDBX = "PDBX"
+    PDCX = "PDCX"
+    PDNX = "PDNX"
+    PDSX = "PDSX"
+    PDUX = "PDUX"
+    PGBX = "PGBX"
+    PGCX = "PGCX"
+    PGRX = "PGRX"
+    PGTX = "PGTX"
+    PHIX = "PHIX"
+    PITX = "PITX"
+    PJSB = "PJSB"
+    PKBX = "PKBX"
+    PKDX = "PKDX"
+    PKGB = "PKGB"
+    PLOX = "PLOX"
+    PLUX = "PLUX"
+    PMCB = "PMCB"
+    PMCX = "PMCX"
+    PMEC = "PMEC"
+    PMNX = "PMNX"
+    PNCX = "PNCX"
+    PNMX = "PNMX"
+    PNPX = "PNPX"
+    PNSX = "PNSX"
+    PPBX = "PPBX"
+    PPCX = "PPCX"
+    PRCX = "PRCX"
+    PREX = "PREX"
+    PROX = "PROX"
+    PRPX = "PRPX"
+    PRSX = "PRSX"
+    PRTH = "PRTH"
+    PRUX = "PRUX"
+    PSBL = "PSBL"
+    PSBX = "PSBX"
+    PSCX = "PSCX"
+    PSIB = "PSIB"
+    PSRX = "PSRX"
+    PSSX = "PSSX"
+    PTCX = "PTCX"
+    PTNX = "PTNX"
+    PTSX = "PTSX"
+    PUBX = "PUBX"
+    PUCB = "PUCB"
+    PUCX = "PUCX"
+    PUDX = "PUDX"
+    PUGX = "PUGX"
+    PUNB = "PUNB"
+    PUNX = "PUNX"
+    PURX = "PURX"
+    PUSD = "PUSD"
+    PUSX = "PUSX"
+    PUUX = "PUUX"
+    PVAX = "PVAX"
+    PVCX = "PVCX"
+    PVVX = "PVVX"
+    PWUX = "PWUX"
+    PYCX = "PYCX"
+    PYTM = "PYTM"
+    QNBA = "QNBA"
+    QNBX = "QNBX"
+    QUCX = "QUCX"
+    RABO = "RABO"
+    RACX = "RACX"
+    RAEX = "RAEX"
+    RAJX = "RAJX"
+    RAKX = "RAKX"
+    RAMX = "RAMX"
+    RANX = "RANX"
+    RATN = "RATN"
+    RAUX = "RAUX"
+    RBBX = "RBBX"
+    RBCX = "RBCX"
+    RBIH = "RBIH"
+    RBIN = "RBIN"
+    RBIP = "RBIP"
+    RBIS = "RBIS"
+    RCBX = "RCBX"
+    RCCX = "RCCX"
+    RCDX = "RCDX"
+    RCMX = "RCMX"
+    RCUX = "RCUX"
+    RDCB = "RDCB"
+    RDCX = "RDCX"
+    RDNX = "RDNX"
+    REBX = "REBX"
+    RECX = "RECX"
+    REWX = "REWX"
+    RGCX = "RGCX"
+    RGSX = "RGSX"
+    RHMX = "RHMX"
+    RJCX = "RJCX"
+    RJJX = "RJJX"
+    RJNX = "RJNX"
+    RJTX = "RJTX"
+    RKCX = "RKCX"
+    RLUX = "RLUX"
+    RMGB = "RMGB"
+    RNBX = "RNBX"
+    RNDX = "RNDX"
+    RNGX = "RNGX"
+    RNSB = "RNSB"
+    RNSX = "RNSX"
+    ROCX = "ROCX"
+    ROHX = "ROHX"
+    RPUX = "RPUX"
+    RRBP = "RRBP"
+    RRSX = "RRSX"
+    RSBL = "RSBL"
+    RSBX = "RSBX"
+    RSCB = "RSCB"
+    RSSB = "RSSB"
+    RSSX = "RSSX"
+    RSUX = "RSUX"
+    RSVX = "RSVX"
+    RUCX = "RUCX"
+    RUKX = "RUKX"
+    RUMX = "RUMX"
+    RZSX = "RZSX"
+    SABR = "SABR"
+    SABX = "SABX"
+    SACB = "SACB"
+    SACX = "SACX"
+    SADX = "SADX"
+    SAGX = "SAGX"
+    SAHE = "SAHE"
+    SAHX = "SAHX"
+    SAIX = "SAIX"
+    SALX = "SALX"
+    SAMX = "SAMX"
+    SANT = "SANT"
+    SANX = "SANX"
+    SAOX = "SAOX"
+    SAPX = "SAPX"
+    SARX = "SARX"
+    SASA = "SASA"
+    SASX = "SASX"
+    SATX = "SATX"
+    SAUX = "SAUX"
+    SAVX = "SAVX"
+    SAWX = "SAWX"
+    SBBJ = "SBBJ"
+    SBCR = "SBCR"
+    SBCX = "SBCX"
+    SBHY = "SBHY"
+    SBIN = "SBIN"
+    SBKX = "SBKX"
+    SBLD = "SBLD"
+    SBLS = "SBLS"
+    SBLX = "SBLX"
+    SBMX = "SBMX"
+    SBMY = "SBMY"
+    SBNX = "SBNX"
+    SBPS = "SBPS"
+    SBPX = "SBPX"
+    SBSX = "SBSX"
+    SBTR = "SBTR"
+    SBUJ = "SBUJ"
+    SBUX = "SBUX"
+    SCBL = "SCBL"
+    SCBX = "SCBX"
+    SCCX = "SCCX"
+    SCDX = "SCDX"
+    SCIX = "SCIX"
+    SCNX = "SCNX"
+    SCOB = "SCOB"
+    SCOX = "SCOX"
+    SCPX = "SCPX"
+    SCSX = "SCSX"
+    SCUX = "SCUX"
+    SDBX = "SDBX"
+    SDCB = "SDCB"
+    SDCE = "SDCE"
+    SDCX = "SDCX"
+    SDHX = "SDHX"
+    SDSX = "SDSX"
+    SDTC = "SDTC"
+    SDTX = "SDTX"
+    SDUX = "SDUX"
+    SECB = "SECB"
+    SEMX = "SEMX"
+    SENX = "SENX"
+    SEUX = "SEUX"
+    SEWX = "SEWX"
+    SGCX = "SGCX"
+    SGDX = "SGDX"
+    SGLX = "SGLX"
+    SGSX = "SGSX"
+    SGUX = "SGUX"
+    SHAX = "SHAX"
+    SHBK = "SHBK"
+    SHBX = "SHBX"
+    SHCX = "SHCX"
+    SHEX = "SHEX"
+    SHGX = "SHGX"
+    SHIX = "SHIX"
+    SHKX = "SHKX"
+    SHMX = "SHMX"
+    SHNX = "SHNX"
+    SHOX = "SHOX"
+    SHRX = "SHRX"
+    SHSX = "SHSX"
+    SHUB = "SHUB"
+    SHUX = "SHUX"
+    SIBL = "SIBL"
+    SIBX = "SIBX"
+    SICX = "SICX"
+    SIDB = "SIDB"
+    SIDC = "SIDC"
+    SIDX = "SIDX"
+    SIGX = "SIGX"
+    SIHX = "SIHX"
+    SIKX = "SIKX"
+    SINX = "SINX"
+    SIRX = "SIRX"
+    SISX = "SISX"
+    SITX = "SITX"
+    SIWX = "SIWX"
+    SJGX = "SJGX"
+    SJSB = "SJSB"
+    SJSX = "SJSX"
+    SKCX = "SKCX"
+    SKKX = "SKKX"
+    SKNB = "SKNB"
+    SKNX = "SKNX"
+    SKSB = "SKSB"
+    SKUX = "SKUX"
+    SLAX = "SLAX"
+    SLCX = "SLCX"
+    SMBC = "SMBC"
+    SMBX = "SMBX"
+    SMCB = "SMCB"
+    SMCX = "SMCX"
+    SMEX = "SMEX"
+    SMMX = "SMMX"
+    SMNB = "SMNB"
+    SMNX = "SMNX"
+    SMPX = "SMPX"
+    SMSX = "SMSX"
+    SMTX = "SMTX"
+    SMUX = "SMUX"
+    SMVC = "SMVC"
+    SMWX = "SMWX"
+    SNAX = "SNAX"
+    SNBK = "SNBK"
+    SNBX = "SNBX"
+    SNCX = "SNCX"
+    SNDX = "SNDX"
+    SNGX = "SNGX"
+    SNKX = "SNKX"
+    SNLX = "SNLX"
+    SNPX = "SNPX"
+    SNSV = "SNSV"
+    SNSX = "SNSX"
+    SOBX = "SOBX"
+    SOGE = "SOGE"
+    SOLX = "SOLX"
+    SONX = "SONX"
+    SPBX = "SPBX"
+    SPCB = "SPCB"
+    SPCX = "SPCX"
+    SPNX = "SPNX"
+    SPSX = "SPSX"
+    SPTX = "SPTX"
+    SRCB = "SRCB"
+    SRCX = "SRCX"
+    SREX = "SREX"
+    SRGX = "SRGX"
+    SRHX = "SRHX"
+    SRSX = "SRSX"
+    SSBL = "SSBL"
+    SSBX = "SSBX"
+    SSDX = "SSDX"
+    SSHX = "SSHX"
+    SSKX = "SSKX"
+    SSLX = "SSLX"
+    SSNX = "SSNX"
+    SSOX = "SSOX"
+    SSSX = "SSSX"
+    SSWX = "SSWX"
+    STBP = "STBP"
+    STCB = "STCB"
+    STCX = "STCX"
+    STDX = "STDX"
+    STRX = "STRX"
+    SUBX = "SUBX"
+    SUCX = "SUCX"
+    SUDX = "SUDX"
+    SULX = "SULX"
+    SUMX = "SUMX"
+    SUNB = "SUNB"
+    SURX = "SURX"
+    SURY = "SURY"
+    SUSB = "SUSB"
+    SUSX = "SUSX"
+    SUTB = "SUTB"
+    SUVX = "SUVX"
+    SVAX = "SVAX"
+    SVBL = "SVBL"
+    SVCB = "SVCB"
+    SVCX = "SVCX"
+    SVGX = "SVGX"
+    SVMC = "SVMC"
+    SVNX = "SVNX"
+    SVOX = "SVOX"
+    SVRX = "SVRX"
+    SVSH = "SVSH"
+    SVSX = "SVSX"
+    SWMX = "SWMX"
+    SWSX = "SWSX"
+    SXXX = "SXXX"
+    SYNB = "SYNB"
+    TACX = "TACX"
+    TADX = "TADX"
+    TAMX = "TAMX"
+    TAPX = "TAPX"
+    TASX = "TASX"
+    TAUB = "TAUB"
+    TBCX = "TBCX"
+    TBDX = "TBDX"
+    TBHX = "TBHX"
+    TBMC = "TBMC"
+    TBMX = "TBMX"
+    TBNS = "TBNS"
+    TBPX = "TBPX"
+    TBSB = "TBSB"
+    TBSX = "TBSX"
+    TBTX = "TBTX"
+    TBUX = "TBUX"
+    TCBX = "TCBX"
+    TCCX = "TCCX"
+    TCHX = "TCHX"
+    TCPX = "TCPX"
+    TCUB = "TCUB"
+    TCUX = "TCUX"
+    TDBX = "TDBX"
+    TDCB = "TDCB"
+    TDCX = "TDCX"
+    TDIX = "TDIX"
+    TDMX = "TDMX"
+    TDPX = "TDPX"
+    TDSX = "TDSX"
+    TECX = "TECX"
+    TEHX = "TEHX"
+    TEMX = "TEMX"
+    TESX = "TESX"
+    TETX = "TETX"
+    TFCX = "TFCX"
+    TGBX = "TGBX"
+    TGCG = "TGCG"
+    TGCX = "TGCX"
+    TGDX = "TGDX"
+    TGMB = "TGMB"
+    TGNX = "TGNX"
+    TGUX = "TGUX"
+    THCX = "THCX"
+    THMX = "THMX"
+    THOX = "THOX"
+    THRS = "THRS"
+    THRX = "THRX"
+    THWX = "THWX"
+    TIDX = "TIDX"
+    TIRX = "TIRX"
+    TJAX = "TJAX"
+    TJBX = "TJBX"
+    TJCX = "TJCX"
+    TJDX = "TJDX"
+    TJMX = "TJMX"
+    TJNX = "TJNX"
+    TJSB = "TJSB"
+    TKAX = "TKAX"
+    TKCX = "TKCX"
+    TKDX = "TKDX"
+    TKTX = "TKTX"
+    TKUX = "TKUX"
+    TLPX = "TLPX"
+    TMAX = "TMAX"
+    TMBL = "TMBL"
+    TMBX = "TMBX"
+    TMCX = "TMCX"
+    TMNX = "TMNX"
+    TMPX = "TMPX"
+    TMSB = "TMSB"
+    TMSC = "TMSC"
+    TMSX = "TMSX"
+    TMTX = "TMTX"
+    TMUX = "TMUX"
+    TNBX = "TNBX"
+    TNCB = "TNCB"
+    TNCX = "TNCX"
+    TNDC = "TNDC"
+    TNEX = "TNEX"
+    TNHX = "TNHX"
+    TNIX = "TNIX"
+    TNKX = "TNKX"
+    TNMX = "TNMX"
+    TNSC = "TNSC"
+    TNUX = "TNUX"
+    TOCX = "TOCX"
+    TPCX = "TPCX"
+    TPDX = "TPDX"
+    TPSC = "TPSC"
+    TPSX = "TPSX"
+    TPUX = "TPUX"
+    TRAX = "TRAX"
+    TRDX = "TRDX"
+    TSAB = "TSAB"
+    TSAX = "TSAX"
+    TSBX = "TSBX"
+    TSCX = "TSCX"
+    TSDX = "TSDX"
+    TSIX = "TSIX"
+    TSKX = "TSKX"
+    TSMX = "TSMX"
+    TSNX = "TSNX"
+    TSPX = "TSPX"
+    TSSB = "TSSB"
+    TSSX = "TSSX"
+    TSUX = "TSUX"
+    TTBX = "TTBX"
+    TTCB = "TTCB"
+    TTCX = "TTCX"
+    TTGX = "TTGX"
+    TTLX = "TTLX"
+    TTUX = "TTUX"
+    TUBX = "TUBX"
+    TUCL = "TUCL"
+    TUCX = "TUCX"
+    TUDX = "TUDX"
+    TUMX = "TUMX"
+    TUNX = "TUNX"
+    TUOX = "TUOX"
+    TUPX = "TUPX"
+    TURX = "TURX"
+    TVBX = "TVBX"
+    TVDX = "TVDX"
+    TVPX = "TVPX"
+    TVUX = "TVUX"
+    TYCX = "TYCX"
+    UBBX = "UBBX"
+    UBGX = "UBGX"
+    UBIN = "UBIN"
+    UCBA = "UCBA"
+    UCBS = "UCBS"
+    UCBX = "UCBX"
+    UCCX = "UCCX"
+    UCDX = "UCDX"
+    UCUX = "UCUX"
+    UGBX = "UGBX"
+    UICX = "UICX"
+    UJSX = "UJSX"
+    UJVN = "UJVN"
+    UKGX = "UKGX"
+    UMAX = "UMAX"
+    UMCX = "UMCX"
+    UMSX = "UMSX"
+    UMUX = "UMUX"
+    UNAX = "UNAX"
+    UNIX = "UNIX"
+    UNMX = "UNMX"
+    UNSX = "UNSX"
+    UOVB = "UOVB"
+    UPCB = "UPCB"
+    UPCX = "UPCX"
+    UPNX = "UPNX"
+    URBN = "URBN"
+    URCX = "URCX"
+    URDX = "URDX"
+    URMX = "URMX"
+    UROX = "UROX"
+    USFB = "USFB"
+    USNX = "USNX"
+    UTBI = "UTBI"
+    UTBX = "UTBX"
+    UTCX = "UTCX"
+    UTGX = "UTGX"
+    UTIB = "UTIB"
+    UTKS = "UTKS"
+    UTKX = "UTKX"
+    UTZX = "UTZX"
+    UUCB = "UUCB"
+    UUCX = "UUCX"
+    UXXX = "UXXX"
+    VADX = "VADX"
+    VAIX = "VAIX"
+    VANX = "VANX"
+    VARA = "VARA"
+    VASJ = "VASJ"
+    VASX = "VASX"
+    VAUX = "VAUX"
+    VCAX = "VCAX"
+    VCBX = "VCBX"
+    VCCX = "VCCX"
+    VCNB = "VCNB"
+    VCOB = "VCOB"
+    VCOX = "VCOX"
+    VDCX = "VDCX"
+    VDYX = "VDYX"
+    VEDX = "VEDX"
+    VERX = "VERX"
+    VGBX = "VGBX"
+    VHDX = "VHDX"
+    VICX = "VICX"
+    VIDX = "VIDX"
+    VIJB = "VIJB"
+    VIJX = "VIJX"
+    VIKX = "VIKX"
+    VIMX = "VIMX"
+    VIRX = "VIRX"
+    VISX = "VISX"
+    VJSX = "VJSX"
+    VKCX = "VKCX"
+    VKSX = "VKSX"
+    VMCX = "VMCX"
+    VMMX = "VMMX"
+    VMUX = "VMUX"
+    VNSX = "VNSX"
+    VRDX = "VRDX"
+    VSBL = "VSBL"
+    VSBX = "VSBX"
+    VSCX = "VSCX"
+    VSSX = "VSSX"
+    VSVX = "VSVX"
+    VUCX = "VUCX"
+    VVCX = "VVCX"
+    VVSB = "VVSB"
+    VYAX = "VYAX"
+    VYPX = "VYPX"
+    VYSA = "VYSA"
+    WACX = "WACX"
+    WAIX = "WAIX"
+    WARX = "WARX"
+    WAUX = "WAUX"
+    WBSC = "WBSC"
+    WCBX = "WCBX"
+    WDCX = "WDCX"
+    WKGX = "WKGX"
+    WNBX = "WNBX"
+    WPAC = "WPAC"
+    WRCX = "WRCX"
+    WUCX = "WUCX"
+    WZUX = "WZUX"
+    XJKG = "XJKG"
+    YADX = "YADX"
+    YAVX = "YAVX"
+    YCBX = "YCBX"
+    YDCX = "YDCX"
+    YESB = "YESB"
+    YLNX = "YLNX"
+    YMSX = "YMSX"
+    YNCX = "YNCX"
+    YNSX = "YNSX"
+    ZBBX = "ZBBX"
+    ZBSX = "ZBSX"
+    ZCBL = "ZCBL"
+    ZIBX = "ZIBX"
+    ZILX = "ZILX"
+    ZIMX = "ZIMX"
+    ZISX = "ZISX"
+    ZLLX = "ZLLX"
+    ZMMX = "ZMMX"
+    ZRNB = "ZRNB"
+    ZSAX = "ZSAX"
+    ZSBG = "ZSBG"
+    ZSBL = "ZSBL"
+    ZSBX = "ZSBX"
+    ZSGX = "ZSGX"
+    ZSHX = "ZSHX"
+    ZSJX = "ZSJX"
+    ZSKX = "ZSKX"
+    ZSLX = "ZSLX"
+    ZSMX = "ZSMX"
 )
 
 var bankCodes = map[string]bool{
-	"AACX": true,
-	"ABBL": true,
-	"ABCX": true,
-	"ABDX": true,
-	"ABEX": true,
-	"ABHY": true,
-	"ABNA": true,
-	"ABPB": true,
-	"ABSB": true,
-	"ABUX": true,
-	"ACAX": true,
-	"ACBX": true,
-	"ACCX": true,
-	"ACKX": true,
-	"ACOX": true,
-	"ACUB": true,
-	"ACUX": true,
-	"ADBX": true,
-	"ADCB": true,
-	"ADCC": true,
-	"ADCX": true,
-	"ADDX": true,
-	"AGCX": true,
-	"AGDX": true,
-	"AGRX": true,
-	"AGSX": true,
-	"AGUX": true,
-	"AGVX": true,
-	"AHDC": true,
-	"AHMX": true,
-	"AHUX": true,
-	"AIRP": true,
-	"AJAR": true,
-	"AJHC": true,
-	"AJKB": true,
-	"AJMX": true,
-	"AJNX": true,
-	"AJPX": true,
-	"AJSX": true,
-	"AJUX": true,
-	"AKJB": true,
-	"AKKB": true,
-	"AKMX": true,
-	"AKOX": true,
-	"ALAX": true,
-	"ALIX": true,
-	"ALLA": true,
-	"ALLX": true,
-	"ALWX": true,
-	"AMAX": true,
-	"AMBX": true,
-	"AMCB": true,
-	"AMCX": true,
-	"AMDN": true,
-	"AMMX": true,
-	"AMNX": true,
-	"AMRX": true,
-	"AMSB": true,
-	"AMSX": true,
-	"ANBX": true,
-	"ANDB": true,
-	"ANDX": true,
-	"ANMX": true,
-	"ANSX": true,
-	"ANUX": true,
-	"ANZB": true,
-	"APBL": true,
-	"APCX": true,
-	"APGB": true,
-	"APGV": true,
-	"APGX": true,
-	"APJX": true,
-	"APMC": true,
-	"APMX": true,
-	"APNX": true,
-	"APRR": true,
-	"APRX": true,
-	"APSX": true,
-	"ARBL": true,
-	"ARCX": true,
-	"ARMX": true,
-	"ARYX": true,
-	"ASBL": true,
-	"ASBX": true,
-	"ASHX": true,
-	"ASKX": true,
-	"ASNX": true,
-	"ASOX": true,
-	"ASSX": true,
-	"AUBL": true,
-	"AUBX": true,
-	"AUCB": true,
-	"AUCX": true,
-	"AUGX": true,
-	"AURX": true,
-	"AVDX": true,
-	"AWCX": true,
-	"AWUX": true,
-	"AZAX": true,
-	"AZPX": true,
-	"AZSX": true,
-	"AZUX": true,
-	"BACB": true,
-	"BACX": true,
-	"BADX": true,
-	"BAGX": true,
-	"BALB": true,
-	"BALX": true,
-	"BANX": true,
-	"BARA": true,
-	"BARB": true,
-	"BARC": true,
-	"BARX": true,
-	"BASX": true,
-	"BAUX": true,
-	"BAVX": true,
-	"BAWX": true,
-	"BBDX": true,
-	"BBKM": true,
-	"BBLX": true,
-	"BBRX": true,
-	"BBSX": true,
-	"BBUX": true,
-	"BBVX": true,
-	"BCBM": true,
-	"BCBX": true,
-	"BCCB": true,
-	"BCCX": true,
-	"BCEX": true,
-	"BCEY": true,
-	"BCOX": true,
-	"BCUB": true,
-	"BCUX": true,
-	"BDBB": true,
-	"BDBL": true,
-	"BDBX": true,
-	"BDCX": true,
-	"BDDX": true,
-	"BDIX": true,
-	"BDNX": true,
-	"BDOX": true,
-	"BDUX": true,
-	"BEDX": true,
-	"BELX": true,
-	"BERX": true,
-	"BFUX": true,
-	"BGBX": true,
-	"BGCX": true,
-	"BGGX": true,
-	"BGUX": true,
-	"BGVX": true,
-	"BHAX": true,
-	"BHBX": true,
-	"BHCX": true,
-	"BHDX": true,
-	"BHEX": true,
-	"BHGX": true,
-	"BHIX": true,
-	"BHJX": true,
-	"BHMX": true,
-	"BHOX": true,
-	"BHRX": true,
-	"BHSX": true,
-	"BHTX": true,
-	"BHUX": true,
-	"BHWX": true,
-	"BJUX": true,
-	"BKCX": true,
-	"BKDN": true,
-	"BKDX": true,
-	"BKID": true,
-	"BKSX": true,
-	"BLGX": true,
-	"BMBL": true,
-	"BMCB": true,
-	"BMCX": true,
-	"BMPX": true,
-	"BMSX": true,
-	"BNBX": true,
-	"BNCX": true,
-	"BNKX": true,
-	"BNPA": true,
-	"BNSB": true,
-	"BNSX": true,
-	"BOCX": true,
-	"BODX": true,
-	"BOFA": true,
-	"BORX": true,
-	"BOTM": true,
-	"BOTX": true,
-	"BPCX": true,
-	"BPSX": true,
-	"BRCX": true,
-	"BRDX": true,
-	"BRGX": true,
-	"BRMX": true,
-	"BRSX": true,
-	"BRUX": true,
-	"BSBX": true,
-	"BSCX": true,
-	"BTCX": true,
-	"BTUX": true,
-	"BUBX": true,
-	"BUCL": true,
-	"BUCX": true,
-	"BUGX": true,
-	"BUNX": true,
-	"BURX": true,
-	"BUSX": true,
-	"BUZX": true,
-	"BVNX": true,
-	"BVSX": true,
-	"BWCX": true,
-	"CALX": true,
-	"CBHX": true,
-	"CBIN": true,
-	"CCBL": true,
-	"CCBX": true,
-	"CCCX": true,
-	"CCMX": true,
-	"CCOB": true,
-	"CCUX": true,
-	"CDCX": true,
-	"CEBX": true,
-	"CGBX": true,
-	"CGGX": true,
-	"CHAS": true,
-	"CHAX": true,
-	"CHBX": true,
-	"CHCX": true,
-	"CHDX": true,
-	"CHIX": true,
-	"CHKX": true,
-	"CHPX": true,
-	"CHRX": true,
-	"CHSX": true,
-	"CHTX": true,
-	"CIDX": true,
-	"CITI": true,
-	"CITX": true,
-	"CIUB": true,
-	"CJAX": true,
-	"CJMX": true,
-	"CLBL": true,
-	"CMCB": true,
-	"CMCX": true,
-	"CMDX": true,
-	"CMLX": true,
-	"CMPX": true,
-	"CMSV": true,
-	"CNRB": true,
-	"CNSX": true,
-	"COAS": true,
-	"COCX": true,
-	"COLX": true,
-	"COMX": true,
-	"CONX": true,
-	"CORP": true,
-	"COSB": true,
-	"CPDX": true,
-	"CPSN": true,
-	"CRBX": true,
-	"CRES": true,
-	"CRGB": true,
-	"CRLY": true,
-	"CRSX": true,
-	"CRUB": true,
-	"CSBK": true,
-	"CSBX": true,
-	"CTBA": true,
-	"CTBX": true,
-	"CTCB": true,
-	"CTOX": true,
-	"CTUX": true,
-	"CUBX": true,
-	"CUCX": true,
-	"CURX": true,
-	"CUTX": true,
-	"CZCX": true,
-	"CZUX": true,
-	"DAAX": true,
-	"DAHX": true,
-	"DAUX": true,
-	"DBAX": true,
-	"DBSS": true,
-	"DCBL": true,
-	"DCBX": true,
-	"DCCX": true,
-	"DCDX": true,
-	"DCEX": true,
-	"DCKX": true,
-	"DCMX": true,
-	"DCNX": true,
-	"DCPX": true,
-	"DCSX": true,
-	"DCTX": true,
-	"DCUB": true,
-	"DCUX": true,
-	"DDBX": true,
-	"DDCX": true,
-	"DDDX": true,
-	"DDHX": true,
-	"DEGX": true,
-	"DENS": true,
-	"DEOB": true,
-	"DEOX": true,
-	"DEUT": true,
-	"DEUX": true,
-	"DEVX": true,
-	"DGBX": true,
-	"DHBX": true,
-	"DHKX": true,
-	"DHUX": true,
-	"DIBX": true,
-	"DICG": true,
-	"DICX": true,
-	"DISX": true,
-	"DIUX": true,
-	"DJCX": true,
-	"DKCL": true,
-	"DKSX": true,
-	"DLSC": true,
-	"DLXB": true,
-	"DMCB": true,
-	"DMCX": true,
-	"DMKB": true,
-	"DMKJ": true,
-	"DNDC": true,
-	"DNSB": true,
-	"DNSX": true,
-	"DOBX": true,
-	"DOHB": true,
-	"DRGX": true,
-	"DSAX": true,
-	"DSBX": true,
-	"DSCB": true,
-	"DSHX": true,
-	"DSPX": true,
-	"DSUX": true,
-	"DTCX": true,
-	"DTPX": true,
-	"DUCX": true,
-	"DUMX": true,
-	"DUNX": true,
-	"DURG": true,
-	"DVDX": true,
-	"DYPX": true,
-	"EBIL": true,
-	"ECBL": true,
-	"EDBX": true,
-	"EDCX": true,
-	"EDSX": true,
-	"EIBI": true,
-	"ESAF": true,
-	"ESFB": true,
-	"ESMF": true,
-	"ETCX": true,
-	"ETDX": true,
-	"EUCX": true,
-	"EWCX": true,
-	"FCBX": true,
-	"FCCX": true,
-	"FCOX": true,
-	"FDFX": true,
-	"FDRL": true,
-	"FEKX": true,
-	"FGCB": true,
-	"FINF": true,
-	"FINO": true,
-	"FINX": true,
-	"FIRN": true,
-	"FIRX": true,
-	"FMCX": true,
-	"FRIX": true,
-	"FSCX": true,
-	"FSFB": true,
-	"FZCX": true,
-	"FZSX": true,
-	"GACX": true,
-	"GADX": true,
-	"GAMX": true,
-	"GANX": true,
-	"GBCB": true,
-	"GCBX": true,
-	"GCCX": true,
-	"GCUL": true,
-	"GCUX": true,
-	"GDCB": true,
-	"GDCX": true,
-	"GDDX": true,
-	"GDUX": true,
-	"GGBK": true,
-	"GGCX": true,
-	"GHPX": true,
-	"GKNX": true,
-	"GMBX": true,
-	"GMCX": true,
-	"GMUX": true,
-	"GNCX": true,
-	"GNSX": true,
-	"GODX": true,
-	"GOSX": true,
-	"GPCX": true,
-	"GPOX": true,
-	"GRAX": true,
-	"GSBL": true,
-	"GSBX": true,
-	"GSCB": true,
-	"GSCX": true,
-	"GSSX": true,
-	"GTCX": true,
-	"GUBX": true,
-	"GUCX": true,
-	"GUNX": true,
-	"GUOX": true,
-	"HAMX": true,
-	"HANX": true,
-	"HARC": true,
-	"HCBL": true,
-	"HCBX": true,
-	"HCCX": true,
-	"HCLX": true,
-	"HDCL": true,
-	"HDCX": true,
-	"HDFC": true,
-	"HGBX": true,
-	"HINX": true,
-	"HISX": true,
-	"HMBX": true,
-	"HMNX": true,
-	"HOCX": true,
-	"HOOX": true,
-	"HPCX": true,
-	"HPSC": true,
-	"HPSX": true,
-	"HSBC": true,
-	"HSBM": true,
-	"HSBX": true,
-	"HSCX": true,
-	"HSDX": true,
-	"HSSX": true,
-	"HUBX": true,
-	"HUCB": true,
-	"HUCH": true,
-	"HUCX": true,
-	"HUSB": true,
-	"HUTX": true,
-	"HVBK": true,
-	"IBBK": true,
-	"IBKL": true,
-	"IBKO": true,
-	"ICBK": true,
-	"ICBL": true,
-	"ICHX": true,
-	"ICIC": true,
-	"ICLL": true,
-	"ICMX": true,
-	"IDFB": true,
-	"IDIB": true,
-	"IDUK": true,
-	"IDUX": true,
-	"ILCB": true,
-	"IMCX": true,
-	"IMPX": true,
-	"INCX": true,
-	"INDB": true,
-	"INDX": true,
-	"IOBA": true,
-	"IPCX": true,
-	"IPOS": true,
-	"IPPB": true,
-	"IPSX": true,
-	"ISBX": true,
-	"ISMX": true,
-	"ITBL": true,
-	"ITCX": true,
-	"ITDX": true,
-	"IUCB": true,
-	"IUCX": true,
-	"IXXX": true,
-	"JACX": true,
-	"JAKA": true,
-	"JALX": true,
-	"JAMX": true,
-	"JANA": true,
-	"JANX": true,
-	"JASB": true,
-	"JASX": true,
-	"JAUX": true,
-	"JBHX": true,
-	"JBIX": true,
-	"JBMX": true,
-	"JCBX": true,
-	"JCCB": true,
-	"JCCX": true,
-	"JCDX": true,
-	"JCHX": true,
-	"JCPX": true,
-	"JCUX": true,
-	"JDCX": true,
-	"JDEX": true,
-	"JGBX": true,
-	"JGCX": true,
-	"JGWX": true,
-	"JHAX": true,
-	"JHSX": true,
-	"JHUX": true,
-	"JIBX": true,
-	"JICX": true,
-	"JIDX": true,
-	"JIGX": true,
-	"JIKX": true,
-	"JIMX": true,
-	"JINX": true,
-	"JIOP": true,
-	"JIOX": true,
-	"JIRX": true,
-	"JISX": true,
-	"JIVX": true,
-	"JJCX": true,
-	"JJHX": true,
-	"JJSB": true,
-	"JKAX": true,
-	"JKCX": true,
-	"JKDX": true,
-	"JKEX": true,
-	"JKHX": true,
-	"JKMX": true,
-	"JKRX": true,
-	"JKSX": true,
-	"JLCX": true,
-	"JLDX": true,
-	"JLNX": true,
-	"JLSX": true,
-	"JLWX": true,
-	"JMAX": true,
-	"JMBX": true,
-	"JMCX": true,
-	"JMDX": true,
-	"JMHX": true,
-	"JMMX": true,
-	"JMOX": true,
-	"JMPX": true,
-	"JMSX": true,
-	"JMYX": true,
-	"JNAX": true,
-	"JNDX": true,
-	"JNSX": true,
-	"JODX": true,
-	"JONX": true,
-	"JOWX": true,
-	"JPAX": true,
-	"JPCB": true,
-	"JPCX": true,
-	"JRAX": true,
-	"JRKX": true,
-	"JRNX": true,
-	"JRSX": true,
-	"JSAB": true,
-	"JSAX": true,
-	"JSBL": true,
-	"JSBP": true,
-	"JSBX": true,
-	"JSCX": true,
-	"JSDX": true,
-	"JSEX": true,
-	"JSFB": true,
-	"JSHX": true,
-	"JSKX": true,
-	"JSMX": true,
-	"JSOX": true,
-	"JSRX": true,
-	"JSTX": true,
-	"JSVX": true,
-	"JSWX": true,
-	"JTIX": true,
-	"JTSC": true,
-	"JTSX": true,
-	"JUCX": true,
-	"JUSX": true,
-	"JVCX": true,
-	"JXXX": true,
-	"KAAX": true,
-	"KACE": true,
-	"KACX": true,
-	"KADX": true,
-	"KAGX": true,
-	"KAIJ": true,
-	"KALX": true,
-	"KAMX": true,
-	"KANG": true,
-	"KANX": true,
-	"KARB": true,
-	"KARX": true,
-	"KASX": true,
-	"KATX": true,
-	"KAYX": true,
-	"KBCX": true,
-	"KBHB": true,
-	"KBKB": true,
-	"KBNX": true,
-	"KBSX": true,
-	"KCBL": true,
-	"KCBX": true,
-	"KCCB": true,
-	"KCCX": true,
-	"KCDX": true,
-	"KCEX": true,
-	"KCOB": true,
-	"KCUB": true,
-	"KCUX": true,
-	"KDBX": true,
-	"KDCB": true,
-	"KDCX": true,
-	"KDIX": true,
-	"KDNX": true,
-	"KDUX": true,
-	"KEJX": true,
-	"KEMX": true,
-	"KESX": true,
-	"KGBX": true,
-	"KGDX": true,
-	"KGRB": true,
-	"KGSX": true,
-	"KHAX": true,
-	"KHCX": true,
-	"KHDX": true,
-	"KHNX": true,
-	"KHTX": true,
-	"KHUX": true,
-	"KICX": true,
-	"KJSB": true,
-	"KJSX": true,
-	"KKBK": true,
-	"KKMX": true,
-	"KKSX": true,
-	"KLGB": true,
-	"KLMX": true,
-	"KMCB": true,
-	"KMCX": true,
-	"KMNX": true,
-	"KMSX": true,
-	"KNBX": true,
-	"KNCX": true,
-	"KNNX": true,
-	"KNPX": true,
-	"KNSB": true,
-	"KNSX": true,
-	"KOBX": true,
-	"KOCX": true,
-	"KODX": true,
-	"KOEX": true,
-	"KOLH": true,
-	"KORX": true,
-	"KOSX": true,
-	"KOTX": true,
-	"KOYX": true,
-	"KPCX": true,
-	"KRCX": true,
-	"KRDX": true,
-	"KRIX": true,
-	"KRMX": true,
-	"KRNX": true,
-	"KRTH": true,
-	"KRTX": true,
-	"KSBK": true,
-	"KSBX": true,
-	"KSCB": true,
-	"KSCX": true,
-	"KSMX": true,
-	"KSNX": true,
-	"KSTX": true,
-	"KSUX": true,
-	"KTBX": true,
-	"KTCX": true,
-	"KTDX": true,
-	"KTTX": true,
-	"KUBX": true,
-	"KUCB": true,
-	"KUCX": true,
-	"KUKX": true,
-	"KULX": true,
-	"KUMX": true,
-	"KUNS": true,
-	"KUOB": true,
-	"KURX": true,
-	"KUTX": true,
-	"KVBL": true,
-	"KVCX": true,
-	"KVGB": true,
-	"KYDX": true,
-	"LACX": true,
-	"LATX": true,
-	"LAVB": true,
-	"LBMX": true,
-	"LCBX": true,
-	"LCCX": true,
-	"LDCX": true,
-	"LDPX": true,
-	"LDRX": true,
-	"LECX": true,
-	"LICB": true,
-	"LKBL": true,
-	"LKCX": true,
-	"LKHX": true,
-	"LKMX": true,
-	"LMNX": true,
-	"LNSX": true,
-	"LOKX": true,
-	"LONX": true,
-	"LUCX": true,
-	"LULX": true,
-	"MABL": true,
-	"MACX": true,
-	"MADX": true,
-	"MAGX": true,
-	"MAHB": true,
-	"MAHG": true,
-	"MAHX": true,
-	"MAJX": true,
-	"MAKX": true,
-	"MALX": true,
-	"MAMX": true,
-	"MANX": true,
-	"MAPX": true,
-	"MASX": true,
-	"MAUX": true,
-	"MAVX": true,
-	"MAWX": true,
-	"MAYX": true,
-	"MBCX": true,
-	"MBGX": true,
-	"MBLX": true,
-	"MCAB": true,
-	"MCAX": true,
-	"MCBL": true,
-	"MCBX": true,
-	"MCCX": true,
-	"MCDX": true,
-	"MCLX": true,
-	"MCOX": true,
-	"MCSX": true,
-	"MCUX": true,
-	"MDBK": true,
-	"MDCB": true,
-	"MDCX": true,
-	"MDEX": true,
-	"MDGX": true,
-	"MDIX": true,
-	"MDMX": true,
-	"MDPX": true,
-	"MEDX": true,
-	"MERX": true,
-	"MEUX": true,
-	"MFCX": true,
-	"MFUX": true,
-	"MGBX": true,
-	"MGCB": true,
-	"MGCX": true,
-	"MGDX": true,
-	"MGRB": true,
-	"MGSX": true,
-	"MGUX": true,
-	"MHCB": true,
-	"MHCX": true,
-	"MHEX": true,
-	"MHLX": true,
-	"MHMX": true,
-	"MHNX": true,
-	"MHSX": true,
-	"MHUX": true,
-	"MIZX": true,
-	"MJCX": true,
-	"MKPB": true,
-	"MKUX": true,
-	"MKYX": true,
-	"MLCG": true,
-	"MLDX": true,
-	"MMCX": true,
-	"MMMX": true,
-	"MNBX": true,
-	"MNCX": true,
-	"MNSX": true,
-	"MOGX": true,
-	"MOUX": true,
-	"MPCX": true,
-	"MPDX": true,
-	"MPRX": true,
-	"MRBX": true,
-	"MRTX": true,
-	"MSAX": true,
-	"MSBL": true,
-	"MSBX": true,
-	"MSCI": true,
-	"MSCX": true,
-	"MSHQ": true,
-	"MSLM": true,
-	"MSNU": true,
-	"MSNX": true,
-	"MSOX": true,
-	"MSSX": true,
-	"MUBL": true,
-	"MUBX": true,
-	"MUCG": true,
-	"MUCX": true,
-	"MUDX": true,
-	"MUNX": true,
-	"MUPX": true,
-	"MURX": true,
-	"MUSX": true,
-	"MVCB": true,
-	"MVCX": true,
-	"MVIX": true,
-	"MXXX": true,
-	"MYAX": true,
-	"MYCX": true,
-	"MYSX": true,
-	"MZCX": true,
-	"MZRX": true,
-	"NABX": true,
-	"NACX": true,
-	"NADX": true,
-	"NAGX": true,
-	"NAIX": true,
-	"NALX": true,
-	"NANX": true,
-	"NASX": true,
-	"NATA": true,
-	"NAUX": true,
-	"NAVX": true,
-	"NAWX": true,
-	"NBAD": true,
-	"NBBX": true,
-	"NBCX": true,
-	"NBMX": true,
-	"NBRD": true,
-	"NCBL": true,
-	"NCBX": true,
-	"NCCX": true,
-	"NCOX": true,
-	"NCUB": true,
-	"NCUX": true,
-	"NDCB": true,
-	"NDCX": true,
-	"NDDX": true,
-	"NDGX": true,
-	"NDIX": true,
-	"NDOX": true,
-	"NESF": true,
-	"NEYX": true,
-	"NGBX": true,
-	"NGKX": true,
-	"NGNX": true,
-	"NGRX": true,
-	"NGSB": true,
-	"NGSX": true,
-	"NGUX": true,
-	"NICB": true,
-	"NIDX": true,
-	"NILX": true,
-	"NIRX": true,
-	"NIUX": true,
-	"NJBK": true,
-	"NJCX": true,
-	"NJGX": true,
-	"NJMX": true,
-	"NJSX": true,
-	"NKGS": true,
-	"NLGX": true,
-	"NLUX": true,
-	"NMCB": true,
-	"NMCX": true,
-	"NMGB": true,
-	"NNCX": true,
-	"NNSB": true,
-	"NNSX": true,
-	"NOBX": true,
-	"NOIX": true,
-	"NOSC": true,
-	"NPCX": true,
-	"NPKX": true,
-	"NPPX": true,
-	"NRDX": true,
-	"NRMX": true,
-	"NSBB": true,
-	"NSBX": true,
-	"NSCX": true,
-	"NSGX": true,
-	"NSIX": true,
-	"NSJX": true,
-	"NSMX": true,
-	"NSPB": true,
-	"NSPX": true,
-	"NSRX": true,
-	"NTBL": true,
-	"NUBX": true,
-	"NUCB": true,
-	"NUCX": true,
-	"NULX": true,
-	"NVCX": true,
-	"NVNM": true,
-	"NVSX": true,
-	"NWCX": true,
-	"ODCX": true,
-	"ODGB": true,
-	"OIBA": true,
-	"OMCX": true,
-	"ONSX": true,
-	"ORBC": true,
-	"ORCB": true,
-	"OSMX": true,
-	"PABX": true,
-	"PACX": true,
-	"PADX": true,
-	"PALX": true,
-	"PANX": true,
-	"PARX": true,
-	"PASX": true,
-	"PATX": true,
-	"PAYX": true,
-	"PBGX": true,
-	"PCBL": true,
-	"PCBX": true,
-	"PCCB": true,
-	"PCCX": true,
-	"PCLX": true,
-	"PCMX": true,
-	"PCOX": true,
-	"PCPX": true,
-	"PCSX": true,
-	"PCTX": true,
-	"PCUX": true,
-	"PDBX": true,
-	"PDCX": true,
-	"PDNX": true,
-	"PDSX": true,
-	"PDUX": true,
-	"PGBX": true,
-	"PGCX": true,
-	"PGRX": true,
-	"PGTX": true,
-	"PHIX": true,
-	"PITX": true,
-	"PJSB": true,
-	"PKBX": true,
-	"PKDX": true,
-	"PKGB": true,
-	"PLOX": true,
-	"PLUX": true,
-	"PMCB": true,
-	"PMCX": true,
-	"PMEC": true,
-	"PMNX": true,
-	"PNCX": true,
-	"PNMX": true,
-	"PNPX": true,
-	"PNSX": true,
-	"PPBX": true,
-	"PPCX": true,
-	"PRCX": true,
-	"PREX": true,
-	"PROX": true,
-	"PRPX": true,
-	"PRSX": true,
-	"PRTH": true,
-	"PRUX": true,
-	"PSBL": true,
-	"PSBX": true,
-	"PSCX": true,
-	"PSIB": true,
-	"PSRX": true,
-	"PSSX": true,
-	"PTCX": true,
-	"PTNX": true,
-	"PTSX": true,
-	"PUBX": true,
-	"PUCB": true,
-	"PUCX": true,
-	"PUDX": true,
-	"PUGX": true,
-	"PUNB": true,
-	"PUNX": true,
-	"PURX": true,
-	"PUSD": true,
-	"PUSX": true,
-	"PUUX": true,
-	"PVAX": true,
-	"PVCX": true,
-	"PVVX": true,
-	"PWUX": true,
-	"PYCX": true,
-	"PYTM": true,
-	"QNBA": true,
-	"QNBX": true,
-	"QUCX": true,
-	"RABO": true,
-	"RACX": true,
-	"RAEX": true,
-	"RAJX": true,
-	"RAKX": true,
-	"RAMX": true,
-	"RANX": true,
-	"RATN": true,
-	"RAUX": true,
-	"RBBX": true,
-	"RBCX": true,
-	"RBIH": true,
-	"RBIN": true,
-	"RBIP": true,
-	"RBIS": true,
-	"RCBX": true,
-	"RCCX": true,
-	"RCDX": true,
-	"RCMX": true,
-	"RCUX": true,
-	"RDCB": true,
-	"RDCX": true,
-	"RDNX": true,
-	"REBX": true,
-	"RECX": true,
-	"REWX": true,
-	"RGCX": true,
-	"RGSX": true,
-	"RHMX": true,
-	"RJCX": true,
-	"RJJX": true,
-	"RJNX": true,
-	"RJTX": true,
-	"RKCX": true,
-	"RLUX": true,
-	"RMGB": true,
-	"RNBX": true,
-	"RNDX": true,
-	"RNGX": true,
-	"RNSB": true,
-	"RNSX": true,
-	"ROCX": true,
-	"ROHX": true,
-	"RPUX": true,
-	"RRBP": true,
-	"RRSX": true,
-	"RSBL": true,
-	"RSBX": true,
-	"RSCB": true,
-	"RSSB": true,
-	"RSSX": true,
-	"RSUX": true,
-	"RSVX": true,
-	"RUCX": true,
-	"RUKX": true,
-	"RUMX": true,
-	"RZSX": true,
-	"SABR": true,
-	"SABX": true,
-	"SACB": true,
-	"SACX": true,
-	"SADX": true,
-	"SAGX": true,
-	"SAHE": true,
-	"SAHX": true,
-	"SAIX": true,
-	"SALX": true,
-	"SAMX": true,
-	"SANT": true,
-	"SANX": true,
-	"SAOX": true,
-	"SAPX": true,
-	"SARX": true,
-	"SASA": true,
-	"SASX": true,
-	"SATX": true,
-	"SAUX": true,
-	"SAVX": true,
-	"SAWX": true,
-	"SBBJ": true,
-	"SBCR": true,
-	"SBCX": true,
-	"SBHY": true,
-	"SBIN": true,
-	"SBKX": true,
-	"SBLD": true,
-	"SBLS": true,
-	"SBLX": true,
-	"SBMX": true,
-	"SBMY": true,
-	"SBNX": true,
-	"SBPS": true,
-	"SBPX": true,
-	"SBSX": true,
-	"SBTR": true,
-	"SBUJ": true,
-	"SBUX": true,
-	"SCBL": true,
-	"SCBX": true,
-	"SCCX": true,
-	"SCDX": true,
-	"SCIX": true,
-	"SCNX": true,
-	"SCOB": true,
-	"SCOX": true,
-	"SCPX": true,
-	"SCSX": true,
-	"SCUX": true,
-	"SDBX": true,
-	"SDCB": true,
-	"SDCE": true,
-	"SDCX": true,
-	"SDHX": true,
-	"SDSX": true,
-	"SDTC": true,
-	"SDTX": true,
-	"SDUX": true,
-	"SECB": true,
-	"SEMX": true,
-	"SENX": true,
-	"SEUX": true,
-	"SEWX": true,
-	"SGCX": true,
-	"SGDX": true,
-	"SGLX": true,
-	"SGSX": true,
-	"SGUX": true,
-	"SHAX": true,
-	"SHBK": true,
-	"SHBX": true,
-	"SHCX": true,
-	"SHEX": true,
-	"SHGX": true,
-	"SHIX": true,
-	"SHKX": true,
-	"SHMX": true,
-	"SHNX": true,
-	"SHOX": true,
-	"SHRX": true,
-	"SHSX": true,
-	"SHUB": true,
-	"SHUX": true,
-	"SIBL": true,
-	"SIBX": true,
-	"SICX": true,
-	"SIDB": true,
-	"SIDC": true,
-	"SIDX": true,
-	"SIGX": true,
-	"SIHX": true,
-	"SIKX": true,
-	"SINX": true,
-	"SIRX": true,
-	"SISX": true,
-	"SITX": true,
-	"SIWX": true,
-	"SJGX": true,
-	"SJSB": true,
-	"SJSX": true,
-	"SKCX": true,
-	"SKKX": true,
-	"SKNB": true,
-	"SKNX": true,
-	"SKSB": true,
-	"SKUX": true,
-	"SLAX": true,
-	"SLCX": true,
-	"SMBC": true,
-	"SMBX": true,
-	"SMCB": true,
-	"SMCX": true,
-	"SMEX": true,
-	"SMMX": true,
-	"SMNB": true,
-	"SMNX": true,
-	"SMPX": true,
-	"SMSX": true,
-	"SMTX": true,
-	"SMUX": true,
-	"SMVC": true,
-	"SMWX": true,
-	"SNAX": true,
-	"SNBK": true,
-	"SNBX": true,
-	"SNCX": true,
-	"SNDX": true,
-	"SNGX": true,
-	"SNKX": true,
-	"SNLX": true,
-	"SNPX": true,
-	"SNSV": true,
-	"SNSX": true,
-	"SOBX": true,
-	"SOGE": true,
-	"SOLX": true,
-	"SONX": true,
-	"SPBX": true,
-	"SPCB": true,
-	"SPCX": true,
-	"SPNX": true,
-	"SPSX": true,
-	"SPTX": true,
-	"SRCB": true,
-	"SRCX": true,
-	"SREX": true,
-	"SRGX": true,
-	"SRHX": true,
-	"SRSX": true,
-	"SSBL": true,
-	"SSBX": true,
-	"SSDX": true,
-	"SSHX": true,
-	"SSKX": true,
-	"SSLX": true,
-	"SSNX": true,
-	"SSOX": true,
-	"SSSX": true,
-	"SSWX": true,
-	"STBP": true,
-	"STCB": true,
-	"STCX": true,
-	"STDX": true,
-	"STRX": true,
-	"SUBX": true,
-	"SUCX": true,
-	"SUDX": true,
-	"SULX": true,
-	"SUMX": true,
-	"SUNB": true,
-	"SURX": true,
-	"SURY": true,
-	"SUSB": true,
-	"SUSX": true,
-	"SUTB": true,
-	"SUVX": true,
-	"SVAX": true,
-	"SVBL": true,
-	"SVCB": true,
-	"SVCX": true,
-	"SVGX": true,
-	"SVMC": true,
-	"SVNX": true,
-	"SVOX": true,
-	"SVRX": true,
-	"SVSH": true,
-	"SVSX": true,
-	"SWMX": true,
-	"SWSX": true,
-	"SXXX": true,
-	"SYNB": true,
-	"TACX": true,
-	"TADX": true,
-	"TAMX": true,
-	"TAPX": true,
-	"TASX": true,
-	"TAUB": true,
-	"TBCX": true,
-	"TBDX": true,
-	"TBHX": true,
-	"TBMC": true,
-	"TBMX": true,
-	"TBNS": true,
-	"TBPX": true,
-	"TBSB": true,
-	"TBSX": true,
-	"TBTX": true,
-	"TBUX": true,
-	"TCBX": true,
-	"TCCX": true,
-	"TCHX": true,
-	"TCPX": true,
-	"TCUB": true,
-	"TCUX": true,
-	"TDBX": true,
-	"TDCB": true,
-	"TDCX": true,
-	"TDIX": true,
-	"TDMX": true,
-	"TDPX": true,
-	"TDSX": true,
-	"TECX": true,
-	"TEHX": true,
-	"TEMX": true,
-	"TESX": true,
-	"TETX": true,
-	"TFCX": true,
-	"TGBX": true,
-	"TGCG": true,
-	"TGCX": true,
-	"TGDX": true,
-	"TGMB": true,
-	"TGNX": true,
-	"TGUX": true,
-	"THCX": true,
-	"THMX": true,
-	"THOX": true,
-	"THRS": true,
-	"THRX": true,
-	"THWX": true,
-	"TIDX": true,
-	"TIRX": true,
-	"TJAX": true,
-	"TJBX": true,
-	"TJCX": true,
-	"TJDX": true,
-	"TJMX": true,
-	"TJNX": true,
-	"TJSB": true,
-	"TKAX": true,
-	"TKCX": true,
-	"TKDX": true,
-	"TKTX": true,
-	"TKUX": true,
-	"TLPX": true,
-	"TMAX": true,
-	"TMBL": true,
-	"TMBX": true,
-	"TMCX": true,
-	"TMNX": true,
-	"TMPX": true,
-	"TMSB": true,
-	"TMSC": true,
-	"TMSX": true,
-	"TMTX": true,
-	"TMUX": true,
-	"TNBX": true,
-	"TNCB": true,
-	"TNCX": true,
-	"TNDC": true,
-	"TNEX": true,
-	"TNHX": true,
-	"TNIX": true,
-	"TNKX": true,
-	"TNMX": true,
-	"TNSC": true,
-	"TNUX": true,
-	"TOCX": true,
-	"TPCX": true,
-	"TPDX": true,
-	"TPSC": true,
-	"TPSX": true,
-	"TPUX": true,
-	"TRAX": true,
-	"TRDX": true,
-	"TSAB": true,
-	"TSAX": true,
-	"TSBX": true,
-	"TSCX": true,
-	"TSDX": true,
-	"TSIX": true,
-	"TSKX": true,
-	"TSMX": true,
-	"TSNX": true,
-	"TSPX": true,
-	"TSSB": true,
-	"TSSX": true,
-	"TSUX": true,
-	"TTBX": true,
-	"TTCB": true,
-	"TTCX": true,
-	"TTGX": true,
-	"TTLX": true,
-	"TTUX": true,
-	"TUBX": true,
-	"TUCL": true,
-	"TUCX": true,
-	"TUDX": true,
-	"TUMX": true,
-	"TUNX": true,
-	"TUOX": true,
-	"TUPX": true,
-	"TURX": true,
-	"TVBX": true,
-	"TVDX": true,
-	"TVPX": true,
-	"TVUX": true,
-	"TYCX": true,
-	"UBBX": true,
-	"UBGX": true,
-	"UBIN": true,
-	"UCBA": true,
-	"UCBS": true,
-	"UCBX": true,
-	"UCCX": true,
-	"UCDX": true,
-	"UCUX": true,
-	"UGBX": true,
-	"UICX": true,
-	"UJSX": true,
-	"UJVN": true,
-	"UKGX": true,
-	"UMAX": true,
-	"UMCX": true,
-	"UMSX": true,
-	"UMUX": true,
-	"UNAX": true,
-	"UNIX": true,
-	"UNMX": true,
-	"UNSX": true,
-	"UOVB": true,
-	"UPCB": true,
-	"UPCX": true,
-	"UPNX": true,
-	"URBN": true,
-	"URCX": true,
-	"URDX": true,
-	"URMX": true,
-	"UROX": true,
-	"USFB": true,
-	"USNX": true,
-	"UTBI": true,
-	"UTBX": true,
-	"UTCX": true,
-	"UTGX": true,
-	"UTIB": true,
-	"UTKS": true,
-	"UTKX": true,
-	"UTZX": true,
-	"UUCB": true,
-	"UUCX": true,
-	"UXXX": true,
-	"VADX": true,
-	"VAIX": true,
-	"VANX": true,
-	"VARA": true,
-	"VASJ": true,
-	"VASX": true,
-	"VAUX": true,
-	"VCAX": true,
-	"VCBX": true,
-	"VCCX": true,
-	"VCNB": true,
-	"VCOB": true,
-	"VCOX": true,
-	"VDCX": true,
-	"VDYX": true,
-	"VEDX": true,
-	"VERX": true,
-	"VGBX": true,
-	"VHDX": true,
-	"VICX": true,
-	"VIDX": true,
-	"VIJB": true,
-	"VIJX": true,
-	"VIKX": true,
-	"VIMX": true,
-	"VIRX": true,
-	"VISX": true,
-	"VJSX": true,
-	"VKCX": true,
-	"VKSX": true,
-	"VMCX": true,
-	"VMMX": true,
-	"VMUX": true,
-	"VNSX": true,
-	"VRDX": true,
-	"VSBL": true,
-	"VSBX": true,
-	"VSCX": true,
-	"VSSX": true,
-	"VSVX": true,
-	"VUCX": true,
-	"VVCX": true,
-	"VVSB": true,
-	"VYAX": true,
-	"VYPX": true,
-	"VYSA": true,
-	"WACX": true,
-	"WAIX": true,
-	"WARX": true,
-	"WAUX": true,
-	"WBSC": true,
-	"WCBX": true,
-	"WDCX": true,
-	"WKGX": true,
-	"WNBX": true,
-	"WPAC": true,
-	"WRCX": true,
-	"WUCX": true,
-	"WZUX": true,
-	"XJKG": true,
-	"YADX": true,
-	"YAVX": true,
-	"YCBX": true,
-	"YDCX": true,
-	"YESB": true,
-	"YLNX": true,
-	"YMSX": true,
-	"YNCX": true,
-	"YNSX": true,
-	"ZBBX": true,
-	"ZBSX": true,
-	"ZCBL": true,
-	"ZIBX": true,
-	"ZILX": true,
-	"ZIMX": true,
-	"ZISX": true,
-	"ZLLX": true,
-	"ZMMX": true,
-	"ZRNB": true,
-	"ZSAX": true,
-	"ZSBG": true,
-	"ZSBL": true,
-	"ZSBX": true,
-	"ZSGX": true,
-	"ZSHX": true,
-	"ZSJX": true,
-	"ZSKX": true,
-	"ZSLX": true,
-	"ZSMX": true,
+    "AACX": true,
+    "ABBL": true,
+    "ABCX": true,
+    "ABDX": true,
+    "ABEX": true,
+    "ABHY": true,
+    "ABNA": true,
+    "ABPB": true,
+    "ABSB": true,
+    "ABUX": true,
+    "ACAX": true,
+    "ACBX": true,
+    "ACCX": true,
+    "ACKX": true,
+    "ACOX": true,
+    "ACUB": true,
+    "ACUX": true,
+    "ADBX": true,
+    "ADCB": true,
+    "ADCC": true,
+    "ADCX": true,
+    "ADDX": true,
+    "AGCX": true,
+    "AGDX": true,
+    "AGRX": true,
+    "AGSX": true,
+    "AGUX": true,
+    "AGVX": true,
+    "AHDC": true,
+    "AHMX": true,
+    "AHUX": true,
+    "AIRP": true,
+    "AJAR": true,
+    "AJHC": true,
+    "AJKB": true,
+    "AJMX": true,
+    "AJNX": true,
+    "AJPX": true,
+    "AJSX": true,
+    "AJUX": true,
+    "AKJB": true,
+    "AKKB": true,
+    "AKMX": true,
+    "AKOX": true,
+    "ALAX": true,
+    "ALIX": true,
+    "ALLA": true,
+    "ALLX": true,
+    "ALWX": true,
+    "AMAX": true,
+    "AMBX": true,
+    "AMCB": true,
+    "AMCX": true,
+    "AMDN": true,
+    "AMMX": true,
+    "AMNX": true,
+    "AMRX": true,
+    "AMSB": true,
+    "AMSX": true,
+    "ANBX": true,
+    "ANDB": true,
+    "ANDX": true,
+    "ANMX": true,
+    "ANSX": true,
+    "ANUX": true,
+    "ANZB": true,
+    "APBL": true,
+    "APCX": true,
+    "APGB": true,
+    "APGV": true,
+    "APGX": true,
+    "APJX": true,
+    "APMC": true,
+    "APMX": true,
+    "APNX": true,
+    "APRR": true,
+    "APRX": true,
+    "APSX": true,
+    "ARBL": true,
+    "ARCX": true,
+    "ARMX": true,
+    "ARYX": true,
+    "ASBL": true,
+    "ASBX": true,
+    "ASHX": true,
+    "ASKX": true,
+    "ASNX": true,
+    "ASOX": true,
+    "ASSX": true,
+    "AUBL": true,
+    "AUBX": true,
+    "AUCB": true,
+    "AUCX": true,
+    "AUGX": true,
+    "AURX": true,
+    "AVDX": true,
+    "AWCX": true,
+    "AWUX": true,
+    "AZAX": true,
+    "AZPX": true,
+    "AZSX": true,
+    "AZUX": true,
+    "BACB": true,
+    "BACX": true,
+    "BADX": true,
+    "BAGX": true,
+    "BALB": true,
+    "BALX": true,
+    "BANX": true,
+    "BARA": true,
+    "BARB": true,
+    "BARC": true,
+    "BARX": true,
+    "BASX": true,
+    "BAUX": true,
+    "BAVX": true,
+    "BAWX": true,
+    "BBDX": true,
+    "BBKM": true,
+    "BBLX": true,
+    "BBRX": true,
+    "BBSX": true,
+    "BBUX": true,
+    "BBVX": true,
+    "BCBM": true,
+    "BCBX": true,
+    "BCCB": true,
+    "BCCX": true,
+    "BCEX": true,
+    "BCEY": true,
+    "BCOX": true,
+    "BCUB": true,
+    "BCUX": true,
+    "BDBB": true,
+    "BDBL": true,
+    "BDBX": true,
+    "BDCX": true,
+    "BDDX": true,
+    "BDIX": true,
+    "BDNX": true,
+    "BDOX": true,
+    "BDUX": true,
+    "BEDX": true,
+    "BELX": true,
+    "BERX": true,
+    "BFUX": true,
+    "BGBX": true,
+    "BGCX": true,
+    "BGGX": true,
+    "BGUX": true,
+    "BGVX": true,
+    "BHAX": true,
+    "BHBX": true,
+    "BHCX": true,
+    "BHDX": true,
+    "BHEX": true,
+    "BHGX": true,
+    "BHIX": true,
+    "BHJX": true,
+    "BHMX": true,
+    "BHOX": true,
+    "BHRX": true,
+    "BHSX": true,
+    "BHTX": true,
+    "BHUX": true,
+    "BHWX": true,
+    "BJUX": true,
+    "BKCX": true,
+    "BKDN": true,
+    "BKDX": true,
+    "BKID": true,
+    "BKSX": true,
+    "BLGX": true,
+    "BMBL": true,
+    "BMCB": true,
+    "BMCX": true,
+    "BMPX": true,
+    "BMSX": true,
+    "BNBX": true,
+    "BNCX": true,
+    "BNKX": true,
+    "BNPA": true,
+    "BNSB": true,
+    "BNSX": true,
+    "BOCX": true,
+    "BODX": true,
+    "BOFA": true,
+    "BORX": true,
+    "BOTM": true,
+    "BOTX": true,
+    "BPCX": true,
+    "BPSX": true,
+    "BRCX": true,
+    "BRDX": true,
+    "BRGX": true,
+    "BRMX": true,
+    "BRSX": true,
+    "BRUX": true,
+    "BSBX": true,
+    "BSCX": true,
+    "BTCX": true,
+    "BTUX": true,
+    "BUBX": true,
+    "BUCL": true,
+    "BUCX": true,
+    "BUGX": true,
+    "BUNX": true,
+    "BURX": true,
+    "BUSX": true,
+    "BUZX": true,
+    "BVNX": true,
+    "BVSX": true,
+    "BWCX": true,
+    "CALX": true,
+    "CBHX": true,
+    "CBIN": true,
+    "CCBL": true,
+    "CCBX": true,
+    "CCCX": true,
+    "CCMX": true,
+    "CCOB": true,
+    "CCUX": true,
+    "CDCX": true,
+    "CEBX": true,
+    "CGBX": true,
+    "CGGX": true,
+    "CHAS": true,
+    "CHAX": true,
+    "CHBX": true,
+    "CHCX": true,
+    "CHDX": true,
+    "CHIX": true,
+    "CHKX": true,
+    "CHPX": true,
+    "CHRX": true,
+    "CHSX": true,
+    "CHTX": true,
+    "CIDX": true,
+    "CITI": true,
+    "CITX": true,
+    "CIUB": true,
+    "CJAX": true,
+    "CJMX": true,
+    "CLBL": true,
+    "CMCB": true,
+    "CMCX": true,
+    "CMDX": true,
+    "CMLX": true,
+    "CMPX": true,
+    "CMSV": true,
+    "CNRB": true,
+    "CNSX": true,
+    "COAS": true,
+    "COCX": true,
+    "COLX": true,
+    "COMX": true,
+    "CONX": true,
+    "CORP": true,
+    "COSB": true,
+    "CPDX": true,
+    "CPSN": true,
+    "CRBX": true,
+    "CRES": true,
+    "CRGB": true,
+    "CRLY": true,
+    "CRSX": true,
+    "CRUB": true,
+    "CSBK": true,
+    "CSBX": true,
+    "CTBA": true,
+    "CTBX": true,
+    "CTCB": true,
+    "CTOX": true,
+    "CTUX": true,
+    "CUBX": true,
+    "CUCX": true,
+    "CURX": true,
+    "CUTX": true,
+    "CZCX": true,
+    "CZUX": true,
+    "DAAX": true,
+    "DAHX": true,
+    "DAUX": true,
+    "DBAX": true,
+    "DBSS": true,
+    "DCBL": true,
+    "DCBX": true,
+    "DCCX": true,
+    "DCDX": true,
+    "DCEX": true,
+    "DCKX": true,
+    "DCMX": true,
+    "DCNX": true,
+    "DCPX": true,
+    "DCSX": true,
+    "DCTX": true,
+    "DCUB": true,
+    "DCUX": true,
+    "DDBX": true,
+    "DDCX": true,
+    "DDDX": true,
+    "DDHX": true,
+    "DEGX": true,
+    "DENS": true,
+    "DEOB": true,
+    "DEOX": true,
+    "DEUT": true,
+    "DEUX": true,
+    "DEVX": true,
+    "DGBX": true,
+    "DHBX": true,
+    "DHKX": true,
+    "DHUX": true,
+    "DIBX": true,
+    "DICG": true,
+    "DICX": true,
+    "DISX": true,
+    "DIUX": true,
+    "DJCX": true,
+    "DKCL": true,
+    "DKSX": true,
+    "DLSC": true,
+    "DLXB": true,
+    "DMCB": true,
+    "DMCX": true,
+    "DMKB": true,
+    "DMKJ": true,
+    "DNDC": true,
+    "DNSB": true,
+    "DNSX": true,
+    "DOBX": true,
+    "DOHB": true,
+    "DRGX": true,
+    "DSAX": true,
+    "DSBX": true,
+    "DSCB": true,
+    "DSHX": true,
+    "DSPX": true,
+    "DSUX": true,
+    "DTCX": true,
+    "DTPX": true,
+    "DUCX": true,
+    "DUMX": true,
+    "DUNX": true,
+    "DURG": true,
+    "DVDX": true,
+    "DYPX": true,
+    "EBIL": true,
+    "ECBL": true,
+    "EDBX": true,
+    "EDCX": true,
+    "EDSX": true,
+    "EIBI": true,
+    "ESAF": true,
+    "ESFB": true,
+    "ESMF": true,
+    "ETCX": true,
+    "ETDX": true,
+    "EUCX": true,
+    "EWCX": true,
+    "FCBX": true,
+    "FCCX": true,
+    "FCOX": true,
+    "FDFX": true,
+    "FDRL": true,
+    "FEKX": true,
+    "FGCB": true,
+    "FINF": true,
+    "FINO": true,
+    "FINX": true,
+    "FIRN": true,
+    "FIRX": true,
+    "FMCX": true,
+    "FRIX": true,
+    "FSCX": true,
+    "FSFB": true,
+    "FZCX": true,
+    "FZSX": true,
+    "GACX": true,
+    "GADX": true,
+    "GAMX": true,
+    "GANX": true,
+    "GBCB": true,
+    "GCBX": true,
+    "GCCX": true,
+    "GCUL": true,
+    "GCUX": true,
+    "GDCB": true,
+    "GDCX": true,
+    "GDDX": true,
+    "GDUX": true,
+    "GGBK": true,
+    "GGCX": true,
+    "GHPX": true,
+    "GKNX": true,
+    "GMBX": true,
+    "GMCX": true,
+    "GMUX": true,
+    "GNCX": true,
+    "GNSX": true,
+    "GODX": true,
+    "GOSX": true,
+    "GPCX": true,
+    "GPOX": true,
+    "GRAX": true,
+    "GSBL": true,
+    "GSBX": true,
+    "GSCB": true,
+    "GSCX": true,
+    "GSSX": true,
+    "GTCX": true,
+    "GUBX": true,
+    "GUCX": true,
+    "GUNX": true,
+    "GUOX": true,
+    "HAMX": true,
+    "HANX": true,
+    "HARC": true,
+    "HCBL": true,
+    "HCBX": true,
+    "HCCX": true,
+    "HCLX": true,
+    "HDCL": true,
+    "HDCX": true,
+    "HDFC": true,
+    "HGBX": true,
+    "HINX": true,
+    "HISX": true,
+    "HMBX": true,
+    "HMNX": true,
+    "HOCX": true,
+    "HOOX": true,
+    "HPCX": true,
+    "HPSC": true,
+    "HPSX": true,
+    "HSBC": true,
+    "HSBM": true,
+    "HSBX": true,
+    "HSCX": true,
+    "HSDX": true,
+    "HSSX": true,
+    "HUBX": true,
+    "HUCB": true,
+    "HUCH": true,
+    "HUCX": true,
+    "HUSB": true,
+    "HUTX": true,
+    "HVBK": true,
+    "IBBK": true,
+    "IBKL": true,
+    "IBKO": true,
+    "ICBK": true,
+    "ICBL": true,
+    "ICHX": true,
+    "ICIC": true,
+    "ICLL": true,
+    "ICMX": true,
+    "IDFB": true,
+    "IDIB": true,
+    "IDUK": true,
+    "IDUX": true,
+    "ILCB": true,
+    "IMCX": true,
+    "IMPX": true,
+    "INCX": true,
+    "INDB": true,
+    "INDX": true,
+    "IOBA": true,
+    "IPCX": true,
+    "IPOS": true,
+    "IPPB": true,
+    "IPSX": true,
+    "ISBX": true,
+    "ISMX": true,
+    "ITBL": true,
+    "ITCX": true,
+    "ITDX": true,
+    "IUCB": true,
+    "IUCX": true,
+    "IXXX": true,
+    "JACX": true,
+    "JAKA": true,
+    "JALX": true,
+    "JAMX": true,
+    "JANA": true,
+    "JANX": true,
+    "JASB": true,
+    "JASX": true,
+    "JAUX": true,
+    "JBHX": true,
+    "JBIX": true,
+    "JBMX": true,
+    "JCBX": true,
+    "JCCB": true,
+    "JCCX": true,
+    "JCDX": true,
+    "JCHX": true,
+    "JCPX": true,
+    "JCUX": true,
+    "JDCX": true,
+    "JDEX": true,
+    "JGBX": true,
+    "JGCX": true,
+    "JGWX": true,
+    "JHAX": true,
+    "JHSX": true,
+    "JHUX": true,
+    "JIBX": true,
+    "JICX": true,
+    "JIDX": true,
+    "JIGX": true,
+    "JIKX": true,
+    "JIMX": true,
+    "JINX": true,
+    "JIOP": true,
+    "JIOX": true,
+    "JIRX": true,
+    "JISX": true,
+    "JIVX": true,
+    "JJCX": true,
+    "JJHX": true,
+    "JJSB": true,
+    "JKAX": true,
+    "JKCX": true,
+    "JKDX": true,
+    "JKEX": true,
+    "JKHX": true,
+    "JKMX": true,
+    "JKRX": true,
+    "JKSX": true,
+    "JLCX": true,
+    "JLDX": true,
+    "JLNX": true,
+    "JLSX": true,
+    "JLWX": true,
+    "JMAX": true,
+    "JMBX": true,
+    "JMCX": true,
+    "JMDX": true,
+    "JMHX": true,
+    "JMMX": true,
+    "JMOX": true,
+    "JMPX": true,
+    "JMSX": true,
+    "JMYX": true,
+    "JNAX": true,
+    "JNDX": true,
+    "JNSX": true,
+    "JODX": true,
+    "JONX": true,
+    "JOWX": true,
+    "JPAX": true,
+    "JPCB": true,
+    "JPCX": true,
+    "JRAX": true,
+    "JRKX": true,
+    "JRNX": true,
+    "JRSX": true,
+    "JSAB": true,
+    "JSAX": true,
+    "JSBL": true,
+    "JSBP": true,
+    "JSBX": true,
+    "JSCX": true,
+    "JSDX": true,
+    "JSEX": true,
+    "JSFB": true,
+    "JSHX": true,
+    "JSKX": true,
+    "JSMX": true,
+    "JSOX": true,
+    "JSRX": true,
+    "JSTX": true,
+    "JSVX": true,
+    "JSWX": true,
+    "JTIX": true,
+    "JTSC": true,
+    "JTSX": true,
+    "JUCX": true,
+    "JUSX": true,
+    "JVCX": true,
+    "JXXX": true,
+    "KAAX": true,
+    "KACE": true,
+    "KACX": true,
+    "KADX": true,
+    "KAGX": true,
+    "KAIJ": true,
+    "KALX": true,
+    "KAMX": true,
+    "KANG": true,
+    "KANX": true,
+    "KARB": true,
+    "KARX": true,
+    "KASX": true,
+    "KATX": true,
+    "KAYX": true,
+    "KBCX": true,
+    "KBHB": true,
+    "KBKB": true,
+    "KBNX": true,
+    "KBSX": true,
+    "KCBL": true,
+    "KCBX": true,
+    "KCCB": true,
+    "KCCX": true,
+    "KCDX": true,
+    "KCEX": true,
+    "KCOB": true,
+    "KCUB": true,
+    "KCUX": true,
+    "KDBX": true,
+    "KDCB": true,
+    "KDCX": true,
+    "KDIX": true,
+    "KDNX": true,
+    "KDUX": true,
+    "KEJX": true,
+    "KEMX": true,
+    "KESX": true,
+    "KGBX": true,
+    "KGDX": true,
+    "KGRB": true,
+    "KGSX": true,
+    "KHAX": true,
+    "KHCX": true,
+    "KHDX": true,
+    "KHNX": true,
+    "KHTX": true,
+    "KHUX": true,
+    "KICX": true,
+    "KJSB": true,
+    "KJSX": true,
+    "KKBK": true,
+    "KKMX": true,
+    "KKSX": true,
+    "KLGB": true,
+    "KLMX": true,
+    "KMCB": true,
+    "KMCX": true,
+    "KMNX": true,
+    "KMSX": true,
+    "KNBX": true,
+    "KNCX": true,
+    "KNNX": true,
+    "KNPX": true,
+    "KNSB": true,
+    "KNSX": true,
+    "KOBX": true,
+    "KOCX": true,
+    "KODX": true,
+    "KOEX": true,
+    "KOLH": true,
+    "KORX": true,
+    "KOSX": true,
+    "KOTX": true,
+    "KOYX": true,
+    "KPCX": true,
+    "KRCX": true,
+    "KRDX": true,
+    "KRIX": true,
+    "KRMX": true,
+    "KRNX": true,
+    "KRTH": true,
+    "KRTX": true,
+    "KSBK": true,
+    "KSBX": true,
+    "KSCB": true,
+    "KSCX": true,
+    "KSMX": true,
+    "KSNX": true,
+    "KSTX": true,
+    "KSUX": true,
+    "KTBX": true,
+    "KTCX": true,
+    "KTDX": true,
+    "KTTX": true,
+    "KUBX": true,
+    "KUCB": true,
+    "KUCX": true,
+    "KUKX": true,
+    "KULX": true,
+    "KUMX": true,
+    "KUNS": true,
+    "KUOB": true,
+    "KURX": true,
+    "KUTX": true,
+    "KVBL": true,
+    "KVCX": true,
+    "KVGB": true,
+    "KYDX": true,
+    "LACX": true,
+    "LATX": true,
+    "LAVB": true,
+    "LBMX": true,
+    "LCBX": true,
+    "LCCX": true,
+    "LDCX": true,
+    "LDPX": true,
+    "LDRX": true,
+    "LECX": true,
+    "LICB": true,
+    "LKBL": true,
+    "LKCX": true,
+    "LKHX": true,
+    "LKMX": true,
+    "LMNX": true,
+    "LNSX": true,
+    "LOKX": true,
+    "LONX": true,
+    "LUCX": true,
+    "LULX": true,
+    "MABL": true,
+    "MACX": true,
+    "MADX": true,
+    "MAGX": true,
+    "MAHB": true,
+    "MAHG": true,
+    "MAHX": true,
+    "MAJX": true,
+    "MAKX": true,
+    "MALX": true,
+    "MAMX": true,
+    "MANX": true,
+    "MAPX": true,
+    "MASX": true,
+    "MAUX": true,
+    "MAVX": true,
+    "MAWX": true,
+    "MAYX": true,
+    "MBCX": true,
+    "MBGX": true,
+    "MBLX": true,
+    "MCAB": true,
+    "MCAX": true,
+    "MCBL": true,
+    "MCBX": true,
+    "MCCX": true,
+    "MCDX": true,
+    "MCLX": true,
+    "MCOX": true,
+    "MCSX": true,
+    "MCUX": true,
+    "MDBK": true,
+    "MDCB": true,
+    "MDCX": true,
+    "MDEX": true,
+    "MDGX": true,
+    "MDIX": true,
+    "MDMX": true,
+    "MDPX": true,
+    "MEDX": true,
+    "MERX": true,
+    "MEUX": true,
+    "MFCX": true,
+    "MFUX": true,
+    "MGBX": true,
+    "MGCB": true,
+    "MGCX": true,
+    "MGDX": true,
+    "MGRB": true,
+    "MGSX": true,
+    "MGUX": true,
+    "MHCB": true,
+    "MHCX": true,
+    "MHEX": true,
+    "MHLX": true,
+    "MHMX": true,
+    "MHNX": true,
+    "MHSX": true,
+    "MHUX": true,
+    "MIZX": true,
+    "MJCX": true,
+    "MKPB": true,
+    "MKUX": true,
+    "MKYX": true,
+    "MLCG": true,
+    "MLDX": true,
+    "MMCX": true,
+    "MMMX": true,
+    "MNBX": true,
+    "MNCX": true,
+    "MNSX": true,
+    "MOGX": true,
+    "MOUX": true,
+    "MPCX": true,
+    "MPDX": true,
+    "MPRX": true,
+    "MRBX": true,
+    "MRTX": true,
+    "MSAX": true,
+    "MSBL": true,
+    "MSBX": true,
+    "MSCI": true,
+    "MSCX": true,
+    "MSHQ": true,
+    "MSLM": true,
+    "MSNU": true,
+    "MSNX": true,
+    "MSOX": true,
+    "MSSX": true,
+    "MUBL": true,
+    "MUBX": true,
+    "MUCG": true,
+    "MUCX": true,
+    "MUDX": true,
+    "MUNX": true,
+    "MUPX": true,
+    "MURX": true,
+    "MUSX": true,
+    "MVCB": true,
+    "MVCX": true,
+    "MVIX": true,
+    "MXXX": true,
+    "MYAX": true,
+    "MYCX": true,
+    "MYSX": true,
+    "MZCX": true,
+    "MZRX": true,
+    "NABX": true,
+    "NACX": true,
+    "NADX": true,
+    "NAGX": true,
+    "NAIX": true,
+    "NALX": true,
+    "NANX": true,
+    "NASX": true,
+    "NATA": true,
+    "NAUX": true,
+    "NAVX": true,
+    "NAWX": true,
+    "NBAD": true,
+    "NBBX": true,
+    "NBCX": true,
+    "NBMX": true,
+    "NBRD": true,
+    "NCBL": true,
+    "NCBX": true,
+    "NCCX": true,
+    "NCOX": true,
+    "NCUB": true,
+    "NCUX": true,
+    "NDCB": true,
+    "NDCX": true,
+    "NDDX": true,
+    "NDGX": true,
+    "NDIX": true,
+    "NDOX": true,
+    "NESF": true,
+    "NEYX": true,
+    "NGBX": true,
+    "NGKX": true,
+    "NGNX": true,
+    "NGRX": true,
+    "NGSB": true,
+    "NGSX": true,
+    "NGUX": true,
+    "NICB": true,
+    "NIDX": true,
+    "NILX": true,
+    "NIRX": true,
+    "NIUX": true,
+    "NJBK": true,
+    "NJCX": true,
+    "NJGX": true,
+    "NJMX": true,
+    "NJSX": true,
+    "NKGS": true,
+    "NLGX": true,
+    "NLUX": true,
+    "NMCB": true,
+    "NMCX": true,
+    "NMGB": true,
+    "NNCX": true,
+    "NNSB": true,
+    "NNSX": true,
+    "NOBX": true,
+    "NOIX": true,
+    "NOSC": true,
+    "NPCX": true,
+    "NPKX": true,
+    "NPPX": true,
+    "NRDX": true,
+    "NRMX": true,
+    "NSBB": true,
+    "NSBX": true,
+    "NSCX": true,
+    "NSGX": true,
+    "NSIX": true,
+    "NSJX": true,
+    "NSMX": true,
+    "NSPB": true,
+    "NSPX": true,
+    "NSRX": true,
+    "NTBL": true,
+    "NUBX": true,
+    "NUCB": true,
+    "NUCX": true,
+    "NULX": true,
+    "NVCX": true,
+    "NVNM": true,
+    "NVSX": true,
+    "NWCX": true,
+    "ODCX": true,
+    "ODGB": true,
+    "OIBA": true,
+    "OMCX": true,
+    "ONSX": true,
+    "ORBC": true,
+    "ORCB": true,
+    "OSMX": true,
+    "PABX": true,
+    "PACX": true,
+    "PADX": true,
+    "PALX": true,
+    "PANX": true,
+    "PARX": true,
+    "PASX": true,
+    "PATX": true,
+    "PAYX": true,
+    "PBGX": true,
+    "PCBL": true,
+    "PCBX": true,
+    "PCCB": true,
+    "PCCX": true,
+    "PCLX": true,
+    "PCMX": true,
+    "PCOX": true,
+    "PCPX": true,
+    "PCSX": true,
+    "PCTX": true,
+    "PCUX": true,
+    "PDBX": true,
+    "PDCX": true,
+    "PDNX": true,
+    "PDSX": true,
+    "PDUX": true,
+    "PGBX": true,
+    "PGCX": true,
+    "PGRX": true,
+    "PGTX": true,
+    "PHIX": true,
+    "PITX": true,
+    "PJSB": true,
+    "PKBX": true,
+    "PKDX": true,
+    "PKGB": true,
+    "PLOX": true,
+    "PLUX": true,
+    "PMCB": true,
+    "PMCX": true,
+    "PMEC": true,
+    "PMNX": true,
+    "PNCX": true,
+    "PNMX": true,
+    "PNPX": true,
+    "PNSX": true,
+    "PPBX": true,
+    "PPCX": true,
+    "PRCX": true,
+    "PREX": true,
+    "PROX": true,
+    "PRPX": true,
+    "PRSX": true,
+    "PRTH": true,
+    "PRUX": true,
+    "PSBL": true,
+    "PSBX": true,
+    "PSCX": true,
+    "PSIB": true,
+    "PSRX": true,
+    "PSSX": true,
+    "PTCX": true,
+    "PTNX": true,
+    "PTSX": true,
+    "PUBX": true,
+    "PUCB": true,
+    "PUCX": true,
+    "PUDX": true,
+    "PUGX": true,
+    "PUNB": true,
+    "PUNX": true,
+    "PURX": true,
+    "PUSD": true,
+    "PUSX": true,
+    "PUUX": true,
+    "PVAX": true,
+    "PVCX": true,
+    "PVVX": true,
+    "PWUX": true,
+    "PYCX": true,
+    "PYTM": true,
+    "QNBA": true,
+    "QNBX": true,
+    "QUCX": true,
+    "RABO": true,
+    "RACX": true,
+    "RAEX": true,
+    "RAJX": true,
+    "RAKX": true,
+    "RAMX": true,
+    "RANX": true,
+    "RATN": true,
+    "RAUX": true,
+    "RBBX": true,
+    "RBCX": true,
+    "RBIH": true,
+    "RBIN": true,
+    "RBIP": true,
+    "RBIS": true,
+    "RCBX": true,
+    "RCCX": true,
+    "RCDX": true,
+    "RCMX": true,
+    "RCUX": true,
+    "RDCB": true,
+    "RDCX": true,
+    "RDNX": true,
+    "REBX": true,
+    "RECX": true,
+    "REWX": true,
+    "RGCX": true,
+    "RGSX": true,
+    "RHMX": true,
+    "RJCX": true,
+    "RJJX": true,
+    "RJNX": true,
+    "RJTX": true,
+    "RKCX": true,
+    "RLUX": true,
+    "RMGB": true,
+    "RNBX": true,
+    "RNDX": true,
+    "RNGX": true,
+    "RNSB": true,
+    "RNSX": true,
+    "ROCX": true,
+    "ROHX": true,
+    "RPUX": true,
+    "RRBP": true,
+    "RRSX": true,
+    "RSBL": true,
+    "RSBX": true,
+    "RSCB": true,
+    "RSSB": true,
+    "RSSX": true,
+    "RSUX": true,
+    "RSVX": true,
+    "RUCX": true,
+    "RUKX": true,
+    "RUMX": true,
+    "RZSX": true,
+    "SABR": true,
+    "SABX": true,
+    "SACB": true,
+    "SACX": true,
+    "SADX": true,
+    "SAGX": true,
+    "SAHE": true,
+    "SAHX": true,
+    "SAIX": true,
+    "SALX": true,
+    "SAMX": true,
+    "SANT": true,
+    "SANX": true,
+    "SAOX": true,
+    "SAPX": true,
+    "SARX": true,
+    "SASA": true,
+    "SASX": true,
+    "SATX": true,
+    "SAUX": true,
+    "SAVX": true,
+    "SAWX": true,
+    "SBBJ": true,
+    "SBCR": true,
+    "SBCX": true,
+    "SBHY": true,
+    "SBIN": true,
+    "SBKX": true,
+    "SBLD": true,
+    "SBLS": true,
+    "SBLX": true,
+    "SBMX": true,
+    "SBMY": true,
+    "SBNX": true,
+    "SBPS": true,
+    "SBPX": true,
+    "SBSX": true,
+    "SBTR": true,
+    "SBUJ": true,
+    "SBUX": true,
+    "SCBL": true,
+    "SCBX": true,
+    "SCCX": true,
+    "SCDX": true,
+    "SCIX": true,
+    "SCNX": true,
+    "SCOB": true,
+    "SCOX": true,
+    "SCPX": true,
+    "SCSX": true,
+    "SCUX": true,
+    "SDBX": true,
+    "SDCB": true,
+    "SDCE": true,
+    "SDCX": true,
+    "SDHX": true,
+    "SDSX": true,
+    "SDTC": true,
+    "SDTX": true,
+    "SDUX": true,
+    "SECB": true,
+    "SEMX": true,
+    "SENX": true,
+    "SEUX": true,
+    "SEWX": true,
+    "SGCX": true,
+    "SGDX": true,
+    "SGLX": true,
+    "SGSX": true,
+    "SGUX": true,
+    "SHAX": true,
+    "SHBK": true,
+    "SHBX": true,
+    "SHCX": true,
+    "SHEX": true,
+    "SHGX": true,
+    "SHIX": true,
+    "SHKX": true,
+    "SHMX": true,
+    "SHNX": true,
+    "SHOX": true,
+    "SHRX": true,
+    "SHSX": true,
+    "SHUB": true,
+    "SHUX": true,
+    "SIBL": true,
+    "SIBX": true,
+    "SICX": true,
+    "SIDB": true,
+    "SIDC": true,
+    "SIDX": true,
+    "SIGX": true,
+    "SIHX": true,
+    "SIKX": true,
+    "SINX": true,
+    "SIRX": true,
+    "SISX": true,
+    "SITX": true,
+    "SIWX": true,
+    "SJGX": true,
+    "SJSB": true,
+    "SJSX": true,
+    "SKCX": true,
+    "SKKX": true,
+    "SKNB": true,
+    "SKNX": true,
+    "SKSB": true,
+    "SKUX": true,
+    "SLAX": true,
+    "SLCX": true,
+    "SMBC": true,
+    "SMBX": true,
+    "SMCB": true,
+    "SMCX": true,
+    "SMEX": true,
+    "SMMX": true,
+    "SMNB": true,
+    "SMNX": true,
+    "SMPX": true,
+    "SMSX": true,
+    "SMTX": true,
+    "SMUX": true,
+    "SMVC": true,
+    "SMWX": true,
+    "SNAX": true,
+    "SNBK": true,
+    "SNBX": true,
+    "SNCX": true,
+    "SNDX": true,
+    "SNGX": true,
+    "SNKX": true,
+    "SNLX": true,
+    "SNPX": true,
+    "SNSV": true,
+    "SNSX": true,
+    "SOBX": true,
+    "SOGE": true,
+    "SOLX": true,
+    "SONX": true,
+    "SPBX": true,
+    "SPCB": true,
+    "SPCX": true,
+    "SPNX": true,
+    "SPSX": true,
+    "SPTX": true,
+    "SRCB": true,
+    "SRCX": true,
+    "SREX": true,
+    "SRGX": true,
+    "SRHX": true,
+    "SRSX": true,
+    "SSBL": true,
+    "SSBX": true,
+    "SSDX": true,
+    "SSHX": true,
+    "SSKX": true,
+    "SSLX": true,
+    "SSNX": true,
+    "SSOX": true,
+    "SSSX": true,
+    "SSWX": true,
+    "STBP": true,
+    "STCB": true,
+    "STCX": true,
+    "STDX": true,
+    "STRX": true,
+    "SUBX": true,
+    "SUCX": true,
+    "SUDX": true,
+    "SULX": true,
+    "SUMX": true,
+    "SUNB": true,
+    "SURX": true,
+    "SURY": true,
+    "SUSB": true,
+    "SUSX": true,
+    "SUTB": true,
+    "SUVX": true,
+    "SVAX": true,
+    "SVBL": true,
+    "SVCB": true,
+    "SVCX": true,
+    "SVGX": true,
+    "SVMC": true,
+    "SVNX": true,
+    "SVOX": true,
+    "SVRX": true,
+    "SVSH": true,
+    "SVSX": true,
+    "SWMX": true,
+    "SWSX": true,
+    "SXXX": true,
+    "SYNB": true,
+    "TACX": true,
+    "TADX": true,
+    "TAMX": true,
+    "TAPX": true,
+    "TASX": true,
+    "TAUB": true,
+    "TBCX": true,
+    "TBDX": true,
+    "TBHX": true,
+    "TBMC": true,
+    "TBMX": true,
+    "TBNS": true,
+    "TBPX": true,
+    "TBSB": true,
+    "TBSX": true,
+    "TBTX": true,
+    "TBUX": true,
+    "TCBX": true,
+    "TCCX": true,
+    "TCHX": true,
+    "TCPX": true,
+    "TCUB": true,
+    "TCUX": true,
+    "TDBX": true,
+    "TDCB": true,
+    "TDCX": true,
+    "TDIX": true,
+    "TDMX": true,
+    "TDPX": true,
+    "TDSX": true,
+    "TECX": true,
+    "TEHX": true,
+    "TEMX": true,
+    "TESX": true,
+    "TETX": true,
+    "TFCX": true,
+    "TGBX": true,
+    "TGCG": true,
+    "TGCX": true,
+    "TGDX": true,
+    "TGMB": true,
+    "TGNX": true,
+    "TGUX": true,
+    "THCX": true,
+    "THMX": true,
+    "THOX": true,
+    "THRS": true,
+    "THRX": true,
+    "THWX": true,
+    "TIDX": true,
+    "TIRX": true,
+    "TJAX": true,
+    "TJBX": true,
+    "TJCX": true,
+    "TJDX": true,
+    "TJMX": true,
+    "TJNX": true,
+    "TJSB": true,
+    "TKAX": true,
+    "TKCX": true,
+    "TKDX": true,
+    "TKTX": true,
+    "TKUX": true,
+    "TLPX": true,
+    "TMAX": true,
+    "TMBL": true,
+    "TMBX": true,
+    "TMCX": true,
+    "TMNX": true,
+    "TMPX": true,
+    "TMSB": true,
+    "TMSC": true,
+    "TMSX": true,
+    "TMTX": true,
+    "TMUX": true,
+    "TNBX": true,
+    "TNCB": true,
+    "TNCX": true,
+    "TNDC": true,
+    "TNEX": true,
+    "TNHX": true,
+    "TNIX": true,
+    "TNKX": true,
+    "TNMX": true,
+    "TNSC": true,
+    "TNUX": true,
+    "TOCX": true,
+    "TPCX": true,
+    "TPDX": true,
+    "TPSC": true,
+    "TPSX": true,
+    "TPUX": true,
+    "TRAX": true,
+    "TRDX": true,
+    "TSAB": true,
+    "TSAX": true,
+    "TSBX": true,
+    "TSCX": true,
+    "TSDX": true,
+    "TSIX": true,
+    "TSKX": true,
+    "TSMX": true,
+    "TSNX": true,
+    "TSPX": true,
+    "TSSB": true,
+    "TSSX": true,
+    "TSUX": true,
+    "TTBX": true,
+    "TTCB": true,
+    "TTCX": true,
+    "TTGX": true,
+    "TTLX": true,
+    "TTUX": true,
+    "TUBX": true,
+    "TUCL": true,
+    "TUCX": true,
+    "TUDX": true,
+    "TUMX": true,
+    "TUNX": true,
+    "TUOX": true,
+    "TUPX": true,
+    "TURX": true,
+    "TVBX": true,
+    "TVDX": true,
+    "TVPX": true,
+    "TVUX": true,
+    "TYCX": true,
+    "UBBX": true,
+    "UBGX": true,
+    "UBIN": true,
+    "UCBA": true,
+    "UCBS": true,
+    "UCBX": true,
+    "UCCX": true,
+    "UCDX": true,
+    "UCUX": true,
+    "UGBX": true,
+    "UICX": true,
+    "UJSX": true,
+    "UJVN": true,
+    "UKGX": true,
+    "UMAX": true,
+    "UMCX": true,
+    "UMSX": true,
+    "UMUX": true,
+    "UNAX": true,
+    "UNIX": true,
+    "UNMX": true,
+    "UNSX": true,
+    "UOVB": true,
+    "UPCB": true,
+    "UPCX": true,
+    "UPNX": true,
+    "URBN": true,
+    "URCX": true,
+    "URDX": true,
+    "URMX": true,
+    "UROX": true,
+    "USFB": true,
+    "USNX": true,
+    "UTBI": true,
+    "UTBX": true,
+    "UTCX": true,
+    "UTGX": true,
+    "UTIB": true,
+    "UTKS": true,
+    "UTKX": true,
+    "UTZX": true,
+    "UUCB": true,
+    "UUCX": true,
+    "UXXX": true,
+    "VADX": true,
+    "VAIX": true,
+    "VANX": true,
+    "VARA": true,
+    "VASJ": true,
+    "VASX": true,
+    "VAUX": true,
+    "VCAX": true,
+    "VCBX": true,
+    "VCCX": true,
+    "VCNB": true,
+    "VCOB": true,
+    "VCOX": true,
+    "VDCX": true,
+    "VDYX": true,
+    "VEDX": true,
+    "VERX": true,
+    "VGBX": true,
+    "VHDX": true,
+    "VICX": true,
+    "VIDX": true,
+    "VIJB": true,
+    "VIJX": true,
+    "VIKX": true,
+    "VIMX": true,
+    "VIRX": true,
+    "VISX": true,
+    "VJSX": true,
+    "VKCX": true,
+    "VKSX": true,
+    "VMCX": true,
+    "VMMX": true,
+    "VMUX": true,
+    "VNSX": true,
+    "VRDX": true,
+    "VSBL": true,
+    "VSBX": true,
+    "VSCX": true,
+    "VSSX": true,
+    "VSVX": true,
+    "VUCX": true,
+    "VVCX": true,
+    "VVSB": true,
+    "VYAX": true,
+    "VYPX": true,
+    "VYSA": true,
+    "WACX": true,
+    "WAIX": true,
+    "WARX": true,
+    "WAUX": true,
+    "WBSC": true,
+    "WCBX": true,
+    "WDCX": true,
+    "WKGX": true,
+    "WNBX": true,
+    "WPAC": true,
+    "WRCX": true,
+    "WUCX": true,
+    "WZUX": true,
+    "XJKG": true,
+    "YADX": true,
+    "YAVX": true,
+    "YCBX": true,
+    "YDCX": true,
+    "YESB": true,
+    "YLNX": true,
+    "YMSX": true,
+    "YNCX": true,
+    "YNSX": true,
+    "ZBBX": true,
+    "ZBSX": true,
+    "ZCBL": true,
+    "ZIBX": true,
+    "ZILX": true,
+    "ZIMX": true,
+    "ZISX": true,
+    "ZLLX": true,
+    "ZMMX": true,
+    "ZRNB": true,
+    "ZSAX": true,
+    "ZSBG": true,
+    "ZSBL": true,
+    "ZSBX": true,
+    "ZSGX": true,
+    "ZSHX": true,
+    "ZSJX": true,
+    "ZSKX": true,
+    "ZSLX": true,
+    "ZSMX": true,
 }
 
 var bankName = map[string]string{
-	"AACX": "Akhand Anand Co.op Bank",
-	"ABBL": "AB Bank",
-	"ABCX": "Aurangabad District Central Co-operative Bank",
-	"ABDX": "Dr. Ambedkar Nagrik Sahakari Bank Mydt Gwalior",
-	"ABEX": "Andhra Bank Employees Co-operative Bank",
-	"ABHY": "Abhyudaya Co-operative Bank",
-	"ABNA": "Royal Bank of Scotland N.V.",
-	"ABPB": "Aditya Birla Idea Payments Bank",
-	"ABSB": "Abhinav Sahakari Bank",
-	"ABUX": "Abhinandan Urban Co-operative Bank Amravati",
-	"ACAX": "Assam Co-operative Apex Bank",
-	"ACBX": "Adarsh Co-operative Bank",
-	"ACCX": "Ace Co-operative Bank",
-	"ACKX": "Annasaheb Chougule Urban Co-operative Bank",
-	"ACOX": "Amarnath Co-operative Bank",
-	"ACUB": "Aryapuram Co-operative Urban Bank",
-	"ACUX": "Adarsh Co-operative Urban Bank",
-	"ADBX": "Ahmedabad District Co-operative Bank",
-	"ADCB": "Abu Dhabi Commercial Bank",
-	"ADCC": "Akola District Central Co-operative Bank",
-	"ADCX": "Shri Adinath Co-operative Bank",
-	"ADDX": "Adilabad District Co-operative Central Bank",
-	"AGCX": "Agrasen Co-operative Urban Bank",
-	"AGDX": "Agra District Co-operative Bank",
-	"AGRX": "Agroha Co-operative Urban Bank",
-	"AGSX": "Agrasen Nagari Sahakari Bank",
-	"AGUX": "Agartala Co-operative Urban Bank",
-	"AGVX": "Assam Gramin Vikash Bank",
-	"AHDC": "Ahmednagar District Central Co-operative Bank",
-	"AHMX": "Ahmednagar District Central Co-operative Bank",
-	"AHUX": "Ahilyadevi Urban Co-operative Bank Solapur",
-	"AIRP": "Airtel Payments Bank",
-	"AJAR": "Ajara Urban Co-operative Bank",
-	"AJHC": "Ambarnath Jai-hind Co-operative Bank",
-	"AJKB": "Akola Janata Commercial Co-operative Bank",
-	"AJMX": "Ajmer Central Co-operative Bank",
-	"AJNX": "Ajantha Urban Co-operative Bank",
-	"AJPX": "Ambajogai Peoples Co-operative Bank",
-	"AJSX": "Ambarnath Jai-hind Co-operative Bank",
-	"AJUX": "Ajara Urban Co-operative Bank",
-	"AKJB": "Akola Janata Commercial Co-operative Bank",
-	"AKKB": "Akkamahadevi Mahila Sahakari Bank Niyamit",
-	"AKMX": "Akola Merchant Co-operative Bank",
-	"AKOX": "Akola Urban Co-operative Bank",
-	"ALAX": "Alavi Co-operative Bank",
-	"ALIX": "Aligarh District Co-operative Bank",
-	"ALLA": "Allahabad Bank",
-	"ALLX": "Allahabad District Co-operative Bank",
-	"ALWX": "Alwar Central Co-operative Bank",
-	"AMAX": "Aman Sahakari Bank",
-	"AMBX": "Ambala Central Co-operative Bank",
-	"AMCB": "Ahmedabad Mercantile Co-operative Bank",
-	"AMCX": "Amritsar Central Co-operative Bank",
-	"AMDN": "Ahmednagar Merchants Co-operative Bank",
-	"AMMX": "Adarsh Mahila Mercantile Co-operative Bank",
-	"AMNX": "Astha Mahila Nagrik Sahakari Bank Maryadit",
-	"AMRX": "Amreli Jilla Madhyastha Sahakari Bank",
-	"AMSB": "Annasaheb Magar Sahakari Bank",
-	"AMSX": "Ambika Mahila Sahakari Bank",
-	"ANBX": "Amreli Nagarik Sahakari Bank",
-	"ANDB": "Andhra Bank",
-	"ANDX": "Andarsul Urban Co-operative Bank",
-	"ANMX": "Ahmednagar Merchant's Co-operative Bank",
-	"ANSX": "Andaman & Nicobar State Co-operative Bank",
-	"ANUX": "Anuradha Urban Co-operative Bank",
-	"ANZB": "Australia and New Zealand Banking Group",
-	"APBL": "Andhra Pradesh State Co-operative Bank",
-	"APCX": "Alappuzha District Co-operative Bank",
-	"APGB": "Andhra Pragathi Grameena Bank",
-	"APGV": "Andhra Pradesh Grameena Vikas Bank",
-	"APGX": "Andhra Pradesh Grameena Vikas Bank",
-	"APJX": "Ap Janata Co-operative Urban Bank",
-	"APMC": "A.P. Mahesh Co-operative Urban Bank",
-	"APMX": "Ap Mahajan's Co-operative Urban Bank",
-	"APNX": "Apani Sahakari Bank",
-	"APRR": "A.P. Raja Rajeswari Mahila Co-operative Urban Bank",
-	"APRX": "Arunachal Pradesh Rural Bank",
-	"APSX": "Adarniya P.d. Patilsaheb Sahakari Bank",
-	"ARBL": "Arvind Sahakari Bank",
-	"ARCX": "Arunachal Pradesh State Co-operative Apex Bank",
-	"ARMX": "510 Army Base W/s Credit Co-operative Primary Bank",
-	"ARYX": "Gramin Bank of Aryavart",
-	"ASBL": "Apna Sahakari Bank",
-	"ASBX": "Ahmednagar Shahar Sahakari Bank Maryadit",
-	"ASHX": "Ashta People's Co-operative Bank",
-	"ASKX": "Arvind Sahakari Bank",
-	"ASNX": "Ashoknagar Co-operative Bank",
-	"ASOX": "Associate Co-operative Bank",
-	"ASSX": "Ashok Sahakari Bank",
-	"AUBL": "AU Small Finance Bank",
-	"AUBX": "Angul United Central Co-operative Bank",
-	"AUCB": "Almora Urban Co-operative Bank",
-	"AUCX": "Ajara Urban Co-operative Bank",
-	"AUGX": "Allahabad Up Gramin Bank",
-	"AURX": "Aurangabad District Central Co-operative Bank. Bihar",
-	"AVDX": "Amravati District Central Co-operative Bank",
-	"AWCX": "Alwaye Urban Co-operative Bank",
-	"AWUX": "Alwar Urban Co-operative Bank",
-	"AZAX": "Azad Co-operative Bank",
-	"AZPX": "Amravati Zilla Parishad Shikshak Sahakari Bank",
-	"AZSX": "Almora Zila d Bank",
-	"AZUX": "Azad Urban Co-operative Bank Hubli",
-	"BACB": "Bassein Catholic Co-operative Bank",
-	"BACX": "Bihar Awami Co-operative Bank",
-	"BADX": "Bankura District Central Co-operative Bank",
-	"BAGX": "Balangir District Central Co-operative Bank",
-	"BALB": "Bally Co-operative Bank",
-	"BALX": "Balasinor Nagarik Sahakari Bank",
-	"BANX": "Banaras Mercantile Co-operative Bank",
-	"BARA": "Baramati Sahakari Bank",
-	"BARB": "Bank of Baroda",
-	"BARC": "Barclays Bank",
-	"BARX": "Baroda City Co-operative Bank",
-	"BASX": "Shri Basaveshwar Sahakari Bank Nyt.bagalkot",
-	"BAUX": "Badagara Co-operative Urban Bank",
-	"BAVX": "Bavla Nagrik Sahakari Bank",
-	"BAWX": "Bhawanipatna Central Co-operative Bank",
-	"BBDX": "Birbhum District Central Co-operative Bank",
-	"BBKM": "Bank of Bahrein and Kuwait",
-	"BBLX": "Bhingar Urban Co-operative Bank",
-	"BBRX": "Bangalore  Bangalore Rural&ramanagara Dccb",
-	"BBSX": "Balasore Bhadrak Central Co-operative Bank",
-	"BBUX": "Bellad Bagewadi Urban Souharada Sahakari Bank Nyt",
-	"BBVX": "Bhabhar Vibhag Nagrik Sahakari Bank",
-	"BCBM": "Bharat Co-operative Bank",
-	"BCBX": "Bantra Co-operative Bank",
-	"BCCB": "Bangalore City Co-operative Bank",
-	"BCCX": "Bathinda Central Co-operative Bank",
-	"BCEX": "Banswara Central Co-operative Bank",
-	"BCEY": "Bank of Ceylon",
-	"BCOX": "Bapuji Co-operative Bank",
-	"BCUB": "Bicholim Urban Co-operative Bank",
-	"BCUX": "Baghat Urban Co-operative Bank",
-	"BDBB": "Bahraich District Co-operative Bank",
-	"BDBL": "Bandhan Bank",
-	"BDBX": "Bellary District Co-operative Central Bank",
-	"BDCX": "Bijapur District Central Co-operative Bank",
-	"BDDX": "Bhadradri Co-operative Urban Bank",
-	"BDIX": "Bhandara District Central Co-operative Bank",
-	"BDNX": "Bhind Nagrik Sahakari Bank Mydt",
-	"BDOX": "Banda District Co-operative Bank",
-	"BDUX": "Banda Urban Co-operative Bank",
-	"BEDX": "Beed District Central Co-operative Bank",
-	"BELX": "Belgaum District Central Co-operative Bank",
-	"BERX": "Berhampore Co-operative Central Bank",
-	"BFUX": "Bhagyodaya Friends Urban Co-operative Bank",
-	"BGBX": "Dakshin Bihar Gramin Bank",
-	"BGCX": "Balageria Central Co-operative Bank",
-	"BGGX": "Baroda Gujarat Gramin Bank",
-	"BGUX": "Begusarai Central Co-operative Bank",
-	"BGVX": "Bangiya Gramin Vikash Bank",
-	"BHAX": "Bhagyodaya Co-operative Bank",
-	"BHBX": "Bhilai Nagarik Sahakari Bank Maryadit",
-	"BHCX": "Bhuj Commercial Co-operative Bank",
-	"BHDX": "Bhadohi Urban Co-operative Bank Gyanpur",
-	"BHEX": "Bhel Employees Co-operative Bank",
-	"BHGX": "Bhagalpur Central Co-operative Bank",
-	"BHIX": "Bhilwara Mahila Urban Co-operative Bank",
-	"BHJX": "Bhuj Mercentile Co-operative Bank",
-	"BHMX": "Brahmadeodada Mane Sahakari Bank Solapur",
-	"BHOX": "Bhopal Co-operative Central Bank",
-	"BHRX": "Bharatpur Central Co-operative Bank",
-	"BHSX": "Bharati Sahakari Bank",
-	"BHTX": "Bhatkal Urban Co-operative Bank",
-	"BHUX": "Bhilwara Urban Co-operative Bank",
-	"BHWX": "Bhiwani Central Co-operative Bank Bhiwani",
-	"BJUX": "Bijnor Urban Co-operative Bank",
-	"BKCX": "Bhavasara Kshatriya Co-operative Bank",
-	"BKDN": "Dena Bank",
-	"BKDX": "Banaskantha District Central Co-operative Bank",
-	"BKID": "Bank of India",
-	"BKSX": "Baran Kendriya Sahakari Bank Baran",
-	"BLGX": "Shree Basaveshwar Co-operative Bank",
-	"BMBL": "Bharatiya Mahila Bank",
-	"BMCB": "Bombay Mercantile Co-operative Bank",
-	"BMCX": "Barmer Central Co-operative Bank",
-	"BMPX": "Banaskantha Mercantile Co-operative Bank",
-	"BMSX": "Bhagyalakshmi Mahila Sahakari Bank",
-	"BNBX": "Betul Nagrik Sahakari Bank Mydt",
-	"BNCX": "Bhatpara Naihati Co-operative Bank",
-	"BNKX": "Banki Central Co-operative Bank",
-	"BNPA": "BNP Paribas Bank",
-	"BNSB": "Bhagini Nivedita Sahakari Bank Pune",
-	"BNSX": "Bhagini Nivedita Sahakari Bank",
-	"BOCX": "Boudh Co-operative Central Bank",
-	"BODX": "Bagalkot District Central Co-operative Bank",
-	"BOFA": "Bank of America",
-	"BORX": "Boral Union Co-operative Bank",
-	"BOTM": "MUFG Bank",
-	"BOTX": "Shree Botad Mercantile Co-operative Bank",
-	"BPCX": "Bhadgaon People's Co-operative Bank",
-	"BPSX": "Bilagi Pattana Sahakari Bank Niyamit",
-	"BRCX": "Bhavana Rishi Co-operative. Urban Bank",
-	"BRDX": "Baroda Central Co-operative Bank",
-	"BRGX": "Baroda Rajasthan Kshetriya Gramin Bank",
-	"BRMX": "Bramhapuri Urban Co-operative Bank",
-	"BRSX": "Baran Nagrik Bank",
-	"BRUX": "Bharuch District Central Co-operative Bank Bharuc",
-	"BSBX": "Baramati Sahakari Bank",
-	"BSCX": "Baidyabati Sheoraphuli Co-operative Bank",
-	"BTCX": "Balitikuri Co-operative Bank",
-	"BTUX": "Balotra Urban Co-operative Bank",
-	"BUBX": "Bhandara Urban Co-operative Bank",
-	"BUCL": "Belur Urban Co-operative Bank",
-	"BUCX": "Beawar Urban Co-operative Bank",
-	"BUGX": "Baroda Uttar Pradesh Gramin Bank",
-	"BUNX": "Bundi Central Co-operative Bank",
-	"BURX": "Burdwan Central Co-operative Bank",
-	"BUSX": "Business Co-operative Bank",
-	"BUZX": "Badaun Zila d Bank",
-	"BVNX": "Bhavnagar District Co-operative Bank",
-	"BVSX": "Bhavani Sahakari Bank",
-	"BWCX": "Brahmawart Commercial Co-operative Bank",
-	"CALX": "Calicut Co-operative Urban Bank",
-	"CBHX": "Central Co-operative Bank  Bhilwara",
-	"CBIN": "Central Bank of India",
-	"CCBL": "Citizen Credit Co-operative Bank",
-	"CCBX": "Citizen Co-operative Bank",
-	"CCCX": "Chennai Central Co-operative Bank",
-	"CCMX": "Chanasma Commercial Co-operative Bank",
-	"CCOB": "City Co-operative Bank",
-	"CCUX": "Chengelpattu Co-operative Urban Bank",
-	"CDCX": "Cuddalore District Central Co-operative Bank",
-	"CEBX": "Central Co-operative Bank Bikaner",
-	"CGBX": "Chhattisgarh Rajya Gramin Bank",
-	"CGGX": "Chaitanya Godavari Grameena Bank",
-	"CHAS": "JP Morgan Chase Bank NA",
-	"CHAX": "Chamoli Zila d Bank",
-	"CHBX": "Chamba Urban Co-operative Bank Chamba",
-	"CHCX": "Churu Central Co-operative Bank",
-	"CHDX": "Chittoor District Co-operative Central Bank",
-	"CHIX": "Chikhli Urban Co-operative Bank",
-	"CHKX": "Chittorgarh Kendriya Sahakari Bank",
-	"CHPX": "Chopda Peoples Co-operative Bank",
-	"CHRX": "Cherpalcheri Co-operative Urban Bank",
-	"CHSX": "Chandigarh State Co-operative Bank",
-	"CHTX": "Chitnavispura Sahakari Bank",
-	"CIDX": "Chikmagalur District Central Co-operative Bank",
-	"CITI": "CITI Bank",
-	"CITX": "Chitradurga District Co-operative Central Bank",
-	"CIUB": "City Union Bank",
-	"CJAX": "Citizens' Co-operative Bank Jammu",
-	"CJMX": "Karnataka Mahila Sahakari Bank",
-	"CLBL": "Capital Small Finance Bank",
-	"CMCB": "Colour Merchant's Co-operative Bank",
-	"CMCX": "Commercial Co-operative Bank",
-	"CMDX": "Coimbatore District Central Co-operative Bank",
-	"CMLX": "Commercial Co-operative Bank",
-	"CMPX": "Central Madhya Pradesh Gramin Bank",
-	"CMSV": "Chaitanya Mahila Sahakari Bank, Vijayapur",
-	"CNRB": "Canara Bank",
-	"CNSX": "Chembur Nagarik Sahakari Bank",
-	"COAS": "Coastal Local Area Bank",
-	"COCX": "Co-operative City Bank",
-	"COLX": "Coastal Local Area Bank",
-	"COMX": "Co-operative Bank of Mehsana",
-	"CONX": "Contai Co-operative Bank",
-	"CORP": "Corporation Bank",
-	"COSB": "Cosmos Co-operative Bank",
-	"CPDX": "Chandrapur District Central Co-operative Bank",
-	"CPSN": "Chikmagalur Pattana Sahakara Bank Niyamitha",
-	"CRBX": "Central Co-operative Bank Ara",
-	"CRES": "Credit Suisse AG",
-	"CRGB": "Chhattisgarh Rajya Gramin Bank",
-	"CRLY": "Credit Agricole Corporate and Investment Bank",
-	"CRSX": "Chhattisgarh Rajya Sahakari Bank Mydt",
-	"CRUB": "Shri Chhatrapati Rajashri Shahu Urban Co-operative Bank",
-	"CSBK": "Catholic Syrian Bank",
-	"CSBX": "Chartered Sahakari Bank Niyamitha",
-	"CTBA": "Commonwealth Bank of Australia",
-	"CTBX": "Citizens Co-operative Bank",
-	"CTCB": "Chinatrust Commercial Bank",
-	"CTOX": "Central Co-operative Bank Tonk",
-	"CTUX": "Chittorgarh Urban Co-operative Bank",
-	"CUBX": "Catholic Co-operative Urban Bank",
-	"CUCX": "Chiplun Urban Co-operative Bank",
-	"CURX": "Citizens Urban Co-operative Bank",
-	"CUTX": "Cuttack Central Co-operative Bank",
-	"CZCX": "Citizen Co-operative Bank",
-	"CZUX": "Churu Zila Urban Co-operative Bank",
-	"DAAX": "Defence Accounts Co-operative Bank",
-	"DAHX": "Dahod Mercantile Co-operative Bank",
-	"DAUX": "Dausa Urban Co-operative Bank",
-	"DBAX": "Dr Babasaheb Ambedkar Sahakari Bank Nasik",
-	"DBSS": "Development Bank of Singapore",
-	"DCBL": "DCB Bank",
-	"DCBX": "Dindigul Central Co-operative Bank",
-	"DCCX": "District Co-operative Central Bank Mahabubnagar",
-	"DCDX": "District Central Co-operative Bank Elluru",
-	"DCEX": "District Central Co-operative Bank Khammam",
-	"DCKX": "District Co-operative Central Bank Kurnool",
-	"DCMX": "District Co-operative Bank Mainpuri",
-	"DCNX": "Deccan Co-operative Urban Bank",
-	"DCPX": "District Co-operative Bank Pilibhit",
-	"DCSX": "District Co-operative Bank Shahjahanpur",
-	"DCTX": "District Co-operative Bank Teliyabagh",
-	"DCUB": "Darussalam Co-operative Urban Bank",
-	"DCUX": "Darussalam Co-operative Urban Bank",
-	"DDBX": "Dharmapuri District Central Co-operative Bank",
-	"DDCX": "Darjeeling District Central Co-operative Bank",
-	"DDDX": "Dakshin Dinajpur District Central Co-operative Bank",
-	"DDHX": "Dehradun District Co-operative Bank",
-	"DEGX": "Dena Gujarat Gramin Bank",
-	"DENS": "Delhi Nagrik Sehkari Bank",
-	"DEOB": "Deogiri Nagari Sahakari Bank Aurangabad",
-	"DEOX": "Deogiri Sahakari Bank Aurangabad",
-	"DEUT": "Deutsche Bank",
-	"DEUX": "Devika Urban Co-operative Bank",
-	"DEVX": "Development Co-operative Bank Kanpur",
-	"DGBX": "Telangana Grameena Bank",
-	"DHBX": "Dhanbad Central Co-operative Bank",
-	"DHKX": "Dhakuria Co-operative Bank",
-	"DHUX": "Dahod Urban Co-operative Bank",
-	"DIBX": "District Co-operative Bank Barabanki",
-	"DICG": "Deposit Insurance and Credit Guarantee Corporation",
-	"DICX": "District Co-operative Central Bank Visakhapatnam",
-	"DISX": "District Co-operative Bank, Sitapur",
-	"DIUX": "Dilip Urban Co-operative Bank",
-	"DJCX": "Deoghar Jamtara Central Co-operative Bank Deoghar",
-	"DKCL": "Deoria Kasia District Co-operative Bank",
-	"DKSX": "Dausa Kendriya Bank",
-	"DLSC": "Delhi State Co-operative Bank",
-	"DLXB": "Dhanlaxmi Bank",
-	"DMCB": "Deccan Merchants Co-operative Bank",
-	"DMCX": "Durgapur Mahila Co-operative Bank",
-	"DMKB": "Dattatraya Maharaj Kalambe Jaoli Sahakari Bank",
-	"DMKJ": "Dmk Jaoli Bank",
-	"DNDC": "Dhule And Nandurbar District Central Co-operative Bank",
-	"DNSB": "Dombivli Nagari Sahakari Bank",
-	"DNSX": "Deendayal Nagari Sahakari Bank",
-	"DOBX": "Dapoli Urban Co-operative Bank",
-	"DOHB": "Doha Bank QSC",
-	"DRGX": "Durg Rajnandgaon Gramin Bank",
-	"DSAX": "District Central Co-operative Bank, Supaul",
-	"DSBX": "Daivadnya Sahakara Bank Niyamit",
-	"DSCB": "Delhi State Co-operative Bank",
-	"DSHX": "District Co-operative Bank Saharanpur",
-	"DSPX": "Durgapur Steel Peoples' Co-operative Bank",
-	"DSUX": "Dharamvir Sambhaji Urban Co-operative Bank",
-	"DTCX": "District Co-operative Bank Rae Bareli",
-	"DTPX": "District Co-operative Bank Pratapgarh",
-	"DUCX": "Daund Urban Co-operative Bank",
-	"DUMX": "Dumka Central Co-operative Bank",
-	"DUNX": "Dungarpur Central Co-operative Bank",
-	"DURG": "Durgapur Steel Peoples Co-operative Bank",
-	"DVDX": "Davanagere District Central Co-operative Bank",
-	"DYPX": "D.y.patil Sahakari Bank Kolhapur",
-	"EBIL": "Emirates NBD Bank",
-	"ECBL": "Excellent Co-operative Bank",
-	"EDBX": "Ellaquai Dehati Bank",
-	"EDCX": "Erode District Central Co-operative Bank",
-	"EDSX": "Ernakulam District Co-operative Bank",
-	"EIBI": "Export Import Bank of India",
-	"ESAF": "ESAF Small Finance Bank",
-	"ESFB": "Equitas Small Finance Bank",
-	"ESMF": "Esaf Small Finance Bank",
-	"ETCX": "Etawah District Co-operative Bank Etwah",
-	"ETDX": "Etah District Co-operative Bank",
-	"EUCX": "Etah Urban Co-operative Bank",
-	"EWCX": "Etawah Urban Co-operative Bank Etawah",
-	"FCBX": "Fazilka Central Co-operative. Bank",
-	"FCCX": "Faridkot Central Co-operative Bank",
-	"FCOX": "District Co-operative Bank Faizabad",
-	"FDFX": "Farrukhabad District Co-operative Bank Fatehgarh",
-	"FDRL": "Federal Bank",
-	"FEKX": "Feroke Co-operative Bank",
-	"FGCB": "Fingrowth Co-operative Bank",
-	"FINF": "Fincare Small Finance Bank ",
-	"FINO": "Fino Payments Bank",
-	"FINX": "Financial Co-operative Bank",
-	"FIRN": "Firstrand Bank",
-	"FIRX": "Firstrand Bank",
-	"FMCX": "Faiz Mercantile Co-operative Bank, Nasik",
-	"FRIX": "Faridabad Central Co-operative Bank",
-	"FSCX": "Fatehgrah Sahib Central Co-operative Bank",
-	"FSFB": "Fincare Small Finance Bank",
-	"FZCX": "Ferozepur Central Co-operative. Bank",
-	"FZSX": "Firozabad Zila d Bank",
-	"GACX": "Gujarat Ambuja Co-operative Bank",
-	"GADX": "Gadhinglaj Urban Co-operative Bank",
-	"GAMX": "Ganga Mercantile Urban Co-operative Bank",
-	"GANX": "Gandhidham Co-operative Bank",
-	"GBCB": "Greater Bombay Co-operative Bank",
-	"GCBX": "Guruvayur Co-operative Urban Bank",
-	"GCCX": "Gurdaspur Central Co-operative Bank",
-	"GCUL": "Gauhati Co-operative Urban Bank",
-	"GCUX": "Gayatri Co-operative Urban Bank",
-	"GDCB": "Gadchiroli District Central Co-operative Bank",
-	"GDCX": "Guntur District Co-operative Central Bank",
-	"GDDX": "Giridih Central Co-operative Bank",
-	"GDUX": "Godhra Urban Co-operative Bank",
-	"GGBK": "Gurgaon Gramin Bank",
-	"GGCX": "Gopalganj Central Co-operative Bank",
-	"GHPX": "Ghatal Peoples' Co-operative Bank",
-	"GKNX": "Ganganagar Kendriya Sahakari Bank",
-	"GMBX": "Gandhidham Mercantile Co-operative Bank",
-	"GMCX": "Gujarat Mercantile Co-operative Bank",
-	"GMUX": "Gulshan Mercantile Urban Co-operative Bank",
-	"GNCX": "Gandhi Co-operative Urban Bank",
-	"GNSX": "Gozaria Nagrik Sahakari Bank",
-	"GODX": "Godavari Urban Co-operative Bank Nashik",
-	"GOSX": "Gondal Nagarik Sahakari Bank",
-	"GPCX": "Gandevi People's Co-operative Bank",
-	"GPOX": "General Post Office",
-	"GRAX": "Grain Merchants' Co-operative Bank",
-	"GSBL": "Goa State Co-operative Bank",
-	"GSBX": "Gandhibag Sahakari Bank  Nagpur",
-	"GSCB": "Gujarat State Co-operative Bank",
-	"GSCX": "Gumla Simdega Central Co-operative Bank",
-	"GSSX": "Guardian Souharda Sahakari Bank Niyamita",
-	"GTCX": "George Town Co-operative Bank",
-	"GUBX": "Godavari Urban Co-operative Bank",
-	"GUCX": "Goa Urban Co-operative Bank",
-	"GUNX": "Guntur Co-operative Urban Bank",
-	"GUOX": "Gurgaon Central Co-operative Bank",
-	"HAMX": "Hamirpur District Co-operative Bank",
-	"HANX": "Hanumangarh Kendriya Sahakari Bank",
-	"HARC": "Haryana State Co-operative Apex Bank",
-	"HCBL": "HASTI Co-operative Bank",
-	"HCBX": "Hasti Co-operative Bank",
-	"HCCX": "Hazaribag Central Co-operative Bank",
-	"HCLX": "HCBL Co-operative Bank",
-	"HDCL": "Hardoi District Co-operative Bank",
-	"HDCX": "Hyderabad District Co-operative Bank",
-	"HDFC": "HDFC Bank",
-	"HGBX": "Sarva Haryana Gramin Bank",
-	"HINX": "Hindu Co-operative Bank",
-	"HISX": "Hisar Central Co-operative Bank Hisar",
-	"HMBX": "Himachal Pradesh Gramin Bank",
-	"HMNX": "Himatnagar Nagarik Sahakari Bank",
-	"HOCX": "Hoshiarpur Central Co-operative Bank",
-	"HOOX": "Hooghly District Central Co-operative Bank",
-	"HPCX": "Shree Parswanath Co-operative Bank",
-	"HPSC": "Himachal Pradesh State Co-operative Bank",
-	"HPSX": "Himachal Pradesh State Co-operative Bank",
-	"HSBC": "Hongkong & Shanghai Banking Corporation",
-	"HSBM": "Haveli Sahakari Bank",
-	"HSBX": "Harihareshwar Sahakari Bank",
-	"HSCX": "Haryana State Co-operative Apex Bank",
-	"HSDX": "Hassan District Co-operative Central Bank",
-	"HSSX": "Hindustan Shipyard Staff Co-operative Bank",
-	"HUBX": "Hubli Urban Co-operative Bank",
-	"HUCB": "Hadagali Urban Co-operative Bank",
-	"HUCH": "Hanamasagar Urban Co-operative Bank",
-	"HUCX": "Hissar Urban Co-operative Bank",
-	"HUSB": "Hutatma Sahakari Bank",
-	"HUTX": "Hutatma Sahakari Bank",
-	"HVBK": "Woori Bank",
-	"IBBK": "PT Bank Maybank Indonesia TBK",
-	"IBKL": "IDBI",
-	"IBKO": "Industrial Bank of Korea",
-	"ICBK": "Industrial and Commercial Bank of China",
-	"ICBL": "Industrial Co-operative Bank",
-	"ICHX": "Ichalkaranji Merchants Co-operative Bank",
-	"ICIC": "ICICI Bank",
-	"ICLL": "Indian Clearing Corporation",
-	"ICMX": "Indore Cloth Market Co-operative Bank",
-	"IDFB": "IDFC FIRST Bank",
-	"IDIB": "Indian Bank",
-	"IDUK": "Idukki District Co-operative Bank",
-	"IDUX": "Idukki District Co-operative Bank",
-	"ILCB": "Ilkal Co-operative Bank",
-	"IMCX": "Imperial Urban Co-operative Bank Jalandhar",
-	"IMPX": "Imphal Urban Co-operative Bank",
-	"INCX": "Indapur Urban Co-operative Bank",
-	"INDB": "Indusind Bank",
-	"INDX": "Independence Co-operative Bank",
-	"IOBA": "Indian Overseas Bank",
-	"IPCX": "Indore Premier Co-operative Bank",
-	"IPOS": "India Post Payments Bank",
-	"IPPB": "India Post Payments Bank",
-	"IPSX": "Indore Paraspar Sahakari Bank",
-	"ISBX": "Indraprastha Sehkari Bank",
-	"ISMX": "Indore Swayam Mahila Co-operative Bank",
-	"ITBL": "Irinjalakuda Town Co-operative Bank",
-	"ITCX": "Irinjalakuda Town Co-operative Bank",
-	"ITDX": "Income Tax Dept Co-operative Bank",
-	"IUCB": "Integral Urban Co-operative Bank",
-	"IUCX": "Imperial Urban Co-operative Bank",
-	"IXXX": "Indrayani Co-operative Bank",
-	"JACX": "Jain Co-operative Bank",
-	"JAKA": "Jammu and Kashmir Bank",
-	"JALX": "Janalaxmi Co-operative Bank",
-	"JAMX": "Jamia Co-operative Bank",
-	"JANA": "Janaseva Sahakari Bank, Pune",
-	"JANX": "Janata Co-operative Bank",
-	"JASB": "Janaseva Sahakari Bank (Borivli)",
-	"JASX": "Janatha Seva Co-operative Bank",
-	"JAUX": "Jaihind Urban Co-operative Bank",
-	"JBHX": "Jila Sahakari Kendriya Bank Maryadit Bhind",
-	"JBIX": "Jila d Kendriya Bank Maryadit Bilaspur",
-	"JBMX": "Jila Sahakari Kendriya Bank Maryadit Sagar",
-	"JCBX": "Janata Co-operative Bank Malegaon.",
-	"JCCB": "Jaipur Central Co-operative Bank",
-	"JCCX": "Jalandhar Central Co-operative Bank",
-	"JCDX": "Jamnagar District Co-operative Bank",
-	"JCHX": "Jila Sahakari Kendriya Bank Mydt Chhatarpur",
-	"JCPX": "Janata Co-operative Bank",
-	"JCUX": "Jagruti Co-operative Urban Bank",
-	"JDCX": "Jalaun District Co-operative Bank",
-	"JDEX": "Jila Sahakari Kendriya Bank Mydtt Dewas",
-	"JGBX": "Jharkand Gramin Bank",
-	"JGCX": "Jogindra Central Co-operative Bank",
-	"JGWX": "Jila Sahakari Bank Mydt. Gwalior",
-	"JHAX": "Jharneshwar Nagrik Sahakari Bank Maryadit",
-	"JHSX": "Jila Sahakari Kendriya Bank Mydt Hoshangabad",
-	"JHUX": "Jhunjhunu Kenddriya Sahakari Bak",
-	"JIBX": "Jila Sahakari Kendriya Bank Maryadit Balaghat",
-	"JICX": "Jila Sahakari Kendriya Bank Maryadit Chhindwara",
-	"JIDX": "Jila d Kendriya Bank Mydt Damoh",
-	"JIGX": "Jila Sahakari Kendriya Bank Mydt Guna",
-	"JIKX": "Jila Sahakari Kendariya Bank Mydt Khandwa",
-	"JIMX": "Jila Sahakari Kendriya Bank Mydt Mandla",
-	"JINX": "Jind Central Co-operative Bank",
-	"JIOP": "Jio Payments Bank",
-	"JIOX": "Jila Sahakari Kendriya Bank Mydt Shahdol",
-	"JIRX": "Jila Sahakari Kendriya Bank Maryadit Rajgarh",
-	"JISX": "Jila Sahakari Kendriya Bank Maryadit Sidhi",
-	"JIVX": "Jivaji Sahakari Bank  Ichalkaranji",
-	"JJCX": "Jhajjar Central Co-operative Bank",
-	"JJHX": "Jila d Kendriya Bank Mydt Jhabua",
-	"JJSB": "Jalgaon Janata Bank",
-	"JKAX": "Jila Sahakari Kendriya Bank Mydt Ambikapur",
-	"JKCX": "Janakalyan Co-operative Bank Nashik",
-	"JKDX": "Jila Sahakari Kendriya Bank Mydt. Jabalpur",
-	"JKEX": "Jhalawar Kendriya Bank",
-	"JKHX": "Jila Kendriya Bank Maryadit Khargone",
-	"JKMX": "Jila Sahakari Kendriya Bank Maryadit Jagdalpur",
-	"JKRX": "Jilla Sahakari Kendriya Bank Mydt Raisen",
-	"JKSX": "J&k State Co-operative Bank",
-	"JLCX": "Jalore Central Co-operative Bank Jalore",
-	"JLDX": "Jalna District Central Co-operative Bank",
-	"JLNX": "Jalna Peoples Co-operative Bank Jalna",
-	"JLSX": "Jila Sahakari Kendriya Bank Mydt Vidisha",
-	"JLWX": "Jhalawar Nagrik Sahakari Bank",
-	"JMAX": "Jila Sahakari Kendriya Bank Mydt Mandsaur",
-	"JMBX": "Jila Sahakari Kendriya Bank Maryadit Betul",
-	"JMCX": "Jalna Merchants Co-operative Bank",
-	"JMDX": "Jila d Kendriya Bank Mydt Datia",
-	"JMHX": "Jamshedpur Urban Co-operative Bank",
-	"JMMX": "Jammu Central Co-operative Bank",
-	"JMOX": "Jila Sahakari Kendriya Bank Mydt Morena",
-	"JMPX": "Jamnagar Peoples Co-operative Bank",
-	"JMSX": "Jijamata Mahila Sahakari Bank",
-	"JMYX": "Jila Sahakari Kendriya Bank Mydt Durg",
-	"JNAX": "Jila Sahakari Kendriya Bank Mydt Narsinghpur",
-	"JNDX": "Junagadh Jilla Sahakari Bank",
-	"JNSX": "Janseva Nagari Sahakari Bank Marydit",
-	"JODX": "Jodhpur Central Co-operative Bank",
-	"JONX": "Jodhpur Nagrik Sahakari Bank",
-	"JOWX": "Jowai Co-operative Urban Bank",
-	"JPAX": "Jila Sahakari Kendriya Bank Mydt Panna",
-	"JPCB": "Jalgaon Peoples Co-operative Bank",
-	"JPCX": "Jalpaiguri Central Co-operative Bank",
-	"JRAX": "Jila Sahakari Kendriya Bank Mydt Ratlam",
-	"JRKX": "Jila Sahakari Kendriya Bank Mydt Ujjain",
-	"JRNX": "Jila Sahakari Kendriya Bank Maryadit Rajnandgaon",
-	"JRSX": "Jalore Nagrik Sahakari Bank",
-	"JSAB": "Jain Sahakari Bank",
-	"JSAX": "Janata Sahakari Bank Ajara",
-	"JSBL": "Janakalyan Sahakari Bank",
-	"JSBP": "Janata Sahakari Bank (Pune)",
-	"JSBX": "Janaseva Co-operative Bank (Nashik)",
-	"JSCX": "Jharkhand State Co-operative Bank",
-	"JSDX": "Jila Sahakari Kendriya Bank Mydt Dhar",
-	"JSEX": "Jila Sahakari Kendriya Bank Mydt Sehore",
-	"JSFB": "Jana Small Finance Bank",
-	"JSHX": "Jila Sahakari Kendriya Bank Mydt Shajapur",
-	"JSKX": "Jila Sahakari Kendriya Bank Maryadit Raipur",
-	"JSMX": "Janata Sahakari Bank Amravati",
-	"JSOX": "Jila Sahakari Kendriya Bank Myt Seoni",
-	"JSRX": "Jila Sahakari Kendriya Bank Mydt Rewa",
-	"JSTX": "Jila Sahakari Kendriya Bank Mydt Satna",
-	"JSVX": "Jila Sahakari Kendriya Bank Maryadit Shivpuri",
-	"JSWX": "Jansewa Urban Co-operative Bank",
-	"JTIX": "Jila Sahakari Kendriya Bank Mydt Tikamgarh",
-	"JTSC": "Janatha Seva Co-operative Bank",
-	"JTSX": "Jugalkishor Tapdiya Shree Mahesh Ucb Aurangabadltd",
-	"JUCX": "Junagadh Commercial Co-operative Bank",
-	"JUSX": "Jaysingpur Udgaon Sahakari Bank Jaysingpur",
-	"JVCX": "Jivan Commercial Co-operative Bank",
-	"JXXX": "Jampeta Co-Operative Urban Bank",
-	"KAAX": "Kadappa District Co-operative Central Bank",
-	"KACE": "Kangra Central Co-operative Bank",
-	"KACX": "Kachchh District Central Co-operative Bank",
-	"KADX": "Kasaragod District Co-operative Bank",
-	"KAGX": "Kagal Co-operative Bank Kagal",
-	"KAIJ": "Kallappanna Awade Ichalkaranji Janata Sahakari Bank",
-	"KALX": "Kalna Town Credit Co-operative Bank",
-	"KAMX": "Kamala Co-operative Bank Solapur",
-	"KANG": "Kangra Co-operative Bank",
-	"KANX": "Kanara District Central Co-operative Bank",
-	"KARB": "Karnataka Bank",
-	"KARX": "Kaira District Central Co-operative Bank",
-	"KASX": "Kashmir Mercantile Co-operative Bank",
-	"KATX": "Kattappana Urban Co-operative Bank",
-	"KAYX": "Kanyakumari District Central Co-operative Bank",
-	"KBCX": "Kanakamahalakshmi Co-operative Bank",
-	"KBHB": "KEB Hana Bank",
-	"KBKB": "Kookmin Bank",
-	"KBNX": "Khambhat Nagarik Sahakari Bank",
-	"KBSX": "Krishna Bhima Samruddhi Local Area Bank",
-	"KCBL": "Kapol Co-operative Bank",
-	"KCBX": "Kutch Co-operative Bank",
-	"KCCB": "Kalupur Commercial Co-operative Bank",
-	"KCCX": "Kancheepuram Central Co-operative Bank",
-	"KCDX": "Karnatak Central Co-operative Bank Dharwad",
-	"KCEX": "Kota Central Co-operative Bank Kota",
-	"KCOB": "Kangra Co-operative Bank",
-	"KCUB": "Khattri Co-operative Urban Bank",
-	"KCUX": "Kannur Co-operative Urban Bank",
-	"KDBX": "Karimnagar District Co-operative Central Bank",
-	"KDCB": "Kozhikode District Co-operative Bank",
-	"KDCX": "Kozhikode District Co-operative Bank",
-	"KDIX": "Shree Kadi Nagarik Sahakari Bank",
-	"KDNX": "Kodinar Nagrik Sahakari Bank",
-	"KDUX": "Kodagu District Co-operative Central Bank",
-	"KEJX": "Keonjhar Central Co-operative Bank",
-	"KEMX": "Kerala Mercantile Co-operative Bank",
-	"KESX": "Keshav Sehkari Bank",
-	"KGBX": "Kaveri Grameena Bank",
-	"KGDX": "Khagaria District Central Co-operative Bank",
-	"KGRB": "Kaveri Grameena Bank",
-	"KGSX": "Kashi Gomti Samyut Gramin Bank",
-	"KHAX": "Khalilabad Nagar d Bank",
-	"KHCX": "Khardah Co-operative Bank",
-	"KHDX": "Kheda People's Co-operative Bank",
-	"KHNX": "Kohinoor Sahakari Bank Ichalkaranji",
-	"KHTX": "Khurda Central Co-operative Bank",
-	"KHUX": "Khamgaon Urban Co-operative Bank",
-	"KICX": "Kaithal Central Co-operative Bank",
-	"KJSB": "Kalyan Janata Sahakari Bank",
-	"KJSX": "Karad Janata Sahakari Bank",
-	"KKBK": "Kotak Mahindra Bank",
-	"KKMX": "Kankaria Mainagar Nagrik Sahakari Bank",
-	"KKSX": "Kumbhi Kasari Bank Kuditre",
-	"KLGB": "Kerala Gramin Bank",
-	"KLMX": "Kollam District Co-operative Bank",
-	"KMCB": "Kokan Mercantile Co-operative Bank",
-	"KMCX": "Krishna Mercantile Co-operative Bank",
-	"KMNX": "Kota Mahila Nagrik Sahakari Bank",
-	"KMSX": "Kolhapur Mahila Sahakari Bank",
-	"KNBX": "Kalol Nagarik Sahakari Bank",
-	"KNCX": "Karnal Central Co-operative Bank",
-	"KNNX": "Sri Kannikaparameswari Co-operative Bank",
-	"KNPX": "Karnala Nagari Sahakari Bank Panvel",
-	"KNSB": "Kurla Nagarik Sahakari Bank",
-	"KNSX": "Kisan Nagari Sahakari Bank Maryadit Parbhani",
-	"KOBX": "Kopargaon Peoples Co-operative Bank",
-	"KOCX": "Konoklota Mahila Urban Co-operative Bank",
-	"KODX": "Kodungallur Town Co-operative Bank",
-	"KOEX": "KEB Hana Bank",
-	"KOLH": "Kolhapur Urban Co-operative Bank",
-	"KORX": "Koraput Central Co-operative Bank",
-	"KOSX": "Kota Nagrik d Bank Kota",
-	"KOTX": "Kodinar Taluka Co-operative Banking Union",
-	"KOYX": "Koylanchal Urban Co-operative Bank",
-	"KPCX": "Kolhapur District Central Co-operative Bank",
-	"KRCX": "Kolar And Chickballapur Dt Co-operative Central Bank",
-	"KRDX": "Krishna District Co-operative Bank",
-	"KRIX": "Krishnagar City Co-operative Bank",
-	"KRMX": "Karamana Co-operative Urban Bank",
-	"KRNX": "Karnavati Co-operative Bank",
-	"KRTH": "Krungthai Bank",
-	"KRTX": "Kranthi Co-operative Urban Bank",
-	"KSBK": "Kerala State Co-operative Bank",
-	"KSBX": "Krishna Sahakari Bank Rethare Bk",
-	"KSCB": "Karnataka State Co-operative Apex Bank",
-	"KSCX": "Kerala State Co-operative Bank",
-	"KSMX": "Kosamba Mercantile Co-operative Bank",
-	"KSNX": "Koteshwara Sahakari Bank Niyamitha",
-	"KSTX": "Kasaragod Co-operative Town Bank No 970",
-	"KSUX": "Kashipur Urban Co-operative Bank",
-	"KTBX": "Kottayam District Co-operative Bank",
-	"KTCX": "Kapurthala Central Co-operative Bank",
-	"KTDX": "Katihar District Central Co-operative Bank",
-	"KTTX": "Tumkur District Central Bank",
-	"KUBX": "Kaduthuruthy Urban Co-operative Bank",
-	"KUCB": "Karad Urban Co-operative Bank",
-	"KUCX": "Kolhapur Urban Co-operative Bank",
-	"KUKX": "Kukarwada Nagarik Sahakari Bank",
-	"KULX": "Kodoli Urban Co-operative Bank Kodoli",
-	"KUMX": "Kumbakonam Central Co-operative Bank",
-	"KUNS": "Kurmanchal Nagar Sahakari Bank",
-	"KUOB": "Konark Urban Co-operative Bank",
-	"KURX": "Kurukshetra Central Co-operative Bank",
-	"KUTX": "Kuttiady Co-operative Urban Bank",
-	"KVBL": "Karur Vysya Bank",
-	"KVCX": "Kavita Urban Co-operative Bank",
-	"KVGB": "Karnataka Vikas Grameena Bank",
-	"KYDX": "Kalaburagi and Yadgir District Co-operative Central Bank",
-	"LACX": "Laxmi Co-operative Bank Solapur",
-	"LATX": "Latur Urban Co-operative Bank Latur",
-	"LAVB": "Laxmi Vilas Bank",
-	"LBMX": "Laxmibai Mahila Nagrik Sahakari Bank Maradit",
-	"LCBX": "Lalbaug Co-operative Bank",
-	"LCCX": "Ludhiana Central Co-operative Bank",
-	"LDCX": "Latur District Central Co-operative Bank",
-	"LDPX": "Loknete Dattaji Patil Sahakari Bank",
-	"LDRX": "Langpi Dehangi Rural Bank",
-	"LECX": "LIC Employees Co-operative Bank",
-	"LICB": "Liluah Co-operative Bank",
-	"LKBL": "Lord Krishna Bank",
-	"LKCX": "Little Kancheepuram Co-operative Urban Bank",
-	"LKHX": "Lakhimpur Urban Co-operative Bank",
-	"LKMX": "Lokmangal Co-operative Bank Solapur",
-	"LMNX": "Laxmi Mahila Nagrik Sahakari Bank Maryadit",
-	"LNSX": "Lunawada Nagarik Sahakari Bank",
-	"LOKX": "Lokvikas Nagari Sahakari Bank Aurangabad",
-	"LONX": "Lonavala Sahakari Bank",
-	"LUCX": "Lucknow Urban Co-operative Bank",
-	"LULX": "Laxmi Urban Co-operative Bank Latur",
-	"MABL": "Malleshwaram Co-operative Bank",
-	"MACX": "Mahabhairab Co-operative Urban Bank",
-	"MADX": "Madhyanchal Gramin Bank",
-	"MAGX": "Mewar Aanchalik Gramin Bank",
-	"MAHB": "Bank of Maharashtra",
-	"MAHG": "Maharashtra Gramin Bank",
-	"MAHX": "Shree Mahalaxmi Urban Co-operative Credit Bank",
-	"MAJX": "Manjeri Co-operative Urban Bank",
-	"MAKX": "Makarpura Industrial Estate Co-operative Bank",
-	"MALX": "Malviya Urban Co-operative Bank",
-	"MAMX": "Mandvi Mercantile Co-operative Bank",
-	"MANX": "Mansa Nagarik Sahakari Bank",
-	"MAPX": "Maharana Pratap Co-operative Urban Bank",
-	"MASX": "Mahesh Urban Co-operative Bank Solapur",
-	"MAUX": "Mantha Urban Co-operative Bank",
-	"MAVX": "Shree Mahavir Sahakari Bank",
-	"MAWX": "Manipur Womens Co-operative Bank",
-	"MAYX": "Mayani Urban Co-operative Bank",
-	"MBCX": "Mugberia Central Co-operative Bank",
-	"MBGX": "Dakshin Bihar Gramin Bank",
-	"MBLX": "Manmandir Co-operative Bank",
-	"MCAB": "Meghalaya Co-operative Apex Bank",
-	"MCAX": "Mahesh Urban Co-operative Bank Ahmedpur",
-	"MCBL": "Mahanagar Co-operative Bank",
-	"MCBX": "Modern Co-operative Bank",
-	"MCCX": "Muktsar Central Co-operative Bank",
-	"MCDX": "Muzaffarnagar District Co-operative Bank",
-	"MCLX": "Mahendragarh Central Co-operative Bank",
-	"MCOX": "Mahesh Urban Co-operative Bank",
-	"MCSX": "Mattancherry Sarvajanik Co-operative Bank",
-	"MCUX": "Mahaveer Co-operative Urban Bank",
-	"MDBK": "Model Co-operative Bank",
-	"MDCB": "Mumbai District Central Co-operative Bank",
-	"MDCX": "Madurai District Central Co-operative Bank",
-	"MDEX": "Model Co-operative Bank",
-	"MDGX": "Rajasthan Marudhara Gramin Bank",
-	"MDIX": "Mandya District Co-operative Central Bank",
-	"MDMX": "Mann Deshi Mahila Sahakari Bank",
-	"MDPX": "Md Pawar Peoples Co-operative Bank Urun Islampur",
-	"MEDX": "District Co-operative Central Bank",
-	"MERX": "Meghalaya Rural Bank",
-	"MEUX": "Meenachil East Urban Co-operative Bank",
-	"MFCX": "Muzaffarpur Central Co-operative Bank",
-	"MFUX": "Mahatma Fule Urban Co-operative Bank,amravati",
-	"MGBX": "Maharashtra Gramin Bank",
-	"MGCB": "Mogaveera Co-operative Bank",
-	"MGCX": "Mansing Co-operative Bank",
-	"MGDX": "Magadh Central Co-operative Bank",
-	"MGRB": "Malwa Gramin Bank",
-	"MGSX": "Mangaldai Nagar Samabai Bank",
-	"MGUX": "Madgaum Urban Co-operative Bank",
-	"MHCB": "Mizuho Bank",
-	"MHCX": "Mahoba Urban Co-operative Bank Mahoba",
-	"MHEX": "Mahamedha Urban Co-operative Bank ( Under Rbi Direction)",
-	"MHLX": "Mahila Co-operative Bak",
-	"MHMX": "Shri Mahalaxmi Co-operative Bank Kolhapur",
-	"MHNX": "Mahanagar Nagrik Sahakari Bank Maryadit",
-	"MHSX": "Mahesh Sahakari Bank Pune",
-	"MHUX": "Mahesh Urbank Co-operative Bank Parli V.",
-	"MIZX": "Mizoram Co-operative Apex Bank",
-	"MJCX": "Monghyr Jamui Central Co-operative Bank",
-	"MKPB": "Malkapur Urban Co-operative Bank",
-	"MKUX": "Malkapur Urban Co-operative Bank",
-	"MKYX": "Marketyard Commercial Co-operative Bank",
-	"MLCG": "Merchants Liberal Co-operative Bank",
-	"MLDX": "Malda District Central Co-operative Bank",
-	"MMCX": "Mattancherry Mahajanik Co-operative Urban Bank",
-	"MMMX": "Mahila  Nagrik Sahakari Bank Maryadit Mahasamund",
-	"MNBX": "Mahila Co-operative Nagarik Bank,bharuch",
-	"MNCX": "Mansa Central Co-operative Bank",
-	"MNSX": "Mehsana Nagarik Sahakari Bank",
-	"MOGX": "Moga Central Co-operative Bank",
-	"MOUX": "Mohol Urban Co-operative Bank",
-	"MPCX": "Moirang Primary Co-operative Bank",
-	"MPDX": "Malappuram District Co-operative Bank",
-	"MPRX": "Madhya Pradesh Rajya Sahakari Bank Maryadit",
-	"MRBX": "Manipur Rural Bank",
-	"MRTX": "Maratha Co-operative Bank",
-	"MSAX": "Mansarovar Urban Co-operative Bank",
-	"MSBL": "Malad Sahakari Bank",
-	"MSBX": "M.s.Co-operative Bank",
-	"MSCI": "Maharashtra State Co-operative Bank",
-	"MSCX": "Manipur State Co-operative Bank",
-	"MSHQ": "Mashreq Bank",
-	"MSLM": "Muslim Co-operative Bank",
-	"MSNU": "Mehsana Urban Co-operative Bank",
-	"MSNX": "Mehsana District Central Co-operative Bank",
-	"MSOX": "Manorama Co-operative Bank Solapur",
-	"MSSX": "Merchants Souharda Sahakara Bank Niyamita",
-	"MUBL": "Municipal Co-operative Bank",
-	"MUBX": "Maharaja Co-operative Urban Bank",
-	"MUCG": "Merchants Urban Co-operative Bank",
-	"MUCX": "Mapusa Urban Co-operative Bank of Goa",
-	"MUDX": "Madheshwari Urban Development Co-operative Bank",
-	"MUNX": "Mahudha Nagarik Sahakari Bank",
-	"MUPX": "Mehmadabad Urban Peoples Co-operative Bank",
-	"MURX": "Murshidabad District Central Co-operative Bank",
-	"MUSX": "Muslim Co-operative Bank",
-	"MVCB": "Sir M Visvesvaraya Co-operative Bank",
-	"MVCX": "Mahaveer Co-operative Bank",
-	"MVIX": "Manvi Pattana Souharda Sahakari Bank Ni",
-	"MXXX": "Maharashtra Mantralaya & Allied Offices Co-operative Bank",
-	"MYAX": "Meghalaya Co-operative Apex Bank",
-	"MYCX": "Mayurbhanj Central Co-operative Bank",
-	"MYSX": "Mysore Chamarajanagar District Co-operative Bank",
-	"MZCX": "Mizoram Urban Co-operative Development Bank",
-	"MZRX": "Mizoram Rural Bank",
-	"NABX": "Nandani Sahakari Bank",
-	"NACX": "Nalanda Central Co-operative Bank Nalanda",
-	"NADX": "Nadapuram Co-operative Bank",
-	"NAGX": "Nagaland Rural Bank",
-	"NAIX": "Nainital District Co-operative Bank",
-	"NALX": "National Urban Co-operative Bank",
-	"NANX": "Nanded District Central Co-operative Bank",
-	"NASX": "Nasik District Central Co-operative Bank",
-	"NATA": "National Australia Bank",
-	"NAUX": "Nagaur Central Co-operative Bank",
-	"NAVX": "Navnirman Co-operative Bank",
-	"NAWX": "Nawanagar Co-operative Bank",
-	"NBAD": "National Bank of Abu Dhabi PJSC",
-	"NBBX": "National Co-operative Bank Bangalore",
-	"NBCX": "Nalbari Urban Co-operative Bank",
-	"NBMX": "Nagrik Sahakari Bank, Vidisha",
-	"NBRD": "National Bank for Agriculture and Development",
-	"NCBL": "National Co-operative Bank",
-	"NCBX": "Nawanshahr Central Co-operative Bank",
-	"NCCX": "Nabadwip Co-operative Credit Bank",
-	"NCOX": "Nagnath Urban Co-operative Bank Hingoli",
-	"NCUB": "Nilambur Co-operative Urban Bank",
-	"NCUX": "Nilambur Co-operative Urban Bank",
-	"NDCB": "Naval Dockyard Co-operative Bank",
-	"NDCX": "Nilgiris District Central Co-operative Bank",
-	"NDDX": "Nadia District Central Co-operative Bank",
-	"NDGX": "Nashik District Girna Sahakari Bank",
-	"NDIX": "Nashik District Industrial & Mercantile Co-operative Bank",
-	"NDOX": "Nayagarh District Central Co-operative Bank",
-	"NESF": "North East Small Finance Bank",
-	"NEYX": "Neyyattinkara Co-operative Urban Bank",
-	"NGBX": "Nagar Sahakari Bank Maharajganj",
-	"NGKX": "Nagrik Sahakari Bank Maryadit Gwalior",
-	"NGNX": "Nagina Urban Co-operative Bank",
-	"NGRX": "Nagar Sahakari Bank",
-	"NGSB": "Nagpur Nagarik Sahakari Bank",
-	"NGSX": "Nagarik Sahakari Bank Maryadit Durg",
-	"NGUX": "Nagaur Urban Co-operative Bank",
-	"NICB": "New India Co-operative Bank",
-	"NIDX": "Nidhi Co-operative Bank",
-	"NILX": "Nilkanth Co-operative Bank",
-	"NIRX": "Nirmal Urban Co-operative Bank Nagpur",
-	"NIUX": "Nileshwar Co-operative Urban Bank",
-	"NJBK": "Nav Jeevan Co-operative Bank",
-	"NJCX": "Nav Jeevan Co-operative Bank",
-	"NJGX": "Narmada Jhabua Gramin Bank",
-	"NJMX": "Nashik Zila Mahila Vikas Sahakari Bank",
-	"NJSX": "Nasik Zila Mahila Sahakari Bank",
-	"NKGS": "NKGSB Co-operative Bank",
-	"NLGX": "Nalgonda Dist. Co-operative Central Bank",
-	"NLUX": "National Urban Co-operative Bank,bahraich",
-	"NMCB": "Nasik Merchants Co-operative Bank",
-	"NMCX": "Navi Mumbai Co-operative Bank",
-	"NMGB": "North Malabar Gramin Bank",
-	"NNCX": "Naroda Nagrik Co-operative Bank",
-	"NNSB": "Nutan Nagarik Sahakari Bank",
-	"NNSX": "Nutan Nagari Sahakari Bank Ichalkaranji",
-	"NOBX": "Noble Co-operative Bank",
-	"NOIX": "Noida Commercial Co-operative Bak",
-	"NOSC": "Bank of Nova Scotia",
-	"NPCX": "Nadiad Peoples Co-operative Bank",
-	"NPKX": "Nashik Zilha Sarkari & Parishad Karmachari Sb Nmt",
-	"NPPX": "Nabagram Peoples' Co-operative Credit Bank",
-	"NRDX": "Nasik Road Deolali Vyapari Sahakari Bank",
-	"NRMX": "Northern Railway Multi State Primary Co-operative Bank",
-	"NSBB": "Nagarik Sahakari Bank Bhiwandi",
-	"NSBX": "Nagrik Sahakari Bank Lucknow",
-	"NSCX": "Nagaland State Co-operative Bank",
-	"NSGX": "Nagar Sahakari Bank Gorakhpur",
-	"NSIX": "Nagrik Sahakari Bank Indore",
-	"NSJX": "Nagarik Sahakari Bank Maryadit,jagdalpur",
-	"NSMX": "Nagarik Samabay Bank",
-	"NSPB": "NSDL Payments Bank",
-	"NSPX": "Nishigandha Sahakari Bank",
-	"NSRX": "Nagrik Sahakari Bank",
-	"NTBL": "Nainital Bank",
-	"NUBX": "New Urban Co-operative Bank Rampur",
-	"NUCB": "Nagar Urban Co-operative Bank",
-	"NUCX": "Navabharat Co-operative Urban Bank",
-	"NULX": "National Urban Co-operative Bank, Pratapgarh",
-	"NVCX": "Navanagara Urban Co-operative Bank",
-	"NVNM": "Navnirman Co-operative Bank",
-	"NVSX": "Nagar Vikas Sahakari Bank",
-	"NWCX": "Nawada Central Co-operative Bank",
-	"ODCX": "Osmanabad District Central Co-operative Bank",
-	"ODGB": "Odisha Gramya Bank",
-	"OIBA": "HSBC Bank Oman S.A.O.G",
-	"OMCX": "Ojhar Merchant's Co-operative Bank",
-	"ONSX": "Omkar Nagreeya Sahakari Bank",
-	"ORBC": "Oriental Bank of Commerce",
-	"ORCB": "Odisha State Co-operative Bank",
-	"OSMX": "Osmanabad Janata Sahakari Bank",
-	"PABX": "Pallavan Grama Bank",
-	"PACX": "Pali Central Co-operative Bank",
-	"PADX": "Padra Nagar Nagrik Sahakari Bank",
-	"PALX": "Pali Urban Co-operative Bank",
-	"PANX": "Panchmahal District Co-operative Bank",
-	"PARX": "Parbhani District Central Co-operative Bank",
-	"PASX": "Paschim Banga Gramin Bank",
-	"PATX": "Pathanmthitta District Co-operative Bank",
-	"PAYX": "Payangadi Urban Co-operative Bank",
-	"PBGX": "Puduvai Bharathiar Grama Bank",
-	"PCBL": "Patan Co-operative Bank",
-	"PCBX": "Parshwanath Co-operative Bank",
-	"PCCB": "Purulia Central Co-operative Bank",
-	"PCCX": "Panchkula Central Co-operative Bank",
-	"PCLX": "Pragathi Co-operative Bank, Bangalore",
-	"PCMX": "Panchsheel Mercantile Co-operative Bank",
-	"PCOX": "Peoples' Co-operative Bank",
-	"PCPX": "Pimpri Chinchwad Sahakari Bank Maryadit,pimpri",
-	"PCSX": "Pondicherry State Co-operative Bank",
-	"PCTX": "Pune Cantonment Sahakari Bank",
-	"PCUX": "Pochampally Co-operative Urban Bank",
-	"PDBX": "Purnea District Central Co-operative Bank",
-	"PDCX": "Pune District Central Co-operative Bank",
-	"PDNX": "Pandyan Grama Bank",
-	"PDSX": "Priyadarshani Nagari Sahakari Bank Jalna.",
-	"PDUX": "Pandharpur Urban Co-operative Bank",
-	"PGBX": "Pragathi Krishna Gramin Bank",
-	"PGCX": "Progressive Co-operative Bank",
-	"PGRX": "Progressive Urban Co-operative Bank",
-	"PGTX": "Pragati Co-operative Bank, Thara",
-	"PHIX": "Panihati Co-operative Bank",
-	"PITX": "Pithoragarh Zila Sahakari Bank",
-	"PJSB": "Gopinath Patil Parsik Janata Sahakari Bank",
-	"PKBX": "Panchkula Urban Co-operative Bank Lmited",
-	"PKDX": "Palakkad District Co-operative Bank",
-	"PKGB": "Karnataka Gramin Bank",
-	"PLOX": "Palamoor Co-operative Urban Bank",
-	"PLUX": "Palus Sahakari Bank",
-	"PMCB": "Punjab & Maharashtra Co-operative Bank",
-	"PMCX": "Pimpalgaon Merchants Co-operative Bank",
-	"PMEC": "Prime Co-operative Bank",
-	"PMNX": "Pragati Mahila Nagrik Sahakari Bank Bhilai",
-	"PNCX": "Panipat Urban Co-operative Bank",
-	"PNMX": "Pune Merchant's Co-operative Bank",
-	"PNPX": "Panipat Central Co-operative Bank",
-	"PNSX": "Poornawadi Nagrik Sahakari Bank",
-	"PPBX": "Pune People's Co-operative Bank",
-	"PPCX": "Pachora Peoples Co-operative Bank",
-	"PRCX": "Proddatur Co-operative Town Bank",
-	"PREX": "Prerana Co-operative Bank",
-	"PROX": "Progressive Mercantile Co-operative Bank",
-	"PRPX": "Paraspar Sahayak Co-operative Bank",
-	"PRSX": "Pravara Sahakari Bank",
-	"PRTH": "Prathama Bank",
-	"PRUX": "Priyadarshani Urban Co-operative Bank",
-	"PSBL": "Pavana Sahakari Bank",
-	"PSBX": "Pragati Sahakari Bank",
-	"PSCX": "Punjab State Co-operative Bank",
-	"PSIB": "Punjab & Sind Bank",
-	"PSRX": "Sri Potti Sriramulu Nellore Dccb",
-	"PSSX": "Prathamik Shikshak Sahakari Bank",
-	"PTCX": "Patiala Central Co-operative Bank",
-	"PTNX": "Patan Urban Co-operative Bank Patan",
-	"PTSX": "Patan Nagarik Sahakari Bank",
-	"PUBX": "People's Urban Co-operative Bank",
-	"PUCB": "Pandharpur Urban Co-operative Bank",
-	"PUCX": "Pusad Urban Co-operative Bank",
-	"PUDX": "Pudukottai District Central Co-operative Bank",
-	"PUGX": "Punjab Gramin Bank",
-	"PUNB": "Punjab National Bank",
-	"PUNX": "Pune Urban Co-operative Bank",
-	"PURX": "Purvanchal Gramin Bank",
-	"PUSD": "Pusad Urban Co-operative Bank",
-	"PUSX": "Purasawalkam Co-operative Bank",
-	"PUUX": "Puri Urban Co-operative Bank",
-	"PVAX": "Pavana Sahakari Bank",
-	"PVCX": "Purvanchal Co-operative Bank Gazipur",
-	"PVVX": "Padmashri Dr. Vitthalrao Vikhe Patil Co-operative Bank",
-	"PWUX": "Parwanoo Urban Co-operative Bank",
-	"PYCX": "Payyoli Co-operative Urban Bank",
-	"PYTM": "Paytm Payments Bank",
-	"QNBA": "Qatar National Bank",
-	"QNBX": "Qatar National Bank",
-	"QUCX": "Quilon Co-operative Urban Bank",
-	"RABO": "Rabobank International",
-	"RACX": "Rajkot Commercial Co-operative Bank",
-	"RAEX": "Railway Employees Co-operative Bank",
-	"RAJX": "Rajsamand Urban Co-operative Bank",
-	"RAKX": "Rajkot Peoples Co-operative Bank",
-	"RAMX": "Rajputana Mahila Urban Co-operative Bak",
-	"RANX": "Rander Peoples Co-operative Bank",
-	"RATN": "RBL Bank",
-	"RAUX": "Rajlaxmi Urban Co-operative Bank",
-	"RBBX": "Rajarambapu Sahakari Bank Peth",
-	"RBCX": "Reserve Bank Employees Co-operative Bank",
-	"RBIH": "IDRBT",
-	"RBIN": "Reserve Bank Of India",
-	"RBIP": "Reserve Bank of India",
-	"RBIS": "Reserve Bank of India",
-	"RCBX": "Raniganj Co-operative Bank",
-	"RCCX": "Ropar Central Co-operative Bank",
-	"RCDX": "Ramanathapuram District Central Co-operative Bank",
-	"RCMX": "Ravi Commercial Urban Co-operative Bank",
-	"RCUX": "Rajadhani Co-operative Urban Bank",
-	"RDCB": "Rajnandgaon District Central Co-operative Bank",
-	"RDCX": "Raigad District Central Co-operative Bank",
-	"RDNX": "Col Rd Nikam Sainik Sahakari Bank",
-	"REBX": "Rendal Sahakari Bank Rendal",
-	"RECX": "Railway Employees Co-operative Banking Society",
-	"REWX": "Rewari Central Co-operative Bank",
-	"RGCX": "Ramgarhia Co-operative Bank",
-	"RGSX": "Rajgurunagar Sahakari Bank",
-	"RHMX": "Raj Laxmi Mahila Urban Co-operative Bank Jaipur",
-	"RJCX": "Raiganj Central Co-operative Bank",
-	"RJJX": "Rajajinagar Co-operative Bank",
-	"RJNX": "Rajpipla Nagarik Sahakari Bank",
-	"RJTX": "Shri Rajkot District Co-operative Bank",
-	"RKCX": "Ranchi Khunti Central Co-operative Bank",
-	"RLUX": "Ranilaxmibai Urban Co-operative Bank",
-	"RMGB": "Rajasthan Marudhara Gramin Bank",
-	"RNBX": "Ranuj Nagrik Sahakari Bank",
-	"RNDX": "Ratnagiri District Central Co-operative Bank",
-	"RNGX": "Ranga Reddy Co-operative Urban Bank",
-	"RNSB": "Rajkot Nagarik Sahakari Bank",
-	"RNSX": "Rajdhani Nagar Sahakari Bank",
-	"ROCX": "Rohika Central Co-operative Bank Madhubani",
-	"ROHX": "Rohtak Central Co-operative Bank",
-	"RPUX": "Rajapur Urban Co-operative Bank",
-	"RRBP": "Rajarambapu Sahakari Bank",
-	"RRSX": "Ramrajya Sahakari Bank",
-	"RSBL": "Rajgurunagar Sahakari Bank",
-	"RSBX": "Raigad Sahakari Bank",
-	"RSCB": "Rajasthan State Co-operative Bank",
-	"RSSB": "Rajarshi Shahu Sahakari Bank",
-	"RSSX": "Rajarshi Shahu Sahakari Bank",
-	"RSUX": "Radhasoami Urban Co-operative Bank",
-	"RSVX": "Rajarshi Shahu Govt Servants Co-operative Bank Kolh",
-	"RUCX": "Rajasthan Urban Co-operative Bank",
-	"RUKX": "Shri Rukmini Sahakari Bank",
-	"RUMX": "Raipur Urban Mercantile Co-operative Bank",
-	"RZSX": "Rampur Zila Sahakari Bank",
-	"SABR": "SBER Bank",
-	"SABX": "Saraswati Sahakari Bank",
-	"SACB": "Shri Arihant Co-operative Bank",
-	"SACX": "Sarvodaya Co-operative Bank Mumbai",
-	"SADX": "Sabarkantha District Central Co-operative Bank",
-	"SAGX": "Saurashtra Gramin Bank",
-	"SAHE": "Sahebrao Deshmukh Co-operative Bank",
-	"SAHX": "Sadhana Sahakari Bank Pune",
-	"SAIX": "Sanmitra Sahakari Bank",
-	"SALX": "Salal Sarvodaya Nagarik Sahakari Bank",
-	"SAMX": "Samata Sahakari Bank",
-	"SANT": "Sant Sopankaka Sahakari Bank",
-	"SANX": "Saibaba Nagari Sahakari Bank",
-	"SAOX": "Shimoga Arecanut Mandy Merchants Co-operative Bank",
-	"SAPX": "Shrimant Malojiraje Sahakari Bank",
-	"SARX": "Sardarganj Mercantile Co-operative Bank",
-	"SASA": "Sahyadri Sahakari Bank",
-	"SASX": "S.A.S Nagar Central Co-operative Bank",
-	"SATX": "Adv. Shamraoji Shinde Satyashodhak Bank",
-	"SAUX": "Saidapet Co-operative Urban Bank",
-	"SAVX": "Sardar Vallabhbhai Sahakari Bank",
-	"SAWX": "Sawai Madhopur Kendriya Sahakari Bank",
-	"SBBJ": "State Bank of Bikaner and Jaipur",
-	"SBCR": "Shree Basaveshwar Urban Co-operative Bank",
-	"SBCX": "Sultan's Bathery Co-operative Urban Bank",
-	"SBHY": "State Bank of Hyderabad",
-	"SBIN": "State Bank of India",
-	"SBKX": "Sri Channabasavaswamy Souhardha Pattana Sahak Bank",
-	"SBLD": "Sonali Bank",
-	"SBLS": "Samarth Sahakari Bank",
-	"SBLX": "Shubhalakshmi Mahila Co-operative Bank",
-	"SBMX": "Sri Banashankari Mahila Co-operative Bank",
-	"SBMY": "State Bank of Mysore",
-	"SBNX": "Shree Bhavnagar Nagrik Sahakari Bank",
-	"SBPS": "Sri Basaveshwar Pattana Sahakari Bank",
-	"SBPX": "Sardar Bhiladwala Pardi People's Co-operative Bank",
-	"SBSX": "Shivajirao Bhosale Sahakari Bank",
-	"SBTR": "State Bank of Travancore",
-	"SBUJ": "Shri Bharat Urban Co-operative Bank Jaysingpur",
-	"SBUX": "Shree Balaji Urban Co-operative Bank",
-	"SCBL": "Standard Chartered Bank",
-	"SCBX": "Sirohi Central Co-operative Bank",
-	"SCCX": "Salem District Central Co-operative Bank",
-	"SCDX": "South Canara District Central Co-operative Bank",
-	"SCIX": "Social Co-operative Bank",
-	"SCNX": "Shri Chhani Nagrik Sahakari Bank",
-	"SCOB": "Samruddhi Co-operative Bank",
-	"SCOX": "Shimoga District Co-operative Central Bank",
-	"SCPX": "Sangrur Central Co-operative Bank",
-	"SCSX": "Sree Charan Souhardha Co-operative Bank",
-	"SCUX": "Sudha Co-operative Urban Bank",
-	"SDBX": "Samata Co-operative Development Bank",
-	"SDCB": "Surat District Co-operative Bank",
-	"SDCE": "Satara District Central Co-operative Bank",
-	"SDCX": "Sindhudurg District Central Co-operative Bank",
-	"SDHX": "Solapur Siddheshwar Sahakari Bank",
-	"SDSX": "Satara District Central Co-operative Bank",
-	"SDTC": "Shri D T Patil Co-operative Bank",
-	"SDTX": "Sambalpur District Co-operative Central Bank",
-	"SDUX": "Sri Sudha Co-operative Bank",
-	"SECB": "Sree Charan Souhardha Co-operative Bank",
-	"SEMX": "Secunderabad Mercantile Co-operative Urban Bank",
-	"SENX": "Sehore Nagrik Sahakari Bank Sehore",
-	"SEUX": "Sevalia Urban Co-operative Bank",
-	"SEWX": "Shri Mahila Sewa Sahakari Bank",
-	"SGCX": "Sangli District Central Co-operative Bank",
-	"SGDX": "Sundargarh District Central Co-operative Bank",
-	"SGLX": "Sangli Sahakari Bank",
-	"SGSX": "Sadguru Nagrik Sahakari Bank Maryadit",
-	"SGUX": "Sadguru Gahininath Urban Co-operative Bank Akluj",
-	"SHAX": "Shankar Nagari Sahakari Bank",
-	"SHBK": "Shinhan Bank",
-	"SHBX": "Shriram Urban Co-operative Bank",
-	"SHCX": "Shimla Urban Co-operative Bank",
-	"SHEX": "Shree Samarth Sahakari Bank Nashik",
-	"SHGX": "Shri Ganesh Sahakari Bank",
-	"SHIX": "Shivalik Small Finance Bank",
-	"SHKX": "Shikshak Sahakari Bank",
-	"SHMX": "Sanghamitra Co-operative Urban Bank",
-	"SHNX": "Shri Kanyaka Nagari Sahakari Bank",
-	"SHOX": "Sihor Mercantile Co-operative Bank",
-	"SHRX": "Shree Mahesh Co-operative Bank Nashik",
-	"SHSX": "Sharad Sahakari Bank",
-	"SHUB": "Shiggaon Urban Co-operative Bank",
-	"SHUX": "Shushruti Souharda Sahakara Bank Niyamita",
-	"SIBL": "South Indian Bank",
-	"SIBX": "Sikar Kendriya Sahakari Bank",
-	"SICX": "Sirsa Central Co-operative Bank",
-	"SIDB": "Small Industries Development Bank Of India",
-	"SIDC": "Sindhudurg District Central Co-operative Bank",
-	"SIDX": "Siddhi Co-operative Bank",
-	"SIGX": "Singhbhum District Central Co-operative Bank",
-	"SIHX": "Sihor Nagarik Sahakari Bank",
-	"SIKX": "Sikar Urban Co-operative Bank",
-	"SINX": "Shihori Nagarik Sahakari Bank",
-	"SIRX": "Sircilla Co-operative Urban Bank",
-	"SISX": "Sanmati Sahakari Bank",
-	"SITX": "Sitamarhi Central Co-operative Bank",
-	"SIWX": "Siwan Central Co-operative Bank",
-	"SJGX": "Sutlej Gramin Bank",
-	"SJSB": "Solapur Janata Sahakari Bank",
-	"SJSX": "Solapur Janata Sahakari Bank",
-	"SKCX": "Shrikrishna Co-operative Bank",
-	"SKKX": "Sikkim State Co-operative Bank",
-	"SKNB": "Shree Kadi Nagarik Sahakari Bank",
-	"SKNX": "Sankheda Nagarik Sahakari Bank",
-	"SKSB": "Shikshak Sahakari Bank",
-	"SKUX": "S S L S A Kurundwad Urban Bank",
-	"SLAX": "Subhadra Local Area Bank",
-	"SLCX": "Shree Laxmi Co-operative Bank",
-	"SMBC": "Sumitomo Mitsui Banking Corporation",
-	"SMBX": "Sampada Sahakari Bank",
-	"SMCB": "Shivalik Small Finance Bank",
-	"SMCX": "Sangamner Merchants Co-operative Bank",
-	"SMEX": "Sumerpur Mercantile Urban Co-operative Bank",
-	"SMMX": "Shree Mahalaxmi Mercantile Co-operative Bank",
-	"SMNB": "Smriti Nagrik Sahakari Bank",
-	"SMNX": "Shree Mahuva Nagrik Sahakari Bank",
-	"SMPX": "Shankarrao Mohite Patil Sahakri Bank",
-	"SMSX": "Soubhagya Mahila Souhardha Sahakari Bank",
-	"SMTX": "Sanmitra Urban Co-operative Bank",
-	"SMUX": "Shri Mahavir Urban Co-operative Bank",
-	"SMVC": "Sir M Visvesvaraya Co-operative Bank",
-	"SMWX": "Sree Subramanyeswara Co-operative Bank",
-	"SNAX": "Saraspur Nagarik Co-operative Bank",
-	"SNBK": "Saraspur Nagrik Co-operative Bank",
-	"SNBX": "Sarvodaya Nagrik Sahakari Bank",
-	"SNCX": "Sonepat Urban Co-operative Bank",
-	"SNDX": "Sind Co-operative Urban Bank",
-	"SNGX": "Sarangpur Co-operative Bank",
-	"SNKX": "Shramik Nagrik Sahakari Bank",
-	"SNLX": "Sarjeraodada Naik Shirala Sahakari Bank",
-	"SNPX": "Sonepat Central Co-operative Bank",
-	"SNSV": "Sarakari Naukarara Sahakari Bank Niyamt Vijayapura",
-	"SNSX": "Smriti Nagrik Sahakari Bank",
-	"SOBX": "Secunderabad Co-operative Urban Bank",
-	"SOGE": "Societe Generale",
-	"SOLX": "Solapur District Central Co-operative Bank",
-	"SONX": "Sonbhadra Nagar Sahakari Bank",
-	"SPBX": "Saptagiri Grameena Bank",
-	"SPCB": "Surat People's Co-operative Bank",
-	"SPCX": "Shirpur Peoples Co-operative Bank",
-	"SPNX": "Shree Panchganga Nagari Sahakari Bank",
-	"SPSX": "Sandur Pattana Souharda Sahakari Bank Niyamitha",
-	"SPTX": "Shripatraodada Sahakari Bank",
-	"SRCB": "Saraswat Co-operative Bank",
-	"SRCX": "Shree Bharat Co-operative Bank",
-	"SREX": "Shree Co-operative Bank",
-	"SRGX": "Sree Narayana Guru Co-operative Bank",
-	"SRHX": "Shree Dharati Co-operative Bank",
-	"SRSX": "Sharad Nagari Sahakari Bank",
-	"SSBL": "Satara Shakari Bank",
-	"SSBX": "Shivdaulat Sahakari Bank",
-	"SSDX": "Suco Souharda Sahakari Bank",
-	"SSHX": "Shree Sharada Sahakari Bank",
-	"SSKX": "Sadhana Sahakari Bank",
-	"SSLX": "Solapur Social Urban Co-operative Bank",
-	"SSNX": "Sreenidhi Souharda Sahakari Bank Niyamitha",
-	"SSOX": "Samarth Sahakari Bank",
-	"SSSX": "Sant Sopankaka Sahakari Bank",
-	"SSWX": "Sundarlal Sawaji Urban Co-operative Bank",
-	"STBP": "State Bank of Patiala",
-	"STCB": "SBM Bank",
-	"STCX": "State Transport Co-operative Bank",
-	"STDX": "Samastipur District Central Co-operative Bank",
-	"STRX": "Sterling Urban Co-operative Bank",
-	"SUBX": "Prathama UP Gramin Bank",
-	"SUCX": "Sangli Urban Co-operative Bank",
-	"SUDX": "Surendranagar District Co-operative Bank",
-	"SULX": "Sulaimani Co-operative Bank",
-	"SUMX": "Surat Mercantile Co-operative Bank",
-	"SUNB": "Surat National Co-operative Bank",
-	"SURX": "Siddheshwar Urban Co-operative Bank Maryadit Sillod",
-	"SURY": "Suryoday Small Finance Bank",
-	"SUSB": "Suco Souharda Sahakari Bank",
-	"SUSX": "Sirsi Urban Sahakari Bank",
-	"SUTB": "Sutex Co-operative Bank",
-	"SUVX": "Suvarnayug Sahakari Bank",
-	"SVAX": "Sri Vasavamba Co-operative Bank",
-	"SVBL": "Seva Vikas Co-operative Bank",
-	"SVCB": "SVC Co-operative Bank",
-	"SVCX": "Sarvodaya Commerical Co-operative Bank",
-	"SVGX": "Sivagangai District Central Co-operative Bank",
-	"SVMC": "Shri Vijay Mahantesh Co-operative Bank",
-	"SVNX": "Shivaji Nagari Sahakari Bank",
-	"SVOX": "Sarvodaya Sahakari Bank",
-	"SVRX": "Shree Vardhaman Sahakari Bank",
-	"SVSH": "Shree Veershaiv Co-operative Bank",
-	"SVSX": "Shri Vinayak Sahakari Bank",
-	"SWMX": "Sawai Madhopur Urban Co-operative Bank",
-	"SWSX": "Shree Warana Sahakari Bank",
-	"SXXX": "Sri Rama Co-operative Bank",
-	"SYNB": "Syndicate Bank",
-	"TACX": "Adinath Co-operative Bank",
-	"TADX": "Anantapur District Co-operative Central Bank",
-	"TAMX": "Anand Mercantile Co-operative Bank",
-	"TAPX": "Tapindu Urban Co-operative Bank",
-	"TASX": "Annasaheb Savant Co-operative Urban Bank Mahad",
-	"TAUB": "Ankola Urban Co-operative Bank",
-	"TBCX": "Bharath Co-operative Bank",
-	"TBDX": "Buldana District Central Co-operative Bank",
-	"TBHX": "Bhadran People's Co-operative Bank",
-	"TBMC": "Banaskantha Mercantile Co-operative Bank",
-	"TBMX": "Bapunagar Mahila Co-operative Bank",
-	"TBNS": "Becharaji Nagarik Sahakari Bank",
-	"TBPX": "Botad Peoples Co-operative Bank",
-	"TBSB": "Thane Bharat Sahakari Bank",
-	"TBSX": "Bihar State Co-operative Bank",
-	"TBTX": "Baroda Traders Co-operative Bank",
-	"TBUX": "Balusseri Co-operative Urban Bank",
-	"TCBX": "Co-operative Bank of Rajkot",
-	"TCCX": "Commercial Co-operative Bank",
-	"TCHX": "Town Co-operative Bank Hoskote",
-	"TCPX": "Tamilnadu Circle Postal Co-operative Bank",
-	"TCUB": "Trivandrum Co-operative Urban Bank",
-	"TCUX": "Tiruvallur Co-operative Urban Bank",
-	"TDBX": "District Co-operative Central Bank",
-	"TDCB": "Thane District Central Co-operative Bank",
-	"TDCX": "Thrissur District Co-operative Bank",
-	"TDIX": "District Co-operative Central Bank Kakinada",
-	"TDMX": "Dhanera Mercantile Co-operative Bank",
-	"TDPX": "Thodupuzha Urban Co-operative Bank",
-	"TDSX": "Nizamabad District Co-operative Central Bank",
-	"TECX": "Eenadu Co-operative Urban Bank",
-	"TEHX": "Tehri Garhwal Zila Sahakari Bank",
-	"TEMX": "Textile Manufacturers Co-operative Bank",
-	"TESX": "Textile Co-operative Bank of Surat",
-	"TETX": "Textile Traders Co-operative Bank",
-	"TFCX": "Fatehabad Central Co-operative Bank",
-	"TGBX": "Tripura Gramin Bank",
-	"TGCG": "Gokak Urban Co-operative Credit Bank",
-	"TGCX": "Tamluk-ghatal Central Co-operative Bank",
-	"TGDX": "Gondia District Central Co-operative Bank Gondia",
-	"TGMB": "Tumkur Grain Merchant's Co-operative Bank",
-	"TGNX": "Gandhinagar Nagrik Co-operative Bank",
-	"TGUX": "Gandhinagar Urban Co-operative Bank",
-	"THCX": "Hooghly Co-operative Credit Bank",
-	"THMX": "Halol Mercantile Co-operative Bank",
-	"THOX": "Thoothukudi District Central Co-operative Bank",
-	"THRS": "Thrissur District Co-operative Bank",
-	"THRX": "Raichur District Central Co-operative Bank",
-	"THWX": "Howrah District Central Co-operative Bank",
-	"TIDX": "Thiruvannamalai District Central Co-operative Bank",
-	"TIRX": "Tirunelveli District Central Co-operative Bank",
-	"TJAX": "Jaisalmer Central Co-operative Bank",
-	"TJBX": "Janata Co-operative Bank Sadalga",
-	"TJCX": "Thanjavur Central Co-operative Bank",
-	"TJDX": "Jalgaon District Central Co-operative Bank Jalgaon",
-	"TJMX": "Jaynagar Mozilpur Peoples Co-operative Bank",
-	"TJNX": "Jamnagar Mahila Sahakari Bank",
-	"TJSB": "TJSB Sahakari Bank",
-	"TKAX": "Karjan Nagrik Sahakari Bank",
-	"TKCX": "Kakatiya Co-operative Urban Bank",
-	"TKDX": "Kannur District Co-operative Bank",
-	"TKTX": "Kottakkal Co-operative Urban Bank",
-	"TKUX": "Karan Urban Co-operative Bank",
-	"TLPX": "Lunawada Peoples Co-operative Bank",
-	"TMAX": "Madanapalle Co-operative Town Bank",
-	"TMBL": "Tamilnad Mercantile Bank",
-	"TMBX": "Mangalore Catholic Co-operative Bank",
-	"TMCX": "Motihari Central Co-operative Bank",
-	"TMNX": "Mahanagar Co-operative Urban Bank",
-	"TMPX": "Midnapore Peoples Co-operative Bank",
-	"TMSB": "The Malad Sahakari Bank",
-	"TMSC": "Mysore Silk Cloth Merchants Co-operative Bank",
-	"TMSX": "Modasa Nagarik Sahakari Bank",
-	"TMTX": "Mangalore Co-operative Town Bank",
-	"TMUX": "Mahila Urban Co-operative Bank",
-	"TNBX": "Meghraj Nagarik Sahakari Bank",
-	"TNCB": "Nawanagar Co-operative Bank",
-	"TNCX": "National Central Co-operative Bank Bettiah",
-	"TNDC": "Thiruvananthapuram District Co-operative Bank",
-	"TNEX": "Nehrunagar Co-operative Bank",
-	"TNHX": "Nakodar Hindu Urban Co-operative Bank",
-	"TNIX": "Tamilnadu Industrial Co-operative Bank",
-	"TNKX": "Neela Krishna Co-operative Urban Bank",
-	"TNMX": "Nanded Merchants Co-operative Bank Nanded",
-	"TNSC": "Tamilnadu State Apex Co-operative Bank",
-	"TNUX": "Nandura Urban Co-operative Bank Nandura",
-	"TOCX": "Ottapalam Co-operative Urban Bank",
-	"TPCX": "Patliputra Central Co-operative Bank",
-	"TPDX": "Prakasam District Co-operative Central Bank",
-	"TPSC": "Punjab State Co-operative Bank",
-	"TPSX": "Tripura State Co-operative Bank",
-	"TPUX": "Urban Co-operative Bank No 1758 Perinthalmanna",
-	"TRAX": "Transport Co-operative Bank",
-	"TRDX": "Tiruchirapalli Dist. Cent Co-operative Bank",
-	"TSAB": "Telangana State Co-operative Apex Bank",
-	"TSAX": "Satana Merchants Co-operative Bank, Satana",
-	"TSBX": "Sasaram Bhabhua Central Co-operative Bank",
-	"TSCX": "Santragachi Co-operative Bank",
-	"TSDX": "District Co-operative Central Bank Srikakul",
-	"TSIX": "Shillong Co-operative Urban Bank",
-	"TSKX": "Aska Co-operative Central Bank",
-	"TSMX": "Sardargunj Mercantile Co-operative Bank Patan",
-	"TSNX": "Shoranur Co-operative Urban Bank",
-	"TSPX": "Sathamba Peoples Co-operative Bank",
-	"TSSB": "Satara Sahakari Bank",
-	"TSSX": "S.S.K Co-operative Bank",
-	"TSUX": "Saurashtra Co-operative Bank",
-	"TTBX": "Taliparamba Co-operative Urban Bank",
-	"TTCB": "Textile Traders Co-operative Bank",
-	"TTCX": "Tarn Taran Central Co-operative Bank",
-	"TTGX": "Tasgaon Urban Co-operative Banktasgaon",
-	"TTLX": "Textile Co-operative Bank",
-	"TTUX": "Tirur Urban Co-operative Bank",
-	"TUBX": "Trichur Urban Co-operative Bank",
-	"TUCL": "The Union Co-operative Bank Mahinagar",
-	"TUCX": "Tirupati Urban Co-operative Bank",
-	"TUDX": "Urban Co-operative Bank Dharangaon",
-	"TUMX": "Udaipur Mahila Urban Co-operative Bank",
-	"TUNX": "Union Co-operative Bank",
-	"TUOX": "Urban Co-operative Bank Saharanpur",
-	"TUPX": "Uttarsanda Peoples Co-operative Bank Uttarsanda",
-	"TURX": "Tura Urban Co-operative Bank",
-	"TVBX": "Vellala Co-operative Bank",
-	"TVDX": "District Co-operative Central Bank Vizianagaram",
-	"TVPX": "Veraval Peoples Co-operative Bank",
-	"TVUX": "Vita Urban Co-operative Bank",
-	"TYCX": "Shree Thyagaraja Co-operative Bank",
-	"UBBX": "Urban Co-operative Bank Basti",
-	"UBGX": "Uttar Bihar Gramin Bank",
-	"UBIN": "Union Bank of India",
-	"UCBA": "UCO Bank",
-	"UCBS": "Utkal Co-operative Banking Society",
-	"UCBX": "Urban Co-operative Bank Bareilly",
-	"UCCX": "Udaipur Central Co-operative Bank",
-	"UCDX": "Urban Co-operative Bank Dehradun",
-	"UCUX": "Universal Co-operative Urban Bank",
-	"UGBX": "Utkal Grameen Bank",
-	"UICX": "United India Co-operative Bank",
-	"UJSX": "Unjha Nagarik Sahakari Bank",
-	"UJVN": "Ujjivan Small Finance Bank",
-	"UKGX": "Uttarbanga Kshetriya Gramin Bank",
-	"UMAX": "Uma Co-operative Bank",
-	"UMCX": "Umreth Urban Co-operative Bank",
-	"UMSX": "Udaipur Mahila Samridhi Urban Co-operative Bank",
-	"UMUX": "Umiya Urban Co-operative Bank",
-	"UNAX": "Una Peoples Co-operative Bank",
-	"UNIX": "United Co-operative Bank",
-	"UNMX": "United Mercantile Co-operative Bank",
-	"UNSX": "Unava Nagrik Sahakari Bank",
-	"UOVB": "United Overseas Bank",
-	"UPCB": "Uttar Pradesh Co-operative Bank",
-	"UPCX": "Uttar Pradesh Co-operative Bank",
-	"UPNX": "United Puri Nimapara Central Bank",
-	"URBN": "Urban Co-operative Bank Perinthalmanna",
-	"URCX": "Urban Co-operative Bank Siddharthnagar",
-	"URDX": "Urban Co-operative Bank Budaun",
-	"URMX": "Urban Co-operative Bank Mainpuri",
-	"UROX": "Urban Co-operative Bank Rourkela",
-	"USFB": "Ujjivan Small Finance Bank",
-	"USNX": "Udham Singh Nagar District Co-operative Bank",
-	"UTBI": "United Bank of India",
-	"UTBX": "Uttarpara Co-operative Bank",
-	"UTCX": "Uttrakhand Co-operative Bank",
-	"UTGX": "Uttarakhand Gramin Bank",
-	"UTIB": "Axis Bank",
-	"UTKS": "Utkarsh Small Finance Bank",
-	"UTKX": "Uttarakhand State Co-operative Bank",
-	"UTZX": "Uttarkashi Zila Sahakari Bank",
-	"UUCB": "Udaipur Urban Co-operative Bank",
-	"UUCX": "Udaipur Urban Co-operative Bank",
-	"UXXX": "Udupi Co-operative Town Bank",
-	"VADX": "Valsad District Central Co-operative Bank",
-	"VAIX": "Vaishya Sahakari Bank Mumbai",
-	"VANX": "Vaishya Nagari Sahakari Bank",
-	"VARA": "Varachha Co-operative Bank",
-	"VASJ": "Vasai Janata Sahakari Bank",
-	"VASX": "Vyaparik Audhyogik Sahakari Bank",
-	"VAUX": "Valmiki Urban Co-operative Bank",
-	"VCAX": "Vaish Co-operative Adarsh Bank",
-	"VCBX": "Vishwas Co-operative Bank",
-	"VCCX": "Shri Veershaiv Co-operative Bank",
-	"VCNB": "Vaish Co-operative New Bank",
-	"VCOB": "The Vijay Co-operative Bank",
-	"VCOX": "Vita Merchants Co-operative Bank",
-	"VDCX": "Villupuram District Central Co-operative Bank",
-	"VDYX": "Vidyanand Co-operative Bank",
-	"VEDX": "Vellore District Central Co-operative Bank",
-	"VERX": "Veraval Mercantile Co-operative Bank",
-	"VGBX": "Jharkhand Rajya Gramin Bank",
-	"VHDX": "Vaishali District Central Co-operative Bank",
-	"VICX": "Vijay Commercial Co-operative Bank",
-	"VIDX": "Vidyasagar Central Co-operative Bank",
-	"VIJB": "Vijaya Bank",
-	"VIJX": "Vijay Co-operative Bank",
-	"VIKX": "Vikramaditya Nagrik Sahakari Bank",
-	"VIMX": "Viramgam Mercantile Co-operative Bank",
-	"VIRX": "Virudhunagar District Central Co-operative Bank",
-	"VISX": "Visakhapatnam Co-operative Bank",
-	"VJSX": "Vasai Janata Sahakari Bank",
-	"VKCX": "Vima Kamgar Co-operative Bank",
-	"VKSX": "Vikas Sahakari Bank Solapur",
-	"VMCX": "Vardhaman (mahila) Co-operative Urban Bank",
-	"VMMX": "Vaijapur Merchants Co-operative Bank",
-	"VMUX": "Vidarbha Merchants Urban Co-operative Bank",
-	"VNSX": "Vivekanand Nagrik Sahakari Bank Mydt",
-	"VRDX": "Vardhaman Co-operative Bank",
-	"VSBL": "Vishweshwar Sahakari Bank",
-	"VSBX": "Vidya Sahakari Bank",
-	"VSCX": "Vikas Souharda Co-operative Bank",
-	"VSSX": "Veerashaiva Sahakari Bank",
-	"VSVX": "Vaishali Shahari Vikas Co-operative Bank",
-	"VUCX": "Vaidyanath Urban Co-operative Bank",
-	"VVCX": "Vallabh Vidyanagar Commercial Bank",
-	"VVSB": "Vasai Vikas Sahakari Bank",
-	"VYAX": "Vyavsayak Sahakari Bank",
-	"VYPX": "Vyapari Sahakari Bank Maryadit Solapur",
-	"VYSA": "ING Vysya Bank",
-	"WACX": "Waghodia Urban Co-operative Bank",
-	"WAIX": "Wai Urban Co-operative Bank",
-	"WARX": "Warangal District Co-operative Central Bank",
-	"WAUX": "Wardhaman Urban Co-operative Bank Nagpur",
-	"WBSC": "West Bengal State Co-operative Bank",
-	"WCBX": "Women's Co-operative Bank",
-	"WDCX": "Wayanad District Co-operative Bank",
-	"WKGX": "Vidharbha Kokan Gramin Bank",
-	"WNBX": "Wana Nagirik Sahakari Bank",
-	"WPAC": "Westpac Banking Corporation",
-	"WRCX": "Warangal Urban Co-operative Bank",
-	"WUCX": "Washim Urban Co-operative Bank.",
-	"WZUX": "Wardha Zilla Parishad Emp Urban Co-operative Bank",
-	"XJKG": "J&K Grameen Bank",
-	"YADX": "Yavatmal District Central Co-operative Bank",
-	"YAVX": "Yavatmal Urban Co-operative Bank",
-	"YCBX": "Yashwant Co-operative Bank",
-	"YDCX": "Youth Development Co-operative Bank",
-	"YESB": "Yes Bank",
-	"YLNX": "Yadagiri Lakshmi Narsimha Swamy Co-operative Urban Bank",
-	"YMSX": "Yavatmal Mahila Sahakari Bank",
-	"YNCX": "Yamuna Nagar Central Co-operative Bank",
-	"YNSX": "Yeshwant Nagari Sahakari Bank",
-	"ZBBX": "Zila Sahakari Bank Bulandshahar",
-	"ZBSX": "Zila Sahakari Bank Mathura",
-	"ZCBL": "Zoroastrian Co-operative Bank",
-	"ZIBX": "Zila Sahakari Bank Bareilly",
-	"ZILX": "Zila Sahakari Bank Unnao",
-	"ZIMX": "Zila Sahakari Bank Mirzapur",
-	"ZISX": "Zila Sahakari Bank Lucknow",
-	"ZLLX": "Zila Sahakari Bank Lalitpur",
-	"ZMMX": "Zila Sahakari Bank Moradabad",
-	"ZRNB": "Rani Channamma Mahila Sahakari Bank",
-	"ZSAX": "Zila Sahakari Bank Mau",
-	"ZSBG": "Zila Sahakari Bank Gorakhpur",
-	"ZSBL": "Zila Sahakari Bank Ghaziabad",
-	"ZSBX": "Zila Sahakari Bank Bijnor",
-	"ZSGX": "Zila Sahakari Bank Garhwal Kotdwar",
-	"ZSHX": "Zila Sahakari Bank Haridwar",
-	"ZSJX": "Zila Sahakari Bank Jhansi",
-	"ZSKX": "Zila Sahakari Bank Kanpur",
-	"ZSLX": "Zila Sahakari Bank Lakhimpur Kheri",
-	"ZSMX": "Zila Sahakari Bank Meerut",
+    "AACX": "Akhand Anand Co.op Bank",
+    "ABBL": "AB Bank",
+    "ABCX": "Aurangabad District Central Co-operative Bank",
+    "ABDX": "Dr. Ambedkar Nagrik Sahakari Bank Mydt Gwalior",
+    "ABEX": "Andhra Bank Employees Co-operative Bank",
+    "ABHY": "Abhyudaya Co-operative Bank",
+    "ABNA": "Royal Bank of Scotland N.V.",
+    "ABPB": "Aditya Birla Idea Payments Bank",
+    "ABSB": "Abhinav Sahakari Bank",
+    "ABUX": "Abhinandan Urban Co-operative Bank Amravati",
+    "ACAX": "Assam Co-operative Apex Bank",
+    "ACBX": "Adarsh Co-operative Bank",
+    "ACCX": "Ace Co-operative Bank",
+    "ACKX": "Annasaheb Chougule Urban Co-operative Bank",
+    "ACOX": "Amarnath Co-operative Bank",
+    "ACUB": "Aryapuram Co-operative Urban Bank",
+    "ACUX": "Adarsh Co-operative Urban Bank",
+    "ADBX": "Ahmedabad District Co-operative Bank",
+    "ADCB": "Abu Dhabi Commercial Bank",
+    "ADCC": "Akola District Central Co-operative Bank",
+    "ADCX": "Shri Adinath Co-operative Bank",
+    "ADDX": "Adilabad District Co-operative Central Bank",
+    "AGCX": "Agrasen Co-operative Urban Bank",
+    "AGDX": "Agra District Co-operative Bank",
+    "AGRX": "Agroha Co-operative Urban Bank",
+    "AGSX": "Agrasen Nagari Sahakari Bank",
+    "AGUX": "Agartala Co-operative Urban Bank",
+    "AGVX": "Assam Gramin Vikash Bank",
+    "AHDC": "Ahmednagar District Central Co-operative Bank",
+    "AHMX": "Ahmednagar District Central Co-operative Bank",
+    "AHUX": "Ahilyadevi Urban Co-operative Bank Solapur",
+    "AIRP": "Airtel Payments Bank",
+    "AJAR": "Ajara Urban Co-operative Bank",
+    "AJHC": "Ambarnath Jai-hind Co-operative Bank",
+    "AJKB": "Akola Janata Commercial Co-operative Bank",
+    "AJMX": "Ajmer Central Co-operative Bank",
+    "AJNX": "Ajantha Urban Co-operative Bank",
+    "AJPX": "Ambajogai Peoples Co-operative Bank",
+    "AJSX": "Ambarnath Jai-hind Co-operative Bank",
+    "AJUX": "Ajara Urban Co-operative Bank",
+    "AKJB": "Akola Janata Commercial Co-operative Bank",
+    "AKKB": "Akkamahadevi Mahila Sahakari Bank Niyamit",
+    "AKMX": "Akola Merchant Co-operative Bank",
+    "AKOX": "Akola Urban Co-operative Bank",
+    "ALAX": "Alavi Co-operative Bank",
+    "ALIX": "Aligarh District Co-operative Bank",
+    "ALLA": "Allahabad Bank",
+    "ALLX": "Allahabad District Co-operative Bank",
+    "ALWX": "Alwar Central Co-operative Bank",
+    "AMAX": "Aman Sahakari Bank",
+    "AMBX": "Ambala Central Co-operative Bank",
+    "AMCB": "Ahmedabad Mercantile Co-operative Bank",
+    "AMCX": "Amritsar Central Co-operative Bank",
+    "AMDN": "Ahmednagar Merchants Co-operative Bank",
+    "AMMX": "Adarsh Mahila Mercantile Co-operative Bank",
+    "AMNX": "Astha Mahila Nagrik Sahakari Bank Maryadit",
+    "AMRX": "Amreli Jilla Madhyastha Sahakari Bank",
+    "AMSB": "Annasaheb Magar Sahakari Bank",
+    "AMSX": "Ambika Mahila Sahakari Bank",
+    "ANBX": "Amreli Nagarik Sahakari Bank",
+    "ANDB": "Andhra Bank",
+    "ANDX": "Andarsul Urban Co-operative Bank",
+    "ANMX": "Ahmednagar Merchant's Co-operative Bank",
+    "ANSX": "Andaman & Nicobar State Co-operative Bank",
+    "ANUX": "Anuradha Urban Co-operative Bank",
+    "ANZB": "Australia and New Zealand Banking Group",
+    "APBL": "Andhra Pradesh State Co-operative Bank",
+    "APCX": "Alappuzha District Co-operative Bank",
+    "APGB": "Andhra Pragathi Grameena Bank",
+    "APGV": "Andhra Pradesh Grameena Vikas Bank",
+    "APGX": "Andhra Pradesh Grameena Vikas Bank",
+    "APJX": "Ap Janata Co-operative Urban Bank",
+    "APMC": "A.P. Mahesh Co-operative Urban Bank",
+    "APMX": "Ap Mahajan's Co-operative Urban Bank",
+    "APNX": "Apani Sahakari Bank",
+    "APRR": "A.P. Raja Rajeswari Mahila Co-operative Urban Bank",
+    "APRX": "Arunachal Pradesh Rural Bank",
+    "APSX": "Adarniya P.d. Patilsaheb Sahakari Bank",
+    "ARBL": "Arvind Sahakari Bank",
+    "ARCX": "Arunachal Pradesh State Co-operative Apex Bank",
+    "ARMX": "510 Army Base W/s Credit Co-operative Primary Bank",
+    "ARYX": "Gramin Bank of Aryavart",
+    "ASBL": "Apna Sahakari Bank",
+    "ASBX": "Ahmednagar Shahar Sahakari Bank Maryadit",
+    "ASHX": "Ashta People's Co-operative Bank",
+    "ASKX": "Arvind Sahakari Bank",
+    "ASNX": "Ashoknagar Co-operative Bank",
+    "ASOX": "Associate Co-operative Bank",
+    "ASSX": "Ashok Sahakari Bank",
+    "AUBL": "AU Small Finance Bank",
+    "AUBX": "Angul United Central Co-operative Bank",
+    "AUCB": "Almora Urban Co-operative Bank",
+    "AUCX": "Ajara Urban Co-operative Bank",
+    "AUGX": "Allahabad Up Gramin Bank",
+    "AURX": "Aurangabad District Central Co-operative Bank. Bihar",
+    "AVDX": "Amravati District Central Co-operative Bank",
+    "AWCX": "Alwaye Urban Co-operative Bank",
+    "AWUX": "Alwar Urban Co-operative Bank",
+    "AZAX": "Azad Co-operative Bank",
+    "AZPX": "Amravati Zilla Parishad Shikshak Sahakari Bank",
+    "AZSX": "Almora Zila d Bank",
+    "AZUX": "Azad Urban Co-operative Bank Hubli",
+    "BACB": "Bassein Catholic Co-operative Bank",
+    "BACX": "Bihar Awami Co-operative Bank",
+    "BADX": "Bankura District Central Co-operative Bank",
+    "BAGX": "Balangir District Central Co-operative Bank",
+    "BALB": "Bally Co-operative Bank",
+    "BALX": "Balasinor Nagarik Sahakari Bank",
+    "BANX": "Banaras Mercantile Co-operative Bank",
+    "BARA": "Baramati Sahakari Bank",
+    "BARB": "Bank of Baroda",
+    "BARC": "Barclays Bank",
+    "BARX": "Baroda City Co-operative Bank",
+    "BASX": "Shri Basaveshwar Sahakari Bank Nyt.bagalkot",
+    "BAUX": "Badagara Co-operative Urban Bank",
+    "BAVX": "Bavla Nagrik Sahakari Bank",
+    "BAWX": "Bhawanipatna Central Co-operative Bank",
+    "BBDX": "Birbhum District Central Co-operative Bank",
+    "BBKM": "Bank of Bahrein and Kuwait",
+    "BBLX": "Bhingar Urban Co-operative Bank",
+    "BBRX": "Bangalore  Bangalore Rural&ramanagara Dccb",
+    "BBSX": "Balasore Bhadrak Central Co-operative Bank",
+    "BBUX": "Bellad Bagewadi Urban Souharada Sahakari Bank Nyt",
+    "BBVX": "Bhabhar Vibhag Nagrik Sahakari Bank",
+    "BCBM": "Bharat Co-operative Bank",
+    "BCBX": "Bantra Co-operative Bank",
+    "BCCB": "Bangalore City Co-operative Bank",
+    "BCCX": "Bathinda Central Co-operative Bank",
+    "BCEX": "Banswara Central Co-operative Bank",
+    "BCEY": "Bank of Ceylon",
+    "BCOX": "Bapuji Co-operative Bank",
+    "BCUB": "Bicholim Urban Co-operative Bank",
+    "BCUX": "Baghat Urban Co-operative Bank",
+    "BDBB": "Bahraich District Co-operative Bank",
+    "BDBL": "Bandhan Bank",
+    "BDBX": "Bellary District Co-operative Central Bank",
+    "BDCX": "Bijapur District Central Co-operative Bank",
+    "BDDX": "Bhadradri Co-operative Urban Bank",
+    "BDIX": "Bhandara District Central Co-operative Bank",
+    "BDNX": "Bhind Nagrik Sahakari Bank Mydt",
+    "BDOX": "Banda District Co-operative Bank",
+    "BDUX": "Banda Urban Co-operative Bank",
+    "BEDX": "Beed District Central Co-operative Bank",
+    "BELX": "Belgaum District Central Co-operative Bank",
+    "BERX": "Berhampore Co-operative Central Bank",
+    "BFUX": "Bhagyodaya Friends Urban Co-operative Bank",
+    "BGBX": "Dakshin Bihar Gramin Bank",
+    "BGCX": "Balageria Central Co-operative Bank",
+    "BGGX": "Baroda Gujarat Gramin Bank",
+    "BGUX": "Begusarai Central Co-operative Bank",
+    "BGVX": "Bangiya Gramin Vikash Bank",
+    "BHAX": "Bhagyodaya Co-operative Bank",
+    "BHBX": "Bhilai Nagarik Sahakari Bank Maryadit",
+    "BHCX": "Bhuj Commercial Co-operative Bank",
+    "BHDX": "Bhadohi Urban Co-operative Bank Gyanpur",
+    "BHEX": "Bhel Employees Co-operative Bank",
+    "BHGX": "Bhagalpur Central Co-operative Bank",
+    "BHIX": "Bhilwara Mahila Urban Co-operative Bank",
+    "BHJX": "Bhuj Mercentile Co-operative Bank",
+    "BHMX": "Brahmadeodada Mane Sahakari Bank Solapur",
+    "BHOX": "Bhopal Co-operative Central Bank",
+    "BHRX": "Bharatpur Central Co-operative Bank",
+    "BHSX": "Bharati Sahakari Bank",
+    "BHTX": "Bhatkal Urban Co-operative Bank",
+    "BHUX": "Bhilwara Urban Co-operative Bank",
+    "BHWX": "Bhiwani Central Co-operative Bank Bhiwani",
+    "BJUX": "Bijnor Urban Co-operative Bank",
+    "BKCX": "Bhavasara Kshatriya Co-operative Bank",
+    "BKDN": "Dena Bank",
+    "BKDX": "Banaskantha District Central Co-operative Bank",
+    "BKID": "Bank of India",
+    "BKSX": "Baran Kendriya Sahakari Bank Baran",
+    "BLGX": "Shree Basaveshwar Co-operative Bank",
+    "BMBL": "Bharatiya Mahila Bank",
+    "BMCB": "Bombay Mercantile Co-operative Bank",
+    "BMCX": "Barmer Central Co-operative Bank",
+    "BMPX": "Banaskantha Mercantile Co-operative Bank",
+    "BMSX": "Bhagyalakshmi Mahila Sahakari Bank",
+    "BNBX": "Betul Nagrik Sahakari Bank Mydt",
+    "BNCX": "Bhatpara Naihati Co-operative Bank",
+    "BNKX": "Banki Central Co-operative Bank",
+    "BNPA": "BNP Paribas Bank",
+    "BNSB": "Bhagini Nivedita Sahakari Bank Pune",
+    "BNSX": "Bhagini Nivedita Sahakari Bank",
+    "BOCX": "Boudh Co-operative Central Bank",
+    "BODX": "Bagalkot District Central Co-operative Bank",
+    "BOFA": "Bank of America",
+    "BORX": "Boral Union Co-operative Bank",
+    "BOTM": "MUFG Bank",
+    "BOTX": "Shree Botad Mercantile Co-operative Bank",
+    "BPCX": "Bhadgaon People's Co-operative Bank",
+    "BPSX": "Bilagi Pattana Sahakari Bank Niyamit",
+    "BRCX": "Bhavana Rishi Co-operative. Urban Bank",
+    "BRDX": "Baroda Central Co-operative Bank",
+    "BRGX": "Baroda Rajasthan Kshetriya Gramin Bank",
+    "BRMX": "Bramhapuri Urban Co-operative Bank",
+    "BRSX": "Baran Nagrik Bank",
+    "BRUX": "Bharuch District Central Co-operative Bank Bharuc",
+    "BSBX": "Baramati Sahakari Bank",
+    "BSCX": "Baidyabati Sheoraphuli Co-operative Bank",
+    "BTCX": "Balitikuri Co-operative Bank",
+    "BTUX": "Balotra Urban Co-operative Bank",
+    "BUBX": "Bhandara Urban Co-operative Bank",
+    "BUCL": "Belur Urban Co-operative Bank",
+    "BUCX": "Beawar Urban Co-operative Bank",
+    "BUGX": "Baroda Uttar Pradesh Gramin Bank",
+    "BUNX": "Bundi Central Co-operative Bank",
+    "BURX": "Burdwan Central Co-operative Bank",
+    "BUSX": "Business Co-operative Bank",
+    "BUZX": "Badaun Zila d Bank",
+    "BVNX": "Bhavnagar District Co-operative Bank",
+    "BVSX": "Bhavani Sahakari Bank",
+    "BWCX": "Brahmawart Commercial Co-operative Bank",
+    "CALX": "Calicut Co-operative Urban Bank",
+    "CBHX": "Central Co-operative Bank  Bhilwara",
+    "CBIN": "Central Bank of India",
+    "CCBL": "Citizen Credit Co-operative Bank",
+    "CCBX": "Citizen Co-operative Bank",
+    "CCCX": "Chennai Central Co-operative Bank",
+    "CCMX": "Chanasma Commercial Co-operative Bank",
+    "CCOB": "City Co-operative Bank",
+    "CCUX": "Chengelpattu Co-operative Urban Bank",
+    "CDCX": "Cuddalore District Central Co-operative Bank",
+    "CEBX": "Central Co-operative Bank Bikaner",
+    "CGBX": "Chhattisgarh Rajya Gramin Bank",
+    "CGGX": "Chaitanya Godavari Grameena Bank",
+    "CHAS": "JP Morgan Chase Bank NA",
+    "CHAX": "Chamoli Zila d Bank",
+    "CHBX": "Chamba Urban Co-operative Bank Chamba",
+    "CHCX": "Churu Central Co-operative Bank",
+    "CHDX": "Chittoor District Co-operative Central Bank",
+    "CHIX": "Chikhli Urban Co-operative Bank",
+    "CHKX": "Chittorgarh Kendriya Sahakari Bank",
+    "CHPX": "Chopda Peoples Co-operative Bank",
+    "CHRX": "Cherpalcheri Co-operative Urban Bank",
+    "CHSX": "Chandigarh State Co-operative Bank",
+    "CHTX": "Chitnavispura Sahakari Bank",
+    "CIDX": "Chikmagalur District Central Co-operative Bank",
+    "CITI": "CITI Bank",
+    "CITX": "Chitradurga District Co-operative Central Bank",
+    "CIUB": "City Union Bank",
+    "CJAX": "Citizens' Co-operative Bank Jammu",
+    "CJMX": "Karnataka Mahila Sahakari Bank",
+    "CLBL": "Capital Small Finance Bank",
+    "CMCB": "Colour Merchant's Co-operative Bank",
+    "CMCX": "Commercial Co-operative Bank",
+    "CMDX": "Coimbatore District Central Co-operative Bank",
+    "CMLX": "Commercial Co-operative Bank",
+    "CMPX": "Central Madhya Pradesh Gramin Bank",
+    "CMSV": "Chaitanya Mahila Sahakari Bank, Vijayapur",
+    "CNRB": "Canara Bank",
+    "CNSX": "Chembur Nagarik Sahakari Bank",
+    "COAS": "Coastal Local Area Bank",
+    "COCX": "Co-operative City Bank",
+    "COLX": "Coastal Local Area Bank",
+    "COMX": "Co-operative Bank of Mehsana",
+    "CONX": "Contai Co-operative Bank",
+    "CORP": "Corporation Bank",
+    "COSB": "Cosmos Co-operative Bank",
+    "CPDX": "Chandrapur District Central Co-operative Bank",
+    "CPSN": "Chikmagalur Pattana Sahakara Bank Niyamitha",
+    "CRBX": "Central Co-operative Bank Ara",
+    "CRES": "Credit Suisse AG",
+    "CRGB": "Chhattisgarh Rajya Gramin Bank",
+    "CRLY": "Credit Agricole Corporate and Investment Bank",
+    "CRSX": "Chhattisgarh Rajya Sahakari Bank Mydt",
+    "CRUB": "Shri Chhatrapati Rajashri Shahu Urban Co-operative Bank",
+    "CSBK": "Catholic Syrian Bank",
+    "CSBX": "Chartered Sahakari Bank Niyamitha",
+    "CTBA": "Commonwealth Bank of Australia",
+    "CTBX": "Citizens Co-operative Bank",
+    "CTCB": "Chinatrust Commercial Bank",
+    "CTOX": "Central Co-operative Bank Tonk",
+    "CTUX": "Chittorgarh Urban Co-operative Bank",
+    "CUBX": "Catholic Co-operative Urban Bank",
+    "CUCX": "Chiplun Urban Co-operative Bank",
+    "CURX": "Citizens Urban Co-operative Bank",
+    "CUTX": "Cuttack Central Co-operative Bank",
+    "CZCX": "Citizen Co-operative Bank",
+    "CZUX": "Churu Zila Urban Co-operative Bank",
+    "DAAX": "Defence Accounts Co-operative Bank",
+    "DAHX": "Dahod Mercantile Co-operative Bank",
+    "DAUX": "Dausa Urban Co-operative Bank",
+    "DBAX": "Dr Babasaheb Ambedkar Sahakari Bank Nasik",
+    "DBSS": "Development Bank of Singapore",
+    "DCBL": "DCB Bank",
+    "DCBX": "Dindigul Central Co-operative Bank",
+    "DCCX": "District Co-operative Central Bank Mahabubnagar",
+    "DCDX": "District Central Co-operative Bank Elluru",
+    "DCEX": "District Central Co-operative Bank Khammam",
+    "DCKX": "District Co-operative Central Bank Kurnool",
+    "DCMX": "District Co-operative Bank Mainpuri",
+    "DCNX": "Deccan Co-operative Urban Bank",
+    "DCPX": "District Co-operative Bank Pilibhit",
+    "DCSX": "District Co-operative Bank Shahjahanpur",
+    "DCTX": "District Co-operative Bank Teliyabagh",
+    "DCUB": "Darussalam Co-operative Urban Bank",
+    "DCUX": "Darussalam Co-operative Urban Bank",
+    "DDBX": "Dharmapuri District Central Co-operative Bank",
+    "DDCX": "Darjeeling District Central Co-operative Bank",
+    "DDDX": "Dakshin Dinajpur District Central Co-operative Bank",
+    "DDHX": "Dehradun District Co-operative Bank",
+    "DEGX": "Dena Gujarat Gramin Bank",
+    "DENS": "Delhi Nagrik Sehkari Bank",
+    "DEOB": "Deogiri Nagari Sahakari Bank Aurangabad",
+    "DEOX": "Deogiri Sahakari Bank Aurangabad",
+    "DEUT": "Deutsche Bank",
+    "DEUX": "Devika Urban Co-operative Bank",
+    "DEVX": "Development Co-operative Bank Kanpur",
+    "DGBX": "Telangana Grameena Bank",
+    "DHBX": "Dhanbad Central Co-operative Bank",
+    "DHKX": "Dhakuria Co-operative Bank",
+    "DHUX": "Dahod Urban Co-operative Bank",
+    "DIBX": "District Co-operative Bank Barabanki",
+    "DICG": "Deposit Insurance and Credit Guarantee Corporation",
+    "DICX": "District Co-operative Central Bank Visakhapatnam",
+    "DISX": "District Co-operative Bank, Sitapur",
+    "DIUX": "Dilip Urban Co-operative Bank",
+    "DJCX": "Deoghar Jamtara Central Co-operative Bank Deoghar",
+    "DKCL": "Deoria Kasia District Co-operative Bank",
+    "DKSX": "Dausa Kendriya Bank",
+    "DLSC": "Delhi State Co-operative Bank",
+    "DLXB": "Dhanlaxmi Bank",
+    "DMCB": "Deccan Merchants Co-operative Bank",
+    "DMCX": "Durgapur Mahila Co-operative Bank",
+    "DMKB": "Dattatraya Maharaj Kalambe Jaoli Sahakari Bank",
+    "DMKJ": "Dmk Jaoli Bank",
+    "DNDC": "Dhule And Nandurbar District Central Co-operative Bank",
+    "DNSB": "Dombivli Nagari Sahakari Bank",
+    "DNSX": "Deendayal Nagari Sahakari Bank",
+    "DOBX": "Dapoli Urban Co-operative Bank",
+    "DOHB": "Doha Bank QSC",
+    "DRGX": "Durg Rajnandgaon Gramin Bank",
+    "DSAX": "District Central Co-operative Bank, Supaul",
+    "DSBX": "Daivadnya Sahakara Bank Niyamit",
+    "DSCB": "Delhi State Co-operative Bank",
+    "DSHX": "District Co-operative Bank Saharanpur",
+    "DSPX": "Durgapur Steel Peoples' Co-operative Bank",
+    "DSUX": "Dharamvir Sambhaji Urban Co-operative Bank",
+    "DTCX": "District Co-operative Bank Rae Bareli",
+    "DTPX": "District Co-operative Bank Pratapgarh",
+    "DUCX": "Daund Urban Co-operative Bank",
+    "DUMX": "Dumka Central Co-operative Bank",
+    "DUNX": "Dungarpur Central Co-operative Bank",
+    "DURG": "Durgapur Steel Peoples Co-operative Bank",
+    "DVDX": "Davanagere District Central Co-operative Bank",
+    "DYPX": "D.y.patil Sahakari Bank Kolhapur",
+    "EBIL": "Emirates NBD Bank",
+    "ECBL": "Excellent Co-operative Bank",
+    "EDBX": "Ellaquai Dehati Bank",
+    "EDCX": "Erode District Central Co-operative Bank",
+    "EDSX": "Ernakulam District Co-operative Bank",
+    "EIBI": "Export Import Bank of India",
+    "ESAF": "ESAF Small Finance Bank",
+    "ESFB": "Equitas Small Finance Bank",
+    "ESMF": "Esaf Small Finance Bank",
+    "ETCX": "Etawah District Co-operative Bank Etwah",
+    "ETDX": "Etah District Co-operative Bank",
+    "EUCX": "Etah Urban Co-operative Bank",
+    "EWCX": "Etawah Urban Co-operative Bank Etawah",
+    "FCBX": "Fazilka Central Co-operative. Bank",
+    "FCCX": "Faridkot Central Co-operative Bank",
+    "FCOX": "District Co-operative Bank Faizabad",
+    "FDFX": "Farrukhabad District Co-operative Bank Fatehgarh",
+    "FDRL": "Federal Bank",
+    "FEKX": "Feroke Co-operative Bank",
+    "FGCB": "Fingrowth Co-operative Bank",
+    "FINF": "Fincare Small Finance Bank ",
+    "FINO": "Fino Payments Bank",
+    "FINX": "Financial Co-operative Bank",
+    "FIRN": "Firstrand Bank",
+    "FIRX": "Firstrand Bank",
+    "FMCX": "Faiz Mercantile Co-operative Bank, Nasik",
+    "FRIX": "Faridabad Central Co-operative Bank",
+    "FSCX": "Fatehgrah Sahib Central Co-operative Bank",
+    "FSFB": "Fincare Small Finance Bank",
+    "FZCX": "Ferozepur Central Co-operative. Bank",
+    "FZSX": "Firozabad Zila d Bank",
+    "GACX": "Gujarat Ambuja Co-operative Bank",
+    "GADX": "Gadhinglaj Urban Co-operative Bank",
+    "GAMX": "Ganga Mercantile Urban Co-operative Bank",
+    "GANX": "Gandhidham Co-operative Bank",
+    "GBCB": "Greater Bombay Co-operative Bank",
+    "GCBX": "Guruvayur Co-operative Urban Bank",
+    "GCCX": "Gurdaspur Central Co-operative Bank",
+    "GCUL": "Gauhati Co-operative Urban Bank",
+    "GCUX": "Gayatri Co-operative Urban Bank",
+    "GDCB": "Gadchiroli District Central Co-operative Bank",
+    "GDCX": "Guntur District Co-operative Central Bank",
+    "GDDX": "Giridih Central Co-operative Bank",
+    "GDUX": "Godhra Urban Co-operative Bank",
+    "GGBK": "Gurgaon Gramin Bank",
+    "GGCX": "Gopalganj Central Co-operative Bank",
+    "GHPX": "Ghatal Peoples' Co-operative Bank",
+    "GKNX": "Ganganagar Kendriya Sahakari Bank",
+    "GMBX": "Gandhidham Mercantile Co-operative Bank",
+    "GMCX": "Gujarat Mercantile Co-operative Bank",
+    "GMUX": "Gulshan Mercantile Urban Co-operative Bank",
+    "GNCX": "Gandhi Co-operative Urban Bank",
+    "GNSX": "Gozaria Nagrik Sahakari Bank",
+    "GODX": "Godavari Urban Co-operative Bank Nashik",
+    "GOSX": "Gondal Nagarik Sahakari Bank",
+    "GPCX": "Gandevi People's Co-operative Bank",
+    "GPOX": "General Post Office",
+    "GRAX": "Grain Merchants' Co-operative Bank",
+    "GSBL": "Goa State Co-operative Bank",
+    "GSBX": "Gandhibag Sahakari Bank  Nagpur",
+    "GSCB": "Gujarat State Co-operative Bank",
+    "GSCX": "Gumla Simdega Central Co-operative Bank",
+    "GSSX": "Guardian Souharda Sahakari Bank Niyamita",
+    "GTCX": "George Town Co-operative Bank",
+    "GUBX": "Godavari Urban Co-operative Bank",
+    "GUCX": "Goa Urban Co-operative Bank",
+    "GUNX": "Guntur Co-operative Urban Bank",
+    "GUOX": "Gurgaon Central Co-operative Bank",
+    "HAMX": "Hamirpur District Co-operative Bank",
+    "HANX": "Hanumangarh Kendriya Sahakari Bank",
+    "HARC": "Haryana State Co-operative Apex Bank",
+    "HCBL": "HASTI Co-operative Bank",
+    "HCBX": "Hasti Co-operative Bank",
+    "HCCX": "Hazaribag Central Co-operative Bank",
+    "HCLX": "HCBL Co-operative Bank",
+    "HDCL": "Hardoi District Co-operative Bank",
+    "HDCX": "Hyderabad District Co-operative Bank",
+    "HDFC": "HDFC Bank",
+    "HGBX": "Sarva Haryana Gramin Bank",
+    "HINX": "Hindu Co-operative Bank",
+    "HISX": "Hisar Central Co-operative Bank Hisar",
+    "HMBX": "Himachal Pradesh Gramin Bank",
+    "HMNX": "Himatnagar Nagarik Sahakari Bank",
+    "HOCX": "Hoshiarpur Central Co-operative Bank",
+    "HOOX": "Hooghly District Central Co-operative Bank",
+    "HPCX": "Shree Parswanath Co-operative Bank",
+    "HPSC": "Himachal Pradesh State Co-operative Bank",
+    "HPSX": "Himachal Pradesh State Co-operative Bank",
+    "HSBC": "Hongkong & Shanghai Banking Corporation",
+    "HSBM": "Haveli Sahakari Bank",
+    "HSBX": "Harihareshwar Sahakari Bank",
+    "HSCX": "Haryana State Co-operative Apex Bank",
+    "HSDX": "Hassan District Co-operative Central Bank",
+    "HSSX": "Hindustan Shipyard Staff Co-operative Bank",
+    "HUBX": "Hubli Urban Co-operative Bank",
+    "HUCB": "Hadagali Urban Co-operative Bank",
+    "HUCH": "Hanamasagar Urban Co-operative Bank",
+    "HUCX": "Hissar Urban Co-operative Bank",
+    "HUSB": "Hutatma Sahakari Bank",
+    "HUTX": "Hutatma Sahakari Bank",
+    "HVBK": "Woori Bank",
+    "IBBK": "PT Bank Maybank Indonesia TBK",
+    "IBKL": "IDBI",
+    "IBKO": "Industrial Bank of Korea",
+    "ICBK": "Industrial and Commercial Bank of China",
+    "ICBL": "Industrial Co-operative Bank",
+    "ICHX": "Ichalkaranji Merchants Co-operative Bank",
+    "ICIC": "ICICI Bank",
+    "ICLL": "Indian Clearing Corporation",
+    "ICMX": "Indore Cloth Market Co-operative Bank",
+    "IDFB": "IDFC FIRST Bank",
+    "IDIB": "Indian Bank",
+    "IDUK": "Idukki District Co-operative Bank",
+    "IDUX": "Idukki District Co-operative Bank",
+    "ILCB": "Ilkal Co-operative Bank",
+    "IMCX": "Imperial Urban Co-operative Bank Jalandhar",
+    "IMPX": "Imphal Urban Co-operative Bank",
+    "INCX": "Indapur Urban Co-operative Bank",
+    "INDB": "Indusind Bank",
+    "INDX": "Independence Co-operative Bank",
+    "IOBA": "Indian Overseas Bank",
+    "IPCX": "Indore Premier Co-operative Bank",
+    "IPOS": "India Post Payments Bank",
+    "IPPB": "India Post Payments Bank",
+    "IPSX": "Indore Paraspar Sahakari Bank",
+    "ISBX": "Indraprastha Sehkari Bank",
+    "ISMX": "Indore Swayam Mahila Co-operative Bank",
+    "ITBL": "Irinjalakuda Town Co-operative Bank",
+    "ITCX": "Irinjalakuda Town Co-operative Bank",
+    "ITDX": "Income Tax Dept Co-operative Bank",
+    "IUCB": "Integral Urban Co-operative Bank",
+    "IUCX": "Imperial Urban Co-operative Bank",
+    "IXXX": "Indrayani Co-operative Bank",
+    "JACX": "Jain Co-operative Bank",
+    "JAKA": "Jammu and Kashmir Bank",
+    "JALX": "Janalaxmi Co-operative Bank",
+    "JAMX": "Jamia Co-operative Bank",
+    "JANA": "Janaseva Sahakari Bank, Pune",
+    "JANX": "Janata Co-operative Bank",
+    "JASB": "Janaseva Sahakari Bank (Borivli)",
+    "JASX": "Janatha Seva Co-operative Bank",
+    "JAUX": "Jaihind Urban Co-operative Bank",
+    "JBHX": "Jila Sahakari Kendriya Bank Maryadit Bhind",
+    "JBIX": "Jila d Kendriya Bank Maryadit Bilaspur",
+    "JBMX": "Jila Sahakari Kendriya Bank Maryadit Sagar",
+    "JCBX": "Janata Co-operative Bank Malegaon.",
+    "JCCB": "Jaipur Central Co-operative Bank",
+    "JCCX": "Jalandhar Central Co-operative Bank",
+    "JCDX": "Jamnagar District Co-operative Bank",
+    "JCHX": "Jila Sahakari Kendriya Bank Mydt Chhatarpur",
+    "JCPX": "Janata Co-operative Bank",
+    "JCUX": "Jagruti Co-operative Urban Bank",
+    "JDCX": "Jalaun District Co-operative Bank",
+    "JDEX": "Jila Sahakari Kendriya Bank Mydtt Dewas",
+    "JGBX": "Jharkand Gramin Bank",
+    "JGCX": "Jogindra Central Co-operative Bank",
+    "JGWX": "Jila Sahakari Bank Mydt. Gwalior",
+    "JHAX": "Jharneshwar Nagrik Sahakari Bank Maryadit",
+    "JHSX": "Jila Sahakari Kendriya Bank Mydt Hoshangabad",
+    "JHUX": "Jhunjhunu Kenddriya Sahakari Bak",
+    "JIBX": "Jila Sahakari Kendriya Bank Maryadit Balaghat",
+    "JICX": "Jila Sahakari Kendriya Bank Maryadit Chhindwara",
+    "JIDX": "Jila d Kendriya Bank Mydt Damoh",
+    "JIGX": "Jila Sahakari Kendriya Bank Mydt Guna",
+    "JIKX": "Jila Sahakari Kendariya Bank Mydt Khandwa",
+    "JIMX": "Jila Sahakari Kendriya Bank Mydt Mandla",
+    "JINX": "Jind Central Co-operative Bank",
+    "JIOP": "Jio Payments Bank",
+    "JIOX": "Jila Sahakari Kendriya Bank Mydt Shahdol",
+    "JIRX": "Jila Sahakari Kendriya Bank Maryadit Rajgarh",
+    "JISX": "Jila Sahakari Kendriya Bank Maryadit Sidhi",
+    "JIVX": "Jivaji Sahakari Bank  Ichalkaranji",
+    "JJCX": "Jhajjar Central Co-operative Bank",
+    "JJHX": "Jila d Kendriya Bank Mydt Jhabua",
+    "JJSB": "Jalgaon Janata Bank",
+    "JKAX": "Jila Sahakari Kendriya Bank Mydt Ambikapur",
+    "JKCX": "Janakalyan Co-operative Bank Nashik",
+    "JKDX": "Jila Sahakari Kendriya Bank Mydt. Jabalpur",
+    "JKEX": "Jhalawar Kendriya Bank",
+    "JKHX": "Jila Kendriya Bank Maryadit Khargone",
+    "JKMX": "Jila Sahakari Kendriya Bank Maryadit Jagdalpur",
+    "JKRX": "Jilla Sahakari Kendriya Bank Mydt Raisen",
+    "JKSX": "J&k State Co-operative Bank",
+    "JLCX": "Jalore Central Co-operative Bank Jalore",
+    "JLDX": "Jalna District Central Co-operative Bank",
+    "JLNX": "Jalna Peoples Co-operative Bank Jalna",
+    "JLSX": "Jila Sahakari Kendriya Bank Mydt Vidisha",
+    "JLWX": "Jhalawar Nagrik Sahakari Bank",
+    "JMAX": "Jila Sahakari Kendriya Bank Mydt Mandsaur",
+    "JMBX": "Jila Sahakari Kendriya Bank Maryadit Betul",
+    "JMCX": "Jalna Merchants Co-operative Bank",
+    "JMDX": "Jila d Kendriya Bank Mydt Datia",
+    "JMHX": "Jamshedpur Urban Co-operative Bank",
+    "JMMX": "Jammu Central Co-operative Bank",
+    "JMOX": "Jila Sahakari Kendriya Bank Mydt Morena",
+    "JMPX": "Jamnagar Peoples Co-operative Bank",
+    "JMSX": "Jijamata Mahila Sahakari Bank",
+    "JMYX": "Jila Sahakari Kendriya Bank Mydt Durg",
+    "JNAX": "Jila Sahakari Kendriya Bank Mydt Narsinghpur",
+    "JNDX": "Junagadh Jilla Sahakari Bank",
+    "JNSX": "Janseva Nagari Sahakari Bank Marydit",
+    "JODX": "Jodhpur Central Co-operative Bank",
+    "JONX": "Jodhpur Nagrik Sahakari Bank",
+    "JOWX": "Jowai Co-operative Urban Bank",
+    "JPAX": "Jila Sahakari Kendriya Bank Mydt Panna",
+    "JPCB": "Jalgaon Peoples Co-operative Bank",
+    "JPCX": "Jalpaiguri Central Co-operative Bank",
+    "JRAX": "Jila Sahakari Kendriya Bank Mydt Ratlam",
+    "JRKX": "Jila Sahakari Kendriya Bank Mydt Ujjain",
+    "JRNX": "Jila Sahakari Kendriya Bank Maryadit Rajnandgaon",
+    "JRSX": "Jalore Nagrik Sahakari Bank",
+    "JSAB": "Jain Sahakari Bank",
+    "JSAX": "Janata Sahakari Bank Ajara",
+    "JSBL": "Janakalyan Sahakari Bank",
+    "JSBP": "Janata Sahakari Bank (Pune)",
+    "JSBX": "Janaseva Co-operative Bank (Nashik)",
+    "JSCX": "Jharkhand State Co-operative Bank",
+    "JSDX": "Jila Sahakari Kendriya Bank Mydt Dhar",
+    "JSEX": "Jila Sahakari Kendriya Bank Mydt Sehore",
+    "JSFB": "Jana Small Finance Bank",
+    "JSHX": "Jila Sahakari Kendriya Bank Mydt Shajapur",
+    "JSKX": "Jila Sahakari Kendriya Bank Maryadit Raipur",
+    "JSMX": "Janata Sahakari Bank Amravati",
+    "JSOX": "Jila Sahakari Kendriya Bank Myt Seoni",
+    "JSRX": "Jila Sahakari Kendriya Bank Mydt Rewa",
+    "JSTX": "Jila Sahakari Kendriya Bank Mydt Satna",
+    "JSVX": "Jila Sahakari Kendriya Bank Maryadit Shivpuri",
+    "JSWX": "Jansewa Urban Co-operative Bank",
+    "JTIX": "Jila Sahakari Kendriya Bank Mydt Tikamgarh",
+    "JTSC": "Janatha Seva Co-operative Bank",
+    "JTSX": "Jugalkishor Tapdiya Shree Mahesh Ucb Aurangabadltd",
+    "JUCX": "Junagadh Commercial Co-operative Bank",
+    "JUSX": "Jaysingpur Udgaon Sahakari Bank Jaysingpur",
+    "JVCX": "Jivan Commercial Co-operative Bank",
+    "JXXX": "Jampeta Co-Operative Urban Bank",
+    "KAAX": "Kadappa District Co-operative Central Bank",
+    "KACE": "Kangra Central Co-operative Bank",
+    "KACX": "Kachchh District Central Co-operative Bank",
+    "KADX": "Kasaragod District Co-operative Bank",
+    "KAGX": "Kagal Co-operative Bank Kagal",
+    "KAIJ": "Kallappanna Awade Ichalkaranji Janata Sahakari Bank",
+    "KALX": "Kalna Town Credit Co-operative Bank",
+    "KAMX": "Kamala Co-operative Bank Solapur",
+    "KANG": "Kangra Co-operative Bank",
+    "KANX": "Kanara District Central Co-operative Bank",
+    "KARB": "Karnataka Bank",
+    "KARX": "Kaira District Central Co-operative Bank",
+    "KASX": "Kashmir Mercantile Co-operative Bank",
+    "KATX": "Kattappana Urban Co-operative Bank",
+    "KAYX": "Kanyakumari District Central Co-operative Bank",
+    "KBCX": "Kanakamahalakshmi Co-operative Bank",
+    "KBHB": "KEB Hana Bank",
+    "KBKB": "Kookmin Bank",
+    "KBNX": "Khambhat Nagarik Sahakari Bank",
+    "KBSX": "Krishna Bhima Samruddhi Local Area Bank",
+    "KCBL": "Kapol Co-operative Bank",
+    "KCBX": "Kutch Co-operative Bank",
+    "KCCB": "Kalupur Commercial Co-operative Bank",
+    "KCCX": "Kancheepuram Central Co-operative Bank",
+    "KCDX": "Karnatak Central Co-operative Bank Dharwad",
+    "KCEX": "Kota Central Co-operative Bank Kota",
+    "KCOB": "Kangra Co-operative Bank",
+    "KCUB": "Khattri Co-operative Urban Bank",
+    "KCUX": "Kannur Co-operative Urban Bank",
+    "KDBX": "Karimnagar District Co-operative Central Bank",
+    "KDCB": "Kozhikode District Co-operative Bank",
+    "KDCX": "Kozhikode District Co-operative Bank",
+    "KDIX": "Shree Kadi Nagarik Sahakari Bank",
+    "KDNX": "Kodinar Nagrik Sahakari Bank",
+    "KDUX": "Kodagu District Co-operative Central Bank",
+    "KEJX": "Keonjhar Central Co-operative Bank",
+    "KEMX": "Kerala Mercantile Co-operative Bank",
+    "KESX": "Keshav Sehkari Bank",
+    "KGBX": "Kaveri Grameena Bank",
+    "KGDX": "Khagaria District Central Co-operative Bank",
+    "KGRB": "Kaveri Grameena Bank",
+    "KGSX": "Kashi Gomti Samyut Gramin Bank",
+    "KHAX": "Khalilabad Nagar d Bank",
+    "KHCX": "Khardah Co-operative Bank",
+    "KHDX": "Kheda People's Co-operative Bank",
+    "KHNX": "Kohinoor Sahakari Bank Ichalkaranji",
+    "KHTX": "Khurda Central Co-operative Bank",
+    "KHUX": "Khamgaon Urban Co-operative Bank",
+    "KICX": "Kaithal Central Co-operative Bank",
+    "KJSB": "Kalyan Janata Sahakari Bank",
+    "KJSX": "Karad Janata Sahakari Bank",
+    "KKBK": "Kotak Mahindra Bank",
+    "KKMX": "Kankaria Mainagar Nagrik Sahakari Bank",
+    "KKSX": "Kumbhi Kasari Bank Kuditre",
+    "KLGB": "Kerala Gramin Bank",
+    "KLMX": "Kollam District Co-operative Bank",
+    "KMCB": "Kokan Mercantile Co-operative Bank",
+    "KMCX": "Krishna Mercantile Co-operative Bank",
+    "KMNX": "Kota Mahila Nagrik Sahakari Bank",
+    "KMSX": "Kolhapur Mahila Sahakari Bank",
+    "KNBX": "Kalol Nagarik Sahakari Bank",
+    "KNCX": "Karnal Central Co-operative Bank",
+    "KNNX": "Sri Kannikaparameswari Co-operative Bank",
+    "KNPX": "Karnala Nagari Sahakari Bank Panvel",
+    "KNSB": "Kurla Nagarik Sahakari Bank",
+    "KNSX": "Kisan Nagari Sahakari Bank Maryadit Parbhani",
+    "KOBX": "Kopargaon Peoples Co-operative Bank",
+    "KOCX": "Konoklota Mahila Urban Co-operative Bank",
+    "KODX": "Kodungallur Town Co-operative Bank",
+    "KOEX": "KEB Hana Bank",
+    "KOLH": "Kolhapur Urban Co-operative Bank",
+    "KORX": "Koraput Central Co-operative Bank",
+    "KOSX": "Kota Nagrik d Bank Kota",
+    "KOTX": "Kodinar Taluka Co-operative Banking Union",
+    "KOYX": "Koylanchal Urban Co-operative Bank",
+    "KPCX": "Kolhapur District Central Co-operative Bank",
+    "KRCX": "Kolar And Chickballapur Dt Co-operative Central Bank",
+    "KRDX": "Krishna District Co-operative Bank",
+    "KRIX": "Krishnagar City Co-operative Bank",
+    "KRMX": "Karamana Co-operative Urban Bank",
+    "KRNX": "Karnavati Co-operative Bank",
+    "KRTH": "Krungthai Bank",
+    "KRTX": "Kranthi Co-operative Urban Bank",
+    "KSBK": "Kerala State Co-operative Bank",
+    "KSBX": "Krishna Sahakari Bank Rethare Bk",
+    "KSCB": "Karnataka State Co-operative Apex Bank",
+    "KSCX": "Kerala State Co-operative Bank",
+    "KSMX": "Kosamba Mercantile Co-operative Bank",
+    "KSNX": "Koteshwara Sahakari Bank Niyamitha",
+    "KSTX": "Kasaragod Co-operative Town Bank No 970",
+    "KSUX": "Kashipur Urban Co-operative Bank",
+    "KTBX": "Kottayam District Co-operative Bank",
+    "KTCX": "Kapurthala Central Co-operative Bank",
+    "KTDX": "Katihar District Central Co-operative Bank",
+    "KTTX": "Tumkur District Central Bank",
+    "KUBX": "Kaduthuruthy Urban Co-operative Bank",
+    "KUCB": "Karad Urban Co-operative Bank",
+    "KUCX": "Kolhapur Urban Co-operative Bank",
+    "KUKX": "Kukarwada Nagarik Sahakari Bank",
+    "KULX": "Kodoli Urban Co-operative Bank Kodoli",
+    "KUMX": "Kumbakonam Central Co-operative Bank",
+    "KUNS": "Kurmanchal Nagar Sahakari Bank",
+    "KUOB": "Konark Urban Co-operative Bank",
+    "KURX": "Kurukshetra Central Co-operative Bank",
+    "KUTX": "Kuttiady Co-operative Urban Bank",
+    "KVBL": "Karur Vysya Bank",
+    "KVCX": "Kavita Urban Co-operative Bank",
+    "KVGB": "Karnataka Vikas Grameena Bank",
+    "KYDX": "Kalaburagi and Yadgir District Co-operative Central Bank",
+    "LACX": "Laxmi Co-operative Bank Solapur",
+    "LATX": "Latur Urban Co-operative Bank Latur",
+    "LAVB": "Laxmi Vilas Bank",
+    "LBMX": "Laxmibai Mahila Nagrik Sahakari Bank Maradit",
+    "LCBX": "Lalbaug Co-operative Bank",
+    "LCCX": "Ludhiana Central Co-operative Bank",
+    "LDCX": "Latur District Central Co-operative Bank",
+    "LDPX": "Loknete Dattaji Patil Sahakari Bank",
+    "LDRX": "Langpi Dehangi Rural Bank",
+    "LECX": "LIC Employees Co-operative Bank",
+    "LICB": "Liluah Co-operative Bank",
+    "LKBL": "Lord Krishna Bank",
+    "LKCX": "Little Kancheepuram Co-operative Urban Bank",
+    "LKHX": "Lakhimpur Urban Co-operative Bank",
+    "LKMX": "Lokmangal Co-operative Bank Solapur",
+    "LMNX": "Laxmi Mahila Nagrik Sahakari Bank Maryadit",
+    "LNSX": "Lunawada Nagarik Sahakari Bank",
+    "LOKX": "Lokvikas Nagari Sahakari Bank Aurangabad",
+    "LONX": "Lonavala Sahakari Bank",
+    "LUCX": "Lucknow Urban Co-operative Bank",
+    "LULX": "Laxmi Urban Co-operative Bank Latur",
+    "MABL": "Malleshwaram Co-operative Bank",
+    "MACX": "Mahabhairab Co-operative Urban Bank",
+    "MADX": "Madhyanchal Gramin Bank",
+    "MAGX": "Mewar Aanchalik Gramin Bank",
+    "MAHB": "Bank of Maharashtra",
+    "MAHG": "Maharashtra Gramin Bank",
+    "MAHX": "Shree Mahalaxmi Urban Co-operative Credit Bank",
+    "MAJX": "Manjeri Co-operative Urban Bank",
+    "MAKX": "Makarpura Industrial Estate Co-operative Bank",
+    "MALX": "Malviya Urban Co-operative Bank",
+    "MAMX": "Mandvi Mercantile Co-operative Bank",
+    "MANX": "Mansa Nagarik Sahakari Bank",
+    "MAPX": "Maharana Pratap Co-operative Urban Bank",
+    "MASX": "Mahesh Urban Co-operative Bank Solapur",
+    "MAUX": "Mantha Urban Co-operative Bank",
+    "MAVX": "Shree Mahavir Sahakari Bank",
+    "MAWX": "Manipur Womens Co-operative Bank",
+    "MAYX": "Mayani Urban Co-operative Bank",
+    "MBCX": "Mugberia Central Co-operative Bank",
+    "MBGX": "Dakshin Bihar Gramin Bank",
+    "MBLX": "Manmandir Co-operative Bank",
+    "MCAB": "Meghalaya Co-operative Apex Bank",
+    "MCAX": "Mahesh Urban Co-operative Bank Ahmedpur",
+    "MCBL": "Mahanagar Co-operative Bank",
+    "MCBX": "Modern Co-operative Bank",
+    "MCCX": "Muktsar Central Co-operative Bank",
+    "MCDX": "Muzaffarnagar District Co-operative Bank",
+    "MCLX": "Mahendragarh Central Co-operative Bank",
+    "MCOX": "Mahesh Urban Co-operative Bank",
+    "MCSX": "Mattancherry Sarvajanik Co-operative Bank",
+    "MCUX": "Mahaveer Co-operative Urban Bank",
+    "MDBK": "Model Co-operative Bank",
+    "MDCB": "Mumbai District Central Co-operative Bank",
+    "MDCX": "Madurai District Central Co-operative Bank",
+    "MDEX": "Model Co-operative Bank",
+    "MDGX": "Rajasthan Marudhara Gramin Bank",
+    "MDIX": "Mandya District Co-operative Central Bank",
+    "MDMX": "Mann Deshi Mahila Sahakari Bank",
+    "MDPX": "Md Pawar Peoples Co-operative Bank Urun Islampur",
+    "MEDX": "District Co-operative Central Bank",
+    "MERX": "Meghalaya Rural Bank",
+    "MEUX": "Meenachil East Urban Co-operative Bank",
+    "MFCX": "Muzaffarpur Central Co-operative Bank",
+    "MFUX": "Mahatma Fule Urban Co-operative Bank,amravati",
+    "MGBX": "Maharashtra Gramin Bank",
+    "MGCB": "Mogaveera Co-operative Bank",
+    "MGCX": "Mansing Co-operative Bank",
+    "MGDX": "Magadh Central Co-operative Bank",
+    "MGRB": "Malwa Gramin Bank",
+    "MGSX": "Mangaldai Nagar Samabai Bank",
+    "MGUX": "Madgaum Urban Co-operative Bank",
+    "MHCB": "Mizuho Bank",
+    "MHCX": "Mahoba Urban Co-operative Bank Mahoba",
+    "MHEX": "Mahamedha Urban Co-operative Bank ( Under Rbi Direction)",
+    "MHLX": "Mahila Co-operative Bak",
+    "MHMX": "Shri Mahalaxmi Co-operative Bank Kolhapur",
+    "MHNX": "Mahanagar Nagrik Sahakari Bank Maryadit",
+    "MHSX": "Mahesh Sahakari Bank Pune",
+    "MHUX": "Mahesh Urbank Co-operative Bank Parli V.",
+    "MIZX": "Mizoram Co-operative Apex Bank",
+    "MJCX": "Monghyr Jamui Central Co-operative Bank",
+    "MKPB": "Malkapur Urban Co-operative Bank",
+    "MKUX": "Malkapur Urban Co-operative Bank",
+    "MKYX": "Marketyard Commercial Co-operative Bank",
+    "MLCG": "Merchants Liberal Co-operative Bank",
+    "MLDX": "Malda District Central Co-operative Bank",
+    "MMCX": "Mattancherry Mahajanik Co-operative Urban Bank",
+    "MMMX": "Mahila  Nagrik Sahakari Bank Maryadit Mahasamund",
+    "MNBX": "Mahila Co-operative Nagarik Bank,bharuch",
+    "MNCX": "Mansa Central Co-operative Bank",
+    "MNSX": "Mehsana Nagarik Sahakari Bank",
+    "MOGX": "Moga Central Co-operative Bank",
+    "MOUX": "Mohol Urban Co-operative Bank",
+    "MPCX": "Moirang Primary Co-operative Bank",
+    "MPDX": "Malappuram District Co-operative Bank",
+    "MPRX": "Madhya Pradesh Rajya Sahakari Bank Maryadit",
+    "MRBX": "Manipur Rural Bank",
+    "MRTX": "Maratha Co-operative Bank",
+    "MSAX": "Mansarovar Urban Co-operative Bank",
+    "MSBL": "Malad Sahakari Bank",
+    "MSBX": "M.s.Co-operative Bank",
+    "MSCI": "Maharashtra State Co-operative Bank",
+    "MSCX": "Manipur State Co-operative Bank",
+    "MSHQ": "Mashreq Bank",
+    "MSLM": "Muslim Co-operative Bank",
+    "MSNU": "Mehsana Urban Co-operative Bank",
+    "MSNX": "Mehsana District Central Co-operative Bank",
+    "MSOX": "Manorama Co-operative Bank Solapur",
+    "MSSX": "Merchants Souharda Sahakara Bank Niyamita",
+    "MUBL": "Municipal Co-operative Bank",
+    "MUBX": "Maharaja Co-operative Urban Bank",
+    "MUCG": "Merchants Urban Co-operative Bank",
+    "MUCX": "Mapusa Urban Co-operative Bank of Goa",
+    "MUDX": "Madheshwari Urban Development Co-operative Bank",
+    "MUNX": "Mahudha Nagarik Sahakari Bank",
+    "MUPX": "Mehmadabad Urban Peoples Co-operative Bank",
+    "MURX": "Murshidabad District Central Co-operative Bank",
+    "MUSX": "Muslim Co-operative Bank",
+    "MVCB": "Sir M Visvesvaraya Co-operative Bank",
+    "MVCX": "Mahaveer Co-operative Bank",
+    "MVIX": "Manvi Pattana Souharda Sahakari Bank Ni",
+    "MXXX": "Maharashtra Mantralaya & Allied Offices Co-operative Bank",
+    "MYAX": "Meghalaya Co-operative Apex Bank",
+    "MYCX": "Mayurbhanj Central Co-operative Bank",
+    "MYSX": "Mysore Chamarajanagar District Co-operative Bank",
+    "MZCX": "Mizoram Urban Co-operative Development Bank",
+    "MZRX": "Mizoram Rural Bank",
+    "NABX": "Nandani Sahakari Bank",
+    "NACX": "Nalanda Central Co-operative Bank Nalanda",
+    "NADX": "Nadapuram Co-operative Bank",
+    "NAGX": "Nagaland Rural Bank",
+    "NAIX": "Nainital District Co-operative Bank",
+    "NALX": "National Urban Co-operative Bank",
+    "NANX": "Nanded District Central Co-operative Bank",
+    "NASX": "Nasik District Central Co-operative Bank",
+    "NATA": "National Australia Bank",
+    "NAUX": "Nagaur Central Co-operative Bank",
+    "NAVX": "Navnirman Co-operative Bank",
+    "NAWX": "Nawanagar Co-operative Bank",
+    "NBAD": "National Bank of Abu Dhabi PJSC",
+    "NBBX": "National Co-operative Bank Bangalore",
+    "NBCX": "Nalbari Urban Co-operative Bank",
+    "NBMX": "Nagrik Sahakari Bank, Vidisha",
+    "NBRD": "National Bank for Agriculture and Development",
+    "NCBL": "National Co-operative Bank",
+    "NCBX": "Nawanshahr Central Co-operative Bank",
+    "NCCX": "Nabadwip Co-operative Credit Bank",
+    "NCOX": "Nagnath Urban Co-operative Bank Hingoli",
+    "NCUB": "Nilambur Co-operative Urban Bank",
+    "NCUX": "Nilambur Co-operative Urban Bank",
+    "NDCB": "Naval Dockyard Co-operative Bank",
+    "NDCX": "Nilgiris District Central Co-operative Bank",
+    "NDDX": "Nadia District Central Co-operative Bank",
+    "NDGX": "Nashik District Girna Sahakari Bank",
+    "NDIX": "Nashik District Industrial & Mercantile Co-operative Bank",
+    "NDOX": "Nayagarh District Central Co-operative Bank",
+    "NESF": "North East Small Finance Bank",
+    "NEYX": "Neyyattinkara Co-operative Urban Bank",
+    "NGBX": "Nagar Sahakari Bank Maharajganj",
+    "NGKX": "Nagrik Sahakari Bank Maryadit Gwalior",
+    "NGNX": "Nagina Urban Co-operative Bank",
+    "NGRX": "Nagar Sahakari Bank",
+    "NGSB": "Nagpur Nagarik Sahakari Bank",
+    "NGSX": "Nagarik Sahakari Bank Maryadit Durg",
+    "NGUX": "Nagaur Urban Co-operative Bank",
+    "NICB": "New India Co-operative Bank",
+    "NIDX": "Nidhi Co-operative Bank",
+    "NILX": "Nilkanth Co-operative Bank",
+    "NIRX": "Nirmal Urban Co-operative Bank Nagpur",
+    "NIUX": "Nileshwar Co-operative Urban Bank",
+    "NJBK": "Nav Jeevan Co-operative Bank",
+    "NJCX": "Nav Jeevan Co-operative Bank",
+    "NJGX": "Narmada Jhabua Gramin Bank",
+    "NJMX": "Nashik Zila Mahila Vikas Sahakari Bank",
+    "NJSX": "Nasik Zila Mahila Sahakari Bank",
+    "NKGS": "NKGSB Co-operative Bank",
+    "NLGX": "Nalgonda Dist. Co-operative Central Bank",
+    "NLUX": "National Urban Co-operative Bank,bahraich",
+    "NMCB": "Nasik Merchants Co-operative Bank",
+    "NMCX": "Navi Mumbai Co-operative Bank",
+    "NMGB": "North Malabar Gramin Bank",
+    "NNCX": "Naroda Nagrik Co-operative Bank",
+    "NNSB": "Nutan Nagarik Sahakari Bank",
+    "NNSX": "Nutan Nagari Sahakari Bank Ichalkaranji",
+    "NOBX": "Noble Co-operative Bank",
+    "NOIX": "Noida Commercial Co-operative Bak",
+    "NOSC": "Bank of Nova Scotia",
+    "NPCX": "Nadiad Peoples Co-operative Bank",
+    "NPKX": "Nashik Zilha Sarkari & Parishad Karmachari Sb Nmt",
+    "NPPX": "Nabagram Peoples' Co-operative Credit Bank",
+    "NRDX": "Nasik Road Deolali Vyapari Sahakari Bank",
+    "NRMX": "Northern Railway Multi State Primary Co-operative Bank",
+    "NSBB": "Nagarik Sahakari Bank Bhiwandi",
+    "NSBX": "Nagrik Sahakari Bank Lucknow",
+    "NSCX": "Nagaland State Co-operative Bank",
+    "NSGX": "Nagar Sahakari Bank Gorakhpur",
+    "NSIX": "Nagrik Sahakari Bank Indore",
+    "NSJX": "Nagarik Sahakari Bank Maryadit,jagdalpur",
+    "NSMX": "Nagarik Samabay Bank",
+    "NSPB": "NSDL Payments Bank",
+    "NSPX": "Nishigandha Sahakari Bank",
+    "NSRX": "Nagrik Sahakari Bank",
+    "NTBL": "Nainital Bank",
+    "NUBX": "New Urban Co-operative Bank Rampur",
+    "NUCB": "Nagar Urban Co-operative Bank",
+    "NUCX": "Navabharat Co-operative Urban Bank",
+    "NULX": "National Urban Co-operative Bank, Pratapgarh",
+    "NVCX": "Navanagara Urban Co-operative Bank",
+    "NVNM": "Navnirman Co-operative Bank",
+    "NVSX": "Nagar Vikas Sahakari Bank",
+    "NWCX": "Nawada Central Co-operative Bank",
+    "ODCX": "Osmanabad District Central Co-operative Bank",
+    "ODGB": "Odisha Gramya Bank",
+    "OIBA": "HSBC Bank Oman S.A.O.G",
+    "OMCX": "Ojhar Merchant's Co-operative Bank",
+    "ONSX": "Omkar Nagreeya Sahakari Bank",
+    "ORBC": "Oriental Bank of Commerce",
+    "ORCB": "Odisha State Co-operative Bank",
+    "OSMX": "Osmanabad Janata Sahakari Bank",
+    "PABX": "Pallavan Grama Bank",
+    "PACX": "Pali Central Co-operative Bank",
+    "PADX": "Padra Nagar Nagrik Sahakari Bank",
+    "PALX": "Pali Urban Co-operative Bank",
+    "PANX": "Panchmahal District Co-operative Bank",
+    "PARX": "Parbhani District Central Co-operative Bank",
+    "PASX": "Paschim Banga Gramin Bank",
+    "PATX": "Pathanmthitta District Co-operative Bank",
+    "PAYX": "Payangadi Urban Co-operative Bank",
+    "PBGX": "Puduvai Bharathiar Grama Bank",
+    "PCBL": "Patan Co-operative Bank",
+    "PCBX": "Parshwanath Co-operative Bank",
+    "PCCB": "Purulia Central Co-operative Bank",
+    "PCCX": "Panchkula Central Co-operative Bank",
+    "PCLX": "Pragathi Co-operative Bank, Bangalore",
+    "PCMX": "Panchsheel Mercantile Co-operative Bank",
+    "PCOX": "Peoples' Co-operative Bank",
+    "PCPX": "Pimpri Chinchwad Sahakari Bank Maryadit,pimpri",
+    "PCSX": "Pondicherry State Co-operative Bank",
+    "PCTX": "Pune Cantonment Sahakari Bank",
+    "PCUX": "Pochampally Co-operative Urban Bank",
+    "PDBX": "Purnea District Central Co-operative Bank",
+    "PDCX": "Pune District Central Co-operative Bank",
+    "PDNX": "Pandyan Grama Bank",
+    "PDSX": "Priyadarshani Nagari Sahakari Bank Jalna.",
+    "PDUX": "Pandharpur Urban Co-operative Bank",
+    "PGBX": "Pragathi Krishna Gramin Bank",
+    "PGCX": "Progressive Co-operative Bank",
+    "PGRX": "Progressive Urban Co-operative Bank",
+    "PGTX": "Pragati Co-operative Bank, Thara",
+    "PHIX": "Panihati Co-operative Bank",
+    "PITX": "Pithoragarh Zila Sahakari Bank",
+    "PJSB": "Gopinath Patil Parsik Janata Sahakari Bank",
+    "PKBX": "Panchkula Urban Co-operative Bank Lmited",
+    "PKDX": "Palakkad District Co-operative Bank",
+    "PKGB": "Karnataka Gramin Bank",
+    "PLOX": "Palamoor Co-operative Urban Bank",
+    "PLUX": "Palus Sahakari Bank",
+    "PMCB": "Punjab & Maharashtra Co-operative Bank",
+    "PMCX": "Pimpalgaon Merchants Co-operative Bank",
+    "PMEC": "Prime Co-operative Bank",
+    "PMNX": "Pragati Mahila Nagrik Sahakari Bank Bhilai",
+    "PNCX": "Panipat Urban Co-operative Bank",
+    "PNMX": "Pune Merchant's Co-operative Bank",
+    "PNPX": "Panipat Central Co-operative Bank",
+    "PNSX": "Poornawadi Nagrik Sahakari Bank",
+    "PPBX": "Pune People's Co-operative Bank",
+    "PPCX": "Pachora Peoples Co-operative Bank",
+    "PRCX": "Proddatur Co-operative Town Bank",
+    "PREX": "Prerana Co-operative Bank",
+    "PROX": "Progressive Mercantile Co-operative Bank",
+    "PRPX": "Paraspar Sahayak Co-operative Bank",
+    "PRSX": "Pravara Sahakari Bank",
+    "PRTH": "Prathama Bank",
+    "PRUX": "Priyadarshani Urban Co-operative Bank",
+    "PSBL": "Pavana Sahakari Bank",
+    "PSBX": "Pragati Sahakari Bank",
+    "PSCX": "Punjab State Co-operative Bank",
+    "PSIB": "Punjab & Sind Bank",
+    "PSRX": "Sri Potti Sriramulu Nellore Dccb",
+    "PSSX": "Prathamik Shikshak Sahakari Bank",
+    "PTCX": "Patiala Central Co-operative Bank",
+    "PTNX": "Patan Urban Co-operative Bank Patan",
+    "PTSX": "Patan Nagarik Sahakari Bank",
+    "PUBX": "People's Urban Co-operative Bank",
+    "PUCB": "Pandharpur Urban Co-operative Bank",
+    "PUCX": "Pusad Urban Co-operative Bank",
+    "PUDX": "Pudukottai District Central Co-operative Bank",
+    "PUGX": "Punjab Gramin Bank",
+    "PUNB": "Punjab National Bank",
+    "PUNX": "Pune Urban Co-operative Bank",
+    "PURX": "Purvanchal Gramin Bank",
+    "PUSD": "Pusad Urban Co-operative Bank",
+    "PUSX": "Purasawalkam Co-operative Bank",
+    "PUUX": "Puri Urban Co-operative Bank",
+    "PVAX": "Pavana Sahakari Bank",
+    "PVCX": "Purvanchal Co-operative Bank Gazipur",
+    "PVVX": "Padmashri Dr. Vitthalrao Vikhe Patil Co-operative Bank",
+    "PWUX": "Parwanoo Urban Co-operative Bank",
+    "PYCX": "Payyoli Co-operative Urban Bank",
+    "PYTM": "Paytm Payments Bank",
+    "QNBA": "Qatar National Bank",
+    "QNBX": "Qatar National Bank",
+    "QUCX": "Quilon Co-operative Urban Bank",
+    "RABO": "Rabobank International",
+    "RACX": "Rajkot Commercial Co-operative Bank",
+    "RAEX": "Railway Employees Co-operative Bank",
+    "RAJX": "Rajsamand Urban Co-operative Bank",
+    "RAKX": "Rajkot Peoples Co-operative Bank",
+    "RAMX": "Rajputana Mahila Urban Co-operative Bak",
+    "RANX": "Rander Peoples Co-operative Bank",
+    "RATN": "RBL Bank",
+    "RAUX": "Rajlaxmi Urban Co-operative Bank",
+    "RBBX": "Rajarambapu Sahakari Bank Peth",
+    "RBCX": "Reserve Bank Employees Co-operative Bank",
+    "RBIH": "IDRBT",
+    "RBIN": "Reserve Bank Of India",
+    "RBIP": "Reserve Bank of India",
+    "RBIS": "Reserve Bank of India",
+    "RCBX": "Raniganj Co-operative Bank",
+    "RCCX": "Ropar Central Co-operative Bank",
+    "RCDX": "Ramanathapuram District Central Co-operative Bank",
+    "RCMX": "Ravi Commercial Urban Co-operative Bank",
+    "RCUX": "Rajadhani Co-operative Urban Bank",
+    "RDCB": "Rajnandgaon District Central Co-operative Bank",
+    "RDCX": "Raigad District Central Co-operative Bank",
+    "RDNX": "Col Rd Nikam Sainik Sahakari Bank",
+    "REBX": "Rendal Sahakari Bank Rendal",
+    "RECX": "Railway Employees Co-operative Banking Society",
+    "REWX": "Rewari Central Co-operative Bank",
+    "RGCX": "Ramgarhia Co-operative Bank",
+    "RGSX": "Rajgurunagar Sahakari Bank",
+    "RHMX": "Raj Laxmi Mahila Urban Co-operative Bank Jaipur",
+    "RJCX": "Raiganj Central Co-operative Bank",
+    "RJJX": "Rajajinagar Co-operative Bank",
+    "RJNX": "Rajpipla Nagarik Sahakari Bank",
+    "RJTX": "Shri Rajkot District Co-operative Bank",
+    "RKCX": "Ranchi Khunti Central Co-operative Bank",
+    "RLUX": "Ranilaxmibai Urban Co-operative Bank",
+    "RMGB": "Rajasthan Marudhara Gramin Bank",
+    "RNBX": "Ranuj Nagrik Sahakari Bank",
+    "RNDX": "Ratnagiri District Central Co-operative Bank",
+    "RNGX": "Ranga Reddy Co-operative Urban Bank",
+    "RNSB": "Rajkot Nagarik Sahakari Bank",
+    "RNSX": "Rajdhani Nagar Sahakari Bank",
+    "ROCX": "Rohika Central Co-operative Bank Madhubani",
+    "ROHX": "Rohtak Central Co-operative Bank",
+    "RPUX": "Rajapur Urban Co-operative Bank",
+    "RRBP": "Rajarambapu Sahakari Bank",
+    "RRSX": "Ramrajya Sahakari Bank",
+    "RSBL": "Rajgurunagar Sahakari Bank",
+    "RSBX": "Raigad Sahakari Bank",
+    "RSCB": "Rajasthan State Co-operative Bank",
+    "RSSB": "Rajarshi Shahu Sahakari Bank",
+    "RSSX": "Rajarshi Shahu Sahakari Bank",
+    "RSUX": "Radhasoami Urban Co-operative Bank",
+    "RSVX": "Rajarshi Shahu Govt Servants Co-operative Bank Kolh",
+    "RUCX": "Rajasthan Urban Co-operative Bank",
+    "RUKX": "Shri Rukmini Sahakari Bank",
+    "RUMX": "Raipur Urban Mercantile Co-operative Bank",
+    "RZSX": "Rampur Zila Sahakari Bank",
+    "SABR": "SBER Bank",
+    "SABX": "Saraswati Sahakari Bank",
+    "SACB": "Shri Arihant Co-operative Bank",
+    "SACX": "Sarvodaya Co-operative Bank Mumbai",
+    "SADX": "Sabarkantha District Central Co-operative Bank",
+    "SAGX": "Saurashtra Gramin Bank",
+    "SAHE": "Sahebrao Deshmukh Co-operative Bank",
+    "SAHX": "Sadhana Sahakari Bank Pune",
+    "SAIX": "Sanmitra Sahakari Bank",
+    "SALX": "Salal Sarvodaya Nagarik Sahakari Bank",
+    "SAMX": "Samata Sahakari Bank",
+    "SANT": "Sant Sopankaka Sahakari Bank",
+    "SANX": "Saibaba Nagari Sahakari Bank",
+    "SAOX": "Shimoga Arecanut Mandy Merchants Co-operative Bank",
+    "SAPX": "Shrimant Malojiraje Sahakari Bank",
+    "SARX": "Sardarganj Mercantile Co-operative Bank",
+    "SASA": "Sahyadri Sahakari Bank",
+    "SASX": "S.A.S Nagar Central Co-operative Bank",
+    "SATX": "Adv. Shamraoji Shinde Satyashodhak Bank",
+    "SAUX": "Saidapet Co-operative Urban Bank",
+    "SAVX": "Sardar Vallabhbhai Sahakari Bank",
+    "SAWX": "Sawai Madhopur Kendriya Sahakari Bank",
+    "SBBJ": "State Bank of Bikaner and Jaipur",
+    "SBCR": "Shree Basaveshwar Urban Co-operative Bank",
+    "SBCX": "Sultan's Bathery Co-operative Urban Bank",
+    "SBHY": "State Bank of Hyderabad",
+    "SBIN": "State Bank of India",
+    "SBKX": "Sri Channabasavaswamy Souhardha Pattana Sahak Bank",
+    "SBLD": "Sonali Bank",
+    "SBLS": "Samarth Sahakari Bank",
+    "SBLX": "Shubhalakshmi Mahila Co-operative Bank",
+    "SBMX": "Sri Banashankari Mahila Co-operative Bank",
+    "SBMY": "State Bank of Mysore",
+    "SBNX": "Shree Bhavnagar Nagrik Sahakari Bank",
+    "SBPS": "Sri Basaveshwar Pattana Sahakari Bank",
+    "SBPX": "Sardar Bhiladwala Pardi People's Co-operative Bank",
+    "SBSX": "Shivajirao Bhosale Sahakari Bank",
+    "SBTR": "State Bank of Travancore",
+    "SBUJ": "Shri Bharat Urban Co-operative Bank Jaysingpur",
+    "SBUX": "Shree Balaji Urban Co-operative Bank",
+    "SCBL": "Standard Chartered Bank",
+    "SCBX": "Sirohi Central Co-operative Bank",
+    "SCCX": "Salem District Central Co-operative Bank",
+    "SCDX": "South Canara District Central Co-operative Bank",
+    "SCIX": "Social Co-operative Bank",
+    "SCNX": "Shri Chhani Nagrik Sahakari Bank",
+    "SCOB": "Samruddhi Co-operative Bank",
+    "SCOX": "Shimoga District Co-operative Central Bank",
+    "SCPX": "Sangrur Central Co-operative Bank",
+    "SCSX": "Sree Charan Souhardha Co-operative Bank",
+    "SCUX": "Sudha Co-operative Urban Bank",
+    "SDBX": "Samata Co-operative Development Bank",
+    "SDCB": "Surat District Co-operative Bank",
+    "SDCE": "Satara District Central Co-operative Bank",
+    "SDCX": "Sindhudurg District Central Co-operative Bank",
+    "SDHX": "Solapur Siddheshwar Sahakari Bank",
+    "SDSX": "Satara District Central Co-operative Bank",
+    "SDTC": "Shri D T Patil Co-operative Bank",
+    "SDTX": "Sambalpur District Co-operative Central Bank",
+    "SDUX": "Sri Sudha Co-operative Bank",
+    "SECB": "Sree Charan Souhardha Co-operative Bank",
+    "SEMX": "Secunderabad Mercantile Co-operative Urban Bank",
+    "SENX": "Sehore Nagrik Sahakari Bank Sehore",
+    "SEUX": "Sevalia Urban Co-operative Bank",
+    "SEWX": "Shri Mahila Sewa Sahakari Bank",
+    "SGCX": "Sangli District Central Co-operative Bank",
+    "SGDX": "Sundargarh District Central Co-operative Bank",
+    "SGLX": "Sangli Sahakari Bank",
+    "SGSX": "Sadguru Nagrik Sahakari Bank Maryadit",
+    "SGUX": "Sadguru Gahininath Urban Co-operative Bank Akluj",
+    "SHAX": "Shankar Nagari Sahakari Bank",
+    "SHBK": "Shinhan Bank",
+    "SHBX": "Shriram Urban Co-operative Bank",
+    "SHCX": "Shimla Urban Co-operative Bank",
+    "SHEX": "Shree Samarth Sahakari Bank Nashik",
+    "SHGX": "Shri Ganesh Sahakari Bank",
+    "SHIX": "Shivalik Small Finance Bank",
+    "SHKX": "Shikshak Sahakari Bank",
+    "SHMX": "Sanghamitra Co-operative Urban Bank",
+    "SHNX": "Shri Kanyaka Nagari Sahakari Bank",
+    "SHOX": "Sihor Mercantile Co-operative Bank",
+    "SHRX": "Shree Mahesh Co-operative Bank Nashik",
+    "SHSX": "Sharad Sahakari Bank",
+    "SHUB": "Shiggaon Urban Co-operative Bank",
+    "SHUX": "Shushruti Souharda Sahakara Bank Niyamita",
+    "SIBL": "South Indian Bank",
+    "SIBX": "Sikar Kendriya Sahakari Bank",
+    "SICX": "Sirsa Central Co-operative Bank",
+    "SIDB": "Small Industries Development Bank Of India",
+    "SIDC": "Sindhudurg District Central Co-operative Bank",
+    "SIDX": "Siddhi Co-operative Bank",
+    "SIGX": "Singhbhum District Central Co-operative Bank",
+    "SIHX": "Sihor Nagarik Sahakari Bank",
+    "SIKX": "Sikar Urban Co-operative Bank",
+    "SINX": "Shihori Nagarik Sahakari Bank",
+    "SIRX": "Sircilla Co-operative Urban Bank",
+    "SISX": "Sanmati Sahakari Bank",
+    "SITX": "Sitamarhi Central Co-operative Bank",
+    "SIWX": "Siwan Central Co-operative Bank",
+    "SJGX": "Sutlej Gramin Bank",
+    "SJSB": "Solapur Janata Sahakari Bank",
+    "SJSX": "Solapur Janata Sahakari Bank",
+    "SKCX": "Shrikrishna Co-operative Bank",
+    "SKKX": "Sikkim State Co-operative Bank",
+    "SKNB": "Shree Kadi Nagarik Sahakari Bank",
+    "SKNX": "Sankheda Nagarik Sahakari Bank",
+    "SKSB": "Shikshak Sahakari Bank",
+    "SKUX": "S S L S A Kurundwad Urban Bank",
+    "SLAX": "Subhadra Local Area Bank",
+    "SLCX": "Shree Laxmi Co-operative Bank",
+    "SMBC": "Sumitomo Mitsui Banking Corporation",
+    "SMBX": "Sampada Sahakari Bank",
+    "SMCB": "Shivalik Small Finance Bank",
+    "SMCX": "Sangamner Merchants Co-operative Bank",
+    "SMEX": "Sumerpur Mercantile Urban Co-operative Bank",
+    "SMMX": "Shree Mahalaxmi Mercantile Co-operative Bank",
+    "SMNB": "Smriti Nagrik Sahakari Bank",
+    "SMNX": "Shree Mahuva Nagrik Sahakari Bank",
+    "SMPX": "Shankarrao Mohite Patil Sahakri Bank",
+    "SMSX": "Soubhagya Mahila Souhardha Sahakari Bank",
+    "SMTX": "Sanmitra Urban Co-operative Bank",
+    "SMUX": "Shri Mahavir Urban Co-operative Bank",
+    "SMVC": "Sir M Visvesvaraya Co-operative Bank",
+    "SMWX": "Sree Subramanyeswara Co-operative Bank",
+    "SNAX": "Saraspur Nagarik Co-operative Bank",
+    "SNBK": "Saraspur Nagrik Co-operative Bank",
+    "SNBX": "Sarvodaya Nagrik Sahakari Bank",
+    "SNCX": "Sonepat Urban Co-operative Bank",
+    "SNDX": "Sind Co-operative Urban Bank",
+    "SNGX": "Sarangpur Co-operative Bank",
+    "SNKX": "Shramik Nagrik Sahakari Bank",
+    "SNLX": "Sarjeraodada Naik Shirala Sahakari Bank",
+    "SNPX": "Sonepat Central Co-operative Bank",
+    "SNSV": "Sarakari Naukarara Sahakari Bank Niyamt Vijayapura",
+    "SNSX": "Smriti Nagrik Sahakari Bank",
+    "SOBX": "Secunderabad Co-operative Urban Bank",
+    "SOGE": "Societe Generale",
+    "SOLX": "Solapur District Central Co-operative Bank",
+    "SONX": "Sonbhadra Nagar Sahakari Bank",
+    "SPBX": "Saptagiri Grameena Bank",
+    "SPCB": "Surat People's Co-operative Bank",
+    "SPCX": "Shirpur Peoples Co-operative Bank",
+    "SPNX": "Shree Panchganga Nagari Sahakari Bank",
+    "SPSX": "Sandur Pattana Souharda Sahakari Bank Niyamitha",
+    "SPTX": "Shripatraodada Sahakari Bank",
+    "SRCB": "Saraswat Co-operative Bank",
+    "SRCX": "Shree Bharat Co-operative Bank",
+    "SREX": "Shree Co-operative Bank",
+    "SRGX": "Sree Narayana Guru Co-operative Bank",
+    "SRHX": "Shree Dharati Co-operative Bank",
+    "SRSX": "Sharad Nagari Sahakari Bank",
+    "SSBL": "Satara Shakari Bank",
+    "SSBX": "Shivdaulat Sahakari Bank",
+    "SSDX": "Suco Souharda Sahakari Bank",
+    "SSHX": "Shree Sharada Sahakari Bank",
+    "SSKX": "Sadhana Sahakari Bank",
+    "SSLX": "Solapur Social Urban Co-operative Bank",
+    "SSNX": "Sreenidhi Souharda Sahakari Bank Niyamitha",
+    "SSOX": "Samarth Sahakari Bank",
+    "SSSX": "Sant Sopankaka Sahakari Bank",
+    "SSWX": "Sundarlal Sawaji Urban Co-operative Bank",
+    "STBP": "State Bank of Patiala",
+    "STCB": "SBM Bank",
+    "STCX": "State Transport Co-operative Bank",
+    "STDX": "Samastipur District Central Co-operative Bank",
+    "STRX": "Sterling Urban Co-operative Bank",
+    "SUBX": "Prathama UP Gramin Bank",
+    "SUCX": "Sangli Urban Co-operative Bank",
+    "SUDX": "Surendranagar District Co-operative Bank",
+    "SULX": "Sulaimani Co-operative Bank",
+    "SUMX": "Surat Mercantile Co-operative Bank",
+    "SUNB": "Surat National Co-operative Bank",
+    "SURX": "Siddheshwar Urban Co-operative Bank Maryadit Sillod",
+    "SURY": "Suryoday Small Finance Bank",
+    "SUSB": "Suco Souharda Sahakari Bank",
+    "SUSX": "Sirsi Urban Sahakari Bank",
+    "SUTB": "Sutex Co-operative Bank",
+    "SUVX": "Suvarnayug Sahakari Bank",
+    "SVAX": "Sri Vasavamba Co-operative Bank",
+    "SVBL": "Seva Vikas Co-operative Bank",
+    "SVCB": "SVC Co-operative Bank",
+    "SVCX": "Sarvodaya Commerical Co-operative Bank",
+    "SVGX": "Sivagangai District Central Co-operative Bank",
+    "SVMC": "Shri Vijay Mahantesh Co-operative Bank",
+    "SVNX": "Shivaji Nagari Sahakari Bank",
+    "SVOX": "Sarvodaya Sahakari Bank",
+    "SVRX": "Shree Vardhaman Sahakari Bank",
+    "SVSH": "Shree Veershaiv Co-operative Bank",
+    "SVSX": "Shri Vinayak Sahakari Bank",
+    "SWMX": "Sawai Madhopur Urban Co-operative Bank",
+    "SWSX": "Shree Warana Sahakari Bank",
+    "SXXX": "Sri Rama Co-operative Bank",
+    "SYNB": "Syndicate Bank",
+    "TACX": "Adinath Co-operative Bank",
+    "TADX": "Anantapur District Co-operative Central Bank",
+    "TAMX": "Anand Mercantile Co-operative Bank",
+    "TAPX": "Tapindu Urban Co-operative Bank",
+    "TASX": "Annasaheb Savant Co-operative Urban Bank Mahad",
+    "TAUB": "Ankola Urban Co-operative Bank",
+    "TBCX": "Bharath Co-operative Bank",
+    "TBDX": "Buldana District Central Co-operative Bank",
+    "TBHX": "Bhadran People's Co-operative Bank",
+    "TBMC": "Banaskantha Mercantile Co-operative Bank",
+    "TBMX": "Bapunagar Mahila Co-operative Bank",
+    "TBNS": "Becharaji Nagarik Sahakari Bank",
+    "TBPX": "Botad Peoples Co-operative Bank",
+    "TBSB": "Thane Bharat Sahakari Bank",
+    "TBSX": "Bihar State Co-operative Bank",
+    "TBTX": "Baroda Traders Co-operative Bank",
+    "TBUX": "Balusseri Co-operative Urban Bank",
+    "TCBX": "Co-operative Bank of Rajkot",
+    "TCCX": "Commercial Co-operative Bank",
+    "TCHX": "Town Co-operative Bank Hoskote",
+    "TCPX": "Tamilnadu Circle Postal Co-operative Bank",
+    "TCUB": "Trivandrum Co-operative Urban Bank",
+    "TCUX": "Tiruvallur Co-operative Urban Bank",
+    "TDBX": "District Co-operative Central Bank",
+    "TDCB": "Thane District Central Co-operative Bank",
+    "TDCX": "Thrissur District Co-operative Bank",
+    "TDIX": "District Co-operative Central Bank Kakinada",
+    "TDMX": "Dhanera Mercantile Co-operative Bank",
+    "TDPX": "Thodupuzha Urban Co-operative Bank",
+    "TDSX": "Nizamabad District Co-operative Central Bank",
+    "TECX": "Eenadu Co-operative Urban Bank",
+    "TEHX": "Tehri Garhwal Zila Sahakari Bank",
+    "TEMX": "Textile Manufacturers Co-operative Bank",
+    "TESX": "Textile Co-operative Bank of Surat",
+    "TETX": "Textile Traders Co-operative Bank",
+    "TFCX": "Fatehabad Central Co-operative Bank",
+    "TGBX": "Tripura Gramin Bank",
+    "TGCG": "Gokak Urban Co-operative Credit Bank",
+    "TGCX": "Tamluk-ghatal Central Co-operative Bank",
+    "TGDX": "Gondia District Central Co-operative Bank Gondia",
+    "TGMB": "Tumkur Grain Merchant's Co-operative Bank",
+    "TGNX": "Gandhinagar Nagrik Co-operative Bank",
+    "TGUX": "Gandhinagar Urban Co-operative Bank",
+    "THCX": "Hooghly Co-operative Credit Bank",
+    "THMX": "Halol Mercantile Co-operative Bank",
+    "THOX": "Thoothukudi District Central Co-operative Bank",
+    "THRS": "Thrissur District Co-operative Bank",
+    "THRX": "Raichur District Central Co-operative Bank",
+    "THWX": "Howrah District Central Co-operative Bank",
+    "TIDX": "Thiruvannamalai District Central Co-operative Bank",
+    "TIRX": "Tirunelveli District Central Co-operative Bank",
+    "TJAX": "Jaisalmer Central Co-operative Bank",
+    "TJBX": "Janata Co-operative Bank Sadalga",
+    "TJCX": "Thanjavur Central Co-operative Bank",
+    "TJDX": "Jalgaon District Central Co-operative Bank Jalgaon",
+    "TJMX": "Jaynagar Mozilpur Peoples Co-operative Bank",
+    "TJNX": "Jamnagar Mahila Sahakari Bank",
+    "TJSB": "TJSB Sahakari Bank",
+    "TKAX": "Karjan Nagrik Sahakari Bank",
+    "TKCX": "Kakatiya Co-operative Urban Bank",
+    "TKDX": "Kannur District Co-operative Bank",
+    "TKTX": "Kottakkal Co-operative Urban Bank",
+    "TKUX": "Karan Urban Co-operative Bank",
+    "TLPX": "Lunawada Peoples Co-operative Bank",
+    "TMAX": "Madanapalle Co-operative Town Bank",
+    "TMBL": "Tamilnad Mercantile Bank",
+    "TMBX": "Mangalore Catholic Co-operative Bank",
+    "TMCX": "Motihari Central Co-operative Bank",
+    "TMNX": "Mahanagar Co-operative Urban Bank",
+    "TMPX": "Midnapore Peoples Co-operative Bank",
+    "TMSB": "The Malad Sahakari Bank",
+    "TMSC": "Mysore Silk Cloth Merchants Co-operative Bank",
+    "TMSX": "Modasa Nagarik Sahakari Bank",
+    "TMTX": "Mangalore Co-operative Town Bank",
+    "TMUX": "Mahila Urban Co-operative Bank",
+    "TNBX": "Meghraj Nagarik Sahakari Bank",
+    "TNCB": "Nawanagar Co-operative Bank",
+    "TNCX": "National Central Co-operative Bank Bettiah",
+    "TNDC": "Thiruvananthapuram District Co-operative Bank",
+    "TNEX": "Nehrunagar Co-operative Bank",
+    "TNHX": "Nakodar Hindu Urban Co-operative Bank",
+    "TNIX": "Tamilnadu Industrial Co-operative Bank",
+    "TNKX": "Neela Krishna Co-operative Urban Bank",
+    "TNMX": "Nanded Merchants Co-operative Bank Nanded",
+    "TNSC": "Tamilnadu State Apex Co-operative Bank",
+    "TNUX": "Nandura Urban Co-operative Bank Nandura",
+    "TOCX": "Ottapalam Co-operative Urban Bank",
+    "TPCX": "Patliputra Central Co-operative Bank",
+    "TPDX": "Prakasam District Co-operative Central Bank",
+    "TPSC": "Punjab State Co-operative Bank",
+    "TPSX": "Tripura State Co-operative Bank",
+    "TPUX": "Urban Co-operative Bank No 1758 Perinthalmanna",
+    "TRAX": "Transport Co-operative Bank",
+    "TRDX": "Tiruchirapalli Dist. Cent Co-operative Bank",
+    "TSAB": "Telangana State Co-operative Apex Bank",
+    "TSAX": "Satana Merchants Co-operative Bank, Satana",
+    "TSBX": "Sasaram Bhabhua Central Co-operative Bank",
+    "TSCX": "Santragachi Co-operative Bank",
+    "TSDX": "District Co-operative Central Bank Srikakul",
+    "TSIX": "Shillong Co-operative Urban Bank",
+    "TSKX": "Aska Co-operative Central Bank",
+    "TSMX": "Sardargunj Mercantile Co-operative Bank Patan",
+    "TSNX": "Shoranur Co-operative Urban Bank",
+    "TSPX": "Sathamba Peoples Co-operative Bank",
+    "TSSB": "Satara Sahakari Bank",
+    "TSSX": "S.S.K Co-operative Bank",
+    "TSUX": "Saurashtra Co-operative Bank",
+    "TTBX": "Taliparamba Co-operative Urban Bank",
+    "TTCB": "Textile Traders Co-operative Bank",
+    "TTCX": "Tarn Taran Central Co-operative Bank",
+    "TTGX": "Tasgaon Urban Co-operative Banktasgaon",
+    "TTLX": "Textile Co-operative Bank",
+    "TTUX": "Tirur Urban Co-operative Bank",
+    "TUBX": "Trichur Urban Co-operative Bank",
+    "TUCL": "The Union Co-operative Bank Mahinagar",
+    "TUCX": "Tirupati Urban Co-operative Bank",
+    "TUDX": "Urban Co-operative Bank Dharangaon",
+    "TUMX": "Udaipur Mahila Urban Co-operative Bank",
+    "TUNX": "Union Co-operative Bank",
+    "TUOX": "Urban Co-operative Bank Saharanpur",
+    "TUPX": "Uttarsanda Peoples Co-operative Bank Uttarsanda",
+    "TURX": "Tura Urban Co-operative Bank",
+    "TVBX": "Vellala Co-operative Bank",
+    "TVDX": "District Co-operative Central Bank Vizianagaram",
+    "TVPX": "Veraval Peoples Co-operative Bank",
+    "TVUX": "Vita Urban Co-operative Bank",
+    "TYCX": "Shree Thyagaraja Co-operative Bank",
+    "UBBX": "Urban Co-operative Bank Basti",
+    "UBGX": "Uttar Bihar Gramin Bank",
+    "UBIN": "Union Bank of India",
+    "UCBA": "UCO Bank",
+    "UCBS": "Utkal Co-operative Banking Society",
+    "UCBX": "Urban Co-operative Bank Bareilly",
+    "UCCX": "Udaipur Central Co-operative Bank",
+    "UCDX": "Urban Co-operative Bank Dehradun",
+    "UCUX": "Universal Co-operative Urban Bank",
+    "UGBX": "Utkal Grameen Bank",
+    "UICX": "United India Co-operative Bank",
+    "UJSX": "Unjha Nagarik Sahakari Bank",
+    "UJVN": "Ujjivan Small Finance Bank",
+    "UKGX": "Uttarbanga Kshetriya Gramin Bank",
+    "UMAX": "Uma Co-operative Bank",
+    "UMCX": "Umreth Urban Co-operative Bank",
+    "UMSX": "Udaipur Mahila Samridhi Urban Co-operative Bank",
+    "UMUX": "Umiya Urban Co-operative Bank",
+    "UNAX": "Una Peoples Co-operative Bank",
+    "UNIX": "United Co-operative Bank",
+    "UNMX": "United Mercantile Co-operative Bank",
+    "UNSX": "Unava Nagrik Sahakari Bank",
+    "UOVB": "United Overseas Bank",
+    "UPCB": "Uttar Pradesh Co-operative Bank",
+    "UPCX": "Uttar Pradesh Co-operative Bank",
+    "UPNX": "United Puri Nimapara Central Bank",
+    "URBN": "Urban Co-operative Bank Perinthalmanna",
+    "URCX": "Urban Co-operative Bank Siddharthnagar",
+    "URDX": "Urban Co-operative Bank Budaun",
+    "URMX": "Urban Co-operative Bank Mainpuri",
+    "UROX": "Urban Co-operative Bank Rourkela",
+    "USFB": "Ujjivan Small Finance Bank",
+    "USNX": "Udham Singh Nagar District Co-operative Bank",
+    "UTBI": "United Bank of India",
+    "UTBX": "Uttarpara Co-operative Bank",
+    "UTCX": "Uttrakhand Co-operative Bank",
+    "UTGX": "Uttarakhand Gramin Bank",
+    "UTIB": "Axis Bank",
+    "UTKS": "Utkarsh Small Finance Bank",
+    "UTKX": "Uttarakhand State Co-operative Bank",
+    "UTZX": "Uttarkashi Zila Sahakari Bank",
+    "UUCB": "Udaipur Urban Co-operative Bank",
+    "UUCX": "Udaipur Urban Co-operative Bank",
+    "UXXX": "Udupi Co-operative Town Bank",
+    "VADX": "Valsad District Central Co-operative Bank",
+    "VAIX": "Vaishya Sahakari Bank Mumbai",
+    "VANX": "Vaishya Nagari Sahakari Bank",
+    "VARA": "Varachha Co-operative Bank",
+    "VASJ": "Vasai Janata Sahakari Bank",
+    "VASX": "Vyaparik Audhyogik Sahakari Bank",
+    "VAUX": "Valmiki Urban Co-operative Bank",
+    "VCAX": "Vaish Co-operative Adarsh Bank",
+    "VCBX": "Vishwas Co-operative Bank",
+    "VCCX": "Shri Veershaiv Co-operative Bank",
+    "VCNB": "Vaish Co-operative New Bank",
+    "VCOB": "The Vijay Co-operative Bank",
+    "VCOX": "Vita Merchants Co-operative Bank",
+    "VDCX": "Villupuram District Central Co-operative Bank",
+    "VDYX": "Vidyanand Co-operative Bank",
+    "VEDX": "Vellore District Central Co-operative Bank",
+    "VERX": "Veraval Mercantile Co-operative Bank",
+    "VGBX": "Jharkhand Rajya Gramin Bank",
+    "VHDX": "Vaishali District Central Co-operative Bank",
+    "VICX": "Vijay Commercial Co-operative Bank",
+    "VIDX": "Vidyasagar Central Co-operative Bank",
+    "VIJB": "Vijaya Bank",
+    "VIJX": "Vijay Co-operative Bank",
+    "VIKX": "Vikramaditya Nagrik Sahakari Bank",
+    "VIMX": "Viramgam Mercantile Co-operative Bank",
+    "VIRX": "Virudhunagar District Central Co-operative Bank",
+    "VISX": "Visakhapatnam Co-operative Bank",
+    "VJSX": "Vasai Janata Sahakari Bank",
+    "VKCX": "Vima Kamgar Co-operative Bank",
+    "VKSX": "Vikas Sahakari Bank Solapur",
+    "VMCX": "Vardhaman (mahila) Co-operative Urban Bank",
+    "VMMX": "Vaijapur Merchants Co-operative Bank",
+    "VMUX": "Vidarbha Merchants Urban Co-operative Bank",
+    "VNSX": "Vivekanand Nagrik Sahakari Bank Mydt",
+    "VRDX": "Vardhaman Co-operative Bank",
+    "VSBL": "Vishweshwar Sahakari Bank",
+    "VSBX": "Vidya Sahakari Bank",
+    "VSCX": "Vikas Souharda Co-operative Bank",
+    "VSSX": "Veerashaiva Sahakari Bank",
+    "VSVX": "Vaishali Shahari Vikas Co-operative Bank",
+    "VUCX": "Vaidyanath Urban Co-operative Bank",
+    "VVCX": "Vallabh Vidyanagar Commercial Bank",
+    "VVSB": "Vasai Vikas Sahakari Bank",
+    "VYAX": "Vyavsayak Sahakari Bank",
+    "VYPX": "Vyapari Sahakari Bank Maryadit Solapur",
+    "VYSA": "ING Vysya Bank",
+    "WACX": "Waghodia Urban Co-operative Bank",
+    "WAIX": "Wai Urban Co-operative Bank",
+    "WARX": "Warangal District Co-operative Central Bank",
+    "WAUX": "Wardhaman Urban Co-operative Bank Nagpur",
+    "WBSC": "West Bengal State Co-operative Bank",
+    "WCBX": "Women's Co-operative Bank",
+    "WDCX": "Wayanad District Co-operative Bank",
+    "WKGX": "Vidharbha Kokan Gramin Bank",
+    "WNBX": "Wana Nagirik Sahakari Bank",
+    "WPAC": "Westpac Banking Corporation",
+    "WRCX": "Warangal Urban Co-operative Bank",
+    "WUCX": "Washim Urban Co-operative Bank.",
+    "WZUX": "Wardha Zilla Parishad Emp Urban Co-operative Bank",
+    "XJKG": "J&K Grameen Bank",
+    "YADX": "Yavatmal District Central Co-operative Bank",
+    "YAVX": "Yavatmal Urban Co-operative Bank",
+    "YCBX": "Yashwant Co-operative Bank",
+    "YDCX": "Youth Development Co-operative Bank",
+    "YESB": "Yes Bank",
+    "YLNX": "Yadagiri Lakshmi Narsimha Swamy Co-operative Urban Bank",
+    "YMSX": "Yavatmal Mahila Sahakari Bank",
+    "YNCX": "Yamuna Nagar Central Co-operative Bank",
+    "YNSX": "Yeshwant Nagari Sahakari Bank",
+    "ZBBX": "Zila Sahakari Bank Bulandshahar",
+    "ZBSX": "Zila Sahakari Bank Mathura",
+    "ZCBL": "Zoroastrian Co-operative Bank",
+    "ZIBX": "Zila Sahakari Bank Bareilly",
+    "ZILX": "Zila Sahakari Bank Unnao",
+    "ZIMX": "Zila Sahakari Bank Mirzapur",
+    "ZISX": "Zila Sahakari Bank Lucknow",
+    "ZLLX": "Zila Sahakari Bank Lalitpur",
+    "ZMMX": "Zila Sahakari Bank Moradabad",
+    "ZRNB": "Rani Channamma Mahila Sahakari Bank",
+    "ZSAX": "Zila Sahakari Bank Mau",
+    "ZSBG": "Zila Sahakari Bank Gorakhpur",
+    "ZSBL": "Zila Sahakari Bank Ghaziabad",
+    "ZSBX": "Zila Sahakari Bank Bijnor",
+    "ZSGX": "Zila Sahakari Bank Garhwal Kotdwar",
+    "ZSHX": "Zila Sahakari Bank Haridwar",
+    "ZSJX": "Zila Sahakari Bank Jhansi",
+    "ZSKX": "Zila Sahakari Bank Kanpur",
+    "ZSLX": "Zila Sahakari Bank Lakhimpur Kheri",
+    "ZSMX": "Zila Sahakari Bank Meerut",
 }
