@@ -165,3 +165,8 @@ func ValidateBankCode(bankCodeInput string) bool {
 	_, ok := bankCodes[bankCodeInput]
 	return ok
 }
+
+func ValidateBankName(bankCodeInput string) bool {
+	_, ok := bankName[bankCodeInput]
+	return ok
+}

@@ -82,6 +82,9 @@ func TestValidateBankCode(t *testing.T) {
 			if got := ValidateBankCode(tt.args.bankCodeInput); got != tt.want {
 				t.Errorf("ValidateBankCode() = %v, want %v", got, tt.want)
 			}
+			if got := ValidateBankName(tt.args.bankCodeInput); got != tt.want {
+				t.Errorf("ValidateBankName() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }

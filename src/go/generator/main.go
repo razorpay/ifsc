@@ -1,42 +1,42 @@
 package main
 
 import ( // nosemgrep go.lang.security.audit.xss.import-text-template.import-text-template
+
+	"encoding/json"
 	"fmt"
-	"text/template"
 	"io"
 	"io/ioutil"
 	"log"
 	"os"
 	"sort"
-	"encoding/json"
+	"text/template"
 )
 
+func GetConstants() map[string]string {
 
-type bankConstants struct {
-	Value []string
-}
+	var (
+		data map[string]string
+		keys []string
+	)
 
-
-func GetConstants() (*bankConstants) {
 	jsonString, _ := ioutil.ReadFile("src/banknames.json")
-	var result bankConstants
-	var data map[string]interface{}
-	json.Unmarshal([]byte(jsonString), &data)
 
-	keys := []string{}
+	json.Unmarshal(jsonString, &data)
+
 	for k := range data {
 		keys = append(keys, k)
 	}
 
 	sort.Strings(keys)
 
-	for _,k := range keys {
-		result.Value = append(result.Value, k)
+	sortedData := make(map[string]string, len(keys)+1)
+	for _, k := range keys {
+		sortedData[k] = data[k]
 	}
-	return &result
+	return sortedData
 }
 
-func GenerateConstantsFile(outputFileWriter io.Writer, templateFilePath string, constantsArr *bankConstants) error {
+func GenerateConstantsFile(outputFileWriter io.Writer, templateFilePath string, constantsArr map[string]string) error {
 	fileBytes, err := ioutil.ReadFile(templateFilePath)
 	if err != nil {
 		return err
