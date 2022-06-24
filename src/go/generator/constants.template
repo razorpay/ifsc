@@ -11,3 +11,7 @@ const ({{ range  .Value }}
 var bankCodes = map[string]bool{ {{ range .Value }}
         "{{ . }}" : true, {{ end }}
 }
+
+var bankNames = map[string]string{ {{ range .Value }}
+        "{{ . }}" : "{{ . }}", {{ end }}
+}
