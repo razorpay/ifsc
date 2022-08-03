@@ -7,7 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.9][2.0.9]
 ### Changed
-- Important fixes on UPI enabled banks
+- Updates on list of UPI enabled banks
+```diff
++ABSB Abhinav Sahakari Bank
++AJKB Akola Janata Commercial Co-operative Bank
++APRR A.P. Raja Rajeswari Mahila Co-operative Urban Bank
++BDBX Bellary District Co-operative Central Bank
++BHCX Bhuj Commercial Co-operative Bank
++BMCB Bombay Mercantile Co-operative Bank
+-CGBX Chhattisgarh Rajya Gramin Bank
++CRGB Chhattisgarh Rajya Gramin Bank
++FINX Financial Co-operative Bank
++GUNX Guntur Co-operative Urban Bank
++JONX Jodhpur Nagrik Sahakari Bank
++MCUX Mahaveer Co-operative Urban Bank
+-MMMX Mahila Nagrik Sahakari Bank Maryadit Mahasamund
+-MSOX Manorama Co-operative Bank Solapur
++MSSX Merchants Souharda Sahakara Bank Niyamitha
++SWSX Shree Warana Sahakari Bank
++TKTX Kottakkal Co-operative Urban Bank
++UCBX Urban Co-operative Bank Bareilly
++VADX Valsad District Central Co-operative Bank
++VASJ Vasai Janata Sahakari Bank
+-VJSX Vasai Janata Sahakari Bank
++COMX Co-operative Bank of Mehsana
+```
 - Metadata Updates
 - Dependency Updates
 
@@ -24,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - NPCI does not publish bank type any more, so these are now maintained in this repository as patches
 - Minor bank name updates
 - Support for Go 1.18
+- New field added: `ISO3166` (`IN-XX`, as per the ISO-3166 specification).
 
 ## [2.0.6][2.0.6]
 ### Changed
