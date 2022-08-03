@@ -17,6 +17,7 @@ patch:
 banks:
   - AACX
   - ABHY
+  - ABSB
   - ACBX
   - ACUX
   - ADBX
@@ -35,6 +36,7 @@ banks:
   - APGB
   - APGV
   - APMC
+  - APRR
   - ARBL
   - ASBL
   - ASOX
@@ -47,9 +49,11 @@ banks:
   - BCBM
   - BCUB
   - BDBL
+  - BDBX
   - BDDX
   - BGGX
   - BHAX
+  - BHCX
   - BHUX
   - BKDX
   - BKID
@@ -99,6 +103,7 @@ banks:
   - FDRL
   - FGCB
   - FINO
+  - FINX
   - FSFB
   - GBCB
   - GCUX
@@ -134,14 +139,12 @@ banks:
   - JMCX
   - JMSX
   - JMYX
-  - JMYX
   - JNDX
   - JONX
   - JPCB
   - JSBL
   - JSBP
   - JSFB
-  - JSKX
   - JSKX
   - JUCX
   - JVCX
@@ -191,8 +194,6 @@ banks:
   - MRTX
   - MSBL
   - MSCI
-  - MSNU
-  - MSNU
   - MSSX
   - MUBL
   - MUSX
@@ -219,7 +220,6 @@ banks:
   - PDSX
   - PGBX
   - PJSB
-  - PLUX
   - PLUX
   - PMCX
   - PMEC
@@ -313,6 +313,7 @@ banks:
   - TUMX
   - UBIN
   - UCBA
+  - UCBX
   - UMSX
   - USFB
   - UTGX
@@ -320,6 +321,7 @@ banks:
   - UTKS
   - UUCX
   - UXXX
+  - VADX
   - VAIX
   - VANX
   - VARA
@@ -329,7 +331,7 @@ banks:
   - VGBX
   - VIKX
   - VISX
-  - VJSX
+  - VASJ
   - VSBL
   - VSCX
   - VSSX
@@ -339,3 +341,5 @@ banks:
   - YESB
   - YLNX
   - ZRNB
+  - MSNU
+  - COMX
