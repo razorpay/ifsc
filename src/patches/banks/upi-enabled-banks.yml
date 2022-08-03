@@ -77,6 +77,7 @@ banks:
   - CNRB
   - CNSX
   - COLX
+  - COMX
   - COSB
   - CRGB
   - CRSX
@@ -194,6 +195,7 @@ banks:
   - MRTX
   - MSBL
   - MSCI
+  - MSNU
   - MSSX
   - MUBL
   - MUSX
@@ -325,13 +327,13 @@ banks:
   - VAIX
   - VANX
   - VARA
+  - VASJ
   - VAUX
   - VCCX
   - VCOB
   - VGBX
   - VIKX
   - VISX
-  - VASJ
   - VSBL
   - VSCX
   - VSSX
@@ -341,5 +343,3 @@ banks:
   - YESB
   - YLNX
   - ZRNB
-  - MSNU
-  - COMX
