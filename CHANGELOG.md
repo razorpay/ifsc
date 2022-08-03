@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.9][2.0.9]
 ### Changed
+- Important fixes on UPI enabled banks
 - Metadata Updates
 - Dependency Updates
 
