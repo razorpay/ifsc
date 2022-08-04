@@ -76,7 +76,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "ABUX": {
     "code": "ABUX",
@@ -325,7 +326,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "S-UCB"
+    "type": "S-UCB",
+    "upi": true
   },
   "AJMX": {
     "code": "AJMX",
@@ -739,7 +741,8 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "APRX": {
     "code": "APRX",
@@ -1376,7 +1379,8 @@
     "ach_debit": false,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB"
+    "type": "DCCB",
+    "upi": true
   },
   "BDCX": {
     "code": "BDCX",
@@ -1566,7 +1570,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "BHDX": {
     "code": "BHDX",
@@ -1778,7 +1783,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": true,
-    "type": "S-UCB"
+    "type": "S-UCB",
+    "upi": true
   },
   "BMCX": {
     "code": "BMCX",
@@ -2293,8 +2299,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "RRB",
-    "upi": true
+    "type": "RRB"
   },
   "CGGX": {
     "code": "CGGX",
@@ -2633,7 +2638,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "CONX": {
     "code": "CONX",
@@ -3745,7 +3751,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "FMCX": {
     "code": "FMCX",
@@ -4169,7 +4176,8 @@
     "ach_debit": false,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "GUOX": {
     "code": "GUOX",
@@ -4213,7 +4221,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "HCBX": {
     "code": "HCBX",
@@ -4224,8 +4233,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "HCLX": {
     "code": "HCLX",
@@ -5536,7 +5544,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "JOWX": {
     "code": "JOWX",
@@ -7486,7 +7495,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "MDCB": {
     "code": "MDCB",
@@ -7844,7 +7854,8 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "MNBX": {
     "code": "MNBX",
@@ -8048,8 +8059,7 @@
     "ach_debit": true,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "MSSX": {
     "code": "MSSX",
@@ -8060,7 +8070,8 @@
     "ach_debit": false,
     "apbs": false,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "MUBL": {
     "code": "MUBL",
@@ -12398,7 +12409,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "SYNB": {
     "code": "SYNB",
@@ -13078,7 +13090,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "TKUX": {
     "code": "TKUX",
@@ -13793,7 +13806,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB"
+    "type": "O-UCB",
+    "upi": true
   },
   "UCCX": {
     "code": "UCCX",
@@ -14151,7 +14165,8 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "DCCB"
+    "type": "DCCB",
+    "upi": true
   },
   "VAIX": {
     "code": "VAIX",
@@ -14434,8 +14449,7 @@
     "ach_debit": true,
     "apbs": true,
     "nach_debit": false,
-    "type": "O-UCB",
-    "upi": true
+    "type": "O-UCB"
   },
   "VKCX": {
     "code": "VKCX",
