@@ -5,6 +5,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [2.0.10][2.0.10]
+
+### Changed
+- Metadata Updates
+
 ## [2.0.9][2.0.9]
 ### Changed
 - Updates on list of UPI enabled banks
@@ -288,7 +293,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Removes some data formats (YAML/Large JSON) for cleaner code. If you were using them, please let create an issue.
 
-[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.9...HEAD
+[unreleased]: https://github.com/razorpay/ifsc/compare/2.0.10...HEAD
+[2.0.10]: https://github.com/razorpay/ifsc/releases/tag/2.0.10
 [2.0.9]: https://github.com/razorpay/ifsc/releases/tag/2.0.9
 [2.0.8]: https://github.com/razorpay/ifsc/releases/tag/2.0.8
 [2.0.7]: https://github.com/razorpay/ifsc/releases/tag/2.0.7
