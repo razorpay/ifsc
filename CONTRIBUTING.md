@@ -28,7 +28,6 @@ file, here are a few guidelines:
 
 We use `prettier` for the javascript and `rubocop` for the Ruby code for style fixes
 
-
 ## Releases
 
 Releases are partially automated. To draft a new release, follow these steps:
@@ -42,7 +41,6 @@ Releases are partially automated. To draft a new release, follow these steps:
 7. Tag the merge commit (don't use a prefix, just `X.Y.Z`)
 8. Push the tag to GitHub.
 9. Create a release on GitHub for the tag. Use `release.md` from Step 4 as the template. Replace `TODO` as applicable for the release.
-
 
 ## Patches
 
