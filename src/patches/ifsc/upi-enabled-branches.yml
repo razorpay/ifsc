@@ -27,3 +27,5 @@ ifsc:
   # The Mandvi Nagrik Sahakari Bank Ltd.
   # https://mnsbank.in/branches/
   - GSCB0UTMNBL
+  # Navsarjan Industrial Co-operative Bank
+  - HDFC0CNICBL
