@@ -15,14 +15,14 @@ ifsc
     assert.equal('GURGAON',res['CITY'])
     assert.equal('GURGAON',res['DISTRICT'])
     assert.equal('KKBK0000261',res['IFSC'])
-    assert.equal('110485003',res['MICR'])
     assert.equal('HARYANA',res['STATE'])
     assert.equal('110485003',res['MICR'])
     assert.equal(true,res['UPI'])
     assert.equal(true,res['NEFT'])
     assert.equal(true,res['IMPS'])
     assert.equal(true,res['RTGS'])
-    assert.equal("",res['SWIFT'])
+    assert.equal(null,res['SWIFT'])
+    assert.equal("IN-HR",res['ISO3166'])
   })
   .catch(err => {
     console.error(err);
