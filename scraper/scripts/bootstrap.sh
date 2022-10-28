@@ -5,13 +5,13 @@ IFS=$'\n\t'
 mkdir --parents data/by-bank sheets
 USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
 
+# Downloads are disabled for now, since NPCI setup Bot protection at their end.
+# wget --no-verbose --timeout=30 "https://www.npci.org.in/what-we-do/nach/live-members/live-banks" --output-document=nach.html --user-agent="$USER_AGENT"
+# wget --no-verbose --timeout=30 "https://www.npci.org.in/what-we-do/upi/live-members" --output-document=upi.html --user-agent="$USER_AGENT"
+
 if [[ $@ == *'--no-download'* ]]; then
-  echo "Skipping download"
+  echo "Skipping sheet download"
 else
-  # List of sublet branches, and IMPS only branches
-  # Till NPCI fixes their certificate: https://twitter.com/captn3m0/status/1247806778529599496
-  wget --no-verbose --timeout=30 "https://www.npci.org.in/what-we-do/nach/live-members/live-banks" --output-document=nach.html --user-agent="$USER_AGENT"
-  wget --no-verbose --timeout=30 "https://www.npci.org.in/what-we-do/upi/live-members" --output-document=upi.html --user-agent="$USER_AGENT"
   wget --timestamping --no-verbose --directory-prefix=sheets/ "https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx" --user-agent="$USER_AGENT"
   wget --timestamping --no-verbose --directory-prefix=sheets/ "https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx" --user-agent="$USER_AGENT"
 
