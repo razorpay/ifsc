@@ -1,5 +1,3 @@
-require 'spreadsheet'
-require 'rubyXL'
 require 'csv'
 require 'yaml'
 require 'json'
