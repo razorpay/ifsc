@@ -1122,6 +1122,7 @@ const (
         SENX = "SENX"
         SEUX = "SEUX"
         SEWX = "SEWX"
+        SGBA = "SGBA"
         SGCX = "SGCX"
         SGDX = "SGDX"
         SGLX = "SGLX"
@@ -2630,6 +2631,7 @@ var bankCodes = map[string]bool{
         "SENX" : true, 
         "SEUX" : true, 
         "SEWX" : true, 
+        "SGBA" : true, 
         "SGCX" : true, 
         "SGDX" : true, 
         "SGLX" : true, 

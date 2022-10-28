@@ -1122,6 +1122,7 @@ module Razorpay
       SENX = :SENX
       SEUX = :SEUX
       SEWX = :SEWX
+      SGBA = :SGBA
       SGCX = :SGCX
       SGDX = :SGDX
       SGLX = :SGLX

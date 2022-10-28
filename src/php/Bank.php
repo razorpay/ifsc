@@ -1126,6 +1126,7 @@ class Bank
     const SENX = 'SENX';
     const SEUX = 'SEUX';
     const SEWX = 'SEWX';
+    const SGBA = 'SGBA';
     const SGCX = 'SGCX';
     const SGDX = 'SGDX';
     const SGLX = 'SGLX';
