@@ -29,3 +29,6 @@ ifsc:
   - GSCB0UTMNBL
   # Navsarjan Industrial Co-operative Bank
   - HDFC0CNICBL
+  # Shri Chatrapati Shivaji Maharaj Sahakari Bank
+  # IBKL0876SCS also belongs to the same bank, but we don't use it here
+  - UTIB0SCSMSB
