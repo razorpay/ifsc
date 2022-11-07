@@ -1,4 +1,4 @@
-module github.com/angel-one/ifsc/v2
+module github.com/angel-one/ifsc
 
 go 1.18
 
