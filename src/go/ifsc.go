@@ -148,7 +148,7 @@ func GetBankName(code string) (string, error) {
 		if Validate(code) {
 			bankCode, ok := sublet[code]
 			if !ok {
-				bankName, err := getCustomSubletName(code)
+				bankName, err := GetCustomSubletName(code)
 				if err != nil {
 					bankName, _ := bankNames[code[0:4]]
 					return bankName, nil
@@ -164,7 +164,8 @@ func GetBankName(code string) (string, error) {
 	}
 	return bankName, nil
 }
-func getCustomSubletName(code string) (string, error) {
+
+func GetCustomSubletName(code string) (string, error) {
 	for key, value := range customSublets {
 		if len(code) >= len(key) && code[0:len(key)] == key {
 			bankName, ok := bankNames[value]
@@ -174,7 +175,7 @@ func getCustomSubletName(code string) (string, error) {
 			return bankName, nil
 		}
 	}
-	return "", errors.New("custom sublet name not found")
+	return "", ErrCustomSubletNotFound
 }
 
 func ValidateBankCode(bankCodeInput string) bool {
