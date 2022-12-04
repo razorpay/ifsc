@@ -1,0 +1,15 @@
+---
+# Data is incorrect in RBI NEFT sheet
+# Points to Delhi instead of Udaipur for CITY
+# Correct data comes from the SBI Branch Locator
+# https://www.sbi.co.in/web/home/locator/branch
+action: patch
+patch:
+  CITY: UDAIPUR
+  DISTRICT: UDAIPUR
+  CENTRE: UDAIPUR
+  STATE: RAJASTHAN
+  ADDRESS: N.H. NO.8, BHUWANA UDAIPUR RAJASTHAN
+  CONTACT: 0294-2440778
+ifsc:
+  - SBIN0005742
