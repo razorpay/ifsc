@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    fuzzy_match (2.1.0)
     httparty (0.20.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -18,6 +19,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fuzzy_match (~> 2.1)
   httparty
   nokogiri
 

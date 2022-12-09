@@ -5,6 +5,7 @@ require 'set'
 require 'fileutils'
 require 'nokogiri'
 require 'open-uri'
+require 'fuzzy_match'
 require './methods_nach'
 require './utils'
 require './iso3166'
@@ -182,8 +183,47 @@ def parse_contact(std_code, phone)
   end
 end
 
+def get_unmatched_district(district, row, matcher)
+
+  if district.nil?
+    return district
+  end
+
+  # Here the CITY2 field contains the district which can be matched
+  if /\(?\s*U\s*\.?\s*P\s*\.?\s*\)?/.match?(district) || /\(?\s*U\s*\.?\s*T\s*\.?\s*\)?/.match?(district) || /\(?\s*M\s*\.?\s*P\s*\.?\s*\)?/.match?(district)
+    return matcher.find(sanitize(row['CITY2']))
+  elsif district === "KGF"
+    return "KOLAR"
+  elsif district === "M.P.K.V."
+    return "AHMADNAGAR"
+  elsif district === "PCMC"
+    return "PUNE"
+  elsif district === "GMC"
+    return "SRINAGAR"
+  elsif district === "110027"
+    return "NEW DELHI"
+  elsif district === "612 103"
+    return "THANJAVUR"
+  elsif district === "273005"
+    return "GORAKHPUR"
+  elsif district === "2 M"
+    return "GANGANAGAR"
+  elsif row["IFSC"] === "PUNB0667000"
+    return "HAMIRPUR"
+  elsif row["IFSC"] === "PUNB0667000"
+    return "SHIMLA"
+  else
+    return district
+  end
+end
+
 def parse_csv(files, banks, additional_attributes = {})
   data = {}
+
+  districts = JSON.parse(File.read('districts.json'))
+  matcher = FuzzyMatch.new(districts["districts"])
+
+  district_map = Hash.new()
 
   files.each do |file|
     row_index = 0
@@ -260,7 +300,29 @@ def parse_csv(files, banks, additional_attributes = {})
       # which have the flipped values for CITY1 and CITY2
       row['CITY'] = sanitize(row['CITY2'])
       row['CENTRE'] = sanitize(row['CITY1'])
-      row['DISTRICT'] = sanitize(row['CITY1'])
+      district = sanitize(row['CITY1'])
+      row['DISTRICT'] = district
+
+      if district_map.has_key?(district)
+        row['DISTRICT CLEANED'] = district_map[district]
+      else
+        matched = matcher.find(district)
+
+        # Single match
+        if matched.kind_of?(Array)
+          row['DISTRICT CLEANED'] = matched[0]
+          district_map[district] = matched[0]
+        # Return the most matched when there are multiple matches
+        elsif matched.kind_of?(String)
+          row['DISTRICT CLEANED'] = matched
+          district_map[district] = matched
+        # Edge cases where it is impossible to match using fuzzy logic
+        else
+          fixed_district = get_unmatched_district(district,row,matcher)
+          row['DISTRICT CLEANED'] = fixed_district
+          district_map[district] = fixed_district
+        end
+      end
 
       # Delete rows we don't want in output
       # Merged into CONTACRT
@@ -276,7 +338,7 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','ISO3166','NEFT','MICR','UPI','SWIFT']
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','DISTRICT CLEANED','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','ISO3166','NEFT','MICR','UPI','SWIFT']
     csv << keys
     data.each do |code, ifsc_data|
       sorted_data = []
