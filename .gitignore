@@ -1,5 +1,4 @@
 scraper/scripts/sheets/
-scraper/scripts/*.html
 scraper/scripts/nach.json
 scraper/scripts/excel_list.txt
 scraper/scripts/data/

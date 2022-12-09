@@ -2,7 +2,7 @@
 # Source: https://www.npci.org.in/what-we-do/upi/live-members
 # Remember to take a snapshot at https://web.archive.org/save
 # when you make changes to this file
-# Last Updated: Nov 2021 (Count = 259)
+# Last Updated: Oct 2022
 # Keep all confusing changes at the bottom of this file, to
 # keep this sorted
 #
@@ -37,8 +37,11 @@ banks:
   - APGV
   - APMC
   - APRR
+  - APRX
+  - APSX
   - ARBL
   - ASBL
+  - ASBX
   - ASOX
   - AUBL
   - BACB
@@ -60,6 +63,7 @@ banks:
   - BMCB
   - BNSB
   - BOFA
+  - BRCX
   - BRDX
   - BRGX
   - BRSX
@@ -85,6 +89,7 @@ banks:
   - CSBK
   - CSBX
   - CTBX
+  - CTUX
   - CZCX
   - DAUX
   - DBSS
@@ -106,6 +111,7 @@ banks:
   - FINO
   - FINX
   - FSFB
+  - GACX
   - GBCB
   - GCUX
   - GDCB
@@ -123,6 +129,7 @@ banks:
   - HUTX
   - IBKL
   - ICIC
+  - ICMX
   - IDFB
   - IDIB
   - INDB
@@ -143,10 +150,12 @@ banks:
   - JNDX
   - JONX
   - JPCB
+  - JSAX
   - JSBL
   - JSBP
   - JSFB
   - JSKX
+  - JTSC
   - JUCX
   - JVCX
   - JXXX
@@ -156,6 +165,7 @@ banks:
   - KBCX
   - KBSX
   - KCCB
+  - KDBX
   - KDIX
   - KHUX
   - KJSB
@@ -164,6 +174,7 @@ banks:
   - KLGB
   - KMCB
   - KMSX
+  - KOBX
   - KODX
   - KOLH
   - KOTX
@@ -209,6 +220,7 @@ banks:
   - NGKX
   - NKGS
   - NMCX
+  - NNCX
   - NNSB
   - NSPB
   - NTBL
@@ -265,6 +277,7 @@ banks:
   - SDUX
   - SECB
   - SEWX
+  - SHSX
   - SIBL
   - SMCB
   - SMCX
@@ -276,6 +289,7 @@ banks:
   - SPSX
   - SRCB
   - SRHX
+  - SSKX
   - SSWX
   - STCB
   - STRX
@@ -305,6 +319,7 @@ banks:
   - TKTX
   - TMBL
   - TMSX
+  - TNSC
   - TNUX
   - TSAB
   - TSSX
@@ -313,9 +328,11 @@ banks:
   - TUCX
   - TUDX
   - TUMX
+  - TUNX
   - UBIN
   - UCBA
   - UCBX
+  - UJSX
   - UMSX
   - USFB
   - UTGX
@@ -334,6 +351,7 @@ banks:
   - VGBX
   - VIKX
   - VISX
+  - VMCX
   - VSBL
   - VSCX
   - VSSX

@@ -350,7 +350,7 @@ code = Razorpay::IFSC::IFSC.new '...'; code.get
 package main
 
 import (
-	ifsc "github.com/razorpay/ifsc/src/go"
+	ifsc "github.com/razorpay/ifsc/v2/src/go"
 )
 
 // todo: change funcs not required to lower case.
