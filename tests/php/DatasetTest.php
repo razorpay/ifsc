@@ -18,6 +18,7 @@ class DatasetTest extends TestCase
         'BRANCH',
         'CENTRE',
         'DISTRICT',
+        'DISTRICT CLEANED',
         'STATE',
         'ADDRESS',
         'CONTACT',
