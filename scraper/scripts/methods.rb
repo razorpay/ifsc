@@ -34,6 +34,7 @@ def parse_imps(banks)
       'BRANCH' => "#{banknames[code]} IMPS",
       'CENTRE' => 'NA',
       'DISTRICT' => 'NA',
+      'DISTRICT CLEANED' => 'NA',
       'STATE' => 'MAHARASHTRA',
       'ADDRESS' => 'NA',
       'CONTACT' => nil,
