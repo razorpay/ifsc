@@ -16,6 +16,7 @@ ifsc:
     CITY: MUMBAI
     CONTACT: null
     DISTRICT: Mumbai
+    DISTRICT CLEANED: MUMBAI 
     IMPS: false
     MICR: null
     NEFT: false
