@@ -34,7 +34,6 @@ def parse_imps(banks)
       'BRANCH' => "#{banknames[code]} IMPS",
       'CENTRE' => 'NA',
       'DISTRICT' => 'NA',
-      'DISTRICT CLEANED' => 'NA',
       'STATE' => 'MAHARASHTRA',
       'ADDRESS' => 'NA',
       'CONTACT' => nil,
@@ -302,25 +301,24 @@ def parse_csv(files, banks, additional_attributes = {})
       row['CITY'] = sanitize(row['CITY2'])
       row['CENTRE'] = sanitize(row['CITY1'])
       district = sanitize(row['CITY1'])
-      row['DISTRICT'] = district
 
       if district_map.has_key?(district)
-        row['DISTRICT CLEANED'] = district_map[district]
+        row['DISTRICT'] = district_map[district]
       else
         matched = matcher.find(district)
 
         # Single match
         if matched.kind_of?(Array)
-          row['DISTRICT CLEANED'] = matched[0]
+          row['DISTRICT'] = matched[0]
           district_map[district] = matched[0]
         # Return the most matched when there are multiple matches
         elsif matched.kind_of?(String)
-          row['DISTRICT CLEANED'] = matched
+          row['DISTRICT'] = matched
           district_map[district] = matched
         # Edge cases where it is impossible to match using fuzzy logic
         else
           fixed_district = get_unmatched_district(district,row,matcher)
-          row['DISTRICT CLEANED'] = fixed_district
+          row['DISTRICT'] = fixed_district
           district_map[district] = fixed_district
         end
       end
@@ -339,7 +337,7 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','DISTRICT CLEANED','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','ISO3166','NEFT','MICR','UPI','SWIFT']
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','ISO3166','NEFT','MICR','UPI','SWIFT']
     csv << keys
     data.each do |code, ifsc_data|
       sorted_data = []
