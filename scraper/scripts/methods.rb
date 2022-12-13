@@ -9,6 +9,7 @@ require 'fuzzy_match'
 require './methods_nach'
 require './utils'
 require './iso3166'
+require './districts'
 
 HEADINGS_INSERT = %w[
   BANK
@@ -180,40 +181,6 @@ def parse_contact(std_code, phone)
     return contact
   else
     return nil
-  end
-end
-
-def get_unmatched_district(district, row, matcher)
-
-  if district.nil?
-    return district
-  end
-
-  # Here the CITY2 field contains the district which can be matched
-  if /\(?\s*U\s*\.?\s*P\s*\.?\s*\)?/.match?(district) || /\(?\s*U\s*\.?\s*T\s*\.?\s*\)?/.match?(district) || /\(?\s*M\s*\.?\s*P\s*\.?\s*\)?/.match?(district)
-    return matcher.find(sanitize(row['CITY2']))
-  elsif district === "KGF"
-    return "KOLAR"
-  elsif district === "M.P.K.V."
-    return "AHMADNAGAR"
-  elsif district === "PCMC"
-    return "PUNE"
-  elsif district === "GMC"
-    return "SRINAGAR"
-  elsif district === "110027"
-    return "NEW DELHI"
-  elsif district === "612 103"
-    return "THANJAVUR"
-  elsif district === "273005"
-    return "GORAKHPUR"
-  elsif district === "2 M"
-    return "GANGANAGAR"
-  elsif row["IFSC"] === "PUNB0667000"
-    return "HAMIRPUR"
-  elsif row["IFSC"] === "PUNB0667000"
-    return "SHIMLA"
-  else
-    return district
   end
 end
 
