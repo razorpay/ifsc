@@ -8,21 +8,21 @@ def get_unmatched_district(district, row, matcher)
     if /\(?\s*U\s*\.?\s*P\s*\.?\s*\)?/.match?(district) || /\(?\s*U\s*\.?\s*T\s*\.?\s*\)?/.match?(district) || /\(?\s*M\s*\.?\s*P\s*\.?\s*\)?/.match?(district)
       return matcher.find(sanitize(row['CITY2']))
     elsif district === "KGF"
-      return "KOLAR"
+      return "Kolar"
     elsif district === "M.P.K.V."
-      return "AHMADNAGAR"
+      return "Ahmadnagar"
     elsif district === "PCMC"
-      return "PUNE"
+      return "Pune"
     elsif district === "GMC"
-      return "SRINAGAR"
+      return "Srinagar"
     elsif district === "110027"
-      return "NEW DELHI"
+      return "New Delhi"
     elsif district === "612 103"
-      return "THANJAVUR"
+      return "Thanjavur"
     elsif district === "273005"
-      return "GORAKHPUR"
+      return "Gorakhpur"
     elsif district === "2 M"
-      return "GANGANAGAR"
+      return "Ganganagar"
     else
       return district
     end

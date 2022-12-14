@@ -277,12 +277,12 @@ def parse_csv(files, banks, additional_attributes = {})
 
         # Multiple matches
         if matched.kind_of?(Array)
-          matched_district = matched[0]
+          matched_district = title_case(matched[0])
           score = FuzzyMatch.score_class.new(district,matched_district).dices_coefficient_similar
 
         # Single match
         elsif matched.kind_of?(String)
-          matched_district = matched
+          matched_district = title_case(matched)
           score = FuzzyMatch.score_class.new(district,matched_district).dices_coefficient_similar
         # No match
         else
@@ -295,7 +295,7 @@ def parse_csv(files, banks, additional_attributes = {})
         else
           # When the dice's coefficent is not enough
           # Either manual patches are done if possible, or the existing value is added
-          fixed_district = get_unmatched_district(district,row,matcher)
+          fixed_district = title_case(get_unmatched_district(district,row,matcher))
           row['DISTRICT'] = fixed_district
           district_map[district] = fixed_district
         end 
