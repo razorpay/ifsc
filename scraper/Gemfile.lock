@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    amatch (0.4.1)
+      mize
+      tins (~> 1.0)
     fuzzy_match (2.1.0)
     httparty (0.20.0)
       mime-types (~> 3.0)
@@ -9,16 +12,27 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     mini_portile2 (2.8.0)
+    mize (0.4.1)
+      protocol (~> 2.0)
     multi_xml (0.6.0)
     nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    protocol (2.0.0)
+      ruby_parser (~> 3.0)
     racc (1.6.0)
+    ruby_parser (3.19.2)
+      sexp_processor (~> 4.16)
+    sexp_processor (4.16.1)
+    sync (0.5.0)
+    tins (1.32.1)
+      sync
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  amatch (~> 0.4.1)
   fuzzy_match (~> 2.1)
   httparty
   nokogiri

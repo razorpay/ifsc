@@ -272,22 +272,33 @@ def parse_csv(files, banks, additional_attributes = {})
       if district_map.has_key?(district)
         row['DISTRICT'] = district_map[district]
       else
+        # Fuzzy matching is done here
         matched = matcher.find(district)
 
-        # Single match
+        # Multiple matches
         if matched.kind_of?(Array)
-          row['DISTRICT'] = matched[0]
-          district_map[district] = matched[0]
-        # Return the most matched when there are multiple matches
+          matched_district = matched[0]
+          score = FuzzyMatch.score_class.new(district,matched_district).dices_coefficient_similar
+
+        # Single match
         elsif matched.kind_of?(String)
-          row['DISTRICT'] = matched
-          district_map[district] = matched
-        # Edge cases where it is impossible to match using fuzzy logic
+          matched_district = matched
+          score = FuzzyMatch.score_class.new(district,matched_district).dices_coefficient_similar
+        # No match
         else
+          score = 0
+        end
+
+        if score >= 0.5
+          row['DISTRICT'] = matched_district
+          district_map[district] = matched_district
+        else
+          # When the dice's coefficent is not enough
+          # Either manual patches are done if possible, or the existing value is added
           fixed_district = get_unmatched_district(district,row,matcher)
           row['DISTRICT'] = fixed_district
           district_map[district] = fixed_district
-        end
+        end 
       end
 
       # Delete rows we don't want in output
