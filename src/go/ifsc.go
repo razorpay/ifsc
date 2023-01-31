@@ -165,6 +165,32 @@ func GetBankName(code string) (string, error) {
 	return bankName, nil
 }
 
+func GetBankCodeFromIfsc(ifscCode string) (string, error) {
+	if !Validate(ifscCode) {
+		return "", ErrInvalidIFSCCode
+	}
+	bankCode, ok := sublet[ifscCode]
+	if ok {
+		return bankCode, nil
+	}
+
+	bankCode, err := GetCustomSubletCode(ifscCode)
+	if err == nil {
+		return bankCode, nil
+	}
+
+	return ifscCode[0:4], nil
+}
+
+func GetCustomSubletCode(code string) (string, error) {
+	for key, value := range customSublets {
+		if len(code) >= len(key) && code[0:len(key)] == key {
+			return value, nil
+		}
+	}
+	return "", ErrCustomSubletNotFound
+}
+
 func GetCustomSubletName(code string) (string, error) {
 	for key, value := range customSublets {
 		if len(code) >= len(key) && code[0:len(key)] == key {

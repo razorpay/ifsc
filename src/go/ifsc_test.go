@@ -117,3 +117,38 @@ func TestValidate(t *testing.T) {
 		})
 	}
 }
+
+func TestGetBankCodeFromIfsc(t *testing.T) {
+	tests := []struct {
+		name     string
+		ifscCode string
+		code     string
+	}{{
+		name:     "TestPrimaryBank",
+		ifscCode: "ICIC0003486",
+		code:     ICIC,
+	}, {
+		name:     "TestSubletBank",
+		ifscCode: "APBL0010001",
+		code:     CHDX,
+	}, {
+		name:     "TestCustomSubletBank",
+		ifscCode: "APBL0006052",
+		code:     KRDX,
+	}}
+
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			bankCode, err := GetBankCodeFromIfsc(test.ifscCode)
+			if err != nil {
+				t.Logf("[TestGetBankCodeFromIfsc] unexpected error: %+v", err)
+				t.FailNow()
+			}
+
+			if bankCode != test.code {
+				t.Logf("[TestGetBankCodeFromIfsc] bank code did not match. Expected: %s & Actual: %s", test.code, bankCode)
+				t.FailNow()
+			}
+		})
+	}
+}
