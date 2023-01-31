@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Install ssconvert
         run: sudo apt-get -y --no-install-recommends install gnumeric
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0
@@ -25,7 +25,7 @@ jobs:
         run: bash bootstrap.sh
         working-directory: scraper/scripts
       - name: Save artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: release-artifact
           path: |
@@ -36,14 +36,14 @@ jobs:
     name: Post-scraper tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: shivammathur/setup-php@v2
         with:
           php-version: 8.0
           tools: phpunit, composer
       - run: composer install --no-interaction
       - name: Download artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: release-artifact
           path: scraper/scripts/data
@@ -57,12 +57,12 @@ jobs:
     needs: scraper
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: shivammathur/setup-php@v2
         with:
           php-version: 8.0
       - name: Download artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: release-artifact
           path: scraper/scripts/data
@@ -70,7 +70,7 @@ jobs:
         run: bash release.sh
         working-directory: scraper/scripts
       - name: Save Release Notes
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: release-notes.md
           path: scraper/scripts/release.md

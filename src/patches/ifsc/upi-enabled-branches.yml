@@ -2,7 +2,7 @@
 # Source: https://www.npci.org.in/what-we-do/upi/live-members
 # Remember to take a snapshot at https://web.archive.org/save
 # when you make changes to this file
-# Last Updated: Mar 2022
+# Last Updated: Oct 2022
 # This file only contains "banks with custom sublets" who do not have
 # their own IFSC code. This is quite rare, but happens ocassionally.
 # In one specific case, MDCB0680265 support UPI, but the parent bank
@@ -27,3 +27,8 @@ ifsc:
   # The Mandvi Nagrik Sahakari Bank Ltd.
   # https://mnsbank.in/branches/
   - GSCB0UTMNBL
+  # Navsarjan Industrial Co-operative Bank
+  - HDFC0CNICBL
+  # Shri Chatrapati Shivaji Maharaj Sahakari Bank
+  # IBKL0876SCS also belongs to the same bank, but we don't use it here
+  - UTIB0SCSMSB

@@ -9,17 +9,10 @@ GEM
     mime-types-data (3.2022.0105)
     mini_portile2 (2.8.0)
     multi_xml (0.6.0)
-    nokogiri (1.13.8)
+    nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     racc (1.6.0)
-    ruby-ole (1.2.12.2)
-    rubyXL (3.4.25)
-      nokogiri (>= 1.10.8)
-      rubyzip (>= 1.3.0)
-    rubyzip (2.3.2)
-    spreadsheet (1.3.0)
-      ruby-ole
 
 PLATFORMS
   ruby
@@ -27,8 +20,6 @@ PLATFORMS
 DEPENDENCIES
   httparty
   nokogiri
-  rubyXL
-  spreadsheet
 
 BUNDLED WITH
-   2.3.18
+   2.3.23

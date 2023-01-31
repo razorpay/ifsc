@@ -1,5 +1,3 @@
-require 'spreadsheet'
-require 'rubyXL'
 require 'csv'
 require 'yaml'
 require 'json'
@@ -192,6 +190,11 @@ def parse_csv(files, banks, additional_attributes = {})
     headings = []
     log "Parsing #{file}"
     headers = CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
+      # We have found the last row in the sheet, remaining rows are empty
+      if row[0].nil? and row[1].nil? and row[2].nil?
+        break
+      end
+
       row = row.to_h
 
       # BDBL0001094 RTGS sheet, so it gets overridden with data from NEFT sheet
