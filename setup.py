@@ -5,27 +5,28 @@ import pathlib
 from setuptools import setup, find_packages
 
 
-here = pathlib.Path(__file__).parent.resolve()
+BASE_DIR = pathlib.Path(__file__).parent.resolve()
 
-long_description = (here / "README.md").read_text(encoding="utf-8")
+long_description = (BASE_DIR / "README.md").read_text(encoding="utf-8")
 
 
 try:
-    json_files = glob.glob(str(here / "src" / "*.json"))
-    os.makedirs(str(here / "src" / "py_ifsc" / "data"), exist_ok=True)
+    json_files = glob.glob(str(BASE_DIR / "src" / "*.json"))
+    os.makedirs(str(BASE_DIR / "src" / "python" / "data"), exist_ok=True)
     for json_file in json_files:
         os.symlink(
             json_file,
-            str(here / "src" / "py_ifsc" / "data" / os.path.basename(json_file)),
+            str(BASE_DIR / "src" / "python" / "data" / os.path.basename(json_file)),
         )
     setup(
-        name="py_ifsc",
+        name="ifsc",
         version="0.0.1",
         include_package_data=True,
-        package_data={"py_ifsc.data": ["*.json"]},
+        package_dir={"ifsc": "src/python"},
+        package_data={"ifsc.data": ["*.json"]},
         zip_safe=False,
     )
 except Exception as e:
     print(e)
 finally:
-    shutil.rmtree(str(here / "src" / "py_ifsc" / "data"))
+    shutil.rmtree(str(BASE_DIR / "src" / "python" / "data"))

@@ -1,21 +1,19 @@
 import json
 import requests
-from importlib.resources import path
+from importlib.resources import files
 
+pkg_path = files("ifsc.data")
 
-import pdb
-
-pdb.set_trace()
-with open(path("py_ifsc", "IFSC.json")) as f:
+with open(pkg_path.joinpath("IFSC.json")) as f:
     ifscs = json.load(f)
 
-with open(path("py_ifsc", "banknames.json")) as f:
+with open(pkg_path.joinpath("banknames.json")) as f:
     bank_names = json.load(f)
 
-with open(path("py_ifsc", "sublet.json")) as f:
+with open(pkg_path.joinpath("sublet.json")) as f:
     sublets = json.load(f)
 
-with open(path("py_ifsc", "custom-sublets.json")) as f:
+with open(pkg_path.joinpath("custom-sublets.json")) as f:
     custom_sublets = json.load(f)
 
 

@@ -1,5 +1,5 @@
 [project]
-name = "py-ifsc"
+name = "ifsc"
 version = "0.0.1"
 authors = [
   { name="sreevardhanreddi", email="sreevardhanreddi@gmail.com" },
