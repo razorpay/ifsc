@@ -50,22 +50,17 @@ class IFSC:
             raise ValueError("Invalid IFSC code")
 
         data = {}
-        try:
-            res = requests.get(url)
-            if res.status_code == 200:
-                data = res.json()
-            elif res.status_code == 404:
-                raise ValueError("Invalid IFSC code")
-            else:
-                raise ValueError(
-                    "IFSC API returned an invalid response for {}".format(code)
-                )
-        except Exception as e:
+        res = requests.get(url)
+        if res.status_code == 200:
+            data = res.json()
+        elif res.status_code == 404:
             raise ValueError("Invalid IFSC code")
+        else:
+            raise ValueError("IFSC API returned an invalid response")
 
         return data
 
-    def get_bank_name(self, code: str) -> str:
+    def get_bank_name(self, code):
         if code in self.bank_names:
             return self.bank_names[code]
 
@@ -78,8 +73,8 @@ class IFSC:
         else:
             raise ValueError("Invalid IFSC code")
 
-    def get_custom_sublet(self, code: str) -> str:
-        for key, value in self.custom_sublets:
+    def get_custom_sublet(self, code):
+        for key, value in self.custom_sublets.items():
             if len(code) >= len(key) and code[: len(key)] == key:
                 if value in self.bank_names:
                     return self.bank_names[value]
@@ -88,8 +83,5 @@ class IFSC:
 
         raise ValueError("Invalid IFSC code")
 
-
-if __name__ == "__main__":
-    ifsc = IFSC()
-    print(ifsc.get_bank_name("SBIN0000001"))
-    print(ifsc.get_details("SBIN0000001"))
+    def validate_bank_code(self, code):
+        return code in self.bank_names
