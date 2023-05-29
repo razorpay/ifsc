@@ -2,7 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-mkdir --parents data/by-bank sheets
+mkdir -p data/by-bank sheets
 USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
 
 # Downloads are disabled for now, since NPCI setup Bot protection at their end.
