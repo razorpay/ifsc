@@ -207,6 +207,10 @@ def parse_csv(files, banks, additional_attributes = {})
         fix_row_alignment!(row)
       end
 
+      if row['ADDRESS'] == "" or row['ADDRESS'].nil?
+        row['ADDRESS'] = "Star house, 3rd floor,30,Errabalu Street, Chennai 600001"
+      end
+
       # The address somehow contains a pipe-delimited value for other columns
       if row['ADDRESS'].count('|') > 2
         fix_pipe_delimited_address!(row)
