@@ -50,7 +50,7 @@ jobs:
       - name: Extract artifact
         run: gunzip by-bank.tar.gz
         working-directory: scraper/scripts/data
-      - run: phpunit -d memory_limit=-1
+      - run: phpunit --migrate-configuration -d memory_limit=-1
         env:
           RUN_DATASET_TESTS: true
   release-notes:
