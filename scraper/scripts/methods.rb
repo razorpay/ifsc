@@ -208,12 +208,14 @@ def parse_csv(files, banks, additional_attributes = {})
       end
 
       if row['ADDRESS'] == "" or row['ADDRESS'].nil?
-        row['ADDRESS'] = "Star house, 3rd floor,30,Errabalu Street, Chennai 600001"
+        row['ADDRESS'] = nil
       end
 
       # The address somehow contains a pipe-delimited value for other columns
-      if row['ADDRESS'].count('|') > 2
-        fix_pipe_delimited_address!(row)
+      if row['ADDRESS'] != nil
+        if row['ADDRESS'].count('|') > 2
+          fix_pipe_delimited_address!(row)
+        end
       end
 
       micr_match = row['MICR'].to_s.strip.match('\d{9}')
