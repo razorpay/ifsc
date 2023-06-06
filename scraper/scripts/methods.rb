@@ -212,10 +212,8 @@ def parse_csv(files, banks, additional_attributes = {})
       end
 
       # The address somehow contains a pipe-delimited value for other columns
-      if row['ADDRESS'] != nil
-        if row['ADDRESS'].count('|') > 2
-          fix_pipe_delimited_address!(row)
-        end
+      if row['ADDRESS'] != nil and row['ADDRESS'].count('|') > 2
+        fix_pipe_delimited_address!(row)
       end
 
       micr_match = row['MICR'].to_s.strip.match('\d{9}')
