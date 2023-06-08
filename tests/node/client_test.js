@@ -4,10 +4,10 @@ const assert = require('assert');
 const expected = require('../fixture/HDFC0CAGSBK')
 
 // The nodejs tests do not mock the connect call, so this might break after a new release.
-/*ifsc
+ifsc
   .fetchDetails('KKBK0000261')
   .then(function(res) {
-    assert.equal('JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,',res['ADDRESS'])
+    assert.equal('KOTAK MAHINDRA BANK LTD. UNIT NO. 8&9, SEWA CORPORATE PARK, MG ROAD, REVENUE STATE OF SARHAUL TEHSIL, DISTT,- GURGAON- 122001',res['ADDRESS'])
     assert.equal('Kotak Mahindra Bank',res['BANK'])
     assert.equal('KKBK',res['BANKCODE'])
     assert.equal('GURGAON',res['BRANCH'])
@@ -36,4 +36,4 @@ ifsc.fetchDetails('HDFC0CAGSBK')
   .catch(err => {
     console.error(err);
     process.exit(1);
-  })*/
+  })

@@ -170,7 +170,7 @@ $res = $client->lookupIFSC('KKBK0000261');
 
 echo $res->bank; // 'KOTAK MAHINDRA BANK LIMITED'
 echo $res->branch; // 'GURGAON'
-echo $res->address; // 'JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,'
+echo $res->address; // 'KOTAK MAHINDRA BANK LTD. UNIT NO. 8&9, SEWA CORPORATE PARK, MG ROAD, REVENUE STATE OF SARHAUL TEHSIL, DISTT,- GURGAON- 122001'
 echo $res->contact; // '4131000'
 echo $res->city; // 'GURGAON'
 echo $res->district; // 'GURGAON'
@@ -287,7 +287,7 @@ code.bank
 code.branch
 # => "GURGAON"
 code.address
-# => "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,"
+# => "KOTAK MAHINDRA BANK LTD. UNIT NO. 8&9, SEWA CORPORATE PARK, MG ROAD, REVENUE STATE OF SARHAUL TEHSIL, DISTT,- GURGAON- 122001"
 code.contact
 # => "4131000"
 code.city
@@ -396,7 +396,7 @@ func main() {
 	(*ifsc.IFSCResponse)({
 	 Bank	  :  "Kotak Mahindra Bank",
 	 Branch	  :  "GURGAON",
-	 Address  :  "JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,",
+	 Address  :  "KOTAK MAHINDRA BANK LTD. UNIT NO. 8&9, SEWA CORPORATE PARK, MG ROAD, REVENUE STATE OF SARHAUL TEHSIL, DISTT,- GURGAON- 122001",
 	 Contact  :  "4131000",
 	 City	  :  "GURGAON",
 	 District :  "GURGAON",
