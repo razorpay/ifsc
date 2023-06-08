@@ -207,10 +207,6 @@ def parse_csv(files, banks, additional_attributes = {})
         fix_row_alignment!(row)
       end
 
-      if row['ADDRESS'] == "" or row['ADDRESS'].nil?
-        row['ADDRESS'] = nil
-      end
-
       # The address somehow contains a pipe-delimited value for other columns
       if row['ADDRESS'] != nil and row['ADDRESS'].count('|') > 2
         fix_pipe_delimited_address!(row)
