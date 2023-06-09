@@ -10,7 +10,7 @@
     },
     "response": {
       "binary": false,
-      "body": "{\"BRANCH\":\"GURGAON\",\"ADDRESS\":\"JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,\",\"CONTACT\":\"4131000\",\"CITY\":\"GURGAON\",\"DISTRICT\":\"GURGAON\",\"STATE\":\"HARYANA\",\"RTGS\":true,\"BANK\":\"Kotak Mahindra Bank\",\"BANKCODE\":\"KKBK\",\"IFSC\":\"KKBK0000261\"}",
+      "body": "{\"BRANCH\":\"GURGAON\",\"ADDRESS\":\"KOTAK MAHINDRA BANK LTD. UNIT NO. 8&9, SEWA CORPORATE PARK, MG ROAD, REVENUE STATE OF SARHAUL TEHSIL, DISTT,- GURGAON- 122001\",\"CONTACT\":\"4131000\",\"CITY\":\"GURGAON\",\"DISTRICT\":\"GURGAON\",\"STATE\":\"HARYANA\",\"RTGS\":true,\"BANK\":\"Kotak Mahindra Bank\",\"BANKCODE\":\"KKBK\",\"IFSC\":\"KKBK0000261\"}",
       "headers": {
         "Access-Control-Allow-Origin": "*",
         "Content-Security-Policy": "default-src 'self' razorpay.com; font-src 'self' fonts.gstatic.com; img-src cdn.razorpay.com razorpay.com; object-src 'none'; script-src 'none'; style-src 'self' 'unsafe-inline' fonts.googleapis.com",

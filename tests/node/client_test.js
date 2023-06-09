@@ -7,7 +7,7 @@ const expected = require('../fixture/HDFC0CAGSBK')
 ifsc
   .fetchDetails('KKBK0000261')
   .then(function(res) {
-    assert.equal('JMD REGENT SQUARE,MEHRAULI GURGAON ROAD,OPPOSITE BRISTOL HOTEL,',res['ADDRESS'])
+    assert.equal('KOTAK MAHINDRA BANK LTD. UNIT NO. 8&9, SEWA CORPORATE PARK, MG ROAD, REVENUE STATE OF SARHAUL TEHSIL, DISTT,- GURGAON- 122001',res['ADDRESS'])
     assert.equal('Kotak Mahindra Bank',res['BANK'])
     assert.equal('KKBK',res['BANKCODE'])
     assert.equal('GURGAON',res['BRANCH'])

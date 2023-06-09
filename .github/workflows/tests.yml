@@ -28,7 +28,7 @@ jobs:
           php-version: ${{matrix.php}}
           tools: phpunit, composer
       - run: composer install --no-interaction
-      - run: phpunit -d memory_limit=-1
+      - run: phpunit --migrate-configuration -d memory_limit=-1
   ruby:
     strategy:
       matrix:
