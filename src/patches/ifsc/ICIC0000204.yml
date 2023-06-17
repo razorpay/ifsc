@@ -1,0 +1,10 @@
+---
+# Data is incorrect in RBI NEFT sheet
+# There is a typo with the branch name with the RBI sheet
+# Correct data comes from the ICICI Branch Locator
+# https://www.icicibank.com/branch/karnataka/bangalore/icic0000204
+action: patch
+patch:
+  BRANCH: BANGALORE R T NAGAR
+ifsc:
+  - ICIC0000204
