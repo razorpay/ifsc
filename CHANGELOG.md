@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [2.0.15][2.0.15]
+### Changed
+- Metadata updates
+
 ## [2.0.14][2.0.14]
 ### Changed
 - Metadata updates
