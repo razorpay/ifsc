@@ -29,6 +29,6 @@ jobs:
         env:
           # Make sure to update the secret name
           # if yours isn't named RUBYGEMS_AUTH_TOKEN
-          GEM_HOST_API_KEY: "${{secrets.GEM_ACCESS_TOKEN}}"
+          GEM_HOST_API_KEY: "${{secrets.IFSC_GEM_ACCESS_TOKEN}}"
         
       

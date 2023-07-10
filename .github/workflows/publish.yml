@@ -1,9 +1,8 @@
 name: "publish"
 
 on:
-    push:
-      branches:
-        - release/2.0.15
+    release:
+      types: created
 
 jobs:
     release:
