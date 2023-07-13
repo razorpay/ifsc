@@ -1,0 +1,34 @@
+name: "Ruby Gem Publish"
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout code if release was created
+      - uses: actions/checkout@v3.5.3
+      # Setup ruby if a release was created
+      - uses: ruby/setup-ruby@v1.152.0
+        with:
+          # Not needed with a .ruby-version file
+          ruby-version: 2.7
+          # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
+      # Publish
+      - name: publish gem
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
+          gem build *.gemspec
+          gem push *.gem
+        env:
+          # Make sure to update the secret name
+          # if yours isn't named RUBYGEMS_AUTH_TOKEN
+          GEM_HOST_API_KEY: "${{secrets.IFSC_GEM_ACCESS_TOKEN}}"
+          
