@@ -8,6 +8,6 @@ const ({{ range  .Value }}
         {{ . }} = "{{ . }}"{{ end }}
 )
 
-var bankCodes = map[string]bool{ {{ range .Value }}
-        "{{ . }}" : true, {{ end }}
+var bankCodes = map[string]struct{}{ {{ range .Value }}
+        "{{ . }}" : {}, {{ end }}
 }
