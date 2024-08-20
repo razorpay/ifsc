@@ -205,6 +205,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Name for STCB changed from "State Bank of Mauritius" to "SBM Bank"
 - Temporary code added for "Sri Rama Co-operative Bank": `SXXX`
 - Support for ICLL (Indian Clearing Corporation) added. `ICLL0000001` is the branch.
+- Support for XNSE (NSE Clearing Limited) added. `XNSE0000001` is the branch.
 
 ## [1.5.9][1.5.9]
 ### Added
