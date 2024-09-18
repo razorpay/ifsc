@@ -335,7 +335,7 @@
 		"STBP0001512": false
 	},
 	"testNewSBICodes": {
-		"SBIN0020001": true,
+		"SBIN0020001": false,
 		"SBIN0020004": true,
 		"SBIN0020066": true,
 		"SBIN0020072": true,
