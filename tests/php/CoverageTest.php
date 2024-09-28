@@ -4,6 +4,7 @@ namespace Razorpay\IFSC\Tests;
 use Razorpay\IFSC\IFSC;
 use Razorpay\IFSC\Bank;
 use Symfony\Component\Yaml\Yaml;
+use Razorpay\IFSC\Client;
 
 /**
  * Checks coverage of all Bank Codes and Names and other lists
@@ -219,5 +220,44 @@ class CoverageTest extends TestCase
 
         // BANKOFBAROD is an invalid code, so it is marked as an exception
         $this->assertEquals([], $failures, "IFSC codes present in patches, but fails validation");
+    }
+
+    public function testXNSE()
+    {
+        $failures = [];
+
+        IFSC::validate('XNSE0000001');
+        IFSC::validateBankCode('XNSE');
+        IFSC::getBankName('XNSE');
+        IFSC::getBankName(Bank::XNSE);
+        Bank::getDetails(Bank::XNSE);
+        Bank::getDetails('XNSE');
+
+        $client = new Client();
+        $res = $client->lookupIFSC('XNSE0000001');
+
+        echo $res->bank;
+        echo $res->branch;
+        echo $res->address;
+        echo $res->contact;
+        echo $res->city;
+        echo $res->district;
+        echo $res->state;
+        echo $res->centre;
+        echo $res->getBankCode();
+        echo $res->getBankName();
+        echo $res->micr;
+
+        $this->assertEquals([], $failures, "IFSC codes present in fails validation");
+// Boolean fields: $res->upi, $res->rtgs, $res->neft, res->imps
+
+// You will get a SWIFT code where possible:
+
+        //echo $client->lookupIFSC('https://ifsc.razorpay.com/ICLL0000001')->swift;
+
+// lookupIFSC may throw `Razorpay\IFSC\Exception\ServerError`
+// in case of server not responding in time
+// or Razorpay\IFSC\Exception\InvalidCode in case
+// the IFSC code is invalid
     }
 }

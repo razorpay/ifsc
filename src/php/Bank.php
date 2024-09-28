@@ -465,6 +465,7 @@ class Bank
     const ICHX = 'ICHX';
     const ICIC = 'ICIC';
     const ICLL = 'ICLL';
+    const XNSE = 'XNSE';
     const ICMX = 'ICMX';
     const IDFB = 'IDFB';
     const IDIB = 'IDIB';

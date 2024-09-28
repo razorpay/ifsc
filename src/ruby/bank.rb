@@ -461,6 +461,7 @@ module Razorpay
       ICHX = :ICHX
       ICIC = :ICIC
       ICLL = :ICLL
+      XNSE = :XNSE
       ICMX = :ICMX
       IDFB = :IDFB
       IDIB = :IDIB
