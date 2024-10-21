@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io/ioutil"
 	"log"
+	"os"
 	"path"
 	"runtime"
 	"strconv"
@@ -77,7 +77,7 @@ func LoadFile(fileName string, result interface{}, fullDirPath string) error {
 		completePath = path.Join(jsonDir, fileName)
 
 	}
-	bytes, err := ioutil.ReadFile(completePath)
+	bytes, err := os.ReadFile(completePath)
 	if err != nil {
 		return err
 	}
@@ -165,3 +165,4 @@ func ValidateBankCode(bankCodeInput string) bool {
 	_, ok := bankCodes[bankCodeInput]
 	return ok
 }
+

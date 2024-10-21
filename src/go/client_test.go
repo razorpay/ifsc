@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"testing"
 
@@ -157,7 +157,7 @@ func GetSuccessMockResponse() {
 			"BANKCODE":"HDFC",
 			"IFSC":"HDFC0CAGSBK"
 		}`
-		r := ioutil.NopCloser(bytes.NewReader([]byte(successJson)))
+		r := io.NopCloser(bytes.NewReader([]byte(successJson)))
 		return &http.Response{
 			StatusCode: http.StatusOK,
 			Body:       r,
@@ -217,3 +217,4 @@ func TestIFSCResponse_GetBankName(t *testing.T) {
 		})
 	}
 }
+

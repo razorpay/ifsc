@@ -17,7 +17,7 @@ type Bank struct {
 	AchCredit bool   `json:"ach_credit"`
 	AchDebit  bool   `json:"ach_debit"`
 	NachDebit bool   `json:"nach_debit"`
-	Upi       bool   `json:"upi",omitempty`
+	Upi       bool   `json:"upi,omitempty"`
 }
 
 var bankData map[string]Bank
@@ -45,3 +45,4 @@ func GetBankDetails(bankCode string) *Bank {
 	}
 	return &data
 }
+
