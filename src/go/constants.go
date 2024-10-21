@@ -1397,6 +1397,7 @@ const (
         UMSX = "UMSX"
         UMUX = "UMUX"
         UNAX = "UNAX"
+        UNBA = "UNBA"
         UNIX = "UNIX"
         UNMX = "UNMX"
         UNSX = "UNSX"
