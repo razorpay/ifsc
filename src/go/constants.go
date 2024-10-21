@@ -2907,6 +2907,7 @@ var bankCodes = map[string]bool{
         "UMSX" : true, 
         "UMUX" : true, 
         "UNAX" : true, 
+        "UNBA" : true,
         "UNIX" : true, 
         "UNMX" : true, 
         "UNSX" : true, 
