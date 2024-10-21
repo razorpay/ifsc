@@ -1397,6 +1397,7 @@ const (
         UMSX = "UMSX"
         UMUX = "UMUX"
         UNAX = "UNAX"
+        UNBA = "UNBA"
         UNIX = "UNIX"
         UNMX = "UNMX"
         UNSX = "UNSX"
@@ -2906,6 +2907,7 @@ var bankCodes = map[string]bool{
         "UMSX" : true, 
         "UMUX" : true, 
         "UNAX" : true, 
+        "UNBA" : true,
         "UNIX" : true, 
         "UNMX" : true, 
         "UNSX" : true, 
