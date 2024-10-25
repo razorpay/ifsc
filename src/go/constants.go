@@ -1483,6 +1483,7 @@ const (
         WUCX = "WUCX"
         WZUX = "WZUX"
         XJKG = "XJKG"
+        XNSE = "XNSE"
         YADX = "YADX"
         YAVX = "YAVX"
         YCBX = "YCBX"
@@ -2993,6 +2994,7 @@ var bankCodes = map[string]bool{
         "WUCX" : true, 
         "WZUX" : true, 
         "XJKG" : true, 
+        "XNSE" : true,
         "YADX" : true, 
         "YAVX" : true, 
         "YCBX" : true, 

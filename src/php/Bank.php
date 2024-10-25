@@ -1487,6 +1487,7 @@ class Bank
     const WUCX = 'WUCX';
     const WZUX = 'WZUX';
     const XJKG = 'XJKG';
+    const XNSE = 'XNSE';
     const YADX = 'YADX';
     const YAVX = 'YAVX';
     const YCBX = 'YCBX';
