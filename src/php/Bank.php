@@ -1401,6 +1401,7 @@ class Bank
     const UMSX = 'UMSX';
     const UMUX = 'UMUX';
     const UNAX = 'UNAX';
+    const UNBA = 'UNBA';
     const UNIX = 'UNIX';
     const UNMX = 'UNMX';
     const UNSX = 'UNSX';
