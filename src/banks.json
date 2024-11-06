@@ -14804,11 +14804,6 @@
     "type": "RRB",
     "upi": true
   },
-  "XNSE": {
-    "code": "XNSE",
-    "ifsc": "XNSE0000001",
-    "micr": null
-  },
   "YADX": {
     "code": "YADX",
     "ifsc": "YESB0YDC001",
