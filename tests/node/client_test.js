@@ -37,3 +37,28 @@ ifsc.fetchDetails('HDFC0CAGSBK')
     console.error(err);
     process.exit(1);
   })
+
+ifsc
+    .fetchDetails('XNSE0000001')
+    .then(function(res) {
+        assert.equal('EXCHANGE PLAZA,PLOT NO C/1, G BLOCK,BANDRA-KURLA COMPLEX,BANDRA (E), MUMBAI 400051',res['ADDRESS'])
+        assert.equal('NSE Clearing Limited',res['BANK'])
+        assert.equal('XNSE',res['BANKCODE'])
+        assert.equal('MUMBAI',res['BRANCH'])
+        assert.equal('MUMBAI',res['CENTRE'])
+        assert.equal('MUMBAI',res['CITY'])
+        assert.equal('MUMBAI',res['DISTRICT'])
+        assert.equal('XNSE0000001',res['IFSC'])
+        assert.equal('MAHARASHTRA',res['STATE'])
+        assert.equal(null,res['MICR'])
+        assert.equal(false,res['UPI'])
+        assert.equal(false,res['NEFT'])
+        assert.equal(false,res['IMPS'])
+        assert.equal(true,res['RTGS'])
+        assert.equal(null,res['SWIFT'])
+        assert.equal("IN-MH",res['ISO3166'])
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    })

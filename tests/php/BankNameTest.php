@@ -9,6 +9,7 @@ class Name extends TestCase
     public function testDefined() {
         $this->assertEquals('PUNB', constant('Razorpay\IFSC\Bank::PUNB'));
         $this->assertEquals('BDBL', constant('Razorpay\IFSC\Bank::BDBL'));
+        $this->assertEquals('XNSE', constant('Razorpay\IFSC\Bank::XNSE'));
 
         $this->assertEquals('BDBL', Bank::BDBL);
     }
@@ -43,5 +44,13 @@ class Name extends TestCase
             'name' => 'Fino Payments Bank',
             'bank_code' => '099'
         ], Bank::getDetails('FINO'));
+
+        $this->assertEqualsCanonicalizing([
+            'code' => 'XNSE',
+            'ifsc' => 'XNSE0000001',
+            'micr' => null,
+            'name' => 'NSE Clearing Limited',
+            'bank_code' => null
+        ], Bank::getDetails('XNSE'));
     }
 }
