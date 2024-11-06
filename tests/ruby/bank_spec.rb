@@ -4,6 +4,7 @@ require 'bank'
 describe Razorpay::IFSC::Bank do
   it 'should define the relevant constants' do
     expect(described_class::PUNB).to eq :PUNB
+    expect(described_class::XNSE).to eq :XNSE
   end
 
   it 'should return details from the bank code' do
