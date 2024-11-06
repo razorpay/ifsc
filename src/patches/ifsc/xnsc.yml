@@ -17,7 +17,7 @@ ifsc:
     CONTACT: null
     DISTRICT: Mumbai
     IMPS: false
-    MICR: null
+    MICR: XNSE00001
     NEFT: false
     RTGS: true
     STATE: MAHARASHTRA
