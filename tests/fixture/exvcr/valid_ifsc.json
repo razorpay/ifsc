@@ -30,38 +30,4 @@
       "type": "ok"
     }
   }
-],
-
-[
-  {
-    "request": {
-      "body": "",
-      "headers": [],
-      "method": "get",
-      "options": [],
-      "request_body": "",
-      "url": "https://ifsc.razorpay.com/XNSE0000001"
-    },
-    "response": {
-      "binary": false,
-      "body": "{\"BRANCH\":\"MUMBAI\",\"ADDRESS\":\"EXCHANGE PLAZA,PLOT NO C/1, G BLOCK,BANDRA-KURLA COMPLEX,BANDRA (E), MUMBAI 400051\",\"CONTACT\":\"null\",\"CITY\":\"MUMBAI\",\"DISTRICT\":\"MUMBAI\",\"STATE\":\"MAHARASHTRA\",\"RTGS\":true,\"BANK\":\"NSE Clearing Limited\",\"BANKCODE\":\"XNSE\",\"IFSC\":\"XNSE0000001\"}",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Security-Policy": "default-src 'self' razorpay.com; font-src 'self' fonts.gstatic.com; img-src cdn.razorpay.com razorpay.com; object-src 'none'; script-src 'none'; style-src 'self' 'unsafe-inline' fonts.googleapis.com",
-        "Content-Type": "application/json",
-        "Date": "Wed, 24 Jan 2018 09:42:24 GMT",
-        "Server": "thin",
-        "Strict-Transport-Security": "max-age=630720000; includeSubdomains",
-        "X-Content-Type-Options": "nosniff",
-        "X-Download-Options": "noopen",
-        "X-Frame-Options": "DENY",
-        "X-Permitted-Cross-Domain-Policies": "none",
-        "X-Xss-Protection": "1; mode=block",
-        "Content-Length": "252",
-        "Connection": "keep-alive"
-      },
-      "status_code": 200,
-      "type": "ok"
-    }
-  }
 ]
