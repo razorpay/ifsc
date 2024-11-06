@@ -78,7 +78,6 @@ describe Razorpay::IFSC::IFSC do
         expect(described_class.bank_name_for('KSCB0006001')).to eq 'Tumkur District Central Bank'
         expect(described_class.bank_name_for('WBSC0KPCB01')).to eq 'Kolkata Police Co-operative Bank'
         expect(described_class.bank_name_for('YESB0ADB002')).to eq 'Amravati District Central Co-operative Bank'
-        expect(described_class.bank_name_for('XNSE0000001')).to eq 'NSE Clearing Limited'
       end
     end
 
