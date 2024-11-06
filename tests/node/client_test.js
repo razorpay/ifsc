@@ -41,6 +41,7 @@ ifsc.fetchDetails('HDFC0CAGSBK')
 ifsc
     .fetchDetails('XNSE0000001')
     .then(function(res) {
+        assert.equal('EXCHANGE PLAZA,PLOT NO C/1, G BLOCK,BANDRA-KURLA COMPLEX,BANDRA (E), MUMBAI 400051',res['ADDRESS'])
         assert.equal('NSE Clearing Limited',res['BANK'])
         assert.equal('XNSE',res['BANKCODE'])
         assert.equal('MUMBAI',res['BRANCH'])
