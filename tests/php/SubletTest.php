@@ -22,6 +22,12 @@ class SubletTest extends TestCase
         $this->assertEquals("Darjeeling District Central Co-operative Bank", $name);
     }
 
+    public function testXNSE()
+    {
+        $name = IFSC::getBankName('XNSE0000001');
+
+        $this->assertEquals("NSE Clearing Limited", $name);
+    }
     /**
      * Ensure that the sublet list only
      * includes genuine subleases

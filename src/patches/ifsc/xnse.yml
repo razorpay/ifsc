@@ -1,0 +1,26 @@
+---
+# RTGS is open to non-banking institutions as wel
+# but they do not show up on the list of enabled bank branches
+# that RBI provides
+# Links:
+# - https://www.rbi.org.in/Scripts/Bs_viewRTGS.aspx
+# - https://rbidocs.rbi.org.in/rdocs/RTGS/PDFs/RTGEB101014.PDF
+# - https://rbidocs.rbi.org.in/rdocs/rtgs/pdfs/lps15022012.pdf
+action: add_multiple
+ifsc:
+  XNSE0000001:
+    ADDRESS: EXCHANGE PLAZA,PLOT NO C/1, G BLOCK,BANDRA-KURLA COMPLEX,BANDRA (E), MUMBAI 400051
+    BRANCH: Mumbai
+    BANK: NSE Clearing Limited
+    CENTRE: Mumbai
+    CITY: MUMBAI
+    CONTACT: null
+    DISTRICT: Mumbai
+    IMPS: false
+    MICR: XNSE00001
+    NEFT: false
+    RTGS: true
+    STATE: MAHARASHTRA
+    ISO3166: IN-MH
+    SWIFT: null
+    UPI: false
