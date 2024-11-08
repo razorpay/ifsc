@@ -5,6 +5,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## [2.0.36][2.0.36]
+### Changed
+- Metadata updates
+- Support for XNSE (NSE Clearing Limited) added. `XNSE0000001` is the branch.
+
 ## [2.0.35][2.0.35]
 ### Changed
 - Metadata updates
