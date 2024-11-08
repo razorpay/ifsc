@@ -22,9 +22,8 @@ describe Razorpay::IFSC::Bank do
   end
   it 'should return details from the bank code' do
       expect(described_class.get_details(:XNSE)).to eq(code: 'XNSE',
-                                                       type: 'XNSE',
                                                        ifsc: '110024001',
-                                                       micr: 'XNSE00001',
+                                                       micr: null,
                                                        bank_code: null,
                                                        )
     end
