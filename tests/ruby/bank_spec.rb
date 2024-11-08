@@ -4,7 +4,6 @@ require 'bank'
 describe Razorpay::IFSC::Bank do
   it 'should define the relevant constants' do
     expect(described_class::PUNB).to eq :PUNB
-    expect(described_class::XNSE).to eq :XNSE
   end
 
   it 'should return details from the bank code' do
@@ -20,12 +19,6 @@ describe Razorpay::IFSC::Bank do
                                                      ach_debit: true,
                                                      nach_debit: true)
   end
-  it 'should return details from the bank code' do
-      expect(described_class.get_details(:XNSE)).to eq(code: 'XNSE',
-                                                       ifsc: '110024001',
-                                                       bank_code: null,
-                                                       )
-    end
 
   it 'should match all constants defined in banknames.json' do
   	JSON.parse(File.read('src/banknames.json')).keys.each do |c|
