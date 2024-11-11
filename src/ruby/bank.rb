@@ -1483,6 +1483,7 @@ module Razorpay
       WUCX = :WUCX
       WZUX = :WZUX
       XJKG = :XJKG
+      XNSE = :XNSE
       YADX = :YADX
       YAVX = :YAVX
       YCBX = :YCBX
