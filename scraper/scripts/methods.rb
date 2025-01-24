@@ -1,4 +1,3 @@
-require 'csv'
 require 'yaml'
 require 'json'
 require 'set'
