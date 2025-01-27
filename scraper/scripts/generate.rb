@@ -1,4 +1,6 @@
+require 'csv'
 require './methods'
+
 
 upi_banks = parse_upi
 
