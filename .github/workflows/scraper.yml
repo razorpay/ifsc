@@ -22,7 +22,9 @@ jobs:
         run: bundle install
         working-directory: scraper
       - name: Run scraper
-        run: ./bootstrap.sh
+        run: |
+          bundle install
+          ./bootstrap.sh
         working-directory: scraper/scripts
       - name: Save artifacts
         uses: actions/upload-artifact@v3
