@@ -1,6 +1,10 @@
 {
   "name": "ifsc",
+<<<<<<< HEAD
   "version": "2.0.40",
+=======
+  "version": "2.0.39",
+>>>>>>> 8d7d7e9fe732e4dd56eac6aaab0268bf7afb1a02
   "description": "This is part of the IFSC toolset released by Razorpay. You can find more details about the entire release at [ifsc.razorpay.com](https://ifsc.razorpay.com). Includes only a validation library as of now.",
   "main": "src/node/index.js",
   "directories": {
