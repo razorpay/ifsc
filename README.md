@@ -16,13 +16,13 @@ The latest `scraper` workflow on GitHub should publish a `release-artifact` as w
 
 Various official sources are linked below, with the ones currently used marked with a †
 
--  List of NEFT IFSCs from [RBI website][combined]†
--  List of RTGS IFSCs from [RBI website][rtgs]†
--  RBI maintains several lists:
-  - [List of banks in India](https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx)
-  - [Websites of banks in India](https://www.rbi.org.in/scripts/banklinks.aspx).
-  - [Bankwise Volumes in ECS/NEFT/RTGS/Mobile](https://www.rbi.org.in/Scripts/NEFTUserView.aspx?Id=166)
-  - [List of Banks permitted to provide Mobile Banking](https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2463)
+- List of NEFT IFSCs from [RBI website][combined]†
+- List of RTGS IFSCs from [RBI website][rtgs]†
+- RBI maintains several lists:
+- [List of banks in India](https://www.rbi.org.in/commonman/english/scripts/banksinindia.aspx)
+- [Websites of banks in India](https://www.rbi.org.in/scripts/banklinks.aspx).
+- [Bankwise Volumes in ECS/NEFT/RTGS/Mobile](https://www.rbi.org.in/Scripts/NEFTUserView.aspx?Id=166)
+- [List of Banks permitted to provide Mobile Banking](https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2463)
 - NPCI website has several lists:
   - [NACH Live Members][ach]†
   - [RuPay Live Members](https://www.npci.org.in/what-we-do/rupay/live-members)
@@ -39,15 +39,18 @@ Various official sources are linked below, with the ones currently used marked w
 SWIFT/BIC codes are supported for a few banks.
 
 ##### SBI
--  https://sbi.co.in/web/nri/quick-links/swift-codes †
--  https://sbi.co.in/documents/16012/263663/sbinri_merged_bran_swfcodet.xlsx †
--  Branch codes from above are checked against the [SBI Branch Locator](https://www.sbi.co.in/web/home/locator/branch) to get the IFSC.
+
+- https://sbi.co.in/web/nri/quick-links/swift-codes †
+- https://sbi.co.in/documents/16012/263663/sbinri_merged_bran_swfcodet.xlsx †
+- Branch codes from above are checked against the [SBI Branch Locator](https://www.sbi.co.in/web/home/locator/branch) to get the IFSC.
 
 ##### PNB
+
 - https://pnbindia.com/downloadprocess.aspx?fid=Zb7ImdUNlz9Ge73qn1nXQg== †
 - https://www.pnbindia.in/document/PNB-helpdesk/bic_code.pdf †
 
 ##### HDFC
+
 - https://www.hdfcbank.com/nri-banking/correspondent-banks †
 
 ## Installation
@@ -110,6 +113,10 @@ Finally, to use the top-of-trunk version of this repo, use the following command
 
 `go get github.com/razorpay/ifsc/v2@master`
 
+## Python
+
+`pip install ifsc`
+
 ## Support Matrix
 
 Only the latest version of each SDK is considered.
@@ -120,6 +127,7 @@ Only the latest version of each SDK is considered.
 | Ruby     | ✅         | ✅         | ✅ (✅)                 | ✅             |
 | Node.js  | ✅         | ✅         | ❎ (❎)                 | ✅             |
 | Go       | ✅         | ✅         | ✅ (✅)                 | ✅             |
+| Python   | ✅         | ✅         | ✅ (✅)                 | ✅             |
 
 ## API Documentation
 
@@ -194,31 +202,31 @@ echo $client->lookupIFSC('https://ifsc.razorpay.com/HDFC0CAGSBK')->swift; // 'HD
 ### Node.js
 
 ```js
-var ifsc = require('ifsc');
+var ifsc = require("ifsc");
 
-ifsc.validate('KKBK0000261'); // returns true
-ifsc.validate('BOTM0XEEMRA'); // returns false
+ifsc.validate("KKBK0000261"); // returns true
+ifsc.validate("BOTM0XEEMRA"); // returns false
 
-ifsc.fetchDetails('KKBK0000261').then(function(res) {
-   console.log(res);
-    // {
-    //   MICR: '560226263',
-    //   BRANCH: 'THE AGS EMPLOYEES COOP BANK LTD',
-    //   ADDRESS: 'SANGMESH BIRADAR BANGALORE',
-    //   STATE: 'KARNATAKA',
-    //   CONTACT: '+91802265658',
-    //   UPI: true,
-    //   RTGS: true,
-    //   CITY: 'BANGALORE',
-    //   CENTRE: 'BANGALORE URBAN',
-    //   DISTRICT: 'BANGALORE URBAN',
-    //   NEFT: true,
-    //   IMPS: true,
-    //   SWIFT: 'HDFCINBB',
-    //   BANK: 'HDFC Bank',
-    //   BANKCODE: 'HDFC',
-    //   IFSC: 'HDFC0CAGSBK'
-    // }
+ifsc.fetchDetails("KKBK0000261").then(function (res) {
+  console.log(res);
+  // {
+  //   MICR: '560226263',
+  //   BRANCH: 'THE AGS EMPLOYEES COOP BANK LTD',
+  //   ADDRESS: 'SANGMESH BIRADAR BANGALORE',
+  //   STATE: 'KARNATAKA',
+  //   CONTACT: '+91802265658',
+  //   UPI: true,
+  //   RTGS: true,
+  //   CITY: 'BANGALORE',
+  //   CENTRE: 'BANGALORE URBAN',
+  //   DISTRICT: 'BANGALORE URBAN',
+  //   NEFT: true,
+  //   IMPS: true,
+  //   SWIFT: 'HDFCINBB',
+  //   BANK: 'HDFC Bank',
+  //   BANKCODE: 'HDFC',
+  //   IFSC: 'HDFC0CAGSBK'
+  // }
 });
 
 console.log(ifsc.bank.PUNB); // prints PUNB
@@ -406,6 +414,37 @@ func main() {
 	}), nil
 	 */
 }
+
+```
+
+### Python
+
+```
+
+from ifsc import IFSC, Bank
+
+ifsc_obj = IFSC()
+
+ifsc_obj.validate("ABHY0065001") # returns True
+ifsc_obj.validate_bank_code("ABHY") # returns True
+ifsc_obj.get_bank_name("ABHY") # returns Abhyudaya Co-operative Bank
+ifsc_obj.get_details("ABHY0065001")
+
+"""
+
+returns
+{'ADDRESS': 'ABHYUDAYA BANK BLDG., B.NO.71, NEHRU NAGAR, KURLA (E), MUMBAI-400024', 'MICR': '400065001', 'DISTRICT': 'GREATER MUMBAI', 'ISO3166': 'IN-MH', 'STATE': 'MAHARASHTRA', 'BRANCH': 'Abhyudaya Co-operative Bank IMPS', 'CITY': 'MUMBAI', 'UPI': True, 'IMPS': True, 'SWIFT': None, 'RTGS': True, 'NEFT': True, 'CONTACT': '+912225260173', 'CENTRE': 'GREATER MUMBAI', 'BANK': 'Abhyudaya Co-operative Bank', 'BANKCODE': 'ABHY', 'IFSC': 'ABHY0065001'}
+
+"""
+
+bank_obj = Bank()
+bank_obj.get_bank_details("ABHY")
+
+"""
+
+returns
+{'code': 'ABHY', 'ifsc': 'ABHY0065001', 'micr': '400065001', 'iin': '607261', 'ach_credit': True, 'ach_debit': True, 'apbs': True, 'nach_debit': False, 'type': 'S-UCB', 'upi': True, 'name': 'Abhyudaya Co-operative Bank', 'bank_code': '065'}
+"""
 
 ```
 
