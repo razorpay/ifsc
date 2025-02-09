@@ -74,3 +74,54 @@ jobs:
         with:
           name: release-notes.md
           path: scraper/scripts/release.md
+  test:
+    runs-on: [ self-hosted ]
+    name: Test
+    steps:
+      - name: checkout
+        id: checkout
+        uses: actions/checkout@v2
+      - name: running test
+        id: running_test
+        uses: docker://golang:alpine
+        env:
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GIT_USERNAME: rzp
+        with:
+          entrypoint: /bin/sh
+          args: scripts/run_checks.sh test ci
+      - name: set_sonar_project
+        id: set_sonar_project
+        run: |
+          BRANCH="$(echo ${GITHUB_REF##*/})";
+          SONAR_PROJECT="IFSCDevCoverage"
+          if [ "$BRANCH" == "sonarCoverage" ]; then
+            SONAR_PROJECT="IfscUT";
+          fi
+          echo ::set-output name=sonar_project::$SONAR_PROJECT
+      - name: Push to Sonar
+        id: push_to_sonar
+        uses: sonarsource/sonarcloud-github-action@v1.4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+          SONARCLOUD_URL: ${{ secrets.SONARQUBE_HOST }}
+        with:
+          args: >
+            -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
+            -Dsonar.projectKey=${{ steps.set_sonar_project.outputs.sonar_project }}
+            -Dsonar.projectName=${{ steps.set_sonar_project.outputs.sonar_project }}
+            -Dsonar.projectVersion=${{ github.sha }}
+            -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
+            -Dsonar.projectBaseDir=/github/workspace/
+            -Dsonar.go.coverage.reportPaths=/github/workspace/sonarqube.cov
+            -Dsonar.exclusions=migrations/*,**/*_test.go,**/*mock.go,**/*coverage*,**/constants/*,**/*constants.go,coverage/*,**/logger/*
+      - name: Coverage Check
+        id: coverage_check
+        uses: docker://razorpay/onggi:nginx
+        if: github.ref != 'refs/heads/master' || !contains(github.ref,'hotfix')
+        with:
+          entrypoint: /bin/sh
+          args: scripts/code_coverage.sh     #if issue for older coverage comes, needs to add delay or do this in other job
+        env:
+          SONAR_HOST: ${{ secrets.SONARQUBE_HOST }}
+          SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
