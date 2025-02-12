@@ -15,7 +15,7 @@ jobs:
       - uses: ruby/setup-ruby@v1.152.0
         with:
           # Not needed with a .ruby-version file
-          ruby-version: 2.7
+          ruby-version: 3.1
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
       # Publish
@@ -31,4 +31,3 @@ jobs:
           # Make sure to update the secret name
           # if yours isn't named RUBYGEMS_AUTH_TOKEN
           GEM_HOST_API_KEY: "${{secrets.IFSC_GEM_ACCESS_TOKEN}}"
-          
