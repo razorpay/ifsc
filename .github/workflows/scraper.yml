@@ -25,7 +25,7 @@ jobs:
         run: bash bootstrap.sh
         working-directory: scraper/scripts
       - name: Save artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: release-artifact
           path: |
@@ -43,7 +43,7 @@ jobs:
           tools: phpunit, composer
       - run: composer install --no-interaction
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: release-artifact
           path: scraper/scripts/data
@@ -62,7 +62,7 @@ jobs:
         with:
           php-version: 8.1
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: release-artifact
           path: scraper/scripts/data
@@ -70,7 +70,7 @@ jobs:
         run: bash release.sh
         working-directory: scraper/scripts
       - name: Save Release Notes
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: release-notes.md
           path: scraper/scripts/release.md
