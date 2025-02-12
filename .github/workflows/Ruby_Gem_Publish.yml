@@ -12,10 +12,10 @@ jobs:
       # Checkout code if release was created
       - uses: actions/checkout@v3.5.3
       # Setup ruby if a release was created
-      - uses: ruby/setup-ruby@v1.152.0
+      - uses: ruby/setup-ruby@v1
         with:
           # Not needed with a .ruby-version file
-          ruby-version: 3.1
+          ruby-version: 3.0
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
       # Publish
