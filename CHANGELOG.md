@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.42][2.0.42]
 ### Changed
 - Metadata updates
-- Ruby Version Update to 3.1
 
 ## [2.0.41][2.0.41]
 ### Changed
