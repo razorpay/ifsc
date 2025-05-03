@@ -2,7 +2,7 @@ package ifsc
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 )
@@ -47,7 +47,7 @@ func LookUP(ifsc string) (*IFSCResponse, error) {
 	}
 	status := resp.StatusCode
 	if status == http.StatusOK {
-		responseBytes, err := ioutil.ReadAll(resp.Body)
+		responseBytes, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return nil, err
 		}
@@ -118,3 +118,4 @@ func (ifsc *IFSCResponse) GetBankName() string {
 	}
 	return bankName
 }
+
