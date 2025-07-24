@@ -7,9 +7,9 @@
     "test": "tests"
   },
   "dependencies": {
+    "ifsc": "^2.0.43",
     "request": "^2.88.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node tests/node/validator_test.js && node tests/node/client_test.js && node tests/node/bank_test.js"
   },
