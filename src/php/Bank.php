@@ -1297,6 +1297,7 @@ class Bank
     const TGDX = 'TGDX';
     const TGMB = 'TGMB';
     const TGNX = 'TGNX';
+    const TGRB = 'TGRB';
     const TGUX = 'TGUX';
     const THCX = 'THCX';
     const THMX = 'THMX';
