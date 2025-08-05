@@ -1293,6 +1293,7 @@ module Razorpay
       TGDX = :TGDX
       TGMB = :TGMB
       TGNX = :TGNX
+      TGRB = :TGRB
       TGUX = :TGUX
       THCX = :THCX
       THMX = :THMX
