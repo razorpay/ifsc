@@ -13,9 +13,6 @@ log "[NPCI] Parsed the NACH sheet, got #{banks.keys.size} banks"
 # Generate comprehensive banknames.json from multiple sources
 comprehensive_bank_names = generate_comprehensive_banknames_json(['RTGS-1', 'RTGS-2', 'RTGS-3', 'NEFT-0', 'NEFT-1'])
 
-# Generate banknames.json from RBI data only
-rbi_bank_names = generate_banknames_json_from_rbi(['RTGS-1', 'RTGS-2', 'RTGS-3', 'NEFT-0', 'NEFT-1'])
-
 imps = parse_imps(banks)
 log "[NPCI] Got #{imps.keys.size} entries"
 

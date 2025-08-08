@@ -456,70 +456,21 @@ def generate_comprehensive_banknames_json(files)
     log "Updated with bank names from sublet.json"
   end
   
-  # Step 6: Add common missing banks that might not be in RBI data
-  additional_banks = {
-    # Payment Banks
-    'ABPB' => 'Aditya Birla Idea Payments Bank',
-    'AIRP' => 'Airtel Payments Bank Limited',
-    'IPOS' => 'India Post Payments Bank',
-    'JANA' => 'Jana Small Finance Bank',
-    'PAYB' => 'Paytm Payments Bank',
-    
-    # Small Finance Banks
-    'AUBL' => 'AU Small Finance Bank Limited',
-    'ESFB' => 'Equitas Small Finance Bank',
-    'FINO' => 'Fino Payments Bank',
-    'UJVN' => 'Ujjivan Small Finance Bank',
-    'UTKS' => 'Utkarsh Small Finance Bank',
-    
-    # Regional Rural Banks
-    'APGB' => 'Andhra Pragathi Grameena Bank',
-    'APGV' => 'Andhra Pradesh Grameena Vikas Bank',
-    'KVGB' => 'Karnataka Vikas Grameena Bank',
-    'MAHG' => 'Maharashtra Gramin Bank',
-    
-    # Cooperative Banks (Major ones)
-    'APBL' => 'The Andhra Pradesh State Cooperative Bank Limited',
-    'APMC' => 'The A.P. Mahesh Cooperative Urban Bank Limited',
-    'MSCI' => 'Maharashtra State Cooperative Bank',
-    'WBSC' => 'The West Bengal State Cooperative Bank',
-    
-    # Foreign Banks
-    'ABNA' => 'Royal Bank of Scotland N.V.',
-    'ANZB' => 'Australia and New Zealand Banking Group Limited',
-    'BNPA' => 'BNP Paribas Bank',
-    'CITI' => 'Citibank N.A.',
-    'HSBC' => 'HSBC Bank',
-    'SCBL' => 'Standard Chartered Bank',
-    'UOVB' => 'United Overseas Bank Limited',
-    
-    # Development Banks
-    'EIBI' => 'Export Import Bank of India',
-    'NBRD' => 'National Bank for Agriculture and Rural Development',
-    'SIDB' => 'Small Industries Development Bank of India'
-  }
-  
-  additional_banks.each do |bankcode, bank_name|
-    comprehensive_bank_names[bankcode] = bank_name
-  end
-  log "Added #{additional_banks.size} additional common banks"
-  
-  # Step 7: Sort alphabetically by bank code
+  # Step 6: Sort alphabetically by bank code
   sorted_comprehensive_bank_names = comprehensive_bank_names.sort.to_h
   
-  # Step 8: Write the comprehensive bank names to data/banknames-comprehensive.json
-  output_file = "data/banknames-comprehensive.json"
+  # Step 7: Write the comprehensive bank names to data/banknames.json
+  output_file = "data/banknames.json"
   File.write(output_file, JSON.pretty_generate(sorted_comprehensive_bank_names))
   log "Generated #{output_file} with #{sorted_comprehensive_bank_names.size} comprehensive bank names (sorted alphabetically)"
   
-  # Step 9: Generate statistics
+  # Step 8: Generate statistics
   log "Comprehensive bank names statistics:"
   log "  - Total banks: #{sorted_comprehensive_bank_names.size}"
   log "  - From existing banknames.json: #{existing_banknames ? existing_banknames.size : 0}"
   log "  - From RBI data: #{rbi_bank_names.size}"
-  log "  - Additional banks added: #{additional_banks.size}"
   
-  # Step 10: Show sample of newly added banks
+  # Step 9: Show sample of newly added banks
   newly_added = rbi_bank_names.keys - (existing_banknames ? existing_banknames.keys : [])
   if newly_added.any?
     log "Sample of newly added banks from RBI data:"
