@@ -1,11 +1,17 @@
 require './methods'
 
+# Inspect RBI CSV headers to identify bank name columns
+inspect_rbi_csv_headers(['RTGS-1', 'RTGS-2', 'RTGS-3', 'NEFT-0', 'NEFT-1'])
+
 upi_banks = parse_upi
 
 validate_sbi_swift
 
 banks = parse_nach
 log "[NPCI] Parsed the NACH sheet, got #{banks.keys.size} banks"
+
+# Generate banknames.json from RBI data
+rbi_bank_names = generate_banknames_json_from_rbi(['RTGS-1', 'RTGS-2', 'RTGS-3', 'NEFT-0', 'NEFT-1'])
 
 imps = parse_imps(banks)
 log "[NPCI] Got #{imps.keys.size} entries"
