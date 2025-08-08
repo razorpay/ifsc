@@ -375,6 +375,162 @@ def generate_banknames_json_from_rbi(files)
   sorted_bank_names
 end
 
+# New function to generate comprehensive banknames.json from multiple sources
+def generate_comprehensive_banknames_json(files)
+  log "Generating comprehensive banknames.json from multiple sources..."
+  
+  comprehensive_bank_names = {}
+  
+  # Step 1: Load existing banknames.json as base
+  existing_banknames_file = '../../src/banknames.json'
+  if File.exist?(existing_banknames_file)
+    existing_banknames = JSON.parse(File.read(existing_banknames_file))
+    comprehensive_bank_names.merge!(existing_banknames)
+    log "Loaded #{existing_banknames.size} existing bank names from banknames.json"
+  else
+    log "Existing banknames.json not found, starting with empty list", :warn
+  end
+  
+  # Step 2: Extract bank names from RBI CSV files (RTGS/NEFT)
+  rbi_bank_names = {}
+  files.each do |file|
+    csv_file = "sheets/#{file}.csv"
+    if File.exist?(csv_file)
+      log "Processing #{file}.csv for bank names..."
+      
+      CSV.foreach(csv_file, encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
+        row = row.to_h
+        
+        # Skip invalid rows
+        next if row['IFSC'].nil? or ['IFSC_CODE', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(row['IFSC'])
+        
+        ifsc = row['IFSC'].to_s.upcase.gsub(/[^0-9A-Za-z]/, '').strip
+        bankcode = ifsc[0..3]
+        
+        # Extract bank name from RBI data - try different possible column names
+        bank_name = nil
+        ['BANK', 'BANK_NAME', 'BANKNAME', 'BANK NAME'].each do |col|
+          if row[col] && !row[col].to_s.strip.empty?
+            bank_name = sanitize(row[col])
+            break
+          end
+        end
+        
+        # If we found a bank name, add it to our collection
+        if bank_name && !bank_name.empty?
+          rbi_bank_names[bankcode] = bank_name
+        end
+      end
+    else
+      log "File #{csv_file} not found", :warn
+    end
+  end
+  
+  # Step 3: Update with RBI data (RBI data takes precedence)
+  rbi_bank_names.each do |bankcode, bank_name|
+    comprehensive_bank_names[bankcode] = bank_name
+  end
+  log "Updated with #{rbi_bank_names.size} bank names from RBI data"
+  
+  # Step 4: Extract from banks.json (NPCI data)
+  banks_json_file = 'data/banks.json'
+  if File.exist?(banks_json_file)
+    banks_data = JSON.parse(File.read(banks_json_file))
+    banks_data.each do |bankcode, bank_info|
+      if bank_info.is_a?(Hash) && bank_info['name']
+        comprehensive_bank_names[bankcode] = sanitize(bank_info['name'])
+      end
+    end
+    log "Updated with bank names from banks.json"
+  end
+  
+  # Step 5: Extract from sublet.json (additional bank data)
+  sublet_json_file = 'data/sublet.json'
+  if File.exist?(sublet_json_file)
+    sublet_data = JSON.parse(File.read(sublet_json_file))
+    sublet_data.each do |bankcode, bank_info|
+      if bank_info.is_a?(Hash) && bank_info['name']
+        comprehensive_bank_names[bankcode] = sanitize(bank_info['name'])
+      end
+    end
+    log "Updated with bank names from sublet.json"
+  end
+  
+  # Step 6: Add common missing banks that might not be in RBI data
+  additional_banks = {
+    # Payment Banks
+    'ABPB' => 'Aditya Birla Idea Payments Bank',
+    'AIRP' => 'Airtel Payments Bank Limited',
+    'IPOS' => 'India Post Payments Bank',
+    'JANA' => 'Jana Small Finance Bank',
+    'PAYB' => 'Paytm Payments Bank',
+    
+    # Small Finance Banks
+    'AUBL' => 'AU Small Finance Bank Limited',
+    'ESFB' => 'Equitas Small Finance Bank',
+    'FINO' => 'Fino Payments Bank',
+    'UJVN' => 'Ujjivan Small Finance Bank',
+    'UTKS' => 'Utkarsh Small Finance Bank',
+    
+    # Regional Rural Banks
+    'APGB' => 'Andhra Pragathi Grameena Bank',
+    'APGV' => 'Andhra Pradesh Grameena Vikas Bank',
+    'KVGB' => 'Karnataka Vikas Grameena Bank',
+    'MAHG' => 'Maharashtra Gramin Bank',
+    
+    # Cooperative Banks (Major ones)
+    'APBL' => 'The Andhra Pradesh State Cooperative Bank Limited',
+    'APMC' => 'The A.P. Mahesh Cooperative Urban Bank Limited',
+    'MSCI' => 'Maharashtra State Cooperative Bank',
+    'WBSC' => 'The West Bengal State Cooperative Bank',
+    
+    # Foreign Banks
+    'ABNA' => 'Royal Bank of Scotland N.V.',
+    'ANZB' => 'Australia and New Zealand Banking Group Limited',
+    'BNPA' => 'BNP Paribas Bank',
+    'CITI' => 'Citibank N.A.',
+    'HSBC' => 'HSBC Bank',
+    'SCBL' => 'Standard Chartered Bank',
+    'UOVB' => 'United Overseas Bank Limited',
+    
+    # Development Banks
+    'EIBI' => 'Export Import Bank of India',
+    'NBRD' => 'National Bank for Agriculture and Rural Development',
+    'SIDB' => 'Small Industries Development Bank of India'
+  }
+  
+  additional_banks.each do |bankcode, bank_name|
+    comprehensive_bank_names[bankcode] = bank_name
+  end
+  log "Added #{additional_banks.size} additional common banks"
+  
+  # Step 7: Sort alphabetically by bank code
+  sorted_comprehensive_bank_names = comprehensive_bank_names.sort.to_h
+  
+  # Step 8: Write the comprehensive bank names to data/banknames-comprehensive.json
+  output_file = "data/banknames-comprehensive.json"
+  File.write(output_file, JSON.pretty_generate(sorted_comprehensive_bank_names))
+  log "Generated #{output_file} with #{sorted_comprehensive_bank_names.size} comprehensive bank names (sorted alphabetically)"
+  
+  # Step 9: Generate statistics
+  log "Comprehensive bank names statistics:"
+  log "  - Total banks: #{sorted_comprehensive_bank_names.size}"
+  log "  - From existing banknames.json: #{existing_banknames ? existing_banknames.size : 0}"
+  log "  - From RBI data: #{rbi_bank_names.size}"
+  log "  - Additional banks added: #{additional_banks.size}"
+  
+  # Step 10: Show sample of newly added banks
+  newly_added = rbi_bank_names.keys - (existing_banknames ? existing_banknames.keys : [])
+  if newly_added.any?
+    log "Sample of newly added banks from RBI data:"
+    newly_added.first(5).each do |bankcode|
+      log "  #{bankcode}: #{rbi_bank_names[bankcode]}"
+    end
+  end
+  
+  sorted_comprehensive_bank_names
+end
+
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
     keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','ISO3166','NEFT','MICR','UPI','SWIFT']
