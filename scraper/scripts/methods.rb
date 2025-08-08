@@ -345,10 +345,17 @@ def generate_banknames_json_from_rbi(files)
         ifsc = row['IFSC'].to_s.upcase.gsub(/[^0-9A-Za-z]/, '').strip
         bankcode = ifsc[0..3]
         
-        # Extract bank name from RBI data
-        bank_name = extract_bank_name_from_rbi_data(row)
+        # Extract bank name from RBI data - try different possible column names
+        bank_name = nil
+        ['BANK', 'BANK_NAME', 'BANKNAME', 'BANK NAME'].each do |col|
+          if row[col] && !row[col].to_s.strip.empty?
+            bank_name = sanitize(row[col])
+            break
+          end
+        end
         
-        if bank_name && !bank_name.strip.empty?
+        # If we found a bank name, add it to our collection
+        if bank_name && !bank_name.empty?
           rbi_bank_names[bankcode] = bank_name
         end
       end
@@ -357,17 +364,15 @@ def generate_banknames_json_from_rbi(files)
     end
   end
   
-  # Write to data/banknames.json
-  if rbi_bank_names.any?
-    File.open('data/banknames.json', 'w') do |f|
-      f.write JSON.pretty_generate(rbi_bank_names)
-    end
-    log "Generated data/banknames.json with #{rbi_bank_names.size} bank names from RBI data", :info
-  else
-    log "No bank names found in RBI data", :warn
-  end
+  # Sort the bank names alphabetically by bank code
+  sorted_bank_names = rbi_bank_names.sort.to_h
   
-  rbi_bank_names
+  # Write the bank names to data/banknames.json
+  output_file = "data/banknames.json"
+  File.write(output_file, JSON.pretty_generate(sorted_bank_names))
+  log "Generated #{output_file} with #{sorted_bank_names.size} bank names from RBI data (sorted alphabetically)"
+  
+  sorted_bank_names
 end
 
 def export_csv(data)
