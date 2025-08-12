@@ -1,8 +1,5 @@
 require './methods'
 
-# Inspect RBI CSV headers to identify bank name columns
-inspect_rbi_csv_headers(['RTGS-1', 'RTGS-2', 'RTGS-3', 'NEFT-0', 'NEFT-1'])
-
 upi_banks = parse_upi
 
 validate_sbi_swift
