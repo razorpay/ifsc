@@ -206,6 +206,7 @@ module.exports = Object.freeze({
   BTCX: 'BTCX',
   BTUX: 'BTUX',
   BUBX: 'BUBX',
+  BUCB: 'BUCB',
   BUCL: 'BUCL',
   BUCX: 'BUCX',
   BUGX: 'BUGX',

@@ -212,6 +212,7 @@ class Bank
     const BTCX = 'BTCX';
     const BTUX = 'BTUX';
     const BUBX = 'BUBX';
+    const BUCB = 'BUCB';
     const BUCL = 'BUCL';
     const BUCX = 'BUCX';
     const BUGX = 'BUGX';
