@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Metadata updates
 - BUCB bank name update
 
-
 ## [UNRELEASED][unreleased]
 ## [2.0.47.1][2.0.47.1]
 ### Changed
