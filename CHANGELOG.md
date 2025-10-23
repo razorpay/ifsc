@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED][unreleased]
+## [2.0.49][2.0.49]
+### Changed
+- Metadata updates
+- remove phone number for some IFSC
+
+## [UNRELEASED][unreleased]
 ## [2.0.48][2.0.48]
 ### Changed
 - Metadata updates
