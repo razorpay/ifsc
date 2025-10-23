@@ -148,7 +148,11 @@ def parse_contact(std_code, phone, ifsc_code = nil)
   phone_numbers_to_discard = [
     # Add specific phone numbers here that should be ignored, for example:
     '9418404343',
-    '7571862000'
+    '7571862000',
+    '8053110006',
+    '9596776744',
+    '9706738986',
+    '9085138862',
   ]
   
   scan_contact = phone.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
