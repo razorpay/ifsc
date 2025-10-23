@@ -142,19 +142,7 @@ end
 
 # Parses the contact details on the RTGS Sheet
 # TODO: Add support for parsing NEFT contact data as well
-def parse_contact(std_code, phone, ifsc_code = nil)
-  # List of phone numbers that should be discarded/ignored
-  # If the scraper receives any of these phone numbers, the contact will not be updated
-  phone_numbers_to_discard = [
-    # Add specific phone numbers here that should be ignored, for example:
-    '9418404343',
-    '7571862000',
-    '8053110006',
-    '9596776744',
-    '9706738986',
-    '9085138862',
-  ]
-  
+def parse_contact(std_code, phone)
   scan_contact = phone.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
   scan_std_code = std_code.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
 
@@ -232,15 +220,14 @@ def parse_csv(files, banks, additional_attributes = {})
         row['MICR'] = nil
       end
 
+      row['CONTACT'] = parse_contact(row['STD CODE'], row['PHONE'])
+
       # There is a second header in the middle of the sheet.
       # :facepalm: RBI
       next if row['IFSC'].nil? or ['IFSC_CODE', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(row['IFSC'])
 
       original_ifsc = row['IFSC']
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '').strip
-      
-      # Parse contact with IFSC code for selective contact number discarding
-      row['CONTACT'] = parse_contact(row['STD CODE'], row['PHONE'], row['IFSC'])
 
       bankcode = row['IFSC'][0..3]
 
