@@ -155,6 +155,14 @@ def parse_contact(std_code, phone, ifsc_code = nil)
     '9085138862'
   ]
 
+  # Clean the phone number for comparison
+  clean_phone = phone.to_s.strip.gsub(/[\s-]/, '')
+  
+  # Check for specific phone numbers to discard
+  if clean_phone && phone_numbers_to_discard.include?(clean_phone)
+    return nil
+  end
+
   scan_contact = phone.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
   scan_std_code = std_code.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
 
