@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED][unreleased]
+## [2.0.49.1][2.0.49.1]
+### Changed
+- Metadata updates
+
+## [UNRELEASED][unreleased]
 ## [2.0.49][2.0.49]
 ### Changed
 - Metadata updates
