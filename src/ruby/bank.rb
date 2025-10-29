@@ -86,7 +86,6 @@ module Razorpay
       ARBL = :ARBL
       ARCX = :ARCX
       ARMX = :ARMX
-      ARYX = :ARYX
       ASBL = :ASBL
       ASBX = :ASBX
       ASHX = :ASHX
@@ -199,7 +198,6 @@ module Razorpay
       BPSX = :BPSX
       BRCX = :BRCX
       BRDX = :BRDX
-      BRGX = :BRGX
       BRMX = :BRMX
       BRSX = :BRSX
       BRUX = :BRUX

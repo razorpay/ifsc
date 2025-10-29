@@ -86,7 +86,6 @@ const (
 	ARBL = "ARBL"
 	ARCX = "ARCX"
 	ARMX = "ARMX"
-	ARYX = "ARYX"
 	ASBL = "ASBL"
 	ASBX = "ASBX"
 	ASHX = "ASHX"
@@ -199,7 +198,6 @@ const (
 	BPSX = "BPSX"
 	BRCX = "BRCX"
 	BRDX = "BRDX"
-	BRGX = "BRGX"
 	BRMX = "BRMX"
 	BRSX = "BRSX"
 	BRUX = "BRUX"
@@ -1599,7 +1597,6 @@ var bankCodes = map[string]bool{
 	"ARBL": true,
 	"ARCX": true,
 	"ARMX": true,
-	"ARYX": true,
 	"ASBL": true,
 	"ASBX": true,
 	"ASHX": true,
@@ -1712,7 +1709,6 @@ var bankCodes = map[string]bool{
 	"BPSX": true,
 	"BRCX": true,
 	"BRDX": true,
-	"BRGX": true,
 	"BRMX": true,
 	"BRSX": true,
 	"BRUX": true,
