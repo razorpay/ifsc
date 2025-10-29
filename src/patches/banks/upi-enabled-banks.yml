@@ -65,7 +65,6 @@ banks:
   - BOFA
   - BRCX
   - BRDX
-  - BRGX
   - BRSX
   - BTUX
   - BUGX
@@ -139,6 +138,7 @@ banks:
   - IPSX
   - ITBL
   - IXXX
+  - IPOS
   - JAKA
   - JANA
   - JIOP
