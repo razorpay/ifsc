@@ -16,7 +16,7 @@ ifsc
     assert.equal('GURGAON',res['DISTRICT'])
     assert.equal('KKBK0000261',res['IFSC'])
     assert.equal('HARYANA',res['STATE'])
-    assert.equal('110485003',res['MICR'])
+    assert.equal(null,res['MICR'])
     assert.equal(true,res['UPI'])
     assert.equal(true,res['NEFT'])
     assert.equal(true,res['IMPS'])
