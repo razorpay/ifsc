@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED][unreleased]
+## [2.0.50][2.0.50]
+### Changed
+- Metadata updates
+
+## [UNRELEASED][unreleased]
 ## [2.0.49][2.0.49]
 ### Changed
 - Metadata updates
@@ -18,8 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [UNRELEASED][unreleased]
 ## [2.0.47.1][2.0.47.1]
 ### Changed
-- TGRB bank name udpate 
-- IDIB000B668 and INDB0001960 contact update 
+- TGRB bank name udpate
+- IDIB000B668 and INDB0001960 contact update
 
 ## [2.0.47][2.0.47]
 ### Changed
