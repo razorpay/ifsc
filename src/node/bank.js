@@ -1410,6 +1410,7 @@ module.exports = Object.freeze({
   URDX: 'URDX',
   URMX: 'URMX',
   UROX: 'UROX',
+  USCB: 'USCB',
   USFB: 'USFB',
   USNX: 'USNX',
   UTBI: 'UTBI',

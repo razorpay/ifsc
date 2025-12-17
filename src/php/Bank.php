@@ -1416,6 +1416,7 @@ class Bank
     const URDX = 'URDX';
     const URMX = 'URMX';
     const UROX = 'UROX';
+    const USCB = 'USCB';
     const USFB = 'USFB';
     const USNX = 'USNX';
     const UTBI = 'UTBI';
