@@ -1412,6 +1412,7 @@ module Razorpay
       URDX = :URDX
       URMX = :URMX
       UROX = :UROX
+      USCB = :USCB
       USFB = :USFB
       USNX = :USNX
       UTBI = :UTBI
