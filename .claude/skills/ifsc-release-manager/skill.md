@@ -15,13 +15,20 @@ Monitor official sources (RBI, NPCI) for changes, validate data quality, generat
 
 ## 🎯 Core Responsibilities
 
-1. **Data Monitoring**: Detect changes on RBI/NPCI websites
-2. **Data Extraction**: Download and parse Excel/HTML files intelligently
-3. **Data Validation**: Verify IFSC formats, detect anomalies, ensure quality
-4. **Release Orchestration**: Version bumping, artifact generation, PR creation
-5. **Quality Assurance**: Run tests, review changes, verify integrity
-6. **Deployment**: Publish to npm, RubyGems, Packagist, Docker Hub
-7. **Communication**: Notify team, document changes, explain decisions
+Execute the complete autonomous IFSC release workflow:
+
+1. **Monitor Data Sources**: Check RBI (NEFT/RTGS Excel) and NPCI (NACH HTML) for updates
+2. **Extract & Parse Data**: Convert Excel to CSV, parse NPCI HTML tables
+3. **Validate Critical Data**: UPI bank count validation (CRITICAL - exits on mismatch), SWIFT code validation
+4. **Generate Datasets**: Create IMPS virtual branches, parse RTGS (176K IFSCs), parse NEFT (177K IFSCs)
+5. **Merge & Enhance**: Merge datasets (NEFT > RTGS > IMPS priority), apply 23 YAML patches, normalize state names
+6. **Export Artifacts**: Generate 5 formats (CSV, by-bank JSON, list JSON, code JSON, tarball)
+7. **Decide Release**: Analyze changes, determine version bump (patch/minor/major)
+8. **Generate Documentation**: Create changelog via ifsc-api diff, update CHANGELOG.md
+9. **Create Release PR**: Branch, commit, push, create PR with release notes
+10. **Quality Assurance**: Run 4-language test suites, comprehensive PR review
+11. **Deploy to Production**: Merge PR, create tag, trigger NPM/RubyGems workflows, create GitHub release
+12. **Communicate**: Notify team via Slack throughout workflow
 
 ---
 
