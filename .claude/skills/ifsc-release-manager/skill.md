@@ -306,8 +306,124 @@ Use sublet-detector to find new sublet arrangements.
 
 ---
 
-### 13. `slack-communicator`
-**Purpose**: Send updates to team channels
+### 13. `nach-html-scraper`
+**Purpose**: Scrape NPCI NACH live members HTML page to extract bank metadata and detect sublet arrangements
+
+**When to use**:
+- At the start of every release workflow (before IFSC parsing)
+- When NPCI updates member bank list
+- To validate UPI-enabled banks count
+
+**What it does**:
+- Parses NPCI NACH HTML table for bank metadata
+- Detects sublet arrangements from "Sub Member" column
+- Generates banks.json (1,346 banks) and sublet.json (~500-800 entries)
+- Handles bot protection (cached HTML, browser automation, Jina AI)
+- Critical UPI validation (must match or build fails)
+- Returns: banks.json, sublet.json
+
+**Example invocation**:
+```
+Use nach-html-scraper to extract bank metadata from NPCI.
+```
+
+---
+
+### 14. `imps-generator`
+**Purpose**: Generate virtual IMPS branch entries for banks that support Immediate Payment Service
+
+**When to use**:
+- After banks.json is generated from NACH scraper
+- Before merging NEFT/RTGS data
+- When adding new IMPS-enabled banks
+
+**What it does**:
+- Filters banks with IMPS capability from banks.json
+- Generates ~1,300 virtual IMPS branch entries
+- Standard template: City=MUMBAI, State=MAHARASHTRA, Address=NA
+- Applies disabled-imps.yml patch to exclude problematic banks
+- Lowest merge priority: NEFT > RTGS > IMPS
+- Returns: IMPS dataset
+
+**Example invocation**:
+```
+Use imps-generator to create virtual IMPS branches.
+```
+
+---
+
+### 15. `rtgs-data-parser`
+**Purpose**: Parse RBI RTGS Excel file with 4 sheets and extract RTGS-enabled branch IFSCs
+
+**When to use**:
+- After downloading RTGEB0815.xlsx from RBI
+- During dataset generation workflow
+- When RTGS file format changes
+
+**What it does**:
+- Parses 4-sheet RTGS Excel file (176K+ entries)
+- Handles typos in RBI sheet names ("branhces" instead of "branches")
+- Validates IFSC format and bank codes
+- Applies state normalization
+- AI-driven parsing for layout changes
+- Returns: RTGS dataset (rtgs.json)
+
+**Example invocation**:
+```
+Use rtgs-data-parser to extract RTGS-enabled IFSCs.
+```
+
+---
+
+### 16. `geographic-normalizer`
+**Purpose**: Normalize 100+ variations of Indian state/UT names in RBI data to standardized ISO names
+
+**When to use**:
+- During NEFT/RTGS parsing (before saving to dataset)
+- After merging datasets
+- When new state name variations are discovered
+
+**What it does**:
+- Handles misspellings (KARNATKA → KARNATAKA, DELLHI → DELHI)
+- Maps city names to states (MUMBAI → MAHARASHTRA, BANGALORE → KARNATAKA)
+- Converts abbreviations (AP → ANDHRA PRADESH, KA → KARNATAKA)
+- Adds ISO 3166-2 codes (MAHARASHTRA → MH, KARNATAKA → KA)
+- Logs all normalization changes for debugging
+- Returns: normalized dataset
+
+**Example invocation**:
+```
+Use geographic-normalizer to fix state name variations.
+```
+
+---
+
+### 17. `multi-format-exporter`
+**Purpose**: Export IFSC dataset in 5 different formats
+
+**When to use**:
+- After dataset merging and patch application
+- Before creating release commit
+- When generating distribution artifacts
+
+**What it does**:
+- Exports CSV (40-50 MB, human-readable)
+- Generates by-bank JSON files (1,346 files, ~115 MB total)
+- Creates IFSC-list JSON (3-4 MB, validation list)
+- Builds code JSON (1-2 MB, compact format)
+- Packages tarball for GitHub release (12-18 MB compressed)
+- Validates file sizes and JSON integrity
+- Returns: export statistics
+
+**Example invocation**:
+```
+Use multi-format-exporter to generate all release formats.
+```
+
+---
+
+### 18. `slack-communicator`
+**Purpose**: Send automated notifications to team Slack channels
 
 **When to use**:
 - After change detection
@@ -316,10 +432,12 @@ Use sublet-detector to find new sublet arrangements.
 - On errors/issues
 
 **What it does**:
-- Posts formatted messages to #tech_ifsc
+- Posts formatted messages to #ifsc-releases
 - Includes PR links, change summaries
 - Notifies on approval needed
 - Reports deployment status
+- Sends failure alerts to #ifsc-alerts
+- Daily status updates to #data-updates
 - Returns: message sent confirmation
 
 **Example invocation**:
@@ -333,60 +451,114 @@ Use slack-communicator to notify team about new release PR.
 
 ### Trigger: Daily Scheduled Check
 
-**Your autonomous execution**:
+**Your autonomous execution (based on actual scraper/scripts/generate.rb flow)**:
 
 ```
 [9:00 AM] Starting daily IFSC update check...
 
 Step 1: Use rbi-data-monitor to check for updates
-→ Result: New NEFT file detected (modified: 2025-01-17)
+→ Result: New NEFT file detected (modified Jan 17, 2026)
+→ Result: New RTGS file detected (modified Jan 17, 2026)
+→ Downloads: sheets/68774.xlsx (NEFT), sheets/RTGEB0815.xlsx (RTGS)
 
-Step 2: Use ifsc-data-extractor to parse new file
-→ Result: Extracted 247 new IFSCs, 12 removed
+Step 2: Convert Excel files to CSV
+→ Python converter: sheets/ → CSV files
+→ Result: NEFT-0.csv, NEFT-1.csv, RTGS-1.csv, RTGS-2.csv, RTGS-3.csv
 
-Step 3: Use ifsc-validator to validate data
-→ Result: ✓ Validation passed (confidence: 98%)
+Step 3: Use nach-html-scraper to parse NPCI data (CRITICAL - runs first!)
+→ Parses: nach.html, upi.html
+→ UPI Validation: CRITICAL checkpoint (exits on mismatch)
+→ Result: banks.json (1,346 banks), sublet.json (657 sublets)
 
-Step 4: Use swift-code-fetcher to update SWIFT codes
-→ Result: Updated 15 HDFC SWIFT codes
+Step 4: Use swift-code-fetcher to validate SWIFT codes
+→ Validates: src/patches/ifsc/sbi-swift.yml against SBI website
+→ Result: ✓ All SBI SWIFT codes present (via web.archive.org)
 
-Step 5: Use sublet-detector to check sublets
-→ Result: No new sublet arrangements
+Step 5: Use imps-generator to create virtual IMPS branches
+→ Input: banks.json
+→ Result: 1,298 IMPS entries generated
 
-Step 6: Use dataset-generator to create artifacts
-→ Result: Generated IFSC.json (3.2MB), banks.json (45KB)
+Step 6: Use rtgs-data-parser to parse RTGS Excel
+→ Input: RTGS-1.csv, RTGS-2.csv, RTGS-3.csv
+→ Result: 176,432 RTGS entries
 
-Step 7: Use release-decision-maker to decide
-→ Result: RELEASE recommended (patch: 2.0.54)
-→ Reason: 247 new branches (HDFC expansion), low risk
+Step 7: Use ifsc-data-extractor to parse NEFT Excel (largest dataset)
+→ Input: NEFT-0.csv, NEFT-1.csv
+→ Result: 177,569 NEFT entries
 
-Step 8: Use changelog-writer to generate notes
-→ Result: Release notes generated
+Step 8: Merge datasets (priority: NEFT > RTGS > IMPS)
+→ Combined: 177,569 unique IFSCs
+→ Sublet detection applied (bank names corrected)
 
-Step 9: Use git-orchestrator to create PR
-→ Result: Branch created, PR #447 opened
+Step 9: Apply patches from src/patches/ifsc/*.yml
+→ Applied: 23 patch files (SWIFT codes, bank types, disabled branches)
+→ Result: Dataset enhanced with manual corrections
 
-Step 10: Use test-runner to verify quality
-→ Result: All tests passing ✓
+Step 10: Use geographic-normalizer (runs during parsing)
+→ Fixed: 145 state name variations → standardized names
+→ Added: ISO3166 codes for all entries
 
-Step 11: Use quality-reviewer to review PR
+Step 11: Use multi-format-exporter to generate all formats
+→ Export CSV: data/IFSC.csv (45.2 MB)
+→ Export by-bank JSON: data/by-bank/*.json (1,346 files, 115 MB)
+→ Export list JSON: data/IFSC-list.json (3.1 MB)
+→ Export code JSON: data/IFSC.json (1.8 MB)
+→ Package tarball: by-bank.tar.gz (14.5 MB)
+
+Step 12: Use release-decision-maker to analyze changes
+→ Compared: Current (177,569) vs Previous (177,335)
+→ Changes: +234 added, -12 removed, ~1,023 modified
+→ Decision: RELEASE recommended (patch: 2.0.54)
+→ Reason: 234 new branches, low risk, no breaking changes
+
+Step 13: Use changelog-writer to generate release notes
+→ Clones: ifsc-api repo for diff analysis
+→ Extracts: Changed IFSCs via git diff
+→ Analyzes: Per-IFSC changes (releasenotes.php)
+→ Result: release.md generated, CHANGELOG.md updated
+
+Step 14: Use git-orchestrator to create release branch and PR
+→ Branch: release/2.0.54
+→ Commit: [release] 2.0.54 (includes summary from release.md)
+→ Result: PR #450 opened
+
+Step 15: Use test-runner to verify quality
+→ Node.js tests: ✓ Passed (4 versions)
+→ PHP tests (with dataset): ✓ Passed (100 tests, 450 assertions)
+→ Ruby tests: ✓ Passed (4 versions, 34 examples)
+→ Go tests: ✓ Passed (3 versions, coverage 82.5%)
+
+Step 16: Use quality-reviewer to review PR
+→ IFSC format: ✓ 177,569 entries, 0 errors
+→ Required fields: ✓ 0 missing
+→ State normalization: ✓ 0 unknown states
+→ File integrity: ✓ All files present, sizes correct
+→ Changelog: ✓ Version 2.0.54 entry present
 → Result: ✓ Approved, safe to merge
 
-Step 12: Use slack-communicator to notify
+Step 17: Use slack-communicator to notify team
+→ Channel: #ifsc-releases
+→ Message: "Release v2.0.54 ready for review (+234 IFSCs)"
 → Result: Team notified, waiting for human approval
 
-[9:15 AM] Awaiting human approval on PR #447...
+[9:15 AM] Awaiting human approval on PR #450...
 
 [User approves PR]
 
-Step 13: Use git-orchestrator to merge PR
-→ Result: PR merged, tag 2.0.54 created
+Step 18: Use git-orchestrator to merge PR
+→ PR merged to master
+→ Tag created: v2.0.54
+→ Tag pushed to remote
 
-Step 14: Use deployment-manager to publish
-→ Result: npm published, gem published, Docker building
+Step 19: Use deployment-manager to publish
+→ NPM workflow triggered: ifsc@2.0.54 published ✓
+→ RubyGems workflow triggered: ifsc-2.0.54 published ✓
+→ GitHub release created: v2.0.54 with tarball
 
-Step 15: Use slack-communicator to announce
-→ Result: Team notified of successful release
+Step 20: Use slack-communicator to announce success
+→ Channel: #ifsc-releases
+→ Message: "✅ IFSC v2.0.54 deployed successfully"
+→ Links: GitHub, NPM, RubyGems
 
 [9:30 AM] Release 2.0.54 complete ✓
 ```
