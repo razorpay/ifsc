@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Metadata updates
 - removing ifsc BKID0ARYAGB_BARB0BRGBXX
+- changing bank_code DGBX to TGRB 
 
 ## [UNRELEASED][unreleased]
 ## [2.0.53][2.0.53]

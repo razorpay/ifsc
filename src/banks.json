@@ -3152,8 +3152,8 @@
     "nach_debit": false,
     "type": "O-UCB"
   },
-  "DGBX": {
-    "code": "DGBX",
+  "TGRB": {
+    "code": "TGRB",
     "ifsc": "SBIN0RRDCGB",
     "micr": "500707000",
     "iin": "607195",

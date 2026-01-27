@@ -315,7 +315,6 @@ module Razorpay
       DEUT = :DEUT
       DEUX = :DEUX
       DEVX = :DEVX
-      DGBX = :DGBX
       DHBX = :DHBX
       DHKX = :DHKX
       DHUX = :DHUX

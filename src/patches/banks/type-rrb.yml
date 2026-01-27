@@ -21,7 +21,6 @@ banks:
 - CGGX
 - CMPX
 - DEGX
-- DGBX
 - EDBX
 - HGBX
 - HMBX
@@ -54,6 +53,7 @@ banks:
 - SPBX
 - SUBX
 - TGBX
+- TGRB
 - UBGX
 - UGBX
 - UKGX

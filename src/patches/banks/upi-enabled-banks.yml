@@ -97,7 +97,6 @@ banks:
   - DCUX
   - DEOB
   - DEUT
-  - DGBX
   - DHUX
   - DLXB
   - DMKB
@@ -314,6 +313,7 @@ banks:
   - TECX
   - TGBX
   - TGNX
+  - TGRB
   - TJSB
   - TKCX
   - TKTX

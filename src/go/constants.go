@@ -315,7 +315,6 @@ const (
 	DEUT = "DEUT"
 	DEUX = "DEUX"
 	DEVX = "DEVX"
-	DGBX = "DGBX"
 	DHBX = "DHBX"
 	DHKX = "DHKX"
 	DHUX = "DHUX"
@@ -1828,7 +1827,6 @@ var bankCodes = map[string]bool{
 	"DEUT": true,
 	"DEUX": true,
 	"DEVX": true,
-	"DGBX": true,
 	"DHBX": true,
 	"DHKX": true,
 	"DHUX": true,
@@ -2807,6 +2805,7 @@ var bankCodes = map[string]bool{
 	"TGDX": true,
 	"TGMB": true,
 	"TGNX": true,
+	"TGRB": true,
 	"TGUX": true,
 	"THCX": true,
 	"THMX": true,
