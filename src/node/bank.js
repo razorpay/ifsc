@@ -313,7 +313,6 @@ module.exports = Object.freeze({
   DEUT: 'DEUT',
   DEUX: 'DEUX',
   DEVX: 'DEVX',
-  DGBX: 'DGBX',
   DHBX: 'DHBX',
   DHKX: 'DHKX',
   DHUX: 'DHUX',

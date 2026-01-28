@@ -790,17 +790,6 @@
     "nach_debit": false,
     "type": "O-UCB"
   },
-  "ARYX": {
-    "code": "ARYX",
-    "ifsc": "BKID0ARYAGB",
-    "micr": "202448001",
-    "iin": "508509",
-    "ach_credit": true,
-    "ach_debit": true,
-    "apbs": true,
-    "nach_debit": false,
-    "type": "RRB"
-  },
   "ASBL": {
     "code": "ASBL",
     "ifsc": "ASBL0000001",
@@ -1990,18 +1979,6 @@
     "type": "DCCB",
     "upi": true
   },
-  "BRGX": {
-    "code": "BRGX",
-    "ifsc": "BARB0BRGBXX",
-    "micr": "345647004",
-    "iin": "607280",
-    "ach_credit": true,
-    "ach_debit": true,
-    "apbs": true,
-    "nach_debit": false,
-    "type": "RRB",
-    "upi": true
-  },
   "BRMX": {
     "code": "BRMX",
     "ifsc": "HDFC0CBUCBB",
@@ -3174,18 +3151,6 @@
     "apbs": true,
     "nach_debit": false,
     "type": "O-UCB"
-  },
-  "DGBX": {
-    "code": "DGBX",
-    "ifsc": "SBIN0RRDCGB",
-    "micr": "500707000",
-    "iin": "607195",
-    "ach_credit": true,
-    "ach_debit": true,
-    "apbs": true,
-    "nach_debit": false,
-    "type": "RRB",
-    "upi": true
   },
   "DHBX": {
     "code": "DHBX",
@@ -12892,6 +12857,18 @@
     "apbs": true,
     "nach_debit": false,
     "type": "O-UCB",
+    "upi": true
+  },
+  "TGRB": {
+    "code": "TGRB",
+    "ifsc": "SBIN0RRDCGB",
+    "micr": "500707000",
+    "iin": "607195",
+    "ach_credit": true,
+    "ach_debit": true,
+    "apbs": true,
+    "nach_debit": true,
+    "type": "RRB",
     "upi": true
   },
   "TGUX": {
