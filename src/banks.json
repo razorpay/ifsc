@@ -3152,18 +3152,6 @@
     "nach_debit": false,
     "type": "O-UCB"
   },
-  "TGRB": {
-    "code": "TGRB",
-    "ifsc": "SBIN0RRDCGB",
-    "micr": "500707000",
-    "iin": "607195",
-    "ach_credit": true,
-    "ach_debit": true,
-    "apbs": true,
-    "nach_debit": false,
-    "type": "RRB",
-    "upi": true
-  },
   "DHBX": {
     "code": "DHBX",
     "ifsc": "UTIB0SDCCB1",
@@ -12869,6 +12857,18 @@
     "apbs": true,
     "nach_debit": false,
     "type": "O-UCB",
+    "upi": true
+  },
+  "TGRB": {
+    "code": "TGRB",
+    "ifsc": "SBIN0RRDCGB",
+    "micr": "500707000",
+    "iin": "607195",
+    "ach_credit": true,
+    "ach_debit": true,
+    "apbs": true,
+    "nach_debit": true,
+    "type": "RRB",
     "upi": true
   },
   "TGUX": {
