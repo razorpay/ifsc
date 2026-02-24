@@ -1,0 +1,8 @@
+# Replaces (H.P.) in district field
+---
+action: patch
+patch:
+  DISTRICT: Shimla
+ifsc:
+  - PUNB0113200
+  
