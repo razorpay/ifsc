@@ -16,7 +16,7 @@ func TestGetBankName_BankName(t *testing.T) {
 func TestGetBankName_Sublet(t *testing.T) {
 	assert := assert.New(t)
 	fixtureData := getSubletFixture()
-	for input, _ := range fixtureData {
+	for input := range fixtureData {
 		ownerBankCode := input[0:4]
 		actual, err := GetBankName(input)
 		assert.Nil(err)
@@ -117,3 +117,4 @@ func TestValidate(t *testing.T) {
 		})
 	}
 }
+
