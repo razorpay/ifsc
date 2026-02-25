@@ -20,6 +20,77 @@ HEADINGS_INSERT = %w[
   STATE
 ].freeze
 
+# RBI sometimes changes column names in RTGS/NEFT Excel files.
+# Map possible header names (normalized) to our canonical column names.
+def normalize_header_for_match(header)
+  return '' if header.nil?
+  header.to_s.strip.downcase.gsub(/[\s\-]+/, '_').gsub(/[^a-z0-9_]/, '')
+end
+
+RBI_HEADER_ALIASES = {
+  'ifsc' => 'IFSC',
+  'ifsc_code' => 'IFSC',
+  'ifsc_code_of_the_branch' => 'IFSC',
+  'bank' => 'BANK',
+  'bank_name' => 'BANK',
+  'name_of_bank' => 'BANK',
+  'name_of_the_bank' => 'BANK',
+  'bank_name_of_the_branch' => 'BANK',
+  'bankcode' => 'BANKCODE',
+  'bank_code' => 'BANKCODE',
+  'bank_code_of_the_branch' => 'BANKCODE',
+  'branch' => 'BRANCH',
+  'branch_name' => 'BRANCH',
+  'name_of_branch' => 'BRANCH',
+  'address' => 'ADDRESS',
+  'branch_address' => 'ADDRESS',
+  'state' => 'STATE',
+  'state_name' => 'STATE',
+  'micr' => 'MICR',
+  'micr_code' => 'MICR',
+  'std_code' => 'STD CODE',
+  'stdcode' => 'STD CODE',
+  'phone' => 'PHONE',
+  'phone_number' => 'PHONE',
+  'contact' => 'PHONE',
+  'contact_number' => 'PHONE',
+  'city1' => 'CITY1',
+  'city_1' => 'CITY1',
+  'centre' => 'CITY1',
+  'center' => 'CITY1',
+  'city2' => 'CITY2',
+  'city_2' => 'CITY2',
+  'district' => 'CITY2',
+}.freeze
+
+def build_rbi_header_map(actual_headers)
+  map = {}
+  actual_headers.each do |h|
+    next if h.nil?
+    normalized = normalize_header_for_match(h)
+    canonical = RBI_HEADER_ALIASES[normalized]
+    map[h] = canonical if canonical
+  end
+  # Also match exact canonical names (in case RBI uses them as-is)
+  actual_headers.each do |h|
+    next if h.nil?
+    next if map.key?(h)
+    map[h] = h if %w[IFSC BANK BRANCH ADDRESS STATE MICR PHONE CITY1 CITY2].include?(h)
+    map[h] = 'STD CODE' if h == 'STD CODE'
+  end
+  map
+end
+
+def map_row_to_canonical_headers(row_hash, header_map)
+  return row_hash if header_map.empty?
+  canonical = {}
+  row_hash.each do |actual_key, value|
+    canonical_key = header_map[actual_key]
+    canonical[canonical_key || actual_key] = value if canonical_key || actual_key
+  end
+  canonical
+end
+
 def parse_imps(banks)
   data = {}
   banknames = JSON.parse File.read('../../src/banknames.json')
@@ -188,14 +259,22 @@ def parse_csv(files, banks, additional_attributes = {})
   files.each do |file|
     row_index = 0
     headings = []
+    header_map = {}
     log "Parsing #{file}"
-    headers = CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
+    CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
       # We have found the last row in the sheet, remaining rows are empty
       if row[0].nil? and row[1].nil? and row[2].nil?
         break
       end
 
       row = row.to_h
+
+      # Build header map from actual CSV column names (RBI may use different names)
+      if header_map.empty?
+        header_map = build_rbi_header_map(row.keys)
+        log "RBI column mapping for #{file}: #{header_map.select { |_, v| v }.inspect}", :debug
+      end
+      row = map_row_to_canonical_headers(row, header_map)
 
       # BDBL0001094 RTGS sheet, so it gets overridden with data from NEFT sheet
       if row['STATE'] == '0'
@@ -224,7 +303,8 @@ def parse_csv(files, banks, additional_attributes = {})
 
       # There is a second header in the middle of the sheet.
       # :facepalm: RBI
-      next if row['IFSC'].nil? or ['IFSC_CODE', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(row['IFSC'])
+      ifsc_val = row['IFSC'].to_s.strip
+      next if ifsc_val.empty? or ['IFSC_CODE', 'IFSC Code', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(ifsc_val)
 
       original_ifsc = row['IFSC']
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '').strip
