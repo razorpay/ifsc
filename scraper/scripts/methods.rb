@@ -368,15 +368,44 @@ def export_csv(data)
   end
 end
 
+# Applies CONTRIBUTING.md bank name guidelines so exported names are ready to copy to src/banknames.json.
+# See CONTRIBUTING.md "Bank Names Guidelines" for full rules; this does the mechanical fixes.
+def normalize_bank_name_for_guidelines(name)
+  return name if name.nil? || name.to_s.strip.empty?
+  s = name.to_s.strip
+  # 3. Do not prefix the bank name with "The".
+  s = s.sub(/\AThe\s+/i, '')
+  # 1. Do not include ltd, Ltd at the end.
+  s = s.gsub(/,?\s+(Ltd\.?|Limited)\s*\.?\z/i, '')
+  # 4 & 9. Coop -> Co-operative; no period after Co-operative.
+  s = s.gsub(/\bCo-?op\.?\b/i, 'Co-operative')
+  s = s.gsub(/Co-operative\./, 'Co-operative')
+  # 11. Sahakari, not sahkari (fix typo and standardise case).
+  s = s.gsub(/\b[Ss]ahkari\b/i, 'Sahakari')
+  s = s.gsub(/\b[Ss]ahakari\b/i, 'Sahakari')
+  s.strip
+end
+
 # Build banknames.json from scraped data (RBI bank names) merged with existing banknames.
+# Uses the most frequent bank name per bank code in the dataset so the same bank doesn't
+# show different names (RBI sheets sometimes have slight spelling differences per branch).
+# Applies CONTRIBUTING.md bank name guidelines before writing.
 # Writes to data/banknames.json so you can copy to src/banknames.json and edit.
 def export_banknames(dataset)
-  banknames = {}
+  # Collect all (bank_code, name) and count so we pick the most frequent name per bank
+  name_counts_by_code = Hash.new { |h, k| h[k] = Hash.new(0) }
   dataset.each do |ifsc, row|
     next unless ifsc && ifsc.length >= 4
     bank_code = ifsc[0..3]
     name = row['BANK'].to_s.strip
-    banknames[bank_code] = name if name != '' && name != 'NA'
+    next if name == '' || name == 'NA'
+    name_counts_by_code[bank_code][name] += 1
+  end
+  banknames = {}
+  name_counts_by_code.each do |bank_code, names_to_count|
+    # Pick the name that appears most often in RBI data; if tie, use first alphabetically
+    best_name = names_to_count.max_by { |name, count| [count, name] }[0]
+    banknames[bank_code] = normalize_bank_name_for_guidelines(best_name)
   end
   existing_path = '../../src/banknames.json'
   if File.file?(existing_path)
@@ -458,7 +487,11 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['SWIFT'] = nil
     # Use bank name from RBI sheet when present, else resolve from IFSC (sublets etc.)
     rbi_bank_name = combined_data['BANK'].to_s.strip
-    combined_data['BANK'] = rbi_bank_name.empty? ? bank_name_from_code(combined_data['IFSC']) : rbi_bank_name
+    combined_data['BANK'] = if rbi_bank_name.empty?
+                              bank_name_from_code(combined_data['IFSC'])
+                            else
+                              normalize_bank_name_for_guidelines(rbi_bank_name)
+                            end
     combined_data.delete('DATE')
     combined_data['ISO3166'] = ISO3166_MAP[combined_data['STATE']]
 
