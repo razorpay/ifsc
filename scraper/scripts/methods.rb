@@ -368,6 +368,28 @@ def export_csv(data)
   end
 end
 
+# Build banknames.json from scraped data (RBI bank names) merged with existing banknames.
+# Writes to data/banknames.json so you can copy to src/banknames.json and edit.
+def export_banknames(dataset)
+  banknames = {}
+  dataset.each do |ifsc, row|
+    next unless ifsc && ifsc.length >= 4
+    bank_code = ifsc[0..3]
+    name = row['BANK'].to_s.strip
+    banknames[bank_code] = name if name != '' && name != 'NA'
+  end
+  existing_path = '../../src/banknames.json'
+  if File.file?(existing_path)
+    existing = JSON.parse(File.read(existing_path))
+    existing.each { |code, name| banknames[code] ||= name }
+  end
+  FileUtils.mkdir_p('data')
+  File.open('data/banknames.json', 'w') do |f|
+    f.write(JSON.pretty_generate(banknames.sort.to_h))
+  end
+  log "Exported data/banknames.json (#{banknames.size} banks) – copy to src/banknames.json and edit as needed", :info
+end
+
 def find_bank_codes(list)
   banks = Set.new
 
@@ -434,8 +456,9 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['UPI']  ||= false
     combined_data['MICR'] ||= nil
     combined_data['SWIFT'] = nil
-    # Set the bank name considering sublets
-    combined_data['BANK'] = bank_name_from_code(combined_data['IFSC'])
+    # Use bank name from RBI sheet when present, else resolve from IFSC (sublets etc.)
+    rbi_bank_name = combined_data['BANK'].to_s.strip
+    combined_data['BANK'] = rbi_bank_name.empty? ? bank_name_from_code(combined_data['IFSC']) : rbi_bank_name
     combined_data.delete('DATE')
     combined_data['ISO3166'] = ISO3166_MAP[combined_data['STATE']]
 
