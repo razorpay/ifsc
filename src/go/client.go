@@ -2,7 +2,7 @@ package ifsc
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 )
@@ -38,16 +38,18 @@ type IFSCResponse struct {
 	BankCode *string `json:"bank_code"`
 }
 
-// LookUP fetches the response from ifsc api for
+// LookUP fetches the IFSC details from the Razorpay IFSC API for a given IFSC code
 func LookUP(ifsc string) (*IFSCResponse, error) {
 	var responseStruct *IFSCResponse
 	resp, err := client.Get(API_BASE + "/" + ifsc)
 	if err != nil {
 		return nil, err
 	}
+	defer resp.Body.Close()
+	defer resp.Body.Close()
 	status := resp.StatusCode
 	if status == http.StatusOK {
-		responseBytes, err := ioutil.ReadAll(resp.Body)
+		responseBytes, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return nil, err
 		}
