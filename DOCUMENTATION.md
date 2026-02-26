@@ -2,6 +2,11 @@
 1. Whenever a change in detected on the RBI website (https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2009), an automated email from the "RBI Updates" is sent on the "#tech_ifsc" Slack channel.
 2. Open the website it has detected change and compare the RBI release date with the `RBI Update Date` of the latest release. If the release date and update date differ, make a new release.
 
+## Automatic updates when RBI/NPCI data changes
+- The **Scraper** GitHub Action runs on a **weekly schedule** (Sundays 02:00 UTC), re-downloading the RBI NEFT/RTGS sheets and regenerating IFSC data.
+- If the generated `IFSC.json`, `banks.json`, and `sublet.json` differ from the files in `src/`, the workflow opens a pull request (**Auto-update: IFSC data from RBI/NPCI**) with the updated files.
+- Review that PR, ensure tests pass, then merge and follow the normal release steps (branch, version bump, changelog, tag, release). No need to manually run the scraper or copy artifacts when the auto-PR is created.
+
 ## Publish a new release of IFSC repository (https://github.com/razorpay/ifsc)
 1. Clone the IFSC repository (https://github.com/razorpay/ifsc) locally.
 2. Create a new `release/{version}` branch. The branch name must be `release/x.y.z`. Start with a patch version bump unless you are making code level changes, in which case you can use a minor/major version bump.
