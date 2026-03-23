@@ -22,6 +22,7 @@ module Razorpay
       ACOX = :ACOX
       ACUB = :ACUB
       ACUX = :ACUX
+      ADBK = :ADBK
       ADBX = :ADBX
       ADCB = :ADCB
       ADCC = :ADCC
@@ -135,6 +136,7 @@ module Razorpay
       BCCX = :BCCX
       BCEX = :BCEX
       BCEY = :BCEY
+      BCHN = :BCHN
       BCOX = :BCOX
       BCUB = :BCUB
       BCUX = :BCUX
@@ -225,6 +227,7 @@ module Razorpay
       CCBL = :CCBL
       CCBX = :CCBX
       CCCX = :CCCX
+      CCIL = :CCIL
       CCMX = :CCMX
       CCOB = :CCOB
       CCUX = :CCUX
@@ -383,6 +386,7 @@ module Razorpay
       FSFB = :FSFB
       FZCX = :FZCX
       FZSX = :FZSX
+      GABK = :GABK
       GACX = :GACX
       GADX = :GADX
       GAMX = :GAMX
@@ -414,6 +418,7 @@ module Razorpay
       GSBX = :GSBX
       GSCB = :GSCB
       GSCX = :GSCX
+      GSSB = :GSSB
       GSSX = :GSSX
       GTCX = :GTCX
       GUBX = :GUBX
@@ -433,6 +438,7 @@ module Razorpay
       HGBX = :HGBX
       HINX = :HINX
       HISX = :HISX
+      HITP = :HITP
       HMBX = :HMBX
       HMNX = :HMNX
       HOCX = :HOCX
@@ -472,6 +478,7 @@ module Razorpay
       INCX = :INCX
       INDB = :INDB
       INDX = :INDX
+      INPA = :INPA
       IOBA = :IOBA
       IPCX = :IPCX
       IPOS = :IPOS
@@ -862,6 +869,7 @@ module Razorpay
       NGSB = :NGSB
       NGSX = :NGSX
       NGUX = :NGUX
+      NHBA = :NHBA
       NICB = :NICB
       NIDX = :NIDX
       NILX = :NILX
@@ -947,6 +955,7 @@ module Razorpay
       PGRX = :PGRX
       PGTX = :PGTX
       PHIX = :PHIX
+      PHNP = :PHNP
       PITX = :PITX
       PJSB = :PJSB
       PKBX = :PKBX
@@ -964,6 +973,7 @@ module Razorpay
       PNSX = :PNSX
       PPBX = :PPBX
       PPCX = :PPCX
+      PPNT = :PPNT
       PRCX = :PRCX
       PREX = :PREX
       PROX = :PROX
@@ -1268,6 +1278,7 @@ module Razorpay
       TBSX = :TBSX
       TBTX = :TBTX
       TBUX = :TBUX
+      TCBR = :TCBR
       TCBX = :TCBX
       TCCX = :TCCX
       TCHX = :TCHX
@@ -1387,6 +1398,7 @@ module Razorpay
       UCBX = :UCBX
       UCCX = :UCCX
       UCDX = :UCDX
+      UCLB = :UCLB
       UCUX = :UCUX
       UGBX = :UGBX
       UICX = :UICX
@@ -1460,11 +1472,13 @@ module Razorpay
       VMUX = :VMUX
       VNSX = :VNSX
       VRDX = :VRDX
+      VSBA = :VSBA
       VSBL = :VSBL
       VSBX = :VSBX
       VSCX = :VSCX
       VSSX = :VSSX
       VSVX = :VSVX
+      VTBJ = :VTBJ
       VUCX = :VUCX
       VVCX = :VVCX
       VVSB = :VVSB

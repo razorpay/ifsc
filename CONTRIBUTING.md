@@ -24,6 +24,8 @@ file, here are a few guidelines:
 10. Grameen is spelled three ways: Grameen/Gramin/Grameena. Check the RBI List for the corresponding bank [here](https://m.rbi.org.in/scripts/Bs_viewcontent.aspx?Id=3657).
 11. `Sahakari`, not `sahkari`.
 
+The scraper applies the above rules automatically when generating `data/banknames.json` (e.g. strips leading "The", trailing "Ltd"/"Limited", normalises "Co-operative" and "Sahakari"). You can copy that file to `src/banknames.json` and edit further as needed.
+
 ## Code Guidelines
 
 We use `prettier` for the javascript and `rubocop` for the Ruby code for style fixes

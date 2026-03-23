@@ -20,6 +20,77 @@ HEADINGS_INSERT = %w[
   STATE
 ].freeze
 
+# RBI sometimes changes column names in RTGS/NEFT Excel files.
+# Map possible header names (normalized) to our canonical column names.
+def normalize_header_for_match(header)
+  return '' if header.nil?
+  header.to_s.strip.downcase.gsub(/[\s\-]+/, '_').gsub(/[^a-z0-9_]/, '')
+end
+
+RBI_HEADER_ALIASES = {
+  'ifsc' => 'IFSC',
+  'ifsc_code' => 'IFSC',
+  'ifsc_code_of_the_branch' => 'IFSC',
+  'bank' => 'BANK',
+  'bank_name' => 'BANK',
+  'name_of_bank' => 'BANK',
+  'name_of_the_bank' => 'BANK',
+  'bank_name_of_the_branch' => 'BANK',
+  'bankcode' => 'BANKCODE',
+  'bank_code' => 'BANKCODE',
+  'bank_code_of_the_branch' => 'BANKCODE',
+  'branch' => 'BRANCH',
+  'branch_name' => 'BRANCH',
+  'name_of_branch' => 'BRANCH',
+  'address' => 'ADDRESS',
+  'branch_address' => 'ADDRESS',
+  'state' => 'STATE',
+  'state_name' => 'STATE',
+  'micr' => 'MICR',
+  'micr_code' => 'MICR',
+  'std_code' => 'STD CODE',
+  'stdcode' => 'STD CODE',
+  'phone' => 'PHONE',
+  'phone_number' => 'PHONE',
+  'contact' => 'PHONE',
+  'contact_number' => 'PHONE',
+  'city1' => 'CITY1',
+  'city_1' => 'CITY1',
+  'centre' => 'CITY1',
+  'center' => 'CITY1',
+  'city2' => 'CITY2',
+  'city_2' => 'CITY2',
+  'district' => 'CITY2',
+}.freeze
+
+def build_rbi_header_map(actual_headers)
+  map = {}
+  actual_headers.each do |h|
+    next if h.nil?
+    normalized = normalize_header_for_match(h)
+    canonical = RBI_HEADER_ALIASES[normalized]
+    map[h] = canonical if canonical
+  end
+  # Also match exact canonical names (in case RBI uses them as-is)
+  actual_headers.each do |h|
+    next if h.nil?
+    next if map.key?(h)
+    map[h] = h if %w[IFSC BANK BRANCH ADDRESS STATE MICR PHONE CITY1 CITY2].include?(h)
+    map[h] = 'STD CODE' if h == 'STD CODE'
+  end
+  map
+end
+
+def map_row_to_canonical_headers(row_hash, header_map)
+  return row_hash if header_map.empty?
+  canonical = {}
+  row_hash.each do |actual_key, value|
+    canonical_key = header_map[actual_key]
+    canonical[canonical_key || actual_key] = value if canonical_key || actual_key
+  end
+  canonical
+end
+
 def parse_imps(banks)
   data = {}
   banknames = JSON.parse File.read('../../src/banknames.json')
@@ -188,14 +259,22 @@ def parse_csv(files, banks, additional_attributes = {})
   files.each do |file|
     row_index = 0
     headings = []
+    header_map = {}
     log "Parsing #{file}"
-    headers = CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
+    CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
       # We have found the last row in the sheet, remaining rows are empty
       if row[0].nil? and row[1].nil? and row[2].nil?
         break
       end
 
       row = row.to_h
+
+      # Build header map from actual CSV column names (RBI may use different names)
+      if header_map.empty?
+        header_map = build_rbi_header_map(row.keys)
+        log "RBI column mapping for #{file}: #{header_map.select { |_, v| v }.inspect}", :debug
+      end
+      row = map_row_to_canonical_headers(row, header_map)
 
       # BDBL0001094 RTGS sheet, so it gets overridden with data from NEFT sheet
       if row['STATE'] == '0'
@@ -224,7 +303,8 @@ def parse_csv(files, banks, additional_attributes = {})
 
       # There is a second header in the middle of the sheet.
       # :facepalm: RBI
-      next if row['IFSC'].nil? or ['IFSC_CODE', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(row['IFSC'])
+      ifsc_val = row['IFSC'].to_s.strip
+      next if ifsc_val.empty? or ['IFSC_CODE', 'IFSC Code', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(ifsc_val)
 
       original_ifsc = row['IFSC']
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '').strip
@@ -286,6 +366,57 @@ def export_csv(data)
       csv << sorted_data
     end
   end
+end
+
+# Applies CONTRIBUTING.md bank name guidelines so exported names are ready to copy to src/banknames.json.
+# See CONTRIBUTING.md "Bank Names Guidelines" for full rules; this does the mechanical fixes.
+def normalize_bank_name_for_guidelines(name)
+  return name if name.nil? || name.to_s.strip.empty?
+  s = name.to_s.strip
+  # 3. Do not prefix the bank name with "The".
+  s = s.sub(/\AThe\s+/i, '')
+  # 1. Do not include ltd, Ltd at the end.
+  s = s.gsub(/,?\s+(Ltd\.?|Limited)\s*\.?\z/i, '')
+  # 4 & 9. Coop -> Co-operative; no period after Co-operative.
+  s = s.gsub(/\bCo-?op\.?\b/i, 'Co-operative')
+  s = s.gsub(/Co-operative\./, 'Co-operative')
+  # 11. Sahakari, not sahkari (fix typo and standardise case).
+  s = s.gsub(/\b[Ss]ahkari\b/i, 'Sahakari')
+  s = s.gsub(/\b[Ss]ahakari\b/i, 'Sahakari')
+  s.strip
+end
+
+# Build banknames.json from scraped data (RBI bank names) merged with existing banknames.
+# Uses the most frequent bank name per bank code in the dataset so the same bank doesn't
+# show different names (RBI sheets sometimes have slight spelling differences per branch).
+# Applies CONTRIBUTING.md bank name guidelines before writing.
+# Writes to data/banknames.json so you can copy to src/banknames.json and edit.
+def export_banknames(dataset)
+  # Collect all (bank_code, name) and count so we pick the most frequent name per bank
+  name_counts_by_code = Hash.new { |h, k| h[k] = Hash.new(0) }
+  dataset.each do |ifsc, row|
+    next unless ifsc && ifsc.length >= 4
+    bank_code = ifsc[0..3]
+    name = row['BANK'].to_s.strip
+    next if name == '' || name == 'NA'
+    name_counts_by_code[bank_code][name] += 1
+  end
+  banknames = {}
+  name_counts_by_code.each do |bank_code, names_to_count|
+    # Pick the name that appears most often in RBI data; if tie, use first alphabetically
+    best_name = names_to_count.max_by { |name, count| [count, name] }[0]
+    banknames[bank_code] = normalize_bank_name_for_guidelines(best_name)
+  end
+  existing_path = '../../src/banknames.json'
+  if File.file?(existing_path)
+    existing = JSON.parse(File.read(existing_path))
+    existing.each { |code, name| banknames[code] ||= name }
+  end
+  FileUtils.mkdir_p('data')
+  File.open('data/banknames.json', 'w') do |f|
+    f.write(JSON.pretty_generate(banknames.sort.to_h))
+  end
+  log "Exported data/banknames.json (#{banknames.size} banks) – copy to src/banknames.json and edit as needed", :info
 end
 
 def find_bank_codes(list)
@@ -354,8 +485,13 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['UPI']  ||= false
     combined_data['MICR'] ||= nil
     combined_data['SWIFT'] = nil
-    # Set the bank name considering sublets
-    combined_data['BANK'] = bank_name_from_code(combined_data['IFSC'])
+    # Use bank name from RBI sheet when present, else resolve from IFSC (sublets etc.)
+    rbi_bank_name = combined_data['BANK'].to_s.strip
+    combined_data['BANK'] = if rbi_bank_name.empty?
+                              bank_name_from_code(combined_data['IFSC'])
+                            else
+                              normalize_bank_name_for_guidelines(rbi_bank_name)
+                            end
     combined_data.delete('DATE')
     combined_data['ISO3166'] = ISO3166_MAP[combined_data['STATE']]
 
