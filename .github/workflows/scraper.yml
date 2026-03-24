@@ -5,6 +5,9 @@ on:
       release:
         description: Version
         required: false
+  # Run weekly to pick up RBI/NPCI list changes; auto-PR opens when data differs from src/
+  schedule:
+    - cron: '0 2 * * 0'
 name: Scraper
 jobs:
   scraper:
@@ -74,3 +77,34 @@ jobs:
         with:
           name: release-notes.md
           path: scraper/scripts/release.md
+  auto-update-pr:
+    name: Open PR when RBI/data changed
+    needs: [scraper, release-notes]
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: release-artifact
+          path: scraper/scripts/data
+      - name: Copy generated data to src when different
+        run: |
+          cp scraper/scripts/data/IFSC.json scraper/scripts/data/banks.json scraper/scripts/data/sublet.json src/
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: '[auto] Update IFSC data from RBI/NPCI sources'
+          branch: auto/ifsc-update-${{ github.run_number }}
+          delete-branch: true
+          title: 'Auto-update: IFSC data from RBI/NPCI'
+          body: |
+            Data files were regenerated from RBI/NPCI sources and differ from current `src/`.
+            Please review, run tests, and merge to release.
+          labels: |
+            auto-update
