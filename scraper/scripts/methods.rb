@@ -20,91 +20,6 @@ HEADINGS_INSERT = %w[
   STATE
 ].freeze
 
-# RBI sometimes changes column names in RTGS/NEFT Excel files.
-# Map possible header names (normalized) to our canonical column names.
-def normalize_header_for_match(header)
-  return '' if header.nil?
-  header.to_s.strip.downcase.gsub(/[\s\-]+/, '_').gsub(/[^a-z0-9_]/, '')
-end
-
-RBI_HEADER_ALIASES = {
-  'ifsc' => 'IFSC',
-  'ifsc_code' => 'IFSC',
-  'ifsc_code_of_the_branch' => 'IFSC',
-  'bank' => 'BANK',
-  'bank_name' => 'BANK',
-  'name_of_bank' => 'BANK',
-  'name_of_the_bank' => 'BANK',
-  'bank_name_of_the_branch' => 'BANK',
-  'branch' => 'BRANCH',
-  'branch_name' => 'BRANCH',
-  'name_of_branch' => 'BRANCH',
-  'address' => 'ADDRESS',
-  'branch_address' => 'ADDRESS',
-  'state' => 'STATE',
-  'state_name' => 'STATE',
-  'micr' => 'MICR',
-  'micr_code' => 'MICR',
-  'std_code' => 'STD CODE',
-  'stdcode' => 'STD CODE',
-  'phone' => 'PHONE',
-  'phone_number' => 'PHONE',
-  'contact' => 'PHONE',
-  'contact_number' => 'PHONE',
-  'city1' => 'CITY1',
-  'city_1' => 'CITY1',
-  'centre' => 'CITY1',
-  'center' => 'CITY1',
-  'city2' => 'CITY2',
-  'city_2' => 'CITY2',
-  'district' => 'CITY2',
-}.freeze
-
-def build_rbi_header_map(actual_headers)
-  map = {}
-  actual_headers.each do |h|
-    next if h.nil?
-    normalized = normalize_header_for_match(h)
-    canonical = RBI_HEADER_ALIASES[normalized]
-    map[h] = canonical if canonical
-  end
-  # Also match exact canonical names in case RBI uses them as-is
-  actual_headers.each do |h|
-    next if h.nil?
-    next if map.key?(h)
-    map[h] = h if %w[IFSC BANK BRANCH ADDRESS STATE MICR PHONE CITY1 CITY2].include?(h)
-    map[h] = 'STD CODE' if h == 'STD CODE'
-  end
-  map
-end
-
-def map_row_to_canonical_headers(row_hash, header_map)
-  return row_hash if header_map.empty?
-  canonical = {}
-  row_hash.each do |actual_key, value|
-    canonical_key = header_map[actual_key]
-    canonical[canonical_key || actual_key] = value
-  end
-  canonical
-end
-
-# Applies CONTRIBUTING.md bank name guidelines so exported names are ready to copy to src/banknames.json.
-def normalize_bank_name_for_guidelines(name)
-  return name if name.nil? || name.to_s.strip.empty?
-  s = name.to_s.strip
-  # 3. Do not prefix the bank name with "The".
-  s = s.sub(/\AThe\s+/i, '')
-  # 1. Do not include ltd, Ltd at the end.
-  s = s.gsub(/,?\s+(Ltd\.?|Limited)\s*\.?\z/i, '')
-  # 4 & 9. Coop -> Co-operative; no period after Co-operative.
-  s = s.gsub(/\bCo-?op\.?\b/i, 'Co-operative')
-  s = s.gsub(/Co-operative\./, 'Co-operative')
-  # 11. Sahakari, not sahkari (fix typo and standardise case).
-  s = s.gsub(/\b[Ss]ahkari\b/i, 'Sahakari')
-  s = s.gsub(/\b[Ss]ahakari\b/i, 'Sahakari')
-  s.strip
-end
-
 def parse_imps(banks)
   data = {}
   banknames = JSON.parse File.read('../../src/banknames.json')
@@ -112,9 +27,8 @@ def parse_imps(banks)
     next unless row[:ifsc] && row[:ifsc].strip.to_s.length == 11
 
     # These are virtual branches, so we fix them to NPCI HQ for now
-    nach_name = row[:bank_name].to_s.strip
     data[row[:ifsc]] = {
-      'BANK' => banknames[code] || (nach_name.empty? ? nil : nach_name),
+      'BANK' => banknames[code],
       'IFSC' => row[:ifsc],
       'BRANCH' => "#{banknames[code]} IMPS",
       'CENTRE' => 'NA',
@@ -274,22 +188,14 @@ def parse_csv(files, banks, additional_attributes = {})
   files.each do |file|
     row_index = 0
     headings = []
-    header_map = {}
     log "Parsing #{file}"
-    CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
+    headers = CSV.foreach("sheets/#{file}.csv", encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
       # We have found the last row in the sheet, remaining rows are empty
       if row[0].nil? and row[1].nil? and row[2].nil?
         break
       end
 
       row = row.to_h
-
-      # Build header map from actual CSV column names on first data row (RBI may rename columns)
-      if header_map.empty?
-        header_map = build_rbi_header_map(row.keys)
-        log "RBI column mapping for #{file}: #{header_map.select { |_, v| v }.inspect}", :debug
-      end
-      row = map_row_to_canonical_headers(row, header_map)
 
       # BDBL0001094 RTGS sheet, so it gets overridden with data from NEFT sheet
       if row['STATE'] == '0'
@@ -318,8 +224,7 @@ def parse_csv(files, banks, additional_attributes = {})
 
       # There is a second header in the middle of the sheet.
       # :facepalm: RBI
-      ifsc_val = row['IFSC'].to_s.strip
-      next if ifsc_val.empty? or ['IFSC_CODE', 'IFSC Code', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(ifsc_val)
+      next if row['IFSC'].nil? or ['IFSC_CODE', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(row['IFSC'])
 
       original_ifsc = row['IFSC']
       row['IFSC'] = row['IFSC'].upcase.gsub(/[^0-9A-Za-z]/, '').strip
@@ -449,52 +354,14 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['UPI']  ||= false
     combined_data['MICR'] ||= nil
     combined_data['SWIFT'] = nil
-    # Prefer bank name from RBI sheet when present; fall back to sublet-aware lookup
-    rbi_bank_name = combined_data['BANK'].to_s.strip
-    combined_data['BANK'] = if rbi_bank_name.empty?
-                              bank_name_from_code(combined_data['IFSC'])
-                            else
-                              normalize_bank_name_for_guidelines(rbi_bank_name)
-                            end
+    # Set the bank name considering sublets
+    combined_data['BANK'] = bank_name_from_code(combined_data['IFSC'])
     combined_data.delete('DATE')
     combined_data['ISO3166'] = ISO3166_MAP[combined_data['STATE']]
 
     h[ifsc] = combined_data
   end
   h
-end
-
-# Build data/banknames.json from the scraped dataset merged with the existing src/banknames.json.
-# Picks the most frequent RBI-supplied name per bank code and applies CONTRIBUTING.md guidelines.
-# Copy data/banknames.json to src/banknames.json and edit manually as needed.
-def export_banknames(dataset)
-  name_counts_by_code = Hash.new { |h, k| h[k] = Hash.new(0) }
-  dataset.each do |ifsc, row|
-    next unless ifsc && ifsc.length >= 4
-    bank_code = ifsc[0..3]
-    name = row['BANK'].to_s.strip
-    next if name.empty? || name == 'NA'
-    name_counts_by_code[bank_code][name] += 1
-  end
-
-  banknames = {}
-  name_counts_by_code.each do |bank_code, names_to_count|
-    best_name = names_to_count.max_by { |name, count| [count, name] }[0]
-    banknames[bank_code] = normalize_bank_name_for_guidelines(best_name)
-  end
-
-  existing_path = '../../src/banknames.json'
-  if File.file?(existing_path)
-    existing = JSON.parse(File.read(existing_path))
-    # Existing human-curated names take precedence; only fill in missing codes
-    existing.each { |code, name| banknames[code] ||= name }
-  end
-
-  FileUtils.mkdir_p('data')
-  File.open('data/banknames.json', 'w') do |f|
-    f.write(JSON.pretty_generate(banknames.sort.to_h))
-  end
-  log "Exported data/banknames.json (#{banknames.size} banks) – copy to src/banknames.json and edit as needed", :info
 end
 
 def apply_bank_patches(dataset)

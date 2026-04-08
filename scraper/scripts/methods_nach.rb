@@ -25,10 +25,9 @@ def get_value(data)
   (data != nil && data.text.strip == 'Yes') ? true : false
 end
 
-def bank_data(bank_code, bank_name, data, _ifsc)
+def bank_data(bank_code, data, _ifsc)
   {
     code: bank_code,
-    bank_name: bank_name,
     # IFSC codes are 11 characters long
     ifsc: match_length_or_nil(data[4], 11),
     # MICR codes are 9 digits long
@@ -77,11 +76,9 @@ def parse_nach
       data = row.css('td')
       ifsc = data[4].text.strip
       bank_code = data[1].text.strip
-      # RBI added a Bank Name column (index 2) between Bank Code and MICR
-      bank_name = data[2].text.strip
       sublets[ifsc] = bank_code if ifsc.size == 11 && ifsc[0..3] != bank_code
 
-      banks[bank_code] = bank_data(bank_code, bank_name, data, ifsc)
+      banks[bank_code] = bank_data(bank_code, data, ifsc)
     end
     header_cleared = true
   end

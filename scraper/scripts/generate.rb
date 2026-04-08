@@ -43,7 +43,4 @@ export_json_list(ifsc_codes_list)
 log 'Exporting to validation JSON'
 export_to_code_json(ifsc_codes_list)
 
-log 'Exporting banknames.json'
-export_banknames(dataset)
-
 log 'Export done'
