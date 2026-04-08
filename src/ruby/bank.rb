@@ -22,6 +22,7 @@ module Razorpay
       ACOX = :ACOX
       ACUB = :ACUB
       ACUX = :ACUX
+      ADBK = :ADBK
       ADBX = :ADBX
       ADCB = :ADCB
       ADCC = :ADCC
@@ -225,6 +226,7 @@ module Razorpay
       CCBL = :CCBL
       CCBX = :CCBX
       CCCX = :CCCX
+      CCIL = :CCIL
       CCMX = :CCMX
       CCOB = :CCOB
       CCUX = :CCUX
@@ -472,6 +474,7 @@ module Razorpay
       INCX = :INCX
       INDB = :INDB
       INDX = :INDX
+      INPA= : INPA
       IOBA = :IOBA
       IPCX = :IPCX
       IPOS = :IPOS
@@ -964,6 +967,7 @@ module Razorpay
       PNSX = :PNSX
       PPBX = :PPBX
       PPCX = :PPCX
+      PPNT = :PPNT
       PRCX = :PRCX
       PREX = :PREX
       PROX = :PROX
@@ -1268,6 +1272,7 @@ module Razorpay
       TBSX = :TBSX
       TBTX = :TBTX
       TBUX = :TBUX
+      TCBR = :TCBR
       TCBX = :TCBX
       TCCX = :TCCX
       TCHX = :TCHX
@@ -1460,6 +1465,7 @@ module Razorpay
       VMUX = :VMUX
       VNSX = :VNSX
       VRDX = :VRDX
+      VSBA = :VSBA
       VSBL = :VSBL
       VSBX = :VSBX
       VSCX = :VSCX
