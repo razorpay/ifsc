@@ -1,0 +1,218 @@
+name: "Create IFSC Release PR"
+
+on:
+  repository_dispatch:
+    types: [rbi-alert]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run - only log what would happen, no actual changes"
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-release-pr:
+    name: Bump version and open PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          token: ${{ secrets.IFSC_RELEASE_PAT || github.token }}
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "ifsc-release-bot"
+          git config user.email "ifsc-release-bot@razorpay.com"
+
+      - name: Compute next patch version
+        id: version
+        run: |
+          CURRENT=$(node -p "require('./package.json').version")
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT"
+          NEXT="${MAJOR}.${MINOR}.$((PATCH + 1))"
+          echo "current=$CURRENT" >> "$GITHUB_OUTPUT"
+          echo "next=$NEXT"       >> "$GITHUB_OUTPUT"
+          echo "## Version Info" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Current version: **$CURRENT**" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Next version: **$NEXT**" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Check if dry run
+        id: mode
+        run: |
+          # repository_dispatch = real run, workflow_dispatch defaults to dry_run=true
+          if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+            echo "Mode: **LIVE RUN** (repository_dispatch)" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "dry_run=${{ inputs.dry_run }}" >> "$GITHUB_OUTPUT"
+            if [[ "${{ inputs.dry_run }}" == "true" ]]; then
+              echo "Mode: **DRY RUN** - no changes will be made" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "Mode: **LIVE RUN** (manual trigger)" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          fi
+
+      - name: Skip if branch already exists
+        run: |
+          if git ls-remote --exit-code --heads origin "release/${{ steps.version.outputs.next }}"; then
+            echo "::warning::Branch release/${{ steps.version.outputs.next }} already exists. Exiting."
+            echo "- :warning: Branch **release/${{ steps.version.outputs.next }}** already exists" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo "- Branch **release/${{ steps.version.outputs.next }}** does not exist yet — good to go" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Preview changes (dry run)
+        if: steps.mode.outputs.dry_run == 'true'
+        run: |
+          echo "## Dry Run Preview" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "### What would happen:" >> "$GITHUB_STEP_SUMMARY"
+          echo "1. Create branch: \`release/${{ steps.version.outputs.next }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "2. Bump \`package.json\` version: \`${{ steps.version.outputs.current }}\` → \`${{ steps.version.outputs.next }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "3. Bump \`ifsc.gemspec\` version: \`${{ steps.version.outputs.current }}\` → \`${{ steps.version.outputs.next }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "4. Prepend CHANGELOG.md entry for \`${{ steps.version.outputs.next }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "5. Commit as: \`[release] ${{ steps.version.outputs.next }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "6. Push branch and create PR against \`master\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "7. Request review from \`payout_pse\` team" >> "$GITHUB_STEP_SUMMARY"
+          echo "8. Post Slack notification to \`#tech_ifsc\` with PR link button" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Files that would be modified:" >> "$GITHUB_STEP_SUMMARY"
+
+          echo "#### package.json (version field):" >> "$GITHUB_STEP_SUMMARY"
+          echo "\`\`\`diff" >> "$GITHUB_STEP_SUMMARY"
+          echo "- \"version\": \"${{ steps.version.outputs.current }}\"" >> "$GITHUB_STEP_SUMMARY"
+          echo "+ \"version\": \"${{ steps.version.outputs.next }}\"" >> "$GITHUB_STEP_SUMMARY"
+          echo "\`\`\`" >> "$GITHUB_STEP_SUMMARY"
+
+          echo "#### ifsc.gemspec (version line):" >> "$GITHUB_STEP_SUMMARY"
+          echo "\`\`\`diff" >> "$GITHUB_STEP_SUMMARY"
+          echo "- s.version     = '${{ steps.version.outputs.current }}'" >> "$GITHUB_STEP_SUMMARY"
+          echo "+ s.version     = '${{ steps.version.outputs.next }}'" >> "$GITHUB_STEP_SUMMARY"
+          echo "\`\`\`" >> "$GITHUB_STEP_SUMMARY"
+
+          echo "#### CHANGELOG.md (new entry prepended):" >> "$GITHUB_STEP_SUMMARY"
+          echo "\`\`\`markdown" >> "$GITHUB_STEP_SUMMARY"
+          echo "## [UNRELEASED][unreleased]" >> "$GITHUB_STEP_SUMMARY"
+          echo "## [${{ steps.version.outputs.next }}][${{ steps.version.outputs.next }}]" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Changed" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Metadata updates" >> "$GITHUB_STEP_SUMMARY"
+          echo "\`\`\`" >> "$GITHUB_STEP_SUMMARY"
+
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo ":white_check_mark: **Dry run complete. Re-run with dry_run=false to execute.**" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create release branch
+        if: steps.mode.outputs.dry_run == 'false'
+        run: git checkout -b "release/${{ steps.version.outputs.next }}"
+
+      - name: Bump version in package.json
+        if: steps.mode.outputs.dry_run == 'false'
+        run: |
+          node -e "
+            const fs = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            pkg.version = '${{ steps.version.outputs.next }}';
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+          "
+
+      - name: Bump version in ifsc.gemspec
+        if: steps.mode.outputs.dry_run == 'false'
+        run: |
+          sed -i "s/s\.version\s*=\s*'${{ steps.version.outputs.current }}'/s.version     = '${{ steps.version.outputs.next }}'/" ifsc.gemspec
+
+      - name: Prepend CHANGELOG entry
+        if: steps.mode.outputs.dry_run == 'false'
+        run: |
+          NEW_ENTRY="## [UNRELEASED][unreleased]\n## [${{ steps.version.outputs.next }}][${{ steps.version.outputs.next }}]\n### Changed\n- Metadata updates\n"
+          sed -i "6s|^|${NEW_ENTRY}\n|" CHANGELOG.md
+
+      - name: Commit and push
+        if: steps.mode.outputs.dry_run == 'false'
+        run: |
+          git add package.json ifsc.gemspec CHANGELOG.md
+          git commit -m "[release] ${{ steps.version.outputs.next }}"
+          git push origin "release/${{ steps.version.outputs.next }}"
+
+      - name: Create Pull Request
+        if: steps.mode.outputs.dry_run == 'false'
+        id: create_pr
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.IFSC_RELEASE_PAT }}
+          script: |
+            const version = '${{ steps.version.outputs.next }}';
+            const { data: pr } = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              title: `[release] ${version}`,
+              head:  `release/${version}`,
+              base:  'master',
+              body: [
+                `## Release ${version}`,
+                '',
+                '### What changed',
+                '- Metadata updates triggered by RBI website change alert.',
+                '',
+                '### Checklist',
+                '- [ ] Run scraper.yml, download `release-artifact`, commit `banks.json`, `IFSC.json`, `sublet.json` into `src/`',
+                '- [ ] Tests passing',
+                '- [ ] CHANGELOG reviewed',
+                '',
+                '_This PR was created automatically by the IFSC release bot._',
+              ].join('\n'),
+            });
+            core.setOutput('pr_url',    pr.html_url);
+            core.setOutput('pr_number', String(pr.number));
+
+      - name: Request review from payout_pse team
+        if: steps.mode.outputs.dry_run == 'false'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.IFSC_RELEASE_PAT }}
+          script: |
+            await github.rest.pulls.requestReviewers({
+              owner:        context.repo.owner,
+              repo:         context.repo.repo,
+              pull_number:  parseInt('${{ steps.create_pr.outputs.pr_number }}'),
+              team_reviewers: ['payout_pse'],
+            });
+
+      - name: Post Slack notification with PR button
+        if: steps.mode.outputs.dry_run == 'false'
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "channel": "#tech_ifsc",
+              "text": "IFSC release PR created for v${{ steps.version.outputs.next }}",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": ":rocket: *IFSC Release PR created: v${{ steps.version.outputs.next }}*\nNext: run the scraper, download artifacts, commit into `src/`."
+                  }
+                },
+                {
+                  "type": "actions",
+                  "elements": [
+                    {
+                      "type": "button",
+                      "text": { "type": "plain_text", "text": "View PR" },
+                      "style": "primary",
+                      "url": "${{ steps.create_pr.outputs.pr_url }}"
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
