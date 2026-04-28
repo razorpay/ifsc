@@ -4,11 +4,12 @@ service:
   name: ifsc
   type: single
   repo: razorpay/ifsc
-  owner_team: "TBD"
-  owner_slack: "TBD"
+  owner_team: "Platform"
+  owner_slack: "#ifsc"
   aliases: []
-  # special_notes: |
-  #   Add deployment-specific notes here (AWS accounts, namespaces, IAM roles, etc.)
+  special_notes: |
+    Namespace: ifsc
+    Cluster: prod
 
 phases:
   - name: local-development
