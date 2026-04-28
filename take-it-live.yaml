@@ -1,0 +1,60 @@
+version: "2.0"
+
+service:
+  name: ifsc
+  type: single
+  repo: razorpay/ifsc
+  owner_team: "TBD"
+  owner_slack: "TBD"
+  aliases: []
+  # special_notes: |
+  #   Add deployment-specific notes here (AWS accounts, namespaces, IAM roles, etc.)
+
+phases:
+  - name: local-development
+    description: "Build, test, lint, and review code"
+    depends_on: []
+    when:
+      type: always
+    stages:
+      - name: build-and-test
+        depends_on: []
+        execution_mode: inline
+        skills:
+          - name: shell-agent
+            config:
+              description: "Build the binary and run unit tests"
+              commands:
+                - "# Add your build command here"
+                - "# Add your test command here"
+
+  - name: in-prod-deployment
+    description: "Run readiness checks, deploy to production"
+    depends_on: [local-development]
+    when:
+      type: always
+    stages:
+      - name: gng-readiness
+        depends_on: []
+        execution_mode: sub-agent
+        skills:
+          - name: gng-readiness
+            config:
+              app_name: "ifsc"
+              source_repo: "razorpay/ifsc"
+      - name: go-nogo
+        depends_on: [gng-readiness]
+        execution_mode: inline
+        skills:
+          - name: go-nogo-gate
+            config:
+              require_ci_pass: true
+              require_review_approval: true
+      - name: deployment
+        depends_on: [go-nogo]
+        execution_mode: inline
+        skills:
+          - name: spinnaker-ops-assistant
+            config:
+              spinnaker_app: "prod-mum-rspl-ifsc"
+              repo: "razorpay/ifsc"
