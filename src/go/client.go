@@ -46,7 +46,6 @@ func LookUP(ifsc string) (*IFSCResponse, error) {
 		return nil, err
 	}
 	defer resp.Body.Close()
-	defer resp.Body.Close()
 	status := resp.StatusCode
 	if status == http.StatusOK {
 		responseBytes, err := io.ReadAll(resp.Body)
