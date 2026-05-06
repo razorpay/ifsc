@@ -288,6 +288,17 @@ def export_csv(data)
   end
 end
 
+def update_banknames_from_dataset(dataset)
+  bank_names = {}
+  dataset.each do |ifsc, data|
+    bankcode = ifsc[0..3]
+    bank_name = data['BANK']
+    next if bankcode.nil? || bankcode.empty? || bank_name.nil? || bank_name.empty?
+    bank_names[bankcode] = bank_name
+  end
+  write_banknames_json(bank_names)
+end
+
 def find_bank_codes(list)
   banks = Set.new
 
