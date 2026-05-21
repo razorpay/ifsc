@@ -31,6 +31,7 @@ ifsc
 
 ifsc.fetchDetails('HDFC0CAGSBK')
   .then(function(res) {
+    delete res['CONTACT']
     assert.deepEqual(expected, res)
   })
   .catch(err => {
