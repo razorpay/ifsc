@@ -20,7 +20,6 @@ func getIfscResponse() *IFSCResponse {
   BRANCH: 'THE AGS EMPLOYEES COOP BANK LTD',
   CENTRE: 'BANGALORE',
   CITY: 'BANGALORE URBAN',
-  CONTACT: '+918022265658',
   DISTRICT: 'BANGALORE',
   IFSC: 'HDFC0CAGSBK',
   IMPS: true,
@@ -105,7 +104,6 @@ func TestLookUP(t *testing.T) {
 				assert.Equal(t, tt.IfscResponse.District, got.District)
 				assert.Equal(t, tt.IfscResponse.State, got.State)
 				assert.Equal(t, tt.IfscResponse.Address, got.Address)
-				assert.Equal(t, tt.IfscResponse.Contact, got.Contact)
 				assert.Equal(t, tt.IfscResponse.City, got.City)
 				assert.Equal(t, tt.IfscResponse.IFSC, got.IFSC)
 				assert.Equal(t, tt.IfscResponse.UPI, got.UPI)
@@ -149,7 +147,6 @@ func GetSuccessMockResponse() {
 			"BRANCH":"THE AGS EMPLOYEES COOP BANK LTD",
 			"ADDRESS":"SANGMESH BIRADAR BANGALORE",
 			"STATE":"KARNATAKA",
-			"CONTACT":"+91802265658",
 			"UPI":true,
 			"RTGS":true,
 			"CITY":"BANGALORE",
@@ -175,7 +172,6 @@ func TestIFSCResponse_GetBankName(t *testing.T) {
 		Bank     string
 		Branch   string
 		Address  string
-		Contact  string
 		City     string
 		District string
 		State    string
@@ -208,7 +204,6 @@ func TestIFSCResponse_GetBankName(t *testing.T) {
 				Bank:     &tt.fields.Bank,
 				Branch:   &tt.fields.Branch,
 				Address:  &tt.fields.Address,
-				Contact:  &tt.fields.Contact,
 				City:     &tt.fields.City,
 				District: &tt.fields.District,
 				State:    &tt.fields.State,

@@ -14,7 +14,6 @@ HEADINGS_INSERT = %w[
   IFSC
   BRANCH
   ADDRESS
-  CONTACT
   CITY
   DISTRICT
   STATE
@@ -35,7 +34,6 @@ def parse_imps(banks)
       'DISTRICT' => 'NA',
       'STATE' => 'MAHARASHTRA',
       'ADDRESS' => 'NA',
-      'CONTACT' => nil,
       'IMPS' => true,
       'CITY' => 'MUMBAI',
       'UPI' => banks[code][:upi] ? true : false
@@ -140,47 +138,6 @@ def fix_state!(row)
   end
 end
 
-# Parses the contact details on the RTGS Sheet
-# TODO: Add support for parsing NEFT contact data as well
-def parse_contact(std_code, phone)
-  scan_contact = phone.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
-  scan_std_code = std_code.to_s.gsub(/[\s-]/, '').scan(/^(\d+)\D?/).last
-
-  contact = scan_contact.nil? || (scan_contact == 0) || (scan_contact == '0') || (scan_contact.is_a?(Array) && (scan_contact == ['0'])) ? nil : scan_contact.first
-  std_code = scan_std_code.nil? || (scan_std_code == 0) || (scan_std_code == '0') || (scan_std_code.is_a?(Array) && (scan_std_code == ['0'])) ? nil : scan_std_code.first
-
-  # If std code starts with 0, strip that out
-  if std_code and std_code[0] == '0'
-    std_code = std_code[1..-1]
-  end
-
-  # If we have an STD code, use it correctly
-  # Formatting as per E.164 format
-  # https://en.wikipedia.org/wiki/E.164
-  # if possible
-  if std_code == '91'
-    return "+#{std_code}#{contact}"
-  # Toll free number
-  elsif contact and contact[0..3]=='1800'
-    return "+91022#{contact}"
-  # Mobile Number
-  elsif contact and contact.size == 10
-    return "+91#{contact}"
-  # STD codes can't be 5 digits long, so this is likely a mobile number split into two
-  elsif std_code and contact and std_code.size==5 and contact.size==5 and ["6","7","8","9"].include? std_code[0]
-    return "+91#{std_code}#{contact}"
-  # We likely have a good enough STD code
-  elsif std_code
-    return "+91#{std_code}#{contact}"
-  # This is a local number but we don't have a STD code
-  # So we return the local number as-is
-  # TODO: Try to guess the STD code from PIN/Address/State perhaps?
-  elsif contact
-    return contact
-  else
-    return nil
-  end
-end
 
 def parse_csv(files, banks, additional_attributes = {})
   data = {}
@@ -220,7 +177,6 @@ def parse_csv(files, banks, additional_attributes = {})
         row['MICR'] = nil
       end
 
-      row['CONTACT'] = parse_contact(row['STD CODE'], row['PHONE'])
 
       # There is a second header in the middle of the sheet.
       # :facepalm: RBI
@@ -263,7 +219,6 @@ def parse_csv(files, banks, additional_attributes = {})
       row['DISTRICT'] = sanitize(row['CITY1'])
 
       # Delete rows we don't want in output
-      # Merged into CONTACRT
       row.delete('STD CODE')
       row.delete('PHONE')
       row.delete('CITY1')
@@ -276,7 +231,7 @@ end
 
 def export_csv(data)
   CSV.open('data/IFSC.csv', 'wb') do |csv|
-    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','CONTACT','IMPS','RTGS','CITY','ISO3166','NEFT','MICR','UPI','SWIFT']
+    keys = ['BANK','IFSC','BRANCH','CENTRE','DISTRICT','STATE','ADDRESS','IMPS','RTGS','CITY','ISO3166','NEFT','MICR','UPI','SWIFT']
     csv << keys
     data.each do |code, ifsc_data|
       sorted_data = []

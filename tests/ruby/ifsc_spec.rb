@@ -23,7 +23,6 @@ describe Razorpay::IFSC::IFSC do
       expect(fetched_code.ifsc).to eq mocked_response['IFSC']
       expect(fetched_code.branch).to eq mocked_response['BRANCH']
       expect(fetched_code.address).to eq mocked_response['ADDRESS']
-      expect(fetched_code.contact).to eq mocked_response['CONTACT']
       expect(fetched_code.city).to eq mocked_response['CITY']
       expect(fetched_code.district).to eq mocked_response['DISTRICT']
       expect(fetched_code.state).to eq mocked_response['STATE']
