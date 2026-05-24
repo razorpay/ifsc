@@ -179,7 +179,7 @@ echo $res->centre; // 'GURGAON'
 echo $res->getBankCode(); // KKBK
 echo $res->getBankName(); // 'Kotak Mahindra Bank'
 echo $res->micr; // '110485003'
-// Boolean fields: $res->upi, $res->rtgs, $res->neft, res->imps
+// Boolean fields: $res->upi, $res->rtgs, $res->neft, $res->imps
 
 // You will get a SWIFT code where possible:
 
