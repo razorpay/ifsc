@@ -26,6 +26,7 @@ type IFSCResponse struct {
 	District *string `json:"district"`
 	State    *string `json:"state"`
 	Address  *string `json:"address"`
+	Contact  *string `json:"contact"`
 	City     *string `json:"city"`
 	IFSC     *string `json:"ifsc"`
 	UPI      *bool   `json:"upi"`
@@ -74,6 +75,7 @@ func NewIFSCResponse(input map[string]interface{}) *IFSCResponse {
 	setVal(input["DISTRICT"], &response.District)
 	setVal(input["STATE"], &response.State)
 	setVal(input["ADDRESS"], &response.Address)
+	setVal(input["CONTACT"], &response.Contact)
 	setVal(input["CITY"], &response.City)
 	setVal(input["IFSC"], &response.IFSC)
 	setVal(input["UPI"], &response.UPI)

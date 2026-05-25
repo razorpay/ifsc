@@ -76,10 +76,10 @@ class ClientTest extends TestCase
     {
         switch($ifsc) {
             case 'AIRP0000001':
-            return json_decode('{"MICR":"","BRANCH":"AIRTEL PAYMENTS BRANCH","ADDRESS":"AIRTEL CENTER, PLAT NO-16, UDYOG VIHAR, PHASE-4, GURGOAN","STATE":"HARYANA","UPI":true,"RTGS":true,"CITY":"GURGOAN","CENTRE":"GURGOAN","DISTRICT":"GURGOAN","NEFT":true,"IMPS":true,"SWIFT":"","BANK":"Airtel Payments Bank","BANKCODE":"AIRP","IFSC":"AIRP0000001"}', true);
+            return json_decode('{"MICR":"","BRANCH":"AIRTEL PAYMENTS BRANCH","ADDRESS":"AIRTEL CENTER, PLAT NO-16, UDYOG VIHAR, PHASE-4, GURGOAN","STATE":"HARYANA","CONTACT":"+911244222222","UPI":true,"RTGS":true,"CITY":"GURGOAN","CENTRE":"GURGOAN","DISTRICT":"GURGOAN","NEFT":true,"IMPS":true,"SWIFT":"","BANK":"Airtel Payments Bank","BANKCODE":"AIRP","IFSC":"AIRP0000001"}', true);
 
             case 'HDFC0CAGSBK':
-            return json_decode('{"MICR":"560226263","BRANCH":"THE AGS EMPLOYEES COOP BANK LTD","ADDRESS":"SANGMESH BIRADAR BANGALORE","STATE":"KARNATAKA","UPI":true,"RTGS":true,"CITY":"BANGALORE","CENTRE":"BANGALORE URBAN","DISTRICT":"BANGALORE URBAN","NEFT":true,"IMPS":true,"SWIFT":"HDFCINBB","BANK":"HDFC Bank","BANKCODE":"HDFC","IFSC":"HDFC0CAGSBK"}', true);
+            return json_decode('{"MICR":"560226263","BRANCH":"THE AGS EMPLOYEES COOP BANK LTD","ADDRESS":"SANGMESH BIRADAR BANGALORE","STATE":"KARNATAKA","CONTACT":"+91802265658","UPI":true,"RTGS":true,"CITY":"BANGALORE","CENTRE":"BANGALORE URBAN","DISTRICT":"BANGALORE URBAN","NEFT":true,"IMPS":true,"SWIFT":"HDFCINBB","BANK":"HDFC Bank","BANKCODE":"HDFC","IFSC":"HDFC0CAGSBK"}', true);
         }
     }
 
@@ -104,6 +104,8 @@ class ClientTest extends TestCase
         $this->assertSame($mockData['BRANCH'], $entity->branch);
 
         $this->assertSame($mockData['ADDRESS'], $entity->address);
+
+        $this->assertSame($mockData['CONTACT'], $entity->contact);
 
         $this->assertSame($mockData['CITY'], $entity->city);
 
@@ -145,6 +147,8 @@ class ClientTest extends TestCase
         $this->assertSame($mockData['BRANCH'], $entity->branch);
 
         $this->assertSame($mockData['ADDRESS'], $entity->address);
+
+        $this->assertSame($mockData['CONTACT'], $entity->contact);
 
         $this->assertSame($mockData['CITY'], $entity->city);
 
