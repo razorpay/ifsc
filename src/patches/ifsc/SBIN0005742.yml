@@ -1,0 +1,10 @@
+---
+# Data is incorrect in RBI NEFT sheet
+# Points to Delhi instead of Udaipur for CITY
+# Correct data comes from the SBI Branch Locator
+# https://www.sbi.co.in/web/home/locator/branch
+action: patch
+patch:
+  CITY: UDAIPUR
+ifsc:
+  - SBIN0005742
