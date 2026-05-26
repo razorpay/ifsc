@@ -59,3 +59,190 @@ phases:
             config:
               spinnaker_app: "prod-mum-rspl-ifsc"
               repo: "razorpay/ifsc"
+              region: mumbai-rspl
+              pipeline_parameters:
+                deployment_process: regular
+
+  # ---------------------------------------------------------------------------
+  # MULTI-REGION TEMPLATES (commented — uncomment when expanding to SG/US)
+  # Mumbai (IN) is the primary region above. SG and US deploy independently:
+  #   - infra-setup phases for SG/US run in parallel with in-prod-infra-setup
+  #   - deployment phases for SG/US are sequential after their own infra-setup
+  #   - Each region's deployment can proceed independently (no cross-region gating)
+  # ---------------------------------------------------------------------------
+
+  # - name: sg-prod-infra-setup
+  #   description: "Provision SG production infrastructure: Helm values, Spinnaker pipelines"
+  #   depends_on: [integration-testing]
+  #   when:
+  #     type: auto-detect
+  #     checks:
+  #       - type: file-missing
+  #         repo: kube-manifests
+  #         path: "singapore/ifsc/values.yaml"
+  #         branch: singapore_release
+  #       - type: file-missing
+  #         repo: spinacode
+  #         path: "v3/ifsc/prod-sg/"
+  #     condition: any_true
+  #     description: "SG production infrastructure not fully provisioned yet"
+  #   stages:
+  #     - name: sg-prod-helm-values
+  #       depends_on: []
+  #       execution_mode: sub-agent
+  #       output_contract:
+  #         required:
+  #           - name: pr_url
+  #             type: string
+  #       skills:
+  #         - name: helm-chart-generator
+  #           config:
+  #             environment: prod
+  #             region: ap-southeast-1
+  #         - name: pr-shepherd
+  #           config:
+  #             repo: razorpay/kube-manifests
+  #             pre_merge:
+  #               required_approvals: 1
+  #             halt_after: pre_merge
+  #     - name: create-sg-spinnaker-pipelines
+  #       depends_on: []
+  #       execution_mode: sub-agent
+  #       output_contract:
+  #         required:
+  #           - name: pr_url
+  #             type: string
+  #       skills:
+  #         - name: spinnaker-ops-assistant
+  #           config:
+  #             action: generate-v3-pipelines
+  #             app_name: "ifsc"
+  #             repo: "${service.repo}"
+  #             region: ap-southeast-1
+  #             pipeline_type: standard
+  #         - name: pr-shepherd
+  #           config:
+  #             repo: razorpay/spinacode
+  #             pre_merge:
+  #               required_approvals: 1
+  #             halt_after: pre_merge
+
+  # - name: sg-prod-deployment
+  #   description: "Deploy to SG production via Spinnaker and verify"
+  #   depends_on: [sg-prod-infra-setup]
+  #   when:
+  #     type: always
+  #   stages:
+  #     - name: sg-gng-readiness
+  #       depends_on: []
+  #       execution_mode: sub-agent
+  #       output_contract:
+  #         required:
+  #           - name: status
+  #             type: enum
+  #             values: [GO, NO_GO, CONDITIONAL_GO]
+  #       skills:
+  #         - name: gng-readiness
+  #           config:
+  #             app_name: "ifsc"
+  #             source_repo: "${service.repo}"
+  #             region: ap-southeast-1
+  #     - name: sg-deployment
+  #       depends_on: [sg-gng-readiness]
+  #       execution_mode: inline
+  #       skills:
+  #         - name: spinnaker-ops-assistant
+  #           config:
+  #             spinnaker_app: "prod-sg-rspl-ifsc"
+  #             repo: "${service.repo}"
+  #             region: singapore-rspl
+  #             pipeline_parameters:
+  #               deployment_process: regular
+
+  # - name: us-prod-infra-setup
+  #   description: "Provision US production infrastructure: Helm values, Spinnaker pipelines"
+  #   depends_on: [integration-testing]
+  #   when:
+  #     type: auto-detect
+  #     checks:
+  #       - type: file-missing
+  #         repo: kube-manifests
+  #         path: "us/ifsc/values.yaml"
+  #         branch: us_release
+  #       - type: file-missing
+  #         repo: spinacode
+  #         path: "v3/ifsc/prod-us/"
+  #     condition: any_true
+  #     description: "US production infrastructure not fully provisioned yet"
+  #   stages:
+  #     - name: us-prod-helm-values
+  #       depends_on: []
+  #       execution_mode: sub-agent
+  #       output_contract:
+  #         required:
+  #           - name: pr_url
+  #             type: string
+  #       skills:
+  #         - name: helm-chart-generator
+  #           config:
+  #             environment: prod
+  #             region: us-east-2
+  #         - name: pr-shepherd
+  #           config:
+  #             repo: razorpay/kube-manifests
+  #             pre_merge:
+  #               required_approvals: 1
+  #             halt_after: pre_merge
+  #     - name: create-us-spinnaker-pipelines
+  #       depends_on: []
+  #       execution_mode: sub-agent
+  #       output_contract:
+  #         required:
+  #           - name: pr_url
+  #             type: string
+  #       skills:
+  #         - name: spinnaker-ops-assistant
+  #           config:
+  #             action: generate-v3-pipelines
+  #             app_name: "ifsc"
+  #             repo: "${service.repo}"
+  #             region: us-east-2
+  #             pipeline_type: standard
+  #         - name: pr-shepherd
+  #           config:
+  #             repo: razorpay/spinacode
+  #             pre_merge:
+  #               required_approvals: 1
+  #             halt_after: pre_merge
+
+  # - name: us-prod-deployment
+  #   description: "Deploy to US production via Spinnaker and verify"
+  #   depends_on: [us-prod-infra-setup]
+  #   when:
+  #     type: always
+  #   stages:
+  #     - name: us-gng-readiness
+  #       depends_on: []
+  #       execution_mode: sub-agent
+  #       output_contract:
+  #         required:
+  #           - name: status
+  #             type: enum
+  #             values: [GO, NO_GO, CONDITIONAL_GO]
+  #       skills:
+  #         - name: gng-readiness
+  #           config:
+  #             app_name: "ifsc"
+  #             source_repo: "${service.repo}"
+  #             region: us-east-2
+  #     - name: us-deployment
+  #       depends_on: [us-gng-readiness]
+  #       execution_mode: inline
+  #       skills:
+  #         - name: spinnaker-ops-assistant
+  #           config:
+  #             spinnaker_app: "prod-us-rspl-ifsc"
+  #             repo: "${service.repo}"
+  #             region: us-rspl
+  #             pipeline_parameters:
+  #               deployment_process: regular
