@@ -54,3 +54,4 @@ tmp/
 # Temp files
 .*~
 
+.claude/settings.local.json
