@@ -11,7 +11,7 @@ module Razorpay
     class IFSC
       API = 'https://ifsc.razorpay.com/'.freeze
 
-      attr_reader :bank, :ifsc, :branch, :address, :city, :district, :state, :centre, :micr, :imps, :rtgs, :upi, :neft, :swift
+      attr_reader :bank, :ifsc, :branch, :address, :contact, :city, :district, :state, :centre, :micr, :imps, :rtgs, :upi, :neft, :swift
 
       def initialize(ifsc)
         @ifsc = ifsc
@@ -25,6 +25,7 @@ module Razorpay
         @bank = api_data['BANK']
         @branch = api_data['BRANCH']
         @address = api_data['ADDRESS']
+        @contact = api_data['CONTACT']
         @city = api_data['CITY']
         @district = api_data['DISTRICT']
         @state = api_data['STATE']

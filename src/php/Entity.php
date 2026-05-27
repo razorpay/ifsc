@@ -11,6 +11,7 @@ class Entity
     protected $code;
     protected $branch;
     protected $address;
+    protected $contact;
     protected $city;
     protected $district;
     protected $state;
@@ -27,6 +28,7 @@ class Entity
             $this->bankCode = $data['BANKCODE'];
 
             $this->address = $data['ADDRESS'];
+            $this->contact = $data['CONTACT'];
             $this->district = $data['DISTRICT'];
             $this->state = $data['STATE'];
             $this->city = $data['CITY'];

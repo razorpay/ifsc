@@ -20,6 +20,7 @@ class DatasetTest extends TestCase
         'DISTRICT',
         'STATE',
         'ADDRESS',
+        'CONTACT',
         'IMPS',
         'RTGS',
         'CITY',
