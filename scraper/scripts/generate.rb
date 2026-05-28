@@ -44,3 +44,13 @@ log 'Exporting to validation JSON'
 export_to_code_json(ifsc_codes_list)
 
 log 'Export done'
+
+# After the dataset is exported, sync any newly-discovered bank codes back into
+# src/banknames.json (the source of truth) and regenerate the per-language SDK
+# constant files. This means bank.rb, Bank.php, bank.js and constants.go are
+# always in lockstep with banknames.json after a scraper run, with no manual
+# `make generate-constants` step required.
+added_banks = sync_banknames!(dataset)
+unless added_banks.empty?
+  regenerate_sdk_constants!
+end
