@@ -1,0 +1,8 @@
+name: PR Manager
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *'
+jobs:
+  pr-manager:
+    uses: razorpay/actions/.github/workflows/pr-manager.yaml@main
