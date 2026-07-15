@@ -1,8 +1,13 @@
+# PR Manager — stale PR cleanup via centralized reusable workflow in razorpay/actions.
+# See: https://github.com/razorpay/actions/blob/master/.github/workflows/pr-manager.yaml
 name: PR Manager
+
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '30 20 * * *'   # 2:00 AM IST (8:30 PM UTC)
+  workflow_dispatch: {}
+
 jobs:
-  pr-manager:
-    uses: razorpay/actions/.github/workflows/pr-manager.yaml@main
+  stale:
+    uses: razorpay/actions/.github/workflows/pr-manager.yaml@master
+    secrets: inherit
