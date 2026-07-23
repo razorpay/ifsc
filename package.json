@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/razorpay/ifsc/issues"
   },
-  "homepage": "https://github.com/razorpay/ifsc#readme"
+  "homepage": "https://github.com/razorpay/ifsc#readme",
+  "overrides": {
+    "ajv": "6.14.0"
+  }
 }
