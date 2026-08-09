@@ -13,4 +13,6 @@ let valid_bank_keys = Object.keys(JSON.parse(fs
 valid_bank_keys.forEach(code => {
   assert.equal(BANK[code], code);
   assert.equal(IFSC.bank[code], code);
+  assert.equal(IFSC.validateBankCode(code), true);
+  assert.ok(IFSC.getBankName(code));
 });

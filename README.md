@@ -118,7 +118,7 @@ Only the latest version of each SDK is considered.
 | -------- | ---------- | ---------- | ----------------------- | -------------- |
 | PHP      | ✅         | ✅         | ✅ (✅)                 | ✅             |
 | Ruby     | ✅         | ✅         | ✅ (✅)                 | ✅             |
-| Node.js  | ✅         | ✅         | ❎ (❎)                 | ✅             |
+| Node.js  | ✅         | ✅         | ✅ (✅)                 | ✅             |
 | Go       | ✅         | ✅         | ✅ (✅)                 | ✅             |
 
 ## API Documentation
@@ -198,6 +198,14 @@ var ifsc = require('ifsc');
 
 ifsc.validate('KKBK0000261'); // returns true
 ifsc.validate('BOTM0XEEMRA'); // returns false
+
+ifsc.validateBankCode('PUNB'); // returns true
+ifsc.validateBankCode('ABCD'); // returns false
+
+ifsc.getBankName('PUNB'); // returns 'Punjab National Bank'
+ifsc.getBankName('WBSC0DJCB01'); // returns 'Darjeeling District Central Co-operative Bank'
+ifsc.getBankName('KSCB0006001'); // returns 'Tumkur District Central Bank'
+ifsc.getBankName('ABCD'); // returns null
 
 ifsc.fetchDetails('KKBK0000261').then(function(res) {
    console.log(res);
