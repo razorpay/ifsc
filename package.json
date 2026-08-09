@@ -6,9 +6,7 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {
-    "request": "^2.88.2"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "test": "node tests/node/validator_test.js && node tests/node/client_test.js && node tests/node/bank_test.js"
