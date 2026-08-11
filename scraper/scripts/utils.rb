@@ -41,3 +41,11 @@ end
 def bank_name_from_code(code)
   Razorpay::IFSC::IFSC.bank_name_for(code)
 end
+
+def title_case(district)
+  return nil if district.nil?
+
+  title_case_district = district.gsub(/\w+/) do |word|
+    word.capitalize
+  end
+end
