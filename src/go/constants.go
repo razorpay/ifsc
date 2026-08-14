@@ -22,6 +22,7 @@ const (
 	ACOX = "ACOX"
 	ACUB = "ACUB"
 	ACUX = "ACUX"
+	ADBK = "ADBK"
 	ADBX = "ADBX"
 	ADCB = "ADCB"
 	ADCC = "ADCC"
@@ -1534,6 +1535,7 @@ var bankCodes = map[string]bool{
 	"ACOX": true,
 	"ACUB": true,
 	"ACUX": true,
+	"ADBK": true,
 	"ADBX": true,
 	"ADCB": true,
 	"ADCC": true,

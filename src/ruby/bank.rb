@@ -22,6 +22,7 @@ module Razorpay
       ACOX = :ACOX
       ACUB = :ACUB
       ACUX = :ACUX
+      ADBK = :ADBK
       ADBX = :ADBX
       ADCB = :ADCB
       ADCC = :ADCC
