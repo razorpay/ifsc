@@ -26,6 +26,7 @@ class Bank
     const ACOX = 'ACOX';
     const ACUB = 'ACUB';
     const ACUX = 'ACUX';
+    const ADBK = 'ADBK';
     const ADBX = 'ADBX';
     const ADCB = 'ADCB';
     const ADCC = 'ADCC';
