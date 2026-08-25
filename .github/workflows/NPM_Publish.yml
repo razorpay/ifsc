@@ -8,26 +8,31 @@ jobs:
     release:
         name: NPM Publish
         runs-on: ubuntu-latest
-        permissions:
-            contents: read
         steps:
             - name: checkout
               uses: actions/checkout@v3.5.3
+            - name: Setup PMG proxy
+              id: pmg-setup
+              uses: safedep/pmg@v1
+              with:
+                server-mode: true
+                api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
+                tenant-id: ${{ secrets.PMG_TENANT_ID }}
             - name: node
               uses: actions/setup-node@v2.5.2
               with:
                   node-version: 12
                   registry-url: https://registry.npmjs.org
-            - name: Setup PMG (malicious package protection)
-              uses: safedep/pmg@v1
-              with:
-                  api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
-                  tenant-id: ${{ secrets.PMG_TENANT_ID }}
             - name: publish
               run: npm publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
-            - name: Sync PMG audit events to SafeDep Cloud
-              if: always()
-              run: pmg cloud sync --timeout 60s
                   
+            - name: Enforce PMG policy
+              if: always()
+              run: |
+                if [ "${{ steps.pmg-setup.outcome }}" = "success" ]; then
+                  pmg proxy stop --fail-on-violation
+                else
+                  pmg proxy stop || true
+                fi

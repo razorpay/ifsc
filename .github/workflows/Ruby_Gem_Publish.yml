@@ -11,6 +11,13 @@ jobs:
     steps:
       # Checkout code if release was created
       - uses: actions/checkout@v3
+      - name: Setup PMG proxy
+        id: pmg-setup
+        uses: safedep/pmg@v1
+        with:
+          server-mode: true
+          api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
+          tenant-id: ${{ secrets.PMG_TENANT_ID }}
       # Setup ruby if a release was created
       - uses: ruby/setup-ruby@v1
         with:
@@ -18,11 +25,6 @@ jobs:
           ruby-version: 3.1
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
-      - name: Setup PMG (malicious package protection)
-        uses: safedep/pmg@v1
-        with:
-          api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
-          tenant-id: ${{ secrets.PMG_TENANT_ID }}
       # Publish
       - name: publish gem
         run: |
@@ -36,6 +38,11 @@ jobs:
           # Make sure to update the secret name
           # if yours isn't named RUBYGEMS_AUTH_TOKEN
           GEM_HOST_API_KEY: "${{secrets.IFSC_GEM_ACCESS_TOKEN}}"
-      - name: Sync PMG audit events to SafeDep Cloud
+      - name: Enforce PMG policy
         if: always()
-        run: pmg cloud sync --timeout 60s
+        run: |
+          if [ "${{ steps.pmg-setup.outcome }}" = "success" ]; then
+            pmg proxy stop --fail-on-violation
+          else
+            pmg proxy stop || true
+          fi
