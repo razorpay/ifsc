@@ -1,0 +1,39 @@
+name: PMG Test
+
+# Smoke test: verifies SafeDep PMG actually blocks a known-malicious package
+# on the runner. `safedep-test-pkg@0.1.3` is a benign package flagged as
+# malicious in SafeDep's database specifically for verification.
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  pmg-block-check:
+    name: PMG blocks malicious package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      - name: Setup PMG (malicious package protection)
+        uses: safedep/pmg@v1
+        with:
+          api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
+          tenant-id: ${{ secrets.PMG_TENANT_ID }}
+      - name: Verify PMG blocks a known-malicious package
+        run: |
+          set +e
+          npm install --no-cache --prefer-online safedep-test-pkg@0.1.3
+          status=$?
+          set -e
+          if [ "$status" -eq 0 ]; then
+            echo "::error::PMG did NOT block the malicious test package (install succeeded)."
+            exit 1
+          fi
+          echo "PMG correctly blocked the malicious test package (exit code $status)."
+      - name: Sync PMG audit events to SafeDep Cloud
+        if: always()
+        run: pmg cloud sync --timeout 60s
