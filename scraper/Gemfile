@@ -2,3 +2,8 @@ source "https://rubygems.org"
 
 gem 'nokogiri'
 gem 'httparty'
+# csv, base64 and bigdecimal left Ruby's default gems in 3.4; the scraper
+# (and httparty's multi_xml dependency) require them explicitly
+gem 'csv'
+gem 'base64'
+gem 'bigdecimal'

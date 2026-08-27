@@ -14,24 +14,23 @@ import (
 
 func getIfscResponse() *IFSCResponse {
 	bytes := []byte(`{
-  ADDRESS: 'SANGMESH BIRADAR BANGALORE',
-  BANK: 'HDFC Bank',
-  BANKCODE: 'HDFC',
-  BRANCH: 'THE AGS EMPLOYEES COOP BANK LTD',
-  CENTRE: 'BANGALORE',
-  CITY: 'BANGALORE URBAN',
-  CONTACT: '+918022265658',
-  DISTRICT: 'BANGALORE',
-  IFSC: 'HDFC0CAGSBK',
-  IMPS: true,
-  ISO3166: 'IN-KA',
-  MICR: '560226263',
-  NEFT: true,
-  RTGS: true,
-  STATE: 'KARNATAKA',
-  SWIFT: 'HDFCINBB',
-  UPI: true
-}`)
+		"MICR": "560226263",
+		"BRANCH": "THE AGS EMPLOYEES COOP BANK LTD",
+		"ADDRESS": "SANGMESH BIRADAR BANGALORE",
+		"STATE": "KARNATAKA",
+		"CONTACT": "+91802265658",
+		"UPI": true,
+		"RTGS": true,
+		"CITY": "BANGALORE",
+		"CENTRE": "BANGALORE URBAN",
+		"DISTRICT": "BANGALORE URBAN",
+		"NEFT": true,
+		"IMPS": true,
+		"SWIFT": "HDFCINBB",
+		"BANK": "HDFC Bank",
+		"bank_code": "HDFC",
+		"IFSC": "HDFC0CAGSBK"
+	}`)
 	var response IFSCResponse
 	if err := json.Unmarshal(bytes, &response); err != nil {
 		return nil
