@@ -14,6 +14,13 @@ jobs:
       - name: Install ssconvert
         run: sudo apt-get -y --no-install-recommends install gnumeric
       - uses: actions/checkout@v3
+      - name: Setup PMG proxy
+        id: pmg-setup
+        uses: safedep/pmg@v1
+        with:
+          server-mode: true
+          api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
+          tenant-id: ${{ secrets.PMG_TENANT_ID }}
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
@@ -31,12 +38,27 @@ jobs:
           path: |
             scraper/scripts/data/*
             ! scraper/scripts/data/by-bank.tar
+      - name: Enforce PMG policy
+        if: always()
+        run: |
+          if [ "${{ steps.pmg-setup.outcome }}" = "success" ]; then
+            pmg proxy stop --fail-on-violation
+          else
+            pmg proxy stop || true
+          fi
   php:
     needs: scraper
     name: Post-scraper tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Setup PMG proxy
+        id: pmg-setup
+        uses: safedep/pmg@v1
+        with:
+          server-mode: true
+          api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
+          tenant-id: ${{ secrets.PMG_TENANT_ID }}
       - uses: shivammathur/setup-php@v2
         with:
           php-version: 8.1
@@ -53,11 +75,26 @@ jobs:
       - run: phpunit --migrate-configuration -d memory_limit=-1
         env:
           RUN_DATASET_TESTS: true
+      - name: Enforce PMG policy
+        if: always()
+        run: |
+          if [ "${{ steps.pmg-setup.outcome }}" = "success" ]; then
+            pmg proxy stop --fail-on-violation
+          else
+            pmg proxy stop || true
+          fi
   release-notes:
     needs: scraper
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Setup PMG proxy
+        id: pmg-setup
+        uses: safedep/pmg@v1
+        with:
+          server-mode: true
+          api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
+          tenant-id: ${{ secrets.PMG_TENANT_ID }}
       - uses: shivammathur/setup-php@v2
         with:
           php-version: 8.1
@@ -74,3 +111,11 @@ jobs:
         with:
           name: release-notes.md
           path: scraper/scripts/release.md
+      - name: Enforce PMG policy
+        if: always()
+        run: |
+          if [ "${{ steps.pmg-setup.outcome }}" = "success" ]; then
+            pmg proxy stop --fail-on-violation
+          else
+            pmg proxy stop || true
+          fi

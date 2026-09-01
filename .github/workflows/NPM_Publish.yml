@@ -11,6 +11,13 @@ jobs:
         steps:
             - name: checkout
               uses: actions/checkout@v3.5.3
+            - name: Setup PMG proxy
+              id: pmg-setup
+              uses: safedep/pmg@v1
+              with:
+                server-mode: true
+                api-key: ${{ secrets.PMG_PUBLIC_REPOS_TOKEN }}
+                tenant-id: ${{ secrets.PMG_TENANT_ID }}
             - name: node
               uses: actions/setup-node@v2.5.2
               with:
@@ -21,3 +28,11 @@ jobs:
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
                   
+            - name: Enforce PMG policy
+              if: always()
+              run: |
+                if [ "${{ steps.pmg-setup.outcome }}" = "success" ]; then
+                  pmg proxy stop --fail-on-violation
+                else
+                  pmg proxy stop || true
+                fi
