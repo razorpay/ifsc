@@ -319,7 +319,6 @@ class Bank
     const DEUT = 'DEUT';
     const DEUX = 'DEUX';
     const DEVX = 'DEVX';
-    const DGBX = 'DGBX';
     const DHBX = 'DHBX';
     const DHKX = 'DHKX';
     const DHUX = 'DHUX';
@@ -1273,6 +1272,7 @@ class Bank
     const TBSX = 'TBSX';
     const TBTX = 'TBTX';
     const TBUX = 'TBUX';
+    const TCBR = 'TCBR';
     const TCBX = 'TCBX';
     const TCCX = 'TCCX';
     const TCHX = 'TCHX';

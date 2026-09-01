@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED][unreleased]
+## [2.0.62][2.0.62]
+### Changed
+- Metadata updates
+- adding TCBR to banknames.json
+
+## [UNRELEASED][unreleased]
 ## [2.0.61][2.0.61]
 ### Changed
 - Metadata updates
