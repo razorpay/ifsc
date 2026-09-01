@@ -1,7 +1,5 @@
-const fs = require('fs');
 const data = require('../IFSC');
 const https = require('https');
-const request = require('request');
 const BANK = require('./bank');
 
 const BASE_URL = 'https://ifsc.razorpay.com/';
@@ -60,13 +58,25 @@ let _fetchDetails = function(code, cb) {
     if (!_validate(code)) {
       reject('Invalid IFSC Code');
     } else {
-      request.get({ url: url, json: true }, function(err, res, data) {
-        if (err) {
-          reject('API Call failed: ' + err.msg);
-        } else {
-          resolve(data);
-        }
-      });
+      https
+        .get(url, function(res) {
+          let rawData = '';
+          res.setEncoding('utf8');
+          res.on('data', function(chunk) {
+            rawData += chunk;
+          });
+          res.on('end', function() {
+            try {
+              let parsedData = JSON.parse(rawData);
+              resolve(parsedData);
+            } catch (e) {
+              reject('API Call failed: ' + e.message);
+            }
+          });
+        })
+        .on('error', function(err) {
+          reject('API Call failed: ' + (err.message || err));
+        });
     }
   });
 };
