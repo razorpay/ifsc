@@ -20,6 +20,30 @@ HEADINGS_INSERT = %w[
   STATE
 ].freeze
 
+# Possible header variants for the bank-name column in RBI sheets.
+# RBI has periodically renamed this column (e.g. from "BANK" to "BANK NAME"),
+# which silently broke bank-name ingestion for new/renamed banks.
+# Add new variants here whenever RBI changes the header again.
+BANK_NAME_COLUMNS = [
+  'BANK',
+  'BANK NAME',
+  'BANK_NAME',
+  'Bank Name',
+  'BANKNAME',
+  'NAME OF THE BANK',
+  'Name of the Bank'
+].freeze
+
+# Reads the bank name from a parsed CSV row, tolerant to RBI renaming the column.
+# Returns the first non-empty value found across known header variants.
+def read_bank_name(row)
+  BANK_NAME_COLUMNS.each do |col|
+    value = row[col]
+    return value.to_s.strip if value && !value.to_s.strip.empty?
+  end
+  nil
+end
+
 def parse_imps(banks)
   data = {}
   banknames = JSON.parse File.read('../../src/banknames.json')
@@ -249,6 +273,18 @@ def parse_csv(files, banks, additional_attributes = {})
         next
       end
 
+      # Normalize the bank-name column. RBI has renamed this header in the past
+      # (BANK -> BANK NAME etc.), so we read it via read_bank_name and store the
+      # value back under the canonical 'BANK' key the rest of the pipeline uses.
+      bank_name_from_sheet = read_bank_name(row)
+      if bank_name_from_sheet.nil?
+        log "#{row['IFSC']}: Bank name column missing from RBI sheet. " \
+            "Known variants tried: #{BANK_NAME_COLUMNS.join(', ')}. " \
+            'Check if RBI has renamed the column again and update BANK_NAME_COLUMNS.', :warn
+      else
+        row['BANK'] = sanitize(bank_name_from_sheet)
+      end
+
       row['ADDRESS'] = sanitize(row['ADDRESS'])
       row['BRANCH'] = sanitize(row['BRANCH'])
       row['STATE'].strip! if row['STATE']
@@ -354,8 +390,23 @@ def merge_dataset(neft, rtgs, imps)
     combined_data['UPI']  ||= false
     combined_data['MICR'] ||= nil
     combined_data['SWIFT'] = nil
-    # Set the bank name considering sublets
-    combined_data['BANK'] = bank_name_from_code(combined_data['IFSC'])
+    # Set the bank name considering sublets.
+    # bank_name_from_code reads from our locally-maintained banknames.json. If
+    # RBI has added a brand new bank that we have not registered yet, this
+    # lookup returns nil. In that case, fall back to the bank name we captured
+    # from the RBI sheet (via parse_csv -> read_bank_name) so that new banks
+    # surface in the dataset instead of silently dropping out.
+    resolved_bank_name = bank_name_from_code(combined_data['IFSC'])
+    if resolved_bank_name.nil? || resolved_bank_name.to_s.strip.empty?
+      sheet_bank_name = combined_data['BANK']
+      if sheet_bank_name && !sheet_bank_name.to_s.strip.empty?
+        log "#{combined_data['IFSC']}: Bank code #{combined_data['IFSC'][0..3]} " \
+            "missing from banknames.json. Using RBI sheet value '#{sheet_bank_name}'. " \
+            'Please add this bank to src/banknames.json.', :warn
+        resolved_bank_name = sheet_bank_name
+      end
+    end
+    combined_data['BANK'] = resolved_bank_name
     combined_data.delete('DATE')
     combined_data['ISO3166'] = ISO3166_MAP[combined_data['STATE']]
 
@@ -467,6 +518,126 @@ def log(msg, status = :info)
     msg = "[DEBG] #{msg}"
   end
   puts msg
+end
+
+BANKNAMES_JSON_PATH = '../../src/banknames.json'.freeze
+REPO_ROOT = '../..'.freeze
+
+# Best-effort normalization for bank names sourced from RBI sheets, applying
+# the conventions documented in CONTRIBUTING.md -> "Bank Names Guidelines".
+# Specifically:
+#   Rule 1  drop trailing 'Ltd' / 'Limited'
+#   Rule 3  drop leading 'The '
+#   Rule 4  canonicalize 'Coop' / 'Co.op' / 'Co operative' -> 'Co-operative'
+#   Rule 9  no period after 'Co-operative'
+#   Rule 11 'sahkari' -> 'Sahakari'
+#   Rule 2  collapse SHOUTY-CASE to Title Case (mixed-case left alone)
+# Rules that need human judgement (city-in-brackets disambiguation,
+# Grameen/Gramin spelling, unexpanded abbreviations) still require a manual
+# review, which sync_banknames! flags via a WARN per added entry.
+CONNECTOR_WORDS = %w[OF AND THE FOR TO IN ON AT BY OR].freeze
+
+def normalize_bank_name(raw)
+  return nil if raw.nil?
+  name = raw.to_s.strip
+  return nil if name.empty?
+
+  # Rule 1: drop trailing 'Ltd'/'Limited' (with optional comma/period/space)
+  name = name.sub(/[\s,]*\b(?:Ltd|Limited)\.?\s*\z/i, '')
+  # Rule 3: drop leading 'The '
+  name = name.sub(/\A[Tt]he\s+/, '')
+  # Rule 11: 'sahkari' -> 'Sahakari'
+  name = name.gsub(/\bsahkari\b/i, 'Sahakari')
+
+  # Rule 2: collapse SHOUTY-CASE to Title Case before the Co-operative
+  # substitution, since that substitution introduces a mixed-case word that
+  # would otherwise prevent this branch from firing.
+  if name == name.upcase && name =~ /[A-Z]{4,}/
+    name = name.split(/(\s+|-)/).map do |part|
+      if part =~ /\A[\s\-]+\z/
+        part
+      elsif CONNECTOR_WORDS.include?(part)
+        # 'OF' -> 'Of', 'AND' -> 'And' so the rest of the rules can apply
+        part.capitalize
+      elsif part.length <= 3 && part.match?(/\A[A-Z]+\z/)
+        # Preserve short uppercase tokens that are likely acronyms (AB, PT, IIN).
+        part
+      else
+        part.capitalize
+      end
+    end.join
+  end
+
+  # Rule 4 + Rule 9: any form of "Co.op" / "Co Op" / "Co-operative." etc. ->
+  # "Co-operative" without trailing period. Done after case normalization so
+  # the regex sees a stable spelling regardless of input casing.
+  name = name.gsub(/\bCo[\.\s\-]*op(?:erative)?\b\.?/i, 'Co-operative')
+
+  name.strip
+end
+
+# Walks the final merged dataset and adds any newly-discovered bank codes to
+# src/banknames.json. The bank name comes from combined_data['BANK'], which
+# parse_csv populates from the RBI sheet (see read_bank_name) and merge_dataset
+# falls back to when bank_name_from_code returns nil. The value is normalized
+# via normalize_bank_name before insertion so it complies with the conventions
+# in CONTRIBUTING.md.
+#
+# Returns the hash of newly-added entries, keyed by bank code.
+def sync_banknames!(dataset)
+  banknames = JSON.parse(File.read(BANKNAMES_JSON_PATH))
+  added = {}
+
+  dataset.each do |ifsc, row|
+    next if ifsc.nil? || ifsc.length < 4
+
+    code = ifsc[0..3].upcase
+    next if banknames.key?(code)
+
+    normalized = normalize_bank_name(row['BANK'])
+    if normalized.nil? || normalized.empty?
+      log "Bank code #{code} (e.g. #{ifsc}) is new but has no usable name " \
+          "from the RBI sheet, skipping", :warn
+      next
+    end
+
+    banknames[code] = normalized
+    added[code] = { raw: row['BANK'].to_s.strip, normalized: normalized }
+  end
+
+  if added.empty?
+    log 'No new bank codes detected; banknames.json is up to date'
+    return added
+  end
+
+  # Preserve the existing file format: sorted keys, 2-space indent, no trailing newline.
+  sorted = banknames.sort.to_h
+  File.write(BANKNAMES_JSON_PATH, JSON.pretty_generate(sorted))
+
+  log "Added #{added.size} new bank(s) to banknames.json: " \
+      "#{added.map { |k, v| "#{k}=>#{v[:normalized].inspect}" }.join(', ')}", :info
+  log 'Please review the new entries against CONTRIBUTING.md -> Bank Names ' \
+      'Guidelines (city-in-brackets for disambiguation, Grameen/Gramin/Grameena ' \
+      'spelling, unexpanded abbreviations) and amend banknames.json if needed.', :warn
+  added
+end
+
+# Invokes `make generate-constants`, which regenerates
+#   src/ruby/bank.rb, src/php/Bank.php, src/node/bank.js, src/go/constants.go
+# from banknames.json via the Go template generator. This keeps every language
+# SDK in lockstep with the source-of-truth file whenever a new bank is added.
+def regenerate_sdk_constants!
+  log 'Regenerating SDK constants (bank.rb, Bank.php, bank.js, constants.go)'
+  Dir.chdir(REPO_ROOT) do
+    ok = system('make generate-constants')
+    unless ok
+      log 'make generate-constants failed. SDK constant files may be out of sync ' \
+          'with banknames.json. Please run `make generate-constants` manually.', :critical
+      return false
+    end
+  end
+  log 'SDK constants regenerated successfully'
+  true
 end
 
 # Downloads the SWIFT data from
