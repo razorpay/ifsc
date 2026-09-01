@@ -1268,6 +1268,7 @@ module Razorpay
       TBSX = :TBSX
       TBTX = :TBTX
       TBUX = :TBUX
+      TCBR = :TCBR
       TCBX = :TCBX
       TCCX = :TCCX
       TCHX = :TCHX
