@@ -1,7 +1,13 @@
 const ifsc = require('../../src/node');
 const assert = require('assert');
 
-const expected = require('../fixture/HDFC0CAGSBK')
+const expected = require('../fixture/HDFC0CAGSBK');
+
+assert.strictEqual(
+  Object.keys(require.cache).some(k => k.includes('node_modules/request')),
+  false,
+  'request package should not be loaded in require.cache'
+);
 
 // The nodejs tests do not mock the connect call, so this might break after a new release.
 ifsc
