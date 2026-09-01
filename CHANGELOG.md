@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.62][2.0.62]
 ### Changed
 - Metadata updates
+- adding TCBR to banknames.json
 
 ## [UNRELEASED][unreleased]
 ## [2.0.61][2.0.61]
