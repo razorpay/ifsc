@@ -1,5 +1,9 @@
 const fs = require('fs');
 const data = require('../IFSC');
+const bankNames = require('../banknames.json');
+const sublets = require('../sublet.json');
+const customSublets = require('../custom-sublets.json');
+const customSubletPrefixes = Object.keys(customSublets);
 const https = require('https');
 const request = require('request');
 const BANK = require('./bank');
@@ -7,7 +11,7 @@ const BANK = require('./bank');
 const BASE_URL = 'https://ifsc.razorpay.com/';
 
 let _validate = function(code) {
-  if (code.length !== 11) {
+  if (!code || typeof code !== 'string' || code.length !== 11) {
     return false;
   }
 
@@ -29,6 +33,57 @@ let _validate = function(code) {
   }
 
   return lookupString(list, branchCode);
+};
+
+let _validateBankCode = function(bankCode) {
+  if (!bankCode || typeof bankCode !== 'string') {
+    return false;
+  }
+  bankCode = bankCode.toUpperCase();
+  return BANK.hasOwnProperty(bankCode) || bankNames.hasOwnProperty(bankCode);
+};
+
+let _getCustomSubletName = function(code) {
+  for (let i = 0; i < customSubletPrefixes.length; i++) {
+    let prefix = customSubletPrefixes[i];
+    if (code.startsWith(prefix)) {
+      let value = customSublets[prefix];
+      if (value.length === 4) {
+        return _getBankName(value);
+      } else {
+        return value;
+      }
+    }
+  }
+  return null;
+};
+
+let _getBankName = function(code) {
+  if (!code || typeof code !== 'string') {
+    return null;
+  }
+  code = code.toUpperCase();
+
+  if (_validateBankCode(code)) {
+    return bankNames[code] || null;
+  }
+
+  if (_validate(code)) {
+    if (sublets.hasOwnProperty(code)) {
+      let bankCode = sublets[code];
+      return bankNames[bankCode] || null;
+    }
+
+    let customSubletName = _getCustomSubletName(code);
+    if (customSubletName) {
+      return customSubletName;
+    }
+
+    let ownerBankCode = code.slice(0, 4);
+    return bankNames[ownerBankCode] || null;
+  }
+
+  return null;
 };
 
 let isInteger = function(code) {
@@ -73,6 +128,8 @@ let _fetchDetails = function(code, cb) {
 
 module.exports = {
   validate: _validate,
+  validateBankCode: _validateBankCode,
+  getBankName: _getBankName,
   fetchDetails: _fetchDetails,
   bank: BANK,
 };
