@@ -16,6 +16,63 @@ def write_banks_json(banks)
   end
 end
 
+KNOWN_ABBREVIATIONS = %w[
+  HDFC ICICI SBI IDBI IDFC RBI HSBC DBS UCO RBL DCB CSB IOB TMB KVB
+  NKGSB TJSB ESAF AB SBM SCB PNB BOB BOI BOM CBI PSB LVB AXIS YES
+  BBKM APGB JSFB
+].freeze
+
+SMALL_WORDS = %w[of and the in for].freeze
+
+def normalize_bank_name(name)
+  return name if name.nil? || name.empty?
+
+  name = name.strip
+
+  # Rule 1: Remove Ltd/Limited from end
+  name = name.sub(/\s*(Ltd\.?|Limited)\.?\s*$/i, '')
+
+  # Rule 3: Remove "The" prefix
+  name = name.sub(/^The\s+/i, '')
+
+  # Rule 2: Title case for ALL CAPS names
+  if name == name.upcase
+    words = name.split(/\s+/).each_with_index.map do |word, i|
+      if KNOWN_ABBREVIATIONS.include?(word)
+        word
+      elsif SMALL_WORDS.include?(word.downcase) && i > 0
+        word.downcase
+      else
+        word.capitalize
+      end
+    end
+    name = words.join(' ')
+  end
+
+  # Rule 4 & 9: Normalize Co-operative (no period after)
+  name = name.gsub(/\bCo[\.\s-]*Op(erative)?\b\.?/i, 'Co-operative')
+  name = name.gsub(/\bCoop(erative)?\b\.?/i, 'Co-operative')
+
+  # Rule 11: Sahakari not sahkari
+  name = name.gsub(/\bsahkari\b/i, 'Sahakari')
+
+  name.strip.gsub(/\s+/, ' ')
+end
+
+def write_banknames_json(bank_names)
+  banknames = JSON.parse File.read('../../src/banknames.json')
+  new_codes = bank_names.reject { |code, _| banknames.key?(code) }
+  return if new_codes.empty?
+
+  normalized = new_codes.transform_values { |name| normalize_bank_name(name) }
+  normalized.each { |code, name| log "Adding new bank code #{code}: #{name}" }
+  merged = Hash[(banknames.merge(normalized)).sort]
+  File.open('../../src/banknames.json', 'w') do |f|
+    f.write JSON.pretty_generate(merged)
+    log 'Updated src/banknames.json with new bank codes'
+  end
+end
+
 def match_length_or_nil(data, expected_length)
   data = data.text.strip
   data.length === expected_length ? data : nil
@@ -71,19 +128,24 @@ def parse_nach
   sublets = {}
   banks = {}
 
+  bank_names = {}
+
   doc.css('table')[0].css('tr').each do |row|
     if header_cleared
       data = row.css('td')
       ifsc = data[4].text.strip
       bank_code = data[1].text.strip
+      bank_name = data[2].text.strip
       sublets[ifsc] = bank_code if ifsc.size == 11 && ifsc[0..3] != bank_code
 
       banks[bank_code] = bank_data(bank_code, data, ifsc)
+      bank_names[bank_code] = bank_name unless bank_code.empty?
     end
     header_cleared = true
   end
 
   write_sublet_json(sublets)
+  write_banknames_json(bank_names)
   # This is where the upi:true parameter to banks.json gets added
   banks = apply_bank_patches(banks)
   write_banks_json(banks)

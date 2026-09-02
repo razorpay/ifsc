@@ -31,6 +31,10 @@ fi
 # This is the script that does all the data generation
 bundle exec ruby generate.rb
 
+# Regenerate bank code constants in all SDKs from updated banknames.json
+echo "Regenerating bank code constants..."
+make -C ../.. generate-constants
+
 pushd data
 
 # Compress the $BANK.json files

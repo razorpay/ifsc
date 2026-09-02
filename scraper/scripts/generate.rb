@@ -22,6 +22,9 @@ dataset = merge_dataset(neft, rtgs, imps)
 
 log "Got total #{dataset.keys.size} entries", :info
 
+log 'Updating banknames.json with new bank codes from RTGS/NEFT'
+update_banknames_from_dataset(dataset)
+
 dataset = apply_patches(dataset)
 
 log 'Applied patches', :info
