@@ -26,11 +26,14 @@ def parse_imps(banks)
   banks.each do |code, row|
     next unless row[:ifsc] && row[:ifsc].strip.to_s.length == 11
 
+    # Use RBI bank name if available, otherwise fallback to static banknames.json
+    bank_name = banknames[code] || "Unknown Bank"
+    
     # These are virtual branches, so we fix them to NPCI HQ for now
     data[row[:ifsc]] = {
-      'BANK' => banknames[code],
+      'BANK' => bank_name,
       'IFSC' => row[:ifsc],
-      'BRANCH' => "#{banknames[code]} IMPS",
+      'BRANCH' => "#{bank_name} IMPS",
       'CENTRE' => 'NA',
       'DISTRICT' => 'NA',
       'STATE' => 'MAHARASHTRA',
@@ -231,6 +234,17 @@ def parse_csv(files, banks, additional_attributes = {})
 
       bankcode = row['IFSC'][0..3]
 
+      # Extract bank name from RBI data
+      # Try different possible column names for bank name
+      bank_name = extract_bank_name_from_rbi_data(row)
+      if bank_name
+        row['BANK'] = bank_name
+      else
+        # Fallback to existing banknames.json
+        banknames = JSON.parse File.read('../../src/banknames.json')
+        row['BANK'] = banknames[bankcode] || "Unknown Bank"
+      end
+
       if banks[bankcode] and banks[bankcode].key? :upi and banks[bankcode][:upi]
         row['UPI'] = true
       else
@@ -271,7 +285,151 @@ def parse_csv(files, banks, additional_attributes = {})
       data[row['IFSC']] = row
     end
   end
+
   data
+end
+
+# New function to inspect RBI CSV headers
+def inspect_rbi_csv_headers(files)
+  log "Inspecting RBI CSV headers to identify bank name columns..."
+  
+  files.each do |file|
+    csv_file = "sheets/#{file}.csv"
+    if File.exist?(csv_file)
+      log "Headers in #{file}.csv:"
+      CSV.foreach(csv_file, encoding: 'utf-8', return_headers: true, headers: true) do |row|
+        log "  #{row.headers.join(', ')}"
+        break # Only show first row (headers)
+      end
+    else
+      log "File #{csv_file} not found", :warn
+    end
+  end
+end
+
+# New function to extract bank name from RBI data
+def extract_bank_name_from_rbi_data(row)
+  # Try different possible column names for bank name in RBI files
+  possible_bank_columns = ['BANK', 'BANK_NAME', 'BANK NAME', 'BANKNAME', 'BANK OF', 'BANKOF']
+  
+  possible_bank_columns.each do |col|
+    if row[col] && !row[col].strip.empty?
+      bank_name = sanitize(row[col])
+      # Basic validation - bank name should not be too short or contain obvious non-bank text
+      if bank_name && bank_name.length > 2 && !bank_name.match(/^(IFSC|MICR|STD|PHONE|ADDRESS|CITY|STATE|DISTRICT)$/i)
+        return bank_name
+      end
+    end
+  end
+  
+  nil
+end
+
+# New function to generate comprehensive banknames.json from multiple sources
+def generate_comprehensive_banknames_json(files)
+  log "Generating comprehensive banknames.json from multiple sources..."
+  
+  comprehensive_bank_names = {}
+  
+  # Step 1: Load existing banknames.json as base
+  existing_banknames_file = '../../src/banknames.json'
+  if File.exist?(existing_banknames_file)
+    existing_banknames = JSON.parse(File.read(existing_banknames_file))
+    comprehensive_bank_names.merge!(existing_banknames)
+    log "Loaded #{existing_banknames.size} existing bank names from banknames.json"
+  else
+    log "Existing banknames.json not found, starting with empty list", :warn
+  end
+  
+  # Step 2: Extract bank names from RBI CSV files (RTGS/NEFT)
+  rbi_bank_names = {}
+  files.each do |file|
+    csv_file = "sheets/#{file}.csv"
+    if File.exist?(csv_file)
+      log "Processing #{file}.csv for bank names..."
+      
+      CSV.foreach(csv_file, encoding: 'utf-8', return_headers: false, headers: true, skip_blanks: true) do |row|
+        row = row.to_h
+        
+        # Skip invalid rows
+        next if row['IFSC'].nil? or ['IFSC_CODE', 'BANK OF BARODA', '', 'KPK HYDERABAD'].include?(row['IFSC'])
+        
+        ifsc = row['IFSC'].to_s.upcase.gsub(/[^0-9A-Za-z]/, '').strip
+        bankcode = ifsc[0..3]
+        
+        # Extract bank name from RBI data - try different possible column names
+        bank_name = nil
+        ['BANK', 'BANK_NAME', 'BANKNAME', 'BANK NAME'].each do |col|
+          if row[col] && !row[col].to_s.strip.empty?
+            bank_name = sanitize(row[col])
+            break
+          end
+        end
+        
+        # If we found a bank name, add it to our collection
+        if bank_name && !bank_name.empty?
+          rbi_bank_names[bankcode] = bank_name
+        end
+      end
+    else
+      log "File #{csv_file} not found", :warn
+    end
+  end
+  
+  # Step 3: Update with RBI data (RBI data takes precedence)
+  rbi_bank_names.each do |bankcode, bank_name|
+    comprehensive_bank_names[bankcode] = bank_name
+  end
+  log "Updated with #{rbi_bank_names.size} bank names from RBI data"
+  
+  # Step 4: Extract from banks.json (NPCI data)
+  banks_json_file = 'data/banks.json'
+  if File.exist?(banks_json_file)
+    banks_data = JSON.parse(File.read(banks_json_file))
+    banks_data.each do |bankcode, bank_info|
+      if bank_info.is_a?(Hash) && bank_info['name']
+        comprehensive_bank_names[bankcode] = sanitize(bank_info['name'])
+      end
+    end
+    log "Updated with bank names from banks.json"
+  end
+  
+  # Step 5: Extract from sublet.json (additional bank data)
+  sublet_json_file = 'data/sublet.json'
+  if File.exist?(sublet_json_file)
+    sublet_data = JSON.parse(File.read(sublet_json_file))
+    sublet_data.each do |bankcode, bank_info|
+      if bank_info.is_a?(Hash) && bank_info['name']
+        comprehensive_bank_names[bankcode] = sanitize(bank_info['name'])
+      end
+    end
+    log "Updated with bank names from sublet.json"
+  end
+  
+  # Step 6: Sort alphabetically by bank code
+  sorted_comprehensive_bank_names = comprehensive_bank_names.sort.to_h
+  
+  # Step 7: Write the comprehensive bank names to data/banknames.json
+  output_file = "data/banknames.json"
+  File.write(output_file, JSON.pretty_generate(sorted_comprehensive_bank_names))
+  log "Generated #{output_file} with #{sorted_comprehensive_bank_names.size} comprehensive bank names (sorted alphabetically)"
+  
+  # Step 8: Generate statistics
+  log "Comprehensive bank names statistics:"
+  log "  - Total banks: #{sorted_comprehensive_bank_names.size}"
+  log "  - From existing banknames.json: #{existing_banknames ? existing_banknames.size : 0}"
+  log "  - From RBI data: #{rbi_bank_names.size}"
+  
+  # Step 9: Show sample of newly added banks
+  newly_added = rbi_bank_names.keys - (existing_banknames ? existing_banknames.keys : [])
+  if newly_added.any?
+    log "Sample of newly added banks from RBI data:"
+    newly_added.first(5).each do |bankcode|
+      log "  #{bankcode}: #{rbi_bank_names[bankcode]}"
+    end
+  end
+  
+  sorted_comprehensive_bank_names
 end
 
 def export_csv(data)
