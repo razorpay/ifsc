@@ -1,0 +1,37 @@
+service: ifsc  # required, canonical slug — immutable once registered
+displayName: "IFSC"  # required, human-readable name — README title "# ifsc"; IFSC = Indian Financial System Code
+description: "Razorpay's open-source IFSC toolset — dataset releases plus PHP, Ruby, Go and Node client libraries that scrape and package the RBI / NPCI lists of NEFT, RTGS, IMPS, NACH and AutoPay member banks into a queryable IFSC directory, published at ifsc.razorpay.com."  # required, one-sentence description — README: "This is part of the IFSC toolset released by Razorpay. You can find more details about the entire release at ifsc.razorpay.com", with the dataset sourced from RBI and NPCI lists and released via GitHub releases
+type: library  # required — the repo is the dataset plus per-language SDKs (PHP, Ruby, Go, JS badges on the README) built by a scraper GitHub Action; nothing here is a long-running deployed service
+tier: T2  # required — public, open-source artefact used by external integrators to validate bank IFSCs; an outdated release does not break Razorpay payment flow but does degrade downstream bank-detail lookups, so it sits above dev tooling
+lifecycle: live  # optional — recent commits (last_push 2026-09-01) and the scraper workflow publishes current RBI/NPCI releases
+
+domain: cross-border/apm  # required — family cross-border from cache/miss_seed.json l1 (BU "Cross Border"); area apm matches the team "Export SR Excellence" focus on cross-border payment methods and is the closest existing area. TO VERIFY: an IFSC directory is not inherently cross-border — confirm with the Export SR Excellence POD lead
+
+owner:
+  team:  # required, owning team slug — TO FILL: no CODEOWNERS file and no .github/repo_owners.json team slug; csv_team is "Export SR Excellence" — ask that POD lead for the owning GitHub team
+  em:  # name | @slack | email — TO FILL: DevRev runnable owner not found in SuccessFactors
+  org_group:  # SuccessFactors group of the EM — TO FILL: the declared owner has no SuccessFactors record, so the org tree cannot be resolved; ask the POD lead
+  org_sub_group:  # SuccessFactors sub-group of the EM — TO FILL: the declared owner has no SuccessFactors record; ask the POD lead
+  org_pod:  # SuccessFactors pod of the EM — TO FILL: the declared owner has no SuccessFactors record; ask the POD lead
+  pm:  # product manager — TO FILL: open-source tooling, no DevRev runnable; ask the Export SR Excellence POD lead
+  overrides: []  # optional, region-scoped owner overrides — TO FILL only if some region is owned by a different team; each entry is a "region" code plus the owning "team" slug
+
+links:
+  repo: "https://github.com/razorpay/ifsc"  # canonical GitHub repo URL
+  alerts_repo:  # this service's alert rules in razorpay/alert-rules — TO FILL: no matching ruleset found; add one in razorpay/alert-rules, then link the file here
+  slos:  # SLO definitions — TO FILL: no slo.yaml at this repo root and no sloth ruleset for it under razorpay/alert-rules/slo/prod (the two places SLOs are defined today); add one there and link it here
+  slack_channel:  # primary Slack channel — TO FILL: no channel matching "ifsc" found and slack_candidates is empty; ask the Export SR Excellence POD lead
+  zenduty_policy:  # Zenduty policy/service name used for paging — TO FILL: the service-to-policy mapping is not in DevRev or alert-rules for this service; it lives in the external Zenduty policies sheet
+  escalation_l1:  # service EM — TO FILL: no owner could be resolved for this service
+  escalation_l2:  # EM's manager — TO FILL: the EM has no SuccessFactors record, so no manager chain is available
+  escalation_l3:  # manager's manager — TO FILL: the EM has no SuccessFactors record, so no manager chain is available
+  oncall_handle:  # Slack/PagerDuty oncall handle or usergroup — TO FILL: not set on the DevRev runnable
+  runbook:  # link to the incident runbook — TO FILL: no runbook directory for this service in razorpay/rzp-oncall-agent; add one or link the Google Doc / alpha.razorpay.com page
+  api_docs:  # API documentation — TO FILL: no swagger/openapi/proto found in the repo tree; link the API spec or Postman collection
+  dashboard:  # primary dashboard — TO FILL: no Grafana hit; this repo publishes a static dataset, not a runtime
+  logs_and_traces: "https://razorpay-prod.app.coralogix.in/#/query-new/archive-logs"  # org-standard prod Coralogix — filter subsystem "ifsc"
+  strategy_okr:  # TO FILL: link the FY strategy doc for the owning group.
+  risk_assessment:  # TO FILL: no .agents/skills/risk-assessment in this repo; add the per-repo risk-assessment skill
+  regions:  # per-region links — TO FILL: no prod region deployment found for this service in spinacode or alert-rules; add a block per geography once it ships
+
+dependencies: []  # optional, declared service dependencies — TO FILL: shape: - service: <slug> for internal deps, - vendor: <name> for external (gateways, banks)
