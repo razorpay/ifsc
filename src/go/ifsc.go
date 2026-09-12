@@ -97,33 +97,21 @@ func Validate(code string) bool {
 	if !ok {
 		return false
 	}
-	branchData, err := getData(branchCode)
-	if err != nil {
-		return false
-	}
+	branchData := getData(branchCode)
 	for _, data := range list {
-		if data == *branchData {
+		if data == branchData {
 			return true
 		}
 	}
 	return false
 }
 
-func getData(input string) (*Data, error) {
-	var inputBytes []byte
-	var err error
+func getData(input string) Data {
 	intValue, err := strconv.ParseInt(input, 10, 32)
 	if err == nil {
 		input = strconv.Itoa(int(intValue))
 	}
-	if inputBytes, err = json.Marshal(input); err != nil {
-		return nil, err
-	}
-	var output Data
-	if err := json.Unmarshal(inputBytes, &output); err != nil {
-		return nil, err
-	}
-	return &output, nil
+	return Data{Value: input}
 }
 
 func GetBankName(code string) (string, error) {
