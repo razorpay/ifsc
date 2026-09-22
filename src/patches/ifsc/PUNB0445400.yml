@@ -1,0 +1,8 @@
+# Replaces (HP) in district field
+---
+action: patch
+patch:
+  DISTRICT: Kullu
+ifsc:
+  - PUNB0445400
+  

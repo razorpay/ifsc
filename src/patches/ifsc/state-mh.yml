@@ -4,7 +4,7 @@
 action: patch
 patch:
   CITY: MUMBAI
-  DISTRICT: MUMBAI
+  DISTRICT: Mumbai
   CENTRE: MUMBAI
   STATE: MAHARASHTRA
   ISO3166: IN-MH
