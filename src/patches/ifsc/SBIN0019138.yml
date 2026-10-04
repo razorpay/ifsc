@@ -1,0 +1,22 @@
+---
+# Newly opened SBI branch, not yet present in the RBI NEFT/RTGS dataset.
+# Branch details sourced from the SBI branch locator / IFSC lookup.
+# Requested via PSE ticket ISS-3686460.
+action: add_multiple
+ifsc:
+  SBIN0019138:
+    ADDRESS: NORTH VIEW, INFOCITY ROAD, PATIA, OPPOSITE CEB, BHUBANESWAR, DIST.KHURDA, ODISHA-751024
+    BRANCH: SBIINTOUCH LITE, INFOCITY
+    BANK: State Bank of India
+    CENTRE: BHUBANESWAR
+    CITY: BHUBANESWAR
+    CONTACT: null
+    DISTRICT: KHURDA
+    IMPS: true
+    MICR: "751002516"
+    NEFT: true
+    RTGS: true
+    STATE: ODISHA
+    ISO3166: IN-OR
+    SWIFT: null
+    UPI: true
